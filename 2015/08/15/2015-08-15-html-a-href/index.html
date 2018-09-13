@@ -1,0 +1,705 @@
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Html&lt;a&gt;标签href的困惑记载 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="//cdn.bootcss.com"><meta name="description" content="近日，在工作中遇到一个小问题(给手游平台做些网页活动，其中牵涉到一个按钮链接，就习以为常的用了&amp;lt;a&amp;gt;标签，Click响应之后走一段js代码逻辑－弹出一个分享微信弹框。Chrome和Android平台都没问题，测试阶段发现Ios平台出现了点问题～弹框闪现一下之后，页面被重新渲染了，自然弹框又被消隐掉了。)，经历一番查证，个中缘由原来如此。"><meta name="keywords" content="Html"><meta property="og:type" content="article"><meta property="og:title" content="Html&lt;a&gt;标签href的困惑记载"><meta property="og:url" content="https://jeffjade.com/2015/08/15/2015-08-15-html-a-href/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="近日，在工作中遇到一个小问题(给手游平台做些网页活动，其中牵涉到一个按钮链接，就习以为常的用了&amp;lt;a&amp;gt;标签，Click响应之后走一段js代码逻辑－弹出一个分享微信弹框。Chrome和Android平台都没问题，测试阶段发现Ios平台出现了点问题～弹框闪现一下之后，页面被重新渲染了，自然弹框又被消隐掉了。)，经历一番查证，个中缘由原来如此。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2015-09-24T13:34:24.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Html&lt;a&gt;标签href的困惑记载"><meta name="twitter:description" content="近日，在工作中遇到一个小问题(给手游平台做些网页活动，其中牵涉到一个按钮链接，就习以为常的用了&amp;lt;a&amp;gt;标签，Click响应之后走一段js代码逻辑－弹出一个分享微信弹框。Chrome和Android平台都没问题，测试阶段发现Ios平台出现了点问题～弹框闪现一下之后，页面被重新渲染了，自然弹框又被消隐掉了。)，经历一番查证，个中缘由原来如此。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"><link href="//cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css" rel="stylesheet"><link href="//cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="//cdn.bootcss.com/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/08/15/2015-08-15-html-a-href/" class="title=&quot;Html&lt;a&gt;标签href的困惑记载&quot;" itemprop="url">Html&lt;a&gt;标签href的困惑记载</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-08-14T16:00:00.000Z" itemprop="datePublished">发表于 2015-08-15</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>近日，在工作中遇到一个小问题(给手游平台做些网页活动，其中牵涉到一个按钮链接，就习以为常的用了<code>&lt;a&gt;</code>标签，Click响应之后走一段js代码逻辑－弹出一个分享微信弹框。Chrome和Android平台都没问题，测试阶段发现Ios平台出现了点问题～弹框闪现一下之后，页面被重新渲染了，自然弹框又被消隐掉了。)，经历一番查证，个中缘由原来如此。</p><a id="more"></a><p>出现问题后，立马走了段代码逻辑，发现并没任何逻辑问题。并且Chrome和Android平台又都OK的，只是Ios平台有此问题。经验不够丰富情形之下，只能在Ios手机上先Alert下,看下代码走的路线了。代码采用Backbone框架而成，经alert出来的提示，发现Click之后，页面view竟被重新执行了一次。额…逻辑没问题，而类似活动无数，没出现类似问题啊，不明就里～［好桑心，无能为力又无从下手的感觉,好难受］。</p><p>之后，请出同事中的前辈帮着Codereview下，终定为出了问题。原是误用这<code>&lt;a&gt;</code>惹出来的。这边见大家都用<code>&lt;a href=&quot;javascript:;&quot;&gt;&lt;/a&gt;</code>。当然之前偶然看了<font class="pruple">张鑫旭</font>一篇<a href="http://www.zhangxinxu.com/wordpress/2013/01/why-use-href-javascript-void0/" target="_blank" rel="noopener">《疑问：为什么要使用href=”javascript:void(0);”？》</a>，从中窥测之前多用的是<code>&lt;a href=&quot;javascript:void(0);&quot;&gt;&lt;/a&gt;</code>。但为什么要用这个，他本人也没弄明白，然后读完，我也没明白。而此处，嫌用<code>&lt;a href=&quot;javascript:;&quot;&gt;&lt;/a&gt;</code>这么长麻烦，就用<code>&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;</code>这个试了下，唉～可以啊，Android也可以唉，那就用下了（噢，问题就因此埋下了，额额额～v～）。</p><p><strong>A Problem Is A Chance For You To Do Your Best！</strong>我坚信这一点。惹出些问题并不见得都是坏事。每每因为自己的造成的这些个问题，反倒收获不少，😄。</p><p>之后就去查证了下关于这Html<code>&lt;a&gt;</code>标签的Href属性。超链接的 URL。可能的值：</p><blockquote><ul><li>绝对 URL - 指向另一个站点（比如 href=”<a href="http://www.jeffjade.com&quot;）" target="_blank" rel="noopener">http://www.jeffjade.com&quot;）</a></li><li>相对 URL - 指向站点内的某个文件（href=”index.htm”）</li><li>锚 URL - 指向页面中的锚（href=”#top”）</li></ul></blockquote><p>根据网搜得到的答案如下，亲测也的确如此：<br>​<code>&lt;a href=&quot;javascript:void(0)&quot;&gt;点击&lt;/a&gt;</code>: 点击链接后不会回到网页顶部<br><code>&lt;a href=&quot;#&quot;&gt;点击&lt;/a&gt;</code>: 点击后会回到网面顶部;<br>这里的href=”javascript:;”，其中javascript:是伪协议，它可以让我们通过一个链接来调用javascript函数.而采用这个方式 javascript:;可以实现A标签的点击事件运行时，如果页面内容很多，有滚动条时，页面不会乱跳，用户体验更好。点击链接后也不会回到网页顶部。</p><p>而对于Href第三点～指向页面中的锚，如下用法：</p><ol><li>需要转到地方添加，<code>&lt;a href=&quot;#命名&quot;&gt;文字&lt;/a&gt;</code>，注意href值是#开头+英文字母命名</li><li>需要在被转到位置添加，<code>&lt;span id=&quot;命名&quot; name=&quot;命名&quot;&gt;&lt;/span&gt;</code>，注意id和name值相同并且与a命名相同(<strong>亲测，id必须跟a命名相同，而span的name则不用！</strong>并且当 href=”#” 之时也会回到页面顶部.)</li></ol><p>即可得出当使用（href=”#”）之时即有可能会回到页面顶部。但问题是，活动一屏幕足以显示完，无需滑动，Ios手机也是如此。那么使用（href=”#”）在这里是不会影响页面刷新的。得到ios客户端开发的说法是：这样写［使用（href=”#”）］会触发到客户端的监控，从而引发异常。(～这一段，很多疑惑，只是猜测，有待继续学习检验)。</p><hr><p>此段15-08-19更新：<br>对于这一段的不理解，后来在ios客户端童鞋的帮助下消解了。对于Ios跟js的交互是略有点不同的：<a href="http://blog.csdn.net/mkhgg/article/details/7109097" target="_blank" rel="noopener"> ios中objective-c与js的交互</a>这篇文章会有讲到。js调用objective-c的方法, 代码应该这么做：<br></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testFunc</span>(<span class="params">cmd,parameter1</span>)   </span></span><br><span class="line"><span class="function"></span>&#123;   </span><br><span class="line">    <span class="built_in">document</span>.write(<span class="built_in">Date</span>());   </span><br><span class="line">    <span class="built_in">document</span>.location=<span class="string">"objc://"</span>+cmd+<span class="string">":/"</span>+parameter1;  <span class="comment">//cmd代表objective-   </span></span><br><span class="line">c中的的方法名，parameter1自然就是参数了  （这里的objc:<span class="comment">//可以随意的去改）</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
+<p>在Ios里面有一个监听  http 跳转的方法；一旦有类似<code>http://</code> or <code>objc://</code>他们都可以监听到(像这种 http:// 并不是他们要的 ，而要的是这种 objc:// 这种,所以在跟ios通信时候，都必须这种规则 objc://…。而<strong>href=”#”代表的是本地页面</strong>[页面跳转到页面本身]。如此就能解释了之前出现问题了：ios可以监听到<code>&lt;a href=&quot;#&quot;&gt;点击&lt;/a&gt;</code>这种链接，从而使得页面被刷新。</p>
+<hr>
+<p>那么很疑惑，为何Android平台没有该问题？最后，也更进一步的疑问：JavaScript中语句最后的分号是可以缺省的，那为何要使用javascript:;而不是javascript:呢？是习惯还是规范，我也很疑惑！我也很疑惑！我也很疑惑！（重要的事情说三遍）</p>
+<blockquote>
+<p>具有代码洁癖的coder们，没事多写一个分号，圣洁的精神世界杯玷污了，怎么能忍受的了呢？这又不是多多语句，不写分号可能会出现意想不到的情况！（很认同，原话出自：<a href="http://www.zhangxinxu.com/wordpress/2013/01/why-use-href-javascript-void0/" target="_blank" rel="noopener">张鑫旭</a>）</p>
+</blockquote>
+<hr>
+<p>此段15-08-19 20:06更新：<br>今日在博客园～神人唯吾的<a href="http://www.cnblogs.com/happykakeru/archive/2011/10/24/2222702.html" target="_blank" rel="noopener"><a>标签的href和onclick属性</a>这篇文章中看到了一个说法：</a></p>
+<blockquote>
+<p>尽量不要用<code>javascript:</code>协议做为A的href属性，这样不仅会导致不必要的触发window.onbeforeunload事件，在IE里面更会使gif动画图片停止播放。</p>
+</blockquote>
+<p>这也许是大家默认使用’javascript:;’的一个原因，个中原委，有待于进一步的去摸索。</p>
+<p><strong>总结：</strong><code>#</code>包含了一个位置信息默认的锚是#top 也就是网页的上端;<br>而<code>javascript:void(0)</code>仅仅表示一个死链接，没有任何信息。作用类同～javascript:;<br>而<code>javascript:</code>会导致不必要的触发window.onbeforeunload事件等。<br>故此：此处当不依靠href属性做页面跳转时候，最好还是用<code>javascript:;</code>更优一点。</p>
+<hr>
+<p>Gui求指点，欢求吐槽！</p>
+	</div>
+		<a href="#reward-modal-container" aria-label="Open Reward" id="open-reward-modal-a">打赏</a>
+<div id="reward-modal-container">
+		<div class="modal-div">
+			<h1 class="reward-title-h1">倾情打赏</h1>
+			<a href="javascript:history.go(-1)" aria-label="Close Modal" class="close-modal-a"></a>
+			<p class="reward-thx-p">感谢您的支持，我将继续努力！</p>
+			<div class="reward-img-div">
+				<img class="reward-qr-img weichat active" src="https://image.nicelinks.site/blank.gif" alt="微信赞助" data-echo="//image.nicelinks.site/weixin_pay.jpg">
+				<img class="reward-qr-img alipay" src="https://image.nicelinks.site/blank.gif" alt="支付宝赞助" data-echo="//image.nicelinks.site/zhifubao_pay.jpg">
+			</div>
+
+			<div id="reward-jade-moudle" node-type="platform-choice" class="platform-choice clearfix">
+				<div class="platform-item">
+					<span node-type="check-platform" data-id="weichat" class="platform-radio-box platform-checked"></span>
+					<span class="platform-logo weichat"></span>
+				</div>
+				<div class="platform-item">
+					<span node-type="check-platform" data-id="alipay" class="platform-radio-box"></span>
+					<span class="platform-logo alipay"></span>
+				</div>
+			</div>
+
+			<div class="reward-text-div">扫码打赏，建议金额1-10元</div>
+			<p class="reward-tip-p">
+				提醒：打赏金额将直接进此方账号，无法退款，请您谨慎操作。
+			</p>
+		</div>
+</div>
+    <div id="cc-copyright" class="cc-content">
+    <h3>文档信息</h3>
+    <ul>
+      <li>版权声明：知识共享署名-非商业性使用-禁止演绎<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">（创意共享3.0许可证）</a></li>
+      <li>文章出处：<a href="http://www.jeffjade.com" title="晚晴幽草轩">晚晴幽草轩</a></li>
+      <li>发表日期：<time datetime="2015-08-14T16:00:00.000Z" itemprop="datePublished">2015-08-15</time></li>
+      <li>社交媒体：
+        <a href="http://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+        <a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+        <a href="https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+        <a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+      </li>
+    </ul>
+</div>
+    <div class="bottom-gg-module">
+  <hr>
+  <h1 class="text-center heading text-gradient-color">广而告之<small></small></h1>
+  <div class="jade-gg-block">
+    <a class="width-block-wrap" href="https://nicelinks.site?from=jeffjade" title="倾城之链" target="_blank">
+      <img class="width-block-wrap" style="width: 100%;max-height: 300px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nicelinks-popularize.png">
+    </a>
+    <a class="width-block-wrap" style="margin-top: 15px" href="//click.dji.com/AEuogBLf6UXhccqUaT0NVg?pm=ad_image" title="大疆无人机" target="_blank">
+      <img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="//u.djicdn.com/uploads/ad_image_file/file/992/970___250.jpg">
+    </a>
+    </div>
+  </div>
+
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Front-End/">Front-End</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Html/">Html</a>
+  </div>
+
+</div>
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://jeffjade.com/2015/08/15/2015-08-15-html-a-href/" data-title="Html&lt;a&gt;标签href的困惑记载 | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+	</article>
+	<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2015/08/28/2015-08-28-Write-Morkdown/" title="SublimeText下写作利器之MarkdownEditing">
+  <strong>上一篇：</strong><br>
+  <span>
+  SublimeText下写作利器之MarkdownEditing</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/08/03/2015-08-03-javascript-this/" title="JavaScript 之 this 详解">
+ <strong>下一篇：</strong><br> 
+ <span>JavaScript 之 this 详解
+</span>
+</a>
+</div>
+
+</nav>
+	<hr>
+<div id="gitalk-container"></div>
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="wbfollow">
+	<p class="asidetitle">微博互粉</p>
+	<span class="sidebar-top-tip">亦可点击 Enter 键隐藏侧边栏</span>
+	<iframe width="100%" height="119" class="share_self" frameborder="0" scrolling="no" src="//widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3235949794&verifier=5c6bff53&colors=f0f0f0,fff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">最新作品</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="http://nicelinks.site/?from=jeffjade-aside" target="_blank" title="倾城之链">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nicelinks-site.jpg">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+	<p class="asidetitle">倾情款赠</p>
+	<div style="width:100%"><img style="width:100%" src="https://image.nicelinks.site/blank.gif" alt="倾情捐赠" data-echo="https://image.nicelinks.site/encourage.png"></div>
+</div>
+
+  <div class="widget-wrap linkslist">
+    <h3 class="widget-title asidetitle">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/31/143-develop-quick-app-experience-notes/">快应用之开发体验纪要</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/18/142-beautify-vue-by-eslint-and-prettier/">使用ESLint ＆ Prettier美化Vue代码</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/04/141-talk-about-my-blogs/">轩帅的博客之旅</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/20/140-vue-webpack-boilerplate-template/">开箱即用的 Vue Webpack 脚手架模版</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/31/139-attack-and-defense-between-trade/">交易之为，攻守之道</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/05/138-aggregated-info-about-dji-recruitment/">疆湖期待有你，携手互联疆来</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/01/137-written-at-the-end-of-2017/">写于 2017 年末</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/30/135-npm-vs-yarn-detial-memo/">Npm vs Yarn 之备忘详单</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/17/134-kinds-of-toss-using-puppeteer/">大前端神器安利之 Puppeteer</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/29/133-high-quality-front-end-channel/">『优质』前端频道汇聚</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/29/132-feeling-love-and-life/">那一瞬,那一夜,那一年,那一世</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/14/131-some-filth-such-as-jianshu/">劾『简书』之蛮横无道</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/09/130-front-end-notes/">晚晴幽草说之-前端札记</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/08/129-sublime-text-latest-registration-code/">Sublime Text 最新注册码分享</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="linkslist">
+  <p class="asidetitle">广而告之</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" target="_blank" title="大疆无人机">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/blank.gif" alt="大疆无人机 御·Mavic 2" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1671/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_250-250.jpg">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">轩站热度</p>
+  <!-- 
+    <font id="run_time_long"></font><br>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span style='color:purple' id="busuanzi_value_site_pv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_site_uv">
+      本站访客人数 <span style='color:purple' id="busuanzi_value_site_uv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量 <span style='color:purple' id="busuanzi_value_page_pv"></span> 次
+    </span>
+   -->
+  <div id="clustrmaps-count"></div>
+  <p style="text-align:center">( Start counting from 07 / 13 / 2017 )</p>
+</div>
+
+  <div class="categorieslist">
+	<p class="asidetitle">云轩分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>43</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Health/" title="Health">Health<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Movie/" title="Movie">Movie<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Program/" title="Program">Program<sup>20</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Read/" title="Read">Read<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Share/" title="Share">Share<sup>17</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Thought/" title="Thought">Thought<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Toss/" title="Toss">Toss<sup>22</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+  <div class="tagslist">
+	<p class="asidetitle">云轩标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Share/" title="Share">Share<sup>39</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thought/" title="Thought">Thought<sup>35</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Toss/" title="Toss">Toss<sup>26</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>24</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>19</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>16</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Cookie/" title="Cookie">Cookie<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Blog/" title="Blog">Blog<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Jekyll/" title="Jekyll">Jekyll<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">云轩关注</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://www.ruanyifeng.com/blog/?from=jeffjade.com" target="_blank" title="阮一峰的网络日志">阮一峰的网络日志</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://blog.codingnow.com/?from=jeffjade.com" target="_blank" title="云风Blog">云风Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.williamlong.info/?from=jeffjade.com" target="_blank" title="月光博客">月光博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://coolshell.cn/?from=jeffjade.com" target="_blank" title="酷壳－陈浩">酷壳－陈浩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.zhangxinxu.com/?from=jeffjade.com" target="_blank" title="鑫空间-鑫生活">鑫空间-鑫生活</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nicelinks.site/?from=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://nice.lovejade.cn/?from=jeffjade.com" target="_blank" title="静晴轩别苑">静晴轩别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://pizida.com/?from=jeffjade.com" target="_blank" title="痞子达的小站">痞子达的小站</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.lovejade.cn/?from=jeffjade.com" target="_blank" title="天意人间舫">天意人间舫</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.cnblogs.com/jadeboy/?from=jeffjade.com" target="_blank" title="云轩奕鹤">云轩奕鹤</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://qiutc.me/?from=jeffjade.com" target="_blank" title="阿城的日志">阿城的日志</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://refined-x.com/?from=jeffjade.com" target="_blank" title="前端路上">前端路上</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://calpa.me/?from=jeffjade.com" target="_blank" title="Calpa&#39;s Blog">Calpa&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://f2ex.cn/?from=jeffjade.com" target="_blank" title="F2EX-web前端开发">F2EX-web前端开发</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://zyl.me/?from=jeffjade.com" target="_blank" title="WWW.ZYL.ME">WWW.ZYL.ME</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://istarvip.cn/?from=jeffjade.com" target="_blank" title="猿码阁">猿码阁</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.nihaoshijie.com.cn/?from=jeffjade.com" target="_blank" title="吕小鸣">吕小鸣</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://konghy.cn/?from=jeffjade.com" target="_blank" title="矿世的忧伤">矿世的忧伤</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://whjin.github.io/" target="_blank" title="华锦的Blog">华锦的Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://jeffjade.com/Links/#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">好书推荐</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://www.amazon.cn/gp/product/B00D73BJWK/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00D73BJWK&linkCode=as2&tag=droidyue-23" target="_blank" title="浪潮之巅">浪潮之巅</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.amazon.cn/gp/product/B00OB3SNMY/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00OB3SNMY&linkCode=as2&tag=droidyue-23" target="_blank" title="三体">三体</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://book.douban.com/subject/1477390/" target="_blank" title="代码大全2">代码大全2</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 追求卓越，成功就会在不经意间 追上你！ <br>
+			As you think, so shall you become. </p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="https://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="mailto:yunjeff@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+		
+		
+		
+		<a href="https://www.zhihu.com/people/yang-qiong-pu" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018
+		
+		<a href="https://jeffjade.com/About" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+		
+		</p>
+</div></footer>
+    <script src="//cdn.bootcss.com/echo.js/1.7.3/echo.min.js"></script>
+
+<script type="text/javascript">echo.init({offset:200,throttle:250,unload:!1,callback:function(e,n){}}),$(document).ready(function(){console.log("Welcome To %c晚晴幽草轩","font-size:2.113em;color: #2edfa3"),$(".navbar").click(function(){$("header nav").toggleClass("shownav")});var e=0;function n(){"number"==typeof window.innerWidth?e=window.innerWidth:document.documentElement&&document.documentElement.clientWidth&&(e=document.documentElement.clientWidth)}var o=$("#main"),s=$("#asidepart"),a=$(".closeaside"),c=$(".openaside"),d=function(){s.addClass("fadeOut").css("display","none"),c.css("display","block").addClass("fadeIn"),o.addClass("moveMain")},t=function(){c.css("display","none").removeClass("beforeFadeIn"),s.css("display","block").removeClass("fadeOut").addClass("fadeIn"),o.removeClass("moveMain")};a.click(d),c.click(t),document.onkeydown=function(e){var n=e||window.event,o=n.keyCode||n.which||n.charCode,s="search"===document.activeElement.id||"TEXTAREA"===document.activeElement.nodeName;return!(13===o&&!s)||("none"===c.css("display")?d():t(),!1)},$(window).scroll(function(){c.css("top",Math.max(80,260-$(this).scrollTop()))}),n(),$(window).resize(function(){n(),e>=1024?$("header nav").removeClass("shownav"):(o.removeClass("moveMain"),s.css("display","block").removeClass("fadeOut"),c.css("display","none"),$("#toc.toc-aside").css("display","none"))})})</script>
+
+
+<script type="text/javascript">$(document).ready(function(){var c=$(".article-content>iframe"),n=$(".article-content>embed"),o=($("#toc"),$("#toc.toc-aside")),e=$(".openaside"),i=$(".closeaside");c.length>0&&c.wrap('<div class="video-container" />'),n.length>0&&n.wrap('<div class="video-container" />'),i.click(function(){o.css("display","block").addClass("fadeIn")}),e.click(function(){o.css("display","none")}),$(window).scroll(function(){o.css("top",Math.max(140,320-$(this).scrollTop()))})})</script>
+
+
+
+<script type="text/javascript">$(document).ready(function(){var a=$(".share"),t=a.attr("data-url"),e=encodeURIComponent(t),r=a.attr("data-title"),c=a.attr("data-tsina"),i=(a.attr("description"),['<a href="#" class="overlay" id="qrcode"></a>','<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="//s.jiathis.com/qrcode.php?url='+e+'"/></div>','<a href="https://www.facebook.com/sharer.php?u='+e+'" class="article-share-facebook" target="_blank" title="Facebook"></a>','<a href="https://twitter.com/intent/tweet?url='+e+'" class="article-share-twitter" target="_blank" title="Twitter"></a>','<a href="#qrcode" class="article-share-qrcode" title="微信"><i class="fa fa-weixin"></i></a>','<a href="//service.weibo.com/share/share.php?title='+r+"&url="+e+"&ralateUid="+c+'&searchPic=true&style=number" class="article-share-weibo" target="_blank" title="微博"></a>','<span title="Share to"></span>'].join(""));a.append(i),$(".article-share-qrcode").click(function(){var a=$("#qrcode-pic").attr("data-src");$("#qrcode-pic").attr("src",a),$("#qrcode-pic").load(function(){$(".qrcode strong").text(" ")})})})</script>
+
+
+
+
+
+<link href="//cdn.bootcss.com/fancybox/2.1.6/css/jquery.fancybox.min.css" rel="stylesheet">
+<script async src="//cdn.bootcss.com/fancybox/2.1.6/js/jquery.fancybox.min.js"></script>
+
+<script type="text/javascript">$(document).ready(function(){$(".article-content").each(function(a){$(this).find("img").each(function(){if(!$(this).parent().hasClass("fancybox")){var a=this.alt;a&&$(this).after('<span class="caption">'+a+"</span>");var t=this.src.indexOf("blank.gif")<0?this.src:$(this).attr("data-echo");$(this).wrap('<a href="'+t+'" title="'+a+'" class="fancybox"></a>')}}),$(this).find(".fancybox").each(function(){$(this).attr("rel","article"+a)})}),$.fancybox&&$(".fancybox").fancybox(),$("#reward-jade-moudle .platform-radio-box").on("click",function(a){var t=a.currentTarget.dataset.id;$(".reward-img-div .reward-qr-img").removeClass("active"),$(".reward-img-div ."+t).addClass("active"),$(".platform-radio-box").removeClass("platform-checked"),a.currentTarget.className="platform-radio-box platform-checked"})})</script>
+
+
+<!-- Analytics Begin -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-67901984-1"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-67901984-1")</script>
+
+
+
+<script type="text/javascript">var _bdhmProtocol="https:"==document.location.protocol?" https://":" http://";document.write(unescape("%3Cscript src='"+_bdhmProtocol+"hm.baidu.com/h.js%3Fd0ed9bb72df3b2b32bdd2274981a7d07' type='text/javascript'%3E%3C/script%3E"))</script>
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+<div id="totop">
+	<a title="返回顶部"><img src="https://image.nicelinks.site/blank.gif" data-echo="/img/scrollup.png"></a>
+	</div>
+	<!-- <script src="/js/totop.js"></script> -->
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+<!-- MathJax End -->
+
+<!-- Move totop.js From totop.ejs To Here@0309 -->
+<script src="//cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">!function(e){(Object.assign||Object.defineProperty(Object,"assign",{enumerable:!1,configurable:!0,writable:!0,value:function(e,t){"use strict";if(void 0===e||null===e)throw new TypeError("Cannot convert first argument to object");for(var c=Object(e),n=1;n<arguments.length;n++){var r=arguments[n];if(void 0!==r&&null!==r)for(var a=Object.keys(Object(r)),o=0,i=a.length;o<i;o++){var s=a[o],d=Object.getOwnPropertyDescriptor(r,s);void 0!==d&&d.enumerable&&(c[s]=r[s])}}return c}}),document.getElementById("gitalk-container"))&&new Gitalk({clientID:"4bc2d1424c7939471ad4",clientSecret:"b3dc888873f473405f79f7d9394888478ba55ca4",repo:"jadeblog-backups",owner:"nicejade",admin:["nicejade"],id:md5(location.pathname),distractionFreeMode:!1}).render("gitalk-container");var t=document.getElementById("clustrmaps-count");if(t){var c=document.createElement("script");c.type="text/javascript",c.id="clustrmaps",c.src="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a",t.appendChild(c)}var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.charset="utf-8",n.src="//tjs.sjs.sinajs.cn/open/api/js/wb.js",document.body.appendChild(n);var r=document.createElement("script");"https"===window.location.protocol.split(":")[0]?(r.async=!0,r.src="https://zz.bdstatic.com/linksubmit/push.js"):(r.async=!0,r.src="//push.zhanzhang.baidu.com/push.js");var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);var o=e("#totop");o.hide(),e(window).scroll(function(){e(document).scrollTop()>1e3?e(o).stop().fadeTo(300,1):e(o).stop().fadeTo(300,0)}),e(o).click(function(){return e("html, body").animate({scrollTop:0},500),!1})}(jQuery)</script>
+
+<!-- Inject service-worker@2018-01-09 -->
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js", {scope: '/'})
+    .then(registration => console.log('SW Registration Success！Scope: ', registration.scope))
+    .catch(err => console.log('SW Registration Failed! Error: ', err));
+}
+</script>
+
+<!-- Inject Anchor.js @2018-01-14 -->
+<script type="text/javascript">function async(e,n){var o=document,r="script",t=o.createElement(r),a=o.getElementsByTagName(r)[0];t.src=e,n&&t.addEventListener("load",function(e){n(null,e)},!1),a.parentNode.insertBefore(t,a)}async("//cdn.bootcss.com/anchor-js/4.1.0/anchor.min.js",function(){anchors.options={visible:"hover",placement:"right"},anchors.add("#post h2, #post h3, #post h4"),anchors.add().remove(".intro-header h1").remove(".subheading").remove(".sidebar-container h5")})</script></body>

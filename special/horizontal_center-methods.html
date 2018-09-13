@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="author" content="www.jeffjade.com"><meta name="keywords" content="web前端开发,CSS,Html,CSS水平居中"><meta name="description" content="文本水平居中总结"><title>垂直水平居中</title><style>*{padding:0;margin:0;box-sizing:border-box;}
+	body,input{font-family:'Microsoft Yahei';}
+	h1{font-size:30px;line-height: 2}
+	h4{font-size:18px;color:#333;line-height:2;font-weight:normal;}
+	h4>span{display:inline;padding:3px 10px;margin:0 5px;overflow:auto;background:#333;color:#eee}
+	h4>i{font-size:1.4em;font-weight:bold;margin-right:5px;}
+	.next{cursor:pointer;position: fixed;width:70px;height:52px;right:40px;bottom:40px;background-image:url(images/next.png);background-size:100% 100%;transition:all .5s ease;-webkit-transition:all .5s ease;opacity:0;}
+	.next:hover,.next:active{opacity: 1}
+	pre,code{font:16px/20px Consolas, "Liberation Mono", Courier, monospace;color:#333;height:auto !important;display: block}
+	pre{background-color: #f8f8f8;border: 1px solid #ccc; overflow: auto; padding:0 10px 18px;border-radius: 3px;}
+	code{white-space: pre;border: none;background: transparent;margin:0;padding:0;}
+	.wrapper{width:960px;margin:auto;}
+	.parent,.son{position:relative;}
+    .parent{background:#2e5f3e;width:100%;height:300px;margin:5px auto 30px}
+	.son{background-color: #4fa46b;width:50%;height:200px}
+	.parent:before,.son:before,.cont:before{color:#fff;font-size:20px;line-height:24px;position: absolute;z-index:9999;top:2px;left:5px}
+	.parent:before{content:'.parent';}
+	.son:before{content:'.son';}
+	.cont:before{content:'.cont';}
+
+	#p1,#p2,#p3{padding:50px 0;}
+	#p1{text-align: center;}
+	#p2>.son{margin:auto;}
+	#p3>.son{position: absolute;left:50%;background-color: transparent;border:2px dashed #ccc;}
+	#p3>.son>.cont{margin-left:-50%;height:200px;width:100%;background-color: rgba(0,0,0,.5);z-index:-1;margin-top: -2px;}
+	#p3>.son>.cont:before{margin-left:-50%;}</style></head><body><a class="next" href="demo2.html"></a><div class="wrapper"><h1>水平居中方式</h1><h4><i>01.</i>假若子元素是<b>行内元素</b>，只需为<b>父元素</b>添加<span>text-align:center</span>即可</h4><div class="parent" id="p1"><img src="https://image.nicelinks.site/blank.gif" data-echo="http://placekitten.com/g/500/200"></div><h4><i>02.</i>假若子元素是<b>块状元素</b>，只需为<b>子元素</b>添加<span>margin:auto</span>即可</h4><div class="parent" id="p2"><div class="son"></div></div><h4><i>03.</i><b>绝对定位</b>元素水平居中</h4><pre><code>
+  .son{position: absolute;left: 50%;}
+  .cont{margin-left: -50%;width: 100%;}
+</code></pre><div class="parent" id="p3"><div class="son"><div class="cont"></div></div></div></div></body></html>
