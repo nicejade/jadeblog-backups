@@ -1,258 +1,86 @@
-'use strict';
+const HTMLToCache = '/';
+const version = 'jeffjade.com';
 
-var version = 'v-2018-01-22 10:10';
-var __DEVELOPMENT__ = false;
-var __DEBUG__ = true;
-var offlineResources = [
-  '/',
-  '/index.html'
-];
+self.addEventListener('install', (event) => {
+  event.waitUntil(caches.open(version).then((cache) => {
+    cache.add(HTMLToCache).then(self.skipWaiting());
+  }));
+});
 
-var ignoreCache = [
-  /https?:\/\/api.github.com\//,
-  /https?:\/\/zz.bdstatic.com\//,
-  /https?:\/\/hm.baidu.com\//,
-  /https?:\/\/cdn.clustrmaps.com\//,
-  /https?:\/\/www.google-analytics.com\//,
-  /chrome-extension:\//
-];
-var port;
-
-/**
-* common function
-*/
-
-function developmentMode() {
-  return location.hostname === '127.0.0.1' || location.hostname === 'localhost'
-}
-
-function cacheKey() {
-  return [version, ...arguments].join(':');
-}
-
-function log() {
-  if (developmentMode()) {
-    console.log("SW:", ...arguments);
-  }
-}
-
-function shouldAlwaysFetch(request) {
-  return __DEVELOPMENT__ ||
-    request.method !== 'GET' ||
-    ignoreCache.some(regex => request.url.match(regex));
-}
-
-function shouldFetchAndCache(request) {
-  return (/text\/html/i).test(request.headers.get('Accept'));
-}
-
-function sendNotify(title, options, event) {
-  if (Notification.permission !== 'granted') {
-    log('Not granted Notification permission.');
-
-    if (port && port.postMessage) {
-      port.postMessage({
-        type: 'applyNotify',
-        info: {title, options}
-      });
-    }
-
-    return;
-  }
-
-  var notificationPromise = self.registration.showNotification(title || '晚晴幽草轩', Object.assign({
-    body: '云在青天水在瓶',
-    icon: 'https://jeffjade.com/favicons/mstile-150x150.png',
-    tag: 'push'
-  }, options));
-
-  return event && event.waitUntil(notificationPromise);
-}
-
-/**
-* onClickNotify
-*/
-
-function onClickNotify(event) {
-  event.notification.close();
-  var url = "https://blog.lovejade.cn/";
-
+self.addEventListener('activate', (event) => {
   event.waitUntil(
-    self.clients.matchAll({
-      type: "window"
-    })
-    .then(() => {
-      if (self.clients.openWindow) {
-          return self.clients.openWindow(url);
+  caches.keys().then(cacheNames => Promise.all(cacheNames.map((cacheName) => {
+    if (version !== cacheName) return caches.delete(cacheName);
+  }))).then(self.clients.claim())
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  const requestToFetch = event.request.clone();
+  event.respondWith(
+  caches.match(event.request.clone()).then((cached) => {
+    // We don't return cached HTML (except if fetch failed)
+    if (cached) {
+      const resourceType = cached.headers.get('content-type');
+      // We only return non css/js/html cached response e.g images
+      if (!hasHash(event.request.url) && !/text\/html/.test(resourceType)) {
+        return cached;
       }
-    })
-  );
-}
 
-/**
-* Install
-*/
+      // If the CSS/JS didn't change since it's been cached, return the cached version
+      if (hasHash(event.request.url) && hasSameHash(event.request.url, cached.url)) {
+        return cached;
+      }
+    }
+    return fetch(requestToFetch).then((response) => {
+      const clonedResponse = response.clone();
+      const contentType = clonedResponse.headers.get('content-type');
 
-function onInstall(event) {
-  log('install event in progress.');
+      if (!clonedResponse || clonedResponse.status !== 200 || clonedResponse.type !== 'basic'
+      || /\/sockjs\//.test(event.request.url)) {
+        return response;
+      }
 
-  event.waitUntil(
-    caches.open(cacheKey('offline'))
-        .then(cache => cache.addAll(offlineResources))
-        .then(() => log('installation complete! version: ' + version))
-        .then(() => self.skipWaiting())
-  );
-}
+      if (/html/.test(contentType)) {
+        caches.open(version).then(cache => cache.put(HTMLToCache, clonedResponse));
+      } else {
+        // Delete old version of a file
+        if (hasHash(event.request.url)) {
+          caches.open(version).then(cache => cache.keys().then(keys => keys.forEach((asset) => {
+            if (new RegExp(removeHash(event.request.url)).test(removeHash(asset.url))) {
+              cache.delete(asset);
+            }
+          })));
+        }
 
-/**
-* Fetch
-*/
-
-function offlineResponse(request) {
-  log('(offline)', request.method, request.url);
-  if (request.url.match(/\.(jpg|png|gif|svg|jpeg)(\?.*)?$/)) {
-    return caches.match('/wp-content/themes/Kratos/images/default.jpg');
-  } else {
-    return caches.match('/offline.html');
-  }
-}
-
-function cachedOrOffline(request) {
-  return caches
-    .match(request)
-    .then((response) => response || offlineResponse(request));
-}
-
-function networkedAndCache(request) {
-  return fetch(request)
-    .then(response => {
-      var copy = response.clone();
-
-      caches.open(cacheKey('resources'))
-          .then(cache => {
-              cache.put(request, copy);
-          });
-
-      log("(network: cache write)", request.method, request.url);
+        caches.open(version).then(cache => cache.put(event.request, clonedResponse));
+      }
       return response;
+    }).catch(() => {
+      if (hasHash(event.request.url)) return caches.match(event.request.url);
+      // If the request URL hasn't been served from cache and isn't sockjs we suppose it's HTML
+      else if (!/\/sockjs\//.test(event.request.url)) return caches.match(HTMLToCache);
+      // Only for sockjs
+      return new Response('No connection to the server', {
+        status: 503,
+        statusText: 'No connection to the server',
+        headers: new Headers({ 'Content-Type': 'text/plain' }),
+      });
     });
+  })
+  );
+});
+
+function removeHash(element) {
+  if (typeof element === 'string') return element.split('?hash=')[0];
 }
 
-function cachedOrNetworked(request) {
-  return caches.match(request)
-      .then((response) => {
-          log(response ? '(cached)' : '(network: cache miss)', request.method, request.url);
-          return response ||
-              networkedAndCache(request)
-              .catch(() => offlineResponse(request));
-      });
+function hasHash(element) {
+  if (typeof element === 'string') return /\?hash=.*/.test(element);
 }
 
-function networkedOrOffline(request) {
-  return fetch(request)
-      .then(response => {
-          log('(network)', request.method, request.url);
-          return response;
-      })
-      .catch(() => offlineResponse(request));
-}
-
-function onFetch(event) {
-  var request = event.request;
-
-  if (shouldAlwaysFetch(request)) {
-      log('AlwaysFetch request: ', event.request.url);
-      event.respondWith(networkedOrOffline(request));
-      return;
-  }
-
-  if (shouldFetchAndCache(request)) {
-      event.respondWith(
-          networkedAndCache(request).catch(() => cachedOrOffline(request))
-      );
-      return;
-  }
-
-  event.respondWith(cachedOrNetworked(request));
-}
-
-/**
-* Activate
-*/
-
-function removeOldCache() {
-  return caches
-      .keys()
-      .then(keys =>
-          Promise.all(
-              keys
-              .filter(key => !key.startsWith(version))
-              .map(key => caches.delete(key))
-          )
-      )
-      .then(() => {
-          log('removeOldCache completed.');
-      });
-}
-
-function onActivate(event) {
-  log('activate event in progress.');
-  event.waitUntil(Promise.all([
-      self.clients.claim(),
-      removeOldCache()
-  ]))
-}
-
-/**
-* onPush
-*/
-
-function onPush(event) {
-  log('onPush ', event);
-  sendNotify('Hi:', {
-      body: `onPush${new Date()}？_ ？~`
-  }, event);
-}
-
-/**
-* onSync
-*/
-
-function onSync(event) {
-  log('onSync', event);
-  sendNotify('Hi:', {
-      body: `onSync${new Date()}？_ ？ ~`
-  }, event);
-}
-
-/**
-* onMessage
-*/
-
-function onMessage(event) {
-  log('onMessage', event);
-
-  if (event.ports) {
-      port = event.ports[0];
-  }
-
-  if (!event.data) {
-      return;
-  }
-
-  if (event.data.type === 'notify') {
-      var {title, options} = event.data.info || {};
-      sendNotify(title, options, event);
+function hasSameHash(firstUrl, secondUrl) {
+  if (typeof firstUrl === 'string' && typeof secondUrl === 'string') {
+    return /\?hash=(.*)/.exec(firstUrl)[1] === /\?hash=(.*)/.exec(secondUrl)[1];
   }
 }
-
-log("Hello from ServiceWorker land!", version);
-
-self.addEventListener('install', onInstall);
-self.addEventListener('fetch', onFetch);
-self.addEventListener("activate", onActivate);
-self.addEventListener("push", onPush);
-self.addEventListener("sync", onSync);
-self.addEventListener('message', onMessage);
-self.addEventListener("notificationclick", onClickNotify);
-
