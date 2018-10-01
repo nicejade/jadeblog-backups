@@ -292,9 +292,9 @@
       <category term="Front-End" scheme="https://jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
-    
       <category term="JavaScript" scheme="https://jeffjade.com/tags/JavaScript/"/>
+    
+      <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
     
   </entry>
   
@@ -366,11 +366,11 @@
       <category term="Front-End" scheme="https://jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
+      <category term="Vue" scheme="https://jeffjade.com/tags/Vue/"/>
     
       <category term="JavaScript" scheme="https://jeffjade.com/tags/JavaScript/"/>
     
-      <category term="Vue" scheme="https://jeffjade.com/tags/Vue/"/>
+      <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
     
   </entry>
   
@@ -442,13 +442,13 @@
       <category term="Front-End" scheme="https://jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Tools" scheme="https://jeffjade.com/tags/Tools/"/>
-    
       <category term="Vue" scheme="https://jeffjade.com/tags/Vue/"/>
     
       <category term="Gulp" scheme="https://jeffjade.com/tags/Gulp/"/>
     
       <category term="Webpack" scheme="https://jeffjade.com/tags/Webpack/"/>
+    
+      <category term="Tools" scheme="https://jeffjade.com/tags/Tools/"/>
     
       <category term="Chrome" scheme="https://jeffjade.com/tags/Chrome/"/>
     
