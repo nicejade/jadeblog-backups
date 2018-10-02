@@ -1,5 +1,5 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Drawable.Bitmap.Canvas.Paint.Matrix | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="//cdn.bootcss.com"><meta name="description" content="首先让我们理解下Android平台中的显示类是View，但是还提供了底层图形类android.graphics，今天所说的这些均为graphics底层图形接口。"><meta name="keywords" content="Android"><meta property="og:type" content="article"><meta property="og:title" content="Drawable.Bitmap.Canvas.Paint.Matrix"><meta property="og:url" content="https://jeffjade.com/2015/02/09/2015-02-09-bitmap-matrix-paint-drawable/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="首先让我们理解下Android平台中的显示类是View，但是还提供了底层图形类android.graphics，今天所说的这些均为graphics底层图形接口。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2016-10-30T14:52:41.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Drawable.Bitmap.Canvas.Paint.Matrix"><meta name="twitter:description" content="首先让我们理解下Android平台中的显示类是View，但是还提供了底层图形类android.graphics，今天所说的这些均为graphics底层图形接口。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"><link href="//cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css" rel="stylesheet"><link href="//cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="//cdn.bootcss.com/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/02/09/2015-02-09-bitmap-matrix-paint-drawable/" class="title=&quot;Drawable.Bitmap.Canvas.Paint.Matrix&quot;" itemprop="url">Drawable.Bitmap.Canvas.Paint.Matrix</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-02-09T05:00:00.000Z" itemprop="datePublished">发表于 2015-02-09</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>由于对Drawable、Bitmap、Canvas、Paint和 Matrix 的关系和使用 一直不太清楚，就在网上搜集了一下，摘录一些，主要来看这两篇文章:<a href="http://www.cnblogs.com/warioland/archive/2011/10/17/2215039.html" target="_blank" rel="noopener">Drawable、Bitmap、Canvas和Paint的关系以及部分使用方法</a> 和 Android显示系统之Pixel、Bitmap、Drawable、Canvas、Paint和Matrix之间的联系</p><a id="more"></a><p>首先让我们理解下Android平台中的显示类是View，但是还提供了底层图形类android.graphics，今天所说的这些均为graphics底层图形接口。</p><p><font color="green" size="+1">Bitmap </font>– 称作位图，一般位图的文件格式后缀为bmp，当然编码器也有很多如RGB565、RGB888、ARGB8888。作为一种像素的显示对象 执行效率高，但是存储效率低的缺点也很明显。就理解为一种bmp格式图像存储对象。</p><p><font color="green" size="+1">Drawable </font>– 作为Android下通用的绘制图形对象，它可以装载常用格式的图像，比如GIF、PNG、JPG，当然也支持BMP，当然还提供一些高级的可视化对象，比如渐变、图形等。</p><p><font color="green" size="+1">Canvas </font>– 画布，我们可以看作是一种处理过程，使用各种方法来管理Bitmap、GL或者Path路径，同时它可以配合Matrix矩阵类给图像做旋转、缩放等操作，同时Canvas类还提供了裁剪、选取等操作。</p><p><font color="green" size="+1">Paint</font> – 可以把它看做一个画图工具，比如画笔、画刷。他管理了每个画图工具的字体、颜色、样式。 如果涉及一些Android游戏开发、显示特效可以通过这些底层图形类来高效实现自己的应用。</p><h4 id="1-Drawable-to–-gt-Bitmap"><a href="#1-Drawable-to–-gt-Bitmap" class="headerlink" title="1. Drawable to–&gt; Bitmap"></a>1. Drawable to–&gt; Bitmap</h4><p>BitmapDrawable 继承自 Drawable</p><pre><code>//方法一    
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Drawable.Bitmap.Canvas.Paint.Matrix | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><meta name="description" content="首先让我们理解下Android平台中的显示类是View，但是还提供了底层图形类android.graphics，今天所说的这些均为graphics底层图形接口。"><meta name="keywords" content="Android"><meta property="og:type" content="article"><meta property="og:title" content="Drawable.Bitmap.Canvas.Paint.Matrix"><meta property="og:url" content="https://jeffjade.com/2015/02/09/2015-02-09-bitmap-matrix-paint-drawable/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="首先让我们理解下Android平台中的显示类是View，但是还提供了底层图形类android.graphics，今天所说的这些均为graphics底层图形接口。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2016-10-30T14:52:41.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Drawable.Bitmap.Canvas.Paint.Matrix"><meta name="twitter:description" content="首先让我们理解下Android平台中的显示类是View，但是还提供了底层图形类android.graphics，今天所说的这些均为graphics底层图形接口。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"><link href="https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css" rel="stylesheet"><link href="//cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.bootcss.com/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/02/09/2015-02-09-bitmap-matrix-paint-drawable/" class="title=&quot;Drawable.Bitmap.Canvas.Paint.Matrix&quot;" itemprop="url">Drawable.Bitmap.Canvas.Paint.Matrix</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-02-09T05:00:00.000Z" itemprop="datePublished">发表于 2015-02-09</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>由于对Drawable、Bitmap、Canvas、Paint和 Matrix 的关系和使用 一直不太清楚，就在网上搜集了一下，摘录一些，主要来看这两篇文章:<a href="http://www.cnblogs.com/warioland/archive/2011/10/17/2215039.html" target="_blank" rel="noopener">Drawable、Bitmap、Canvas和Paint的关系以及部分使用方法</a> 和 Android显示系统之Pixel、Bitmap、Drawable、Canvas、Paint和Matrix之间的联系</p><a id="more"></a><p>首先让我们理解下Android平台中的显示类是View，但是还提供了底层图形类android.graphics，今天所说的这些均为graphics底层图形接口。</p><p><font color="green" size="+1">Bitmap </font>– 称作位图，一般位图的文件格式后缀为bmp，当然编码器也有很多如RGB565、RGB888、ARGB8888。作为一种像素的显示对象 执行效率高，但是存储效率低的缺点也很明显。就理解为一种bmp格式图像存储对象。</p><p><font color="green" size="+1">Drawable </font>– 作为Android下通用的绘制图形对象，它可以装载常用格式的图像，比如GIF、PNG、JPG，当然也支持BMP，当然还提供一些高级的可视化对象，比如渐变、图形等。</p><p><font color="green" size="+1">Canvas </font>– 画布，我们可以看作是一种处理过程，使用各种方法来管理Bitmap、GL或者Path路径，同时它可以配合Matrix矩阵类给图像做旋转、缩放等操作，同时Canvas类还提供了裁剪、选取等操作。</p><p><font color="green" size="+1">Paint</font> – 可以把它看做一个画图工具，比如画笔、画刷。他管理了每个画图工具的字体、颜色、样式。 如果涉及一些Android游戏开发、显示特效可以通过这些底层图形类来高效实现自己的应用。</p><h4 id="1-Drawable-to–-gt-Bitmap"><a href="#1-Drawable-to–-gt-Bitmap" class="headerlink" title="1. Drawable to–&gt; Bitmap"></a>1. Drawable to–&gt; Bitmap</h4><p>BitmapDrawable 继承自 Drawable</p><pre><code>//方法一    
 Resources res;    
 InputStream is=res.openRawResource(R.drawable.pic);    
 BitmapDrawable bitmapDrawable=new BitmapDrawable(is);    
@@ -371,11 +371,11 @@ Bitmap bmp = BitmapFactory.decodeStream(is);
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -391,11 +391,11 @@ Bitmap bmp = BitmapFactory.decodeStream(is);
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>4</sup></a></li>
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>4</sup></a></li>
 			
 		
 			
@@ -407,11 +407,7 @@ Bitmap bmp = BitmapFactory.decodeStream(is);
 			
 		
 			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
 			
 		
 			
@@ -419,11 +415,15 @@ Bitmap bmp = BitmapFactory.decodeStream(is);
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
@@ -435,10 +435,6 @@ Bitmap bmp = BitmapFactory.decodeStream(is);
 			
 		
 			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
@@ -447,11 +443,15 @@ Bitmap bmp = BitmapFactory.decodeStream(is);
 			
 		
 			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
 			
 		
 			
@@ -467,7 +467,7 @@ Bitmap bmp = BitmapFactory.decodeStream(is);
 			
 		
 			
-				<li><a href="/tags/Blog/" title="Blog">Blog<sup>1</sup></a></li>
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -682,7 +682,7 @@ Bitmap bmp = BitmapFactory.decodeStream(is);
 		
 		</p>
 </div></footer>
-    <script src="//cdn.bootcss.com/echo.js/1.7.3/echo.min.js"></script>
+    <script src="https://cdn.bootcss.com/echo.js/1.7.3/echo.min.js"></script>
 
 <script type="text/javascript">echo.init({offset:200,throttle:250,unload:!1,callback:function(e,n){}}),$(document).ready(function(){console.log("Welcome To %c晚晴幽草轩","font-size:2.113em;color: #2edfa3"),$(".navbar").click(function(){$("header nav").toggleClass("shownav")});var e=0;function n(){"number"==typeof window.innerWidth?e=window.innerWidth:document.documentElement&&document.documentElement.clientWidth&&(e=document.documentElement.clientWidth)}var o=$("#main"),s=$("#asidepart"),a=$(".closeaside"),c=$(".openaside"),d=function(){s.addClass("fadeOut").css("display","none"),c.css("display","block").addClass("fadeIn"),o.addClass("moveMain")},t=function(){c.css("display","none").removeClass("beforeFadeIn"),s.css("display","block").removeClass("fadeOut").addClass("fadeIn"),o.removeClass("moveMain")};a.click(d),c.click(t),document.onkeydown=function(e){var n=e||window.event,o=n.keyCode||n.which||n.charCode,s="search"===document.activeElement.id||"TEXTAREA"===document.activeElement.nodeName;return!(13===o&&!s)||("none"===c.css("display")?d():t(),!1)},$(window).scroll(function(){c.css("top",Math.max(80,260-$(this).scrollTop()))}),n(),$(window).resize(function(){n(),e>=1024?$("header nav").removeClass("shownav"):(o.removeClass("moveMain"),s.css("display","block").removeClass("fadeOut"),c.css("display","none"),$("#toc.toc-aside").css("display","none"))})})</script>
 

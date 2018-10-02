@@ -1,5 +1,5 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>JavaScript 字符串实用常操纪要 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="//cdn.bootcss.com"><meta name="description" content="JavaScript 字符串常用方法整理；字符串截取，去除空白行，字符串反转，字符串转化为多维数组。"><meta name="keywords" content="JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="JavaScript 字符串实用常操纪要"><meta property="og:url" content="https://jeffjade.com/2016/11/24/116-JavaScript-string-operation/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="JavaScript 字符串常用方法整理；字符串截取，去除空白行，字符串反转，字符串转化为多维数组。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2018-03-25T04:47:18.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="JavaScript 字符串实用常操纪要"><meta name="twitter:description" content="JavaScript 字符串常用方法整理；字符串截取，去除空白行，字符串反转，字符串转化为多维数组。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"><link href="//cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css" rel="stylesheet"><link href="//cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="//cdn.bootcss.com/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2016/11/24/116-JavaScript-string-operation/" class="title=&quot;JavaScript" itemprop="url">JavaScript 字符串实用常操纪要</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2016-11-24T14:11:00.000Z" itemprop="datePublished">发表于 2016-11-24</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>JavaScript 字符串用于存储和处理文本。因此在编写 JS 代码之时她总如影随形，在你处理用户的输入数据的时候，在读取或设置 DOM 对象的属性时，在操作 Cookie 时，在转换各种不同 Date 时，诸此等等，繁不能数；而她那蛮多的 API 呵，总有些让人不愿去记忆的冲动，既然用时常搜，倒不如<code>烂笔头</code>一番，以作了结，顺道也体现下这博客存在的价值，由此就有了这篇纪要。</p><a id="more"></a><style type="text/css" scoped>.es6{
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>JavaScript 字符串实用常操纪要 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><meta name="description" content="JavaScript 字符串常用方法整理；字符串截取，去除空白行，字符串反转，字符串转化为多维数组。"><meta name="keywords" content="JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="JavaScript 字符串实用常操纪要"><meta property="og:url" content="https://jeffjade.com/2016/11/24/116-JavaScript-string-operation/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="JavaScript 字符串常用方法整理；字符串截取，去除空白行，字符串反转，字符串转化为多维数组。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2018-03-25T04:47:18.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="JavaScript 字符串实用常操纪要"><meta name="twitter:description" content="JavaScript 字符串常用方法整理；字符串截取，去除空白行，字符串反转，字符串转化为多维数组。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"><link href="https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css" rel="stylesheet"><link href="//cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.bootcss.com/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2016/11/24/116-JavaScript-string-operation/" class="title=&quot;JavaScript" itemprop="url">JavaScript 字符串实用常操纪要</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2016-11-24T14:11:00.000Z" itemprop="datePublished">发表于 2016-11-24</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>JavaScript 字符串用于存储和处理文本。因此在编写 JS 代码之时她总如影随形，在你处理用户的输入数据的时候，在读取或设置 DOM 对象的属性时，在操作 Cookie 时，在转换各种不同 Date 时，诸此等等，繁不能数；而她那蛮多的 API 呵，总有些让人不愿去记忆的冲动，既然用时常搜，倒不如<code>烂笔头</code>一番，以作了结，顺道也体现下这博客存在的价值，由此就有了这篇纪要。</p><a id="more"></a><style type="text/css" scoped>.es6{
     'color:#ed1941;
     font-weight:600;
     background-color:#999;
@@ -481,11 +481,11 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -501,11 +501,11 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>4</sup></a></li>
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>4</sup></a></li>
 			
 		
 			
@@ -517,11 +517,7 @@
 			
 		
 			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
 			
 		
 			
@@ -529,11 +525,15 @@
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
@@ -545,10 +545,6 @@
 			
 		
 			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
@@ -557,11 +553,15 @@
 			
 		
 			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
 			
 		
 			
@@ -577,7 +577,7 @@
 			
 		
 			
-				<li><a href="/tags/Blog/" title="Blog">Blog<sup>1</sup></a></li>
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -792,7 +792,7 @@
 		
 		</p>
 </div></footer>
-    <script src="//cdn.bootcss.com/echo.js/1.7.3/echo.min.js"></script>
+    <script src="https://cdn.bootcss.com/echo.js/1.7.3/echo.min.js"></script>
 
 <script type="text/javascript">echo.init({offset:200,throttle:250,unload:!1,callback:function(e,n){}}),$(document).ready(function(){console.log("Welcome To %c晚晴幽草轩","font-size:2.113em;color: #2edfa3"),$(".navbar").click(function(){$("header nav").toggleClass("shownav")});var e=0;function n(){"number"==typeof window.innerWidth?e=window.innerWidth:document.documentElement&&document.documentElement.clientWidth&&(e=document.documentElement.clientWidth)}var o=$("#main"),s=$("#asidepart"),a=$(".closeaside"),c=$(".openaside"),d=function(){s.addClass("fadeOut").css("display","none"),c.css("display","block").addClass("fadeIn"),o.addClass("moveMain")},t=function(){c.css("display","none").removeClass("beforeFadeIn"),s.css("display","block").removeClass("fadeOut").addClass("fadeIn"),o.removeClass("moveMain")};a.click(d),c.click(t),document.onkeydown=function(e){var n=e||window.event,o=n.keyCode||n.which||n.charCode,s="search"===document.activeElement.id||"TEXTAREA"===document.activeElement.nodeName;return!(13===o&&!s)||("none"===c.css("display")?d():t(),!1)},$(window).scroll(function(){c.css("top",Math.max(80,260-$(this).scrollTop()))}),n(),$(window).resize(function(){n(),e>=1024?$("header nav").removeClass("shownav"):(o.removeClass("moveMain"),s.css("display","block").removeClass("fadeOut"),c.css("display","none"),$("#toc.toc-aside").css("display","none"))})})</script>
 

@@ -1,5 +1,5 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>JavaScript对象length | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="//cdn.bootcss.com"><meta name="description" content="前几日有在Javascript数组操作一文中稍提及了数组的length属性；深入一点探究，就发现JS这length确有许多难为所知的特性。这就边学边探究下这朵奇葩属性;这里边深入边记载。"><meta name="keywords" content="JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="JavaScript对象length"><meta property="og:url" content="https://jeffjade.com/2015/10/08/2015-10-08-js-object-length/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="前几日有在Javascript数组操作一文中稍提及了数组的length属性；深入一点探究，就发现JS这length确有许多难为所知的特性。这就边学边探究下这朵奇葩属性;这里边深入边记载。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2016-10-30T14:46:01.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="JavaScript对象length"><meta name="twitter:description" content="前几日有在Javascript数组操作一文中稍提及了数组的length属性；深入一点探究，就发现JS这length确有许多难为所知的特性。这就边学边探究下这朵奇葩属性;这里边深入边记载。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"><link href="//cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css" rel="stylesheet"><link href="//cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="//cdn.bootcss.com/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/10/08/2015-10-08-js-object-length/" class="title=&quot;JavaScript对象length&quot;" itemprop="url">JavaScript对象length</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-10-08T09:30:00.000Z" itemprop="datePublished">发表于 2015-10-08</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>前几日有在<a href="http://www.jeffjade.com/2015/09/25/2015-09-25-js-array/#" target="_blank" rel="noopener">Javascript数组操作</a>一文中稍提及了数组的length属性；深入一点探究，就发现JS这length确有许多难为所知的特性。这就边学边探究下这朵奇葩属性;这里边深入边记载。</p><a id="more"></a><h2 id="可变的数组length属性"><a href="#可变的数组length属性" class="headerlink" title="可变的数组length属性"></a>可变的数组length属性</h2><p>和其他大多数语言不同的是，JavaScript数组的length属性是可变的，这一点需要特别注意。当length属性被设置得更大时，整个数组的状态事实上不会发生变化，仅仅是length属性变大；当length属性被设置得比原来小时，则原先数组中索引大于或等于length的元素的值全部被丢失。下面是演示改变length属性的例子：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="number">12</span>,<span class="number">23</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">25</span>,<span class="number">98</span>,<span class="number">76</span>,<span class="number">54</span>,<span class="number">56</span>,<span class="number">76</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.length);  <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line">arr.length=<span class="number">5</span>; <span class="comment">//将数组的长度减少到5，索引等于或超过5的元素被丢弃</span></span><br><span class="line">alert(arr[<span class="number">8</span>]); <span class="comment">//显示第9个元素已经变为"undefined"</span></span><br><span class="line"></span><br><span class="line">arr.length=<span class="number">10</span>; <span class="comment">//将数组长度恢复为10</span></span><br><span class="line">alert(arr[<span class="number">8</span>]); <span class="comment">//虽然长度被恢复为10，但第9个元素却无法收回，显示"undefined"</span></span><br><span class="line"></span><br><span class="line">arr[<span class="number">15</span>] = <span class="number">34</span>;</span><br><span class="line"><span class="built_in">console</span>.log(arr.length);  <span class="comment">//16</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr[<span class="number">10</span>]);     <span class="comment">//undefine</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.toString())</span><br><span class="line"><span class="comment">//12,23,5,3,25,98,76,54,56,76,,,,,,34</span></span><br></pre></td></tr></table></figure>
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>JavaScript对象length | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><meta name="description" content="前几日有在Javascript数组操作一文中稍提及了数组的length属性；深入一点探究，就发现JS这length确有许多难为所知的特性。这就边学边探究下这朵奇葩属性;这里边深入边记载。"><meta name="keywords" content="JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="JavaScript对象length"><meta property="og:url" content="https://jeffjade.com/2015/10/08/2015-10-08-js-object-length/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="前几日有在Javascript数组操作一文中稍提及了数组的length属性；深入一点探究，就发现JS这length确有许多难为所知的特性。这就边学边探究下这朵奇葩属性;这里边深入边记载。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2016-10-30T14:46:01.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="JavaScript对象length"><meta name="twitter:description" content="前几日有在Javascript数组操作一文中稍提及了数组的length属性；深入一点探究，就发现JS这length确有许多难为所知的特性。这就边学边探究下这朵奇葩属性;这里边深入边记载。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"><link href="https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css" rel="stylesheet"><link href="//cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.bootcss.com/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/10/08/2015-10-08-js-object-length/" class="title=&quot;JavaScript对象length&quot;" itemprop="url">JavaScript对象length</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-10-08T09:30:00.000Z" itemprop="datePublished">发表于 2015-10-08</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>前几日有在<a href="http://www.jeffjade.com/2015/09/25/2015-09-25-js-array/#" target="_blank" rel="noopener">Javascript数组操作</a>一文中稍提及了数组的length属性；深入一点探究，就发现JS这length确有许多难为所知的特性。这就边学边探究下这朵奇葩属性;这里边深入边记载。</p><a id="more"></a><h2 id="可变的数组length属性"><a href="#可变的数组length属性" class="headerlink" title="可变的数组length属性"></a>可变的数组length属性</h2><p>和其他大多数语言不同的是，JavaScript数组的length属性是可变的，这一点需要特别注意。当length属性被设置得更大时，整个数组的状态事实上不会发生变化，仅仅是length属性变大；当length属性被设置得比原来小时，则原先数组中索引大于或等于length的元素的值全部被丢失。下面是演示改变length属性的例子：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="number">12</span>,<span class="number">23</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">25</span>,<span class="number">98</span>,<span class="number">76</span>,<span class="number">54</span>,<span class="number">56</span>,<span class="number">76</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.length);  <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line">arr.length=<span class="number">5</span>; <span class="comment">//将数组的长度减少到5，索引等于或超过5的元素被丢弃</span></span><br><span class="line">alert(arr[<span class="number">8</span>]); <span class="comment">//显示第9个元素已经变为"undefined"</span></span><br><span class="line"></span><br><span class="line">arr.length=<span class="number">10</span>; <span class="comment">//将数组长度恢复为10</span></span><br><span class="line">alert(arr[<span class="number">8</span>]); <span class="comment">//虽然长度被恢复为10，但第9个元素却无法收回，显示"undefined"</span></span><br><span class="line"></span><br><span class="line">arr[<span class="number">15</span>] = <span class="number">34</span>;</span><br><span class="line"><span class="built_in">console</span>.log(arr.length);  <span class="comment">//16</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr[<span class="number">10</span>]);     <span class="comment">//undefine</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.toString())</span><br><span class="line"><span class="comment">//12,23,5,3,25,98,76,54,56,76,,,,,,34</span></span><br></pre></td></tr></table></figure>
 <p>length对象不仅可以显式的设置，它也有可能被隐式修改。JavaScript中可以使用一个未声明过的变量，同样，也可以使用一个未定义的数组元素（指索引超过或等于length的元素），这时，length属性的值将被设置为所使用元素索引的值加1。例如下面的代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="number">12</span>,<span class="number">23</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">25</span>,<span class="number">98</span>,<span class="number">76</span>,<span class="number">54</span>,<span class="number">56</span>,<span class="number">76</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.length);  <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line">arr[<span class="number">15</span>] = <span class="number">34</span>;</span><br><span class="line"><span class="built_in">console</span>.log(arr.length);  <span class="comment">//16</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr[<span class="number">10</span>]);     <span class="comment">//undefine</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.toString())</span><br><span class="line"><span class="comment">//12,23,5,3,25,98,76,54,56,76,,,,,,34</span></span><br></pre></td></tr></table></figure>
 <h2 id="JS对象的length"><a href="#JS对象的length" class="headerlink" title="JS对象的length"></a>JS对象的length</h2><p>在JS中来判断一个对象是否为数组，是需要费点周折的。但以是否具有length属性来衡量之，显然是不合理的。length数组不是独有的，JS对象也是可以用的(当然，数组也是对象的一种～数组对象)。譬如：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">'1'</span>:<span class="string">'gg'</span>, <span class="string">'2'</span>:<span class="string">'love'</span>, <span class="string">'4'</span>:<span class="string">'meimei'</span>, <span class="attr">length</span>:<span class="number">5</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj.length); <span class="comment">// 5</span></span><br></pre></td></tr></table></figure><p></p>
@@ -105,10 +105,10 @@
 	<nav class="article-nav clearfix">
  
  <div class="prev">
- <a href="/2015/10/15/2015-10-15-nice-animation-collection/" title="精美动画后宫苑">
+ <a href="/2015/10/15/2015-10-16-cleaver-make-ppt/" title="Cleaver快速制作网页PPT">
   <strong>上一篇：</strong><br>
   <span>
-  精美动画后宫苑</span>
+  Cleaver快速制作网页PPT</span>
 </a>
 </div>
 
@@ -338,11 +338,11 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -358,11 +358,11 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>4</sup></a></li>
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>4</sup></a></li>
 			
 		
 			
@@ -374,11 +374,7 @@
 			
 		
 			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
 			
 		
 			
@@ -386,11 +382,15 @@
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
@@ -402,10 +402,6 @@
 			
 		
 			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
@@ -414,11 +410,15 @@
 			
 		
 			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
 			
 		
 			
@@ -434,7 +434,7 @@
 			
 		
 			
-				<li><a href="/tags/Blog/" title="Blog">Blog<sup>1</sup></a></li>
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -649,7 +649,7 @@
 		
 		</p>
 </div></footer>
-    <script src="//cdn.bootcss.com/echo.js/1.7.3/echo.min.js"></script>
+    <script src="https://cdn.bootcss.com/echo.js/1.7.3/echo.min.js"></script>
 
 <script type="text/javascript">echo.init({offset:200,throttle:250,unload:!1,callback:function(e,n){}}),$(document).ready(function(){console.log("Welcome To %c晚晴幽草轩","font-size:2.113em;color: #2edfa3"),$(".navbar").click(function(){$("header nav").toggleClass("shownav")});var e=0;function n(){"number"==typeof window.innerWidth?e=window.innerWidth:document.documentElement&&document.documentElement.clientWidth&&(e=document.documentElement.clientWidth)}var o=$("#main"),s=$("#asidepart"),a=$(".closeaside"),c=$(".openaside"),d=function(){s.addClass("fadeOut").css("display","none"),c.css("display","block").addClass("fadeIn"),o.addClass("moveMain")},t=function(){c.css("display","none").removeClass("beforeFadeIn"),s.css("display","block").removeClass("fadeOut").addClass("fadeIn"),o.removeClass("moveMain")};a.click(d),c.click(t),document.onkeydown=function(e){var n=e||window.event,o=n.keyCode||n.which||n.charCode,s="search"===document.activeElement.id||"TEXTAREA"===document.activeElement.nodeName;return!(13===o&&!s)||("none"===c.css("display")?d():t(),!1)},$(window).scroll(function(){c.css("top",Math.max(80,260-$(this).scrollTop()))}),n(),$(window).resize(function(){n(),e>=1024?$("header nav").removeClass("shownav"):(o.removeClass("moveMain"),s.css("display","block").removeClass("fadeOut"),c.css("display","none"),$("#toc.toc-aside").css("display","none"))})})</script>
 

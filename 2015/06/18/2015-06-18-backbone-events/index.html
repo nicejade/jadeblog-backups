@@ -1,5 +1,5 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Backbone事件模块及其用法 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="//cdn.bootcss.com"><meta name="description" content="事件模块Backbone.Events在Backbone中占有十分重要的位置，其他模块Model，Collection，View所有事件模块都依赖它。通过继承Events的方法来实现事件的管理，可以说，它是Backbone的核心组成部分。"><meta name="keywords" content="JavaScript,Backbone"><meta property="og:type" content="article"><meta property="og:title" content="Backbone事件模块及其用法"><meta property="og:url" content="https://jeffjade.com/2015/06/18/2015-06-18-backbone-events/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="事件模块Backbone.Events在Backbone中占有十分重要的位置，其他模块Model，Collection，View所有事件模块都依赖它。通过继承Events的方法来实现事件的管理，可以说，它是Backbone的核心组成部分。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://images.cnitblog.com/blog/532971/201411/090838293464523.png"><meta property="og:updated_time" content="2016-11-22T15:50:27.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Backbone事件模块及其用法"><meta name="twitter:description" content="事件模块Backbone.Events在Backbone中占有十分重要的位置，其他模块Model，Collection，View所有事件模块都依赖它。通过继承Events的方法来实现事件的管理，可以说，它是Backbone的核心组成部分。"><meta name="twitter:image" content="http://images.cnitblog.com/blog/532971/201411/090838293464523.png"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"><link href="//cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css" rel="stylesheet"><link href="//cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="//cdn.bootcss.com/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/06/18/2015-06-18-backbone-events/" class="title=&quot;Backbone事件模块及其用法&quot;" itemprop="url">Backbone事件模块及其用法</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-06-18T03:11:00.000Z" itemprop="datePublished">发表于 2015-06-18</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>事件模块Backbone.Events在Backbone中占有十分重要的位置，其他模块Model，Collection，View所有事件模块都依赖它。通过继承Events的方法来实现事件的管理，可以说，它是Backbone的核心组成部分。</p><a id="more"></a><p>此外，事件模块的所有方法都挂在了全局的Backbone上，如果你的代码中需要用到自定义事件(实现观察者模式)，可以直接使用它。</p><h2 id="一、Events-API"><a href="#一、Events-API" class="headerlink" title="一、Events API"></a><strong>一、Events API</strong></h2><p>1.0之前只提供了三个基本方法 on/once/off/trigger，1.0开始增加了几个实用方法 listenTo/listenToOnce/stopListening。</p><p><img src="https://image.nicelinks.site/blank.gif" alt="Backbone" data-echo="http://images.cnitblog.com/blog/532971/201411/090838293464523.png"></p><p>以下是各个方法的意义</p><blockquote><p>on 添加自定义事件<br>off 删除自定义事件<br>trigger 派发自定义事件<br>once 添加只执行一次的自定义事件 （内部依赖于_.once）<br>listenTo 添加一个观察对象<br>listenToOnce 添加一个仅执行一次的观察对象<br>stopListening 删除添加的观察对象</p></blockquote><h2 id="二、基本事件方法"><a href="#二、基本事件方法" class="headerlink" title="二、基本事件方法"></a><strong>二、基本事件方法</strong></h2><h3 id="1-绑定on方法"><a href="#1-绑定on方法" class="headerlink" title="1. 绑定on方法"></a><strong>1. 绑定on方法</strong></h3><p>使用on方法可以给一个对象的自定义事件绑定触发该事件时执行的函数，当自定义的事件触发时，绑定的函数将会被执行。其调用格式如下：</p><blockquote><p>obj.on(eventName, function, [context])</p></blockquote><p>其中，参数Obj表示对象本身；eventName表示自定义事件的事件名；function表示当事件触发时被执行的函数；可选参数context表示上下文对象，用于对象级事件的监听，即当一个对象需要监听另一个对象的事件时，可以使用该参数。</p><p>使用on方法不仅可以绑定用户的自定义事件，可以直接监听对象自带的一些事件，下面通过一些简单示例来演示具体使用过程。</p><p><strong>示例1：使用on方法监听默认事件</strong><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = Backbone.Model.extend(&#123;</span><br><span class="line">  defaults : &#123;</span><br><span class="line">    name : <span class="string">""</span>,</span><br><span class="line">    sex : <span class="string">""</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person();</span><br><span class="line">man.on(<span class="string">'change'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'对象的默认值发生了变化'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">man.set(<span class="string">'name'</span>, <span class="string">'breezefeng'</span>);</span><br></pre></td></tr></table></figure><p></p>
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Backbone事件模块及其用法 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><meta name="description" content="事件模块Backbone.Events在Backbone中占有十分重要的位置，其他模块Model，Collection，View所有事件模块都依赖它。通过继承Events的方法来实现事件的管理，可以说，它是Backbone的核心组成部分。"><meta name="keywords" content="JavaScript,Backbone"><meta property="og:type" content="article"><meta property="og:title" content="Backbone事件模块及其用法"><meta property="og:url" content="https://jeffjade.com/2015/06/18/2015-06-18-backbone-events/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="事件模块Backbone.Events在Backbone中占有十分重要的位置，其他模块Model，Collection，View所有事件模块都依赖它。通过继承Events的方法来实现事件的管理，可以说，它是Backbone的核心组成部分。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://images.cnitblog.com/blog/532971/201411/090838293464523.png"><meta property="og:updated_time" content="2016-11-22T15:50:27.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Backbone事件模块及其用法"><meta name="twitter:description" content="事件模块Backbone.Events在Backbone中占有十分重要的位置，其他模块Model，Collection，View所有事件模块都依赖它。通过继承Events的方法来实现事件的管理，可以说，它是Backbone的核心组成部分。"><meta name="twitter:image" content="http://images.cnitblog.com/blog/532971/201411/090838293464523.png"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"><link href="https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css" rel="stylesheet"><link href="//cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.bootcss.com/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/06/18/2015-06-18-backbone-events/" class="title=&quot;Backbone事件模块及其用法&quot;" itemprop="url">Backbone事件模块及其用法</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-06-18T03:11:00.000Z" itemprop="datePublished">发表于 2015-06-18</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>事件模块Backbone.Events在Backbone中占有十分重要的位置，其他模块Model，Collection，View所有事件模块都依赖它。通过继承Events的方法来实现事件的管理，可以说，它是Backbone的核心组成部分。</p><a id="more"></a><p>此外，事件模块的所有方法都挂在了全局的Backbone上，如果你的代码中需要用到自定义事件(实现观察者模式)，可以直接使用它。</p><h2 id="一、Events-API"><a href="#一、Events-API" class="headerlink" title="一、Events API"></a><strong>一、Events API</strong></h2><p>1.0之前只提供了三个基本方法 on/once/off/trigger，1.0开始增加了几个实用方法 listenTo/listenToOnce/stopListening。</p><p><img src="https://image.nicelinks.site/blank.gif" alt="Backbone" data-echo="http://images.cnitblog.com/blog/532971/201411/090838293464523.png"></p><p>以下是各个方法的意义</p><blockquote><p>on 添加自定义事件<br>off 删除自定义事件<br>trigger 派发自定义事件<br>once 添加只执行一次的自定义事件 （内部依赖于_.once）<br>listenTo 添加一个观察对象<br>listenToOnce 添加一个仅执行一次的观察对象<br>stopListening 删除添加的观察对象</p></blockquote><h2 id="二、基本事件方法"><a href="#二、基本事件方法" class="headerlink" title="二、基本事件方法"></a><strong>二、基本事件方法</strong></h2><h3 id="1-绑定on方法"><a href="#1-绑定on方法" class="headerlink" title="1. 绑定on方法"></a><strong>1. 绑定on方法</strong></h3><p>使用on方法可以给一个对象的自定义事件绑定触发该事件时执行的函数，当自定义的事件触发时，绑定的函数将会被执行。其调用格式如下：</p><blockquote><p>obj.on(eventName, function, [context])</p></blockquote><p>其中，参数Obj表示对象本身；eventName表示自定义事件的事件名；function表示当事件触发时被执行的函数；可选参数context表示上下文对象，用于对象级事件的监听，即当一个对象需要监听另一个对象的事件时，可以使用该参数。</p><p>使用on方法不仅可以绑定用户的自定义事件，可以直接监听对象自带的一些事件，下面通过一些简单示例来演示具体使用过程。</p><p><strong>示例1：使用on方法监听默认事件</strong><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = Backbone.Model.extend(&#123;</span><br><span class="line">  defaults : &#123;</span><br><span class="line">    name : <span class="string">""</span>,</span><br><span class="line">    sex : <span class="string">""</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person();</span><br><span class="line">man.on(<span class="string">'change'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'对象的默认值发生了变化'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">man.set(<span class="string">'name'</span>, <span class="string">'breezefeng'</span>);</span><br></pre></td></tr></table></figure><p></p>
 <p>在上述代码中，首先定义一个名称为Person的数据模型类。在定义时，通过defaults参数设置两个名为“name” 和 “sex” 的默认数据项。然后，实例化一个名为man的模型类对象，并使用on方法向该对象绑定触发change事件时执行的函数，即只要对象的属性值发生变化，将会触发change事件。</p>
 <p><strong>示例2：使用on方法监听属性事件</strong><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = Backbone.Model.extend(&#123;</span><br><span class="line">  defaults : &#123;</span><br><span class="line">    name : <span class="string">""</span>,</span><br><span class="line">    sex : <span class="string">"女"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person();</span><br><span class="line">man.on(<span class="string">'change'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'对象的默认值发生了变化'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">man.on(<span class="string">'change:sex'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">model, value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'你修改了性别属性值，最新值是：'</span> + value)</span><br><span class="line">&#125;);</span><br><span class="line">man.set(<span class="string">'sex'</span>, <span class="string">'男'</span>);</span><br></pre></td></tr></table></figure><p></p>
 <p>在上述代码中，分别给man对象绑定了两个事件，一个是默认事件change，另一个是属性事件change:sex，即sex属性变化事件。在属性变化事件的回调函数中，通过回传的value参数获取最新修改后的属性值。</p>
@@ -397,11 +397,11 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -417,11 +417,11 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>4</sup></a></li>
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>4</sup></a></li>
 			
 		
 			
@@ -433,11 +433,7 @@
 			
 		
 			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
 			
 		
 			
@@ -445,11 +441,15 @@
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
@@ -461,10 +461,6 @@
 			
 		
 			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
@@ -473,11 +469,15 @@
 			
 		
 			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
 			
 		
 			
@@ -493,7 +493,7 @@
 			
 		
 			
-				<li><a href="/tags/Blog/" title="Blog">Blog<sup>1</sup></a></li>
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -708,7 +708,7 @@
 		
 		</p>
 </div></footer>
-    <script src="//cdn.bootcss.com/echo.js/1.7.3/echo.min.js"></script>
+    <script src="https://cdn.bootcss.com/echo.js/1.7.3/echo.min.js"></script>
 
 <script type="text/javascript">echo.init({offset:200,throttle:250,unload:!1,callback:function(e,n){}}),$(document).ready(function(){console.log("Welcome To %c晚晴幽草轩","font-size:2.113em;color: #2edfa3"),$(".navbar").click(function(){$("header nav").toggleClass("shownav")});var e=0;function n(){"number"==typeof window.innerWidth?e=window.innerWidth:document.documentElement&&document.documentElement.clientWidth&&(e=document.documentElement.clientWidth)}var o=$("#main"),s=$("#asidepart"),a=$(".closeaside"),c=$(".openaside"),d=function(){s.addClass("fadeOut").css("display","none"),c.css("display","block").addClass("fadeIn"),o.addClass("moveMain")},t=function(){c.css("display","none").removeClass("beforeFadeIn"),s.css("display","block").removeClass("fadeOut").addClass("fadeIn"),o.removeClass("moveMain")};a.click(d),c.click(t),document.onkeydown=function(e){var n=e||window.event,o=n.keyCode||n.which||n.charCode,s="search"===document.activeElement.id||"TEXTAREA"===document.activeElement.nodeName;return!(13===o&&!s)||("none"===c.css("display")?d():t(),!1)},$(window).scroll(function(){c.css("top",Math.max(80,260-$(this).scrollTop()))}),n(),$(window).resize(function(){n(),e>=1024?$("header nav").removeClass("shownav"):(o.removeClass("moveMain"),s.css("display","block").removeClass("fadeOut"),c.css("display","none"),$("#toc.toc-aside").css("display","none"))})})</script>
 
