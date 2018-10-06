@@ -1,5 +1,5 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Rake让Jekyll写博更优雅 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><meta name="description" content="编写Rakefile让Jekyll写博更便捷，一键生成/预览/发布..."><meta name="keywords" content="Tools,Rake,Jekyll"><meta property="og:type" content="article"><meta property="og:title" content="Rake让Jekyll写博更优雅"><meta property="og:url" content="https://jeffjade.com/2016/03/26/2016-03-26-rakefile-for-jekyll/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="编写Rakefile让Jekyll写博更便捷，一键生成/预览/发布..."><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://image.nicelinks.site/niceStar.jpg"><meta property="og:updated_time" content="2017-09-01T12:58:14.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Rake让Jekyll写博更优雅"><meta name="twitter:description" content="编写Rakefile让Jekyll写博更便捷，一键生成/预览/发布..."><meta name="twitter:image" content="https://image.nicelinks.site/niceStar.jpg"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"><link href="https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css" rel="stylesheet"><link href="//cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.bootcss.com/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script><script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2016/03/26/2016-03-26-rakefile-for-jekyll/" class="title=&quot;Rake让Jekyll写博更优雅&quot;" itemprop="url">Rake让Jekyll写博更优雅</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2016-03-26T08:30:00.000Z" itemprop="datePublished">发表于 2016-03-26</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>于想拥有个人站点品牌的人来讲，现如今是一个很好的时期。至少 <strong>Hexo</strong>、<strong>Jekyll</strong>、<strong>Leanote</strong>、<code>WordPress</code> 、<code>FarBox</code> Octopress、ghost、marboo、Medium、Logdown、prose.io 等诸多层出不穷的好工具，让建站写文已经变得异常简洁方便。分分钟可搭建起美观大方的个人博客，这样的教程已经充盈网络，在此不提。这里要谈及的是，以<strong>Rake</strong>一键生成<strong>Jekyll</strong>文章模版，一键预览效果，一键发布等等；Rake让Jekyll写博更优雅。</p><a id="more"></a><p><img src="https://image.nicelinks.site/blank.gif" alt="Rake让Jekyll写博更优雅" data-echo="//image.nicelinks.site/niceStar.jpg"></p><p>个人博客，目前主用这<strong>Hexo</strong>和<strong><a href="http://jekyllrb.com/" target="_blank" rel="noopener">jekyll</a></strong>，两者都很是轻量便捷。<strong>Hexo</strong>是一个开源的静态博客生成器,由一位台湾大学生用node.js开发而成，<a href="http://www.jeffjade.com" target="_blank" rel="noopener">晚晴幽草轩</a>就是用<strong>Hexo</strong>搭建而成。<strong>jekyll</strong>是Ruby写的一个轻量级的博客系统，也是Github Page默认搭配，<a href="http://nicejade.github.io" target="_blank" rel="noopener">天意人间舫</a>则是以<strong>Jekyll</strong>创造出的；(题外话，Hexo发布前需要运行<code>Hexo g</code>本地生成下，文章多了，速度上也会慢些(百篇文章，5s左右)；发布后更新速度也没Jekyll那么快；其他常用体验倒差不太多)。</p><p>在设计上，jekyll框架将博客模块化，比如有负责网页显示样式的部分（即模板），有负责博客内容的部分，也就是我们使用<strong>markdown</strong>语言来写的内容。其次，它通过一定的规则，又将各个模块的内容组织起来，并创建各个页面之间的联系。如此是它可以使我们在写作的时候，尽最大的精力去集中在内容的创作上，而不用太在意格式以及排版。并且借助于git这个相当流行的分布式版本控制系统，可很有效的管理所写的文章，完全可以做到在没有网络的情况下写作｜预览，待有网络时再将内容同步。</p><p>使用<strong>Jekyll</strong>本已经非常方便了，不管是本地测试还是发布线上。但还是不够简洁，对于渴望极致的懒人来讲。比如发布文章到线上：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;commit massge&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p></p>
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Rake让Jekyll写博更优雅 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="编写Rakefile让Jekyll写博更便捷，一键生成/预览/发布..."><meta name="keywords" content="Tools,Rake,Jekyll"><meta property="og:type" content="article"><meta property="og:title" content="Rake让Jekyll写博更优雅"><meta property="og:url" content="https://jeffjade.com/2016/03/26/2016-03-26-rakefile-for-jekyll/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="编写Rakefile让Jekyll写博更便捷，一键生成/预览/发布..."><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://image.nicelinks.site/niceStar.jpg"><meta property="og:updated_time" content="2017-09-01T12:58:14.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Rake让Jekyll写博更优雅"><meta name="twitter:description" content="编写Rakefile让Jekyll写博更便捷，一键生成/预览/发布..."><meta name="twitter:image" content="https://image.nicelinks.site/niceStar.jpg"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.2.2/gitalk.js" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2016/03/26/2016-03-26-rakefile-for-jekyll/" class="title=&quot;Rake让Jekyll写博更优雅&quot;" itemprop="url">Rake让Jekyll写博更优雅</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2016-03-26T08:30:00.000Z" itemprop="datePublished">发表于 2016-03-26</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>于想拥有个人站点品牌的人来讲，现如今是一个很好的时期。至少 <strong>Hexo</strong>、<strong>Jekyll</strong>、<strong>Leanote</strong>、<code>WordPress</code> 、<code>FarBox</code> Octopress、ghost、marboo、Medium、Logdown、prose.io 等诸多层出不穷的好工具，让建站写文已经变得异常简洁方便。分分钟可搭建起美观大方的个人博客，这样的教程已经充盈网络，在此不提。这里要谈及的是，以<strong>Rake</strong>一键生成<strong>Jekyll</strong>文章模版，一键预览效果，一键发布等等；Rake让Jekyll写博更优雅。</p><a id="more"></a><p><img src="https://image.nicelinks.site/blank.gif" alt="Rake让Jekyll写博更优雅" data-echo="//image.nicelinks.site/niceStar.jpg"></p><p>个人博客，目前主用这<strong>Hexo</strong>和<strong><a href="http://jekyllrb.com/" target="_blank" rel="noopener">jekyll</a></strong>，两者都很是轻量便捷。<strong>Hexo</strong>是一个开源的静态博客生成器,由一位台湾大学生用node.js开发而成，<a href="http://www.jeffjade.com" target="_blank" rel="noopener">晚晴幽草轩</a>就是用<strong>Hexo</strong>搭建而成。<strong>jekyll</strong>是Ruby写的一个轻量级的博客系统，也是Github Page默认搭配，<a href="http://nicejade.github.io" target="_blank" rel="noopener">天意人间舫</a>则是以<strong>Jekyll</strong>创造出的；(题外话，Hexo发布前需要运行<code>Hexo g</code>本地生成下，文章多了，速度上也会慢些(百篇文章，5s左右)；发布后更新速度也没Jekyll那么快；其他常用体验倒差不太多)。</p><p>在设计上，jekyll框架将博客模块化，比如有负责网页显示样式的部分（即模板），有负责博客内容的部分，也就是我们使用<strong>markdown</strong>语言来写的内容。其次，它通过一定的规则，又将各个模块的内容组织起来，并创建各个页面之间的联系。如此是它可以使我们在写作的时候，尽最大的精力去集中在内容的创作上，而不用太在意格式以及排版。并且借助于git这个相当流行的分布式版本控制系统，可很有效的管理所写的文章，完全可以做到在没有网络的情况下写作｜预览，待有网络时再将内容同步。</p><p>使用<strong>Jekyll</strong>本已经非常方便了，不管是本地测试还是发布线上。但还是不够简洁，对于渴望极致的懒人来讲。比如发布文章到线上：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;commit massge&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p></p>
 <p>如果能够敲击一个命令完成，就不能忍受搞三行；虽然三行只多余费了不到半分钟。撰文写字，本就不易，一篇下来，已是很累；欲长久此好，必须尽可能减轻完成这事儿之成本；否则累觉不爱之后，爱好这种事儿，会在累烦的折腾种被阉割抛弃的。在操纵<strong>Jekll</strong>博客方面，有很多可以利用的脚本，比如<strong>bash</strong>,<strong>Makefile</strong>,win下的<strong>bat</strong>等等； 朋友@<a href="http://pizida.com" target="_blank" rel="noopener">痞子达</a> 向我推荐了<strong>Rake</strong>，这些日子用了下着实很方便，改写也颇为简单，就此录下一篇推荐给大家。</p>
 <p>何为<a href="http://rake.rubyforge.org" target="_blank" rel="noopener">Rake</a>？: 即Ruby Make，一个用ruby开发的代码构建工具，要了解更多Rake可以参看其官网，抑或是这里整理的<a href="http://nicejade.github.io/2016/03/26/nice-rake.html" target="_blank" rel="noopener">简洁强大如斯：Rake</a>。</p>
 <p>下载安装<strong>Rake</strong>，可以使用 <strong>gem</strong>：</p>
@@ -378,6 +378,10 @@
 			
 		
 			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
@@ -390,11 +394,7 @@
 			
 		
 			
-				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -414,7 +414,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
 			
 		
 			
@@ -430,15 +430,19 @@
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Angular/" title="Angular">Angular<sup>1</sup></a></li>
 			
 		
 			
@@ -450,11 +454,7 @@
 			
 		
 			
-				<li><a href="/tags/SEO/" title="SEO">SEO<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>1</sup></a></li>
+				<li><a href="/tags/Jekyll/" title="Jekyll">Jekyll<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -669,7 +669,7 @@
 		
 		</p>
 </div></footer>
-    <script src="https://cdn.bootcss.com/echo.js/1.7.3/echo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js"></script>
 
 <script type="text/javascript">echo.init({offset:200,throttle:250,unload:!1,callback:function(e,n){}}),$(document).ready(function(){console.log("Welcome To %c晚晴幽草轩","font-size:2.113em;color: #2edfa3"),$(".navbar").click(function(){$("header nav").toggleClass("shownav")});var e=0;function n(){"number"==typeof window.innerWidth?e=window.innerWidth:document.documentElement&&document.documentElement.clientWidth&&(e=document.documentElement.clientWidth)}var o=$("#main"),s=$("#asidepart"),a=$(".closeaside"),c=$(".openaside"),d=function(){s.addClass("fadeOut").css("display","none"),c.css("display","block").addClass("fadeIn"),o.addClass("moveMain")},t=function(){c.css("display","none").removeClass("beforeFadeIn"),s.css("display","block").removeClass("fadeOut").addClass("fadeIn"),o.removeClass("moveMain")};a.click(d),c.click(t),document.onkeydown=function(e){var n=e||window.event,o=n.keyCode||n.which||n.charCode,s="search"===document.activeElement.id||"TEXTAREA"===document.activeElement.nodeName;return!(13===o&&!s)||("none"===c.css("display")?d():t(),!1)},$(window).scroll(function(){c.css("top",Math.max(80,260-$(this).scrollTop()))}),n(),$(window).resize(function(){n(),e>=1024?$("header nav").removeClass("shownav"):(o.removeClass("moveMain"),s.css("display","block").removeClass("fadeOut"),c.css("display","none"),$("#toc.toc-aside").css("display","none"))})})</script>
 
@@ -684,8 +684,8 @@
 
 
 
-<link href="//cdn.bootcss.com/fancybox/2.1.6/css/jquery.fancybox.min.css" rel="stylesheet">
-<script async src="//cdn.bootcss.com/fancybox/2.1.6/js/jquery.fancybox.min.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.6/css/jquery.fancybox.min.css" rel="stylesheet">
+<script async src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.6/js/jquery.fancybox.min.js"></script>
 
 <script type="text/javascript">$(document).ready(function(){$(".article-content").each(function(a){$(this).find("img").each(function(){if(!$(this).parent().hasClass("fancybox")){var a=this.alt;a&&$(this).after('<span class="caption">'+a+"</span>");var t=this.src.indexOf("blank.gif")<0?this.src:$(this).attr("data-echo");$(this).wrap('<a href="'+t+'" title="'+a+'" class="fancybox"></a>')}}),$(this).find(".fancybox").each(function(){$(this).attr("rel","article"+a)})}),$.fancybox&&$(".fancybox").fancybox(),$("#reward-jade-moudle .platform-radio-box").on("click",function(a){var t=a.currentTarget.dataset.id;$(".reward-img-div .reward-qr-img").removeClass("active"),$(".reward-img-div ."+t).addClass("active"),$(".platform-radio-box").removeClass("platform-checked"),a.currentTarget.className="platform-radio-box platform-checked"})})</script>
 
@@ -711,8 +711,8 @@
 <!-- MathJax End -->
 
 <!-- Move totop.js From totop.ejs To Here@0309 -->
-<script src="//cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js"></script>
-<script src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gitalk/1.2.2/gitalk.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
 
 <script type="text/javascript">!function(e){(Object.assign||Object.defineProperty(Object,"assign",{enumerable:!1,configurable:!0,writable:!0,value:function(e,t){"use strict";if(void 0===e||null===e)throw new TypeError("Cannot convert first argument to object");for(var c=Object(e),n=1;n<arguments.length;n++){var r=arguments[n];if(void 0!==r&&null!==r)for(var a=Object.keys(Object(r)),o=0,i=a.length;o<i;o++){var s=a[o],d=Object.getOwnPropertyDescriptor(r,s);void 0!==d&&d.enumerable&&(c[s]=r[s])}}return c}}),document.getElementById("gitalk-container"))&&new Gitalk({clientID:"4bc2d1424c7939471ad4",clientSecret:"b3dc888873f473405f79f7d9394888478ba55ca4",repo:"jadeblog-backups",owner:"nicejade",admin:["nicejade"],id:md5(location.pathname),distractionFreeMode:!1}).render("gitalk-container");var t=document.getElementById("clustrmaps-count");if(t){var c=document.createElement("script");c.type="text/javascript",c.id="clustrmaps",c.src="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a",t.appendChild(c)}var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.charset="utf-8",n.src="//tjs.sjs.sinajs.cn/open/api/js/wb.js",document.body.appendChild(n);var r=document.createElement("script");"https"===window.location.protocol.split(":")[0]?(r.async=!0,r.src="https://zz.bdstatic.com/linksubmit/push.js"):(r.async=!0,r.src="//push.zhanzhang.baidu.com/push.js");var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);var o=e("#totop");o.hide(),e(window).scroll(function(){e(document).scrollTop()>1e3?e(o).stop().fadeTo(300,1):e(o).stop().fadeTo(300,0)}),e(o).click(function(){return e("html, body").animate({scrollTop:0},500),!1})}(jQuery)</script>
 
@@ -727,4 +727,4 @@ if ('serviceWorker' in navigator) {
 </script>
 
 <!-- Inject Anchor.js @2018-01-14 -->
-<script type="text/javascript">function async(e,n){var o=document,r="script",t=o.createElement(r),a=o.getElementsByTagName(r)[0];t.src=e,n&&t.addEventListener("load",function(e){n(null,e)},!1),a.parentNode.insertBefore(t,a)}async("//cdn.bootcss.com/anchor-js/4.1.0/anchor.min.js",function(){anchors.options={visible:"hover",placement:"right"},anchors.add("#post h2, #post h3, #post h4"),anchors.add().remove(".intro-header h1").remove(".subheading").remove(".sidebar-container h5")})</script></body>
+<script type="text/javascript">function async(e,n){var o=document,a="script",r=o.createElement(a),s=o.getElementsByTagName(a)[0];r.src=e,n&&r.addEventListener("load",function(e){n(null,e)},!1),s.parentNode.insertBefore(r,s)}async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js",function(){anchors.options={visible:"hover",placement:"right"},anchors.add("#post h2, #post h3, #post h4"),anchors.add().remove(".intro-header h1").remove(".subheading").remove(".sidebar-container h5")})</script></body>

@@ -61,8 +61,8 @@ https://jeffjade.com/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/
 https://jeffjade.com/2015/10/28/2015-10-28-css3-webfont/
 https://jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/
 https://jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/
-https://jeffjade.com/2015/10/15/2015-10-15-nice-animation-collection/
 https://jeffjade.com/2015/10/15/2015-10-16-cleaver-make-ppt/
+https://jeffjade.com/2015/10/15/2015-10-15-nice-animation-collection/
 https://jeffjade.com/2015/10/08/2015-10-08-js-object-length/
 https://jeffjade.com/2015/10/06/2015-10-06-perfect-js-code/
 https://jeffjade.com/2015/10/04/2015-10-03-use-jquery-better/
