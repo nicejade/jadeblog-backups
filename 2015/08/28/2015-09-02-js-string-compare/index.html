@@ -1,5 +1,5 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>JavaScript字符串间的比较 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="字符串在JavaScript中几乎无处不在，在你处理用户的输入数据的时候，在读取或设置DOM对象的属性时，在操作cookie时，当然还有更 多…。@雪斌在JavaScript中的字符串操作一文中讲的很详细，但是对于涉及Js字符串的比较，还是有必要再学习和探究下的。"><meta name="keywords" content="JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="JavaScript字符串间的比较"><meta property="og:url" content="https://jeffjade.com/2015/08/28/2015-09-02-js-string-compare/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="字符串在JavaScript中几乎无处不在，在你处理用户的输入数据的时候，在读取或设置DOM对象的属性时，在操作cookie时，当然还有更 多…。@雪斌在JavaScript中的字符串操作一文中讲的很详细，但是对于涉及Js字符串的比较，还是有必要再学习和探究下的。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2015-10-06T10:28:01.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="JavaScript字符串间的比较"><meta name="twitter:description" content="字符串在JavaScript中几乎无处不在，在你处理用户的输入数据的时候，在读取或设置DOM对象的属性时，在操作cookie时，当然还有更 多…。@雪斌在JavaScript中的字符串操作一文中讲的很详细，但是对于涉及Js字符串的比较，还是有必要再学习和探究下的。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.2.2/gitalk.js" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><!-- <link rel="stylesheet" href="/css/style.css"> --><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/08/28/2015-09-02-js-string-compare/" class="title=&quot;JavaScript字符串间的比较&quot;" itemprop="url">JavaScript字符串间的比较</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-08-28T13:00:00.000Z" itemprop="datePublished">发表于 2015-08-28</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>字符串在JavaScript中几乎无处不在，在你处理用户的输入数据的时候，在读取或设置DOM对象的属性时，在操作cookie时，当然还有更 多…。@雪斌在<a href="http://www.cnblogs.com/xuebin/articles/1296837.html" target="_blank" rel="noopener">JavaScript中的字符串操作</a>一文中讲的很详细，但是对于涉及Js字符串的比较，还是有必要再学习和探究下的。</p><a id="more"></a><h2 id="字符串和其他对象比较大小"><a href="#字符串和其他对象比较大小" class="headerlink" title="字符串和其他对象比较大小"></a><strong>字符串和其他对象比较大小</strong></h2><p>字符串和其他对象进行比较，大体要遵循下面的这些考量：</p><ol><li>两个操作数都是数值，则进行数值比较</li><li>两个操作数都是字符串，则比较两个字符串对应的字符编码值</li><li>两个操作数有一个是数值，则将另一个转换为数值，再进行数值比较</li><li>两个操作数有一个是对象，则先调用valueOf()方法或toString()方法，再用结果比较</li></ol><p>言不如例子，例不如图；然后，请看下面代码：<br><strong>1)纯数字之间比较</strong><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="number">1</span>&lt;<span class="number">3</span>);<span class="comment">//true</span></span><br></pre></td></tr></table></figure><p></p>
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>JavaScript字符串间的比较 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="字符串在JavaScript中几乎无处不在，在你处理用户的输入数据的时候，在读取或设置DOM对象的属性时，在操作cookie时，当然还有更 多…。@雪斌在JavaScript中的字符串操作一文中讲的很详细，但是对于涉及Js字符串的比较，还是有必要再学习和探究下的。"><meta name="keywords" content="JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="JavaScript字符串间的比较"><meta property="og:url" content="https://jeffjade.com/2015/08/28/2015-09-02-js-string-compare/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="字符串在JavaScript中几乎无处不在，在你处理用户的输入数据的时候，在读取或设置DOM对象的属性时，在操作cookie时，当然还有更 多…。@雪斌在JavaScript中的字符串操作一文中讲的很详细，但是对于涉及Js字符串的比较，还是有必要再学习和探究下的。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2015-10-06T10:28:01.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="JavaScript字符串间的比较"><meta name="twitter:description" content="字符串在JavaScript中几乎无处不在，在你处理用户的输入数据的时候，在读取或设置DOM对象的属性时，在操作cookie时，当然还有更 多…。@雪斌在JavaScript中的字符串操作一文中讲的很详细，但是对于涉及Js字符串的比较，还是有必要再学习和探究下的。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/08/28/2015-09-02-js-string-compare/" class="title=&quot;JavaScript字符串间的比较&quot;" itemprop="url">JavaScript字符串间的比较</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-08-28T13:00:00.000Z" itemprop="datePublished">发表于 2015-08-28</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>字符串在JavaScript中几乎无处不在，在你处理用户的输入数据的时候，在读取或设置DOM对象的属性时，在操作cookie时，当然还有更 多…。@雪斌在<a href="http://www.cnblogs.com/xuebin/articles/1296837.html" target="_blank" rel="noopener">JavaScript中的字符串操作</a>一文中讲的很详细，但是对于涉及Js字符串的比较，还是有必要再学习和探究下的。</p><a id="more"></a><h2 id="字符串和其他对象比较大小"><a href="#字符串和其他对象比较大小" class="headerlink" title="字符串和其他对象比较大小"></a><strong>字符串和其他对象比较大小</strong></h2><p>字符串和其他对象进行比较，大体要遵循下面的这些考量：</p><ol><li>两个操作数都是数值，则进行数值比较</li><li>两个操作数都是字符串，则比较两个字符串对应的字符编码值</li><li>两个操作数有一个是数值，则将另一个转换为数值，再进行数值比较</li><li>两个操作数有一个是对象，则先调用valueOf()方法或toString()方法，再用结果比较</li></ol><p>言不如例子，例不如图；然后，请看下面代码：<br><strong>1)纯数字之间比较</strong><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="number">1</span>&lt;<span class="number">3</span>);<span class="comment">//true</span></span><br></pre></td></tr></table></figure><p></p>
 <p><strong>2)数字字符串比较，会将其先转成数字</strong><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">"1"</span>&lt;<span class="string">"3"</span>);<span class="comment">//true</span></span><br><span class="line">alert(<span class="string">"123"</span>&lt;<span class="string">"123"</span>);<span class="comment">//false</span></span><br></pre></td></tr></table></figure><p></p>
 <p><strong>3)纯字符串比较,先转成ascii码</strong><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">"a"</span>&lt;<span class="string">"b"</span>);<span class="comment">//true</span></span><br><span class="line">alert(<span class="string">"abc"</span>&lt;<span class="string">"aad"</span>);<span class="comment">//false,多纯字母比较，会依次比较ascii码</span></span><br></pre></td></tr></table></figure><p></p>
 <p><strong>4)汉字比较</strong><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">"我"</span>.charCodeAt());<span class="comment">//25105</span></span><br><span class="line">alert(<span class="string">"的"</span>.charCodeAt());<span class="comment">//30340</span></span><br><span class="line">alert(<span class="string">"我"</span>&lt;<span class="string">"的"</span>);<span class="comment">//true,汉字比较,转成ascii码</span></span><br></pre></td></tr></table></figure><p></p>
@@ -130,18 +130,18 @@
 	<nav class="article-nav clearfix">
  
  <div class="prev">
- <a href="/2015/08/28/2015-08-28-Write-Morkdown/" title="SublimeText下写作利器之MarkdownEditing">
+ <a href="/2015/09/06/2015-09-06-ios8-safari-jitbug-record/" title="IOS 8 Safari JIT bug影响jQuery和underscore">
   <strong>上一篇：</strong><br>
   <span>
-  SublimeText下写作利器之MarkdownEditing</span>
+  IOS 8 Safari JIT bug影响jQuery和underscore</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/08/15/2015-08-15-html-a-href/" title="Html&lt;a&gt;标签href的困惑记载">
+<a href="/2015/08/28/2015-08-28-Write-Morkdown/" title="SublimeText下写作利器之MarkdownEditing">
  <strong>下一篇：</strong><br> 
- <span>Html&lt;a&gt;标签href的困惑记载
+ <span>SublimeText下写作利器之MarkdownEditing
 </span>
 </a>
 </div>
@@ -383,10 +383,6 @@
 			
 		
 			
-				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
@@ -399,7 +395,11 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
 			
 		
 			
@@ -407,7 +407,7 @@
 			
 		
 			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -419,7 +419,7 @@
 			
 		
 			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -447,7 +447,7 @@
 			
 		
 			
-				<li><a href="/tags/Angular/" title="Angular">Angular<sup>1</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>1</sup></a></li>
 			
 		
 			
@@ -455,7 +455,7 @@
 			
 		
 			
-				<li><a href="/tags/Cookie/" title="Cookie">Cookie<sup>1</sup></a></li>
+				<li><a href="/tags/SEO/" title="SEO">SEO<sup>1</sup></a></li>
 			
 		
 			
