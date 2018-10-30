@@ -1,5 +1,5 @@
 <!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>必备之常用正则表达式 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="keywords" content="regular expression"><meta name="description" content="有用的正则表达式；常用的正则表达式；useful regular expression；"><meta name="keywords" content="regular expression"><meta property="og:type" content="article"><meta property="og:title" content="必备之常用正则表达式"><meta property="og:url" content="https://jeffjade.com/2017/07/13/123-useful-regular-expression/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="有用的正则表达式；常用的正则表达式；useful regular expression；"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://jeffjade.com/img/nice/BruceLee.jpg"><meta property="og:updated_time" content="2017-09-10T04:25:10.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="必备之常用正则表达式"><meta name="twitter:description" content="有用的正则表达式；常用的正则表达式；useful regular expression；"><meta name="twitter:image" content="https://jeffjade.com/img/nice/BruceLee.jpg"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2017/07/13/123-useful-regular-expression/" class="title=&quot;必备之常用正则表达式&quot;" itemprop="url">必备之常用正则表达式</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2017-07-13T12:10:00.000Z" itemprop="datePublished">发表于 2017-07-13</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>熟练而优雅的使用正则，对于程序员来讲，实在太有意义了（即便非此类者，也是好处多多）；它辅助处理复杂的文本查询和字符串操作，不仅能用之于代码，还能雅之于编辑器，浏览器，Terminal等，实在是编码居家必备之优技。而正则表达式，若要快速掌握也是不易，所以此文存在的意义，即汇集些常用的正则表达式，以备不时之需。</p><a id="more"></a><p><img src="https://image.nicelinks.site/blank.gif" alt="编码常备之正则表达式" data-echo="https://jeffjade.com/img/nice/BruceLee.jpg"></p><p>在开篇之前，推荐几篇常看看的文章，以及几个正则表达式编辑器(在线测试工具)：</p><blockquote><p><a href="https://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="noopener">正则表达式30分钟入门教程</a><br><a href="http://www.jeffjade.com/2014/12/25/2014-12-25-regular-expression/" target="_blank" rel="noopener">59分钟学会正则表达式</a><br><a href="https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149" target="_blank" rel="noopener">8 Regular Expressions You Should Know</a></p><ul><li><a href="http://tool.chinaz.com/regex" target="_blank" rel="noopener">Regex-chinaz</a></li><li><a href="https://www.debuggex.com/" target="_blank" rel="noopener">Debuggex</a></li><li><a href="http://www.pyregex.com/" target="_blank" rel="noopener">PyRegex</a></li><li><a href="http://www.regexper.com/" target="_blank" rel="noopener">Regexper</a></li><li><a href="http://tool.oschina.net/regex" target="_blank" rel="noopener">Regex-oschina</a></li></ul></blockquote><h3 id="一、校验数字的表达式"><a href="#一、校验数字的表达式" class="headerlink" title="一、校验数字的表达式"></a><strong>一、校验数字的表达式</strong></h3><p>1，数字：<br></p><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[<span class="number">0</span><span class="number">-9</span>]*$</span><br></pre></td></tr></table></figure><p></p>
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2017/07/13/123-useful-regular-expression/" class="title=&quot;必备之常用正则表达式&quot;" itemprop="url">必备之常用正则表达式</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2017-07-13T12:10:00.000Z" itemprop="datePublished">发表于 2017-07-13</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>熟练而优雅的使用正则，对于程序员来讲，实在太有意义了（即便非此类者，也是好处多多）；它辅助处理复杂的文本查询和字符串操作，不仅能用之于代码，还能雅之于编辑器，浏览器，Terminal等，实在是编码居家必备之优技。而正则表达式，若要快速掌握也是不易，所以此文存在的意义，即汇集些常用的正则表达式，以备不时之需。</p><a id="more"></a><p><img src="https://image.nicelinks.site/blank.gif" alt="编码常备之正则表达式" data-echo="https://jeffjade.com/img/nice/BruceLee.jpg"></p><p>在开篇之前，推荐几篇常看看的文章，以及几个正则表达式编辑器(在线测试工具)：</p><blockquote><p><a href="https://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="noopener">正则表达式30分钟入门教程</a><br><a href="http://www.jeffjade.com/2014/12/25/2014-12-25-regular-expression/" target="_blank" rel="noopener">59分钟学会正则表达式</a><br><a href="https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149" target="_blank" rel="noopener">8 Regular Expressions You Should Know</a></p><ul><li><a href="http://tool.chinaz.com/regex" target="_blank" rel="noopener">Regex-chinaz</a></li><li><a href="https://www.debuggex.com/" target="_blank" rel="noopener">Debuggex</a></li><li><a href="http://www.pyregex.com/" target="_blank" rel="noopener">PyRegex</a></li><li><a href="http://www.regexper.com/" target="_blank" rel="noopener">Regexper</a></li><li><a href="http://tool.oschina.net/regex" target="_blank" rel="noopener">Regex-oschina</a></li></ul></blockquote><h3 id="一、校验数字的表达式"><a href="#一、校验数字的表达式" class="headerlink" title="一、校验数字的表达式"></a><strong>一、校验数字的表达式</strong></h3><p>1，数字：<br></p><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[<span class="number">0</span><span class="number">-9</span>]*$</span><br></pre></td></tr></table></figure><p></p>
 <p>2，n 位的数字：<br></p><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^<span class="tag">\<span class="name">d</span><span class="string">&#123;n&#125;</span></span><span class="formula">$</span></span><br></pre></td></tr></table></figure><p></p>
 <p>3，至少 n 位的数字：<br></p><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^<span class="tag">\<span class="name">d</span><span class="string">&#123;n,&#125;</span></span><span class="formula">$</span></span><br></pre></td></tr></table></figure><p></p>
 <p>4，m-n 位的数字：<br></p><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^<span class="tag">\<span class="name">d</span><span class="string">&#123;m,n&#125;</span></span><span class="formula">$</span></span><br></pre></td></tr></table></figure><p></p>
@@ -132,7 +132,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Tools/">Tools</a><a href="/tags/Efficiency/">Efficiency</a><a href="/tags/Regex/">Regex</a>
+  <span></span> <a href="/tags/Efficiency/">Efficiency</a><a href="/tags/Tools/">Tools</a><a href="/tags/Regex/">Regex</a>
   </div>
 
 </div>
@@ -415,19 +415,15 @@
 			
 		
 			
-				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
@@ -436,6 +432,10 @@
 		
 			
 				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
 			
 		
 			
@@ -459,15 +459,11 @@
 			
 		
 			
-				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Angular/" title="Angular">Angular<sup>1</sup></a></li>
+				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
 			
 		
 			
@@ -475,7 +471,11 @@
 			
 		
 			
-				<li><a href="/tags/SEO/" title="SEO">SEO<sup>1</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Cookie/" title="Cookie">Cookie<sup>1</sup></a></li>
 			
 		
 			

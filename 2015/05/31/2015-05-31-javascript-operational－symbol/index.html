@@ -1,5 +1,5 @@
 <!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>理解JS按为非运算符(~/~~ ) | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="按位运算符是把操作数看作一系列单独的位，而不是一个数字值。所以在这之前，不得不提到什么是“位”:数值或字符在内存内都是被存储为0和1的序列，每个0和1被称之为1个位,比如说10进制数据2在计算机内被存储为 0 0 0 0 0 0 1 0，当我们将内存内的位值改变之后，这个值代表的意义也就变了，比如把2前移动一位，现在存储单元里面变成了0 0 0 0 0 1 0 0,这个值表示的是十进制的4,这也就"><meta name="keywords" content="JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="理解JS按为非运算符(~&#x2F;~~ )"><meta property="og:url" content="https://jeffjade.com/2015/05/31/2015-05-31-javascript-operational－symbol/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="按位运算符是把操作数看作一系列单独的位，而不是一个数字值。所以在这之前，不得不提到什么是“位”:数值或字符在内存内都是被存储为0和1的序列，每个0和1被称之为1个位,比如说10进制数据2在计算机内被存储为 0 0 0 0 0 0 1 0，当我们将内存内的位值改变之后，这个值代表的意义也就变了，比如把2前移动一位，现在存储单元里面变成了0 0 0 0 0 1 0 0,这个值表示的是十进制的4,这也就"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2017-02-24T14:23:35.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="理解JS按为非运算符(~&#x2F;~~ )"><meta name="twitter:description" content="按位运算符是把操作数看作一系列单独的位，而不是一个数字值。所以在这之前，不得不提到什么是“位”:数值或字符在内存内都是被存储为0和1的序列，每个0和1被称之为1个位,比如说10进制数据2在计算机内被存储为 0 0 0 0 0 0 1 0，当我们将内存内的位值改变之后，这个值代表的意义也就变了，比如把2前移动一位，现在存储单元里面变成了0 0 0 0 0 1 0 0,这个值表示的是十进制的4,这也就"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/05/31/2015-05-31-javascript-operational－symbol/" class="title=&quot;理解JS按为非运算符(~/~~" itemprop="url">理解JS按为非运算符(~/~~ )</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-05-31T13:00:00.000Z" itemprop="datePublished">发表于 2015-05-31</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" title="大疆无人机" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="DJI Mavic Air" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1667/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_728-90.jpg"></a></div></div><p>按位运算符是把操作数看作一系列单独的位，而不是一个数字值。所以在这之前，不得不提到什么是“位”:数值或字符在内存内都是被存储为0和1的序列，每个0和1被称之为1个位,比如说10进制数据2在计算机内被存储为 0 0 0 0 0 0 1 0，当我们将内存内的位值改变之后，这个值代表的意义也就变了，比如把2前移动一位，现在存储单元里面变成了0 0 0 0 0 1 0 0,这个值表示的是十进制的4,这也就是按位操作符的运算原理。</p><a id="more"></a><p>按位运算符有6个<code>&amp; 按位与</code>, <code>|按位或</code>, <code>^按位异或</code>, <code>~取反</code>, <code>&gt;&gt;右移</code>, <code>&lt;&lt;左移</code>;</p><p>下面就谈谈这按位非运算符(<code>~</code>)，简单的理解就是改变运算数的符号并减去1，当然，这是只是简单的理解能转换成number类型的数据;比如 ~9 == -10 ; ~~ 9==9;</p><p>那么，对于typeof var!==”number”的类型来说，进行运算时，会尝试转化成32位整形数据，如果无法转换成整形数据，就转换为NaN;</p><p>JS在位运算上用了更简便的一种方法来实现这中运算，那么它的实现原理大致上可以这样理解：<br></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> testData=<span class="number">-2.9</span>;</span><br><span class="line"><span class="keyword">var</span> testResult=(<span class="keyword">typeof</span> testData===<span class="string">"number"</span>&amp;&amp;!<span class="built_in">isNaN</span>(testData)&amp;&amp;testData!==<span class="literal">Infinity</span>)?(testData&gt;<span class="number">0</span>)?-<span class="built_in">Math</span>.floor(testData)<span class="number">-1</span>:-<span class="built_in">Math</span>.ceil(testData)<span class="number">-1</span>:<span class="number">-1</span>;</span><br></pre></td></tr></table></figure><p></p>
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/05/31/2015-05-31-javascript-operational－symbol/" class="title=&quot;理解JS按为非运算符(~/~~" itemprop="url">理解JS按为非运算符(~/~~ )</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-05-31T13:00:00.000Z" itemprop="datePublished">发表于 2015-05-31</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>按位运算符是把操作数看作一系列单独的位，而不是一个数字值。所以在这之前，不得不提到什么是“位”:数值或字符在内存内都是被存储为0和1的序列，每个0和1被称之为1个位,比如说10进制数据2在计算机内被存储为 0 0 0 0 0 0 1 0，当我们将内存内的位值改变之后，这个值代表的意义也就变了，比如把2前移动一位，现在存储单元里面变成了0 0 0 0 0 1 0 0,这个值表示的是十进制的4,这也就是按位操作符的运算原理。</p><a id="more"></a><p>按位运算符有6个<code>&amp; 按位与</code>, <code>|按位或</code>, <code>^按位异或</code>, <code>~取反</code>, <code>&gt;&gt;右移</code>, <code>&lt;&lt;左移</code>;</p><p>下面就谈谈这按位非运算符(<code>~</code>)，简单的理解就是改变运算数的符号并减去1，当然，这是只是简单的理解能转换成number类型的数据;比如 ~9 == -10 ; ~~ 9==9;</p><p>那么，对于typeof var!==”number”的类型来说，进行运算时，会尝试转化成32位整形数据，如果无法转换成整形数据，就转换为NaN;</p><p>JS在位运算上用了更简便的一种方法来实现这中运算，那么它的实现原理大致上可以这样理解：<br></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> testData=<span class="number">-2.9</span>;</span><br><span class="line"><span class="keyword">var</span> testResult=(<span class="keyword">typeof</span> testData===<span class="string">"number"</span>&amp;&amp;!<span class="built_in">isNaN</span>(testData)&amp;&amp;testData!==<span class="literal">Infinity</span>)?(testData&gt;<span class="number">0</span>)?-<span class="built_in">Math</span>.floor(testData)<span class="number">-1</span>:-<span class="built_in">Math</span>.ceil(testData)<span class="number">-1</span>:<span class="number">-1</span>;</span><br></pre></td></tr></table></figure><p></p>
 <p>首先，如果一个数据在尝试转换为32整形数据时，结果小于 0,那么就需要对其上舍入，比如-2.9 -&gt; -2,如果大于 0，对其下舍入，比如：2.6 -&gt; 2;</p>
 <p>一个数据如果不能转换为32位二进制表示，就转换为NaN；继而转为-1；比如~{}/~NaN ==-1;<br>又比如~function(){return 100;}-&gt;-1;</p>
 <p>在Jquery里面，有用到比如 <strong>if(!~this.className.indexOf(str)){//do some thing…..};</strong> 这里，对于this.className.indexOf(str)的返回值，要么大于-1，要么就是等于-1；在其等于-1的时候，~-1===0；然后，!~-1===true;那么就可以得出this不包含str这个class名…；</p>
@@ -356,19 +356,15 @@
 			
 		
 			
-				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
@@ -377,6 +373,10 @@
 		
 			
 				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
 			
 		
 			
@@ -400,15 +400,11 @@
 			
 		
 			
-				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Angular/" title="Angular">Angular<sup>1</sup></a></li>
+				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
 			
 		
 			
@@ -416,7 +412,11 @@
 			
 		
 			
-				<li><a href="/tags/SEO/" title="SEO">SEO<sup>1</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Cookie/" title="Cookie">Cookie<sup>1</sup></a></li>
 			
 		
 			
