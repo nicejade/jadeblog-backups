@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jeffjade.com/"/>
-  <updated>2018-10-14T16:35:03.691Z</updated>
+  <updated>2018-11-12T00:25:27.460Z</updated>
   <id>https://jeffjade.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>快应用脚手架，为优雅而生</title>
+    <link href="https://jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/"/>
+    <id>https://jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/</id>
+    <published>2018-11-10T16:00:00.000Z</published>
+    <updated>2018-11-12T00:25:27.460Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的<code>快应用联盟</code>联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>具备传统 APP 完整的应用体验，<strong>无需安装、即点即用</strong>；<strong>覆盖 10 亿设备</strong>，<strong>与操作系统深度集成，探索新型应用场景</strong>。<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a> ── <strong>复杂生活的简单答案，让生活更顺畅</strong>。</p><a id="more"></a><p><img src="https://image.nicelinks.site/jpg/nice-links-007.jpg" alt="快应用脚手架模板"></p><h2 id="目标与哲学"><a href="#目标与哲学" class="headerlink" title="目标与哲学"></a>目标与哲学</h2><p><a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>是一种新型的应用形态，由国内九大手机厂商基于硬件平台共同推出；秒开即点即用，更易于应用的传播和留存，可以为用户提供更高效的服务。在可预见的未来，其将有不错的应用场景和发展空间。此 <a href="https://github.com/nicejade/quickapp-boilerplate-template" target="_blank" rel="noopener">quickapp-boilerplate-template</a> 仓库的建立，旨在探索如何更为优雅的开发<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>，为广大<code>快应用开发者</code>提供便利和参考，尽可能提升开发效率、优化开发体验，使得可以在更短时间内，塑造出更为优质的<code>快应用</code>。关于<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>开发更详细资料，可参见<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/quickapp-tutorial.md" target="_blank" rel="noopener">快应用教程资源列表</a>。</p><h2 id="组织结构"><a href="#组织结构" class="headerlink" title="组织结构"></a>组织结构</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">├── sign                <span class="comment"># 存储 rpk 包签名模块;</span></span><br><span class="line">│   ├── <span class="built_in">debug</span>           <span class="comment"># 调试环境证书/私钥文件</span></span><br><span class="line">│   └── release         <span class="comment"># 正式环境证书/私钥文件</span></span><br><span class="line">└── src</span><br><span class="line">│   ├── assets          <span class="comment"># 公用的资源(images/styles/字体...)</span></span><br><span class="line">│   │   ├──images       <span class="comment"># 存储 png/jpg/svg 等公共图片资源</span></span><br><span class="line">│   │   ├──<span class="keyword">js </span>          <span class="comment"># 存储公共 javaScript 代码资源</span></span><br><span class="line">│   │   └──styles       <span class="comment"># 存放 less/css/sass 等公共样式资源</span></span><br><span class="line">│   ├── helper          <span class="comment"># 项目自定义辅助各类工具</span></span><br><span class="line">│   │   ├──apis         <span class="comment"># 存储与后台请求接口相关(已封装好)</span></span><br><span class="line">│   │   ├──ajax.<span class="keyword">js </span>     <span class="comment"># 对系统提供的 fetch api 进行链式封装</span></span><br><span class="line">│   │   └──utils        <span class="comment"># 存放项目所封装的工具类方法</span></span><br><span class="line">│   ├── pages           <span class="comment"># 统一存放项目页面级代码</span></span><br><span class="line">│   ├── app.ux          <span class="comment"># 应用程序代码的人口文件</span></span><br><span class="line">│   └── manifest.<span class="keyword">json </span>  <span class="comment"># 配置快应用基本信息</span></span><br><span class="line">└── package.<span class="keyword">json </span>       <span class="comment"># 定义项目需要的各种模块及配置信息</span></span><br></pre></td></tr></table></figure><h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/nicejade/quickapp-boilerplate-template.git</span><br><span class="line"><span class="built_in">cd</span> quickapp-boilerplate-template &amp;&amp; yarn</span><br><span class="line">yarn start <span class="comment"># 推荐 ✅✅</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者运行以下命令</span></span><br><span class="line">yarn server &amp; yarn watch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者在终端一 Tab 下运行：</span></span><br><span class="line">yarn server</span><br><span class="line"><span class="comment"># 在终端另一 Tab 下运行：</span></span><br><span class="line">yarn watch</span><br></pre></td></tr></table></figure><p>用一台 <code>Android</code> 手机，下载安装<a href="https://www.quickapp.cn/docCenter/post/69" target="_blank" rel="noopener">「快应用」调试器</a>，打开后操作<code>扫码安装</code>，扫描如上命令生成的二维码，即可看到效果；更多讯息，请参见<a href="https://nice.lovejade.cn/zh/article/develop-quick-app-experience-notes.html#环境搭建" target="_blank" rel="noopener">快应用环境搭建</a>。</p><h2 id="改进优势"><a href="#改进优势" class="headerlink" title="改进优势"></a>改进优势</h2><p>有必要谈及的是，此项目秉承在<a href="https://nice.lovejade.cn/zh/article/vue-webpack-boilerplate-template.html" target="_blank" rel="noopener">高效开发 Web 单页应用解决方案</a>中所传递的理念：为<strong>高效开发</strong>而设计；相比于其内置简陋而凌乱的 Demo，这份脚手架做了以下诸多改进：</p><ul><li>✔️ <strong>对项目结构进行优化</strong>；如上组织结构所示，将各资源模块，更专业的分门别类，使之可以便捷的去编写、维护、查找，同时也是基于前端开发既定共识去设计，更容易为初接触者所理解 &amp; 上手；</li><li>✔️ <strong>更优雅的处理数据请求</strong>；采用 <code>Promise</code> 对系统内置请求 <code>@system.fetch</code> 进行封装，并抛出至全局，使得可以极简的进行链式调用，同时便捷地处理返回数据；</li><li>✔️ <strong>内置了样式处理方案</strong>；「快应用」支持 <code>less</code>, <code>sass</code> 的预编译；这里采取 <code>less</code> 方案，并内置了部分变量，以及常用混合方法，使得可以轻松开启样式编写、复用、修改等；</li><li>✔️ <strong>封装了常用方法</strong>；在 <code>helper/utils</code> 路径下，有对日期、字符串、系统等常用方法，分别进行封装，统一暴露给 <code>global.$utils</code>，使得维护方式更加合理且健壮，同时又可以便捷的使用，高效开发；当然，你也可以根据需要自行增删、抑或扩展；</li><li>✔️ <strong>简化开始开发流程</strong>； 注入 <a href="https://github.com/kimmobrunfeldt/concurrently" target="_blank" rel="noopener">Concurrently</a> 插件，使可以运行 <code>yarn start</code> 即可开始开发，而无需更多命令，从而简洁开发流程；</li><li>✔️ <strong>优化本地开发端口设定</strong>；「快应用」默认端口为 <code>12306</code>，虽说可自定义端口，但使用体验却不够友好；此处参考 <code>creat-react-app</code> 设定，对本地开发地址端口使用进行优化：如果 🈯️ 定端口(默认: <code>8080</code>)被占用，则向上递增寻找新的可用端口(如：8081 / 8082 / … )；</li><li>✔️ <strong>浏览器打开调试主页二维码</strong>；运行 <code>yarn start</code>，会启动 HTTP 调试服务器，并将该地址在<strong>命令行终端</strong>显示，手机端用快应用调试器扫码，即可下载并运行 rpk 包；当终端积累的信息流多了，就造成扫码不便；故增设在浏览器打开调试主页二维码；如想不使用此功能，在 <em>command/server.js</em> 文件中，将 <strong>autoOpenBrowser</strong> 设置为 <code>false</code> 即可；</li><li>✔️ <strong>集成轻粒子统计分析</strong>； <a href="https://nicelinks.site/post/5bdfa8ba9fa22b1b40974f63" target="_blank" rel="noopener">轻粒子</a>作为官方推荐统计方案，此脚手架已做接入；使用时只需修改 <a href="https://github.com/nicejade/quickapp-boilerplate-template/blob/master/src/assets/js/statistics.config.js" target="_blank" rel="noopener">statistics.config.js</a> 中的 <code>app_key</code>，为在<a href="http://www.qinglizi.cn/" target="_blank" rel="noopener">轻粒子</a>所申请的快应用 KEY 即可；</li><li>✔️ <strong>集成 <a href="https://prettier.io/" target="_blank" rel="noopener">Prettier</a> &amp; <a href="https://eslint.org/" target="_blank" rel="noopener">Eslint</a></strong>；在检测代码中潜在问题的同时，统一团队代码规范、风格（<code>js</code>，<code>less</code>，<code>scss</code>等），从而促使写出高质量代码，以提升工作效率(尤其针对团队开发)。</li><li><strong>编写 <a href="https://github.com/nicejade/prettier-plugin-quickapp" target="_blank" rel="noopener">prettier-plugin-quickapp</a> 插件</strong>；为快应用编写 <code>prettier</code> 插件，使其可以针对 <code>.ux</code>/<code>.mix</code> 文件也能很好地工作，从而进一步完善代码风格及规范。</li><li>… …</li></ul><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul><li><a href="https://nicelinks.site?from=github" target="_blank" rel="noopener"><strong>倾城之链</strong></a></li><li><a href="https://about.me/nicejade" target="_blank" rel="noopener">About Me</a></li><li><a href="https://jeffjade.com/nicelinks">个人博客</a></li><li><a href="https://blog.lovejade.cn/" target="_blank" rel="noopener">辅助博客</a></li><li><a href="https://weibo.com/jeffjade" target="_blank" rel="noopener">新浪微博</a></li><li><a href="https://www.zhihu.com/people/yang-qiong-pu/" target="_blank" rel="noopener">知乎主页</a></li><li><a href="https://www.jianshu.com/u/9aae3d8f4c3d" target="_blank" rel="noopener">简书主页</a></li><li><a href="https://segmentfault.com/u/jeffjade" target="_blank" rel="noopener">SegmentFault</a></li><li><a href="https://twitter.com/jeffjade2" target="_blank" rel="noopener">Twitter</a></li><li><a href="https://www.facebook.com/yang.gang.jade" target="_blank" rel="noopener">Facebook</a></li></ul><table><thead><tr><th>微信公众号</th><th>前端微信群</th><th>推荐 Web 应用</th></tr></thead><tbody><tr><td>😉 静晴轩</td><td>✨ 大前端联盟</td><td>🎉 倾城之链</td></tr><tr><td><img src="https://image.nicelinks.site/qrcode_jqx.jpg" alt="静晴轩"></td><td><img src="https://image.nicelinks.site/wqycx-weixin.png?ver=1" alt="倾城之链"></td><td><img src="https://image.nicelinks.site/nice-links.png" width="300px" alt="倾城之链"></td></tr></tbody></table><hr><h3 id="同类型文章"><a href="#同类型文章" class="headerlink" title="同类型文章"></a>同类型文章</h3><ul><li><a href="https://nice.lovejade.cn/zh/article/develop-quick-app-experience-notes.html" target="_blank" rel="noopener">快应用之开发体验纪要</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      快应用脚手架模板，旨在探索如何更为优雅的开发快应用，为广大快应用开发者提供便利和参考，尽可能提升开发效率、优化开发体验，使得可以在更短时间内，塑造出更为优质的快应用。
+    
+    </summary>
+    
+      <category term="Front-End" scheme="https://jeffjade.com/categories/Front-End/"/>
+    
+    
+      <category term="Vue" scheme="https://jeffjade.com/tags/Vue/"/>
+    
+      <category term="快应用" scheme="https://jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="Android" scheme="https://jeffjade.com/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>TOP 100 大前端超棒精选列表</title>
@@ -34,15 +60,15 @@
       <category term="Front-End" scheme="https://jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Vue" scheme="https://jeffjade.com/tags/Vue/"/>
-    
-      <category term="JavaScript" scheme="https://jeffjade.com/tags/JavaScript/"/>
-    
-      <category term="Efficiency" scheme="https://jeffjade.com/tags/Efficiency/"/>
+      <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
     
       <category term="Tools" scheme="https://jeffjade.com/tags/Tools/"/>
     
-      <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
+      <category term="JavaScript" scheme="https://jeffjade.com/tags/JavaScript/"/>
+    
+      <category term="Vue" scheme="https://jeffjade.com/tags/Vue/"/>
+    
+      <category term="Efficiency" scheme="https://jeffjade.com/tags/Efficiency/"/>
     
       <category term="Mac" scheme="https://jeffjade.com/tags/Mac/"/>
     
@@ -172,9 +198,9 @@
       <category term="Share" scheme="https://jeffjade.com/categories/Share/"/>
     
     
-      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
-    
       <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
+    
+      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
     
   </entry>
   
@@ -218,9 +244,9 @@
       <category term="Share" scheme="https://jeffjade.com/categories/Share/"/>
     
     
-      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
-    
       <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
+    
+      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
     
   </entry>
   
@@ -242,11 +268,11 @@
       <category term="Share" scheme="https://jeffjade.com/categories/Share/"/>
     
     
-      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
+      <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
     
       <category term="Tools" scheme="https://jeffjade.com/tags/Tools/"/>
     
-      <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
+      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
     
       <category term="Toss" scheme="https://jeffjade.com/tags/Toss/"/>
     
@@ -326,9 +352,9 @@
       <category term="Front-End" scheme="https://jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="JavaScript" scheme="https://jeffjade.com/tags/JavaScript/"/>
-    
       <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
+    
+      <category term="JavaScript" scheme="https://jeffjade.com/tags/JavaScript/"/>
     
   </entry>
   
@@ -350,9 +376,9 @@
       <category term="Thought" scheme="https://jeffjade.com/categories/Thought/"/>
     
     
-      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
-    
       <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
+    
+      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
     
   </entry>
   
@@ -374,9 +400,9 @@
       <category term="Thought" scheme="https://jeffjade.com/categories/Thought/"/>
     
     
-      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
-    
       <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
+    
+      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
     
       <category term="Toss" scheme="https://jeffjade.com/tags/Toss/"/>
     
@@ -400,11 +426,11 @@
       <category term="Front-End" scheme="https://jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Vue" scheme="https://jeffjade.com/tags/Vue/"/>
+      <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
     
       <category term="JavaScript" scheme="https://jeffjade.com/tags/JavaScript/"/>
     
-      <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
+      <category term="Vue" scheme="https://jeffjade.com/tags/Vue/"/>
     
   </entry>
   
@@ -426,9 +452,9 @@
       <category term="Share" scheme="https://jeffjade.com/categories/Share/"/>
     
     
-      <category term="Tools" scheme="https://jeffjade.com/tags/Tools/"/>
-    
       <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
+    
+      <category term="Tools" scheme="https://jeffjade.com/tags/Tools/"/>
     
       <category term="SublimeText" scheme="https://jeffjade.com/tags/SublimeText/"/>
     
@@ -476,13 +502,13 @@
       <category term="Front-End" scheme="https://jeffjade.com/categories/Front-End/"/>
     
     
+      <category term="Tools" scheme="https://jeffjade.com/tags/Tools/"/>
+    
       <category term="Vue" scheme="https://jeffjade.com/tags/Vue/"/>
     
       <category term="Gulp" scheme="https://jeffjade.com/tags/Gulp/"/>
     
       <category term="Webpack" scheme="https://jeffjade.com/tags/Webpack/"/>
-    
-      <category term="Tools" scheme="https://jeffjade.com/tags/Tools/"/>
     
       <category term="Chrome" scheme="https://jeffjade.com/tags/Chrome/"/>
     
@@ -516,35 +542,11 @@
       <category term="Thought" scheme="https://jeffjade.com/categories/Thought/"/>
     
     
-      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
-    
       <category term="Share" scheme="https://jeffjade.com/tags/Share/"/>
     
+      <category term="Thought" scheme="https://jeffjade.com/tags/Thought/"/>
+    
       <category term="Toss" scheme="https://jeffjade.com/tags/Toss/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Webpack 打包优化之速度篇</title>
-    <link href="https://jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/"/>
-    <id>https://jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/</id>
-    <published>2017-08-12T10:00:00.000Z</published>
-    <updated>2018-05-10T16:35:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在前文 <a href="https://jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/">Webpack 打包优化之体积篇</a>中，对如何减小 <code>Webpack</code> 打包体积，做了些探讨；当然，那些法子对于打包速度的提升，也是大有裨益。然而，打包速度之于<strong>开发体验</strong>和<strong>及时构建</strong>，相当重要；所以有必要对其做更为深入的研究，以便完善工作流，这就是本文存在的缘由。</p><a id="more"></a><p><img src="https://image.nicelinks.site/webpack.png" alt="Webpack Package optimization"></p><hr><p>随着时间的推移，<code>Webpack</code> 也在不断的优化迭代；截至目前，已经更新至 <code>v4.8.*</code>；在 <code>Webpack4</code> 这个版本，她在原有基础上，做了很多优化，也引入了颇多的新特性。在新的版本中，将获得更多模块类型及 对 <code>.mjs</code> 的支持，<strong>更好的默认值</strong>、更为简洁的<strong>模式设置</strong>、更加<strong>智能</strong>的来分割 <code>Chunk</code>，还新增的 <code>splitChunks</code> 来自定义分割代码块，诸此等等。在升级至新版 <code>Webpack</code> 的项目中，在包的<code>构建速度</code>、<code>代码块体积 &amp; 数量</code>、以及<code>运行效率</code>，都会有一个质的飞跃；关于对 <code>Webpack</code> 最新咨询与教程资源，推荐关注 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/webpack-tutorial.md" target="_blank" rel="noopener">Webpack Tutorial</a>。经过诸多次尝试和探究后，已将其各种配置、优化经验，融入 <a href="https://github.com/nicejade/vue-boilerplate-template/blob/master/build/webpack.prod.conf.js" target="_blank" rel="noopener">Vue Boilerplate Template</a> 中，并且附有注解说明，希望可以帮助到正准备升级优化 <code>Webpack</code> 的朋友们，当然也欢迎提出你宝贵的意见和建议(<strong>Update@2018-05-10</strong>) 。</p><hr><h2 id="减小文件搜索范围"><a href="#减小文件搜索范围" class="headerlink" title="减小文件搜索范围"></a><strong>减小文件搜索范围</strong></h2><p>在使用实际项目开发中，为了提升开发效率，很明显你会使用很多成熟第三方库；即便自己写的代码，模块间相互引用，为了方便也会使用相对路劲，或者别名(<code>alias</code>)；这中间如果能使得 <code>Webpack</code> 更快寻找到目标，将对打包速度产生很是积极的影响。于此，我们需要做的即：减小文件搜索范围，从而提升速度；实现这一点，可以有如下两法：</p><h3 id="配置-resolve-modules"><a href="#配置-resolve-modules" class="headerlink" title="配置 resolve.modules"></a><strong>配置 resolve.modules</strong></h3><p>Webpack的<code>resolve.modules</code>配置模块库（即 <em>node_modules</em>）所在的位置，在 js 里出现 <code>import &#39;vue&#39;</code> 这样不是相对、也不是绝对路径的写法时，会去 <em>node_modules</em> 目录下找。但是默认的配置，会采用向上递归搜索的方式去寻找，但通常项目目录里只有一个 <em>node_modules</em>，且是在项目根目录，为了减少搜索范围，可以直接写明 <code>node_modules</code> 的全路径；同样，对于别名(<code>alias</code>)的配置，亦当如此：</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">resolve</span> <span class="params">(dir)</span> &#123;</span></span><br><span class="line">  <span class="keyword">return</span> path.<span class="keyword">join</span>(__dirname, <span class="string">'..'</span>, dir)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  <span class="built_in">resolve</span>: &#123;</span><br><span class="line">    extension<span class="variable">s:</span> [<span class="string">'.js'</span>, <span class="string">'.vue'</span>, <span class="string">'.json'</span>],</span><br><span class="line">    module<span class="variable">s:</span> [</span><br><span class="line">      <span class="built_in">resolve</span>(<span class="string">'src'</span>),</span><br><span class="line">      <span class="built_in">resolve</span>(<span class="string">'node_modules'</span>)</span><br><span class="line">    ],</span><br><span class="line">    alia<span class="variable">s:</span> &#123;</span><br><span class="line">      <span class="string">'vue$'</span>: <span class="string">'vue/dist/vue.common.js'</span>,</span><br><span class="line">      <span class="string">'src'</span>: <span class="built_in">resolve</span>(<span class="string">'src'</span>),</span><br><span class="line">      <span class="string">'assets'</span>: <span class="built_in">resolve</span>(<span class="string">'src/assets'</span>),</span><br><span class="line">      <span class="string">'components'</span>: <span class="built_in">resolve</span>(<span class="string">'src/components'</span>),</span><br><span class="line">      // ...</span><br><span class="line">      <span class="string">'store'</span>: <span class="built_in">resolve</span>(<span class="string">'src/store'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>需要额外补充一点的是，这是 Webpack2.* 以上的写法。在 1.* 版本中，使用的是 <code>resolve.root</code>，如今已经被弃用为 <code>resolve.modules</code>；同时被弃用的还有<code>resolve.fallback</code>、<code>resolve.modulesDirectories</code>。</p><h3 id="设置-test-amp-include-amp-exclude"><a href="#设置-test-amp-include-amp-exclude" class="headerlink" title="设置 test &amp; include &amp; exclude"></a><strong>设置 test &amp; include &amp; exclude</strong></h3><p><code>Webpack</code> 的装载机(loaders)，允许每个子项都可以有以下属性：</p><blockquote><p><strong>test：</strong>必须满足的条件（正则表达式，不要加引号，匹配要处理的文件）<br><strong>exclude：</strong>不能满足的条件（排除不处理的目录）<br><strong>include：</strong>导入的文件将由加载程序转换的路径或文件数组（把要处理的目录包括进来）<br><strong>loader：</strong>一串“！”分隔的装载机（2.0版本以上，”-loader”不可以省略）<br><strong>loaders：</strong>作为字符串的装载器阵列</p></blockquote><p>对于<code>include</code>，更精确指定要处理的目录，这可以减少不必要的遍历，从而减少性能损失。同样，对于已经明确知道的，不需要处理的目录，则应该予以排除，从而进一步提升性能。假设你有一个第三方组件的引用，它肯定位于<em>node_modules</em>，通常它将有一个 src 和一个 dist 目录。如果配置 <code>Webpack</code> 来排除 <em>node_modules</em>，那么它将从 dist 已经编译的目录中获取文件。否则会再次编译它们。故而，合理的设置 include &amp; exclude，将会极大地提升 <code>Webpack</code> 打包优化速度，比如像这样：</p><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">  preLoaders: [</span><br><span class="line">    &#123;</span><br><span class="line">      test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">      loader: <span class="string">'eslint'</span>,</span><br><span class="line">      <span class="keyword">include</span>: [resolve(<span class="string">'src'</span>)],</span><br><span class="line">      <span class="keyword">exclude</span>: <span class="regexp">/node_modules/</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      test: <span class="regexp">/\.svg$/</span>,</span><br><span class="line">      loader: <span class="string">'svgo?'</span> + JSON.stringify(svgoConfig)，</span><br><span class="line">      <span class="keyword">include</span>: [resolve(<span class="string">'src/assets/icons'</span>)],</span><br><span class="line">      <span class="keyword">exclude</span>: <span class="regexp">/node_modules/</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  loaders: [</span><br><span class="line">    &#123;</span><br><span class="line">      test: <span class="regexp">/\.vue$/</span>,</span><br><span class="line">      loader: <span class="string">'vue-loader'</span>,</span><br><span class="line">      <span class="keyword">include</span>: [resolve(<span class="string">'src'</span>)],</span><br><span class="line">      <span class="keyword">exclude</span>: <span class="regexp">/node_modules\/(?!(autotrack|dom-utils))|vendor\.dll\.js/</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      test: <span class="regexp">/\.(png|jpe?g|gif|svg)(\?.*)?$/</span>,</span><br><span class="line">      loader: <span class="string">'url'</span>,</span><br><span class="line">      <span class="keyword">exclude</span>: <span class="regexp">/assets\/icons/</span>,</span><br><span class="line">      query: &#123;</span><br><span class="line">        limit: <span class="number">10000</span>,</span><br><span class="line">        name: utils.assetsPath(<span class="string">'img/[name].[hash:7].[ext]'</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="增强代码代码压缩工具"><a href="#增强代码代码压缩工具" class="headerlink" title="增强代码代码压缩工具"></a><strong>增强代码代码压缩工具</strong></h2><p><code>Webpack</code> 默认提供的 <code>UglifyJS</code> 插件，由于采用单线程压缩，速度颇慢 ；推荐采用 <a href="https://www.npmjs.com/package/webpack-parallel-uglify-plugin" target="_blank" rel="noopener">webpack-parallel-uglify-plugin</a> 插件，她可以并行运行 UglifyJS 插件，更加充分而合理的使用 <code>CPU</code> 资源，这可以大大减少的构建时间；当然，该插件应用于生产环境而非开发环境，其做法如下，<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">new</span> <span class="string">webpack.optimize.UglifyJsPlugin(&#123;</span></span><br><span class="line"><span class="attr">  compress:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">    warnings:</span> <span class="literal">false</span></span><br><span class="line">  <span class="string">&#125;,</span></span><br><span class="line"><span class="attr">  sourceMap:</span> <span class="literal">true</span></span><br><span class="line"><span class="string">&#125;)</span></span><br></pre></td></tr></table></figure></p><p>替换如上自带的 <code>UglifyJsPlugin</code> 写法为如下配置即可：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">var</span> <span class="string">ParallelUglifyPlugin</span> <span class="string">=</span> <span class="string">require('webpack-parallel-uglify-plugin');</span></span><br><span class="line"><span class="string">new</span> <span class="string">ParallelUglifyPlugin(&#123;</span></span><br><span class="line"><span class="attr">  cacheDir:</span> <span class="string">'.cache/'</span><span class="string">,</span></span><br><span class="line"><span class="attr">  uglifyJS:</span><span class="string">&#123;</span></span><br><span class="line"><span class="attr">    output:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">      comments:</span> <span class="literal">false</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line"><span class="attr">    compress:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">      warnings:</span> <span class="literal">false</span></span><br><span class="line">    <span class="string">&#125;</span></span><br><span class="line">  <span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;)</span></span><br></pre></td></tr></table></figure><p>当然也有其他同类型的插件，比如：<a href="https://www.npmjs.com/package/webpack-uglify-parallel" target="_blank" rel="noopener">webpack-uglify-parallel</a>，但根据自己实践效果来看，并没有 <code>webpack-parallel-uglify-plugin</code> 表现的那么卓越，有兴趣的朋友，可以更全面的做下对比，择优选用。需要额外说明的是，<code>webpack-parallel-uglify-plugin</code> 插件的运用，会相对 <code>UglifyJsPlugin</code> 打出的包，看起来略大那么一丢丢(其实可以忽略不计)；如果在你使用时也是如此，那么在打包速度跟包体积之间，你应该有自己的抉择。</p><h2 id="用-Happypack-来加速代码构建"><a href="#用-Happypack-来加速代码构建" class="headerlink" title="用 Happypack 来加速代码构建"></a><strong>用 Happypack 来加速代码构建</strong></h2><p>你知道，<code>Webpack</code> 中为了方便各种资源和类型的加载，设计了以 <code>loader</code> 加载器的形式读取资源，但是受限于 <code>nodejs</code> 的编程模型影响，所有的 <code>loader</code> 虽然以 <code>async</code> 的形式来并发调用，但是还是运行在单个 node 的进程，以及在同一个事件循环中，这就直接导致了些问题：当同时读取多个loader文件资源时，比如｀babel-loader`需要 transform 各种jsx，es6的资源文件。在这种同步计算同时需要大量耗费 cpu 运算的过程中，node的单进程模型就无优势了，而 <a href="https://github.com/amireh/happypack" target="_blank" rel="noopener">Happypack</a> 就是针对解决此类问题而生的存在。</p><p><img src="https://image.nicelinks.site/happypack-principle.png" alt="Webpack-Happypack"></p><p><code>Happypack</code> 的处理思路是：将原有的 <code>webpack</code> 对 <code>loader</code> 的执行过程，从单一进程的形式扩展多进程模式，从而加速代码构建；原本的流程保持不变，这样可以在不修改原有配置的基础上，来完成对编译过程的优化，具体配置如下：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">var</span> <span class="string">HappyPack</span> <span class="string">=</span> <span class="string">require('happypack');</span></span><br><span class="line"><span class="string">var</span> <span class="string">happyThreadPool</span> <span class="string">=</span> <span class="string">HappyPack.ThreadPool(&#123;</span> <span class="attr">size:</span> <span class="string">os.cpus().length</span> <span class="string">&#125;);</span></span><br><span class="line"></span><br><span class="line"><span class="attr">module:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">  loaders:</span> <span class="string">[</span></span><br><span class="line">    <span class="string">&#123;</span></span><br><span class="line"><span class="attr">      test:</span> <span class="string">/\.js[x]?$/,</span></span><br><span class="line"><span class="attr">      include:</span> <span class="string">[resolve('src')],</span></span><br><span class="line"><span class="attr">      exclude:</span> <span class="string">/node_modules/,</span></span><br><span class="line"><span class="attr">      loader:</span> <span class="string">'happypack/loader?id=happybabel'</span></span><br><span class="line">    <span class="string">&#125;</span></span><br><span class="line">  <span class="string">]</span></span><br><span class="line"><span class="string">&#125;,</span></span><br><span class="line"><span class="attr">plugins:</span> <span class="string">[</span></span><br><span class="line">  <span class="string">new</span> <span class="string">HappyPack(&#123;</span></span><br><span class="line"><span class="attr">    id:</span> <span class="string">'happybabel'</span><span class="string">,</span></span><br><span class="line"><span class="attr">    loaders:</span> <span class="string">['babel-loader'],</span></span><br><span class="line"><span class="attr">    threadPool:</span> <span class="string">happyThreadPool,</span></span><br><span class="line"><span class="attr">    cache:</span> <span class="literal">true</span><span class="string">,</span></span><br><span class="line"><span class="attr">    verbose:</span> <span class="literal">true</span></span><br><span class="line">  <span class="string">&#125;)</span></span><br><span class="line"><span class="string">]</span></span><br></pre></td></tr></table></figure><p>可以研究看到，通过在 <code>loader</code> 中配置直接指向 <code>happypack</code> 提供的 loader，对于文件实际匹配的处理 loader，则是通过配置在 <code>plugin</code> 属性来传递说明，这里 happypack 提供的 loader 与 plugin 的衔接匹配，则是通过id=happybabel来完成。配置完成后，laoder的工作模式就转变成了如下所示：</p><p><img src="https://image.nicelinks.site/webpack-happypack.png" alt="Webpack-Happypack"></p><p><code>Happypack</code> 在编译过程中，除了利用多进程的模式加速编译，还同时开启了 <code>cache</code> 计算，能充分利用缓存读取构建文件，对构建的速度提升也是非常明显的；更多关于 <code>happyoack</code> 个中原理，可参见 @淘宝前端团队(FED) 的这篇：<a href="https://taobaofed.org/blog/2016/12/08/happypack-source-code-analysis/" target="_blank" rel="noopener">happypack 原理解析</a>。如果你使用的 <code>Vue.js</code> 框架来开发，也可参考 <a href="https://github.com/nicejade/vue-boilerplate-template/blob/master/build/webpack.base.conf.js" target="_blank" rel="noopener">vue-webpack-happypack</a> 相关配置。</p><h2 id="设置-babel-的-cacheDirectory-为true"><a href="#设置-babel-的-cacheDirectory-为true" class="headerlink" title="设置 babel 的 cacheDirectory 为true"></a><strong>设置 babel 的 cacheDirectory 为true</strong></h2><p><a href="https://github.com/babel/babel-loader" target="_blank" rel="noopener">babel-loader</a> is slow! 所以不仅要使用<code>exclude</code>、<code>include</code>，尽可能准确的指定要转化内容的范畴，而且要充分利用缓存，进一步提升性能。<code>babel-loader</code> 提供了 <code>cacheDirectory</code>特定选项（默认 <code>false</code>）：设置时，给定的目录将用于缓存加载器的结果。</p><p>未来的 <code>Webpack</code> 构建将尝试从缓存中读取，以避免在每次运行时运行潜在昂贵的 <code>Babel</code> 重新编译过程。如果值为空（loader: ‘babel-loader?cacheDirectory’）或<code>true</code>（loader: babel-loader?cacheDirectory=true），<strong><em>node_modules/.cache/babel-loader</em></strong> 则 <em>node_modules</em> 在任何根目录中找不到任何文件夹时，加载程序将使用默认缓存目录或回退到默认的OS临时文件目录。实际使用中，效果显著；配置示例如下：</p><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">rules: [</span><br><span class="line">  &#123;</span><br><span class="line">    test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">    loader: <span class="string">'babel-loader?cacheDirectory=true'</span>,</span><br><span class="line">    <span class="keyword">exclude</span>: <span class="regexp">/node_modules/</span>,</span><br><span class="line">    <span class="keyword">include</span>: [resolve(<span class="string">'src'</span>), resolve(<span class="string">'test'</span>)]</span><br><span class="line">  &#125;,</span><br><span class="line">  ... ...</span><br><span class="line">]</span><br></pre></td></tr></table></figure><h2 id="设置-noParse"><a href="#设置-noParse" class="headerlink" title="设置 noParse"></a><strong>设置 <a href="https://webpack.github.io/docs/configuration.html#module-noparse" target="_blank" rel="noopener">noParse</a></strong></h2><p>如果你确定一个模块中，没有其它新的依赖，就可以配置这项， <code>Webpack</code> 将不再扫描这个文件中的依赖，这对于比较大型类库，将能促进性能表现，具体可以参见以下配置：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">module</span>: &#123;</span><br><span class="line">  <span class="attribute">noParse</span>: /node_modules\/(element-ui\.js)/,</span><br><span class="line">  rules: [</span><br><span class="line">    &#123;</span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="拷贝静态文件"><a href="#拷贝静态文件" class="headerlink" title="拷贝静态文件"></a><strong>拷贝静态文件</strong></h2><p>在前文 <a href="https://jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/">Webpack 打包优化之体积篇</a>中提到，引入 <code>DllPlugin</code> 和 <code>DllReferencePlugin</code> 来提前构建一些第三方库，来优化 <code>Webpack</code> 打包。而在生产环境时，就需要将提前构建好的包，同步到 <code>dist</code> 中；这里拷贝静态文件，你可以使用 <code>copy-webpack-plugin</code> 插件：把指定文件夹下的文件复制到指定的目录；其配置如下：</p><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> CopyWebpackPlugin = <span class="keyword">require</span>(<span class="string">'copy-webpack-plugin'</span>)</span><br><span class="line"></span><br><span class="line">plugins: <span class="meta">[</span></span><br><span class="line">  <span class="params">...</span></span><br><span class="line">  <span class="comment">// copy custom static assets</span></span><br><span class="line">  <span class="literal">new</span> CopyWebpackPlugin(<span class="meta">[</span></span><br><span class="line">    &#123;</span><br><span class="line">      from: path.resolve(__dirname, <span class="string">'../static'</span>),</span><br><span class="line">      <span class="keyword">to</span>: config.build.assetsSubDirectory,</span><br><span class="line">      ignore: <span class="meta">[</span><span class="string">'.*'</span><span class="meta">]</span></span><br><span class="line">    &#125;</span><br><span class="line">  ])</span><br><span class="line">]</span><br></pre></td></tr></table></figure><p>当然，这种工作，实现的法子很多，比如可以借助 <code>shelljs</code>，可以参见这里的实现 <a href="https://github.com/nicejade/vue-boilerplate-template/blob/master/build/build.js#L17-L22" target="_blank" rel="noopener">vue-boilerplate-template</a>。</p><p>于深圳.南山 @17-08-10 Last Modify: @17-08-13</p><blockquote><p>如若转载，请保留原文链接: <a href="https://jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/">Webpack 打包优化之速度篇</a></p></blockquote><hr><h2 id="猜你喜欢-对你有用-的文章"><a href="#猜你喜欢-对你有用-的文章" class="headerlink" title="猜你喜欢(/对你有用)的文章"></a><strong>猜你喜欢(/对你有用)的文章</strong></h2><p><a href="//jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/">Webpack 打包优化之体积篇</a><br><a href="//jeffjade.com/2016/03/30/104-front-end-tutorial/">『引』最全前端资源汇集</a><br><a href="//jeffjade.com/2016/05/14/106-front-end-learning-record/">所历前端“姿势”更替记(其一)</a><br><a href="//jeffjade.com/2016/05/08/106-vue-es6-jade-scss-webpack-gulp/">Vue ES6 Jade Scss Webpack Gulp</a><br><a href="//jeffjade.com/2016/07/06/110-vue-webpack-component-develop/">Vue Webpack 组件化开发实践</a></p>]]></content>
-    
-    <summary type="html">
-    
-      Webpack 打包优化，运用科学方法，不断探索、改进、更新，尽可能改善打包性能，加快打包速度，优化开发体验，减少构建实践，提升产品质量。
-    
-    </summary>
-    
-      <category term="Front-End" scheme="https://jeffjade.com/categories/Front-End/"/>
-    
-    
-      <category term="Webpack" scheme="https://jeffjade.com/tags/Webpack/"/>
-    
-      <category term="Efficiency" scheme="https://jeffjade.com/tags/Efficiency/"/>
     
   </entry>
   
