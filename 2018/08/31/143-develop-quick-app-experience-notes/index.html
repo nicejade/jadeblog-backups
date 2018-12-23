@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>快应用之开发体验纪要 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="keywords" content="快应用,quickapp,fastapp,小程序,原生应用,即点即用"><meta name="description" content="快应用是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的快应用联盟联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。快应用具备传统 APP 完整的应用体验，无需安装、即点即用；覆盖 10 亿设备，与操作系统深度集成，探索新型应用场景。"><meta name="keywords" content="快应用,quickapp,fastapp,小程序,原生应用,即点即用"><meta property="og:type" content="article"><meta property="og:title" content="快应用之开发体验纪要"><meta property="og:url" content="https://jeffjade.com/2018/08/31/143-develop-quick-app-experience-notes/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="快应用是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的快应用联盟联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。快应用具备传统 APP 完整的应用体验，无需安装、即点即用；覆盖 10 亿设备，与操作系统深度集成，探索新型应用场景。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://image.nicelinks.site/quickapp.png"><meta property="og:updated_time" content="2018-12-20T16:11:45.277Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="快应用之开发体验纪要"><meta name="twitter:description" content="快应用是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的快应用联盟联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。快应用具备传统 APP 完整的应用体验，无需安装、即点即用；覆盖 10 亿设备，与操作系统深度集成，探索新型应用场景。"><meta name="twitter:image" content="https://image.nicelinks.site/quickapp.png"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>快应用之开发体验纪要 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="keywords" content="快应用,quickapp,fastapp,小程序,原生应用,即点即用"><meta name="description" content="快应用是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的快应用联盟联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。快应用具备传统 APP 完整的应用体验，无需安装、即点即用；覆盖 10 亿设备，与操作系统深度集成，探索新型应用场景。"><meta name="keywords" content="快应用,quickapp,fastapp,小程序,原生应用,即点即用"><meta property="og:type" content="article"><meta property="og:title" content="快应用之开发体验纪要"><meta property="og:url" content="https://jeffjade.com/2018/08/31/143-develop-quick-app-experience-notes/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="快应用是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的快应用联盟联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。快应用具备传统 APP 完整的应用体验，无需安装、即点即用；覆盖 10 亿设备，与操作系统深度集成，探索新型应用场景。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://image.nicelinks.site/quickapp.png"><meta property="og:updated_time" content="2018-12-23T10:11:00.141Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="快应用之开发体验纪要"><meta name="twitter:description" content="快应用是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的快应用联盟联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。快应用具备传统 APP 完整的应用体验，无需安装、即点即用；覆盖 10 亿设备，与操作系统深度集成，探索新型应用场景。"><meta name="twitter:image" content="https://image.nicelinks.site/quickapp.png"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
     <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2018/08/31/143-develop-quick-app-experience-notes/" class="title=&quot;快应用之开发体验纪要&quot;" itemprop="url">快应用之开发体验纪要</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2018-08-31T10:18:00.000Z" itemprop="datePublished">发表于 2018-08-31</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>何谓<a href="https://www.quickapp.cn/" target="_blank" rel="noopener">「快应用」</a>呢？它是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的<code>快应用联盟</code>联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>具备传统 APP 完整的应用体验，<strong>无需安装、即点即用</strong>； <strong>覆盖 10 亿设备</strong>，<strong>与操作系统深度集成，探索新型应用场景</strong>。快应用 ──<code>复杂生活的简单答案，让生活更顺畅</code> ── 来自 <a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用官方网站 | 倾城之链</a>。</p><a id="more"></a><p><img src="https://image.nicelinks.site/blank.gif" alt="快应用开发体验纪要" data-echo="https://image.nicelinks.site/quickapp.png"></p><blockquote><p>本文首发于个人新博客：<a href="https://nice.lovejade.cn/zh/article/develop-quick-app-experience-notes.html" target="_blank" rel="noopener">静晴轩别苑 | 快应用之开发体验纪要</a>。</p></blockquote><h2 id="快应用特点"><a href="#快应用特点" class="headerlink" title="快应用特点"></a>快应用特点</h2><p>下面列出些关于「快应用」特点，这将有助于对它有更深刻的理解；</p><ul><li>基于手机硬件平台，标准由主流手机厂商组成的快应用联盟制定;</li><li>无需安装、即点即用，且具备传统 APP 完整的应用体验;</li><li>与操作系统深度集成，一键直达;</li><li>更新直接推送，新版本直接更新到后台，用户无感知快应用的技术实现;</li><li>基于前端技术栈开发、可快速迭代;</li><li>通过全新的引擎，将系统原生的渲染机制和接口能力提供给上层应用;</li><li>运行在框架应用进程中，对每个快应用会开一个 <code>Launcher</code> 进程快应用的开发、发布和使用流程;</li><li>开发者需要在快应用官网注册，上传至快应用官网，测试并通过审核后即可进行分发;</li><li>使用前端技术栈进行开发，经过编译、签名后最终产出 <code>rpk</code> 文件;</li><li>开发者需登录快应用官网进行上传和发布，发布前会经过审核快应用与小程序的对比;</li><li>快应用使用 <code>native</code> 渲染，性能体验会比较好，而小程序是使用 <code>webview</code> 渲染 ;</li><li>快应用的系统级能力更强，能调用更多系统级 API;</li></ul><h2 id="与小程序对比"><a href="#与小程序对比" class="headerlink" title="与小程序对比"></a>与小程序对比</h2><table><thead><tr><th style="text-align:center">──</th><th style="text-align:center">开发技术</th><th style="text-align:center">渲染方式</th><th style="text-align:center">硬件资源扶持</th><th style="text-align:center">系统级能力</th><th style="text-align:center">桌面留存</th></tr></thead><tbody><tr><td style="text-align:center">小程序</td><td style="text-align:center">前端技术栈</td><td style="text-align:center"><code>webview</code> 渲染</td><td style="text-align:center">有</td><td style="text-align:center">强</td><td style="text-align:center">有</td></tr><tr><td style="text-align:center">快应用</td><td style="text-align:center">前端技术栈</td><td style="text-align:center"><code>native</code> 渲染</td><td style="text-align:center">无</td><td style="text-align:center">弱</td><td style="text-align:center">有</td></tr></tbody></table><p>以上这些比对，皆是从两者的出生角度而言；可以肯定的是，「快应用」得益于其与生俱来的优势，将在更多应用场景发挥作用，它的崛起，将会给 <code>Android</code> 用户带来更多的便捷。同时作为后起之秀，其开发体验上，是明显优于<code>小程序</code>的；但目前的小程序，已经有长足的发展，而「快应用」才处于刚起步阶段，在经验累积、应用数量、分发传播、社区建设等方面，两者之间还存在些差距；后续故事将会如何，让我们将拭目以待。</p><h2 id="开发-amp-调试"><a href="#开发-amp-调试" class="headerlink" title="开发 &amp; 调试"></a>开发 &amp; 调试</h2><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><ul><li>鉴于<code>「快应用」</code>基于前端技术栈来开发，因此需要安装 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> (&gt;= 6.0)；<a href="https://yarnpkg.com/" target="_blank" rel="noopener">yarn</a> （推荐使用）。</li><li>安装 <a href="https://www.npmjs.com/package/hap-toolkit" target="_blank" rel="noopener">hap-toolkit</a> ；它是针对<code>「快应用」</code>衍生出的开发者工具；</li></ul><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn <span class="keyword">global</span> <span class="keyword">add</span> hap-toolkit</span><br><span class="line"><span class="comment">// 检测是否成功安装 hap-toolkit</span></span><br><span class="line">hap -V</span><br></pre></td></tr></table></figure>
 <ul>
 <li>手机安装<a href="https://www.quickapp.cn/docCenter/post/69" target="_blank" rel="noopener">「快应用」调试器</a> ── 一个 <code>Android</code> 应用程序，它可以连接到手机系统内的快应用执行环境，包含<code>扫码安装</code>、<code>本地安装</code>、<code>在线更新</code>、<code>开始调试</code>、等功能；</li>
@@ -15,14 +15,19 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hap init <span class="tag">&lt;<span class="name">YourProjectName</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>鉴于其内置的 Demo 项目示例，尚处于入门级项目设定(@18-08)，不便于用户着手开发，且不利于高效编写、维护；因此，有将编写的快应用 <a href="https://github.com/nicejade/nicelinks-quick-app" target="_blank" rel="noopener">nicelinks-quick-app</a> 开源，借此以探索新型应用设计；此外，也是在探索如何构建优质<code>快应用</code>，希望可以在此事儿上提供些参考。其代码组织结构如下：</p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">├── sign                <span class="comment"># 存储 rpk 包签名模块;</span></span><br><span class="line">│   ├── <span class="built_in">debug</span>           <span class="comment"># 调试环境证书/私钥文件</span></span><br><span class="line">│   └── release         <span class="comment"># 正式环境证书/私钥文件</span></span><br><span class="line">└── src</span><br><span class="line">│   ├── assets          <span class="comment"># 公用的资源(Images/Styles/字体...)</span></span><br><span class="line">│   │   ├──images       <span class="comment"># 存储 png/jpg/svg 等公共图片资源</span></span><br><span class="line">│   │   └──styles       <span class="comment"># 存放 less/css/sass 等公共样式资源</span></span><br><span class="line">│   ├── helper          <span class="comment"># 项目自定义辅助各类工具</span></span><br><span class="line">│   │   ├──apis         <span class="comment"># 存储与后台请求接口相关(已封装好)</span></span><br><span class="line">│   │   ├──ajax.<span class="keyword">js </span>     <span class="comment"># 对系统提供的 fetch api 进行链式封装</span></span><br><span class="line">│   │   └──util.<span class="keyword">js </span>     <span class="comment"># 存放项目所需公共工具类方法</span></span><br><span class="line">│   ├── pages           <span class="comment"># 统一存放项目页面级代码</span></span><br><span class="line">│   ├── app.ux          <span class="comment"># 应用程序代码的人口文件</span></span><br><span class="line">│   └── manifest.<span class="keyword">json </span>  <span class="comment"># 配置应用基本信息</span></span><br><span class="line">└── package.<span class="keyword">json </span>       <span class="comment"># 定义项目需要的各种模块及配置信息</span></span><br></pre></td></tr></table></figure>
-<p>有必要谈及的是，此项目秉承在<a href="https://nice.lovejade.cn/zh/article/vue-webpack-boilerplate-template.html" target="_blank" rel="noopener">高效开发 Web 单页应用解决方案</a>中所传递的理念：为<strong>高效开发</strong>而设计；相比于内置 Demo，她具有以下诸多优点：</p>
+<p>有必要谈及的是，此项目秉承在<a href="https://nice.lovejade.cn/zh/article/vue-webpack-boilerplate-template.html" target="_blank" rel="noopener">高效开发 Web 单页应用解决方案</a>中所传递的理念：为<strong>高效开发</strong>而设计；相比于其内置简陋而凌乱的 Demo，这份脚手架做了以下诸多改进：</p>
 <ul>
-<li><strong>对项目结构进行优化</strong>；如上组织结构所示，将各资源模块，更专业的分门别类，使之可以便捷的去编写、维护、查找，同时也是基于前端开发既定共识去设计，更容易为初接触者所理解 &amp; 上手；</li>
-<li><strong>更优雅的处理数据请求</strong>；采用 <code>Promise</code> 对系统内置请求 <code>@system.fetch</code> 进行封装，并抛出至全局，使得可以极简的进行链式调用，同时便捷地处理返回数据；</li>
-<li><strong>内置了样式处理方案</strong>；「快应用」支持 less, sass 的预编译；这里采取 <code>less</code> 方案，并内置了部分变量，以及常用混合方法，使得可以轻松开启样式编写、复用、修改等；</li>
-<li><strong>优化本地开发端口设定</strong>；「快应用」默认端口为 <code>12306</code>，虽说可自定义端口，但使用体验却不够友好；此处参考 <code>creat-react-app</code> 设定，对本地开发地址端口使用进行优化：如果🈯️定端口(默认: <code>8080</code>)被占用，则向上递增寻找新的可用端口(如：8081 / 8082 / … )；</li>
-<li><strong>浏览器打开调试主页二维码</strong>；运行 <code>npm run server</code>，会启动 HTTP 调试服务器，并将该地址在<strong>命令行终端</strong>显示，手机端用快应用调试器扫码，即可下载并运行 rpk 包；当终端积累的信息流多了，就造成扫码不便；故增设在浏览器打开调试主页二维码；如想不使用此功能，在 <em>command/server.js</em> 文件中，将 <strong>autoOpenBrowser</strong> 设置为 <code>false</code> 即可；</li>
-<li>会持续探究，逐步将更多好用姿势集成 ……</li>
+<li>✔️ <strong>对项目结构进行优化</strong>；如上组织结构所示，将各资源模块，更专业的分门别类，使之可以便捷的去编写、维护、查找，同时也是基于前端开发既定共识去设计，更容易为初接触者所理解 &amp; 上手；</li>
+<li>✔️ <strong>更优雅的处理数据请求</strong>；采用 <code>Promise</code> 对系统内置请求 <code>@system.fetch</code> 进行封装，并抛出至全局，使得可以极简的进行链式调用，同时便捷地处理返回数据；</li>
+<li>✔️ <strong>内置了样式处理方案</strong>；「快应用」支持 <code>less</code>, <code>sass</code> 的预编译；这里采取 <code>less</code> 方案，并内置了部分变量，以及常用混合方法，使得可以轻松开启样式编写、复用、修改等；</li>
+<li>✔️ <strong>封装了常用方法</strong>；在 <code>helper/utils</code> 路径下，有对日期、字符串、系统等常用方法，分别进行封装，统一暴露给 <code>global.$utils</code>，使得维护方式更加合理且健壮，同时又可以便捷的使用，高效开发；当然，你也可以根据需要自行增删、抑或扩展；</li>
+<li>✔️ <strong>简化开始开发流程</strong>； 注入 <a href="https://github.com/kimmobrunfeldt/concurrently" target="_blank" rel="noopener">Concurrently</a> 插件，使可以运行 <code>yarn start</code> 即可开始开发，而无需更多命令，从而简洁开发流程；</li>
+<li>✔️ <strong>优化本地开发端口设定</strong>；「快应用」默认端口为 <code>12306</code>，虽说可自定义端口，但使用体验却不够友好；此处参考 <code>creat-react-app</code> 设定，对本地开发地址端口使用进行优化：如果 🈯️ 定端口(默认: <code>8080</code>)被占用，则向上递增寻找新的可用端口(如：8081 / 8082 / … )；</li>
+<li>✔️ <strong>浏览器打开调试主页二维码</strong>；运行 <code>yarn start</code>，会启动 HTTP 调试服务器，并将该地址在<strong>命令行终端</strong>显示，手机端用快应用调试器扫码，即可下载并运行 rpk 包；当终端积累的信息流多了，就造成扫码不便；故增设在浏览器打开调试主页二维码；如想不使用此功能，在 <em>command/server.js</em> 文件中，将 <strong>autoOpenBrowser</strong> 设置为 <code>false</code> 即可；</li>
+<li>✔️ <strong>集成轻粒子统计分析</strong>； <a href="https://nicelinks.site/post/5bdfa8ba9fa22b1b40974f63" target="_blank" rel="noopener">轻粒子</a>作为官方推荐统计方案，此脚手架已做接入；使用时只需修改 <a href="https://github.com/nicejade/quickapp-boilerplate-template/blob/master/src/assets/js/statistics.config.js" target="_blank" rel="noopener">statistics.config.js</a> 中的 <code>app_key</code>，为在<a href="http://www.qinglizi.cn/" target="_blank" rel="noopener">轻粒子</a>所申请的快应用 KEY 即可；</li>
+<li>✔️ <strong>新增快捷命令脚本</strong>；使得可以一键生成新页面，只需运行：<code>yarn gen YourPageName</code> （命名推荐统一为大驼峰，将会在 <code>pages</code> 路径下新建该页面文件夹）命令即可，当然，也可以根据需要，自行定定制模板：<em>/command/gen/template.ux</em>；</li>
+<li>✔️ <strong>集成 <a href="https://prettier.io/" target="_blank" rel="noopener">Prettier</a> &amp; <a href="https://eslint.org/" target="_blank" rel="noopener">Eslint</a></strong>；在检测代码中潜在问题的同时，统一团队代码规范、风格（<code>js</code>，<code>less</code>，<code>scss</code>等），从而促使写出高质量代码，以提升工作效率(尤其针对团队开发)。</li>
+<li>✔️ <strong>编写 <a href="https://github.com/nicejade/prettier-plugin-quickapp" target="_blank" rel="noopener">prettier-plugin-quickapp</a> 插件</strong>；为快应用编写 <code>prettier</code> 插件，使其可以针对 <code>.ux</code>/<code>.mix</code> 文件也能很好地工作，从而进一步完善代码风格及规范。</li>
 </ul>
 <h2 id="关于快应用の发布"><a href="#关于快应用の发布" class="headerlink" title="关于快应用の发布"></a>关于快应用の发布</h2><p>关于快应用发布，有必要谈下的理由是，其发布流程说简单却也复杂，说快也慢；这是因为涉及多家厂商，且有着不同规则，导致变数横生；倘若经历过之后，这个流程就可以描述为：说复杂也简单，说慢也快；就以个人开发者来聊下相关经验：</p>
 <ul>
@@ -50,6 +55,12 @@
 <p>谈及「快应用」，微信小程序是无法绕过的点；两者肯定存在竞争关系，同时也可算是伙伴：如同两部同时上映的电影，虽有竞争，也会是彼此之助力，共同把盘子做大，吸引更多的用户倾斜，从而变更未来的应用格局。再有，都是基于前端技术栈，如能有互转工具给予铺成，对于开发者而言，即可实现一次编写，多平台运行；将会为这种模式提升更多竞争力。</p>
 <p>上面已经从出生层面，对「快应用」和小程序做了对比；「快应用」使用 <code>Native</code> 渲染，而非小程序基于 <code>Webview</code> 渲染，再加上硬件资源扶持，体验上则能更上一层楼。况且，对于已经司空见惯的事物，新鲜感在如今看来，也极具诱惑，如<code>子弹短信</code>的出现；就小程序而言目前火热程度，已有百万应用，渐成<strong>垄断</strong>之势，从过往历史来看，这对于用户来讲，绝不都是好事；而对于开发商来说，也尽是受制于人(腾讯有绝对控制权)，无法主导自己命运，多个渠道，则多份活路；况且，兵无常势，水无常形，在大时代的拉锯之下，微信又岂会是永恒的王者？<strong>独立的才是自己的</strong>，而小程序并不提供这方面红利；对于个人开发者来讲，加入「快应用」阵营，借助厂商流量扶持，为自己独立平台倒量，不失为更明智的抉择；现在来看「快应用」，机遇与挑战并存，未来它将如何，朋友你怎么看？</p>
 <p>@2018-08-06 于深圳.福田 Last Modify：2018-09-02</p>
+<h3 id="您可能会感兴趣的文章："><a href="#您可能会感兴趣的文章：" class="headerlink" title="您可能会感兴趣的文章："></a>您可能会感兴趣的文章：</h3><ul>
+<li><a href="https://www.jeffjade.com/2017/10/09/146-talk-about-nice-links/" target="_blank" rel="noopener">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/" target="_blank" rel="noopener">快应用脚手架，为优雅而生</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/21/146-awesome-vue-cli3-example/" target="_blank" rel="noopener">快应用开发资源、教程汇聚
+</a></li>
+</ul>
 	</div>
 		<a href="#reward-modal-container" aria-label="Open Reward" id="open-reward-modal-a">打赏</a>
 <div id="reward-modal-container">
@@ -160,7 +171,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#快应用特点"><span class="toc-number">1.</span> <span class="toc-text">快应用特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与小程序对比"><span class="toc-number">2.</span> <span class="toc-text">与小程序对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发-amp-调试"><span class="toc-number">3.</span> <span class="toc-text">开发 &amp; 调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境搭建"><span class="toc-number">3.1.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发环境"><span class="toc-number">3.2.</span> <span class="toc-text">开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发调试"><span class="toc-number">3.3.</span> <span class="toc-text">开发调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快应用示例"><span class="toc-number">4.</span> <span class="toc-text">快应用示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于快应用の发布"><span class="toc-number">5.</span> <span class="toc-text">关于快应用の发布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快应用存在的缺陷"><span class="toc-number">6.</span> <span class="toc-text">快应用存在的缺陷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何看待「快应用」"><span class="toc-number">7.</span> <span class="toc-text">如何看待「快应用」?</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#快应用特点"><span class="toc-number">1.</span> <span class="toc-text">快应用特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与小程序对比"><span class="toc-number">2.</span> <span class="toc-text">与小程序对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发-amp-调试"><span class="toc-number">3.</span> <span class="toc-text">开发 &amp; 调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境搭建"><span class="toc-number">3.1.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发环境"><span class="toc-number">3.2.</span> <span class="toc-text">开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发调试"><span class="toc-number">3.3.</span> <span class="toc-text">开发调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快应用示例"><span class="toc-number">4.</span> <span class="toc-text">快应用示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于快应用の发布"><span class="toc-number">5.</span> <span class="toc-text">关于快应用の发布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快应用存在的缺陷"><span class="toc-number">6.</span> <span class="toc-text">快应用存在的缺陷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何看待「快应用」"><span class="toc-number">7.</span> <span class="toc-text">如何看待「快应用」?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#您可能会感兴趣的文章："><span class="toc-number">7.1.</span> <span class="toc-text">您可能会感兴趣的文章：</span></a></li></ol></li></ol>
  
   </div>
 
@@ -192,6 +203,10 @@
     <h3 class="widget-title asidetitle">近期文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a>
+          </li>
         
           <li>
             <a href="/2018/12/21/146-awesome-vue-cli3-example/">快应用开发资源、教程汇聚</a>
@@ -247,10 +262,6 @@
         
           <li>
             <a href="/2017/11/29/133-high-quality-front-end-channel/">『优质』前端频道汇聚</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/29/132-feeling-love-and-life/">那一瞬,那一夜,那一年,那一世</a>
           </li>
         
       </ul>
@@ -313,7 +324,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>17</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>16</sup></a></li>
 		  
 		
 		  
@@ -329,6 +340,10 @@
 		  
 		
 		  
+			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>2</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/快应用/" title="快应用">快应用<sup>3</sup></a></li>
 		  
 		
@@ -340,15 +355,15 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>40</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>41</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Thought/" title="Thought">Thought<sup>35</sup></a></li>
+				<li><a href="/tags/Thought/" title="Thought">Thought<sup>36</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Toss/" title="Toss">Toss<sup>26</sup></a></li>
+				<li><a href="/tags/Toss/" title="Toss">Toss<sup>27</sup></a></li>
 			
 		
 			
@@ -356,7 +371,7 @@
 			
 		
 			
-				<li><a href="/tags/Tools/" title="Tools">Tools<sup>20</sup></a></li>
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>21</sup></a></li>
 			
 		
 			
@@ -380,11 +395,11 @@
 			
 		
 			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
 			
 		
 			
@@ -400,11 +415,15 @@
 			
 		
 			
-				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
 			
 		
 			
@@ -412,15 +431,11 @@
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
@@ -428,19 +443,19 @@
 			
 		
 			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -452,23 +467,23 @@
 			
 		
 			
-				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/SEO/" title="SEO">SEO<sup>1</sup></a></li>
+				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Cookie/" title="Cookie">Cookie<sup>1</sup></a></li>
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Jekyll/" title="Jekyll">Jekyll<sup>1</sup></a></li>
+				<li><a href="/tags/SSH/" title="SSH">SSH<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Npm/" title="Npm">Npm<sup>1</sup></a></li>
 			
 		
 		</ul>
