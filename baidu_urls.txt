@@ -73,8 +73,8 @@ https://jeffjade.com/2015/10/04/2015-10-03-use-jquery-better/
 https://jeffjade.com/2015/09/25/2015-09-25-js-array/
 https://jeffjade.com/2015/09/07/2015-09-07-jadetodos/
 https://jeffjade.com/2015/09/06/2015-09-06-ios8-safari-jitbug-record/
-https://jeffjade.com/2015/08/28/2015-08-28-Write-Morkdown/
 https://jeffjade.com/2015/08/28/2015-09-02-js-string-compare/
+https://jeffjade.com/2015/08/28/2015-08-28-Write-Morkdown/
 https://jeffjade.com/2015/08/15/2015-08-15-html-a-href/
 https://jeffjade.com/2015/08/03/2015-08-03-javascript-this/
 https://jeffjade.com/2015/07/29/2015-07-29-mac-musthave-software/
