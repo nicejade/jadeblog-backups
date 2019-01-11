@@ -1,5 +1,5 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Android子线程更新UI主线程方法之Handler | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="我们开发应用程序的时候，处于线程安全的原因子线程通常是不能直接更新主线程（UI线程）中的UI元素的，那么在Android开发中有几种方法解决这个问题，其中方法之一就是利用Handler处理的。"><meta name="keywords" content="Java"><meta property="og:type" content="article"><meta property="og:title" content="Android子线程更新UI主线程方法之Handler"><meta property="og:url" content="https://jeffjade.com/2015/01/16/2015-01-16-handler-deal-ui/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="我们开发应用程序的时候，处于线程安全的原因子线程通常是不能直接更新主线程（UI线程）中的UI元素的，那么在Android开发中有几种方法解决这个问题，其中方法之一就是利用Handler处理的。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2016-10-30T14:31:30.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Android子线程更新UI主线程方法之Handler"><meta name="twitter:description" content="我们开发应用程序的时候，处于线程安全的原因子线程通常是不能直接更新主线程（UI线程）中的UI元素的，那么在Android开发中有几种方法解决这个问题，其中方法之一就是利用Handler处理的。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/01/16/2015-01-16-handler-deal-ui/" class="title=&quot;Android子线程更新UI主线程方法之Handler&quot;" itemprop="url">Android子线程更新UI主线程方法之Handler</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-01-15T16:00:00.000Z" itemprop="datePublished">发表于 2015-01-16</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>我们开发应用程序的时候，处于线程安全的原因子线程通常是不能直接更新主线程（UI线程）中的UI元素的，那么在Android开发中有几种方法解决这个问题，其中方法之一就是利用Handler处理的。</p><a id="more"></a><p>下面说下有关Handler相关的知识。</p><p>多线程一些基础知识回顾：<br>在介绍Handler类相关知识之前，我们先看看在Java中是如何创建多线程的<br>方法有两种：</p><ul><li>通过继承Thread类，重写Run方法来实现</li><li>通过继承接口Runnable实现多线程</li></ul><p>具体两者的区别与实现，看看 <a href="http://developer.51cto.com/art/201203/321042.htm" target="_blank" rel="noopener">这篇文章</a> 中的介绍;</p><p>接下来让我们看看Handler是什么？如何来用~~</p><p>Handler是这么定义:<strong>主要接受子线程发送的数据, 并用此数据配合主线程更新UI.</strong><br>Handler的主要作用：<strong>主要用于异步消息的处理</strong></p><p><strong>Handler的运行过程：</strong><br>当（子线程）发出一个消息之后，首先进入一个（主线程的）消息队列，发送消息的函数即刻返回，而在主线程中的Handler逐个的在消息队列中将消息取出，然后对消息进行处理。这样就实现了跨线程的UI更新（实际上还是在主线程中完成的）。<br>这种机制通常用来处理相对耗时比较长的操作，如访问网络比较耗时的操作，读取文大文件，比较耗时的操作处理等。</p><p><strong>在大白话一点的介绍它的运行过程：</strong><br>启动应用时Android开启一个主线程 (也就是UI线程) , 如果此时需要一个耗时的操作，例如: 联网读取数据，或者读取本地较大的一个文件的时候，你不能把这些操作放在主线程中，如果你放在主线程中的话，界面会出现假死现象（这也就是你在主线程中直接访问网络时会提示你异常的原因, <a href="#jump">如下所述</a>）。</p><p>这个时候我们需要把这些耗时的操作，放在一个子线程中,因为子线程涉及到UI更新，Android主线程是线程不安全的，更新UI只能在主线程中更新.。<br>这个时候，Handler就出现了,来解决这个复杂的问题,由于Handler运行在主线程中(UI线程中), 它与子线程可以通过Message对象来传递数据, 这个时候，Handler就承担着接受子线程传过来的(子线程用sedMessage()方法传弟)Message对象，(里面包含数据) , 把这些消息放入主线程队列中，配合主线程进行更新UI。</p><h4 id="接下来我们看看关于Handler都有哪些方法（它都能干什么）"><a href="#接下来我们看看关于Handler都有哪些方法（它都能干什么）" class="headerlink" title="接下来我们看看关于Handler都有哪些方法（它都能干什么）:"></a>接下来我们看看关于Handler都有哪些方法（它都能干什么）:</h4><p>其中Handler对象的一些主要方法，如下：</p><blockquote><p>post(Runnable) postAtTime(Runnable,long)<br>postDelayed(Runnable long)<br>sendEmptyMessage(int)<br>sendMessage(Message)<br>sendMessageAtTime(Message,long)<br>sendMessageDelayed(Message,long)</p></blockquote><p>正如方法名字中看到的，有两类方法：<br>(1)在某个主线程中执行Runnable<br>(2)在子线程中发送一个消息，在主线程中检测该消息处理</p><p>线程间传递Message对象的sendMessage方法和发送Runnable多线程对象的post方法。正对应着上面所说的两个特性1）、2）</p><p><strong>下面开发个Handler实例做说明：</strong></p><p>用post的方法执行一个Runnable对象，在该对象中随机产生一个10~100之间的随机数，赋值到UI主线程中的TextView中线程，执行5次，每次相隔5秒， 拼接每次的数字， 最后执行结果应该如: 10 22 33 44 61</p><p>主要代码如下：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">    handler.post(run);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Handler handler = <span class="keyword">new</span> Handler()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span></span>&#123;</span><br><span class="line">        String s = String.valueOf(msg.what);</span><br><span class="line">        TextView tv = (TextView)findViewById(R.id.textView);</span><br><span class="line">        tv.setText(tv.getText() + ” ” + s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Runnable run = <span class="keyword">new</span> Runnable()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Random r = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">int</span> rnum = r.nextInt((<span class="number">100</span> – <span class="number">10</span>) + <span class="number">1</span>) + <span class="number">10</span>;</span><br><span class="line">        handler.sendEmptyMessage(rnum);</span><br><span class="line">        handler.postDelayed(run, <span class="number">5000</span>);</span><br><span class="line">        i++;</span><br><span class="line">        <span class="keyword">if</span> (i==<span class="number">5</span>)&#123;</span><br><span class="line">            handler.removeCallbacks(run);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Android子线程更新UI主线程方法之Handler | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="我们开发应用程序的时候，处于线程安全的原因子线程通常是不能直接更新主线程（UI线程）中的UI元素的，那么在Android开发中有几种方法解决这个问题，其中方法之一就是利用Handler处理的。"><meta name="keywords" content="Java"><meta property="og:type" content="article"><meta property="og:title" content="Android子线程更新UI主线程方法之Handler"><meta property="og:url" content="https://www.jeffjade.com/2015/01/16/2015-01-16-handler-deal-ui/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="我们开发应用程序的时候，处于线程安全的原因子线程通常是不能直接更新主线程（UI线程）中的UI元素的，那么在Android开发中有几种方法解决这个问题，其中方法之一就是利用Handler处理的。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2016-10-30T14:31:30.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Android子线程更新UI主线程方法之Handler"><meta name="twitter:description" content="我们开发应用程序的时候，处于线程安全的原因子线程通常是不能直接更新主线程（UI线程）中的UI元素的，那么在Android开发中有几种方法解决这个问题，其中方法之一就是利用Handler处理的。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/01/16/2015-01-16-handler-deal-ui/" class="title=&quot;Android子线程更新UI主线程方法之Handler&quot;" itemprop="url">Android子线程更新UI主线程方法之Handler</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-01-15T16:00:00.000Z" itemprop="datePublished">发表于 2015-01-16</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>我们开发应用程序的时候，处于线程安全的原因子线程通常是不能直接更新主线程（UI线程）中的UI元素的，那么在Android开发中有几种方法解决这个问题，其中方法之一就是利用Handler处理的。</p><a id="more"></a><p>下面说下有关Handler相关的知识。</p><p>多线程一些基础知识回顾：<br>在介绍Handler类相关知识之前，我们先看看在Java中是如何创建多线程的<br>方法有两种：</p><ul><li>通过继承Thread类，重写Run方法来实现</li><li>通过继承接口Runnable实现多线程</li></ul><p>具体两者的区别与实现，看看 <a href="http://developer.51cto.com/art/201203/321042.htm" target="_blank" rel="noopener">这篇文章</a> 中的介绍;</p><p>接下来让我们看看Handler是什么？如何来用~~</p><p>Handler是这么定义:<strong>主要接受子线程发送的数据, 并用此数据配合主线程更新UI.</strong><br>Handler的主要作用：<strong>主要用于异步消息的处理</strong></p><p><strong>Handler的运行过程：</strong><br>当（子线程）发出一个消息之后，首先进入一个（主线程的）消息队列，发送消息的函数即刻返回，而在主线程中的Handler逐个的在消息队列中将消息取出，然后对消息进行处理。这样就实现了跨线程的UI更新（实际上还是在主线程中完成的）。<br>这种机制通常用来处理相对耗时比较长的操作，如访问网络比较耗时的操作，读取文大文件，比较耗时的操作处理等。</p><p><strong>在大白话一点的介绍它的运行过程：</strong><br>启动应用时Android开启一个主线程 (也就是UI线程) , 如果此时需要一个耗时的操作，例如: 联网读取数据，或者读取本地较大的一个文件的时候，你不能把这些操作放在主线程中，如果你放在主线程中的话，界面会出现假死现象（这也就是你在主线程中直接访问网络时会提示你异常的原因, <a href="#jump">如下所述</a>）。</p><p>这个时候我们需要把这些耗时的操作，放在一个子线程中,因为子线程涉及到UI更新，Android主线程是线程不安全的，更新UI只能在主线程中更新.。<br>这个时候，Handler就出现了,来解决这个复杂的问题,由于Handler运行在主线程中(UI线程中), 它与子线程可以通过Message对象来传递数据, 这个时候，Handler就承担着接受子线程传过来的(子线程用sedMessage()方法传弟)Message对象，(里面包含数据) , 把这些消息放入主线程队列中，配合主线程进行更新UI。</p><h4 id="接下来我们看看关于Handler都有哪些方法（它都能干什么）"><a href="#接下来我们看看关于Handler都有哪些方法（它都能干什么）" class="headerlink" title="接下来我们看看关于Handler都有哪些方法（它都能干什么）:"></a>接下来我们看看关于Handler都有哪些方法（它都能干什么）:</h4><p>其中Handler对象的一些主要方法，如下：</p><blockquote><p>post(Runnable) postAtTime(Runnable,long)<br>postDelayed(Runnable long)<br>sendEmptyMessage(int)<br>sendMessage(Message)<br>sendMessageAtTime(Message,long)<br>sendMessageDelayed(Message,long)</p></blockquote><p>正如方法名字中看到的，有两类方法：<br>(1)在某个主线程中执行Runnable<br>(2)在子线程中发送一个消息，在主线程中检测该消息处理</p><p>线程间传递Message对象的sendMessage方法和发送Runnable多线程对象的post方法。正对应着上面所说的两个特性1）、2）</p><p><strong>下面开发个Handler实例做说明：</strong></p><p>用post的方法执行一个Runnable对象，在该对象中随机产生一个10~100之间的随机数，赋值到UI主线程中的TextView中线程，执行5次，每次相隔5秒， 拼接每次的数字， 最后执行结果应该如: 10 22 33 44 61</p><p>主要代码如下：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">    handler.post(run);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Handler handler = <span class="keyword">new</span> Handler()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span></span>&#123;</span><br><span class="line">        String s = String.valueOf(msg.what);</span><br><span class="line">        TextView tv = (TextView)findViewById(R.id.textView);</span><br><span class="line">        tv.setText(tv.getText() + ” ” + s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Runnable run = <span class="keyword">new</span> Runnable()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Random r = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">int</span> rnum = r.nextInt((<span class="number">100</span> – <span class="number">10</span>) + <span class="number">1</span>) + <span class="number">10</span>;</span><br><span class="line">        handler.sendEmptyMessage(rnum);</span><br><span class="line">        handler.postDelayed(run, <span class="number">5000</span>);</span><br><span class="line">        i++;</span><br><span class="line">        <span class="keyword">if</span> (i==<span class="number">5</span>)&#123;</span><br><span class="line">            handler.removeCallbacks(run);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><span id="jump"><strong>Android主线程不能访问网络异常解决办法:</strong></span><br>从两个方面说下这个问题：</p>
 <ol>
 <li>不让访问网络的原因</li>
@@ -94,7 +94,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://jeffjade.com/2015/01/16/2015-01-16-handler-deal-ui/" data-title="Android子线程更新UI主线程方法之Handler | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
+	  <div data-url="https://www.jeffjade.com/2015/01/16/2015-01-16-handler-deal-ui/" data-title="Android子线程更新UI主线程方法之Handler | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -346,11 +346,11 @@
 			
 		
 			
-				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
 			
@@ -362,11 +362,23 @@
 			
 		
 			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
 			
 		
 			
@@ -378,22 +390,6 @@
 			
 		
 			
-				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
@@ -402,15 +398,15 @@
 			
 		
 			
-				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
 			
 		
 			
@@ -418,11 +414,11 @@
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
 			
 		
 			
@@ -434,15 +430,19 @@
 			
 		
 			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Http/" title="Http">Http<sup>1</sup></a></li>
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>1</sup></a></li>
+				<li><a href="/tags/SEO/" title="SEO">SEO<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -657,9 +657,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018
+		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019
 		
-		<a href="https://jeffjade.com/About" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+		<a href="https://www.jeffjade.com/About" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

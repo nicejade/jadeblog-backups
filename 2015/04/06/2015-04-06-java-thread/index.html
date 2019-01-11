@@ -1,5 +1,5 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>多线程基础之Runnable/Thread与Callable | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="java.lang包下有二个非常有用的东西：Runnable接口与Thread类，Thread实现了Runnable接口（可以认为Thread是Runnable的子类），利用它们可以实现最基本的多线程开发。Runnable方式可以避免Thread 方式由于JAVA单继承特性带来的缺陷。Runnable的代码可以被多个线程(Thread实例)共享，适合于多个线程处理同一资源的情况。"><meta name="keywords" content="Java"><meta property="og:type" content="article"><meta property="og:title" content="多线程基础之Runnable&#x2F;Thread与Callable"><meta property="og:url" content="https://jeffjade.com/2015/04/06/2015-04-06-java-thread/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="java.lang包下有二个非常有用的东西：Runnable接口与Thread类，Thread实现了Runnable接口（可以认为Thread是Runnable的子类），利用它们可以实现最基本的多线程开发。Runnable方式可以避免Thread 方式由于JAVA单继承特性带来的缺陷。Runnable的代码可以被多个线程(Thread实例)共享，适合于多个线程处理同一资源的情况。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://images.cnitblog.com/blog/27612/201411/131555523973501.jpg"><meta property="og:updated_time" content="2017-03-08T15:10:10.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="多线程基础之Runnable&#x2F;Thread与Callable"><meta name="twitter:description" content="java.lang包下有二个非常有用的东西：Runnable接口与Thread类，Thread实现了Runnable接口（可以认为Thread是Runnable的子类），利用它们可以实现最基本的多线程开发。Runnable方式可以避免Thread 方式由于JAVA单继承特性带来的缺陷。Runnable的代码可以被多个线程(Thread实例)共享，适合于多个线程处理同一资源的情况。"><meta name="twitter:image" content="http://images.cnitblog.com/blog/27612/201411/131555523973501.jpg"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/04/06/2015-04-06-java-thread/" class="title=&quot;多线程基础之Runnable/Thread与Callable&quot;" itemprop="url">多线程基础之Runnable/Thread与Callable</a></h1><p class="article-author">By <a href="https://jeffjade.com/About" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-04-06T02:38:43.000Z" itemprop="datePublished">发表于 2015-04-06</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>java.lang包下有二个非常有用的东西：Runnable接口与Thread类，Thread实现了Runnable接口（可以认为Thread是Runnable的子类），利用它们可以实现最基本的多线程开发。Runnable方式可以避免Thread 方式由于JAVA单继承特性带来的缺陷。Runnable的代码可以被多个线程(Thread实例)共享，适合于多个线程处理同一资源的情况。</p><a id="more"></a><p>线程的分类:</p><ul><li><p>用户线程:运行在前台，执行具有的任务程序的主线程，连接网络的子线程等都是用户线程</p></li><li><p>守护线程:运行在后头，为其他前台线程服务。一旦所有用户线程都结束运行，守护线程会随JVM一起结束工作。可以通过调用Thread类的setDaemon(true)方法来设置当前的线程为守护线程，该方法必须在start()方法之前调用，否则会抛出 IllegalThreadStateException异常。在守护线程中产生的新线程也是守护线程。不是所有的任务都可以分配给守护线程来执行，比如读写操作或者计算逻辑。</p></li></ul><h2 id="一、Runnable入门示例"><a href="#一、Runnable入门示例" class="headerlink" title="一、Runnable入门示例"></a>一、Runnable入门示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RunnableDemo1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        Thread.sleep(<span class="number">100</span>);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                    System.out.println(<span class="string">"r1 -&gt; i="</span> + i);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.run();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        Thread.sleep(<span class="number">100</span>);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                    System.out.println(<span class="string">"r2 -&gt; i="</span> + i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>多线程基础之Runnable/Thread与Callable | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="java.lang包下有二个非常有用的东西：Runnable接口与Thread类，Thread实现了Runnable接口（可以认为Thread是Runnable的子类），利用它们可以实现最基本的多线程开发。Runnable方式可以避免Thread 方式由于JAVA单继承特性带来的缺陷。Runnable的代码可以被多个线程(Thread实例)共享，适合于多个线程处理同一资源的情况。"><meta name="keywords" content="Java"><meta property="og:type" content="article"><meta property="og:title" content="多线程基础之Runnable&#x2F;Thread与Callable"><meta property="og:url" content="https://www.jeffjade.com/2015/04/06/2015-04-06-java-thread/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="java.lang包下有二个非常有用的东西：Runnable接口与Thread类，Thread实现了Runnable接口（可以认为Thread是Runnable的子类），利用它们可以实现最基本的多线程开发。Runnable方式可以避免Thread 方式由于JAVA单继承特性带来的缺陷。Runnable的代码可以被多个线程(Thread实例)共享，适合于多个线程处理同一资源的情况。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://images.cnitblog.com/blog/27612/201411/131555523973501.jpg"><meta property="og:updated_time" content="2017-03-08T15:10:10.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="多线程基础之Runnable&#x2F;Thread与Callable"><meta name="twitter:description" content="java.lang包下有二个非常有用的东西：Runnable接口与Thread类，Thread实现了Runnable接口（可以认为Thread是Runnable的子类），利用它们可以实现最基本的多线程开发。Runnable方式可以避免Thread 方式由于JAVA单继承特性带来的缺陷。Runnable的代码可以被多个线程(Thread实例)共享，适合于多个线程处理同一资源的情况。"><meta name="twitter:image" content="http://images.cnitblog.com/blog/27612/201411/131555523973501.jpg"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/04/06/2015-04-06-java-thread/" class="title=&quot;多线程基础之Runnable/Thread与Callable&quot;" itemprop="url">多线程基础之Runnable/Thread与Callable</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-04-06T02:38:43.000Z" itemprop="datePublished">发表于 2015-04-06</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>java.lang包下有二个非常有用的东西：Runnable接口与Thread类，Thread实现了Runnable接口（可以认为Thread是Runnable的子类），利用它们可以实现最基本的多线程开发。Runnable方式可以避免Thread 方式由于JAVA单继承特性带来的缺陷。Runnable的代码可以被多个线程(Thread实例)共享，适合于多个线程处理同一资源的情况。</p><a id="more"></a><p>线程的分类:</p><ul><li><p>用户线程:运行在前台，执行具有的任务程序的主线程，连接网络的子线程等都是用户线程</p></li><li><p>守护线程:运行在后头，为其他前台线程服务。一旦所有用户线程都结束运行，守护线程会随JVM一起结束工作。可以通过调用Thread类的setDaemon(true)方法来设置当前的线程为守护线程，该方法必须在start()方法之前调用，否则会抛出 IllegalThreadStateException异常。在守护线程中产生的新线程也是守护线程。不是所有的任务都可以分配给守护线程来执行，比如读写操作或者计算逻辑。</p></li></ul><h2 id="一、Runnable入门示例"><a href="#一、Runnable入门示例" class="headerlink" title="一、Runnable入门示例"></a>一、Runnable入门示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RunnableDemo1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        Thread.sleep(<span class="number">100</span>);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                    System.out.println(<span class="string">"r1 -&gt; i="</span> + i);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.run();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        Thread.sleep(<span class="number">100</span>);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                    System.out.println(<span class="string">"r2 -&gt; i="</span> + i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>复制代码<br>代码很简单，每个线程依次输出0-4这5个数字，运行结果：</p>
 <p>r1 -&gt; i=0<br>r1 -&gt; i=1<br>r1 -&gt; i=2<br>r1 -&gt; i=3<br>r1 -&gt; i=4<br>r2 -&gt; i=0<br>r2 -&gt; i=1<br>r2 -&gt; i=2<br>r2 -&gt; i=3<br>r2 -&gt; i=4</p>
 <h2 id="二、向Runnable传递参数"><a href="#二、向Runnable传递参数" class="headerlink" title="二、向Runnable传递参数"></a>二、向Runnable传递参数</h2><p>实际应用中，线程开始处理前，通常会有一些初始参数，如果要传入参数，可以参考下面的方法，先定义一个Runnable的子类</p>
@@ -115,7 +115,7 @@ FutureTask处理结果：hello world
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://jeffjade.com/2015/04/06/2015-04-06-java-thread/" data-title="多线程基础之Runnable/Thread与Callable | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
+	  <div data-url="https://www.jeffjade.com/2015/04/06/2015-04-06-java-thread/" data-title="多线程基础之Runnable/Thread与Callable | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -367,11 +367,11 @@ FutureTask处理结果：hello world
 			
 		
 			
-				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
 			
@@ -383,11 +383,23 @@ FutureTask处理结果：hello world
 			
 		
 			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
 			
 		
 			
@@ -399,22 +411,6 @@ FutureTask处理结果：hello world
 			
 		
 			
-				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
@@ -423,15 +419,15 @@ FutureTask处理结果：hello world
 			
 		
 			
-				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
 			
 		
 			
@@ -439,11 +435,11 @@ FutureTask处理结果：hello world
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
 			
 		
 			
@@ -455,15 +451,19 @@ FutureTask处理结果：hello world
 			
 		
 			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Http/" title="Http">Http<sup>1</sup></a></li>
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>1</sup></a></li>
+				<li><a href="/tags/SEO/" title="SEO">SEO<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -678,9 +678,9 @@ FutureTask处理结果：hello world
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018
+		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019
 		
-		<a href="https://jeffjade.com/About" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+		<a href="https://www.jeffjade.com/About" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>
