@@ -1,3 +1,4 @@
+https://www.jeffjade.com/2019/01/13/146-awesome-vue-cli3-example/
 https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/
 https://www.jeffjade.com/2018/12/21/146-awesome-quickapp-resource-tutorial/
 https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/
@@ -65,16 +66,16 @@ https://www.jeffjade.com/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/
 https://www.jeffjade.com/2015/10/28/2015-10-28-css3-webfont/
 https://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/
 https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/
-https://www.jeffjade.com/2015/10/15/2015-10-15-nice-animation-collection/
 https://www.jeffjade.com/2015/10/15/2015-10-16-cleaver-make-ppt/
+https://www.jeffjade.com/2015/10/15/2015-10-15-nice-animation-collection/
 https://www.jeffjade.com/2015/10/08/2015-10-08-js-object-length/
 https://www.jeffjade.com/2015/10/06/2015-10-06-perfect-js-code/
 https://www.jeffjade.com/2015/10/04/2015-10-03-use-jquery-better/
 https://www.jeffjade.com/2015/09/25/2015-09-25-js-array/
 https://www.jeffjade.com/2015/09/07/2015-09-07-jadetodos/
 https://www.jeffjade.com/2015/09/06/2015-09-06-ios8-safari-jitbug-record/
-https://www.jeffjade.com/2015/08/28/2015-08-28-Write-Morkdown/
 https://www.jeffjade.com/2015/08/28/2015-09-02-js-string-compare/
+https://www.jeffjade.com/2015/08/28/2015-08-28-Write-Morkdown/
 https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/
 https://www.jeffjade.com/2015/08/03/2015-08-03-javascript-this/
 https://www.jeffjade.com/2015/07/29/2015-07-29-mac-musthave-software/
@@ -97,4 +98,3 @@ https://www.jeffjade.com/2015/05/16/2015-05-16-mac-musthave-software/
 https://www.jeffjade.com/2015/05/11/2015-05-11-java-extends-implement/
 https://www.jeffjade.com/2015/05/03/2015-05-03-tour-chenzhou/
 https://www.jeffjade.com/2015/04/26/2015-04-26-cherish-wangguozhen/
-https://www.jeffjade.com/2015/04/25/2015-04-25-lua-skill/
