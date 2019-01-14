@@ -6,18 +6,28 @@
 <p>JQuery方面在 <a href="https://github.com/jquery/jquery/issues/2145" target="_blank" rel="noopener">https://github.com/jquery/jquery/issues/2145</a> 有过对此问题的叙述：</p>
 <blockquote>
 <p>There is a timing bug in iOS8 that causes mobile Safari to incorrectly report a ‘length’ on objects that don’t have one.</p>
+</blockquote>
+<blockquote>
 <p>To the best of my knowledge, this happens on iOS8+, possibly only on 64-bit systems. The bug is triggered for objects that have only numeric properties. For example:</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">foo = &#123; <span class="number">1</span>: <span class="string">'a'</span>, <span class="number">2</span>: <span class="string">'b'</span>, <span class="number">3</span>: <span class="string">'c'</span> &#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>In this case, if you query foo.length then mobile Safari will sometimes return 4 (the highest property + 1).</p>
+</blockquote>
+<blockquote>
 <p>This causes functions like $.each() to treat objects such as foo above as arrays instead of objects, and when it tries to iterate them as such it fails since there is no foo[0].</p>
+</blockquote>
+<blockquote>
 <p>The problem can be fixed in the function isArrayLike(). Instead of just checking for </p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> length === <span class="string">"number"</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>you also need to check for</p>
+</blockquote>
+<blockquote>
 <p>obj.hasOwnProperty(‘length’)<br>The latter check is immune to the iOS bug.</p>
+</blockquote>
+<blockquote>
 <p>I realize this is a fix just for one browser, but it’s a browser with a very large user base.</p>
 </blockquote>
 <hr>
@@ -118,9 +128,9 @@
 
 
 <div class="next">
-<a href="/2015/08/28/2015-08-28-Write-Morkdown/" title="SublimeText下写作利器之MarkdownEditing">
+<a href="/2015/08/28/2015-09-02-js-string-compare/" title="JavaScript字符串间的比较">
  <strong>下一篇：</strong><br> 
- <span>SublimeText下写作利器之MarkdownEditing
+ <span>JavaScript字符串间的比较
 </span>
 </a>
 </div>
@@ -358,11 +368,11 @@
 			
 		
 			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
 			
 		
 			
@@ -374,7 +384,7 @@
 			
 		
 			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>4</sup></a></li>
 			
 		
 			
@@ -382,15 +392,15 @@
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>4</sup></a></li>
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
 			
@@ -406,15 +416,11 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -423,6 +429,10 @@
 		
 			
 				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
@@ -438,7 +448,7 @@
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
 			
 		
 			

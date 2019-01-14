@@ -1,5 +1,5 @@
 <!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>〔转〕jQuery编程的最佳实践 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="前几日看到这篇关于jQuery的文章，至少如今还觉得很好，就忍将不住的转了来；以备之后深加探究。此文出自“刘哇勇的部落格”jQuery编程的最佳实践；原文出自Coding Standards &amp;amp; Best Practices。另有一篇关于jQuery的不错文章14 Helpful jQuery Tricks, Notes, and Best Practices，值得一览，译文在此14条关于"><meta name="keywords" content="jQuery"><meta property="og:type" content="article"><meta property="og:title" content="〔转〕jQuery编程的最佳实践"><meta property="og:url" content="https://www.jeffjade.com/2015/10/04/2015-10-03-use-jquery-better/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="前几日看到这篇关于jQuery的文章，至少如今还觉得很好，就忍将不住的转了来；以备之后深加探究。此文出自“刘哇勇的部落格”jQuery编程的最佳实践；原文出自Coding Standards &amp;amp; Best Practices。另有一篇关于jQuery的不错文章14 Helpful jQuery Tricks, Notes, and Best Practices，值得一览，译文在此14条关于"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2017-02-05T15:56:27.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="〔转〕jQuery编程的最佳实践"><meta name="twitter:description" content="前几日看到这篇关于jQuery的文章，至少如今还觉得很好，就忍将不住的转了来；以备之后深加探究。此文出自“刘哇勇的部落格”jQuery编程的最佳实践；原文出自Coding Standards &amp;amp; Best Practices。另有一篇关于jQuery的不错文章14 Helpful jQuery Tricks, Notes, and Best Practices，值得一览，译文在此14条关于"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/10/04/2015-10-03-use-jquery-better/" class="jade-cp-link" title="〔转〕jQuery编程的最佳实践" itemprop="url">〔转〕jQuery编程的最佳实践</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-10-04T04:00:00.000Z" itemprop="datePublished">发表于 2015-10-04</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>前几日看到这篇关于jQuery的文章，至少如今还觉得很好，就忍将不住的转了来；以备之后深加探究。此文出自“刘哇勇的部落格”<a href="http://www.cnblogs.com/Wayou/p/jquery_best_practise.html" target="_blank" rel="noopener">jQuery编程的最佳实践</a>；原文出自<a href="http://lab.abhinayrathore.com/jquery-standards/" target="_blank" rel="noopener">Coding Standards &amp; Best Practices</a>。另有一篇关于jQuery的不错文章<a href="http://code.tutsplus.com/tutorials/14-helpful-jquery-tricks-notes-and-best-practices--net-14405" target="_blank" rel="noopener">14 Helpful jQuery Tricks, Notes, and Best Practices</a>，值得一览，译文在此<a href="http://www.iinterest.net/2010/09/27/%E8%BD%AC14%E6%9D%A1%E5%85%B3%E4%BA%8Ejquery%E7%9A%84%E7%9F%A5%E8%AF%86/" target="_blank" rel="noopener">14条关于jQuery的知识</a>。</p><a id="more"></a><blockquote><p><strong>微注：</strong> 转引此文时候，是在 15 年十月份，转眼一年有余；而大约在 16 年十月份时候，已经很少用 JQuery 了(个别小需求除外)，而采用 MVVM 框架外加原生，去解决各种需求。虽说 JQuery 固然强大，但它的使命已经完结；当今时代，跟着时代的步伐，方是我等 programmer 更为科学的打开方式，不是么？所以说，当你看到此文的时候，不妨考量下是否必要去使用它；如若需要，推荐看下此网站 <a href="http://youmightnotneedjquery.com/?from=jeffjade.com" target="_blank" rel="noopener">YOU MIGHT NOT NEED JQUERY</a> [Update@17.02.05]。</p></blockquote><p>好像是feedly订阅里看到的文章，读完后觉得非常不错，译之备用，多看受益。</p><h2 id="加载jQuery"><a href="#加载jQuery" class="headerlink" title="加载jQuery"></a><strong>加载jQuery</strong></h2><ol><li><p>坚持使用CDN来加载jQuery，这种别人服务器免费帮你托管文件的便宜干嘛不占呢。<a href="http://www.sitepoint.com/7-reasons-to-use-a-cdn/" target="_blank" rel="noopener">点击查看</a>使用CDN的好处，<a href="http://lab.abhinayrathore.com/jquery-standards/#jQueryCND" target="_blank" rel="noopener">点此</a>查看一些主流的jQuery CDN地址。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;script&gt;<span class="built_in">window</span>.jQuery || <span class="built_in">document</span>.write(<span class="string">'&lt;script src="js/jquery-1.11.0.min.js" type="text/javascript"&gt;&lt;\/script&gt;'</span>)&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/10/04/2015-10-03-use-jquery-better/" class="jade-cp-link" title="〔转〕jQuery编程的最佳实践" itemprop="url">〔转〕jQuery编程的最佳实践</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-10-04T04:00:00.000Z" itemprop="datePublished">发表于 2015-10-04</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>前几日看到这篇关于jQuery的文章，至少如今还觉得很好，就忍将不住的转了来；以备之后深加探究。此文出自“刘哇勇的部落格”<a href="http://www.cnblogs.com/Wayou/p/jquery_best_practise.html" target="_blank" rel="noopener">jQuery编程的最佳实践</a>；原文出自<a href="http://lab.abhinayrathore.com/jquery-standards/" target="_blank" rel="noopener">Coding Standards &amp; Best Practices</a>。另有一篇关于jQuery的不错文章<a href="http://code.tutsplus.com/tutorials/14-helpful-jquery-tricks-notes-and-best-practices--net-14405" target="_blank" rel="noopener">14 Helpful jQuery Tricks, Notes, and Best Practices</a>，值得一览，译文在此<a href="http://www.iinterest.net/2010/09/27/%E8%BD%AC14%E6%9D%A1%E5%85%B3%E4%BA%8Ejquery%E7%9A%84%E7%9F%A5%E8%AF%86/" target="_blank" rel="noopener">14条关于jQuery的知识</a>。</p><a id="more"></a><blockquote><p><strong>微注：</strong> 转引此文时候，是在 15 年十月份，转眼一年有余；而大约在 16 年十月份时候，已经很少用 JQuery 了(个别小需求除外)，而采用 MVVM 框架外加原生，去解决各种需求。虽说 JQuery 固然强大，但它的使命已经完结；当今时代，跟着时代的步伐，方是我等 programmer 更为科学的打开方式，不是么？所以说，当你看到此文的时候，不妨考量下是否必要去使用它；如若需要，推荐看下此网站 <a href="http://youmightnotneedjquery.com/?from=jeffjade.com" target="_blank" rel="noopener">YOU MIGHT NOT NEED JQUERY</a> [<a href="mailto:Update@17.02.05" target="_blank" rel="noopener">Update@17.02.05</a>]。</p></blockquote><p>好像是feedly订阅里看到的文章，读完后觉得非常不错，译之备用，多看受益。</p><h2 id="加载jQuery"><a href="#加载jQuery" class="headerlink" title="加载jQuery"></a><strong>加载jQuery</strong></h2><ol><li><p>坚持使用CDN来加载jQuery，这种别人服务器免费帮你托管文件的便宜干嘛不占呢。<a href="http://www.sitepoint.com/7-reasons-to-use-a-cdn/" target="_blank" rel="noopener">点击查看</a>使用CDN的好处，<a href="http://lab.abhinayrathore.com/jquery-standards/#jQueryCND" target="_blank" rel="noopener">点此</a>查看一些主流的jQuery CDN地址。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;script&gt;<span class="built_in">window</span>.jQuery || <span class="built_in">document</span>.write(<span class="string">'&lt;script src="js/jquery-1.11.0.min.js" type="text/javascript"&gt;&lt;\/script&gt;'</span>)&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>安全起见，最好还是提供一个本地备份以便在无法从远程CDN服务器获取jQuery时网站也能工作，如上面代码所示。<a href="https://css-tricks.com/snippets/jquery/fallback-for-cdn-hosted-jquery/" target="_blank" rel="noopener">详情见此</a>。</p>
 </li>
@@ -16,7 +16,7 @@
 <li>当从CDN服务器加载jQuery时，最好把版本写全（比如1.11.0而不是1.11或者直接写个1）</li>
 <li>千万莫重复加载.</li>
 </ul>
-<ol>
+<ol start="6">
 <li><p>如果你同时还使用了其他JS框架诸如Prototype, MooTools, Zepto云云，因为他们也使用了$符号，所以你就表再用美刀符号来进行jQuery 编码了，而请用<code>jQuery</code>代替。并且调用<code>$.noConflict()</code>保证不会有冲突出现。</p>
 </li>
 <li><p>要检测浏览器对一些新特性是否支持，请用<a href="https://modernizr.com" target="_blank" rel="noopener">Modernizr</a>。插播广告：<a href="http://www.cnblogs.com/Wayou/p/why_jquery_obselete_brower_detecting.html" target="_blank" rel="noopener">论为毛不检测浏览器</a>。</p>
@@ -98,7 +98,7 @@
 </li>
 </ol>
 <p>6.使用Promise模式。<a href="http://www.htmlgoodies.com/beyond/javascript/making-promises-with-jquery-deferred.html" target="_blank" rel="noopener">更多例子</a><br></p><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123; <span class="params">...</span> &#125;).then(successHandler, failureHandler);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 抑或</span></span><br><span class="line"><span class="built_in">var</span> jqxhr = $.ajax(&#123; <span class="params">...</span> &#125;);</span><br><span class="line">jqxhr.done(successHandler);</span><br><span class="line">jqxhr.<span class="keyword">fail</span>(failureHandler);</span><br></pre></td></tr></table></figure><p></p>
-<ol>
+<ol start="7">
 <li>标准的Ajax模板一分。<a href="https://api.jquery.com/jQuery.ajax/" target="_blank" rel="noopener">追寻根源</a><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> jqxhr = $.ajax(&#123;</span><br><span class="line">    url: url,</span><br><span class="line">    type: <span class="string">"GET"</span>, <span class="comment">// 默认为GET,你可以根据需要更改</span></span><br><span class="line">    cache: <span class="literal">true</span>, <span class="comment">// 默认为true,但对于script,jsonp类型为false,可以自行设置</span></span><br><span class="line">    data: &#123;&#125;, <span class="comment">// 将请求参数放这里.</span></span><br><span class="line">    dataType: <span class="string">"json"</span>, <span class="comment">// 指定想要的数据类型</span></span><br><span class="line">    jsonp: <span class="string">"callback"</span>, <span class="comment">// 指定回调处理JSONP类型的请求</span></span><br><span class="line">    statusCode: &#123; <span class="comment">// 如果你想处理各状态的错误的话</span></span><br><span class="line">        <span class="number">404</span>: handler404,</span><br><span class="line">        <span class="number">500</span>: handler500</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">jqxhr.done(successHandler);</span><br><span class="line">jqxhr.fail(failureHandler);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
@@ -471,11 +471,11 @@
 			
 		
 			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
 			
 		
 			
@@ -487,7 +487,7 @@
 			
 		
 			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>4</sup></a></li>
 			
 		
 			
@@ -495,15 +495,15 @@
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>4</sup></a></li>
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
 			
@@ -519,15 +519,11 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -536,6 +532,10 @@
 		
 			
 				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
@@ -551,7 +551,7 @@
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
 			
 		
 			

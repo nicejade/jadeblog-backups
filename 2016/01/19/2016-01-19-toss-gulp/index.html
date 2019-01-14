@@ -6,6 +6,8 @@
 <p>当然安装的时候极有可能出现问题（Win下）；比如，安装的类库无法使用，并且也删除（指定的路径或文件名太长）；额，这是一个超蛋疼的问题；也是在尝试几次后才成功(没闹明白失败和成功的原因)；至于删掉那坏的类库，最后也是采用将部分<code>剪切出去</code>或者手动rename致使路径变短些才得以干掉它【用del rd命令都不足以删除之,我屮艸芔茻，醉了~】；</p>
 <blockquote>
 <p>del : 指定的路径或文件名太长，或者两者都太长。完全限定文件名必须少于 260 个字符，并且目录名必须少于 248 个字符。</p>
+</blockquote>
+<blockquote>
 <p>[Y] 是(Y)  [A] 全是(A)  [N] 否(N)  [L] 全否(L)  [S] 挂起(S)  [?] 帮助 (默认值为“Y”): A<br>rd : 指定的路径或文件名太长，或者两者都太长。完全限定文件名必须少于 260 个字符，并且目录名必须少于 248 个字符。</p>
 </blockquote>
 <p>gulpfile配置如下即可：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp        = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</span><br><span class="line">    spritesmith = <span class="built_in">require</span>(<span class="string">'gulp.spritesmith'</span>);</span><br><span class="line"><span class="comment">//运用gulp一键生成[雪碧图]</span></span><br><span class="line">gulp.task(<span class="string">'sprite'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> workDirectory = <span class="string">'xxx'</span>, outPut = <span class="string">'yyy'</span>;</span><br><span class="line">    <span class="keyword">return</span> gulp.src( workDirectory+<span class="string">'/images/*.png'</span> )</span><br><span class="line">    .pipe( spritesmith(&#123;</span><br><span class="line">        imgName:<span class="string">'sprite.png'</span>,</span><br><span class="line">        cssName:<span class="string">'sprite.css'</span></span><br><span class="line">    &#125;) )</span><br><span class="line">    .pipe( gulp.dest(outPut+<span class="string">'/images'</span>) );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p></p>
@@ -359,11 +361,11 @@
 			
 		
 			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
 			
 		
 			
@@ -375,7 +377,7 @@
 			
 		
 			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>4</sup></a></li>
 			
 		
 			
@@ -383,15 +385,15 @@
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>4</sup></a></li>
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
 			
@@ -407,15 +409,11 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -424,6 +422,10 @@
 		
 			
 				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
@@ -439,7 +441,7 @@
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
 			
 		
 			
