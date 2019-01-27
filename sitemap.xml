@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.jeffjade.com/about-me/index.html</loc>
+    
+    <lastmod>2019-01-27T14:17:27.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2018/06/04/141-talk-about-my-blogs/</loc>
+    
+    <lastmod>2019-01-27T14:16:06.377Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jeffjade.com/2019/01/20/149-how-to-elegantly-handle-quickapp-request/</loc>
     
     <lastmod>2019-01-20T15:52:57.846Z</lastmod>
@@ -93,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/about-me/index.html</loc>
-    
-    <lastmod>2018-10-01T16:23:08.624Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2015/05/03/2015-05-03-tour-chenzhou/</loc>
     
     <lastmod>2018-09-24T14:52:45.229Z</lastmod>
@@ -124,13 +131,6 @@
     <loc>https://www.jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/</loc>
     
     <lastmod>2018-06-18T16:17:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2018/06/04/141-talk-about-my-blogs/</loc>
-    
-    <lastmod>2018-06-04T17:51:06.000Z</lastmod>
     
   </url>
   
@@ -387,7 +387,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/04/19/2015-04-19-toss-bind-domainname/</loc>
+    <loc>https://www.jeffjade.com/2016/05/14/106-front-end-learning-record/</loc>
     
     <lastmod>2017-09-02T10:59:45.000Z</lastmod>
     
@@ -401,7 +401,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/special/md2pptViaCleaver.html</loc>
+    <loc>https://www.jeffjade.com/2015/04/19/2015-04-19-toss-bind-domainname/</loc>
     
     <lastmod>2017-09-02T10:59:45.000Z</lastmod>
     
@@ -415,7 +415,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/05/14/106-front-end-learning-record/</loc>
+    <loc>https://www.jeffjade.com/special/md2pptViaCleaver.html</loc>
     
     <lastmod>2017-09-02T10:59:45.000Z</lastmod>
     
@@ -436,14 +436,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/06/29/109-blog-seo-optimization/</loc>
-    
-    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/04/12/2015-04-12-thought-choose-effort/</loc>
+    <loc>https://www.jeffjade.com/2016/05/08/106-vue-es6-jade-scss-webpack-gulp/</loc>
     
     <lastmod>2017-09-01T12:58:14.000Z</lastmod>
     
@@ -457,21 +450,63 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/03/17/2016-03-17-jade-tools/</loc>
+    <loc>https://www.jeffjade.com/2015/06/14/2015-06-14-programer-health/</loc>
     
     <lastmod>2017-09-01T12:58:14.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/03/11/2016-03-11-autohotkey/</loc>
+    <loc>https://www.jeffjade.com/2016/06/29/109-blog-seo-optimization/</loc>
     
     <lastmod>2017-09-01T12:58:14.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/05/08/106-vue-es6-jade-scss-webpack-gulp/</loc>
+    <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
+    
+    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/02/02/2015-02-02-health-mustread/</loc>
+    
+    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/</loc>
+    
+    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2016/04/16/105-talk-about-chuanqidazhanggui/</loc>
+    
+    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
+    
+    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2016/10/31/115-summary-of-cookie/</loc>
+    
+    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2017/01/23/118-chrome_awesome_plug-in/</loc>
     
     <lastmod>2017-09-01T12:58:14.000Z</lastmod>
     
@@ -492,14 +527,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/06/14/2015-06-14-programer-health/</loc>
+    <loc>https://www.jeffjade.com/2016/07/06/110-vue-webpack-component-develop/</loc>
     
     <lastmod>2017-09-01T12:58:14.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/07/06/110-vue-webpack-component-develop/</loc>
+    <loc>https://www.jeffjade.com/2016/03/11/2016-03-11-autohotkey/</loc>
     
     <lastmod>2017-09-01T12:58:14.000Z</lastmod>
     
@@ -513,35 +548,21 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/10/31/115-summary-of-cookie/</loc>
+    <loc>https://www.jeffjade.com/2015/04/12/2015-04-12-thought-choose-effort/</loc>
     
     <lastmod>2017-09-01T12:58:14.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/02/02/2015-02-02-health-mustread/</loc>
+    <loc>https://www.jeffjade.com/2015/01/10/2015-01-10-why-indulge/</loc>
     
     <lastmod>2017-09-01T12:58:14.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2017/01/23/118-chrome_awesome_plug-in/</loc>
-    
-    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/</loc>
-    
-    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2016/01/19/2016-01-19-toss-gulp/</loc>
+    <loc>https://www.jeffjade.com/2016/03/17/2016-03-17-jade-tools/</loc>
     
     <lastmod>2017-09-01T12:58:14.000Z</lastmod>
     
@@ -555,28 +576,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/04/16/105-talk-about-chuanqidazhanggui/</loc>
-    
-    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
-    
-    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
-    
-    <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/01/10/2015-01-10-why-indulge/</loc>
+    <loc>https://www.jeffjade.com/2016/01/19/2016-01-19-toss-gulp/</loc>
     
     <lastmod>2017-09-01T12:58:14.000Z</lastmod>
     
@@ -625,13 +625,6 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/04/24/2015-04-24-lua-tablesort/</loc>
-    
-    <lastmod>2017-03-08T15:14:13.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2014/12/22/2014-12-22-lua-weaktable/</loc>
     
     <lastmod>2017-03-08T15:14:13.000Z</lastmod>
@@ -639,7 +632,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/01/12/2015-01-12-generate-lua/</loc>
+    <loc>https://www.jeffjade.com/2015/04/24/2015-04-24-lua-tablesort/</loc>
     
     <lastmod>2017-03-08T15:14:13.000Z</lastmod>
     
@@ -660,7 +653,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/05/11/2015-05-11-java-extends-implement/</loc>
+    <loc>https://www.jeffjade.com/2015/01/12/2015-01-12-generate-lua/</loc>
+    
+    <lastmod>2017-03-08T15:14:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/01/06/2015-01-06-hashmap-work-principle/</loc>
     
     <lastmod>2017-03-08T15:10:10.000Z</lastmod>
     
@@ -674,21 +674,21 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/01/07/2015-01-07-java-study/</loc>
-    
-    <lastmod>2017-03-08T15:10:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/01/06/2015-01-06-hashmap-work-principle/</loc>
-    
-    <lastmod>2017-03-08T15:10:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2014/09/20/2014-09-20-java-concurrency/</loc>
+    
+    <lastmod>2017-03-08T15:10:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/05/11/2015-05-11-java-extends-implement/</loc>
+    
+    <lastmod>2017-03-08T15:10:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/01/07/2015-01-07-java-study/</loc>
     
     <lastmod>2017-03-08T15:10:10.000Z</lastmod>
     
