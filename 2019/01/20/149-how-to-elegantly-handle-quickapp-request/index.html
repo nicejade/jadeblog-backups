@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>如何优雅处理「快应用」数据请求 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="keywords" content="快应用,开发快应用,quickapp,快应用开发者,数据请求,fetch接口"><meta name="description" content="查阅快应用开发文档，可以知道官方提供了数据请求接口；对于如何使用，文档中也给出了示例，但很显然，这在实际项目中，不够优雅且更不高效，所以需要对其进行再封装，使得可以大幅提升开发效率，同时也令整个代码优雅、便于维护。所以在此篇文章的存在，旨在于讨论下如何优雅处理快应用数据请求。"><meta name="keywords" content="快应用,开发快应用,quickapp,快应用开发者,数据请求,fetch接口"><meta property="og:type" content="article"><meta property="og:title" content="如何优雅处理「快应用」数据请求"><meta property="og:url" content="https://www.jeffjade.com/2019/01/20/149-how-to-elegantly-handle-quickapp-request/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="查阅快应用开发文档，可以知道官方提供了数据请求接口；对于如何使用，文档中也给出了示例，但很显然，这在实际项目中，不够优雅且更不高效，所以需要对其进行再封装，使得可以大幅提升开发效率，同时也令整个代码优雅、便于维护。所以在此篇文章的存在，旨在于讨论下如何优雅处理快应用数据请求。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://image.nicelinks.site/quickapp-elegantly-fetch.jpeg"><meta property="og:updated_time" content="2019-01-20T15:52:57.846Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="如何优雅处理「快应用」数据请求"><meta name="twitter:description" content="查阅快应用开发文档，可以知道官方提供了数据请求接口；对于如何使用，文档中也给出了示例，但很显然，这在实际项目中，不够优雅且更不高效，所以需要对其进行再封装，使得可以大幅提升开发效率，同时也令整个代码优雅、便于维护。所以在此篇文章的存在，旨在于讨论下如何优雅处理快应用数据请求。"><meta name="twitter:image" content="https://image.nicelinks.site/quickapp-elegantly-fetch.jpeg"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>如何优雅处理「快应用」数据请求 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="keywords" content="快应用,开发快应用,quickapp,快应用开发者,数据请求,fetch接口"><meta name="description" content="查阅快应用开发文档，可以知道官方提供了数据请求接口；对于如何使用，文档中也给出了示例，但很显然，这在实际项目中，不够优雅且更不高效，所以需要对其进行再封装，使得可以大幅提升开发效率，同时也令整个代码优雅、便于维护。所以在此篇文章的存在，旨在于讨论下如何优雅处理快应用数据请求。"><meta name="keywords" content="快应用,开发快应用,quickapp,快应用开发者,数据请求,fetch接口"><meta property="og:type" content="article"><meta property="og:title" content="如何优雅处理「快应用」数据请求"><meta property="og:url" content="https://www.jeffjade.com/2019/01/20/149-how-to-elegantly-handle-quickapp-request/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="查阅快应用开发文档，可以知道官方提供了数据请求接口；对于如何使用，文档中也给出了示例，但很显然，这在实际项目中，不够优雅且更不高效，所以需要对其进行再封装，使得可以大幅提升开发效率，同时也令整个代码优雅、便于维护。所以在此篇文章的存在，旨在于讨论下如何优雅处理快应用数据请求。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://image.nicelinks.site/quickapp-elegantly-fetch.jpeg"><meta property="og:updated_time" content="2019-02-14T05:22:14.605Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="如何优雅处理「快应用」数据请求"><meta name="twitter:description" content="查阅快应用开发文档，可以知道官方提供了数据请求接口；对于如何使用，文档中也给出了示例，但很显然，这在实际项目中，不够优雅且更不高效，所以需要对其进行再封装，使得可以大幅提升开发效率，同时也令整个代码优雅、便于维护。所以在此篇文章的存在，旨在于讨论下如何优雅处理快应用数据请求。"><meta name="twitter:image" content="https://image.nicelinks.site/quickapp-elegantly-fetch.jpeg"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
     <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2019/01/20/149-how-to-elegantly-handle-quickapp-request/" class="title=&quot;如何优雅处理「快应用」数据请求&quot;" itemprop="url">如何优雅处理「快应用」数据请求</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2019-01-20T14:22:00.000Z" itemprop="datePublished">发表于 2019-01-20</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>查阅<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>开发文档，可以知道官方提供了<a href="https://doc.quickapp.cn/features/system/fetch.html" target="_blank" rel="noopener">数据请求</a>接口；对于如何使用，文档中也给出了简单的说明和代码示例，但很显然，这在实际项目中，不够优雅且更不高效，所以需要对其进行再封装，使得可以大幅提升开发效率，同时也令整个代码优雅，以便于维护。所以在此篇文章的存在，旨在于讨论下<a href="https://quickapp.lovejade.cn/how-to-elegantly-handle-quickapp-request" target="_blank" rel="noopener">如何优雅处理「快应用」数据请求</a>。</p><a id="more"></a><p><img src="https://image.nicelinks.site/blank.gif" alt="如何优雅处理快应用数据请求" data-echo="https://image.nicelinks.site/quickapp-elegantly-fetch.jpeg"></p><blockquote><p>备注： 本文最先发布于，基于 <a href="https://nicelinks.site/post/5c3f3151a5957e07a40b30ff" target="_blank" rel="noopener">Ghost</a> 构建的最新博客: <a href="https://quickapp.lovejade.cn/how-to-elegantly-handle-quickapp-request/" target="_blank" rel="noopener">静轩之别苑</a>。</p></blockquote><blockquote><p>为保证文中的代码，是直接拷贝就可以运行的，特有引用网络开源接口；需要备注说明的是，在<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>使用接口，需要在 <code>manifest.json</code> 中，对所使用的接口进行声明；使用数据请求，就需要注入下面的声明：</p></blockquote><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">"name"</span>: <span class="string">"system.fetch"</span> &#125;</span><br></pre></td></tr></table></figure>
 <h2 id="默认的低效率写法"><a href="#默认的低效率写法" class="headerlink" title="默认的低效率写法"></a>默认的低效率写法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> $fetch <span class="keyword">from</span> <span class="string">'@system.fetch'</span></span><br><span class="line">$fetch.fetch(&#123;</span><br><span class="line">  url: <span class="string">'https://api.apiopen.top/singlePoetry'</span>,</span><br><span class="line">  responseType: <span class="string">'text'</span>,</span><br><span class="line">  success: <span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> result = response.data</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`success response, code: <span class="subst">$&#123;result.code&#125;</span>, data: <span class="subst">$&#123;result.data&#125;</span>`</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  fail: <span class="function"><span class="keyword">function</span> (<span class="params">data, code</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`fetch handling fail, code = <span class="subst">$&#123;code&#125;</span>`</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  complete: funtion (data, code) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`fetch handling complete, code = <span class="subst">$&#123;code&#125;</span>`</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>以上就是官方文档提供的上古 <code>jQuery</code>  时代的写法，冗长的代码，古老的回调式操作，以及对请求没有做任何必要的处理，如果这在项目中使用，对代码复用度无疑是零，从长期维护角度看，这样的代码就是导致痛苦的根源。虽然，示例代码这样写道，也无可厚非；但先入为主的模范作用，将对于诸多经验不够充足的开发者，起到错误的误导性引领。</p>
@@ -25,6 +25,8 @@
 <p>@2019-01-17 于深圳.福田 Last Modify：2018-01-19</p>
 <hr>
 <h3 id="您可能会感兴趣的文章："><a href="#您可能会感兴趣的文章：" class="headerlink" title="您可能会感兴趣的文章："></a>您可能会感兴趣的文章：</h3><ul>
+<li><a href="https://www.jeffjade.com/2017/10/09/146-talk-about-nice-links/150-prettier-quickapp-plugin">Prettier 插件为更漂亮快应用代码</a></li>
+<li><a href="https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/">快应用脚手架，为优雅而生</a></li>
 <li><a href="https://www.jeffjade.com/2017/10/09/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
 <li><a href="https://nice.lovejade.cn/zh/article/develop-quick-app-experience-notes.html" target="_blank" rel="noopener">快应用之开发体验纪要</a></li>
 <li><a href="https://www.jeffjade.com/2018/12/21/146-awesome-vue-cli3-example/">快应用开发资源、教程汇聚
@@ -115,6 +117,14 @@
 	</article>
 	<nav class="article-nav clearfix">
  
+ <div class="prev">
+ <a href="/2019/02/02/150-prettier-quickapp-plugin/" title="Prettier 插件为更漂亮快应用代码">
+  <strong>上一篇：</strong><br>
+  <span>
+  Prettier 插件为更漂亮快应用代码</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2019/01/13/146-awesome-vue-cli3-example/" title="基于 Vue-Cli3 构建的脚手架模版">
@@ -165,6 +175,10 @@
     <h3 class="widget-title asidetitle">近期文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/02/02/150-prettier-quickapp-plugin/">Prettier 插件为更漂亮快应用代码</a>
+          </li>
         
           <li>
             <a href="/2019/01/20/149-how-to-elegantly-handle-quickapp-request/">如何优雅处理「快应用」数据请求</a>
@@ -220,10 +234,6 @@
         
           <li>
             <a href="/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a>
-          </li>
-        
-          <li>
-            <a href="/2017/12/30/135-npm-vs-yarn-detial-memo/">Npm vs Yarn 之备忘详单</a>
           </li>
         
       </ul>
@@ -306,7 +316,7 @@
 		  
 		
 		  
-			<li><a href="/categories/快应用/" title="快应用">快应用<sup>4</sup></a></li>
+			<li><a href="/categories/快应用/" title="快应用">快应用<sup>5</sup></a></li>
 		  
 		
 		</ul>
@@ -333,7 +343,7 @@
 			
 		
 			
-				<li><a href="/tags/Tools/" title="Tools">Tools<sup>21</sup></a></li>
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>22</sup></a></li>
 			
 		
 			
@@ -361,15 +371,11 @@
 			
 		
 			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>5</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
 			
 		
 			
@@ -377,11 +383,15 @@
 			
 		
 			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
 			
@@ -393,11 +403,11 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -409,15 +419,7 @@
 			
 		
 			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -425,11 +427,7 @@
 			
 		
 			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
 			
@@ -437,15 +435,27 @@
 			
 		
 			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/SEO/" title="SEO">SEO<sup>1</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>1</sup></a></li>
+				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/React/" title="React">React<sup>1</sup></a></li>
 			
 		
 		</ul>
