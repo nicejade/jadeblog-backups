@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Vue 各类数据绑定 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="Demonstrate Using Data Binding Syntax；演示运用Vue数据绑定语法。"><meta name="keywords" content="Vue,JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="Vue 各类数据绑定"><meta property="og:url" content="https://www.jeffjade.com/2016/09/16/112-vue-data-binding/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="Demonstrate Using Data Binding Syntax；演示运用Vue数据绑定语法。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://image.nicelinks.site/vuejs.jpg"><meta property="og:updated_time" content="2017-10-08T10:50:11.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Vue 各类数据绑定"><meta name="twitter:description" content="Demonstrate Using Data Binding Syntax；演示运用Vue数据绑定语法。"><meta name="twitter:image" content="https://image.nicelinks.site/vuejs.jpg"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Vue 各类数据绑定 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="Demonstrate Using Data Binding Syntax；演示运用Vue数据绑定语法。"><meta name="keywords" content="JavaScript,Vue"><meta property="og:type" content="article"><meta property="og:title" content="Vue 各类数据绑定"><meta property="og:url" content="https://www.jeffjade.com/2016/09/16/112-vue-data-binding/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="Demonstrate Using Data Binding Syntax；演示运用Vue数据绑定语法。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://image.nicelinks.site/vuejs.jpg"><meta property="og:updated_time" content="2017-10-08T10:50:11.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Vue 各类数据绑定"><meta name="twitter:description" content="Demonstrate Using Data Binding Syntax；演示运用Vue数据绑定语法。"><meta name="twitter:image" content="https://image.nicelinks.site/vuejs.jpg"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
     <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2016/09/16/112-vue-data-binding/" class="title=&quot;Vue" itemprop="url">Vue 各类数据绑定</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2016-09-16T10:30:00.000Z" itemprop="datePublished">发表于 2016-09-16</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>『天下武功，唯快不破』√，这一直是对武学造诣方面的追捧，虽然对于这个丝毫不会；更是对待现实工作不懈渴求，乃至苛求。因为这已不是遁隐修行，而是职场卖命，唯有先快速解决需求，方能攫取更为充盈的时间去深究技术机理，以使臻于更强，更强而优于快，如此优良循环得以形成。言归正传，作为前端ER，一度觉得，这 <code>Vue</code> 的诞生，好比一柄倚天利器，其易上手，写以及运行也都很高效，十分让人爱不释手；但这易上手，倒不等于容易精通，蛮多东西都需悉心学习、练习、理解，才能运用自如。</p><a id="more"></a><p><img src="https://image.nicelinks.site/blank.gif" alt="Vue.js剧照" data-echo="//image.nicelinks.site/vuejs.jpg"></p><p>在使用<code>Vue</code>开发过程中，那基于<code>Dom</code>实现的模版，总是无可避免的要遇到，也是一个令人欣喜的存在。Vue.js 模板不仅都是可解析的有效的 HTML，且通过一些特殊的特性做了增强，这使得很多先行，需要借助<code>jQuery</code>等类库在逻辑中操纵的部分，已然可以在模版中进行，不得不说这使得一定程度上，Dom结构变的更加清晰明了。因此，这部分如果用运得当，对于 Vue 组件化编写大有裨益；虽然说 Vue官方已经有很完善的文档～<a href="https://vuejs.org.cn/guide/syntax.html#" target="_blank" rel="noopener">数据绑定语法</a>，但依然还是可以对这块儿再进行探讨，毕竟Vue数据绑定，其实际功能比目测的文档中描述更为强大。</p><blockquote><p><strong>微注：</strong> 本博客也基于 <em>Hexo</em> 驱动，其目测不支持多个大括号渲染，所以这里只好暂时先用<code>\</code>做下转义了。另外，为了方便电脑端阅读，自此有对网页加入 <code>Enter</code> 键监听，用以切换 show / hide 侧边栏。</p></blockquote><p>在文档中，我们可以轻易的知道，Vue 为数据，Class, Style，表单控件的绑定；属性的计算，条件、列表渲染；方法、事件处理等等等提供了诸多便捷的方法；所以我们可以很简洁的写出模版，例如这样的；</p><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Bindind Message Using Mustache（双大括号）: </span><span class="template-variable">&#123;&#123; msg &#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>This will never change(mustache with *): </span><span class="template-variable">&#123;\&#123;* msg &#125;</span><span class="xml">\&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Bing htmlText using three Mustache label Like This : </span><span class="template-variable">&#123;\&#123;\&#123; htmlText &#125;</span><span class="xml">\&#125;\&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"item-</span></span></span><span class="template-variable">&#123;\&#123; id &#125;</span><span class="xml"><span class="tag"><span class="string">\&#125;"</span>&gt;</span>Html Attributes Using Mustache<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><span class="template-variable">&#123;\&#123; message.split('').reverse().join('') &#125;</span><span class="xml">\&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;\&#123; className &#125;</span><span class="xml"><span class="tag"><span class="string">\&#125;"</span>&gt;</span>Binding class using Mustache Label<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>谈及这数据的绑定就涉及到好几种符号®，比如：Mustache 语法标签的<code>{\{ }\}</code>,三Mustache标签，引号(单双)，括号<code>()</code>，对象<code>{}</code>，甚至数组<code>[]</code>；初始用起来，挺容易使人迷惑的，如果没认真读文档的话；用了蛮久之后，回过头再读文档，有以下感悟，如有不准确处，请慷慨予以指正：</p>
 <blockquote>
@@ -114,7 +114,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Vue/">Vue</a><a href="/tags/JavaScript/">JavaScript</a>
+  <span></span> <a href="/tags/JavaScript/">JavaScript</a><a href="/tags/Vue/">Vue</a>
   </div>
 
 </div>
@@ -373,19 +373,19 @@
 			
 		
 			
-				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
 			
 		
 			
@@ -401,15 +401,7 @@
 			
 		
 			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
 			
 		
 			
@@ -417,7 +409,23 @@
 			
 		
 			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -429,15 +437,11 @@
 			
 		
 			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -445,15 +449,11 @@
 			
 		
 			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
+				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
 			
 		
 			
@@ -465,11 +465,11 @@
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/美图/" title="美图">美图<sup>1</sup></a></li>
+				<li><a href="/tags/Google/" title="Google">Google<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -481,31 +481,31 @@
         
           <li>
             
-            	<a href="https://www.ruanyifeng.com/blog/?from=jeffjade.com" target="_blank" title="阮一峰的网络日志">阮一峰的网络日志</a>
+            	<a href="https://www.ruanyifeng.com/blog/?utm_source=jeffjade.com" target="_blank" title="阮一峰的网络日志">阮一峰的网络日志</a>
             
           </li>
         
           <li>
             
-            	<a href="https://blog.codingnow.com/?from=jeffjade.com" target="_blank" title="云风Blog">云风Blog</a>
+            	<a href="https://blog.codingnow.com/?utm_source=jeffjade.com" target="_blank" title="云风Blog">云风Blog</a>
             
           </li>
         
           <li>
             
-            	<a href="https://www.williamlong.info/?from=jeffjade.com" target="_blank" title="月光博客">月光博客</a>
+            	<a href="https://www.williamlong.info/?utm_source=jeffjade.com" target="_blank" title="月光博客">月光博客</a>
             
           </li>
         
           <li>
             
-            	<a href="https://coolshell.cn/?from=jeffjade.com" target="_blank" title="酷壳－陈浩">酷壳－陈浩</a>
+            	<a href="https://coolshell.cn/?utm_source=jeffjade.com" target="_blank" title="酷壳－陈浩">酷壳－陈浩</a>
             
           </li>
         
           <li>
             
-            	<a href="https://www.zhangxinxu.com/?from=jeffjade.com" target="_blank" title="鑫空间-鑫生活">鑫空间-鑫生活</a>
+            	<a href="https://www.zhangxinxu.com/?utm_source=jeffjade.com" target="_blank" title="鑫空间-鑫生活">鑫空间-鑫生活</a>
             
           </li>
         
@@ -518,97 +518,73 @@
         
           <li>
             
-            	<a href="https://nicelinks.site/?from=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            	<a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
             
           </li>
         
           <li>
             
-            	<a href="https://quickapp.lovejade.cn/?from=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
             
           </li>
         
           <li>
             
-            	<a href="https://nice.lovejade.cn/?from=jeffjade.com" target="_blank" title="静晴轩别苑">静晴轩别苑</a>
+            	<a href="https://nice.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静晴轩别苑">静晴轩别苑</a>
             
           </li>
         
           <li>
             
-            	<a href="https://pizida.com/?from=jeffjade.com" target="_blank" title="痞子达的小站">痞子达的小站</a>
+            	<a href="https://pizida.com/?utm_source=jeffjade.com" target="_blank" title="痞子达的小站">痞子达的小站</a>
             
           </li>
         
           <li>
             
-            	<a href="http://blog.lovejade.cn/?from=jeffjade.com" target="_blank" title="天意人间舫">天意人间舫</a>
+            	<a href="http://blog.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="天意人间舫">天意人间舫</a>
             
           </li>
         
           <li>
             
-            	<a href="https://www.cnblogs.com/jadeboy/?from=jeffjade.com" target="_blank" title="云轩奕鹤">云轩奕鹤</a>
+            	<a href="https://www.cnblogs.com/jadeboy/?utm_source=jeffjade.com" target="_blank" title="云轩奕鹤">云轩奕鹤</a>
             
           </li>
         
           <li>
             
-            	<a href="https://qiutc.me/?from=jeffjade.com" target="_blank" title="阿城的日志">阿城的日志</a>
+            	<a href="https://refined-x.com/?utm_source=jeffjade.com" target="_blank" title="前端路上">前端路上</a>
             
           </li>
         
           <li>
             
-            	<a href="https://refined-x.com/?from=jeffjade.com" target="_blank" title="前端路上">前端路上</a>
+            	<a href="https://calpa.me/?utm_source=jeffjade.com" target="_blank" title="Calpa&#39;s Blog">Calpa&#39;s Blog</a>
             
           </li>
         
           <li>
             
-            	<a href="https://calpa.me/?from=jeffjade.com" target="_blank" title="Calpa&#39;s Blog">Calpa&#39;s Blog</a>
+            	<a href="https://istarvip.cn/?utm_source=jeffjade.com" target="_blank" title="猿码阁">猿码阁</a>
             
           </li>
         
           <li>
             
-            	<a href="http://f2ex.cn/?from=jeffjade.com" target="_blank" title="F2EX-web前端开发">F2EX-web前端开发</a>
+            	<a href="https://www.nihaoshijie.com.cn/?utm_source=jeffjade.com" target="_blank" title="吕小鸣">吕小鸣</a>
             
           </li>
         
           <li>
             
-            	<a href="https://zyl.me/?from=jeffjade.com" target="_blank" title="WWW.ZYL.ME">WWW.ZYL.ME</a>
+            	<a href="http://konghy.cn/?utm_source=jeffjade.com" target="_blank" title="矿世的忧伤">矿世的忧伤</a>
             
           </li>
         
           <li>
             
-            	<a href="https://istarvip.cn/?from=jeffjade.com" target="_blank" title="猿码阁">猿码阁</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="https://www.nihaoshijie.com.cn/?from=jeffjade.com" target="_blank" title="吕小鸣">吕小鸣</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://konghy.cn/?from=jeffjade.com" target="_blank" title="矿世的忧伤">矿世的忧伤</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="https://whjin.github.io/" target="_blank" title="华锦的Blog">华锦的Blog</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="https://dbarobin.com/?from=jeffjade.com" target="_blank" title="温国兵的随想录">温国兵的随想录</a>
+            	<a href="https://dbarobin.com/?utm_source=jeffjade.com" target="_blank" title="温国兵的随想录">温国兵的随想录</a>
             
           </li>
         
