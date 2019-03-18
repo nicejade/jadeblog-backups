@@ -1,5 +1,5 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>JavaScript 之 this 详解 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="JavaScript作为一种脚本语言身份的存在，因此被很多人认为是简单易学的。然而情况恰恰相反，JavaScript支持函数式编程、闭包、基于原型的继承等高级功能。由于其运行期绑定的特性，JavaScript 中的 this 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。JavaScript中函数的调用有以下几种方式：作为对象方法调用，作为函数调用，作为构造函"><meta name="keywords" content="JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="JavaScript 之 this 详解"><meta property="og:url" content="https://www.jeffjade.com/2015/08/03/2015-08-03-javascript-this/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="JavaScript作为一种脚本语言身份的存在，因此被很多人认为是简单易学的。然而情况恰恰相反，JavaScript支持函数式编程、闭包、基于原型的继承等高级功能。由于其运行期绑定的特性，JavaScript 中的 this 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。JavaScript中函数的调用有以下几种方式：作为对象方法调用，作为函数调用，作为构造函"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2016-10-30T14:48:48.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="JavaScript 之 this 详解"><meta name="twitter:description" content="JavaScript作为一种脚本语言身份的存在，因此被很多人认为是简单易学的。然而情况恰恰相反，JavaScript支持函数式编程、闭包、基于原型的继承等高级功能。由于其运行期绑定的特性，JavaScript 中的 this 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。JavaScript中函数的调用有以下几种方式：作为对象方法调用，作为函数调用，作为构造函"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/08/03/2015-08-03-javascript-this/" class="title=&quot;JavaScript" this itemprop="url">JavaScript 之 this 详解</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-08-03T14:30:00.000Z" itemprop="datePublished">发表于 2015-08-03</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>JavaScript作为一种脚本语言身份的存在，因此被很多人认为是简单易学的。然而情况恰恰相反，JavaScript支持函数式编程、闭包、基于原型的继承等高级功能。由于其运行期绑定的特性，JavaScript 中的 this 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。JavaScript中函数的调用有以下几种方式：作为对象方法调用，作为函数调用，作为构造函数调用，和使用 apply 或 call 调用。本文就采撷些例子以浅显说明在不同调用方式下的不同含义。</p><a id="more"></a><h3 id="全局的this"><a href="#全局的this" class="headerlink" title="全局的this"></a><strong>全局的this</strong></h3><p>全局this一般指向全局对象，浏览器中的全局对象就是 window。例如：<br></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.document === <span class="built_in">document</span>); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span> === <span class="built_in">window</span>); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.a = <span class="number">91</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a); <span class="comment">//91</span></span><br></pre></td></tr></table></figure><p></p>
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>JavaScript 之 this 详解 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="JavaScript 作为一种脚本语言身份的存在，因此被很多人认为是简单易学的。然而情况恰恰相反，JavaScript 支持函数式编程、闭包、基于原型的继承等高级功能。由于其运行期绑定的特性，JavaScript 中的 this 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。JavaScript 中函数的调用有以下几种方式：作为对象方法调用，作为函数调用，作为"><meta name="keywords" content="JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="JavaScript 之 this 详解"><meta property="og:url" content="https://www.jeffjade.com/2015/08/03/2015-08-03-javascript-this/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="JavaScript 作为一种脚本语言身份的存在，因此被很多人认为是简单易学的。然而情况恰恰相反，JavaScript 支持函数式编程、闭包、基于原型的继承等高级功能。由于其运行期绑定的特性，JavaScript 中的 this 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。JavaScript 中函数的调用有以下几种方式：作为对象方法调用，作为函数调用，作为"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2019-03-18T14:44:28.347Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="JavaScript 之 this 详解"><meta name="twitter:description" content="JavaScript 作为一种脚本语言身份的存在，因此被很多人认为是简单易学的。然而情况恰恰相反，JavaScript 支持函数式编程、闭包、基于原型的继承等高级功能。由于其运行期绑定的特性，JavaScript 中的 this 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。JavaScript 中函数的调用有以下几种方式：作为对象方法调用，作为函数调用，作为"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/08/03/2015-08-03-javascript-this/" class="title=&quot;JavaScript" this itemprop="url">JavaScript 之 this 详解</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-08-03T14:30:00.000Z" itemprop="datePublished">发表于 2015-08-03</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>JavaScript 作为一种脚本语言身份的存在，因此被很多人认为是简单易学的。然而情况恰恰相反，JavaScript 支持函数式编程、闭包、基于原型的继承等高级功能。由于其运行期绑定的特性，JavaScript 中的 this 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。JavaScript 中函数的调用有以下几种方式：作为对象方法调用，作为函数调用，作为构造函数调用，和使用 apply 或 call 调用。本文就采撷些例子以浅显说明在不同调用方式下的不同含义。</p><a id="more"></a><h3 id="全局的this"><a href="#全局的this" class="headerlink" title="全局的this"></a><strong>全局的this</strong></h3><p>全局 this 一般指向全局对象，浏览器中的全局对象就是 window。例如：<br></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.document === <span class="built_in">document</span>); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span> === <span class="built_in">window</span>); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.a = <span class="number">91</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a); <span class="comment">//91</span></span><br></pre></td></tr></table></figure><p></p>
 <h3 id="一般函数的-this"><a href="#一般函数的-this" class="headerlink" title="一般函数的 this"></a><strong>一般函数的 this</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(f1() === <span class="built_in">window</span>);<span class="comment">//true, global object</span></span><br></pre></td></tr></table></figure>
 <p>可以看到一般函数的 this 也指向 window，在 nodeJS 中为 global object<br></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f2</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">    "use strict"</span>;<span class="comment">//使用严格模式</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(f1() === <span class="literal">undefined</span>);<span class="comment">//true</span></span><br></pre></td></tr></table></figure><p></p>
 <p>严格模式中，函数的 this 为 undefined,因为严格模式禁止this关键字指向全局对象；对于js“严格模式”具体可以看阮一峰先生的<a href="http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html" target="_blank" rel="noopener">Javascript 严格模式详解</a></p>
@@ -38,9 +38,14 @@
 <p><strong>将this指向的对象保存到变量(一般用that)</strong><br></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mydemo = &#123;</span><br><span class="line">    name: <span class="string">'angela'</span>,</span><br><span class="line">    say: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert(<span class="string">"I'm "</span> + <span class="keyword">this</span>.name); &#125;,</span><br><span class="line">    init: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            that.say();  <span class="comment">//弹出Alert：I'm angela</span></span><br><span class="line">            <span class="keyword">this</span>.say();  <span class="comment">//这儿报错: undefined is not a function (evaluating 'this.say()')  </span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">mydemo.init();</span><br></pre></td></tr></table></figure><p></p>
 <h3 id="第三方库or框架中的this"><a href="#第三方库or框架中的this" class="headerlink" title="第三方库or框架中的this"></a><strong>第三方库or框架中的this</strong></h3><p>比如，使用backbone框架中events时间回调中的this，其指向的就是对应的视图，而不是Dom元素，因为该回调时通过events哈希绑定的，实质上也是自对应视图那里callback到对应的函数;</p>
 <h3 id="Javascript中的eval-方法"><a href="#Javascript中的eval-方法" class="headerlink" title="Javascript中的eval 方法"></a><strong>Javascript中的eval 方法</strong></h3><p>JavaScript 中的 eval 方法可以将字符串转换为 JavaScript 代码，使用 eval 方法时，this 指向哪里呢？答案很简单，看谁在调用 eval 方法，调用者的执行环境（ExecutionContext）中的 this 就被 eval 方法继承下来了。(悪，还没用过,有待实践下)！<br><em>但是：</em>在严格模式之下，eval的作用域也被改变了。正常模式下，eval语句的作用域，取决于它处于全局作用域，还是处于函数作用域。严格模式下，eval语句本身就是一个作用域，不再能够生成全局变量了，它所生成的变量只能用于eval内部。<br></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">　"use strict"</span>;</span><br><span class="line">　　<span class="keyword">var</span> x = <span class="number">2</span>;</span><br><span class="line">　　<span class="built_in">console</span>.info(<span class="built_in">eval</span>(<span class="string">"var x = 5; x"</span>)); <span class="comment">// 5</span></span><br><span class="line">　　<span class="built_in">console</span>.info(x); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure><p></p>
-<h3 id="Es6箭头函数中的-this"><a href="#Es6箭头函数中的-this" class="headerlink" title="Es6箭头函数中的 this"></a><strong>Es6箭头函数中的 this</strong></h3><p>随着时间的推移，Es6越发会成为新的主流，当然在之后肯定又有新的譬如正在制定的Es7等等；而对于本文<br>this 相关的，这Es6备受关注的的箭头函数( 例如()=&gt;{} )，就很有必要谈及了。这种很简洁的使用，让函数内部this具有了上下文相同的执行环境；再也不写 var that = this 这样蹩脚的东东了（当然 that 在很多童鞋笔下可能是 _this , self等等，我的天哪）。也不用借助 eval 或者 $proxy(obj.xx ,obj) 这样蹩脚的第三方替代办法，酷爽。至于这箭头函数内部的this到底为何物，一两句也谈不清楚，可参见 <a href="http://www.cnblogs.com/vajoy/p/4902935.html" target="_blank" rel="noopener">ES6 箭头函数中的 this？你可能想多了（翻译）</a>，一探究竟。[update: 16-04-27]</p>
+<h3 id="Es6-箭头函数中的-this"><a href="#Es6-箭头函数中的-this" class="headerlink" title="Es6 箭头函数中的 this"></a><strong>Es6 箭头函数中的 this</strong></h3><p>随着时间的推移，Es6越发会成为新的主流，当然在之后肯定又有新的譬如正在制定的Es7等等；而对于本文 this 相关的，这Es6备受关注的的箭头函数( 例如 ()=&gt;{} )，就很有必要谈及了。这种很简洁的使用，让函数内部this具有了上下文相同的执行环境；再也不写 var that = this 这样蹩脚的东东了（当然 that 在很多童鞋笔下可能是 _this, self 等等，我的天哪）。也不用借助 eval 或者 $proxy(obj.xx ,obj) 这样蹩脚的第三方替代办法，酷爽。至于这箭头函数内部的this到底为何物，一两句也谈不清楚，可参见 <a href="http://www.cnblogs.com/vajoy/p/4902935.html" target="_blank" rel="noopener">ES6 箭头函数中的 this？你可能想多了（翻译）</a>，一探究竟。@update: 16-04-27</p>
 <p><strong>后记：</strong>由于javascript的动态性（解释执行，当然也有简单的预编译过程），this的指向在运行时才确定，因此在只要足够留心其运行时的上下文，即可无痛挥霍this的强大。上面列举了这么些许，也是要说明另一个问题：即便知道了这个本质，到底还是需要了解各种环境的差异，方可运用自如。比如这篇<a href="http://segmentfault.com/a/1190000002675091" target="_blank" rel="noopener">JavaScript:万恶的this拿命来（一）</a>文章还谈及：node脚本，还有<code>REPL</code>(“读取-求值-输出”循环（Read-Eval-Print Loop，简称REPL）)中使用this的些许区别，可以一览。</p>
-<p>参考A<a href="http://gaohaoyang.github.io/2015/06/12/JavaScript-this/" target="_blank" rel="noopener">JavaScript 中的 this</a><br>参考B<a href="http://www.cnblogs.com/liyunhua/p/4509888.html" target="_blank" rel="noopener">JavaScript中this的一些怪异现象</a><br>参考C<a href="http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html" target="_blank" rel="noopener">Javascript的this用法-阮一峰</a><br>参考D<a href="http://www.ibm.com/developerworks/cn/web/1207_wangqf_jsthis/" target="_blank" rel="noopener">深入浅出 JavaScript 中的 this</a></p>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a><strong>参考资料</strong></h4><ul>
+<li><a href="http://gaohaoyang.github.io/2015/06/12/JavaScript-this/" target="_blank" rel="noopener">JavaScript 中的 this</a></li>
+<li><a href="http://www.cnblogs.com/liyunhua/p/4509888.html" target="_blank" rel="noopener">JavaScript中this的一些怪异现象</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html" target="_blank" rel="noopener">Javascript的this用法-阮一峰</a></li>
+<li><a href="http://www.ibm.com/developerworks/cn/web/1207_wangqf_jsthis/" target="_blank" rel="noopener">深入浅出 JavaScript 中的 this</a></li>
+</ul>
 	</div>
 		<a href="#reward-modal-container" aria-label="Open Reward" id="open-reward-modal-a">打赏</a>
 <div id="reward-modal-container">
@@ -151,7 +156,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#全局的this"><span class="toc-number">1.</span> <span class="toc-text">全局的this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一般函数的-this"><span class="toc-number">2.</span> <span class="toc-text">一般函数的 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作为对象方法的函数的-this"><span class="toc-number">3.</span> <span class="toc-text">作为对象方法的函数的 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作为函数调用"><span class="toc-number">4.</span> <span class="toc-text">作为函数调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象原型链上的this"><span class="toc-number">5.</span> <span class="toc-text">对象原型链上的this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#get-set-方法与-this"><span class="toc-number">6.</span> <span class="toc-text">get/set 方法与 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构造器中的-this"><span class="toc-number">7.</span> <span class="toc-text">构造器中的 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#call-apply-方法与-this"><span class="toc-number">8.</span> <span class="toc-text">call/apply 方法与 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bind-方法与-this"><span class="toc-number">9.</span> <span class="toc-text">bind 方法与 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript中this的些许看似怪异现象"><span class="toc-number">10.</span> <span class="toc-text">JavaScript中this的些许看似怪异现象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三方库or框架中的this"><span class="toc-number">11.</span> <span class="toc-text">第三方库or框架中的this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Javascript中的eval-方法"><span class="toc-number">12.</span> <span class="toc-text">Javascript中的eval 方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Es6箭头函数中的-this"><span class="toc-number">13.</span> <span class="toc-text">Es6箭头函数中的 this</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#全局的this"><span class="toc-number">1.</span> <span class="toc-text">全局的this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一般函数的-this"><span class="toc-number">2.</span> <span class="toc-text">一般函数的 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作为对象方法的函数的-this"><span class="toc-number">3.</span> <span class="toc-text">作为对象方法的函数的 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作为函数调用"><span class="toc-number">4.</span> <span class="toc-text">作为函数调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象原型链上的this"><span class="toc-number">5.</span> <span class="toc-text">对象原型链上的this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#get-set-方法与-this"><span class="toc-number">6.</span> <span class="toc-text">get/set 方法与 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构造器中的-this"><span class="toc-number">7.</span> <span class="toc-text">构造器中的 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#call-apply-方法与-this"><span class="toc-number">8.</span> <span class="toc-text">call/apply 方法与 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bind-方法与-this"><span class="toc-number">9.</span> <span class="toc-text">bind 方法与 this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript中this的些许看似怪异现象"><span class="toc-number">10.</span> <span class="toc-text">JavaScript中this的些许看似怪异现象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三方库or框架中的this"><span class="toc-number">11.</span> <span class="toc-text">第三方库or框架中的this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Javascript中的eval-方法"><span class="toc-number">12.</span> <span class="toc-text">Javascript中的eval 方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Es6-箭头函数中的-this"><span class="toc-number">13.</span> <span class="toc-text">Es6 箭头函数中的 this</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#参考资料"><span class="toc-number">13.1.</span> <span class="toc-text">参考资料</span></a></li></ol></li></ol>
  
   </div>
 
@@ -183,6 +188,10 @@
     <h3 class="widget-title asidetitle">近期文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/03/18/153-best-front-end-hacking-cheatsheets/">最好的前端黑客秘籍</a>
+          </li>
         
           <li>
             <a href="/2019/03/10/151-quickapp-common-problems-and-solutions/">快应用开发常见问题及解决方案</a>
@@ -240,10 +249,6 @@
             <a href="/2018/03/31/139-attack-and-defense-between-trade/">交易之为，攻守之道</a>
           </li>
         
-          <li>
-            <a href="/2018/03/05/138-aggregated-info-about-dji-recruitment/">疆湖期待有你，携手互联疆来</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -284,7 +289,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>44</sup></a></li>
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>45</sup></a></li>
 		  
 		
 		  
@@ -335,7 +340,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>44</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>45</sup></a></li>
 			
 		
 			
@@ -347,7 +352,7 @@
 			
 		
 			
-				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>25</sup></a></li>
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>26</sup></a></li>
 			
 		
 			
@@ -359,15 +364,11 @@
 			
 		
 			
-				<li><a href="/tags/Vue/" title="Vue">Vue<sup>14</sup></a></li>
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>15</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Android/" title="Android">Android<sup>11</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
 			
 		
 			
@@ -376,6 +377,10 @@
 		
 			
 				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
 			
 		
 			
@@ -395,15 +400,7 @@
 			
 		
 			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
 			
 		
 			
@@ -411,7 +408,11 @@
 			
 		
 			
-				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>4</sup></a></li>
 			
 		
 			
@@ -419,7 +420,11 @@
 			
 		
 			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
 			
 		
 			
@@ -427,7 +432,11 @@
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
 			
 		
 			
@@ -435,11 +444,11 @@
 			
 		
 			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
+				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -459,11 +468,7 @@
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/美图/" title="美图">美图<sup>1</sup></a></li>
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 		</ul>
