@@ -1,5 +1,5 @@
 <!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Prettier 插件为更漂亮快应用代码 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="keywords" content="快应用,开发快应用,quickapp,快应用开发者,Prettier,插件,高效"><meta name="description" content="Prettier 是一个固定的代码格式化程序，时下已成为解决代码格式问题的优选方案。本文介绍基于 Prettier，转为美化快应用的插件 prettier-plugin-ux，以及其使用方法。它通过 Prettier API 处理 .ux 文件，在项目中使用，可以为团队提供通用的样式指南，从而提高效率和幸福感。"><meta name="keywords" content="快应用,开发快应用,quickapp,快应用开发者,Prettier,插件,高效"><meta property="og:type" content="article"><meta property="og:title" content="Prettier 插件为更漂亮快应用代码"><meta property="og:url" content="https://www.jeffjade.com/2019/02/02/150-prettier-quickapp-plugin/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="Prettier 是一个固定的代码格式化程序，时下已成为解决代码格式问题的优选方案。本文介绍基于 Prettier，转为美化快应用的插件 prettier-plugin-ux，以及其使用方法。它通过 Prettier API 处理 .ux 文件，在项目中使用，可以为团队提供通用的样式指南，从而提高效率和幸福感。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2019-03-18T14:38:41.859Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Prettier 插件为更漂亮快应用代码"><meta name="twitter:description" content="Prettier 是一个固定的代码格式化程序，时下已成为解决代码格式问题的优选方案。本文介绍基于 Prettier，转为美化快应用的插件 prettier-plugin-ux，以及其使用方法。它通过 Prettier API 处理 .ux 文件，在项目中使用，可以为团队提供通用的样式指南，从而提高效率和幸福感。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2019/02/02/150-prettier-quickapp-plugin/" class="title=&quot;Prettier" itemprop="url">Prettier 插件为更漂亮快应用代码</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2019-02-02T14:22:00.000Z" itemprop="datePublished">发表于 2019-02-02</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p><a href="https://nicelinks.site/post/5c16083e819ae45de1453caa" target="_blank" rel="noopener">Prettier</a> 是一个固定的代码格式化程序。此插件集成 <a href="https://github.com/nicejade/prettier-plugin-quickapp" target="_blank" rel="noopener">prettier-plugin-ux</a> 到 Prettier 中，因此为您提供了代码格式化的通用接口。<code>.ux</code> 通过 Prettier API 处理文件，它可以为项目和团队提供通用的样式指南，并且可以协助发现代码潜在的很多问题；使用它来编写<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>，将能极大提升开发效率和幸福感。</p><a id="more"></a><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add --dev --exact prettier prettier-plugin-ux</span><br></pre></td></tr></table></figure>
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2019/02/02/150-prettier-quickapp-plugin/" class="title=&quot;Prettier" itemprop="url">Prettier 插件为更漂亮快应用代码</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2019-02-02T14:22:00.000Z" itemprop="datePublished">发表于 2019-02-02</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p><a href="https://nicelinks.site/post/5c16083e819ae45de1453caa" target="_blank" rel="noopener">Prettier</a> 是一个固定的代码格式化程序。此插件集成 <a href="https://github.com/nicejade/prettier-plugin-quickapp" target="_blank" rel="noopener">prettier-plugin-ux</a> 到 Prettier 中，因此为您提供了代码格式化的通用接口。<code>.ux</code> 通过 Prettier API 处理文件，它可以为项目和团队提供通用的样式指南，并且可以协助发现代码潜在的很多问题；使用它来编写<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>，将能极大提升开发效率和幸福感。</p><a id="more"></a><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add --dev --exact prettier prettier-plugin-ux</span><br></pre></td></tr></table></figure>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">prettier --<span class="built_in">write</span> <span class="string">"**/*.ux"</span></span><br><span class="line"><span class="meta"># or</span></span><br><span class="line">npx prettier --<span class="built_in">write</span> <span class="string">"**/*.ux"</span></span><br></pre></td></tr></table></figure>
 <p>您可以在 package.json 的 <code>scripts</code> 增加类似如下配置，即可一键美化（<code>yarn prettier</code>）您的快应用代码；其中包括使用到的 css、less、sass 等，当然也可以用来美化 markdown 等等，您可以在 <a href="https://github.com/prettier/prettier#opinionated-code-formatter" target="_blank" rel="noopener">opinionated-code-formatter</a> 看到 <code>prettier</code> 内置了对多种不用语言的支持。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"prettier"</span>: <span class="string">"prettier --write 'src/**/*.js' 'src/**/*.ux'"</span>,</span><br></pre></td></tr></table></figure>
@@ -79,7 +79,7 @@
   <hr>
   <h1 class="text-center heading text-gradient-color">广而告之<small></small></h1>
   <div class="jade-gg-block">
-    <a class="width-block-wrap" href="https://nicelinks.site?from=jeffjade" title="倾城之链" target="_blank">
+    <a class="width-block-wrap" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=bottomad" title="倾城之链" target="_blank">
       <img class="width-block-wrap" style="width: 100%;max-height: 300px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nicelinks-popularize.png">
     </a>
     <a class="width-block-wrap" style="margin-top: 15px" href="//click.dji.com/AEuogBLf6UXhccqUaT0NVg?pm=ad_image" title="大疆无人机" target="_blank">
@@ -159,7 +159,7 @@
   <div class="linkslist">
   <p class="asidetitle">最新作品</p>
   <div class="jade-gg-block width-block-wrap">
-    <a class="width-block-wrap" href="http://nicelinks.site/?from=jeffjade-aside" target="_blank" title="倾城之链">
+    <a class="width-block-wrap" href="http://nicelinks.site/?utm_source=jeffjade.com&pid=aside" target="_blank" title="倾城之链">
       <img class="width-block-wrap" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nicelinks-site.jpg">
     </a>
   </div>
@@ -362,19 +362,19 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
@@ -402,11 +402,11 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -414,7 +414,7 @@
 			
 		
 			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
@@ -653,7 +653,7 @@
 	</div>
 		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019
 		
-		<a href="https://www.jeffjade.com/About" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

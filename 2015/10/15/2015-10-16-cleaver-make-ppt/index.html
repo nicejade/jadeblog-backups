@@ -1,5 +1,5 @@
 <!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Cleaver快速制作网页PPT | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="如今互联网时代，以浏览器作为入口，已经有越来越多的桌面应用被web应用所取代。微软最赚钱的Office办公软件，也正在被免费的web应用所吞噬。如今即便薄学如我就已然知晓reveal.js impress.js等各种轮子来制作体验优良的网页PPT。今天就来尝试下这Node.js的轮子Cleaver来制作网页PPT。 Cleaver基于HTML5，用最短的时间做出超炫幻灯片。你还会坚持PowerPo"><meta name="keywords" content="Efficiency,NodeJs"><meta property="og:type" content="article"><meta property="og:title" content="Cleaver快速制作网页PPT"><meta property="og:url" content="https://www.jeffjade.com/2015/10/15/2015-10-16-cleaver-make-ppt/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="如今互联网时代，以浏览器作为入口，已经有越来越多的桌面应用被web应用所取代。微软最赚钱的Office办公软件，也正在被免费的web应用所吞噬。如今即便薄学如我就已然知晓reveal.js impress.js等各种轮子来制作体验优良的网页PPT。今天就来尝试下这Node.js的轮子Cleaver来制作网页PPT。 Cleaver基于HTML5，用最短的时间做出超炫幻灯片。你还会坚持PowerPo"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2017-09-02T10:59:45.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Cleaver快速制作网页PPT"><meta name="twitter:description" content="如今互联网时代，以浏览器作为入口，已经有越来越多的桌面应用被web应用所取代。微软最赚钱的Office办公软件，也正在被免费的web应用所吞噬。如今即便薄学如我就已然知晓reveal.js impress.js等各种轮子来制作体验优良的网页PPT。今天就来尝试下这Node.js的轮子Cleaver来制作网页PPT。 Cleaver基于HTML5，用最短的时间做出超炫幻灯片。你还会坚持PowerPo"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/10/15/2015-10-16-cleaver-make-ppt/" class="title=&quot;Cleaver快速制作网页PPT&quot;" itemprop="url">Cleaver快速制作网页PPT</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-10-15T03:50:00.000Z" itemprop="datePublished">发表于 2015-10-15</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?from=jeffjade.com" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>如今互联网时代，以浏览器作为入口，已经有越来越多的桌面应用被web应用所取代。微软最赚钱的Office办公软件，也正在被免费的web应用所吞噬。如今即便薄学如我就已然知晓<code>reveal.js</code> <code>impress.js</code>等各种轮子来制作体验优良的网页PPT。今天就来尝试下这Node.js的轮子<code>Cleaver</code>来制作网页PPT。</p><p>Cleaver基于HTML5，用最短的时间做出超炫幻灯片。你还会坚持PowerPoint吗？</p><a id="more"></a><h3 id="Cleaver介绍"><a href="#Cleaver介绍" class="headerlink" title="Cleaver介绍"></a><strong>Cleaver介绍</strong></h3><p>如果你已经有了一个Markdown的文档，30秒就可以制作成幻灯片。Cleaver是为Hacker准备的工具。<br>Cleaver的官方发布页：<a href="http://jdan.github.io/cleaver/" target="_blank" rel="noopener">http://jdan.github.io/cleaver/</a>；<br>参考文章:<a href="http://blog.fens.me/nodejs-slide-cleaver/" target="_blank" rel="noopener">30秒制作幻灯片 Cleaver</a>。</p><h3 id="Cleaver安装"><a href="#Cleaver安装" class="headerlink" title="Cleaver安装"></a><strong>Cleaver安装</strong></h3><p>系统环境(据悉：支持Linux 和 Mac; cleaver不支持win系统)<br>Linux: Ubuntu 12.04 LTS 64bit<br>node: v0.6.12<br>npm: 1.1.4<br>通过nodejs安装Cleaver<br></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//局部安装Cleaver</span><br><span class="line">~ mkdir nodejs-cleaver &amp;&amp; cd nodejs-cleaver</span><br><span class="line">~ sudo npm install cleaver</span><br><span class="line"></span><br><span class="line">//全局安装Cleaver</span><br><span class="line">~ sudo npm install cleaver -g</span><br></pre></td></tr></table></figure><p></p>
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/10/15/2015-10-16-cleaver-make-ppt/" class="title=&quot;Cleaver快速制作网页PPT&quot;" itemprop="url">Cleaver快速制作网页PPT</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-10-15T03:50:00.000Z" itemprop="datePublished">发表于 2015-10-15</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>如今互联网时代，以浏览器作为入口，已经有越来越多的桌面应用被web应用所取代。微软最赚钱的Office办公软件，也正在被免费的web应用所吞噬。如今即便薄学如我就已然知晓<code>reveal.js</code> <code>impress.js</code>等各种轮子来制作体验优良的网页PPT。今天就来尝试下这Node.js的轮子<code>Cleaver</code>来制作网页PPT。</p><p>Cleaver基于HTML5，用最短的时间做出超炫幻灯片。你还会坚持PowerPoint吗？</p><a id="more"></a><h3 id="Cleaver介绍"><a href="#Cleaver介绍" class="headerlink" title="Cleaver介绍"></a><strong>Cleaver介绍</strong></h3><p>如果你已经有了一个Markdown的文档，30秒就可以制作成幻灯片。Cleaver是为Hacker准备的工具。<br>Cleaver的官方发布页：<a href="http://jdan.github.io/cleaver/" target="_blank" rel="noopener">http://jdan.github.io/cleaver/</a>；<br>参考文章:<a href="http://blog.fens.me/nodejs-slide-cleaver/" target="_blank" rel="noopener">30秒制作幻灯片 Cleaver</a>。</p><h3 id="Cleaver安装"><a href="#Cleaver安装" class="headerlink" title="Cleaver安装"></a><strong>Cleaver安装</strong></h3><p>系统环境(据悉：支持Linux 和 Mac; cleaver不支持win系统)<br>Linux: Ubuntu 12.04 LTS 64bit<br>node: v0.6.12<br>npm: 1.1.4<br>通过nodejs安装Cleaver<br></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//局部安装Cleaver</span><br><span class="line">~ mkdir nodejs-cleaver &amp;&amp; cd nodejs-cleaver</span><br><span class="line">~ sudo npm install cleaver</span><br><span class="line"></span><br><span class="line">//全局安装Cleaver</span><br><span class="line">~ sudo npm install cleaver -g</span><br></pre></td></tr></table></figure><p></p>
 <h3 id="Cleaver基本使用"><a href="#Cleaver基本使用" class="headerlink" title="Cleaver基本使用"></a><strong>Cleaver基本使用</strong></h3><p>执行cleaver命令，解析一个markdown文件，会自动生成HTMl文档，欧耶,算是Pandoc的部分功能深入了;</p>
 <p>用cleaver自带的例子：<br></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//如是局部安装，运行下面一句就好</span><br><span class="line">cleaver node_modules/cleaver/examples/basic.md</span><br><span class="line"></span><br><span class="line">//如是全局安装，请跑起Like this：</span><br><span class="line">cleaver  /usr/local/lib/node_modules/cleaver/examples/basic.md</span><br></pre></td></tr></table></figure><p></p>
 <h3 id="Cleaver配置选项option"><a href="#Cleaver配置选项option" class="headerlink" title="Cleaver配置选项option"></a><strong>Cleaver配置选项option</strong></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: Basic Example  #HTML的标题名</span><br><span class="line">author:               #作者信息,在最后一页显示</span><br><span class="line">  name: Jordan Scales</span><br><span class="line">  twitter: jdan</span><br><span class="line">  url: https://jeffjade.com</span><br><span class="line">output: basic.html</span><br></pre></td></tr></table></figure>
@@ -71,7 +71,7 @@
   <hr>
   <h1 class="text-center heading text-gradient-color">广而告之<small></small></h1>
   <div class="jade-gg-block">
-    <a class="width-block-wrap" href="https://nicelinks.site?from=jeffjade" title="倾城之链" target="_blank">
+    <a class="width-block-wrap" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=bottomad" title="倾城之链" target="_blank">
       <img class="width-block-wrap" style="width: 100%;max-height: 300px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nicelinks-popularize.png">
     </a>
     <a class="width-block-wrap" style="margin-top: 15px" href="//click.dji.com/AEuogBLf6UXhccqUaT0NVg?pm=ad_image" title="大疆无人机" target="_blank">
@@ -109,18 +109,18 @@
 	<nav class="article-nav clearfix">
  
  <div class="prev">
- <a href="/2015/10/19/2015-10-18-chrome-vimium/" title="Vimium~让您的Chrome起飞">
+ <a href="/2015/10/15/2015-10-15-nice-animation-collection/" title="精美动画后宫苑">
   <strong>上一篇：</strong><br>
   <span>
-  Vimium~让您的Chrome起飞</span>
+  精美动画后宫苑</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/10/15/2015-10-15-nice-animation-collection/" title="精美动画后宫苑">
+<a href="/2015/10/08/2015-10-08-js-object-length/" title="JavaScript对象length">
  <strong>下一篇：</strong><br> 
- <span>精美动画后宫苑
+ <span>JavaScript对象length
 </span>
 </a>
 </div>
@@ -151,7 +151,7 @@
   <div class="linkslist">
   <p class="asidetitle">最新作品</p>
   <div class="jade-gg-block width-block-wrap">
-    <a class="width-block-wrap" href="http://nicelinks.site/?from=jeffjade-aside" target="_blank" title="倾城之链">
+    <a class="width-block-wrap" href="http://nicelinks.site/?utm_source=jeffjade.com&pid=aside" target="_blank" title="倾城之链">
       <img class="width-block-wrap" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nicelinks-site.jpg">
     </a>
   </div>
@@ -354,19 +354,19 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
@@ -394,11 +394,11 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -406,7 +406,7 @@
 			
 		
 			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
@@ -645,7 +645,7 @@
 	</div>
 		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019
 		
-		<a href="https://www.jeffjade.com/About" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>
