@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>使用Ldoc给Lua生成文档 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="Ldoc介绍　　Ldoc是一个Lua的文档生成工具，过去，比较常用的Lua生成文档的工具是LuaDoc，可惜作者自从2008年之后就再也没有发布过新的版本了，说明作者基本上已经放弃维护了。而Ldoc则是一直在更新中，所以现在选择Ldoc来给Lua生成文档是更好的选择，Ldoc的Github主页。"><meta name="keywords" content="Toss,Share,Lua"><meta property="og:type" content="article"><meta property="og:title" content="使用Ldoc给Lua生成文档"><meta property="og:url" content="https://www.jeffjade.com/2015/05/17/2015-05-17-lua-ldoc/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="Ldoc介绍　　Ldoc是一个Lua的文档生成工具，过去，比较常用的Lua生成文档的工具是LuaDoc，可惜作者自从2008年之后就再也没有发布过新的版本了，说明作者基本上已经放弃维护了。而Ldoc则是一直在更新中，所以现在选择Ldoc来给Lua生成文档是更好的选择，Ldoc的Github主页。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://www.jeffjade.com/img/ldoc/ldoc_01.png"><meta property="og:image" content="http://www.jeffjade.com/img/ldoc/ldoc_02.png"><meta property="og:updated_time" content="2017-09-02T10:59:45.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="使用Ldoc给Lua生成文档"><meta name="twitter:description" content="Ldoc介绍　　Ldoc是一个Lua的文档生成工具，过去，比较常用的Lua生成文档的工具是LuaDoc，可惜作者自从2008年之后就再也没有发布过新的版本了，说明作者基本上已经放弃维护了。而Ldoc则是一直在更新中，所以现在选择Ldoc来给Lua生成文档是更好的选择，Ldoc的Github主页。"><meta name="twitter:image" content="http://www.jeffjade.com/img/ldoc/ldoc_01.png"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>使用Ldoc给Lua生成文档 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="Ldoc介绍　　Ldoc是一个Lua的文档生成工具，过去，比较常用的Lua生成文档的工具是LuaDoc，可惜作者自从2008年之后就再也没有发布过新的版本了，说明作者基本上已经放弃维护了。而Ldoc则是一直在更新中，所以现在选择Ldoc来给Lua生成文档是更好的选择，Ldoc的Github主页。"><meta name="keywords" content="Share,Toss,Lua"><meta property="og:type" content="article"><meta property="og:title" content="使用Ldoc给Lua生成文档"><meta property="og:url" content="https://www.jeffjade.com/2015/05/17/2015-05-17-lua-ldoc/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="Ldoc介绍　　Ldoc是一个Lua的文档生成工具，过去，比较常用的Lua生成文档的工具是LuaDoc，可惜作者自从2008年之后就再也没有发布过新的版本了，说明作者基本上已经放弃维护了。而Ldoc则是一直在更新中，所以现在选择Ldoc来给Lua生成文档是更好的选择，Ldoc的Github主页。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://www.jeffjade.com/img/ldoc/ldoc_01.png"><meta property="og:image" content="http://www.jeffjade.com/img/ldoc/ldoc_02.png"><meta property="og:updated_time" content="2017-09-02T10:59:45.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="使用Ldoc给Lua生成文档"><meta name="twitter:description" content="Ldoc介绍　　Ldoc是一个Lua的文档生成工具，过去，比较常用的Lua生成文档的工具是LuaDoc，可惜作者自从2008年之后就再也没有发布过新的版本了，说明作者基本上已经放弃维护了。而Ldoc则是一直在更新中，所以现在选择Ldoc来给Lua生成文档是更好的选择，Ldoc的Github主页。"><meta name="twitter:image" content="http://www.jeffjade.com/img/ldoc/ldoc_01.png"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
     <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/05/17/2015-05-17-lua-ldoc/" class="title=&quot;使用Ldoc给Lua生成文档&quot;" itemprop="url">使用Ldoc给Lua生成文档</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-05-17T05:40:00.000Z" itemprop="datePublished">发表于 2015-05-17</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><h3 id="Ldoc介绍"><a href="#Ldoc介绍" class="headerlink" title="Ldoc介绍"></a><strong>Ldoc介绍</strong></h3><p>　　Ldoc是一个Lua的文档生成工具，过去，比较常用的Lua生成文档的工具是LuaDoc，可惜作者自从2008年之后就再也没有发布过新的版本了，说明作者基本上已经放弃维护了。而Ldoc则是一直在更新中，所以现在选择Ldoc来给Lua生成文档是更好的选择，<a href="https://github.com/stevedonovan/Ldoc" target="_blank" rel="noopener">Ldoc的Github主页</a>。</p><a id="more"></a><p>　　Ldoc的一个优点就是，它的目的是为了和LuaDoc兼容并且拓展LuaDoc的功能而制作的，所以LuaDoc能够使用的标签Ldoc也都可以使用。Ldoc还有一些其他的LuaDoc不具备的优点，比如</p><blockquote><ul><li>Ldoc可以生成Markdown格式的文档.</li><li>Ldoc生成的文档也也更加美观等等。</li><li>其逻辑是由lua代码编写，方便自己修改和理解源码</li></ul></blockquote><p>　　Ldoc虽然可以针对某个lua文件生成文档，但是更加推荐的方式是通过config.ld来对需要生成文档的项目进行配置，之后，只要在config.ld所在的文档使用Ldoc .即可对配置好的文件夹生成文档。</p><h3 id="Ldoc安装"><a href="#Ldoc安装" class="headerlink" title="Ldoc安装"></a><strong>Ldoc安装</strong></h3><p>　　Ldoc唯一依赖的库是<a href="https://github.com/stevedonovan/Penlight" target="_blank" rel="noopener">Penlight</a>,PenLight又依赖于<a href="http://keplerproject.github.io/luafilesystem/" target="_blank" rel="noopener">LuaFileSystem</a>,这些库在LuaForWindows中都已经有了。可以直接通过luarocks来安装LDoc:<br></p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">luarocks <span class="keyword">install</span> Ldoc -v</span><br></pre></td></tr></table></figure><p></p>
 <p>　　而<code>luarocks</code>可以参见D.H.Q的烂笔头的这篇文章<a href="http://dhq.me/luarocks-a-deployment-and-management-system-for-lua-modules" target="_blank" rel="noopener">Lua 的模块安装和部署工具 - LuaRocks</a>；讲的很详细，也可以接触更多关于LuaRocks的功能。在Mac下面安装<code>luarocks</code> 可以直接使用<a href="https://jeffjade.com/2015/05/16/2015-05-16-mac-musthave-software/" target="_blank" rel="noopener">brew</a>来安装(当然也有可能不会成功，如果Brew没有内置luarocks的话)：<br></p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>luarocks -v</span><br></pre></td></tr></table></figure><p></p>
 <p>　　最好还是安装<a href="https://luarocks.org" target="_blank" rel="noopener">luarocks官网</a>上的办法(Installing LuaRocks in a Unix system:)：<br></p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget http:<span class="string">//luarocks.org/releases/luarocks-2.2.1.tar.gz</span></span><br><span class="line">tar zxpf luarocks-2.2.1.tar.gz</span><br><span class="line"><span class="keyword">cd</span> luarocks-2.2.1</span><br><span class="line"><span class="string">./configure</span>; sudo make bootstrap</span><br><span class="line">sudo luarocks install luasocket</span><br></pre></td></tr></table></figure><p></p>
@@ -84,7 +84,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Toss/">Toss</a><a href="/tags/Share/">Share</a><a href="/tags/Lua/">Lua</a>
+  <span></span> <a href="/tags/Share/">Share</a><a href="/tags/Toss/">Toss</a><a href="/tags/Lua/">Lua</a>
   </div>
 
 </div>
@@ -224,33 +224,6 @@
     </div>
   </div>
 
-  <div class="linkslist">
-  <p class="asidetitle">广而告之</p>
-  <div class="jade-gg-block width-block-wrap">
-    <a class="width-block-wrap" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" target="_blank" title="大疆无人机">
-      <img class="width-block-wrap" src="https://image.nicelinks.site/blank.gif" alt="大疆无人机 御·Mavic 2" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1671/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_250-250.jpg">
-    </a>
-  </div>
-</div>
-
-  <div class="linkslist">
-  <p class="asidetitle">轩站热度</p>
-  <!-- 
-    <font id="run_time_long"></font><br>
-    <span id="busuanzi_container_site_pv">
-      本站总访问量 <span style='color:purple' id="busuanzi_value_site_pv"></span> 次
-    </span><br>
-    <span id="busuanzi_container_site_uv">
-      本站访客人数 <span style='color:purple' id="busuanzi_value_site_uv"></span> 次
-    </span><br>
-    <span id="busuanzi_container_page_pv">
-      本文总阅读量 <span style='color:purple' id="busuanzi_value_page_pv"></span> 次
-    </span>
-   -->
-  <div id="clustrmaps-count"></div>
-  <p style="text-align:center">( Start counting from 07 / 13 / 2017 )</p>
-</div>
-
   <div class="categorieslist">
 	<p class="asidetitle">云轩分类</p>
 		<ul>
@@ -306,6 +279,33 @@
 		</ul>
 </div>
 
+  <div class="linkslist">
+  <p class="asidetitle">广而告之</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0001" target="_blank" title="大疆无人机">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/blank.gif" alt="大疆无人机 御·Mavic 2" data-echo="https://u.djicdn.com/uploads/ad_image_file/file/1671/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_250-250.jpg">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">轩站热度</p>
+  <!-- 
+    <font id="run_time_long"></font><br>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span style='color:purple' id="busuanzi_value_site_pv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_site_uv">
+      本站访客人数 <span style='color:purple' id="busuanzi_value_site_uv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量 <span style='color:purple' id="busuanzi_value_page_pv"></span> 次
+    </span>
+   -->
+  <div id="clustrmaps-count"></div>
+  <p style="text-align:center">( Start counting from 07 / 13 / 2017 )</p>
+</div>
+
   <div class="tagslist">
 	<p class="asidetitle">云轩标签</p>
 		<ul class="clearfix">
@@ -355,15 +355,11 @@
 			
 		
 			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
 			
 		
 			
@@ -371,11 +367,15 @@
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
 			
 		
 			
@@ -391,11 +391,11 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -407,23 +407,11 @@
 			
 		
 			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
+				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 			
@@ -431,7 +419,7 @@
 			
 		
 			
-				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
 			
@@ -439,7 +427,19 @@
 			
 		
 			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
 			
 		
 		</ul>
