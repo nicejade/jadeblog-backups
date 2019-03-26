@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>类数组借用数组方法 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="于JavaScript如何将对象转化为数组对象，其用法写法已经很常见且完善，比如JQuery中的makeArray函数对此的实现，也是跟大家想的差不多，只是考虑的周全些罢了,看源码；但对于类数组借用数组方法的写法，对其学习探究过程中大长了些许姿势，觉其倒是一个挺有趣问题。"><meta name="keywords" content="JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="类数组借用数组方法"><meta property="og:url" content="https://www.jeffjade.com/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="于JavaScript如何将对象转化为数组对象，其用法写法已经很常见且完善，比如JQuery中的makeArray函数对此的实现，也是跟大家想的差不多，只是考虑的周全些罢了,看源码；但对于类数组借用数组方法的写法，对其学习探究过程中大长了些许姿势，觉其倒是一个挺有趣问题。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2016-10-30T14:44:53.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="类数组借用数组方法"><meta name="twitter:description" content="于JavaScript如何将对象转化为数组对象，其用法写法已经很常见且完善，比如JQuery中的makeArray函数对此的实现，也是跟大家想的差不多，只是考虑的周全些罢了,看源码；但对于类数组借用数组方法的写法，对其学习探究过程中大长了些许姿势，觉其倒是一个挺有趣问题。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>类数组借用数组方法 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="于JavaScript如何将对象转化为数组对象，其用法写法已经很常见且完善，比如JQuery中的makeArray函数对此的实现，也是跟大家想的差不多，只是考虑的周全些罢了,看源码；但对于类数组借用数组方法的写法，对其学习探究过程中大长了些许姿势，觉其倒是一个挺有趣问题。"><meta name="keywords" content="JavaScript"><meta property="og:type" content="article"><meta property="og:title" content="类数组借用数组方法"><meta property="og:url" content="https://www.jeffjade.com/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="于JavaScript如何将对象转化为数组对象，其用法写法已经很常见且完善，比如JQuery中的makeArray函数对此的实现，也是跟大家想的差不多，只是考虑的周全些罢了,看源码；但对于类数组借用数组方法的写法，对其学习探究过程中大长了些许姿势，觉其倒是一个挺有趣问题。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2019-03-26T14:31:16.739Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="类数组借用数组方法"><meta name="twitter:description" content="于JavaScript如何将对象转化为数组对象，其用法写法已经很常见且完善，比如JQuery中的makeArray函数对此的实现，也是跟大家想的差不多，只是考虑的周全些罢了,看源码；但对于类数组借用数组方法的写法，对其学习探究过程中大长了些许姿势，觉其倒是一个挺有趣问题。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
     <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/" class="title=&quot;类数组借用数组方法&quot;" itemprop="url">类数组借用数组方法</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-11-02T04:00:00.000Z" itemprop="datePublished">发表于 2015-11-02</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>于JavaScript如何将对象转化为数组对象，其用法写法已经很常见且完善，比如JQuery中的<code>makeArray</code>函数对此的实现，也是跟大家想的差不多，只是考虑的周全些罢了,<a href="#3">看源码</a>；但对于<code>类数组借用数组方法</code>的写法，对其学习探究过程中大长了些许姿势，觉其倒是一个挺有趣问题。</p><a id="more"></a><h2 id="何为“类数组”"><a href="#何为“类数组”" class="headerlink" title="何为“类数组”"></a><strong>何为“类数组”</strong></h2><p>JavaScript中有一些看起来像却又不是数组的对象，唤作: <strong>类数组</strong>。一个类数组对象：</p><ul><li>具有：指向对象元素的数字(非负整数)索引下标以及length属性告诉我们对象的元素个数</li><li>不具有：诸如 push forEach 以及 indexOf 等数组对象具有的方法</li></ul><p>javascript中常见的类数组有arguments对象,DOM方法或者JQuery方法的返回结果。<br>比如<code>document.getElementsByTagName()</code>。实际上，只要有length属性，且它的属性值为number类型即可。</p><p><strong>类数组示例：</strong><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;<span class="string">'1'</span>:<span class="string">'gg'</span>,<span class="string">'2'</span>:<span class="string">'love'</span>,<span class="string">'4'</span>:<span class="string">'jeffjade'</span>,<span class="attr">length</span>:<span class="number">5</span>&#125;;</span><br><span class="line"><span class="built_in">Array</span>.prototype.join.call(a,<span class="string">'+'</span>);<span class="comment">//'+gg+love++jeffjade'</span></span><br></pre></td></tr></table></figure><p></p>
 <p><strong>非类数组示例：</strong><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> c = &#123;<span class="string">'1'</span>:<span class="number">2</span>&#125;;</span><br></pre></td></tr></table></figure><p></p>
 <p>没有length属性，所以就不是类数组。</p>
@@ -37,7 +37,7 @@
 </blockquote>
 <hr>
 <p>@JQuery的v2.1.4版本对makeArray方法实现源码：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// results is for internal usage only</span></span><br><span class="line">truemakeArray: <span class="function"><span class="keyword">function</span>(<span class="params"> arr, results </span>) </span>&#123;</span><br><span class="line">truetrue<span class="keyword">var</span> ret = results || [];</span><br><span class="line"></span><br><span class="line">truetrue<span class="keyword">if</span> ( arr != <span class="literal">null</span> ) &#123;</span><br><span class="line">truetruetrue<span class="keyword">if</span> ( isArraylike( <span class="built_in">Object</span>(arr) ) ) &#123;</span><br><span class="line">truetruetruetruejQuery.merge( ret,</span><br><span class="line">truetruetruetruetrue<span class="keyword">typeof</span> arr === <span class="string">"string"</span> ?</span><br><span class="line">truetruetruetruetrue[ arr ] : arr</span><br><span class="line">truetruetruetrue);</span><br><span class="line">truetruetrue&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">truetruetruetruepush.call( ret, arr );</span><br><span class="line">truetruetrue&#125;</span><br><span class="line">truetrue&#125;</span><br><span class="line">truetrue<span class="keyword">return</span> ret;</span><br><span class="line">true&#125;,</span><br><span class="line"></span><br><span class="line">truemerge: <span class="function"><span class="keyword">function</span>(<span class="params"> first, second </span>) </span>&#123;</span><br><span class="line">truetrue<span class="keyword">var</span> len = +second.length,</span><br><span class="line">truetruetruej = <span class="number">0</span>,</span><br><span class="line">truetruetruei = first.length;</span><br><span class="line"></span><br><span class="line">truetrue<span class="keyword">for</span> ( ; j &lt; len; j++ ) &#123;</span><br><span class="line">truetruetruefirst[ i++ ] = second[ j ];</span><br><span class="line">truetrue&#125;</span><br><span class="line"></span><br><span class="line">truetruefirst.length = i;</span><br><span class="line">truetrue<span class="keyword">return</span> first;</span><br><span class="line">true&#125;</span><br></pre></td></tr></table></figure><p></p>
-<p>其中<code>isArraylike()</code>代码实现可以参见<a href="http://www.jeffjade.com/2015/09/06/2015-09-06-ios8-safari-jitbug-record/">这里</a>。</p>
+<p>其中<code>isArraylike()</code>代码实现可以参见<a href="https://www.jeffjade.com/2015/09/06/2015-09-06-ios8-safari-jitbug-record/">这里</a>。</p>
 <p><strong>参考出处</strong>：@曾探 所著的《JavaScript设计模式与开发实践》第三章~高阶函数.</p>
 	</div>
 		<a href="#reward-modal-container" aria-label="Open Reward" id="open-reward-modal-a">打赏</a>
@@ -377,19 +377,19 @@
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -409,7 +409,11 @@
 			
 		
 			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -421,35 +425,7 @@
 			
 		
 			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
 			
 		
 			
@@ -457,11 +433,35 @@
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 		</ul>
