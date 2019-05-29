@@ -1,5 +1,5 @@
 <!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Gulp探究折腾之路(I) | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="细说Gulp常用插件：gulp-jshint,gulp-uglify，gulp-minify-css等等;"><meta name="keywords" content="Gulp,NodeJs"><meta property="og:type" content="article"><meta property="og:title" content="Gulp探究折腾之路(I)"><meta property="og:url" content="https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="细说Gulp常用插件：gulp-jshint,gulp-uglify，gulp-minify-css等等;"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://image.nicelinks.site/loveFlower.jpg"><meta property="og:updated_time" content="2017-09-01T12:58:14.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Gulp探究折腾之路(I)"><meta name="twitter:description" content="细说Gulp常用插件：gulp-jshint,gulp-uglify，gulp-minify-css等等;"><meta name="twitter:image" content="https://image.nicelinks.site/loveFlower.jpg"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/11/25/2015-11-25-toss-gulp/" class="title=&quot;Gulp探究折腾之路(I)&quot;" itemprop="url">Gulp探究折腾之路(I)</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-11-24T16:00:00.000Z" itemprop="datePublished">发表于 2015-11-25</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p><strong>前言:</strong> <code>gulp</code>是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用她，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率。相比于<code>grunt</code>的频繁 IO 操作，gulp的流操作，能更快地更便捷地完成构建工作。此处仅记录初步折腾中所遇点滴以及待解决的点。</p><a id="more"></a><p><img src="https://image.nicelinks.site/blank.gif" alt="题图来自女友摄影作品:16-03-12-清晨-深圳" data-echo="//image.nicelinks.site/loveFlower.jpg"></p><h2 id="Gulp折腾之初探"><a href="#Gulp折腾之初探" class="headerlink" title="Gulp折腾之初探"></a><strong>Gulp折腾之初探</strong></h2><h3 id="折腾之战略上的藐视"><a href="#折腾之战略上的藐视" class="headerlink" title="折腾之战略上的藐视"></a><strong>折腾之战略上的藐视</strong></h3><p>回过头看Gulp的折腾历程，使用还是非常简易的。初步入门资料可参考<a href="#refer">这里</a>。所以战略上一定要藐视”她”;当然战术上要给予足够的重视。毕竟要依赖她以及其他各种插件and编辑器等实现前端<strong>工程化，组件化，模块化，便捷化</strong>是一个蛮复杂的过程。总之，折腾伊始需要自信就好，折腾过程带着耐心就好。譬如，想借助gulp压缩美化下js代码，写如下代码于gulpfile.js即可：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</span><br><span class="line">    uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</span><br><span class="line"><span class="keyword">var</span> gNeedDealJsFile = <span class="string">'./js/*.js'</span>; <span class="comment">//javascrip代码存放路径</span></span><br><span class="line"><span class="keyword">var</span> outPut = <span class="string">"./build/"</span>;  <span class="comment">//指定输出文件存放目录</span></span><br><span class="line">gulp.task(<span class="string">'scripts'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(gNeedDealJsFile)</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(rename(&#123;</span><br><span class="line">            suffix: <span class="string">'.min'</span></span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(gulp.dest(outPut));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p></p>
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><!-- Google AdSense --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8586652723015758",enable_page_level_ads:!0})</script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/11/25/2015-11-25-toss-gulp/" class="title=&quot;Gulp探究折腾之路(I)&quot;" itemprop="url">Gulp探究折腾之路(I)</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-11-24T16:00:00.000Z" itemprop="datePublished">发表于 2015-11-25</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p><strong>前言:</strong> <code>gulp</code>是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用她，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率。相比于<code>grunt</code>的频繁 IO 操作，gulp的流操作，能更快地更便捷地完成构建工作。此处仅记录初步折腾中所遇点滴以及待解决的点。</p><a id="more"></a><p><img src="https://image.nicelinks.site/blank.gif" alt="题图来自女友摄影作品:16-03-12-清晨-深圳" data-echo="//image.nicelinks.site/loveFlower.jpg"></p><h2 id="Gulp折腾之初探"><a href="#Gulp折腾之初探" class="headerlink" title="Gulp折腾之初探"></a><strong>Gulp折腾之初探</strong></h2><h3 id="折腾之战略上的藐视"><a href="#折腾之战略上的藐视" class="headerlink" title="折腾之战略上的藐视"></a><strong>折腾之战略上的藐视</strong></h3><p>回过头看Gulp的折腾历程，使用还是非常简易的。初步入门资料可参考<a href="#refer">这里</a>。所以战略上一定要藐视”她”;当然战术上要给予足够的重视。毕竟要依赖她以及其他各种插件and编辑器等实现前端<strong>工程化，组件化，模块化，便捷化</strong>是一个蛮复杂的过程。总之，折腾伊始需要自信就好，折腾过程带着耐心就好。譬如，想借助gulp压缩美化下js代码，写如下代码于gulpfile.js即可：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</span><br><span class="line">    uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</span><br><span class="line"><span class="keyword">var</span> gNeedDealJsFile = <span class="string">'./js/*.js'</span>; <span class="comment">//javascrip代码存放路径</span></span><br><span class="line"><span class="keyword">var</span> outPut = <span class="string">"./build/"</span>;  <span class="comment">//指定输出文件存放目录</span></span><br><span class="line">gulp.task(<span class="string">'scripts'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(gNeedDealJsFile)</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(rename(&#123;</span><br><span class="line">            suffix: <span class="string">'.min'</span></span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(gulp.dest(outPut));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p></p>
 <p>在gulpfile.js同级目录运行<code>gulp scripts</code>即可；PS:当然前提是您已经安装了nodejs，并且使用npm安装了代码中需要的插件<code>gulp</code>和<code>gulp-uglify</code>与本地。</p>
 <h3 id="摒弃了gulp-run"><a href="#摒弃了gulp-run" class="headerlink" title="摒弃了gulp.run()"></a><strong>摒弃了gulp.run()</strong></h3><p>gulp的API很简单，常用的也就几个：watch, task, dest, src；目前已经摒弃了run方法。<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建Default Task:注册缺省任务</span></span><br><span class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    gulp.run(<span class="string">'jshint'</span>, <span class="string">'scripts'</span>);</span><br><span class="line"></span><br><span class="line">    gulp.watch(workSpace, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        gulp.run(<span class="string">'jshint'</span>, <span class="string">'scripts'</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p></p>
 <blockquote>
@@ -169,18 +169,18 @@
 	<nav class="article-nav clearfix">
  
  <div class="prev">
- <a href="/2015/12/15/2015-04-17-toss-sublime-text/" title="如何优雅地使用Sublime Text">
+ <a href="/2015/11/25/2015-11-31-jQuery-vs-javaScript/" title="jQuery VS JavaScript原生API">
   <strong>上一篇：</strong><br>
   <span>
-  如何优雅地使用Sublime Text</span>
+  jQuery VS JavaScript原生API</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/11/25/2015-11-31-jQuery-vs-javaScript/" title="jQuery VS JavaScript原生API">
+<a href="/2015/11/14/2015-11-14-css-achieve-horizontal_vertical_center/" title="CSS实现水平|垂直居中漫谈">
  <strong>下一篇：</strong><br> 
- <span>jQuery VS JavaScript原生API
+ <span>CSS实现水平|垂直居中漫谈
 </span>
 </a>
 </div>
@@ -410,6 +410,10 @@
 			
 		
 			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
@@ -418,7 +422,7 @@
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
@@ -426,19 +430,11 @@
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
 			
 		
 			
@@ -454,7 +450,15 @@
 			
 		
 			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -466,15 +470,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -482,19 +478,7 @@
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 			
@@ -502,11 +486,27 @@
 			
 		
 			
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -733,8 +733,6 @@
 <!-- Analytics Begin -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67901984-1"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-67901984-1")</script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8586652723015758",enable_page_level_ads:!0})</script>
 
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Rake让Jekyll写博更优雅 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="编写Rakefile让Jekyll写博更便捷，一键生成/预览/发布..."><meta name="keywords" content="Tools,Rake,Jekyll"><meta property="og:type" content="article"><meta property="og:title" content="Rake让Jekyll写博更优雅"><meta property="og:url" content="https://www.jeffjade.com/2016/03/26/2016-03-26-rakefile-for-jekyll/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="编写Rakefile让Jekyll写博更便捷，一键生成/预览/发布..."><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://image.nicelinks.site/niceStar.jpg"><meta property="og:updated_time" content="2019-03-26T14:31:16.776Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Rake让Jekyll写博更优雅"><meta name="twitter:description" content="编写Rakefile让Jekyll写博更便捷，一键生成/预览/发布..."><meta name="twitter:image" content="https://image.nicelinks.site/niceStar.jpg"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2016/03/26/2016-03-26-rakefile-for-jekyll/" class="title=&quot;Rake让Jekyll写博更优雅&quot;" itemprop="url">Rake让Jekyll写博更优雅</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2016-03-26T08:30:00.000Z" itemprop="datePublished">发表于 2016-03-26</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>于想拥有个人站点品牌的人来讲，现如今是一个很好的时期。至少 <strong>Hexo</strong>、<strong>Jekyll</strong>、<strong>Leanote</strong>、<code>WordPress</code> 、<code>FarBox</code> Octopress、ghost、marboo、Medium、Logdown、prose.io 等诸多层出不穷的好工具，让建站写文已经变得异常简洁方便。分分钟可搭建起美观大方的个人博客，这样的教程已经充盈网络，在此不提。这里要谈及的是，以<strong>Rake</strong>一键生成<strong>Jekyll</strong>文章模版，一键预览效果，一键发布等等；Rake让Jekyll写博更优雅。</p><a id="more"></a><p><img src="https://image.nicelinks.site/blank.gif" alt="Rake让Jekyll写博更优雅" data-echo="//image.nicelinks.site/niceStar.jpg"></p><p>个人博客，目前主用这<strong>Hexo</strong>和<strong><a href="http://jekyllrb.com/" target="_blank" rel="noopener">jekyll</a></strong>，两者都很是轻量便捷。<strong>Hexo</strong>是一个开源的静态博客生成器,由一位台湾大学生用node.js开发而成，<a href="https://www.jeffjade.com">晚晴幽草轩</a>就是用<strong>Hexo</strong>搭建而成。<strong>jekyll</strong>是Ruby写的一个轻量级的博客系统，也是Github Page默认搭配，<a href="http://nicejade.github.io" target="_blank" rel="noopener">天意人间舫</a>则是以<strong>Jekyll</strong>创造出的；(题外话，Hexo发布前需要运行<code>Hexo g</code>本地生成下，文章多了，速度上也会慢些(百篇文章，5s左右)；发布后更新速度也没Jekyll那么快；其他常用体验倒差不太多)。</p><p>在设计上，jekyll框架将博客模块化，比如有负责网页显示样式的部分（即模板），有负责博客内容的部分，也就是我们使用<strong>markdown</strong>语言来写的内容。其次，它通过一定的规则，又将各个模块的内容组织起来，并创建各个页面之间的联系。如此是它可以使我们在写作的时候，尽最大的精力去集中在内容的创作上，而不用太在意格式以及排版。并且借助于git这个相当流行的分布式版本控制系统，可很有效的管理所写的文章，完全可以做到在没有网络的情况下写作｜预览，待有网络时再将内容同步。</p><p>使用<strong>Jekyll</strong>本已经非常方便了，不管是本地测试还是发布线上。但还是不够简洁，对于渴望极致的懒人来讲。比如发布文章到线上：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;commit massge&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p></p>
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><!-- Google AdSense --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8586652723015758",enable_page_level_ads:!0})</script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2016/03/26/2016-03-26-rakefile-for-jekyll/" class="title=&quot;Rake让Jekyll写博更优雅&quot;" itemprop="url">Rake让Jekyll写博更优雅</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2016-03-26T08:30:00.000Z" itemprop="datePublished">发表于 2016-03-26</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>于想拥有个人站点品牌的人来讲，现如今是一个很好的时期。至少 <strong>Hexo</strong>、<strong>Jekyll</strong>、<strong>Leanote</strong>、<code>WordPress</code> 、<code>FarBox</code> Octopress、ghost、marboo、Medium、Logdown、prose.io 等诸多层出不穷的好工具，让建站写文已经变得异常简洁方便。分分钟可搭建起美观大方的个人博客，这样的教程已经充盈网络，在此不提。这里要谈及的是，以<strong>Rake</strong>一键生成<strong>Jekyll</strong>文章模版，一键预览效果，一键发布等等；Rake让Jekyll写博更优雅。</p><a id="more"></a><p><img src="https://image.nicelinks.site/blank.gif" alt="Rake让Jekyll写博更优雅" data-echo="//image.nicelinks.site/niceStar.jpg"></p><p>个人博客，目前主用这<strong>Hexo</strong>和<strong><a href="http://jekyllrb.com/" target="_blank" rel="noopener">jekyll</a></strong>，两者都很是轻量便捷。<strong>Hexo</strong>是一个开源的静态博客生成器,由一位台湾大学生用node.js开发而成，<a href="https://www.jeffjade.com">晚晴幽草轩</a>就是用<strong>Hexo</strong>搭建而成。<strong>jekyll</strong>是Ruby写的一个轻量级的博客系统，也是Github Page默认搭配，<a href="http://nicejade.github.io" target="_blank" rel="noopener">天意人间舫</a>则是以<strong>Jekyll</strong>创造出的；(题外话，Hexo发布前需要运行<code>Hexo g</code>本地生成下，文章多了，速度上也会慢些(百篇文章，5s左右)；发布后更新速度也没Jekyll那么快；其他常用体验倒差不太多)。</p><p>在设计上，jekyll框架将博客模块化，比如有负责网页显示样式的部分（即模板），有负责博客内容的部分，也就是我们使用<strong>markdown</strong>语言来写的内容。其次，它通过一定的规则，又将各个模块的内容组织起来，并创建各个页面之间的联系。如此是它可以使我们在写作的时候，尽最大的精力去集中在内容的创作上，而不用太在意格式以及排版。并且借助于git这个相当流行的分布式版本控制系统，可很有效的管理所写的文章，完全可以做到在没有网络的情况下写作｜预览，待有网络时再将内容同步。</p><p>使用<strong>Jekyll</strong>本已经非常方便了，不管是本地测试还是发布线上。但还是不够简洁，对于渴望极致的懒人来讲。比如发布文章到线上：<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;commit massge&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p></p>
 <p>如果能够敲击一个命令完成，就不能忍受搞三行；虽然三行只多余费了不到半分钟。撰文写字，本就不易，一篇下来，已是很累；欲长久此好，必须尽可能减轻完成这事儿之成本；否则累觉不爱之后，爱好这种事儿，会在累烦的折腾种被阉割抛弃的。在操纵<strong>Jekll</strong>博客方面，有很多可以利用的脚本，比如<strong>bash</strong>,<strong>Makefile</strong>,win下的<strong>bat</strong>等等； 朋友@<a href="http://pizida.com" target="_blank" rel="noopener">痞子达</a> 向我推荐了<strong>Rake</strong>，这些日子用了下着实很方便，改写也颇为简单，就此录下一篇推荐给大家。</p>
 <p>何为<a href="http://rake.rubyforge.org" target="_blank" rel="noopener">Rake</a>？: 即Ruby Make，一个用ruby开发的代码构建工具，要了解更多Rake可以参看其官网，抑或是这里整理的<a href="http://nicejade.github.io/2016/03/26/nice-rake.html" target="_blank" rel="noopener">简洁强大如斯：Rake</a>。</p>
 <p>下载安装<strong>Rake</strong>，可以使用 <strong>gem</strong>：</p>
@@ -366,6 +366,10 @@
 			
 		
 			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
@@ -374,7 +378,7 @@
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
@@ -382,19 +386,11 @@
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
 			
 		
 			
@@ -410,7 +406,15 @@
 			
 		
 			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -422,15 +426,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -438,19 +434,7 @@
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 			
@@ -458,11 +442,27 @@
 			
 		
 			
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -689,8 +689,6 @@
 <!-- Analytics Begin -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67901984-1"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-67901984-1")</script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8586652723015758",enable_page_level_ads:!0})</script>
 
 
 

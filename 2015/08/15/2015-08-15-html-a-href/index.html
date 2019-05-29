@@ -1,5 +1,5 @@
 <!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>Html&lt;a&gt;标签href的困惑记载 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="description" content="近日，在工作中遇到一个小问题(给手游平台做些网页活动，其中牵涉到一个按钮链接，就习以为常的用了&amp;lt;a&amp;gt;标签，Click响应之后走一段js代码逻辑－弹出一个分享微信弹框。Chrome和Android平台都没问题，测试阶段发现Ios平台出现了点问题～弹框闪现一下之后，页面被重新渲染了，自然弹框又被消隐掉了。)，经历一番查证，个中缘由原来如此。"><meta name="keywords" content="Html"><meta property="og:type" content="article"><meta property="og:title" content="Html&lt;a&gt;标签href的困惑记载"><meta property="og:url" content="https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="近日，在工作中遇到一个小问题(给手游平台做些网页活动，其中牵涉到一个按钮链接，就习以为常的用了&amp;lt;a&amp;gt;标签，Click响应之后走一段js代码逻辑－弹出一个分享微信弹框。Chrome和Android平台都没问题，测试阶段发现Ios平台出现了点问题～弹框闪现一下之后，页面被重新渲染了，自然弹框又被消隐掉了。)，经历一番查证，个中缘由原来如此。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2019-03-26T14:31:16.724Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Html&lt;a&gt;标签href的困惑记载"><meta name="twitter:description" content="近日，在工作中遇到一个小问题(给手游平台做些网页活动，其中牵涉到一个按钮链接，就习以为常的用了&amp;lt;a&amp;gt;标签，Click响应之后走一段js代码逻辑－弹出一个分享微信弹框。Chrome和Android平台都没问题，测试阶段发现Ios平台出现了点问题～弹框闪现一下之后，页面被重新渲染了，自然弹框又被消隐掉了。)，经历一番查证，个中缘由原来如此。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/08/15/2015-08-15-html-a-href/" class="title=&quot;Html&lt;a&gt;标签href的困惑记载&quot;" itemprop="url">Html&lt;a&gt;标签href的困惑记载</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-08-14T16:00:00.000Z" itemprop="datePublished">发表于 2015-08-15</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>近日，在工作中遇到一个小问题(给手游平台做些网页活动，其中牵涉到一个按钮链接，就习以为常的用了<code>&lt;a&gt;</code>标签，Click响应之后走一段js代码逻辑－弹出一个分享微信弹框。Chrome和Android平台都没问题，测试阶段发现Ios平台出现了点问题～弹框闪现一下之后，页面被重新渲染了，自然弹框又被消隐掉了。)，经历一番查证，个中缘由原来如此。</p><a id="more"></a><p>出现问题后，立马走了段代码逻辑，发现并没任何逻辑问题。并且Chrome和Android平台又都OK的，只是Ios平台有此问题。经验不够丰富情形之下，只能在Ios手机上先Alert下,看下代码走的路线了。代码采用Backbone框架而成，经alert出来的提示，发现Click之后，页面view竟被重新执行了一次。额…逻辑没问题，而类似活动无数，没出现类似问题啊，不明就里～［好桑心，无能为力又无从下手的感觉,好难受］。</p><p>之后，请出同事中的前辈帮着Codereview下，终定为出了问题。原是误用这<code>&lt;a&gt;</code>惹出来的。这边见大家都用<code>&lt;a href=&quot;javascript:;&quot;&gt;&lt;/a&gt;</code>。当然之前偶然看了<font class="pruple">张鑫旭</font>一篇<a href="http://www.zhangxinxu.com/wordpress/2013/01/why-use-href-javascript-void0/" target="_blank" rel="noopener">《疑问：为什么要使用href=”javascript:void(0);”？》</a>，从中窥测之前多用的是<code>&lt;a href=&quot;javascript:void(0);&quot;&gt;&lt;/a&gt;</code>。但为什么要用这个，他本人也没弄明白，然后读完，我也没明白。而此处，嫌用<code>&lt;a href=&quot;javascript:;&quot;&gt;&lt;/a&gt;</code>这么长麻烦，就用<code>&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;</code>这个试了下，唉～可以啊，Android也可以唉，那就用下了（噢，问题就因此埋下了，额额额～v～）。</p><p><strong>A Problem Is A Chance For You To Do Your Best！</strong>我坚信这一点。惹出些问题并不见得都是坏事。每每因为自己的造成的这些个问题，反倒收获不少，😄。</p><p>之后就去查证了下关于这Html<code>&lt;a&gt;</code>标签的Href属性。超链接的 URL。可能的值：</p><blockquote><ul><li>绝对 URL - 指向另一个站点（比如 href=”<a href="https://www.jeffjade.com&quot;）">https://www.jeffjade.com&quot;）</a></li><li>相对 URL - 指向站点内的某个文件（href=”index.htm”）</li><li>锚 URL - 指向页面中的锚（href=”#top”）</li></ul></blockquote><p>根据网搜得到的答案如下，亲测也的确如此：<br>​<code>&lt;a href=&quot;javascript:void(0)&quot;&gt;点击&lt;/a&gt;</code>: 点击链接后不会回到网页顶部<br><code>&lt;a href=&quot;#&quot;&gt;点击&lt;/a&gt;</code>: 点击后会回到网面顶部;<br>这里的href=”javascript:;”，其中javascript:是伪协议，它可以让我们通过一个链接来调用javascript函数.而采用这个方式 javascript:;可以实现A标签的点击事件运行时，如果页面内容很多，有滚动条时，页面不会乱跳，用户体验更好。点击链接后也不会回到网页顶部。</p><p>而对于Href第三点～指向页面中的锚，如下用法：</p><ol><li>需要转到地方添加，<code>&lt;a href=&quot;#命名&quot;&gt;文字&lt;/a&gt;</code>，注意href值是#开头+英文字母命名</li><li>需要在被转到位置添加，<code>&lt;span id=&quot;命名&quot; name=&quot;命名&quot;&gt;&lt;/span&gt;</code>，注意id和name值相同并且与a命名相同(<strong>亲测，id必须跟a命名相同，而span的name则不用！</strong>并且当 href=”#” 之时也会回到页面顶部.)</li></ol><p>即可得出当使用（href=”#”）之时即有可能会回到页面顶部。但问题是，活动一屏幕足以显示完，无需滑动，Ios手机也是如此。那么使用（href=”#”）在这里是不会影响页面刷新的。得到ios客户端开发的说法是：这样写［使用（href=”#”）］会触发到客户端的监控，从而引发异常。(～这一段，很多疑惑，只是猜测，有待继续学习检验)。</p><hr><p>此段15-08-19更新：<br>对于这一段的不理解，后来在ios客户端童鞋的帮助下消解了。对于Ios跟js的交互是略有点不同的：<a href="http://blog.csdn.net/mkhgg/article/details/7109097" target="_blank" rel="noopener"> ios中objective-c与js的交互</a>这篇文章会有讲到。js调用objective-c的方法, 代码应该这么做：<br></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testFunc</span>(<span class="params">cmd,parameter1</span>)   </span></span><br><span class="line"><span class="function"></span>&#123;   </span><br><span class="line">    <span class="built_in">document</span>.write(<span class="built_in">Date</span>());   </span><br><span class="line">    <span class="built_in">document</span>.location=<span class="string">"objc://"</span>+cmd+<span class="string">":/"</span>+parameter1;  <span class="comment">//cmd代表objective-   </span></span><br><span class="line">c中的的方法名，parameter1自然就是参数了  （这里的objc:<span class="comment">//可以随意的去改）</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><!-- Google AdSense --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8586652723015758",enable_page_level_ads:!0})</script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2015/08/15/2015-08-15-html-a-href/" class="title=&quot;Html&lt;a&gt;标签href的困惑记载&quot;" itemprop="url">Html&lt;a&gt;标签href的困惑记载</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2015-08-14T16:00:00.000Z" itemprop="datePublished">发表于 2015-08-15</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p>近日，在工作中遇到一个小问题(给手游平台做些网页活动，其中牵涉到一个按钮链接，就习以为常的用了<code>&lt;a&gt;</code>标签，Click响应之后走一段js代码逻辑－弹出一个分享微信弹框。Chrome和Android平台都没问题，测试阶段发现Ios平台出现了点问题～弹框闪现一下之后，页面被重新渲染了，自然弹框又被消隐掉了。)，经历一番查证，个中缘由原来如此。</p><a id="more"></a><p>出现问题后，立马走了段代码逻辑，发现并没任何逻辑问题。并且Chrome和Android平台又都OK的，只是Ios平台有此问题。经验不够丰富情形之下，只能在Ios手机上先Alert下,看下代码走的路线了。代码采用Backbone框架而成，经alert出来的提示，发现Click之后，页面view竟被重新执行了一次。额…逻辑没问题，而类似活动无数，没出现类似问题啊，不明就里～［好桑心，无能为力又无从下手的感觉,好难受］。</p><p>之后，请出同事中的前辈帮着Codereview下，终定为出了问题。原是误用这<code>&lt;a&gt;</code>惹出来的。这边见大家都用<code>&lt;a href=&quot;javascript:;&quot;&gt;&lt;/a&gt;</code>。当然之前偶然看了<font class="pruple">张鑫旭</font>一篇<a href="http://www.zhangxinxu.com/wordpress/2013/01/why-use-href-javascript-void0/" target="_blank" rel="noopener">《疑问：为什么要使用href=”javascript:void(0);”？》</a>，从中窥测之前多用的是<code>&lt;a href=&quot;javascript:void(0);&quot;&gt;&lt;/a&gt;</code>。但为什么要用这个，他本人也没弄明白，然后读完，我也没明白。而此处，嫌用<code>&lt;a href=&quot;javascript:;&quot;&gt;&lt;/a&gt;</code>这么长麻烦，就用<code>&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;</code>这个试了下，唉～可以啊，Android也可以唉，那就用下了（噢，问题就因此埋下了，额额额～v～）。</p><p><strong>A Problem Is A Chance For You To Do Your Best！</strong>我坚信这一点。惹出些问题并不见得都是坏事。每每因为自己的造成的这些个问题，反倒收获不少，😄。</p><p>之后就去查证了下关于这Html<code>&lt;a&gt;</code>标签的Href属性。超链接的 URL。可能的值：</p><blockquote><ul><li>绝对 URL - 指向另一个站点（比如 href=”<a href="https://www.jeffjade.com&quot;）">https://www.jeffjade.com&quot;）</a></li><li>相对 URL - 指向站点内的某个文件（href=”index.htm”）</li><li>锚 URL - 指向页面中的锚（href=”#top”）</li></ul></blockquote><p>根据网搜得到的答案如下，亲测也的确如此：<br>​<code>&lt;a href=&quot;javascript:void(0)&quot;&gt;点击&lt;/a&gt;</code>: 点击链接后不会回到网页顶部<br><code>&lt;a href=&quot;#&quot;&gt;点击&lt;/a&gt;</code>: 点击后会回到网面顶部;<br>这里的href=”javascript:;”，其中javascript:是伪协议，它可以让我们通过一个链接来调用javascript函数.而采用这个方式 javascript:;可以实现A标签的点击事件运行时，如果页面内容很多，有滚动条时，页面不会乱跳，用户体验更好。点击链接后也不会回到网页顶部。</p><p>而对于Href第三点～指向页面中的锚，如下用法：</p><ol><li>需要转到地方添加，<code>&lt;a href=&quot;#命名&quot;&gt;文字&lt;/a&gt;</code>，注意href值是#开头+英文字母命名</li><li>需要在被转到位置添加，<code>&lt;span id=&quot;命名&quot; name=&quot;命名&quot;&gt;&lt;/span&gt;</code>，注意id和name值相同并且与a命名相同(<strong>亲测，id必须跟a命名相同，而span的name则不用！</strong>并且当 href=”#” 之时也会回到页面顶部.)</li></ol><p>即可得出当使用（href=”#”）之时即有可能会回到页面顶部。但问题是，活动一屏幕足以显示完，无需滑动，Ios手机也是如此。那么使用（href=”#”）在这里是不会影响页面刷新的。得到ios客户端开发的说法是：这样写［使用（href=”#”）］会触发到客户端的监控，从而引发异常。(～这一段，很多疑惑，只是猜测，有待继续学习检验)。</p><hr><p>此段15-08-19更新：<br>对于这一段的不理解，后来在ios客户端童鞋的帮助下消解了。对于Ios跟js的交互是略有点不同的：<a href="http://blog.csdn.net/mkhgg/article/details/7109097" target="_blank" rel="noopener"> ios中objective-c与js的交互</a>这篇文章会有讲到。js调用objective-c的方法, 代码应该这么做：<br></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testFunc</span>(<span class="params">cmd,parameter1</span>)   </span></span><br><span class="line"><span class="function"></span>&#123;   </span><br><span class="line">    <span class="built_in">document</span>.write(<span class="built_in">Date</span>());   </span><br><span class="line">    <span class="built_in">document</span>.location=<span class="string">"objc://"</span>+cmd+<span class="string">":/"</span>+parameter1;  <span class="comment">//cmd代表objective-   </span></span><br><span class="line">c中的的方法名，parameter1自然就是参数了  （这里的objc:<span class="comment">//可以随意的去改）</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
 <p>在Ios里面有一个监听  http 跳转的方法；一旦有类似<code>http://</code> or <code>objc://</code>他们都可以监听到(像这种 http:// 并不是他们要的 ，而要的是这种 objc:// 这种,所以在跟ios通信时候，都必须这种规则 objc://…。而<strong>href=”#”代表的是本地页面</strong>[页面跳转到页面本身]。如此就能解释了之前出现问题了：ios可以监听到<code>&lt;a href=&quot;#&quot;&gt;点击&lt;/a&gt;</code>这种链接，从而使得页面被刷新。</p>
 <hr>
 <p>那么很疑惑，为何Android平台没有该问题？最后，也更进一步的疑问：JavaScript中语句最后的分号是可以缺省的，那为何要使用javascript:;而不是javascript:呢？是习惯还是规范，我也很疑惑！我也很疑惑！我也很疑惑！（重要的事情说三遍）</p>
@@ -100,10 +100,10 @@
 	<nav class="article-nav clearfix">
  
  <div class="prev">
- <a href="/2015/08/28/2015-09-02-js-string-compare/" title="JavaScript字符串间的比较">
+ <a href="/2015/08/28/2015-08-28-Write-Morkdown/" title="SublimeText下写作利器之MarkdownEditing">
   <strong>上一篇：</strong><br>
   <span>
-  JavaScript字符串间的比较</span>
+  SublimeText下写作利器之MarkdownEditing</span>
 </a>
 </div>
 
@@ -341,6 +341,10 @@
 			
 		
 			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
@@ -349,7 +353,7 @@
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
@@ -357,19 +361,11 @@
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
 			
 		
 			
@@ -385,7 +381,15 @@
 			
 		
 			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -397,15 +401,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -413,19 +409,7 @@
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 			
@@ -433,11 +417,27 @@
 			
 		
 			
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -664,8 +664,6 @@
 <!-- Analytics Begin -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67901984-1"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-67901984-1")</script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8586652723015758",enable_page_level_ads:!0})</script>
 
 
 

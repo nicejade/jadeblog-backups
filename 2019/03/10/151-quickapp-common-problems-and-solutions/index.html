@@ -1,5 +1,5 @@
 <!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="UTF-8"><title>快应用开发常见问题及解决方案 | 晚晴幽草轩</title><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="author" content="晚晴幽草轩轩主"><meta name="theme-color" content="#fffffb"><meta name="baidu-site-verification" content="PKEtLPjO56"><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/"><meta name="keywords" content="快应用,开发快应用,quickapp,快应用开发者,问题,解决方案,开发者"><meta name="description" content="快应用是移动互联网新型应用生态，与手机系统深度整合，为用户提供更加场景化的体验。具备传统 APP 完整的应用体验，但无需安装、即点即用。快应用是基于手机硬件平台的新型应用形态，由国内十大手机厂商基于硬件平台共同推出，其标准是由主流手机厂商组成的快应用联盟联合制定。这里记录下在快应用开发中，涉及的常见问题及其对应解决方案；同时也会给出如何更好开发快应用的一些建议。"><meta name="keywords" content="快应用,开发快应用,quickapp,快应用开发者,问题,解决方案,开发者"><meta property="og:type" content="article"><meta property="og:title" content="快应用开发常见问题及解决方案"><meta property="og:url" content="https://www.jeffjade.com/2019/03/10/151-quickapp-common-problems-and-solutions/index.html"><meta property="og:site_name" content="晚晴幽草轩"><meta property="og:description" content="快应用是移动互联网新型应用生态，与手机系统深度整合，为用户提供更加场景化的体验。具备传统 APP 完整的应用体验，但无需安装、即点即用。快应用是基于手机硬件平台的新型应用形态，由国内十大手机厂商基于硬件平台共同推出，其标准是由主流手机厂商组成的快应用联盟联合制定。这里记录下在快应用开发中，涉及的常见问题及其对应解决方案；同时也会给出如何更好开发快应用的一些建议。"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2019-03-18T14:56:16.404Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="快应用开发常见问题及解决方案"><meta name="twitter:description" content="快应用是移动互联网新型应用生态，与手机系统深度整合，为用户提供更加场景化的体验。具备传统 APP 完整的应用体验，但无需安装、即点即用。快应用是基于手机硬件平台的新型应用形态，由国内十大手机厂商基于硬件平台共同推出，其标准是由主流手机厂商组成的快应用联盟联合制定。这里记录下在快应用开发中，涉及的常见问题及其对应解决方案；同时也会给出如何更好开发快应用的一些建议。"><meta name="twitter:creator" content="@nicejadeyang"><link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml"><link rel="icon" href="/img/xuan.ico"><link rel="apple-touch-icon" href="/img/xuan.ico"><link rel="apple-touch-icon-precomposed" href="/img/xuan.ico"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"><!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> --><!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> --><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6"><!-- <link rel="stylesheet" href="/css/style.css"> --><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/28764/599c32fbf629d8117c40c36c.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><link rel="stylesheet" href="/css/style.css?180510"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script"><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script"><link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script"><link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script"><!-- <link rel="prefetch" href="//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a" as="script">
-    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2019/03/10/151-quickapp-common-problems-and-solutions/" class="title=&quot;快应用开发常见问题及解决方案&quot;" itemprop="url">快应用开发常见问题及解决方案</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2019-03-10T14:22:00.000Z" itemprop="datePublished">发表于 2019-03-10</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p><a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>是移动互联网新型应用生态，与手机系统深度整合，为用户提供更加场景化的体验。具备传统 APP 完整的应用体验，但无需安装、即点即用。<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>是基于手机硬件平台的新型应用形态，由国内十大手机厂商基于硬件平台共同推出，其标准是由主流手机厂商组成的快应用联盟联合制定。这里记录下在<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>开发中，涉及的常见问题及其对应解决方案；同时也会给出如何更好开发<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>的一些建议。</p><a id="more"></a><blockquote><p><strong>温馨提醒</strong>：如果您目前有涉及进行快应用开发，那么您不妨看下<a href="https://nice.lovejade.cn/zh/article/quickapp-boilerplate-template.html#" target="_blank" rel="noopener">快应用脚手架，为优雅而生</a>一文，其中将开发所遇到的一些问题、以及开发体验都作了很大程度上的优化，相信会给你带来帮助(另外， Github 上的 <a href="https://github.com/nicejade/awesome-quickapp" target="_blank" rel="noopener">awesome-quickapp</a> 仓库：云集最新快应用相关教程文章、开发资源、项目案例及新闻动态；相信也会给您更好进行快应用开发，提供更多帮助)。</p></blockquote><blockquote><p><strong>微注</strong>：原文首发于个人基于 <a href="https://nicelinks.site/post/5c3f3151a5957e07a40b30ff" target="_blank" rel="noopener">Ghost</a> 所搭建的最新博客：<a href="https://quickapp.lovejade.cn/quickapp-common-problems-and-solutions/" target="_blank" rel="noopener">静轩之别苑 | 快应用开发常见问题及解决方案</a>。</p></blockquote><h2 id="快应用引擎相关"><a href="#快应用引擎相关" class="headerlink" title="快应用引擎相关"></a>快应用引擎相关</h2><h3 id="快应用生命周期函数"><a href="#快应用生命周期函数" class="headerlink" title="快应用生命周期函数"></a>快应用生命周期函数</h3><ul><li><strong>现有的APP生命周期函数有</strong>： onCreate, onDestroy</li><li><strong>现有的页面级组件生命周期函数</strong>：onCreate、onInit、onReady、onShow、onHide、onDestroy（onBackPress、onMenuPress）</li><li><strong>已有的自定义组件生命周期函数</strong>： onCreate、onInit、onReady、onDestroy（onDestroy 只会在页面销毁的时候触发，用 <code>if</code> 指令卸载无法触发）</li></ul><h3 id="快应用的-app、-def、-data-以及-global"><a href="#快应用的-app、-def、-data-以及-global" class="headerlink" title="快应用的 $app、$def、$data 以及 global"></a>快应用的 $app、$def、$data 以及 global</h3><p>在快应用中，暴露了 <code>$app</code> 对象；此对象下有暴露出 <code>$def</code>，<code>$data</code>等字段：</p><ul><li><code>$def</code>： 使用 this.$app.$def 获取在 app.ux 中暴露的对象;</li><li><code>$data</code>：使用 this.$app.$data 获取在 manifest.json 的 config.data 中声明的全局数据；</li></ul><p>但需要注意的是：直接挂在于 <code>this</code> 上，需通过 this.$app 来取；挂在于 <code>this.$def</code> 上，才可通过 this.$app.$def 来取，二者不可混淆。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.ux</span></span><br><span class="line"><span class="keyword">import</span> device <span class="keyword">from</span> <span class="string">'@system.device'</span></span><br><span class="line"><span class="keyword">const</span> hook2global = global.__proto__ || global</span><br><span class="line">hook2global.$apis = $apis</span><br><span class="line"></span><br><span class="line">  &lt; script &gt;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  $deviceInfo: &#123;&#125;,</span><br><span class="line">  $xDeviceInfo: &#123;&#125;,</span><br><span class="line">  <span class="keyword">async</span> onCreate() &#123;</span><br><span class="line">    <span class="keyword">this</span>.$def.$deviceInfo = <span class="keyword">await</span> <span class="keyword">this</span>.getInfo()</span><br><span class="line">    <span class="keyword">this</span>.$xDeviceInfo = <span class="keyword">await</span> <span class="keyword">this</span>.getInfo()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">async</span> getInfo() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      device.getInfo(&#123;</span><br><span class="line">        success: <span class="function"><span class="params">ret</span> =&gt;</span> &#123;</span><br><span class="line">          resolve(ret)</span><br><span class="line">        &#125;,</span><br><span class="line">        fail: <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(err)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script &gt;</span></span><br></pre></td></tr></table></figure>
+    <link rel="prefetch" href="//clustrmaps.com/generated_content/backs/bg-w_607-cl_ffffff.png" as="image" media="(max-width: 600px)"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><!-- Google AdSense --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8586652723015758",enable_page_level_ads:!0})</script></head></html><body><header><div><div id="textlogo"><h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1><h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2></div><div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单"></a></div><nav class="animated"><ul><ul><li><a href="/" class="">Home</a></li><li><a href="/nicelinks" class="">Links</a></li><li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li><li><a href="/archives" class="">Archives</a></li><li><a href="/about-me" class="">About</a></li><li><form class="search" action="//google.com/search" method="get" accept-charset="utf-8"><label>Search</label><input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search"> <input type="hidden" name="q" value="site:www.jeffjade.com"></form></li></ul></ul></nav></div></header><div id="container"><div id="main" class="post" itemscope itemprop="blogPost"><article itemprop="articleBody"><header class="article-info clearfix"><h1 itemprop="name"><a href="/2019/03/10/151-quickapp-common-problems-and-solutions/" class="title=&quot;快应用开发常见问题及解决方案&quot;" itemprop="url">快应用开发常见问题及解决方案</a></h1><p class="article-author">By <a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a></p><p class="article-time"><time datetime="2019-03-10T14:22:00.000Z" itemprop="datePublished">发表于 2019-03-10</time></p></header><div class="article-content"><div class="bottom-gg-module"><div class="jade-gg-block"><a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank"><img class="width-block-wrap" style="width: 100%;max-height: 250px" src="https://image.nicelinks.site/blank.gif" alt="倾城之链" data-echo="https://image.nicelinks.site/nice-links-slogan.png"></a></div></div><p><a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>是移动互联网新型应用生态，与手机系统深度整合，为用户提供更加场景化的体验。具备传统 APP 完整的应用体验，但无需安装、即点即用。<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>是基于手机硬件平台的新型应用形态，由国内十大手机厂商基于硬件平台共同推出，其标准是由主流手机厂商组成的快应用联盟联合制定。这里记录下在<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>开发中，涉及的常见问题及其对应解决方案；同时也会给出如何更好开发<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="noopener">快应用</a>的一些建议。</p><a id="more"></a><blockquote><p><strong>温馨提醒</strong>：如果您目前有涉及进行快应用开发，那么您不妨看下<a href="https://nice.lovejade.cn/zh/article/quickapp-boilerplate-template.html#" target="_blank" rel="noopener">快应用脚手架，为优雅而生</a>一文，其中将开发所遇到的一些问题、以及开发体验都作了很大程度上的优化，相信会给你带来帮助(另外， Github 上的 <a href="https://github.com/nicejade/awesome-quickapp" target="_blank" rel="noopener">awesome-quickapp</a> 仓库：云集最新快应用相关教程文章、开发资源、项目案例及新闻动态；相信也会给您更好进行快应用开发，提供更多帮助)。</p></blockquote><blockquote><p><strong>微注</strong>：原文首发于个人基于 <a href="https://nicelinks.site/post/5c3f3151a5957e07a40b30ff" target="_blank" rel="noopener">Ghost</a> 所搭建的最新博客：<a href="https://quickapp.lovejade.cn/quickapp-common-problems-and-solutions/" target="_blank" rel="noopener">静轩之别苑 | 快应用开发常见问题及解决方案</a>。</p></blockquote><h2 id="快应用引擎相关"><a href="#快应用引擎相关" class="headerlink" title="快应用引擎相关"></a>快应用引擎相关</h2><h3 id="快应用生命周期函数"><a href="#快应用生命周期函数" class="headerlink" title="快应用生命周期函数"></a>快应用生命周期函数</h3><ul><li><strong>现有的APP生命周期函数有</strong>： onCreate, onDestroy</li><li><strong>现有的页面级组件生命周期函数</strong>：onCreate、onInit、onReady、onShow、onHide、onDestroy（onBackPress、onMenuPress）</li><li><strong>已有的自定义组件生命周期函数</strong>： onCreate、onInit、onReady、onDestroy（onDestroy 只会在页面销毁的时候触发，用 <code>if</code> 指令卸载无法触发）</li></ul><h3 id="快应用的-app、-def、-data-以及-global"><a href="#快应用的-app、-def、-data-以及-global" class="headerlink" title="快应用的 $app、$def、$data 以及 global"></a>快应用的 $app、$def、$data 以及 global</h3><p>在快应用中，暴露了 <code>$app</code> 对象；此对象下有暴露出 <code>$def</code>，<code>$data</code>等字段：</p><ul><li><code>$def</code>： 使用 this.$app.$def 获取在 app.ux 中暴露的对象;</li><li><code>$data</code>：使用 this.$app.$data 获取在 manifest.json 的 config.data 中声明的全局数据；</li></ul><p>但需要注意的是：直接挂在于 <code>this</code> 上，需通过 this.$app 来取；挂在于 <code>this.$def</code> 上，才可通过 this.$app.$def 来取，二者不可混淆。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.ux</span></span><br><span class="line"><span class="keyword">import</span> device <span class="keyword">from</span> <span class="string">'@system.device'</span></span><br><span class="line"><span class="keyword">const</span> hook2global = global.__proto__ || global</span><br><span class="line">hook2global.$apis = $apis</span><br><span class="line"></span><br><span class="line">  &lt; script &gt;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  $deviceInfo: &#123;&#125;,</span><br><span class="line">  $xDeviceInfo: &#123;&#125;,</span><br><span class="line">  <span class="keyword">async</span> onCreate() &#123;</span><br><span class="line">    <span class="keyword">this</span>.$def.$deviceInfo = <span class="keyword">await</span> <span class="keyword">this</span>.getInfo()</span><br><span class="line">    <span class="keyword">this</span>.$xDeviceInfo = <span class="keyword">await</span> <span class="keyword">this</span>.getInfo()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">async</span> getInfo() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      device.getInfo(&#123;</span><br><span class="line">        success: <span class="function"><span class="params">ret</span> =&gt;</span> &#123;</span><br><span class="line">          resolve(ret)</span><br><span class="line">        &#125;,</span><br><span class="line">        fail: <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(err)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script &gt;</span></span><br></pre></td></tr></table></figure>
 <p>如上示例代码，在其他页面代码中，this.$app.$def.$deviceInfo、 this.$app.$xDeviceInfo 这两种调用方式是期待的写法；如果混淆调用，得到的结果则是 <code>undefined</code>。</p>
 <p>而挂在于 <code>global</code> 的变量(如 $apis )，可通过 global.$apis 或直接 $apis 来调用；但如果在 DOM 结构中，不可直接使用，因为其默认主题是页面级 <code>this</code>，所以 Toolkit 编译出的结果就会是 this.$apis or this.global.$apis，如此就不能达到预期；在页面属性中定义声明下即可，如下代码示例：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    $apis: $apis <span class="comment">// or global.$apis</span></span><br><span class="line">  &#125;</span><br><span class="line">&lt;script&gt;</span><br></pre></td></tr></table></figure>
@@ -378,6 +378,10 @@
 			
 		
 			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
@@ -386,7 +390,7 @@
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
@@ -394,19 +398,11 @@
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>5</sup></a></li>
 			
 		
 			
@@ -422,7 +418,15 @@
 			
 		
 			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -434,15 +438,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -450,19 +446,7 @@
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 			
@@ -470,11 +454,27 @@
 			
 		
 			
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -701,8 +701,6 @@
 <!-- Analytics Begin -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67901984-1"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-67901984-1")</script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8586652723015758",enable_page_level_ads:!0})</script>
 
 
 
