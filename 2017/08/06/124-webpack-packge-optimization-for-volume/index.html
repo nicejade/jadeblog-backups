@@ -7,7 +7,7 @@
 <h2 id="让每个第三包“引有所值”"><a href="#让每个第三包“引有所值”" class="headerlink" title="让每个第三包“引有所值”"></a><strong>让每个第三包“引有所值”</strong></h2><h3 id="确定引入的必要性"><a href="#确定引入的必要性" class="headerlink" title="确定引入的必要性"></a><strong>确定引入的必要性</strong></h3><p>前端发展到如今时期，倘若项目采用了 <code>MVVM</code>模式框架，数据双向绑定，那么像 <code>jQuery</code> 这般类库，不能说没有丝毫引入的必要，至少可以说确实没有引入的必要。对此，如果还有些顾虑，完全可以参考下 <a href="http://youmightnotneedjquery.com/" target="_blank" rel="noopener">YOU MIGHT NOT NEED JQUERY</a>；用原生写几行代码就可以解决的事儿，实在不易引入这么个庞然大物，平添烦恼。</p>
 <h3 id="避免类库引而不用"><a href="#避免类库引而不用" class="headerlink" title="避免类库引而不用"></a><strong>避免类库引而不用</strong></h3><p>倘若这类情况发生，对整个打包体积，不仅大而且亏。项目一旦大了，很难人为保证每个引入的类库，都被有用到，尤其是二次开发。所以工具的利用十分必要，强烈推荐类如 <code>Eslint</code> 这般工具，并且注入对应规则，对声明却未使用的代码，给予强制提醒；这不仅可以有效的规避类似情形发生(也适用于普通变量的检测)，而且还能使得团队代码风格，尽可能地保持相似；要知道代码足够遵守规则，也可让压缩工具更有效压缩代码，一举多得，何乐不为？</p>
 <h3 id="尽量使用模块化引入"><a href="#尽量使用模块化引入" class="headerlink" title="尽量使用模块化引入"></a><strong>尽量使用模块化引入</strong></h3><p>如果说 <code>jQuery</code> 确实没有引入必要，很多人会同意；但对于 <code>lodash</code> 这类依赖的工具，并不是所有人都会去造一发轮子的。然而全包引入 400kb 的体量，可否有让你心肝一颤？幸好的是，<code>lodash</code> 提供了模块化的引入方式；可按需引入，快哉快哉：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; debounce &#125; <span class="keyword">from</span> <span class="string">'lodash'</span></span><br><span class="line"><span class="keyword">import</span> &#123; throttle &#125; <span class="keyword">from</span> <span class="string">'lodash'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 改成如下写法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> debounce <span class="keyword">from</span> <span class="string">'lodash/debounce'</span></span><br><span class="line"><span class="keyword">import</span> throttle <span class="keyword">from</span> <span class="string">'lodash/throttle'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; debounce &#125; <span class="keyword">from</span> <span class="string">'lodash'</span></span><br><span class="line"><span class="keyword">import</span> &#123; throttle &#125; <span class="keyword">from</span> <span class="string">'lodash'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 改成如下写法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> debounce <span class="keyword">from</span> <span class="string">'lodash/debounce'</span></span><br><span class="line"><span class="keyword">import</span> throttle <span class="keyword">from</span> <span class="string">'lodash/throttle'</span></span><br></pre></td></tr></table></figure>
 <p>擅懒如你的优秀程序员，是否也发现这样写颇为麻烦？那么恭喜你，这个问题已经被解决；<a href="https://github.com/lodash/lodash-webpack-plugin" target="_blank" rel="noopener">lodash-webpack-plugin</a> 和 <a href="https://www.npmjs.com/package/babel-plugin-lodash" target="_blank" rel="noopener">babel-plugin-lodash</a> 的存在（组合使用），即是解决这问题的。它可将全路径引用的 <code>lodash</code>， 自动转变为模块化按使用引入（如下例示）；并且所需配置也十分简单，就不在此赘述(温馨提示：当涉及些特殊方法时，尚需些留意)。</p>
 <figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入组件，自动转换</span></span><br><span class="line"><span class="keyword">import</span> <span class="literal">_</span> from <span class="string">'lodash'</span></span><br><span class="line"><span class="literal">_</span>.debounce()</span><br><span class="line"><span class="literal">_</span>.throttle()</span><br></pre></td></tr></table></figure>
 <p>额外补充的是，即便采用如上写法，还是不够快捷，每个用到的文件，都写一遍 import，实在多有不便。更可取的是，将项目所需的方法，统一引入，按需添加，组建出本地 lodash 类库，然后 export 给框架层（比如 <code>Vue.prototype</code>），以便全局使用；详情可参见：<a href="https://github.com/nicejade/vue-boilerplate-template" target="_blank" rel="noopener">vue-modular-import-lodash</a>。</p>
@@ -17,9 +17,9 @@
 <p>(Update @2018-05-10) <a href="https://github.com/GoogleChromeLabs" target="_blank" rel="noopener">GoogleChromeLabs</a> 团队在 Github 上有建设仓库：<a href="https://github.com/GoogleChromeLabs/webpack-libs-optimizations" target="_blank" rel="noopener">Optimize your libraries with webpack</a>，对于如何更好的使用 <code>Webpack</code>，在写代码层面上，给出了很多不错的建议，值得一读，这有助于更进一步的所构建包的体积。</p>
 <hr>
 <h2 id="按需异步加载模块"><a href="#按需异步加载模块" class="headerlink" title="按需异步加载模块"></a><strong>按需异步加载模块</strong></h2><p>关于前端开发优化，重要的一条是，尽可能合并请求及资源，如常用的请求数据合并，压缩合并 js，构造雪碧图诸此等等（当然得适当，注意体积，过大不宜）；但，同时也当因需制宜，根据需要去异步加载，避免无端就引入早成的浪费。webpack 也是内置对这方面的支持； 假如，你使用的是 <code>Vue</code>，将一个组件（以及其所有依赖）改为异步加载，所需要的只是把：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foo <span class="keyword">from</span> <span class="string">'./Foo.vue'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foo <span class="keyword">from</span> <span class="string">'./Foo.vue'</span></span><br></pre></td></tr></table></figure>
 <p>改为如下写法:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./Foo.vue'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const Foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./Foo.vue'</span>)</span><br></pre></td></tr></table></figure>
 <p>如此分割之时，该组件所依赖的其他组件或其他模块，都会自动被分割进对应的 chunk 里，实现异步加载，当然也支持把组件按组分块，将同组中组件，打包在同个异步 chunk 中。如此能够非常有效的抑制 Javascript 包过大，同时也使得资源的利用更加合理化。</p>
 <h2 id="生产环境，压缩混淆并移除console"><a href="#生产环境，压缩混淆并移除console" class="headerlink" title="生产环境，压缩混淆并移除console"></a><strong>生产环境，压缩混淆并移除console</strong></h2><p>现代化中等规模以上的开发中，区分<code>开发环境</code>、<code>测试环境</code>和<code>生产环境</code>，并根据需要予以区别对待，已然成为行业共识；可能的话，还会有<code>预发布环境</code>。对待生产环境，压缩混淆可以很有效的减小包的体积；同时，如果能够移除使用比较频繁的 <code>console</code>，而不是简单的替换为空方法，也是精彩的一笔小优化。如果使用 <code>UglifyJsPlugin</code> 插件来压缩代码，加入如下配置，即可移除掉代码中的 <code>console</code>：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">new</span> <span class="string">webpack.optimize.UglifyJsPlugin(&#123;</span></span><br><span class="line"><span class="attr">  compress:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">    warnings:</span> <span class="literal">false</span><span class="string">,</span></span><br><span class="line"><span class="attr">    drop_console:</span> <span class="literal">true</span><span class="string">,</span></span><br><span class="line"><span class="attr">    pure_funcs:</span> <span class="string">['console.log']</span></span><br><span class="line">  <span class="string">&#125;,</span></span><br><span class="line"><span class="attr">  sourceMap:</span> <span class="literal">false</span></span><br><span class="line"><span class="string">&#125;)</span></span><br></pre></td></tr></table></figure>
@@ -357,10 +357,6 @@
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>7</sup></a></li>
 			
 		
@@ -369,11 +365,15 @@
 			
 		
 			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>7</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
@@ -385,11 +385,11 @@
 			
 		
 			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
 			
@@ -405,10 +405,6 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
 			
 		
@@ -417,31 +413,7 @@
 			
 		
 			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>3</sup></a></li>
 			
 		
 			
@@ -449,11 +421,39 @@
 			
 		
 			
-				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Adb/" title="Adb">Adb<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Backbone/" title="Backbone">Backbone<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -680,6 +680,8 @@
 <!-- Analytics Begin -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67901984-1"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-67901984-1")</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8586652723015758",enable_page_level_ads:!0})</script>
 
 
 
