@@ -23,9 +23,9 @@
 body {
   padding: 0;
   margin: 0;
-  background: #ECE9E6;
-  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
-  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  background: #f2f2f2;
+  background: -webkit-linear-gradient(to bottom, #344f61, #f2f2f2);
+  background: linear-gradient(to bottom, #344f61, #f2f2f2);
 }
 
 #notfound {
@@ -72,13 +72,13 @@ body {
   background-position: center;
 }
 
-.notfound h2 {
+.notfound .notfound-title {
   font-family: 'Montserrat', sans-serif;
   color: #000;
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 0;
+  margin-top: 15px;
 }
 
 .notfound p {
@@ -107,7 +107,6 @@ body {
   -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
 }
-
 
 @media only screen and (max-width: 767px) {
     .notfound .notfound-404 {
@@ -163,15 +162,17 @@ body {
         <div class="notfound-404">
             <h1>Oops!</h1>
         </div>
-        <h2>404 - Page not found</h2>
-        <p>抱歉，您正在查找的页面，可能已被删除，因为页面名称已更改，或暂时不可用。您可以通过以下链接，从而访问更多有趣内容。</p>
-        <a class="link-button" href="https://www.jeffjade.com/?utm_source=jeffjade.com&pid=404">晚晴幽草轩</a>
-        <a class="link-button" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">倾城之链</a>
-        <a class="link-button" href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">
-        静轩之别苑</a>
-        <a class="link-button" href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">静轩之别苑</a>
-        <a class="link-button" href="https://nice.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">静晴轩别苑</a>
-        <a class="link-button" href="https://blog.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">天意人间舫</a>
+        <h2 class="notfound-title">404 - Page not found</h2>
+        <section class="section">
+          <p>抱歉，您正在查找的页面，可能已被删除，因为页面名称已更改，或暂时不可用。您可以通过以下链接，从而访问更多有趣内容。</p>
+          <a class="link-button" href="https://www.jeffjade.com/?utm_source=jeffjade.com&pid=404">晚晴幽草轩</a>
+          <a class="link-button" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">倾城之链</a>
+          <a class="link-button" href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">
+          静轩之别苑</a>
+          <a class="link-button" href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">静轩之别苑</a>
+          <a class="link-button" href="https://nice.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">静晴轩别苑</a>
+          <a class="link-button" href="https://blog.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">天意人间舫</a>
+        </section>
     </div>
   </div>
 </body>
