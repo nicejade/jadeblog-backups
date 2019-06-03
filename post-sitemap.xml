@@ -7,6 +7,54 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2015/09/25/2015-09-25-js-array/</loc>
+        <lastmod>2019-06-03T16:30:40.275Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2015/10/04/2015-10-03-use-jquery-better/</loc>
+        <lastmod>2019-06-03T16:30:23.082Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/</loc>
+        <lastmod>2019-06-03T16:28:29.351Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2015/08/03/2015-08-03-javascript-this/</loc>
+        <lastmod>2019-06-03T16:27:56.839Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2015/08/28/2015-09-02-js-string-compare/</loc>
+        <lastmod>2019-06-03T16:27:44.053Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2015/10/08/2015-10-08-js-object-length/</loc>
+        <lastmod>2019-06-03T16:26:46.239Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/</loc>
         <lastmod>2019-06-02T16:41:17.830Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,14 +81,6 @@
     <url>
         <loc>https://www.jeffjade.com/2019/03/10/151-quickapp-common-problems-and-solutions/</loc>
         <lastmod>2019-06-02T15:14:29.836Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2015/10/08/2015-10-08-js-object-length/</loc>
-        <lastmod>2019-06-02T15:09:57.010Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -199,14 +239,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/</loc>
-        <lastmod>2019-03-26T14:31:16.739Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2015/06/18/2015-06-18-perfect-music/</loc>
         <lastmod>2019-03-26T14:31:16.735Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -255,7 +287,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/</loc>
+        <loc>https://www.jeffjade.com/2015/07/24/2015-07-24-why-programmer-love-mac/</loc>
         <lastmod>2019-03-26T14:31:16.724Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -263,7 +295,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/07/24/2015-07-24-why-programmer-love-mac/</loc>
+        <loc>https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/</loc>
         <lastmod>2019-03-26T14:31:16.724Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -391,7 +423,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/07/13/123-useful-regular-expression/</loc>
+        <loc>https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/</loc>
         <lastmod>2019-03-26T14:31:16.633Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -399,7 +431,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/</loc>
+        <loc>https://www.jeffjade.com/2017/07/13/123-useful-regular-expression/</loc>
         <lastmod>2019-03-26T14:31:16.633Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -415,7 +447,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2016/08/08/113-toss-gulp/</loc>
+        <loc>https://www.jeffjade.com/2016/07/06/110-vue-webpack-component-develop/</loc>
         <lastmod>2019-03-26T14:31:16.632Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -423,7 +455,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2016/07/06/110-vue-webpack-component-develop/</loc>
+        <loc>https://www.jeffjade.com/2016/08/08/113-toss-gulp/</loc>
         <lastmod>2019-03-26T14:31:16.632Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -441,14 +473,6 @@
     <url>
         <loc>https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/</loc>
         <lastmod>2019-03-18T14:53:36.629Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2015/08/03/2015-08-03-javascript-this/</loc>
-        <lastmod>2019-03-18T14:44:28.347Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -783,14 +807,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/09/25/2015-09-25-js-array/</loc>
-        <lastmod>2017-06-01T15:37:56.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/</loc>
         <lastmod>2017-05-15T14:15:54.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -905,14 +921,6 @@
     <url>
         <loc>https://www.jeffjade.com/2015/05/31/2015-05-31-javascript-operational%EF%BC%8Dsymbol/</loc>
         <lastmod>2017-02-24T14:23:35.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2015/10/04/2015-10-03-use-jquery-better/</loc>
-        <lastmod>2017-02-05T15:56:27.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -1137,14 +1145,6 @@
     <url>
         <loc>https://www.jeffjade.com/2015/09/06/2015-09-06-ios8-safari-jitbug-record/</loc>
         <lastmod>2015-10-06T10:28:09.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2015/08/28/2015-09-02-js-string-compare/</loc>
-        <lastmod>2015-10-06T10:28:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
