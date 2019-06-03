@@ -91,19 +91,19 @@ body {
 }
 
 .notfound .link-button {
+  display: inline-block;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   text-decoration: none;
-  text-transform: uppercase;
   border: 1px solid #20a0ff;
   color: #20a0ff;
   font-weight: 700;
   border-radius: 2em;
   transition: all .15s ease;
   box-sizing: border-box;
-  display: inline-block;
   border-radius: 40px;
   font-weight: 400;
+  margin-bottom: 8px;
   -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
 }
@@ -154,6 +154,9 @@ body {
 .link-button:hover::before {
   transform: translate(-50%, -50%) scale(15);
 }
+.section {
+  display: block;
+}
 </style>
 
 <body>
@@ -163,15 +166,15 @@ body {
             <h1>Oops!</h1>
         </div>
         <h2 class="notfound-title">404 - Page not found</h2>
+        <p>抱歉，您正在查找的页面，可能已被删除，因为页面名称已更改，或暂时不可用。您可以通过以下链接，从而访问更多有趣内容。</p>
         <section class="section">
-          <p>抱歉，您正在查找的页面，可能已被删除，因为页面名称已更改，或暂时不可用。您可以通过以下链接，从而访问更多有趣内容。</p>
           <a class="link-button" href="https://www.jeffjade.com/?utm_source=jeffjade.com&pid=404">晚晴幽草轩</a>
-          <a class="link-button" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">倾城之链</a>
-          <a class="link-button" href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">
+          <a class="link-button" href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="external">
           静轩之别苑</a>
-          <a class="link-button" href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">静轩之别苑</a>
-          <a class="link-button" href="https://nice.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">静晴轩别苑</a>
-          <a class="link-button" href="https://blog.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="noopener">天意人间舫</a>
+          <a class="link-button" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=404" target="_blank" rel="external">倾城之链</a>
+          <a class="link-button" href="https://markdown.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="external">在线 Markdown 编辑器</a>
+          <a class="link-button" href="https://nice.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="external">静晴轩别苑</a>
+          <a class="link-button" href="https://blog.lovejade.cn/?utm_source=jeffjade.com&pid=404" target="_blank" rel="external">天意人间舫</a>
         </section>
     </div>
   </div>
