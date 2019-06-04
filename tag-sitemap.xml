@@ -86,8 +86,8 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/NodeJs/</loc>
-        <lastmod>2019-03-26T14:31:16.632Z</lastmod>
+        <loc>https://www.jeffjade.com/tags/Regex/</loc>
+        <lastmod>2019-03-26T14:31:16.633Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -109,20 +109,6 @@
     <url>
         <loc>https://www.jeffjade.com/tags/Git/</loc>
         <lastmod>2019-03-26T14:31:16.633Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Regex/</loc>
-        <lastmod>2019-03-26T14:31:16.633Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Gulp/</loc>
-        <lastmod>2019-03-26T14:31:16.639Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -205,41 +191,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Atom/</loc>
-        <lastmod>2019-03-26T14:31:16.776Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/AutoHotKey/</loc>
-        <lastmod>2019-03-26T14:31:16.776Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Rake/</loc>
-        <lastmod>2019-03-26T14:31:16.776Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Jekyll/</loc>
-        <lastmod>2019-03-26T14:31:16.776Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Efficiency/</loc>
-        <lastmod>2019-03-28T05:28:52.022Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Android/</loc>
         <lastmod>2019-04-03T16:08:27.781Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -275,29 +226,8 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Thought/</loc>
-        <lastmod>2019-05-30T05:03:43.249Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Tools/</loc>
-        <lastmod>2019-05-30T05:03:43.249Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Nice/</loc>
         <lastmod>2019-05-30T05:03:43.249Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Share/</loc>
-        <lastmod>2019-06-02T15:14:29.836Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -338,13 +268,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Toss/</loc>
-        <lastmod>2019-06-02T16:36:26.598Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Vue/</loc>
         <lastmod>2019-06-02T16:41:17.830Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -366,8 +289,85 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/tags/Rake/</loc>
+        <lastmod>2019-06-04T13:44:51.959Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Jekyll/</loc>
+        <lastmod>2019-06-04T13:44:51.959Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/AutoHotKey/</loc>
+        <lastmod>2019-06-04T13:45:45.293Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Atom/</loc>
+        <lastmod>2019-06-04T13:45:59.110Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Thought/</loc>
+        <lastmod>2019-06-04T13:46:37.181Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Gulp/</loc>
+        <lastmod>2019-06-04T13:46:48.781Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/NodeJs/</loc>
+        <lastmod>2019-06-04T13:46:48.781Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Efficiency/</loc>
+        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Tools/</loc>
+        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Share/</loc>
+        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Toss/</loc>
+        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/tags/JavaScript/</loc>
-        <lastmod>2019-06-03T16:30:40.275Z</lastmod>
+        <lastmod>2019-06-04T13:47:13.503Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
