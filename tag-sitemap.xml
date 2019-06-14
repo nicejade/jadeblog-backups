@@ -331,7 +331,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Efficiency/</loc>
+        <loc>https://www.jeffjade.com/tags/Share/</loc>
         <lastmod>2019-06-04T13:47:03.247Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -345,6 +345,13 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/tags/Efficiency/</loc>
+        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/tags/Toss/</loc>
         <lastmod>2019-06-04T13:47:03.247Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -352,22 +359,15 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Share/</loc>
-        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/JavaScript/</loc>
-        <lastmod>2019-06-14T05:34:41.735Z</lastmod>
+        <lastmod>2019-06-14T05:41:29.051Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.jeffjade.com/tags/Puppeteer/</loc>
-        <lastmod>2019-06-14T05:34:41.735Z</lastmod>
+        <lastmod>2019-06-14T05:41:29.051Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

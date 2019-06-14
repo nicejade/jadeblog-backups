@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2019-06-14T05:34:41.735Z</updated>
+  <updated>2019-06-14T05:41:29.051Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,13 +20,15 @@
     <link href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/"/>
     <id>https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/</id>
     <published>2019-06-14T05:14:15.000Z</published>
-    <updated>2019-06-14T05:34:41.735Z</updated>
+    <updated>2019-06-14T05:41:29.051Z</updated>
     
     <content type="html"><![CDATA[<p>呼，身处这数字信息化智能时代，即便是个人，也是很有必要利用各种工具，打造属于自己的自动化机器人，以协助完成些精确性事物，使得可以节省更多的时间，来学习或者做更有意义的事情；基于这种想法、以及那越发繁忙的现实，现终于开始尝试；<a href="https://github.com/nicejade/puppeteer-robot" target="_blank" rel="external">Puppeteer Robot</a> 仓库的建立，即为这漫漫长路，所迈出的第一步。此文即对此仓库的背景、目标、使用以及进化历程做下阐述。</p>
+<a id="more"></a>
 <p><img src="https://image.nicelinks.site/puppeteer-robot.jpeg?v1" alt="Puppeteer Robot"></p>
 <h2 id="目标与哲学"><a href="#目标与哲学" class="headerlink" title="目标与哲学"></a>目标与哲学</h2><blockquote>
 <p>身处这数字信息化智能时代，即便是个人，也是很有必要利用各种工具，打造属于自己的自动化机器人，以协助完成些精确性事物，使得可以节省更多的时间，来学习或者做更有意义的事情；基于新学到技能，再反过来改进、完善自动化流程；如此，形成良性循环，坚持往复，从而在此大争之世，获取更多一些竞争力，以期达成过自己想要的生活。此 <a href="https://github.com/nicejade/puppeteer-robot" target="_blank" rel="external">Puppeteer Robot 仓库</a>的建立，就是为此目标而做的初步尝试。</p>
 </blockquote>
+<p>截止目前，它可以完成以下事宜：</p>
 <ul>
 <li>每天指定时间，自动登录<a href="https://hacpai.com/register?r=jeffjade" target="_blank" rel="external">黑客派</a>社区网站，并进行签到；</li>
 </ul>
@@ -612,9 +614,9 @@
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
-      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
-    
       <category term="Prettier" scheme="https://www.jeffjade.com/tags/Prettier/"/>
+    
+      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
   </entry>
   
@@ -774,9 +776,9 @@
     
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
@@ -872,11 +874,11 @@
     
       <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
     
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="Nice" scheme="https://www.jeffjade.com/tags/Nice/"/>
     
@@ -1341,11 +1343,11 @@
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
-      <category term="Efficiency" scheme="https://www.jeffjade.com/tags/Efficiency/"/>
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+      <category term="Efficiency" scheme="https://www.jeffjade.com/tags/Efficiency/"/>
     
       <category term="Mac" scheme="https://www.jeffjade.com/tags/Mac/"/>
     
@@ -1652,9 +1654,9 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Blog" scheme="https://www.jeffjade.com/tags/Blog/"/>
     
