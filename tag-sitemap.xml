@@ -247,13 +247,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Puppeteer/</loc>
-        <lastmod>2019-06-02T16:21:20.061Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Google/</loc>
         <lastmod>2019-06-02T16:21:20.061Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -352,13 +345,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Share/</loc>
-        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Toss/</loc>
         <lastmod>2019-06-04T13:47:03.247Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -366,8 +352,22 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/tags/Share/</loc>
+        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/tags/JavaScript/</loc>
-        <lastmod>2019-06-04T13:47:13.503Z</lastmod>
+        <lastmod>2019-06-14T05:34:41.735Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Puppeteer/</loc>
+        <lastmod>2019-06-14T05:34:41.735Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
