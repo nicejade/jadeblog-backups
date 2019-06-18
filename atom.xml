@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2019-06-14T05:41:29.051Z</updated>
+  <updated>2019-06-18T15:33:16.496Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/"/>
     <id>https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/</id>
     <published>2019-06-14T05:14:15.000Z</published>
-    <updated>2019-06-14T05:41:29.051Z</updated>
+    <updated>2019-06-18T15:33:16.496Z</updated>
     
     <content type="html"><![CDATA[<p>呼，身处这数字信息化智能时代，即便是个人，也是很有必要利用各种工具，打造属于自己的自动化机器人，以协助完成些精确性事物，使得可以节省更多的时间，来学习或者做更有意义的事情；基于这种想法、以及那越发繁忙的现实，现终于开始尝试；<a href="https://github.com/nicejade/puppeteer-robot" target="_blank" rel="external">Puppeteer Robot</a> 仓库的建立，即为这漫漫长路，所迈出的第一步。此文即对此仓库的背景、目标、使用以及进化历程做下阐述。</p>
 <a id="more"></a>
@@ -35,6 +35,9 @@
 <h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><p><code>Puppeteer</code> 至少需要 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a> v6.4.0，但下面的示例使用 <code>async</code> / <code>await</code>，它仅在 Node v7.6.0 或更高版本中受支持。</p>
 <h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 🎉 clone the project</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/nicejade/puppeteer-robot.git your-project-name</div><div class="line"><span class="built_in">cd</span> your-project-name</div><div class="line"></div><div class="line"><span class="comment"># ➕ install dependencies &amp; start dev</span></div><div class="line">yarn</div></pre></td></tr></table></figure>
 <p>此外，你需要单独下载  <code>Chromium</code>（国内用户可以在 <a href="https://npm.taobao.org/mirrors/chromium-browser-snapshots/" target="_blank" rel="external">Taobao Mirrors</a> 根据系统按需下载）,并将其放置到项目根目录下即可；当然，你也可以通过修改代码，指定其所在的其他位置。</p>
+<blockquote>
+<p><strong>备注：</strong> <code>Puppeteer</code> 需要用到 <code>Chromium</code>，但，即便处于 Science 上网的姿态， 也会遇到 Chromium 无法成功下载的问题；所以在此项目中，有替换成使用 <a href="https://github.com/GoogleChrome/puppeteer#puppeteer-core" target="_blank" rel="external">puppeteer-core</a> （默认情况下不下载 Chromium，使用时须要确保您安装的 <code>puppeteer-core</code> 版本与您要连接的浏览器兼容）；鉴于此，还是手动下载 <code>Chromium</code>，通过设定 <code>executablePath</code> 来使用。</p>
+</blockquote>
 <h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>您需要在 <code>src/config</code> 目录下，根据 <code>secretSample.js</code> 格式，创建 <code>secret.js</code> 文件，并修改其中配置；</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn start</div></pre></td></tr></table></figure>
 <h2 id="有用链接"><a href="#有用链接" class="headerlink" title="有用链接"></a>有用链接</h2><ul>
@@ -874,9 +877,9 @@
     
       <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
     
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
@@ -1343,11 +1346,11 @@
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+      <category term="Efficiency" scheme="https://www.jeffjade.com/tags/Efficiency/"/>
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
-      <category term="Efficiency" scheme="https://www.jeffjade.com/tags/Efficiency/"/>
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="Mac" scheme="https://www.jeffjade.com/tags/Mac/"/>
     
