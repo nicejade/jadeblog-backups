@@ -51,14 +51,14 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Cookie/</loc>
+        <loc>https://www.jeffjade.com/tags/Health/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Health/</loc>
+        <loc>https://www.jeffjade.com/tags/Cookie/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -93,6 +93,13 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/tags/Git/</loc>
+        <lastmod>2019-03-26T14:31:16.633Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/tags/Angular/</loc>
         <lastmod>2019-03-26T14:31:16.633Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -101,13 +108,6 @@
 
     <url>
         <loc>https://www.jeffjade.com/tags/Pwa/</loc>
-        <lastmod>2019-03-26T14:31:16.633Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Git/</loc>
         <lastmod>2019-03-26T14:31:16.633Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -317,13 +317,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Gulp/</loc>
-        <lastmod>2019-06-04T13:46:48.781Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/NodeJs/</loc>
         <lastmod>2019-06-04T13:46:48.781Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -331,15 +324,8 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Efficiency/</loc>
-        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Tools/</loc>
-        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
+        <loc>https://www.jeffjade.com/tags/Gulp/</loc>
+        <lastmod>2019-06-04T13:46:48.781Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -353,6 +339,20 @@
 
     <url>
         <loc>https://www.jeffjade.com/tags/Share/</loc>
+        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Efficiency/</loc>
+        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Tools/</loc>
         <lastmod>2019-06-04T13:47:03.247Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

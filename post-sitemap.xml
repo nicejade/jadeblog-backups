@@ -279,7 +279,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/06/29/2015-06-29-css-background/</loc>
+        <loc>https://www.jeffjade.com/2015/06/18/2015-06-18-perfect-music/</loc>
         <lastmod>2019-03-26T14:31:16.735Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -287,7 +287,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/06/18/2015-06-18-perfect-music/</loc>
+        <loc>https://www.jeffjade.com/2015/06/29/2015-06-29-css-background/</loc>
         <lastmod>2019-03-26T14:31:16.735Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -351,7 +351,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/05/16/2015-05-16-mac-musthave-software/</loc>
+        <loc>https://www.jeffjade.com/2015/04/19/2015-04-19-toss-bind-domainname/</loc>
         <lastmod>2019-03-26T14:31:16.719Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -359,7 +359,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/04/19/2015-04-19-toss-bind-domainname/</loc>
+        <loc>https://www.jeffjade.com/2015/05/16/2015-05-16-mac-musthave-software/</loc>
         <lastmod>2019-03-26T14:31:16.719Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -751,22 +751,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2016/10/31/115-summary-of-cookie/</loc>
-        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2017/04/30/121-sigh-life/</loc>
-        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2015/01/10/2015-01-10-why-indulge/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -791,7 +775,15 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
+        <loc>https://www.jeffjade.com/2016/10/31/115-summary-of-cookie/</loc>
+        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2017/04/30/121-sigh-life/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -800,6 +792,14 @@
 
     <url>
         <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
+        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

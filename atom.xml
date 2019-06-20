@@ -297,9 +297,9 @@
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
-      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
-    
       <category term="React" scheme="https://www.jeffjade.com/tags/React/"/>
+    
+      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
   </entry>
   
@@ -617,9 +617,9 @@
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
-      <category term="Prettier" scheme="https://www.jeffjade.com/tags/Prettier/"/>
-    
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="Prettier" scheme="https://www.jeffjade.com/tags/Prettier/"/>
     
   </entry>
   
@@ -877,15 +877,15 @@
     
       <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
     
-      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
-    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
-      <category term="Nice" scheme="https://www.jeffjade.com/tags/Nice/"/>
+      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="Nice" scheme="https://www.jeffjade.com/tags/Nice/"/>
     
   </entry>
   
@@ -1342,13 +1342,13 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Efficiency" scheme="https://www.jeffjade.com/tags/Efficiency/"/>
-    
-      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
-    
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Efficiency" scheme="https://www.jeffjade.com/tags/Efficiency/"/>
+    
+      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
