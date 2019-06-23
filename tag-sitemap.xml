@@ -261,20 +261,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Vue/</loc>
-        <lastmod>2019-06-02T16:41:17.830Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Markdown/</loc>
-        <lastmod>2019-06-02T16:41:17.830Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/jQuery/</loc>
         <lastmod>2019-06-03T16:30:23.082Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -331,20 +317,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Toss/</loc>
-        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Share/</loc>
-        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Efficiency/</loc>
         <lastmod>2019-06-04T13:47:03.247Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -359,8 +331,15 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/JavaScript/</loc>
-        <lastmod>2019-06-18T15:33:16.496Z</lastmod>
+        <loc>https://www.jeffjade.com/tags/Toss/</loc>
+        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Share/</loc>
+        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -368,6 +347,27 @@
     <url>
         <loc>https://www.jeffjade.com/tags/Puppeteer/</loc>
         <lastmod>2019-06-18T15:33:16.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Vue/</loc>
+        <lastmod>2019-06-23T15:43:54.236Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/JavaScript/</loc>
+        <lastmod>2019-06-23T15:43:54.236Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Markdown/</loc>
+        <lastmod>2019-06-23T15:43:54.236Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

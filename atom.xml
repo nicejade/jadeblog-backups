@@ -90,20 +90,20 @@
     <link href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/"/>
     <id>https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/</id>
     <published>2019-05-31T10:19:20.000Z</published>
-    <updated>2019-06-02T16:41:17.830Z</updated>
+    <updated>2019-06-23T15:43:54.236Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a>，是一款基于 <code>Vue</code>、<code>Vditor</code>，为未来而构建的在线 Markdown 编辑器；轻量且强大：内置粘贴 HTML 自动转换为 Markdown，支持流程图、甘特图、时序图、任务列表，可导出携带样式的图片、PDF、以及转换 Markdown 成微信公众号特制的 HTML 等；另外支持<strong>实时预览</strong>、<strong>本地存储</strong>、字符计数，提供常用快捷键（含<strong>Tab</strong>），及代码块添加复制等功能。</p>
+    <content type="html"><![CDATA[<p><a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a>，是一款基于 <code>Vue</code>、<code>Vditor</code>，为未来而构建的在线 Markdown 编辑器；轻量且强大：内置粘贴 HTML 自动转换为 Markdown，支持流程图、甘特图、时序图、任务列表，可导出携带样式的图片、PDF、以及转换 Markdown 成微信公众号特制的 HTML 等；另外支持<strong>实时预览</strong>、<strong>本地存储</strong>、字符计数，提供常用快捷键（含<strong>Tab</strong>），及代码块添加复制等功能。</p>
 <a id="more"></a>
 <p><img src="https://image.nicelinks.site/arya-markdown-editor.jpg" alt="Arya - 在线 Markdown 编辑器"></p>
 <blockquote>
-<p><a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a> 另一大优点在于：编辑内容只会在您本地进行保存，不会上传您的数据至服务器，<strong>绝不窥测用户个人隐私，可放心使用</strong>；Github 源码：<a href="https://github.com/nicejade/markdown-online-editor" target="_blank" rel="external">markdown-online-editor</a>，部分功能仍在开发🚧，敬请期待。</p>
+<p><a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a> 另一大优点在于：编辑内容只会在您本地进行保存，不会上传您的数据至服务器，<strong>绝不窥测用户个人隐私，可放心使用</strong>；Github 源码：<a href="https://github.com/nicejade/markdown-online-editor" target="_blank" rel="external">markdown-online-editor</a>，部分功能仍在开发🚧，敬请期待。</p>
 </blockquote>
-<h2 id="背景初衷"><a href="#背景初衷" class="headerlink" title="背景初衷"></a>背景初衷</h2><p>早期就有关注到由<a href="https://hacpai.com/?utm_source=jeffjade.com" target="_blank" rel="external">黑客派</a>所出品的 <a href="https://hacpai.com/tag/vditor?utm_source=jeffjade.com" target="_blank" rel="external">Vditor</a>：一款为未来而构建的下一代 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">Markdown</a> 编辑器。然，现而今市面上所存在的 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">Markdown</a> 编辑器，或多或少都存在一些问题（或功能不全，或高级功能收费…），因此基于自身所需，加之 <a href="https://hacpai.com/tag/vditor?utm_source=jeffjade.com" target="_blank" rel="external">Vditor</a> 的强大，就诞生了做一款<a href="https://quickapp.lovejade.cn/?utm_source=github.com" target="_blank" rel="external">在线 Markdown 编辑器</a> 的念头；取其名曰：<code>Arya</code>，个中原由，有在<a href="https://quickapp.lovejade.cn/talking-game-of-thrones/?utm_source=jeffjade.com" target="_blank" rel="external">观《权利的游戏》感记</a>一文有做记载。</p>
-<h2 id="功能支持🎉"><a href="#功能支持🎉" class="headerlink" title="功能支持🎉"></a>功能支持🎉</h2><input type="checkbox" checked="checked" disabled="disabled">     🎉 通常 <code>Markdown</code> 解析器自带的基本功能；<br><input type="checkbox" checked="checked" disabled="disabled">     ✨ 支持<strong>流程图</strong>、<strong>甘特图</strong>、<strong>时序图</strong>、<strong>任务列表</strong>；<br><input type="checkbox" checked="checked" disabled="disabled">     🏁 支持粘贴 HTML 自动转换为 Markdown；<br><input type="checkbox" checked="checked" disabled="disabled">     💃🏻 支持插入原生 Emoji、设置常用表情列表；<br><input type="checkbox" checked="checked" disabled="disabled">     🚑 支持编辑内容保存<strong>本地存储</strong>，防止意外丢失；<br><input type="checkbox" checked="checked" disabled="disabled">     📝 支持<strong>实时预览</strong>，主窗口大小拖拽，字符计数；<br><input type="checkbox" checked="checked" disabled="disabled">     🛠 支持常用快捷键(<strong>Tab</strong>)，及代码块添加复制；<br><input type="checkbox" checked="checked" disabled="disabled">     🚧 支持<strong>导出</strong>携带样式PDF、PNG、JPEG 等；<br><input type="checkbox" disabled="disabled">     🚧 支持转换 Markdown 到<strong>微信特制的 HTML</strong>；<br><input type="checkbox" disabled="disabled">     🚧 内置多种漂亮样式，并且支持用户<strong>自定义</strong>；
+<h2 id="背景初衷"><a href="#背景初衷" class="headerlink" title="背景初衷"></a>背景初衷</h2><p>早期就有关注到由<a href="https://hacpai.com/?utm_source=jeffjade.com" target="_blank" rel="external">黑客派</a>所出品的 <a href="https://hacpai.com/tag/vditor?utm_source=jeffjade.com" target="_blank" rel="external">Vditor</a>：一款为未来而构建的下一代 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">Markdown</a> 编辑器。然，现而今市面上所存在的 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">Markdown</a> 编辑器，或多或少都存在一些问题（或功能不全，或高级功能收费…），因此基于自身所需，加之 <a href="https://hacpai.com/tag/vditor?utm_source=jeffjade.com" target="_blank" rel="external">Vditor</a> 的强大，就诞生了做一款<a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">在线 Markdown 编辑器</a> 的念头；取其名曰：<code>Arya</code>，个中原由，有在<a href="https://quickapp.lovejade.cn/talking-game-of-thrones/?utm_source=jeffjade.com" target="_blank" rel="external">观《权利的游戏》感记</a>一文有做记载。</p>
+<h2 id="功能支持🎉"><a href="#功能支持🎉" class="headerlink" title="功能支持🎉"></a>功能支持🎉</h2><input type="checkbox" checked="checked" disabled="disabled">     🎉 通常 <code>Markdown</code> 解析器自带的基本功能；<br><input type="checkbox" checked="checked" disabled="disabled">     ✨ 支持<strong>流程图</strong>、<strong>甘特图</strong>、<strong>时序图</strong>、<strong>任务列表</strong>；<br><input type="checkbox" checked="checked" disabled="disabled">     🏁 支持粘贴 HTML 自动转换为 Markdown；<br><input type="checkbox" checked="checked" disabled="disabled">     💃🏻 支持插入原生 Emoji、设置常用表情列表；<br><input type="checkbox" checked="checked" disabled="disabled">     🚑 支持编辑内容保存<strong>本地存储</strong>，防止意外丢失；<br><input type="checkbox" checked="checked" disabled="disabled">     📝 支持<strong>实时预览</strong>，主窗口大小拖拽，字符计数；<br><input type="checkbox" checked="checked" disabled="disabled">     🛠 支持常用快捷键(<strong>Tab</strong>)，及代码块添加复制；<br><input type="checkbox" checked="checked" disabled="disabled">     🚧 支持<strong>导出</strong>携带样式PDF、PNG、JPEG 等；<br><input type="checkbox" disabled="disabled">     🚧 支持转换 Markdown 到<strong>微信特制的 HTML</strong>；<br><input type="checkbox" disabled="disabled">     🚧 内置多种漂亮样式，并且支持用户<strong>自定义</strong>；<br><input type="checkbox" disabled="disabled">     🚧 支持检查并格式化 Markdown 语法，使其专业；
 
-<h2 id="关于定位📌"><a href="#关于定位📌" class="headerlink" title="关于定位📌"></a>关于定位📌</h2><p>众所周知，早在几年前，市面上就充盈百余种不同的 <code>Markdown</code>  编辑器；其中不乏很多功能强大，体验良好的 <code>Markdown</code>  神器；在 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">倾城之链 | Markdown</a>  标签中，也是收录了些 <code>Markdown</code>  相关工具。但，就如在<code>初衷</code>中提及的，那些工具或多或少都存在一些问题比如：功能不全，使用不便，体验不佳，或高级功能收费等；对于 <a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a>，无意让她在 <code>Markdown</code>  的江湖逐鹿中原，目前给其设定就是：<strong>轻盈且强大</strong>，<strong>免费又安全</strong>。关于 <a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a> 能做的，可参见 <a href="https://github.com/nicejade/markdown-online-editor#功能支持" target="_blank" rel="external">Arya Markdown 功能支持</a>；当然，那并不是 <code>Arya</code> 最终形态，如果您有更多关于 <code>Markdown</code> 相关的诉求或建议，欢迎👏提给我（可以通过<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">各种渠道</a>），这边会尽最大努力满足您。</p>
+<h2 id="关于定位📌"><a href="#关于定位📌" class="headerlink" title="关于定位📌"></a>关于定位📌</h2><p>众所周知，早在几年前，市面上就充盈百余种不同的 <code>Markdown</code>  编辑器；其中不乏很多功能强大，体验良好的 <code>Markdown</code>  神器；在 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">倾城之链 | Markdown</a>  标签中，也是收录了些 <code>Markdown</code>  相关工具。但，就如在<code>初衷</code>中提及的，那些工具或多或少都存在一些问题比如：功能不全，使用不便，体验不佳，或高级功能收费等；对于 <a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a>，无意让她在 <code>Markdown</code>  的江湖逐鹿中原，目前给其设定就是：<strong>轻盈且强大</strong>，<strong>免费又安全</strong>。关于 <a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a> 能做的，可参见 <a href="https://github.com/nicejade/markdown-online-editor#功能支持" target="_blank" rel="external">Arya Markdown 功能支持</a>；当然，那并不是 <code>Arya</code> 最终形态，如果您有更多关于 <code>Markdown</code> 相关的诉求或建议，欢迎👏提给我（可以通过<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">各种渠道</a>），这边会尽最大努力满足您。</p>
 <blockquote>
-<p>额外补充，因为数据使它们更具说服力且易于理解，能够将可视化嵌入到文本中的技术非常重要；受益于 <a href="https://github.com/geekplux/markvis" target="_blank" rel="external">markvis</a> (make visualization in markdown.) 的启发，完全可以将 <code>Arya</code> 中内置 <code>d3</code> 等可视化库，从而使用户可以更加方便，在 <a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya Markdown</a> 中进行数据可视化操作；再辅之以导出功能，哇哦，至少这些功能于我而言，是超有用的存在。另外，很多同学，在写中文文案时候，不太会注重格式，如中英文间未有空格等；后面 <code>Arya</code> 也会考虑注入自动格式化文档的功能….. 诸此等等；此篇文章，也会随之而来的新想法、新功能以及其他新建议，而不断完善；总之呢，敬请期待。（2019.06.02）</p>
+<p>额外补充，因为数据使它们更具说服力且易于理解，能够将可视化嵌入到文本中的技术非常重要；受益于 <a href="https://github.com/geekplux/markvis" target="_blank" rel="external">markvis</a> (make visualization in markdown.) 的启发，完全可以将 <code>Arya</code> 中内置 <code>d3</code> 等可视化库，从而使用户可以更加方便，在 <a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya Markdown</a> 中进行数据可视化操作；再辅之以导出功能，哇哦，至少这些功能于我而言，是超有用的存在。另外，很多同学，在写中文文案时候，不太会注重格式，如中英文间未有空格等；后面 <code>Arya</code> 也会考虑注入自动格式化文档的功能….. 诸此等等；此篇文章，也会随之而来的新想法、新功能以及其他新建议，而不断完善；总之呢，敬请期待。（2019.06.02）</p>
 </blockquote>
 <p>于 2019 年 5 月 19 号，深圳.福田；last modify: 2019.06.02。</p>
 <h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
@@ -877,11 +877,11 @@
     
       <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
     
+      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
+    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
@@ -1342,13 +1342,13 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
       <category term="Efficiency" scheme="https://www.jeffjade.com/tags/Efficiency/"/>
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
+    
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
