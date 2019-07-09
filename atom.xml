@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2019-06-18T15:33:16.496Z</updated>
+  <updated>2019-07-09T15:11:32.667Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/"/>
     <id>https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/</id>
     <published>2019-06-14T05:14:15.000Z</published>
-    <updated>2019-06-18T15:33:16.496Z</updated>
+    <updated>2019-07-09T15:11:32.667Z</updated>
     
     <content type="html"><![CDATA[<p>呼，身处这数字信息化智能时代，即便是个人，也是很有必要利用各种工具，打造属于自己的自动化机器人，以协助完成些精确性事物，使得可以节省更多的时间，来学习或者做更有意义的事情；基于这种想法、以及那越发繁忙的现实，现终于开始尝试；<a href="https://github.com/nicejade/puppeteer-robot" target="_blank" rel="external">Puppeteer Robot</a> 仓库的建立，即为这漫漫长路，所迈出的第一步。此文即对此仓库的背景、目标、使用以及进化历程做下阐述。</p>
 <a id="more"></a>
@@ -60,6 +60,7 @@
 <li><a href="https://www.facebook.com/nice.jade.yang" target="_blank" rel="external">Facebook</a></li>
 </ul>
 <h3 id="您可能会感兴趣的文章："><a href="#您可能会感兴趣的文章：" class="headerlink" title="您可能会感兴趣的文章："></a>您可能会感兴趣的文章：</h3><ul>
+<li><a href="https://www.jeffjade.com/2017/12/17/134-kinds-of-toss-using-puppeteer/">大前端神器安利之 Puppeteer</a></li>
 <li><a href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/">Arya - 在线 Markdown 编辑器</a></li>
 <li><a href="https://www.jeffjade.com/2019/02/02/150-prettier-quickapp-plugin/">Prettier 插件为更漂亮快应用代码</a></li>
 <li><a href="https://www.jeffjade.com/2019/01/13/146-awesome-vue-cli3-example/">基于 Vue-Cli3 构建的脚手架模版</a></li>
