@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2019-08-01T17:23:19.661Z</updated>
+  <updated>2019-08-01T23:31:03.140Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -16,15 +16,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>微话各类博文平台工具优劣</title>
+    <title>如何选取个人独立博客框架</title>
     <link href="https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/"/>
     <id>https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/</id>
     <published>2019-07-29T12:20:20.000Z</published>
-    <updated>2019-08-01T17:23:19.661Z</updated>
+    <updated>2019-08-01T23:31:03.140Z</updated>
     
     <content type="html"><![CDATA[<p>身处当前数字化社会，打造<strong>个人品牌</strong>，越发显得重要（自我推销）。对于从事技相关的人群，欲要树立并长时间保持自己的<code>个人品牌</code>，最便捷的方法无疑是：坚持长时间高质量输出原创文章。就择取合适的博文平台，也是项技术活儿；本文主旨，就针对这承载文字的各类平台，结合其功能特点，探讨下其优劣所在，以便可为更多朋友，就如何选择博文平台诉求，提供些参考。</p>
 <a id="more"></a>
-<p><img src="https://image.nicelinks.site/vuepress-hexo-jekyll-ghost-gitbook-hugo-solo.jpg" alt="微话各类博文平台工具优劣"></p>
+<p><img src="https://image.nicelinks.site/vuepress-hexo-jekyll-ghost-gitbook-hugo-solo.jpg" alt="如何选取个人独立博客框架"></p>
 <p>早前在知乎上，有<a href="https://www.zhihu.com/question/327677612/answer/704842622" target="_blank" rel="external">如何在语雀，Gitbook，看云和 Hexo 个人博客取舍?</a>一问，受邀回答，兴之所至，趁着午休，就将过往的些经验，稍作整理，回帖分享。后来陆续有见类似提问，既如此，何不在博客中，专写一篇以作阐述？如此，再遇到类似问题，贴个链接则可，岂不快哉？于是，在拖延数日后，才有了这篇文章。</p>
 <hr>
 <p>就产出文字这事儿，如果写给自己看，无所谓在哪个平台；但，如果是对外，则一定要树立<strong>个人品牌</strong>；就个人品牌的塑造，个人更倾向的形态于是：<strong>个人博客</strong>；毕竟独立的才是自己的，而且，相比于公众号或者其他平台，都能更好的控制；同时也利于 <code>SEO</code>，能给更多的人提供帮助。在谈个人博客之前，先聊下时下还流行平台型博客：</p>
@@ -113,13 +113,13 @@
       <category term="Toss" scheme="https://www.jeffjade.com/categories/Toss/"/>
     
     
+      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
+    
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
       <category term="Hexo" scheme="https://www.jeffjade.com/tags/Hexo/"/>
     
@@ -408,9 +408,9 @@
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
-      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
-    
       <category term="React" scheme="https://www.jeffjade.com/tags/React/"/>
+    
+      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
   </entry>
   
@@ -988,11 +988,11 @@
     
       <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
     
+      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
+    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
@@ -1453,13 +1453,13 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
       <category term="Efficiency" scheme="https://www.jeffjade.com/tags/Efficiency/"/>
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
+    
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
