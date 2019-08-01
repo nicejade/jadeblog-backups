@@ -1,3 +1,4 @@
+https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/
 https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/
 https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/
 https://www.jeffjade.com/2019/04/26/154-colorize-your-javascript-code-logs/
@@ -66,24 +67,24 @@ https://www.jeffjade.com/2016/01/10/2016-01-10-javacript-setTimeout/
 https://www.jeffjade.com/2016/01/01/2016-01-01-movie2015/
 https://www.jeffjade.com/2015/12/26/2015-12-26-sum_up-in-the-end-of-year/
 https://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/
-https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/
 https://www.jeffjade.com/2015/11/25/2015-11-31-jQuery-vs-javaScript/
+https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/
 https://www.jeffjade.com/2015/11/14/2015-11-14-css-achieve-horizontal_vertical_center/
 https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/
 https://www.jeffjade.com/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/
 https://www.jeffjade.com/2015/10/28/2015-10-28-css3-webfont/
 https://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/
 https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/
-https://www.jeffjade.com/2015/10/15/2015-10-15-nice-animation-collection/
 https://www.jeffjade.com/2015/10/15/2015-10-16-cleaver-make-ppt/
+https://www.jeffjade.com/2015/10/15/2015-10-15-nice-animation-collection/
 https://www.jeffjade.com/2015/10/08/2015-10-08-js-object-length/
 https://www.jeffjade.com/2015/10/06/2015-10-06-perfect-js-code/
 https://www.jeffjade.com/2015/10/04/2015-10-03-use-jquery-better/
 https://www.jeffjade.com/2015/09/25/2015-09-25-js-array/
 https://www.jeffjade.com/2015/09/07/2015-09-07-jadetodos/
 https://www.jeffjade.com/2015/09/06/2015-09-06-ios8-safari-jitbug-record/
-https://www.jeffjade.com/2015/08/28/2015-09-02-js-string-compare/
 https://www.jeffjade.com/2015/08/28/2015-08-28-Write-Morkdown/
+https://www.jeffjade.com/2015/08/28/2015-09-02-js-string-compare/
 https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/
 https://www.jeffjade.com/2015/08/03/2015-08-03-javascript-this/
 https://www.jeffjade.com/2015/07/29/2015-07-29-mac-musthave-software/
@@ -97,4 +98,3 @@ https://www.jeffjade.com/2015/06/24/2015-06-24-css-block-inline/
 https://www.jeffjade.com/2015/06/18/2015-06-18-perfect-music/
 https://www.jeffjade.com/2015/06/18/2015-06-18-backbone-events/
 https://www.jeffjade.com/2015/06/14/2015-06-14-programer-health/
-https://www.jeffjade.com/2015/06/05/2015-06-05-Share-Filco/
