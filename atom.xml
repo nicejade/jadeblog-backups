@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2019-08-04T16:04:51.050Z</updated>
+  <updated>2019-08-11T16:16:13.596Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/"/>
     <id>https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/</id>
     <published>2019-07-29T12:20:20.000Z</published>
-    <updated>2019-08-04T16:04:51.050Z</updated>
+    <updated>2019-08-11T16:16:13.596Z</updated>
     
     <content type="html"><![CDATA[<p>身处当前数字化社会，打造<strong>个人品牌</strong>，越发显得重要（自我推销）。对于从事技相关的人群，欲要树立并长时间保持自己的<code>个人品牌</code>，最便捷的方法无疑是：坚持长时间高质量输出原创文章。就择取合适的博文平台，也是项技术活儿；本文主旨，就针对这承载文字的各类平台，结合其功能特点，探讨下其优劣所在，以便可为更多朋友，就如何选择博文平台诉求，提供些参考。</p>
 <a id="more"></a>
@@ -85,13 +85,23 @@
 </blockquote>
 <p><a href="https://www.docz.site/" target="_blank" rel="external">Docz</a>，为极简创造文档而生。它有如下特征：<strong>零配置</strong>，无需担心复杂的配置步骤，且使用十分简单；采用 <code>Wepack 4</code> 构建，完全热重新加载支持和自动代码分割；基于 <code>MDX</code>( <em>Markdown + JSX</em> )，极大降低组件编写复杂度；易于创建自定义主题；<strong>可插拔</strong>，支持定制灵活的解决方案；支持 <code>Typescript</code>，允许您的类型定义。另外，<a href="https://www.docz.site/" target="_blank" rel="external">Docz</a> 内置了些许组件，通过在组件构建过程中结合 <code>AST</code> 解析，有可能带来很多出类拔萃的想法，而 <strong>Docz</strong> 则是更好的选择。甚至，您可以轻松构建和部署您的文档，从而建立您的网站。</p>
 <p><strong>个人品评</strong>：它同 VuePress 一样，用到了大量前端领域新的技术，因此，对前端开发者也同样具有诱惑力；相比于其他产品，它提供了 <code>Playground</code> 组件，您可以在 <code>Playground</code> 中渲染组件并查看使用的代码，那么它可以用过各种 <code>UI</code> 框架的展示文档；缺陷也雷同，目前发展不久，各种相关性插件还不足；另一个缺陷是，它构建出来的是 SPA，而 GitHub Pages 本身不支持单页面应用程序（SPA），所以要部署在 Github，则要额外解决这个问题。Docz 示例站点：<a href="https://docz.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">吾意静晴轩</a>。</p>
+<h3 id="Hugo"><a href="#Hugo" class="headerlink" title="Hugo"></a><a href="https://nicelinks.site/post/5c36d7b2589b2a35f579f377" target="_blank" rel="external">Hugo</a></h3><blockquote>
+<p>The world’s fastest framework for building websites</p>
+</blockquote>
+<p><a href="https://gohugo.io/?utm_source=nicelinks.site" target="_blank" rel="external">Hugo</a>（The world’s fastest framework for building websites） 是最受欢迎的开源静态站点生成器之一。凭借其惊人的速度和灵活性，可在几秒钟内安装，以毫秒为单位构建；<a href="https://gohugo.io/?utm_source=nicelinks.site" target="_blank" rel="external">Hugo</a>使建筑网站再次变得有趣。<a href="https://gohugo.io/?utm_source=nicelinks.site" target="_blank" rel="external">Hugo</a> 提供了一个强大的<a href="http://themes.gohugo.io/?utm_source=nicelinks.site" target="_blank" rel="external">主题系统</a>，易于实现，但即使是最复杂的网站也能生成；并能在任何服务器或您喜欢的 <code>CDN</code> 上托管。</p>
+<p><strong>个人品评</strong>：就如 <code>Hugo</code> 所宣称的那样：世界上最快的网站构建框架；它的的构建速度真是<strong>快</strong>，Hugo是一个用 <a href="https://golang.org/" target="_blank" rel="external">Go</a> 编写的静态 HTML 和 CSS 网站生成器。它针对速度，易用性和可配置性进行了优化。Hugo 获取包含内容和模板的目录，并将它们呈现为完整的 HTML 网站。<code>Hugo</code> 旨在适用于任何类型的网站，包括博客，翻滚和文档。之前项目中有涉及 200 余个 <code>.md</code> 文件，采用 <code>Gitbook</code> 构建，在本地运行许会卡死，而采用 Hugo 在 10s 左右就可完成；而且它使用简单、主题丰富、有强大的模板等优点，也是部署博客、文档的不错选择。Hugo 示例站点：<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">晚晴幽草轩轩主</a>。</p>
+<h3 id="Docsify"><a href="#Docsify" class="headerlink" title="Docsify"></a><a href="https://nicelinks.site/post/5d4fec8c4c0a2404cc79f97a" target="_blank" rel="external">Docsify</a></h3><blockquote>
+<p>🃏 A magical documentation generator.</p>
+</blockquote>
+<p><a href="https://docsify.js.org/?utm_source=nicelinks.site" target="_blank" rel="external">Docsify</a>：一个神奇的文档站点生成器。它简单轻巧，能即时生成您的文档网站，且拥有智能全文搜索插件。与 <a href="https://nicelinks.site/post/5c7d27dace377707f7f675f3" target="_blank" rel="external">GitBook</a> 不同，它不会生成静态 <code>html</code> 文件（但支持服务器端渲染，见<a href="https://github.com/docsifyjs/docsify-ssr-demo" target="_blank" rel="external">示例</a>）。相反，它可以智能地加载和解析您的 Markdown 文件并将其显示为网站。要开始使用它，您需要做的就是<a href="https://docsify.js.org/#/deploy" target="_blank" rel="external">在 GitHub 页面上</a>创建 <code>index.html</code> 并<a href="https://docsify.js.org/#/deploy" target="_blank" rel="external">部署</a>。如果您有静态文档需要挂载，那么 <a href="https://docsify.js.org/?utm_source=nicelinks.site" target="_blank" rel="external">Docsify</a> 是非常值得选择的工具利器。</p>
 <h3 id="GitHub-personal-website-generator"><a href="#GitHub-personal-website-generator" class="headerlink" title="GitHub personal website generator"></a><a href="https://nicelinks.site/post/5c72376b77e63e07f2994445" target="_blank" rel="external">GitHub personal website generator</a></h3><blockquote>
 <p>Build a personal website that shows off your contributions, interests, and development experience. It’s your own fully-customizable GitHub profile powered by our API, GitHub Pages, and Jekyll—ready for anyone interested in your work—as soon as you’re ready to share it.</p>
 </blockquote>
 <p>这由 <a href="https://nicelinks.site/post/59ba80d93df6765c75b77911" target="_blank" rel="external">Github</a> 官方出品的<a href="https://github.dev/?utm_source=jeffjade.com" target="_blank" rel="external">个人网站生成器</a>工具；它可以快速帮你建立一个展示您的贡献、兴趣和开发经验的个人网站。 它是您自己的完全可自定义的GitHub配置文件，由 GitHub API，GitHub Pages 和 Jekyll 提供支持，适用于对您的工作感兴趣的任何人 - 只要您准备好分享它。</p>
 <p><strong>个人品评</strong>：该工具开箱即用，与 <a href="https://nicelinks.site/post/59ba80d93df6765c75b77911" target="_blank" rel="external">Github</a> 保持同步，支持添加自定义域名，使您可以专注于重要的事情。有借助它在极短时间内，构建了展示<a href="https://github.lovejade.cn/?utm_source=nicelinks.site" target="_blank" rel="external">个人 Github 相关的网站</a>，其出色的设计，令人使用体验感觉良好；当然，您完全可以在其基础上，根据您的想法做任何扩展。同类型的还有：<a href="https://github.com/imfunniee/gitfolio" target="_blank" rel="external">gitfolio</a>：personal website + blog for every github user。只不过该工具所具备功能过于简单，暂时也没有相关性插件予以弥补，可用以作为个人 <code>Github</code> 展示工具。Github Generator 示例站点：<a href="https://github.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Github | 杨琼璞</a>。</p>
-<p>此类型的工具还有很多，比如 <a href="https://github.com/docsifyjs/docsify" target="_blank" rel="external">docsify</a> 等 ，鉴于篇幅就不一一列举说明了。</p>
-<p>温馨提醒：以上这些工具，站内搜索、部署以及评论，都是需要自行搞定的，但折腾起来也比较轻松；站内搜索，可以使用 <a href="https://nicelinks.site/post/5b141444ca049846c6ee6f91" target="_blank" rel="external">Algolia</a>：提供搜索即服务，帮助你打造实时的网站及应用内搜索服务。至于部署和评论，都可以基于 <a href="https://nicelinks.site/post/59ba80d93df6765c75b77911" target="_blank" rel="external">Github</a> 就好；分别是 <code>Github pages</code> 服务和 <code>Github Issues</code>。</p>
+<hr>
+<p>诸如此类的优良工具，还有很多，比如基于 PHP 语言所开发老牌博客平台 <a href="https://wordpress.org/" target="_blank" rel="external">WordPress</a>、由 React 所构建的渐进式静态站点生成器 <a href="https://github.com/react-static/react-static/" target="_blank" rel="external">react-static</a>，以及不少读者所反馈的 <a href="http://typecho.org/" target="_blank" rel="external">Typecho</a> 等等 ，鉴于篇幅,就不在此逐一列举，感兴趣的朋友可以参见 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/tools-tutorial.md#建站工具" target="_blank" rel="external">建站工具列表</a>。</p>
+<p><strong>温馨提醒</strong>：以上这些工具，站内搜索、部署以及评论，都是需要自行搞定的，但折腾起来也比较轻松；站内搜索，可以使用 <a href="https://nicelinks.site/post/5b141444ca049846c6ee6f91" target="_blank" rel="external">Algolia</a>：提供搜索即服务，帮助你打造实时的网站及应用内搜索服务。至于部署和评论，都可以基于 <a href="https://nicelinks.site/post/59ba80d93df6765c75b77911" target="_blank" rel="external">Github</a> 就好；分别是 <code>Github pages</code> 服务和 <code>Github Issues</code>。</p>
 <h2 id="支持后台的博客系统"><a href="#支持后台的博客系统" class="headerlink" title="支持后台的博客系统"></a>支持后台的博客系统</h2><p>除了上述很多静态博客工具，也有很多集成了后台发布等功能的博客系统；基于这些工具所打造的平台，进一步方便了博文的发布与修改；如果你有自己的服务器，推荐积极尝试下。下面就两款有所实践的工具，做下介绍。</p>
 <h3 id="Ghost"><a href="#Ghost" class="headerlink" title="Ghost"></a><a href="https://nicelinks.site/post/5c3f3151a5957e07a40b30ff" target="_blank" rel="external">Ghost</a></h3><blockquote>
 <p><a href="https://ghost.org/?utm_source=nicelinks.site" target="_blank" rel="external">Ghost</a> 一个简洁、纯粹的内容创作与发布平台，目由非盈利性组织 Ghost Foundation 和一群优秀的独立贡献者共同维护。她是基于 Node.js 构建，具有易用的书写界面和体验；官方提供 Docker 镜像，部署颇为简单；博客内容默认采用 <a href="https://nicelinks.site/tags/Markdown" target="_blank" rel="external">Markdown</a> 语法书写，其目标是取代臃肿的 Wordpress。另外，她具有一个非常强劲好用的后台，丰富的编辑功能，让你触手可及；允许注入代码，结构化数据，自定义 Facebook 和 Twitter 的社交媒体共享卡，使您能够为社交媒体添加自定义图像，标题和说明，十分利于 <strong>SEO</strong>；并且集成大量外部服务，允许您创建和自定义各种连接的应用程序；并且支持自定义主题，允许多人协作等等等等，更多功能可以参见<a href="https://quickapp.lovejade.cn/ghost-open-source-blog-platform/?utm_source=nicelinks.site" target="_blank" rel="external">强大如斯，Ghost 开源博客平台</a>；另附 <a href="https://docs.ghost.org/?utm_source=nicelinks.site" target="_blank" rel="external">Ghost 文档地址</a>。</p>
@@ -412,9 +422,9 @@
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
-      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
-    
       <category term="React" scheme="https://www.jeffjade.com/tags/React/"/>
+    
+      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
   </entry>
   
