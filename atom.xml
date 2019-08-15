@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2019-08-11T16:16:13.596Z</updated>
+  <updated>2019-08-15T05:14:39.085Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/"/>
     <id>https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/</id>
     <published>2019-07-29T12:20:20.000Z</published>
-    <updated>2019-08-11T16:16:13.596Z</updated>
+    <updated>2019-08-15T05:14:39.085Z</updated>
     
     <content type="html"><![CDATA[<p>身处当前数字化社会，打造<strong>个人品牌</strong>，越发显得重要（自我推销）。对于从事技相关的人群，欲要树立并长时间保持自己的<code>个人品牌</code>，最便捷的方法无疑是：坚持长时间高质量输出原创文章。就择取合适的博文平台，也是项技术活儿；本文主旨，就针对这承载文字的各类平台，结合其功能特点，探讨下其优劣所在，以便可为更多朋友，就如何选择博文平台诉求，提供些参考。</p>
 <a id="more"></a>
@@ -111,7 +111,7 @@
 <h3 id="Solo"><a href="#Solo" class="headerlink" title="Solo"></a><a href="https://solo.b3log.org/?utm_source=jeffjade.com" target="_blank" rel="external">Solo</a></h3><blockquote>
 <p>Solo - 一款小而美的 Java 开源博客系统，专为程序员设计。</p>
 </blockquote>
-<p><strong>个人品评</strong>：Solo，是基于 <code>java</code> 所打造的开源博客系统，沉淀至今，融入了非常多用户应该都会用到功能，包括评论、置顶、国际化、多用户协作、多端适配、社区同步等各种功能；早期也是有尝试使用 Docker 搭建，整个过程较为顺利，只不过未能找到满意主题而作罢；如今，其开发者借鉴了 <a href="https://ghost.org/?utm_source=nicelinks.site" target="_blank" rel="external">Ghost</a> 的一些 <code>UI</code> 设计，已然是弥补了博客皮肤这块的不足，是个人比较推荐的博客系统。Solo 示例博客站点：[D 的个人博客]<a href="https://88250.b3log.org/?utm_source=jeffjade.com" target="_blank" rel="external">https://88250.b3log.org/?utm_source=jeffjade.com</a>)</p>
+<p><strong>个人品评</strong>：Solo，是基于 <code>java</code> 所打造的开源博客系统，沉淀至今，融入了非常多用户应该都会用到功能，包括评论、置顶、国际化、多用户协作、多端适配、社区同步等各种功能；早期也是有尝试使用 Docker 搭建，整个过程较为顺利，只不过未能找到满意主题而作罢；如今，其开发者借鉴了 <a href="https://ghost.org/?utm_source=nicelinks.site" target="_blank" rel="external">Ghost</a> 的一些 <code>UI</code> 设计，已然是弥补了博客皮肤这块的不足，是个人比较推荐的博客系统；另外，基于 Solo 而搭建的博客，也可以同步推送至 <a href="https://hacpai.com/?utm_source=jeffjade.com" target="_blank" rel="external">黑客派</a> 社区，以增加曝光度。Solo 示例博客站点：<a href="https://88250.b3log.org/?utm_source=jeffjade.com" target="_blank" rel="external">D 的个人博客</a></p>
 <hr>
 <p>备注：以上提及的博文平台或系统，书写都是可基于 <strong>Markdown</strong>；可以基于 <a href="https://nicelinks.site/post/5af55777979f626ea3d37917" target="_blank" rel="external">VsCode</a>、<a href="https://nicelinks.site/post/5af314ad979f626ea3d37912" target="_blank" rel="external">Atom</a> 或者其他 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/markdown-tutorial.md#%E8%B5%84%E6%BA%90%E5%B9%B3%E5%8F%B0" target="_blank" rel="external">Markdown 编辑器</a>，视自己兴趣或习惯而定。</p>
 <p>综合以上信息，倘若已拥有个人服务器，推荐使用 <a href="https://nicelinks.site/post/5c3f3151a5957e07a40b30ff" target="_blank" rel="external">Ghost</a> 搭建；暂时还没有：如果是前端开发者，则看个人兴趣，倾向于 <code>VuePress</code>；如不是：建议使用 <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" rel="external">hexo</a>，相对来讲：产品更为成熟，使用简单，功能强大，插件丰富，社区活跃。</p>
@@ -129,11 +129,11 @@
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="Hexo" scheme="https://www.jeffjade.com/tags/Hexo/"/>
     
@@ -418,9 +418,9 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="React" scheme="https://www.jeffjade.com/tags/React/"/>
     
@@ -902,11 +902,11 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
   </entry>
   
@@ -1173,9 +1173,9 @@
       <category term="快应用" scheme="https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
     
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
     
@@ -1318,9 +1318,9 @@
       <category term="快应用" scheme="https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
     
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
     
@@ -1471,9 +1471,9 @@
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
@@ -1624,9 +1624,9 @@
       <category term="快应用" scheme="https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
     
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
     
@@ -1703,11 +1703,11 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Prettier" scheme="https://www.jeffjade.com/tags/Prettier/"/>
+    
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
   </entry>
   
@@ -1901,11 +1901,11 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="Webpack" scheme="https://www.jeffjade.com/tags/Webpack/"/>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
