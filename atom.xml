@@ -129,11 +129,11 @@
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
+    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="Hexo" scheme="https://www.jeffjade.com/tags/Hexo/"/>
     
@@ -215,7 +215,7 @@
     <link href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/"/>
     <id>https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/</id>
     <published>2019-05-31T10:19:20.000Z</published>
-    <updated>2019-06-23T15:43:54.236Z</updated>
+    <updated>2019-08-21T05:12:31.146Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a>，是一款基于 <code>Vue</code>、<code>Vditor</code>，为未来而构建的在线 Markdown 编辑器；轻量且强大：内置粘贴 HTML 自动转换为 Markdown，支持流程图、甘特图、时序图、任务列表，可导出携带样式的图片、PDF、以及转换 Markdown 成微信公众号特制的 HTML 等；另外支持<strong>实时预览</strong>、<strong>本地存储</strong>、字符计数，提供常用快捷键（含<strong>Tab</strong>），及代码块添加复制等功能。</p>
 <a id="more"></a>
@@ -224,8 +224,14 @@
 <p><a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a> 另一大优点在于：编辑内容只会在您本地进行保存，不会上传您的数据至服务器，<strong>绝不窥测用户个人隐私，可放心使用</strong>；Github 源码：<a href="https://github.com/nicejade/markdown-online-editor" target="_blank" rel="external">markdown-online-editor</a>，部分功能仍在开发🚧，敬请期待。</p>
 </blockquote>
 <h2 id="背景初衷"><a href="#背景初衷" class="headerlink" title="背景初衷"></a>背景初衷</h2><p>早期就有关注到由<a href="https://hacpai.com/?utm_source=jeffjade.com" target="_blank" rel="external">黑客派</a>所出品的 <a href="https://hacpai.com/tag/vditor?utm_source=jeffjade.com" target="_blank" rel="external">Vditor</a>：一款为未来而构建的下一代 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">Markdown</a> 编辑器。然，现而今市面上所存在的 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">Markdown</a> 编辑器，或多或少都存在一些问题（或功能不全，或高级功能收费…），因此基于自身所需，加之 <a href="https://hacpai.com/tag/vditor?utm_source=jeffjade.com" target="_blank" rel="external">Vditor</a> 的强大，就诞生了做一款<a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">在线 Markdown 编辑器</a> 的念头；取其名曰：<code>Arya</code>，个中原由，有在<a href="https://quickapp.lovejade.cn/talking-game-of-thrones/?utm_source=jeffjade.com" target="_blank" rel="external">观《权利的游戏》感记</a>一文有做记载。</p>
-<h2 id="功能支持🎉"><a href="#功能支持🎉" class="headerlink" title="功能支持🎉"></a>功能支持🎉</h2><input type="checkbox" checked="checked" disabled="disabled">     🎉 通常 <code>Markdown</code> 解析器自带的基本功能；<br><input type="checkbox" checked="checked" disabled="disabled">     ✨ 支持<strong>流程图</strong>、<strong>甘特图</strong>、<strong>时序图</strong>、<strong>任务列表</strong>；<br><input type="checkbox" checked="checked" disabled="disabled">     🏁 支持粘贴 HTML 自动转换为 Markdown；<br><input type="checkbox" checked="checked" disabled="disabled">     💃🏻 支持插入原生 Emoji、设置常用表情列表；<br><input type="checkbox" checked="checked" disabled="disabled">     🚑 支持编辑内容保存<strong>本地存储</strong>，防止意外丢失；<br><input type="checkbox" checked="checked" disabled="disabled">     📝 支持<strong>实时预览</strong>，主窗口大小拖拽，字符计数；<br><input type="checkbox" checked="checked" disabled="disabled">     🛠 支持常用快捷键(<strong>Tab</strong>)，及代码块添加复制；<br><input type="checkbox" checked="checked" disabled="disabled">     🚧 支持<strong>导出</strong>携带样式PDF、PNG、JPEG 等；<br><input type="checkbox" disabled="disabled">     🚧 支持转换 Markdown 到<strong>微信特制的 HTML</strong>；<br><input type="checkbox" disabled="disabled">     🚧 内置多种漂亮样式，并且支持用户<strong>自定义</strong>；<br><input type="checkbox" disabled="disabled">     🚧 支持检查并格式化 Markdown 语法，使其专业；
+<h2 id="功能支持🎉"><a href="#功能支持🎉" class="headerlink" title="功能支持🎉"></a>功能支持🎉</h2><input type="checkbox" checked="checked" disabled="disabled">     🎉 通常 <code>Markdown</code> 解析器自带的基本功能；<br><input type="checkbox" checked="checked" disabled="disabled">     ✨ 支持<strong>流程图</strong>、<strong>甘特图</strong>、<strong>时序图</strong>、<strong>任务列表</strong>；<br><input type="checkbox" checked="checked" disabled="disabled">     🏁 支持粘贴 HTML 自动转换为 Markdown；<br><input type="checkbox" checked="checked" disabled="disabled">     💃🏻 支持插入原生 Emoji、设置常用表情列表；<br><input type="checkbox" checked="checked" disabled="disabled">     🚑 支持编辑内容保存<strong>本地存储</strong>，防止意外丢失；<br><input type="checkbox" checked="checked" disabled="disabled">     📝 支持<strong>实时预览</strong>，主窗口大小拖拽，字符计数；<br><input type="checkbox" checked="checked" disabled="disabled">     🛠 支持常用快捷键(<strong>Tab</strong>)，及代码块添加复制；<br><input type="checkbox" checked="checked" disabled="disabled">     🚧 支持<strong>导出</strong>携带样式PDF、PNG、JPEG 等；<br><input type="checkbox" checked="checked" disabled="disabled">     ✨ 注入 <a href="https://revealjs.com/#/" target="_blank" rel="external">RevealJs</a>，增设对 <code>PPT</code> 预览支持；<br><input type="checkbox" disabled="disabled">     🚧 支持转换 Markdown 到<strong>微信特制的 HTML</strong>；<br><input type="checkbox" disabled="disabled">     🚧 内置多种漂亮样式，并且支持用户<strong>自定义</strong>；<br><input type="checkbox" disabled="disabled">     🚧 支持检查并格式化 Markdown 语法，使其专业；
 
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>清空目前 <a href="https://markdown.lovejade.cn/?utm_source=github.com" target="_blank" rel="external">Arya</a> 编辑区默认文档，即可使用。</p>
+<h3 id="PPT-预览"><a href="#PPT-预览" class="headerlink" title="PPT 预览"></a>PPT 预览</h3><p>如果您用作 <code>PPT</code> 预览（入口在<code>设置</code>中），需要注意，这里暂还不能支持各种图表的渲染；您可以使用 <code>---</code> 来定义水平方向上幻灯片，用 <code>--</code> 来定义垂直幻灯片；更多设定可以参见 <a href="https://github.com/hakimel/reveal.js#table-of-contents" target="_blank" rel="external">RevealJs 文档</a>。</p>
+<h2 id="如何开发"><a href="#如何开发" class="headerlink" title="如何开发"></a>如何开发</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 🎉 克隆项目</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/nicejade/markdown-online-editor.git</div><div class="line"><span class="built_in">cd</span> markdown-online-editor</div><div class="line"></div><div class="line"><span class="comment"># ➕ 安装依赖(跳过安装 )</span></div><div class="line">env PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=<span class="literal">true</span> yarn</div><div class="line"></div><div class="line"><span class="comment"># 🚧 开始开发</span></div><div class="line">yarn start</div><div class="line"></div><div class="line"><span class="comment"># 🚀 部署 Github Pages(需修改 commands/deploy.sh)</span></div><div class="line">yarn deploy</div></pre></td></tr></table></figure>
+<blockquote>
+<p>关于本应用构建：因采用 <a href="https://github.com/chrisvfritz/prerender-spa-plugin" target="_blank" rel="external">prerender-spa-plugin</a> 以解决 SPA SEO 问题，故而，您需要在根目录下创建 <code>arya.config.js</code>，根据 <em>arya.config.sample.js</em> 中示例格式，来设定 <code>executablePath</code> 参数，从而指定插件中捆绑的 <strong>Chromium</strong> 所在目录，使得 <code>prerender-spa-plugin</code> 可以正常工作。更多详情，可以参见 <a href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85">Puppeteer 安装注意事项</a>。</p>
+</blockquote>
 <h2 id="关于定位📌"><a href="#关于定位📌" class="headerlink" title="关于定位📌"></a>关于定位📌</h2><p>众所周知，早在几年前，市面上就充盈百余种不同的 <code>Markdown</code>  编辑器；其中不乏很多功能强大，体验良好的 <code>Markdown</code>  神器；在 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">倾城之链 | Markdown</a>  标签中，也是收录了些 <code>Markdown</code>  相关工具。但，就如在<code>初衷</code>中提及的，那些工具或多或少都存在一些问题比如：功能不全，使用不便，体验不佳，或高级功能收费等；对于 <a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a>，无意让她在 <code>Markdown</code>  的江湖逐鹿中原，目前给其设定就是：<strong>轻盈且强大</strong>，<strong>免费又安全</strong>。关于 <a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a> 能做的，可参见 <a href="https://github.com/nicejade/markdown-online-editor#功能支持" target="_blank" rel="external">Arya Markdown 功能支持</a>；当然，那并不是 <code>Arya</code> 最终形态，如果您有更多关于 <code>Markdown</code> 相关的诉求或建议，欢迎👏提给我（可以通过<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">各种渠道</a>），这边会尽最大努力满足您。</p>
 <blockquote>
 <p>额外补充，因为数据使它们更具说服力且易于理解，能够将可视化嵌入到文本中的技术非常重要；受益于 <a href="https://github.com/geekplux/markvis" target="_blank" rel="external">markvis</a> (make visualization in markdown.) 的启发，完全可以将 <code>Arya</code> 中内置 <code>d3</code> 等可视化库，从而使用户可以更加方便，在 <a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya Markdown</a> 中进行数据可视化操作；再辅之以导出功能，哇哦，至少这些功能于我而言，是超有用的存在。另外，很多同学，在写中文文案时候，不太会注重格式，如中英文间未有空格等；后面 <code>Arya</code> 也会考虑注入自动格式化文档的功能….. 诸此等等；此篇文章，也会随之而来的新想法、新功能以及其他新建议，而不断完善；总之呢，敬请期待。（2019.06.02）</p>
@@ -418,13 +424,13 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
-      <category term="React" scheme="https://www.jeffjade.com/tags/React/"/>
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
+    
+      <category term="React" scheme="https://www.jeffjade.com/tags/React/"/>
     
   </entry>
   
@@ -902,11 +908,11 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
+    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
   </entry>
   
@@ -1173,9 +1179,9 @@
       <category term="快应用" scheme="https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
     
-      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
-    
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
+    
+      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
       <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
     
@@ -1318,9 +1324,9 @@
       <category term="快应用" scheme="https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
     
-      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
-    
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
+    
+      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
       <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
     
@@ -1471,9 +1477,9 @@
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
@@ -1624,9 +1630,9 @@
       <category term="快应用" scheme="https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
     
-      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
-    
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
+    
+      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
       <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
     
@@ -1703,11 +1709,11 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
+    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Prettier" scheme="https://www.jeffjade.com/tags/Prettier/"/>
-    
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
   </entry>
   
@@ -1901,11 +1907,11 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="Webpack" scheme="https://www.jeffjade.com/tags/Webpack/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
