@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2019-08-15T05:14:39.085Z</updated>
+  <updated>2019-08-25T16:31:15.056Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,79 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为高效而生：Arya Jarvis</title>
+    <link href="https://www.jeffjade.com/2019/08/25/156-arya-jarvis-born-for-efficiency/"/>
+    <id>https://www.jeffjade.com/2019/08/25/156-arya-jarvis-born-for-efficiency/</id>
+    <published>2019-08-25T15:26:29.000Z</published>
+    <updated>2019-08-25T16:31:15.056Z</updated>
+    
+    <content type="html"><![CDATA[<p>荀子在《劝学》曰：<strong>君子生非异也，善假于物也</strong>。对于重复而精确性的事物，理想的目标是：有贴心工具加以协助，使得可以用更便捷的方式处理；Github 创建仓库：<a href="https://github.com/nicejade/arya-jarvis" target="_blank" rel="external">ARYA JARVIS</a>，即是为此而做的尝试 ── 她<strong>旨在为开发人员节省更多时间、精力以及体力</strong>。而此篇文章的存在，介绍 <a href="https://github.com/nicejade/arya-jarvis" target="_blank" rel="external">ARYA JARVIS</a> 的同时，也分享下关于对<strong>善假于物</strong>的理解。</p>
+<h2 id="故事起源"><a href="#故事起源" class="headerlink" title="故事起源"></a>故事起源</h2><p>就目前工作而言，比较多涉及的是 Web 前端这块。为更快能启动一个前端项目，抑或是做其他处理如：测试、构建、发布等，通常做法是在 <code>package.json</code> 中配置 <code>scripts</code> 脚本命令；然而，在接触一个复杂或者新项目时，如过对 scripts 脚本命令不够了然，则会限制在终端操作的速度。通常的做法是用熟悉的编辑器，打开该文件看下，或者借助 <code>cat</code> 命令输出至终端加以查看。所以，很早之前就希望能有一种操作，可以一键以浏览之。久未遇到，也自然就产生了自己写一个的想法，这边是编写 <code>Arya Jarvis</code> 的初衷。</p>
+<p>截止目前，Arya Jarvis 可以帮着做的事儿，已逐渐多了起来， 是时候可以将其先分享出来，希望有更多人可以一起使用 &amp; 完善她。就如在 <a href="https://github.com/nicejade/arya-jarvis" target="_blank" rel="external">Arya Jarvis README</a> 中写到的，我个人是此工具的最忠实的用户；现在编写 Arya Jarvis 之时，也是用她本身来格式美化项目代码，感谢我自己在业余时间自己创造了她，我是如此的喜欢。</p>
+<h2 id="使用条件"><a href="#使用条件" class="headerlink" title="使用条件"></a>使用条件</h2><p><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>（&gt; = 8. *），Npm 版本 5+（更推荐使用 <a href="https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/">Yarn</a>。</p>
+<h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm i arya-jarvis -g</div><div class="line"><span class="comment"># Or</span></div><div class="line">yarn add global arya-jarvis</div></pre></td></tr></table></figure>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>如下两个代码美化相关功能，可以支持多种文件，譬如: <code>.js</code>, <code>.vue</code>, <code>.ux</code>, <code>.less</code>, <code>.scss</code>, <code>.css</code>, <code>.json</code>, <code>.md</code>, <code>.html</code>, <code>.qxml</code>, <code>.wxml</code>。</p>
+<h4 id="💄-美化指定路径下的代码"><a href="#💄-美化指定路径下的代码" class="headerlink" title="💄 美化指定路径下的代码"></a>💄 美化指定路径下的代码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">arya prettier index.js</div><div class="line"><span class="comment"># 👏 Or Use Alias</span></div><div class="line">arya p ./src/**/**/*.js</div><div class="line"><span class="comment"># 👍🙌 Or Use Alias &amp; Wildcard</span></div><div class="line">arya p .</div></pre></td></tr></table></figure>
+<h4 id="🔬-监听并美化指定路径下的代码"><a href="#🔬-监听并美化指定路径下的代码" class="headerlink" title="🔬 监听并美化指定路径下的代码"></a>🔬 监听并美化指定路径下的代码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">arya watcher index.js</div><div class="line"><span class="comment"># 👏 Or Use Alias</span></div><div class="line">arya w ./src/**/**/*.js</div><div class="line"><span class="comment"># 👍🙌 Or Use Alias &amp; Wildcard</span></div><div class="line">arya w .</div></pre></td></tr></table></figure>
+<p>值得一提的是，本项目代码在开发时，格式美化就使用 <code>arya w .</code> 命令。感谢我自己业余时间自己开发此了 <code>arya jarvis</code> ，我超级喜欢。</p>
+<h4 id="🌍-用于快速构建本地-Web-服务器"><a href="#🌍-用于快速构建本地-Web-服务器" class="headerlink" title="🌍 用于快速构建本地 Web 服务器"></a>🌍 用于快速构建本地 Web 服务器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arya server</div><div class="line"><span class="comment"># 👏 Or Use Alias</span></div><div class="line">arya s</div></pre></td></tr></table></figure>
+<h4 id="⚡️-找到您本地-IP-地址并打印出来"><a href="#⚡️-找到您本地-IP-地址并打印出来" class="headerlink" title="⚡️ 找到您本地 IP 地址并打印出来"></a>⚡️ 找到您本地 IP 地址并打印出来</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arya ip</div></pre></td></tr></table></figure>
+<h4 id="👀-查看占用指定端口的程序"><a href="#👀-查看占用指定端口的程序" class="headerlink" title="👀 查看占用指定端口的程序"></a>👀 查看占用指定端口的程序</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arya port 8080</div><div class="line"><span class="comment"># Or</span></div><div class="line">arya port 8081</div></pre></td></tr></table></figure>
+<h4 id="🚝-列出-package-json-中的脚本命令"><a href="#🚝-列出-package-json-中的脚本命令" class="headerlink" title="🚝 列出 package.json 中的脚本命令"></a>🚝 列出 package.json 中的脚本命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arya ls</div><div class="line"><span class="comment"># 👏 Or Use Alias</span></div><div class="line">arya l</div></pre></td></tr></table></figure>
+<p>此外，<a href="https://github.com/nicejade/arya-jarvis" target="_blank" rel="external">arya jarvis</a> 仍在植入更多有用的功能，如果您有任何需求，您可以告诉我，或在此基础上进行扩展。如果您在使用过程中遇到任何问题，您可以随时向我的反馈。祝：生活幸福，工作快乐。</p>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
+<li><a href="https://nicelinks.site?utm_source=github.com" target="_blank" rel="external"><strong>倾城之链</strong></a></li>
+<li><a href="https://about.me/nicejade?utm_source=github.com" target="_blank" rel="external">About Me</a></li>
+<li><a href="https://jeffjade.com/nicelinks?utm_source=github.com" target="_blank" rel="external">个人博客</a></li>
+<li><a href="https://quickapp.lovejade.cn/?utm_source=github.com" target="_blank" rel="external">静轩之别苑</a></li>
+<li><a href="https://nice.lovejade.cn/?utm_source=github.com" target="_blank" rel="external">静晴轩别苑</a></li>
+<li><a href="https://docz.lovejade.cn/?utm_source=github.com" target="_blank" rel="external">吾意静晴轩</a></li>
+<li><a href="https://blog.lovejade.cn/?utm_source=github.com" target="_blank" rel="external">天意人间舫</a></li>
+<li><a href="https://weibo.com/jeffjade?utm_source=github.com" target="_blank" rel="external">新浪微博</a></li>
+<li><a href="https://www.zhihu.com/people/yang-qiong-pu/" target="_blank" rel="external">知乎主页</a></li>
+<li><a href="https://www.jianshu.com/u/9aae3d8f4c3d" target="_blank" rel="external">简书主页</a></li>
+<li><a href="https://segmentfault.com/u/jeffjade" target="_blank" rel="external">SegmentFault</a></li>
+<li><a href="https://twitter.com/nicejadeyang" target="_blank" rel="external">Twitter</a></li>
+<li><a href="https://www.facebook.com/nice.jade.yang" target="_blank" rel="external">Facebook</a></li>
+</ul>
+<p>@2019-08-25 于东莞.长安 Last Modify：2019-08-26</p>
+<hr>
+<h3 id="您可能会感兴趣的文章"><a href="#您可能会感兴趣的文章" class="headerlink" title="您可能会感兴趣的文章"></a>您可能会感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/">Arya - 在线 Markdown 编辑器</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/02/150-prettier-quickapp-plugin/">Prettier 插件为更漂亮快应用代码</a></li>
+<li><a href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/">基于 Puppeteer 构建简易机器人</a></li>
+<li><a href="https://www.jeffjade.com/2019/01/13/146-awesome-vue-cli3-example/">基于 Vue-Cli3 构建的脚手架模版</a></li>
+<li><a href="https://www.jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/">开箱即用的 Vue Webpack 脚手架模版</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/21/146-awesome-quickapp-resource-tutorial/">快应用开发资源、教程汇聚</a></li>
+<li><a href="https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/">快应用脚手架，为优雅而生</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/">与时俱进版前端资源教程</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      荀子在《劝学》曰：君子生非异也，善假于物也。对于重复而精确性的事物，理想的目标是：有贴心工具加以协助，使得可以用更便捷的方式处理；Github 创建仓库：ARYA JARVIS，即是为此而做的尝试 ── 她旨在为开发人员节省更多时间、精力以及体力。而此篇文章的存在，介绍 ARYA JARVIS 的同时，也分享下关于对善假于物的理解。
+    
+    </summary>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/categories/Toss/"/>
+    
+    
+      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
+    
+      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Node" scheme="https://www.jeffjade.com/tags/Node/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+      <category term="Arya" scheme="https://www.jeffjade.com/tags/Arya/"/>
+    
+  </entry>
   
   <entry>
     <title>如何选定搭建个人独立博客工具</title>
@@ -131,9 +204,9 @@
     
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Hexo" scheme="https://www.jeffjade.com/tags/Hexo/"/>
     
@@ -215,7 +288,7 @@
     <link href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/"/>
     <id>https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/</id>
     <published>2019-05-31T10:19:20.000Z</published>
-    <updated>2019-08-21T05:12:31.146Z</updated>
+    <updated>2019-08-25T16:26:29.221Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a>，是一款基于 <code>Vue</code>、<code>Vditor</code>，为未来而构建的在线 Markdown 编辑器；轻量且强大：内置粘贴 HTML 自动转换为 Markdown，支持流程图、甘特图、时序图、任务列表，可导出携带样式的图片、PDF、以及转换 Markdown 成微信公众号特制的 HTML 等；另外支持<strong>实时预览</strong>、<strong>本地存储</strong>、字符计数，提供常用快捷键（含<strong>Tab</strong>），及代码块添加复制等功能。</p>
 <a id="more"></a>
@@ -274,7 +347,8 @@
 </tbody>
 </table>
 <hr>
-<h3 id="您可能会感兴趣的文章："><a href="#您可能会感兴趣的文章：" class="headerlink" title="您可能会感兴趣的文章："></a>您可能会感兴趣的文章：</h3><ul>
+<h3 id="您可能会感兴趣的文章"><a href="#您可能会感兴趣的文章" class="headerlink" title="您可能会感兴趣的文章"></a>您可能会感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2019/08/25/156-arya-jarvis-born-for-efficiency">为高效而生：Arya Jarvis</a></li>
 <li><a href="https://www.jeffjade.com/2019/02/02/150-prettier-quickapp-plugin/">Prettier 插件为更漂亮快应用代码</a></li>
 <li><a href="https://www.jeffjade.com/2019/01/13/146-awesome-vue-cli3-example/">基于 Vue-Cli3 构建的脚手架模版</a></li>
 <li><a href="https://www.jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/">开箱即用的 Vue Webpack 脚手架模版</a></li>
@@ -282,6 +356,7 @@
 <li><a href="https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/">快应用脚手架，为优雅而生</a></li>
 <li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
 <li><a href="https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/">与时俱进版前端资源教程</a></li>
+<li><a href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/">基于 Puppeteer 构建简易机器人</a></li>
 </ul>]]></content>
     
     <summary type="html">
@@ -296,6 +371,8 @@
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
+    
+      <category term="Arya" scheme="https://www.jeffjade.com/tags/Arya/"/>
     
       <category term="Markdown" scheme="https://www.jeffjade.com/tags/Markdown/"/>
     
@@ -428,9 +505,9 @@
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
-      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
-    
       <category term="React" scheme="https://www.jeffjade.com/tags/React/"/>
+    
+      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
   </entry>
   
@@ -910,9 +987,9 @@
     
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
@@ -1010,11 +1087,11 @@
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Nice" scheme="https://www.jeffjade.com/tags/Nice/"/>
     
@@ -1711,9 +1788,9 @@
     
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
       <category term="Prettier" scheme="https://www.jeffjade.com/tags/Prettier/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
@@ -1788,9 +1865,9 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Blog" scheme="https://www.jeffjade.com/tags/Blog/"/>
     
@@ -1945,49 +2022,6 @@
     
     
       <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>疆湖期待有你，携手互联疆来</title>
-    <link href="https://www.jeffjade.com/2018/03/05/138-aggregated-info-about-dji-recruitment/"/>
-    <id>https://www.jeffjade.com/2018/03/05/138-aggregated-info-about-dji-recruitment/</id>
-    <published>2018-03-04T16:00:00.000Z</published>
-    <updated>2018-03-15T13:56:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>（嗯，这是一篇招聘贴😊）记得在“不久”之前，才写了<a href="https://jeffjade.com/2017/08/26/126-start-from-the-heart/" target="_blank" rel="external">疆来有你，从心出发</a>一文；转眼却已是新的一年，时光荏苒！当我们再次告别熟悉的家乡，怀揣着梦想，肩扛以现实，奔走于陌生的城市；正值春意即将盎然，倘若你想换一个环境闯闯，那么不妨关注下这篇帖子；倘若，你同时还对「大疆创新」的工作机会感兴趣，那么这篇就是为你而准备的。</p>
-<a id="more"></a>
-<p><img src="https://image.nicelinks.site/the-future-of-possible.jpeg" alt="未来无所不能"></p>
-<p>在这篇文章中，将会持续对<strong>大疆创新</strong>日后招聘信息，同步更新于此，以飨“晚晴幽草轩”的读者们。此刻，倘若你对<strong>大疆创新</strong>，尚不是很了解，可以参见<a href="https://jeffjade.com/2017/08/26/126-start-from-the-heart/" target="_blank" rel="external">疆来有你，从心出发</a>一文，或者也可以从以下链接所介绍的内容中，得到些讯息：<a href="https://we.dji.com/zh-CN/djistory?from=jeffjade.com" target="_blank" rel="external">关于大疆</a>、<a href="https://www.dji.com/?from=jeffjade.com" target="_blank" rel="external">大疆官网</a>、<a href="https://we.dji.com/zh-CN/?from=jeffjade.com" target="_blank" rel="external">大疆招聘官网</a>、<a href="https://www.lagou.com/gongsi/21775.html" target="_blank" rel="external">DJI大疆创新-拉勾</a>。以下即为<strong>大疆创新</strong>招聘信息/活动（按时间逆序同步）：</p>
-<h3 id="校园活动-│-“拓疆者”号，再次启航"><a href="#校园活动-│-“拓疆者”号，再次启航" class="headerlink" title="校园活动 │ “拓疆者”号，再次启航"></a>校园活动 │ “拓疆者”号，再次启航</h3><p><strong>时间</strong>： 2018 年 3 月 ～ 2018 年 10 月</p>
-<ul>
-<li><a href="https://mp.weixin.qq.com/s/gwxXqyFS0YfDux6VFL3-DA" target="_blank" rel="external">校园活动 │ “拓疆者”号，再次启航</a></li>
-</ul>
-<h3 id="疆遇良才·OPEN-DAY-系列活动"><a href="#疆遇良才·OPEN-DAY-系列活动" class="headerlink" title="疆遇良才·OPEN DAY 系列活动"></a>疆遇良才·OPEN DAY 系列活动</h3><p><strong>时间</strong>： 2018 年 3 月 10 日 ～ 2018 年 3 月 25 日</p>
-<p>这个春天，「大疆创新」将举办多场 Open Day 活动(是大疆创新为职场人士精心打造的专场招聘活动，旨在通过集中提供指定细分方向岗位，以现场体验、快速响应的方式，拉近求职者与企业的距离，便于双方在更短时间内进行精准匹配及双向选择。)，其涵盖市场销售，地产，服务，采购，软件以及研发等多个体系；这种招聘形式，速度快得超乎你的想象；从简历投递，到面试完毕，可一天之内搞定。具体的活动介绍、时间表、地点、活动流程等，可参考以下链接：</p>
-<ul>
-<li><a href="https://mp.weixin.qq.com/s/eKlxWA9laB_R0WSD4ihsog" target="_blank" rel="external">大揭秘│2018年春季社招活动前瞻</a></li>
-<li><a href="https://we.dji.com/zh-CN/recruitment/openday" target="_blank" rel="external">新的一年，以更快的方式相遇</a></li>
-<li><a href="https://mp.weixin.qq.com/s/XbqxpoXSRNvH5bWzAssO2Q" target="_blank" rel="external">北京招聘│大疆创新，互联北京</a></li>
-<li><a href="https://mp.weixin.qq.com/s/2Ls_waGxdLCGirFS-azFhg" target="_blank" rel="external">疆遇良才Open Day│大牛们：招聘季，什么是最好的语言</a></li>
-<li><a href="https://mp.weixin.qq.com/s/9wdUDdAob1EBi1AO4FbM-Q" target="_blank" rel="external">疆遇良才Open Day│来大疆市场销售，做更好的自己</a></li>
-<li><a href="http://mp.weixin.qq.com/s/qzTa_SFulR0zhxmKtgVP8Q" target="_blank" rel="external">疆遇良才Open Day│嵌入式专场</a></li>
-<li><a href="https://mp.weixin.qq.com/s/LJr5mi9izjZtnZIrT_RrCw" target="_blank" rel="external">疆遇良才Open Day│算法&amp;NPI专场</a></li>
-</ul>
-<p>当然，具体详细活动安排，可关注<a href="https://we.dji.com/zh-CN/?from=jeffjade.com" target="_blank" rel="external">大疆招聘官网</a>、或者“大疆招聘”微信公众号。另外，也可发送邮件至 <a href="mailto:hr@dji.com" target="_blank" rel="external">hr@dji.com</a> 或者 <a href="mailto:jeffjade@163.com" target="_blank" rel="external">jeffjade@163.com</a> （后者，可获取内推码）。</p>
-<p>欢迎各位有志拓疆的勇士届时亲临现场，和我们一起探索不一样的职场！疆湖期待有你，携手互联疆来。</p>
-<p>@2018-03-05 于深圳.南山 Last Modify： 2018-03-06</p>]]></content>
-    
-    <summary type="html">
-    
-      在仅有一次的人生里，是庸庸碌碌以求个安安稳稳，还是在迎风逆浪中选择决不妥协，相信你心中自有答案，遵从内心，做真正的自己，现在，机会在这里：大疆创新 2018 春季招聘盛大开启，具远见者，方识天下，不忘初心，梦想必达，你准备好迎接挑战了么，是时候该你登场了。
-    
-    </summary>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
-    
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     

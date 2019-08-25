@@ -7,8 +7,8 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/</loc>
-        <lastmod>2019-08-21T05:20:57.231Z</lastmod>
+        <loc>https://www.jeffjade.com/2019/08/25/156-arya-jarvis-born-for-efficiency/</loc>
+        <lastmod>2019-08-25T16:31:15.056Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +16,15 @@
 
     <url>
         <loc>https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/</loc>
-        <lastmod>2019-08-21T05:12:31.146Z</lastmod>
+        <lastmod>2019-08-25T16:26:29.221Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/</loc>
+        <lastmod>2019-08-21T05:20:57.231Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -855,7 +863,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2014/12/22/2014-12-24-lua-codepart/</loc>
+        <loc>https://www.jeffjade.com/2014/12/22/2014-12-22-lua-weaktable/</loc>
         <lastmod>2017-03-08T15:14:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -863,7 +871,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2014/12/22/2014-12-22-lua-weaktable/</loc>
+        <loc>https://www.jeffjade.com/2014/12/22/2014-12-24-lua-codepart/</loc>
         <lastmod>2017-03-08T15:14:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
