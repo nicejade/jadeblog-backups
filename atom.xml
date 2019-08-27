@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2019-08-26T17:24:29.483Z</updated>
+  <updated>2019-08-27T05:24:30.272Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,9 +20,11 @@
     <link href="https://www.jeffjade.com/2019/08/25/156-arya-jarvis-born-for-efficiency/"/>
     <id>https://www.jeffjade.com/2019/08/25/156-arya-jarvis-born-for-efficiency/</id>
     <published>2019-08-25T15:26:29.000Z</published>
-    <updated>2019-08-26T17:24:29.483Z</updated>
+    <updated>2019-08-27T05:24:30.272Z</updated>
     
     <content type="html"><![CDATA[<p>荀子在《劝学》曰：<strong>君子生非异也，善假于物也</strong>。对于重复而精确性的事物，理想的目标是：有贴心工具加以协助，使得可以用更便捷的方式处理；Github 创建仓库：<a href="https://github.com/nicejade/arya-jarvis" target="_blank" rel="external">ARYA JARVIS</a>，即是为此而做的尝试 ── 她<strong>旨在为开发人员节省更多时间、精力以及体力</strong>。而此篇文章的存在，介绍 <a href="https://github.com/nicejade/arya-jarvis" target="_blank" rel="external">ARYA JARVIS</a> 的同时，也分享下关于对<strong>善假于物</strong>的理解。</p>
+<a id="more"></a>
+<p><img src="https://image.nicelinks.site/arya-jarvis.jpg" alt="为高效而生：Arya Jarvis"></p>
 <h2 id="故事起源"><a href="#故事起源" class="headerlink" title="故事起源"></a>故事起源</h2><p>就目前工作而言，比较多涉及的是 Web 前端这块。为更快能启动一个前端项目，抑或是做其他处理如：测试、构建、发布等，通常做法是在 <code>package.json</code> 中配置 <code>scripts</code> 脚本命令；然而，在接触一个复杂或者新项目时，如过对 scripts 脚本命令不够了然，则会限制在终端操作的速度。通常的做法是用熟悉的编辑器，打开该文件看下，或者借助 <code>cat</code> 命令输出至终端加以查看。所以，很早之前就希望能有一种操作，可以一键以浏览之。久未遇到，也自然就产生了自己写一个的想法，这边是编写 <code>Arya Jarvis</code> 的初衷。</p>
 <p>截止目前，Arya Jarvis 可以帮着做的事儿，已逐渐多了起来， 是时候可以将其先分享出来，希望有更多人可以一起使用 &amp; 完善她。就如在 <a href="https://github.com/nicejade/arya-jarvis" target="_blank" rel="external">Arya Jarvis README</a> 中写到的，我个人是此工具的最忠实的用户；现在编写 Arya Jarvis 之时，也是用她本身来格式美化项目代码，感谢我自己在业余时间自己创造了她，我是如此的喜欢。</p>
 <h2 id="使用条件"><a href="#使用条件" class="headerlink" title="使用条件"></a>使用条件</h2><p><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>（&gt; = 8. *），Npm 版本 5+（更推荐使用 <a href="https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/">Yarn</a>。</p>
@@ -506,9 +508,9 @@
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
-      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
-    
       <category term="React" scheme="https://www.jeffjade.com/tags/React/"/>
+    
+      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
   </entry>
   
@@ -892,9 +894,9 @@
       <category term="快应用" scheme="https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
     
-      <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
-    
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
     
   </entry>
   
@@ -1259,9 +1261,9 @@
     
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
-      <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
-    
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
     
   </entry>
   
@@ -1404,9 +1406,9 @@
     
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
-      <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
-    
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
     
   </entry>
   
@@ -1710,9 +1712,9 @@
     
       <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
     
-      <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
-    
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
     
   </entry>
   
