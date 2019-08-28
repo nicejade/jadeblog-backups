@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2019/08/28/159-js-import-export-vs-require-module-exports/</loc>
+        <lastmod>2019-08-28T15:46:54.001Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/</loc>
+        <lastmod>2019-08-28T05:24:46.711Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2019/08/25/156-arya-jarvis-born-for-efficiency/</loc>
         <lastmod>2019-08-27T05:24:30.272Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,14 +41,6 @@
     <url>
         <loc>https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/</loc>
         <lastmod>2019-08-21T05:20:57.231Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/</loc>
-        <lastmod>2019-08-15T05:14:39.085Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -503,7 +511,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2016/08/08/113-toss-gulp/</loc>
+        <loc>https://www.jeffjade.com/2016/05/08/106-vue-es6-jade-scss-webpack-gulp/</loc>
         <lastmod>2019-03-26T14:31:16.632Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -511,7 +519,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2016/05/08/106-vue-es6-jade-scss-webpack-gulp/</loc>
+        <loc>https://www.jeffjade.com/2016/08/08/113-toss-gulp/</loc>
         <lastmod>2019-03-26T14:31:16.632Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

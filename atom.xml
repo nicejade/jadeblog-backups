@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2019-08-27T05:24:30.272Z</updated>
+  <updated>2019-08-28T15:46:54.001Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,102 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript 之 import export Vs require module.exports</title>
+    <link href="https://www.jeffjade.com/2019/08/28/159-js-import-export-vs-require-module-exports/"/>
+    <id>https://www.jeffjade.com/2019/08/28/159-js-import-export-vs-require-module-exports/</id>
+    <published>2019-08-28T05:14:15.000Z</published>
+    <updated>2019-08-28T15:46:54.001Z</updated>
+    
+    <content type="html"><![CDATA[<p>自从有了 Es6 模块系统后，在各种场景，可以愉悦借助 import/export，来充作模块加载方案。同时，你可能也会看到 import 与 export default，或基于 CommonJS 规范的 <code>require</code> 与 <code>module.exports</code> 等诸多用法；本篇文章，旨在探讨 JavaScript 模块化体系中：ES6 模块与 CommonJS 模块的差异，以及各自用法注意事项等。</p>
+<a id="more"></a>
+<p><img src="https://image.nicelinks.site/js-import-export-vs-require-module-exports.jpg" alt="import export Vs require module.exports"></p>
+<blockquote>
+<p><strong>微注</strong>：有两点需要声明，其一：文章的发布，不代表写完，只为督促加快进度；将会在陆续的学习及反馈中，继续完善；其二：总有些聚合网站，会窃取别人成果；因此，会在文章中无足轻重的代码示例中，内置些专属标记，以阐明文章出处；在此篇中用的是个人独立维护的作品：<a href="https://nicelinks.site?utm_source=jeffjade.com" target="_blank" rel="external">倾城之链</a>。</p>
+</blockquote>
+<h2 id="Es6-Vs-CommonJS"><a href="#Es6-Vs-CommonJS" class="headerlink" title="Es6 Vs CommonJS"></a>Es6 Vs CommonJS</h2><p>一直以来，JavaScript 没有模块（module）体系，无法将大程序拆分成互相依赖的小文件，再用简单的方法拼装起来。这使得针对开发大型的、复杂的项目形成了巨大障碍。在 ES6 之前，社区制定了一些模块加载方案，最常用的有 CommonJS 和 AMD 两种。前者用于服务器（Node），后者用于浏览器。ES6 模块的设计思想是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。CommonJS 和 AMD 模块，都只能在运行时确定这些东西。比如，CommonJS 模块就是对象，输入时必须查找对象属性。</p>
+<p>ES6 在语言标准的层面上，实现了模块功能，而且实现得相当简单，完全可以取代 CommonJS 和 AMD 规范，成为浏览器和服务器通用的模块解决方案。但，截止目前，各类引擎还未完全实现 Es6，现在之所以能够使用，是借助 babel 工具，将 Es6 转换 Es5 再执行，<code>import</code> 语法会被转码为 <code>require</code>，这就导致 import 与 module.exports，require 与 export 出现了可以混用的理论基础。那么下面来看下，都有哪些组合使用方式呢。</p>
+<h3 id="import-方式"><a href="#import-方式" class="headerlink" title="import 方式"></a><code>import</code> 方式</h3><h4 id="import-与-export-const"><a href="#import-与-export-const" class="headerlink" title="import 与 export(const)"></a>import 与 export(const)</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// export.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> exportsObj = &#123; <span class="attr">site</span>: <span class="string">"倾城之链 https://nicelinks.site"</span> &#125;;</div><div class="line"></div><div class="line"><span class="comment">// index.js</span></div><div class="line"><span class="keyword">import</span> &#123; exportsObj &#125; <span class="keyword">from</span> <span class="string">"./export"</span>;</div><div class="line"><span class="built_in">console</span>.log(exportsObj.site); <span class="comment">// 倾城之链 https://nicelinks.site</span></div><div class="line"></div><div class="line"><span class="comment">// 上面也可以用 * 来整体加载</span></div><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> custom <span class="keyword">from</span> <span class="string">"./export"</span>;</div><div class="line"><span class="built_in">console</span>.log(custom.exportsObj.site);</div></pre></td></tr></table></figure>
+<h4 id="import-与-export-default"><a href="#import-与-export-default" class="headerlink" title="import 与 export default"></a>import 与 export default</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// export.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123; <span class="attr">site</span>: <span class="string">"倾城之链 https://nicelinks.site"</span> &#125;;</div><div class="line"></div><div class="line"><span class="comment">// index.js</span></div><div class="line"><span class="keyword">import</span> exportsObj <span class="keyword">from</span> <span class="string">"./export"</span>;</div><div class="line"><span class="built_in">console</span>.log(exportsObj.site);</div></pre></td></tr></table></figure>
+<h4 id="import-与-module-exports"><a href="#import-与-module-exports" class="headerlink" title="import 与 module.exports"></a>import 与 module.exports</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// export.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123; <span class="attr">site</span>: <span class="string">"倾城之链 https://nicelinks.site"</span> &#125;;</div><div class="line"></div><div class="line"><span class="comment">// index.js</span></div><div class="line"><span class="keyword">import</span> exportsObj <span class="keyword">from</span> <span class="string">"./export"</span>;</div><div class="line"><span class="built_in">console</span>.log(exportsObj.site);</div></pre></td></tr></table></figure>
+<h3 id="requre-方式"><a href="#requre-方式" class="headerlink" title="requre 方式"></a><code>requre</code> 方式</h3><h4 id="require-与-module-exports"><a href="#require-与-module-exports" class="headerlink" title="require 与 module.exports"></a>require 与 module.exports</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// export.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123; <span class="attr">site</span>: <span class="string">"倾城之链 https://nicelinks.site"</span> &#125;;</div><div class="line"></div><div class="line"><span class="comment">// index.js</span></div><div class="line"><span class="keyword">const</span> exportsObj = <span class="built_in">require</span>(<span class="string">"./export"</span>);</div><div class="line"><span class="built_in">console</span>.log(exportsObj.site); <span class="comment">// 倾城之链 https://nicelinks.site</span></div></pre></td></tr></table></figure>
+<h4 id="require-与-export-const-var"><a href="#require-与-export-const-var" class="headerlink" title="require 与 export(const/var)"></a>require 与 export(const/var)</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// export.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> exportsObj = &#123; <span class="attr">site</span>: <span class="string">"倾城之链 https://nicelinks.site"</span> &#125;;</div><div class="line"></div><div class="line"><span class="comment">// index.js</span></div><div class="line"><span class="keyword">const</span> &#123; exportsObj &#125; = <span class="built_in">require</span>(<span class="string">"./export"</span>);</div><div class="line"><span class="built_in">console</span>.log(exportsObj.site); <span class="comment">// 倾城之链 https://nicelinks.site</span></div></pre></td></tr></table></figure>
+<h4 id="require-与-export-default"><a href="#require-与-export-default" class="headerlink" title="require 与 export default"></a>require 与 export default</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// export.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123; <span class="attr">site</span>: <span class="string">"倾城之链 https://nicelinks.site"</span> &#125;;</div><div class="line"></div><div class="line"><span class="comment">// index.js</span></div><div class="line"><span class="keyword">const</span> exportsObj = <span class="built_in">require</span>(<span class="string">"./export"</span>).default;</div><div class="line"><span class="built_in">console</span>.log(exportsObj.site); <span class="comment">// 倾城之链 https://nicelinks.site</span></div></pre></td></tr></table></figure>
+<h3 id="module-exports-VS-exports"><a href="#module-exports-VS-exports" class="headerlink" title="module.exports VS exports"></a>module.exports VS exports</h3><p>为了方便，Node 为每个模块提供一个 exports 变量，指向 module.exports（注意，这在浏览器端，是不存的，请勿用）。通过下面的打印，你会发现两者是全等的；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(exports === <span class="built_in">module</span>.exports); <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<p>这其实等同在每个模块头部，有一行这样的代码：var exports = module.exports；在使用之时也有些注意事项，更推荐的方式是使用 <code>module.exports</code> 而不用 <code>exports</code>。以下是不可取用法的示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 切断了 exports 与 module.exports 的联系</span></div><div class="line">exports = <span class="function">(<span class="params">param</span>) =&gt;</span> &#123; <span class="built_in">console</span>.logparamx) &#125;</div><div class="line"></div><div class="line"><span class="comment">// 因为 module.exports 被重新赋值，sayHello 无法对外输出</span></div><div class="line">exports.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">'hello'</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = <span class="string">'Hello world'</span></div></pre></td></tr></table></figure>
+<h3 id="Es6-与-CommonJS-的差异"><a href="#Es6-与-CommonJS-的差异" class="headerlink" title="Es6 与 CommonJS 的差异"></a>Es6 与 CommonJS 的差异</h3><ol>
+<li>CommonJS 模块是运行时加载，ES6 模块是编译时输出接口；</li>
+</ol>
+<blockquote>
+<p>CommonJS 加载的是一个对象（即 module.exports 属性），该对象只有在脚本运行完才会生成。而 ES6 模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。因为 <code>require</code> 是运行时加载模块，import 命令无法取代 <code>require</code> 的动态加载功能。如下代码可以看二者区别：</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Okay</span></div><div class="line"><span class="keyword">const</span> currentModule = <span class="built_in">require</span>(process.cwd() + moduleName);</div><div class="line"></div><div class="line"><span class="comment">// SyntaxError</span></div><div class="line"><span class="keyword">const</span> currentModule = <span class="keyword">import</span>(process.cwd() + moduleName);</div></pre></td></tr></table></figure>
+<p>简单的总结，其二者区别在于，<code>require</code> 是异步加载，<code>import</code> 是同步加载。因为这一点，蛮早之前有<a href="https://github.com/tc39/proposal-dynamic-import" target="_blank" rel="external">一个提案</a>，建议引入 <code>import()</code> 函数（携带 specifier 参数，指定所要加载的模块的位置），以完成动态加载。可以通过其主页的示例可以窥其一二：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> main = <span class="built_in">document</span>.querySelector(<span class="string">"main"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">const</span> link <span class="keyword">of</span> <span class="built_in">document</span>.querySelectorAll(<span class="string">"nav &gt; a"</span>)) &#123;</div><div class="line">  link.addEventListener(<span class="string">"click"</span>, e =&gt; &#123;</div><div class="line">    e.preventDefault();</div><div class="line"></div><div class="line">    <span class="keyword">import</span>(<span class="string">`./section-modules/<span class="subst">$&#123;link.dataset.entryModule&#125;</span>.js`</span>)</div><div class="line">      .then(<span class="function"><span class="params">module</span> =&gt;</span> &#123;</div><div class="line">        <span class="built_in">module</span>.loadPageInto(main);</div><div class="line">      &#125;)</div><div class="line">      .catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</div><div class="line">        main.textContent = err.message;</div><div class="line">      &#125;);</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>事实上，动态 import 已于 2017 年 11 月发布于 ES2020 版本；Chrome 67+ 可用，现在想使用仍是要借助 Babel 做下转换；具体可以参见 <a href="https://v8.dev/features/dynamic-import" target="_blank" rel="external">Dynamic import() - v8.dev</a>。</p>
+<p>如果你使用 Vue Or React 开发，你会发现用 Webpack import 可以按需引入，使得可以资源懒加载得以实现（早前使用 <code>require.ensure</code>）；但需要注意的是，无法使用完全动态的 import 语句，例如 import(foo)，因为 foo 可能是系统或项目中任何文件的任何路径，从而导致将很多无用的资源注入。因此，在使用 webpack import，应该<strong>尽可能静态化表达包所处的路径，最小化变量控制的区域</strong>；来看下官网给出的示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> language = detectVisitorLanguage();</div><div class="line"><span class="keyword">import</span>(<span class="string">`./locale/<span class="subst">$&#123;language&#125;</span>.json`</span>).then(<span class="function"><span class="params">module</span> =&gt;</span> &#123;</div><div class="line">  <span class="comment">// do something with the translations</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>关于 Webpack import，还有一些其他功能设计，比如 <code>Magic Comments</code>，它允许以注释的方式传参，进而更好的生成 Chunk，更多详情可以参见 <a href="https://webpack.js.org/api/module-methods/#import" target="_blank" rel="external">Webpack Import</a>。相比于 Es6 中的 import，上述的两种动态 <code>import()</code> 都是方法，返回结果都是 <code>Promise</code>。在某些场景下，合理的运用，可以更好地对代码进行分割，从而使得构建出的产品更优。</p>
+<ol start="2">
+<li>CommonJS 模块输出的是一个<strong>值的拷贝</strong>，ES6 模块输出的是<strong>值的引用</strong>；</li>
+</ol>
+<blockquote>
+<p>CommonJS 模块输出的是值的拷贝，即一旦输出一个值，而模块内部的变化就影响不到这个值。而 ES6 模块的运行机制与 CommonJS 不一样：JS 引擎对脚本静态分析的时候，遇到模块加载命令 <code>import</code>，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值。因此，ES6 模块是动态引用，并且不会缓存值，模块里面的变量绑定其所在的模块。举例说明：</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// export.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">let</span> counter = <span class="number">276</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> makeCounterIncrease = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  counter++;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// index.js (用 require 方式)</span></div><div class="line"><span class="keyword">let</span> &#123; counter, makeCounterIncrease &#125; = <span class="built_in">require</span>(<span class="string">"./export"</span>);</div><div class="line"><span class="built_in">console</span>.log(counter); <span class="comment">// 276</span></div><div class="line">makeCounterIncrease();</div><div class="line"><span class="built_in">console</span>.log(counter); <span class="comment">// 277</span></div><div class="line">counter += <span class="number">1</span>; <span class="comment">// 不会报错；</span></div><div class="line"></div><div class="line"><span class="comment">// index.js (用 import 方式)</span></div><div class="line"><span class="keyword">import</span> &#123; counter, makeCounterIncrease &#125; <span class="keyword">from</span> <span class="string">"./export"</span>;</div><div class="line"><span class="built_in">console</span>.log(counter); <span class="comment">// 276</span></div><div class="line">makeCounterIncrease();</div><div class="line"><span class="built_in">console</span>.log(counter); <span class="comment">// 277</span></div><div class="line">counter += <span class="number">1</span>; <span class="comment">//  报错：Error: "counter" is read-only.</span></div></pre></td></tr></table></figure>
+<p>正如上面所提及，各类引擎还未完全实现 Es6 语法，可以通过 babel 转换为 Es6 来运行；如果想通过 Node 来验证如上代码，需要通过些工具来实现。</p>
+<h3 id="用哪种方式更可取呢？"><a href="#用哪种方式更可取呢？" class="headerlink" title="用哪种方式更可取呢？"></a>用哪种方式更可取呢？</h3><p>经过以上一番探究，可以知道，可以有不同使用方式（前提是：假设项目已经是引入了 babel 转换工具）；那么，哪种更为可取呢？通常的答案是，看个人（团队）喜好，用 import / require 都可以，当然最好是别混用；但，如果是针对浏览器端项目，使用了类如 <code>rollup</code> 或 <code>webpack</code> 这样的构建工具，因其提供了 <a href="https://webpack.docschina.org/guides/tree-shaking/" target="_blank" rel="external">tree shaking</a> （通常用于描述移除 JavaScript 上下文中的未引用代码）功能，这个时候就需要做一番考量了。拿前端常用工具库 <code>lodash</code> 来说，如果正常引入，则会将其全量载入，注入很多不必要的代码，造成构建出包的尺寸变大：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> _ <span class="keyword">from</span> <span class="string">"lodash"</span>;</div><div class="line">_.flattenDepth();</div></pre></td></tr></table></figure>
+<p>幸好的是，如 <code>lodash</code> 等工具，陆续都做了模块化支持，因此可以用如下这样方式注入（备注：这在早期 <a href="https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/#尽量使用模块化引入">Webpack 打包优化之体积篇</a>一文中，有过详述）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; debounce &#125; <span class="keyword">from</span> <span class="string">"lodash"</span>;</div><div class="line"></div><div class="line"><span class="comment">// 改成如下写法</span></div><div class="line"><span class="keyword">import</span> debounce <span class="keyword">from</span> <span class="string">"lodash/debounce"</span>;</div></pre></td></tr></table></figure>
+<p>但，这样带来的问题是，每次使用都手动 import，会增加开发成本（也显得更为麻烦，至少个人写起代码来，不愿为此而浪费时间）；因此先前设计 <a href="https://github.com/nicejade/vue-boilerplate-template/blob/master/src/helper/lodash.js" target="_blank" rel="external">Vue 项目脚手架</a>时候，有借助一层中间模块来平衡，使得在高效开发时候，也可以让 tree-shaking 得以工作，见如下示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// helper/lodash.js (local)</span></div><div class="line"><span class="keyword">import</span> flattenDepth <span class="keyword">from</span> <span class="string">"lodash/flattenDepth"</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  flattenDepth</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// main.js</span></div><div class="line"><span class="keyword">import</span> lodash <span class="keyword">from</span> <span class="string">"helper/lodash.js"</span>;</div><div class="line">Vue.prototype.$_ = lodash;</div></pre></td></tr></table></figure>
+<h3 id="Node-运行-ES6-语法"><a href="#Node-运行-ES6-语法" class="headerlink" title="Node 运行 ES6 语法"></a>Node 运行 ES6 语法</h3><p>使用 <code>babel-node</code> 命令，来运行含有 import/export 语法的代码（需要注意的是 babel-node 不能用于生产环境，它的存在会加载更多资源和模块）。</p>
+<h4 id="安装-babel-node"><a href="#安装-babel-node" class="headerlink" title="安装 babel-node"></a>安装 babel-node</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i @babel/core @babel/node --save-dev</div></pre></td></tr></table></figure>
+<p>因为 babel-node 对 import 语法默认是关未开启，所以需要安装指定的 preset 并配置 <code>.babelrc</code>来开启语法支持。</p>
+<h4 id="安装-presets-并配置-babelrc-文件"><a href="#安装-presets-并配置-babelrc-文件" class="headerlink" title="安装 presets 并配置 .babelrc 文件"></a>安装 presets 并配置 .babelrc 文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i @babel/preset-env --save-dev</div></pre></td></tr></table></figure>
+<p>在项目根目录下，新建 <code>.babelrc</code> 文件，并填入以下配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"presets"</span>: [ <span class="string">"@babel/preset-env"</span> ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="通过-babel-node-执行-import-export-语法"><a href="#通过-babel-node-执行-import-export-语法" class="headerlink" title="通过 babel-node 执行 import/export 语法"></a>通过 babel-node 执行 import/export 语法</h4><p>经过如上配置，即可通过 babel-node 执行 import/export 语法；因为采 babel-node 基于局部安装，因此可以通过 <code>npx</code> 来运行；当然，完全可以将命令配置在 package.json 的 scripts 内部，以提升便捷度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npx babel-node index.js</div></pre></td></tr></table></figure>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="https://github.com/tc39/proposal-dynamic-import" target="_blank" rel="external">import() proposal for JavaScript</a></li>
+<li><a href="http://es6.ruanyifeng.com/#docs/module" target="_blank" rel="external">ES6 Module 的语法</a></li>
+<li><a href="http://es6.ruanyifeng.com/#docs/module-loader#" target="_blank" rel="external">ES6 Module 的加载实现</a></li>
+</ul>
+<p>@2019-08-25 于东莞.长安 Last Modify：2019-08-28</p>
+<hr>
+<h3 id="您可能会感兴趣的文章"><a href="#您可能会感兴趣的文章" class="headerlink" title="您可能会感兴趣的文章"></a>您可能会感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/">Arya - 在线 Markdown 编辑器</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/02/150-prettier-quickapp-plugin/">Prettier 插件为更漂亮快应用代码</a></li>
+<li><a href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/">基于 Puppeteer 构建简易机器人</a></li>
+<li><a href="https://www.jeffjade.com/2019/01/13/146-awesome-vue-cli3-example/">基于 Vue-Cli3 构建的脚手架模版</a></li>
+<li><a href="https://www.jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/">开箱即用的 Vue Webpack 脚手架模版</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/21/146-awesome-quickapp-resource-tutorial/">快应用开发资源、教程汇聚</a></li>
+<li><a href="https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/">快应用脚手架，为优雅而生</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/">与时俱进版前端资源教程</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      自从有了 Es6 模块系统后，在各种场景，可以愉悦借助 import/export，来充作模块加载方案。同时，你可能也会看到 import 与 export default，或基于 CommonJS 规范的 require 与 module.exports 等诸多用法；本篇文章，旨在探讨 JavaScript 模块化体系中：ES6 模块与 CommonJS 模块的差异，以及各自用法注意事项等。
+    
+    </summary>
+    
+      <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
+    
+    
+      <category term="Webpack" scheme="https://www.jeffjade.com/tags/Webpack/"/>
+    
+      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
+    
+      <category term="NodeJs" scheme="https://www.jeffjade.com/tags/NodeJs/"/>
+    
+  </entry>
   
   <entry>
     <title>为高效而生：Arya Jarvis</title>
@@ -96,7 +192,7 @@
     <link href="https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/"/>
     <id>https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/</id>
     <published>2019-07-29T12:20:20.000Z</published>
-    <updated>2019-08-15T05:14:39.085Z</updated>
+    <updated>2019-08-28T05:24:46.711Z</updated>
     
     <content type="html"><![CDATA[<p>身处当前数字化社会，打造<strong>个人品牌</strong>，越发显得重要（自我推销）。对于从事技相关的人群，欲要树立并长时间保持自己的<code>个人品牌</code>，最便捷的方法无疑是：坚持长时间高质量输出原创文章。就择取合适的博文平台，也是项技术活儿；本文主旨，就针对这承载文字的各类平台，结合其功能特点，探讨下其优劣所在，以便可为更多朋友，就如何选择博文平台诉求，提供些参考。</p>
 <a id="more"></a>
@@ -192,7 +288,19 @@
 <p>备注：以上提及的博文平台或系统，书写都是可基于 <strong>Markdown</strong>；可以基于 <a href="https://nicelinks.site/post/5af55777979f626ea3d37917" target="_blank" rel="external">VsCode</a>、<a href="https://nicelinks.site/post/5af314ad979f626ea3d37912" target="_blank" rel="external">Atom</a> 或者其他 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/markdown-tutorial.md#%E8%B5%84%E6%BA%90%E5%B9%B3%E5%8F%B0" target="_blank" rel="external">Markdown 编辑器</a>，视自己兴趣或习惯而定。</p>
 <p>综合以上信息，倘若已拥有个人服务器，推荐使用 <a href="https://nicelinks.site/post/5c3f3151a5957e07a40b30ff" target="_blank" rel="external">Ghost</a> 搭建；暂时还没有：如果是前端开发者，则看个人兴趣，倾向于 <code>VuePress</code>；如不是：建议使用 <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" rel="external">hexo</a>，相对来讲：产品更为成熟，使用简单，功能强大，插件丰富，社区活跃。</p>
 <h2 id="文章最后寄语"><a href="#文章最后寄语" class="headerlink" title="文章最后寄语"></a>文章最后寄语</h2><p>“能够获得暴利的职业，都有一个共同特点：可扩展性，一次劳动可以服务成千上万的人”。软件、电影、游戏行业都具有可扩展性，作品的生产成本是固定的，但可以被消费无数次，所以有巨大的获利空间，创造出许许多多的富豪。阮一峰在其<a href="http://www.ruanyifeng.com/blog/2019/05/weekly-issue-54.html" target="_blank" rel="external">每周分享第 54 期</a>中，引用到一段话：“写作是最具可扩展性的活动。你呆在家里，不去参加活动、会议，只是在网上写下自己的想法，然后你就具有了最好的可扩展性”。对此观点，深以为然，你觉得呢？</p>
-<p>@2019-07-29 于东莞.长安 Last Modify：2019-08-01</p>]]></content>
+<p>@2019-07-29 于东莞.长安 Last Modify：2019-08-01</p>
+<hr>
+<h3 id="您可能会感兴趣的文章"><a href="#您可能会感兴趣的文章" class="headerlink" title="您可能会感兴趣的文章"></a>您可能会感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/">Arya - 在线 Markdown 编辑器</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/02/150-prettier-quickapp-plugin/">Prettier 插件为更漂亮快应用代码</a></li>
+<li><a href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/">基于 Puppeteer 构建简易机器人</a></li>
+<li><a href="https://www.jeffjade.com/2019/01/13/146-awesome-vue-cli3-example/">基于 Vue-Cli3 构建的脚手架模版</a></li>
+<li><a href="https://www.jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/">开箱即用的 Vue Webpack 脚手架模版</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/21/146-awesome-quickapp-resource-tutorial/">快应用开发资源、教程汇聚</a></li>
+<li><a href="https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/">快应用脚手架，为优雅而生</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/">与时俱进版前端资源教程</a></li>
+</ul>]]></content>
     
     <summary type="html">
     
@@ -1992,41 +2100,6 @@
       <category term="Webpack" scheme="https://www.jeffjade.com/tags/Webpack/"/>
     
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>交易之为，攻守之道</title>
-    <link href="https://www.jeffjade.com/2018/03/31/139-attack-and-defense-between-trade/"/>
-    <id>https://www.jeffjade.com/2018/03/31/139-attack-and-defense-between-trade/</id>
-    <published>2018-03-30T16:00:00.000Z</published>
-    <updated>2018-04-24T14:42:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我们赖以生存的世界，正在以超高加速度被变革着。未来充盈无限美好，令人憧憬；却也伴随着巨大挑战，使人心惊。<strong>长而远观</strong>，斯蒂芬·霍金先生，有预测地球上的生命，很有可能由于某种灾难而灭绝，而人类以不可持续的速率，继续吞噬地球上的资源，这将加速地球的毁灭；<strong>就近来看</strong>：中国作家刘慈欣先生，于 2005 年的作品《赡养人类》，在流逝的不长时间中，其描绘的图景正在一步步的成为现实；<strong>就身边生活感受而言</strong>：<a href="http://www.ruanyifeng.com/" target="_blank" rel="external">@阮一峰</a>也有早早意识到<strong>世界正在猛烈变化</strong>，并写<a href="http://www.ruanyifeng.com/survivor/" target="_blank" rel="external">未来世界的幸存者</a>一书，希望能让读者意识到洪水就在不远处，从而早早准备出路。而，就我个人感受，不知多少年前开始，至也不知道延伸至以后的多少年，各种元素造成的压力，正变本加厉的，向我们的身心袭来 ……</p>
-<a id="more"></a>
-<p><img src="https://image.nicelinks.site/%E9%BB%91%E7%8C%BF.jpeg" alt="晚晴幽草轩 | 交易之为，攻守之道"></p>
-<p>以这样的语调，来开始这篇文章，实在非我之所愿；只是萦绕在身边的现实，确实就是如此，也无须刻意去回避。这在之前很多文章里，这种略显现实主义的观点早已蔓延。很显然的未来是：世界正处在一个前所未有的大变局：<strong>机器人、自动化、人工智能正在变得比人类更强大。在可预见的将来，技术最终将淘汰人类</strong>。而在不远的将来（2035年左右），不出意外的人类社会，将只会只存留两种人：一者，拥有技术与资源的人；二者，被社会、国家所赡养的人。更明显的是，同为人类的你我，几乎少有例外，都不愿意成为第二种人；否则，也不会那么多人如你我，早起晚寝，辛勤工作，拼命奋斗于这个充满竞争的现实里。</p>
-<p>玩过对抗游戏的朋友，兴许都能体会，前期如已占据优势，如果没有大的意外，随着节奏的推移，优势会更显明显，直至取得最后的胜利。一如现在的这个社会，强者易更强。而广大奋斗在一线工作岗位的你我，在这场博弈中竞争，已处于明显的劣势；那么，如何能够让自己及妻儿老小，在未来到来的那天，能够不那么焦虑、辛苦，这兴许是大多人（至少是国人）都应该思考和准备的议题。</p>
-<p>努力而认真的工作，无疑是应对此问题最直接的选择，多半也是最优的选择；但，这并非唯一，而且也不能够是。伴随着世代风云变幻，物价蔓涨，货币失值，仅靠工作而得资本，倘若没有仔细经营，那一方存储小金库，想必不会怎么丰盈；况且，如果一旦外力导致不能够工作，事情陡然间就变得危险了。因此，拥有第二(Or 第三)等多种收入来源，就被成为了理所当然得成了共识。于此，有人选择挖掘自身第二自由职业、很人早早的选择了炒房、也有很人选择做投资理财，买卖货币基金，当然也有很多选择人涌入了股市，坐看风起云涌，凡此等等，数不胜数。</p>
-<p>无论做何种尝试，其本身都是值得鼓励，毕竟前路多艰。但，如果作为看官的你，也选择了投资或炒股，那么接下的就进入了文章的主题：<strong>入市有风险，投资需谨慎</strong>。众所周知，投资大师巴菲特有句名言：“在别人恐慌时贪婪，在别人贪婪时恐慌”，这句话实践起来，本身就对人性产生着极大的考验；况且一堆堆背后的机构也是向利而生，唯利是图，故而市场总是波橘云诡；想在这些虎口谋财，需要的不仅仅是信息、运气、耐心、技巧等等，更多的可能是需要不断调整好的心态，默默地等待机会的到来；于此，下面分享之前看到一篇文章，据评为“韭菜者圣经”（已不知其原始出处）；如题所言：<strong>交易之为，攻守之道</strong>，大概就该是如此了：</p>
-<blockquote><br>　　交易之道，刚者易折。惟有至阴至柔，方可纵横天下。天下柔弱者莫如水，然上善若水。<br><br>　　成功，等于小的亏损，加上大大小小的利润，多次累积。做到不出现大亏损很简单。以生存为第一原则，当出现妨碍这一原则的危险时，抛弃其他一切原则。因为，无论你过去曾经，有过多少个100%的优秀业绩，现在只要损失一个100%你就一无所有了。<br><br>　　交易之道，守不败之地，攻可赢之敌。100万亏损50%就成了50万，50万增值到100万却要盈利100%才行。每一次的成功，只会使你迈出一小步。但每一次失败，却会使你向后倒退一大步。从帝国大厦的第一层走到顶楼，要一个小时。但是从楼顶纵身跳下，只要30秒，就可以回到楼底。<br><br>　　在交易中，永远有你想不到的事情，会让你发生亏损。需不需要止损的最简单方法，就是问自己一个问题：假设现在还没有建立仓位，是否还愿意在此价位买进。答案如果是否定，马上卖出，毫不犹豫。<br><br>　　逆势操作是失败的开始。不应该对抗市场，或尝试击败他。没有必要比市场精明。趋势来时，应之，随之。无趋势时，观之，静之。等待趋势最终明朗后，再动手也不迟。这样会失去少量的机会，但却赢得了资金的安全。你的目标必须与市场保持一致，顺应市场的趋势。如果你与市场保持一致，利润自会滚滚而来。如果你看错了趋势，就得使用古老而可靠的保护伞止蚀单。这就是趋势和利润的关系。<br><br>　　操盘成功的两项最基本规则就是：停损和持长。一方面，截断亏损，控制被动。另一方面，盈利趋势未走完，就不轻易出场，要让利润充分增长。多头市场上，大多数股票可以不怕暂时被套。因为下一波上升会很快让人解套，甚至获利。这时候，买对了还要懂得安坐不动，不管风吹浪打，胜似闲庭信步。交易之道的关键，就是持续掌握优势。<br><br>　　快速认赔，是空头市场交易中的一个重要原则。当头寸遭受损失时，切忌加码再搏。在空头市场中，不输甚至少输就是赢。多做多错，少做少错，不做不错。在一个明显的空头市场，如果因为害怕遭受小损失而拒绝出局，迟早会遭受大损失。<br><br>　　一只在中长期下降趋势里挣扎的股票，任何时候卖出都是对的。哪怕是卖在了最低价上。被动持有等待它的底部，这种观点很危险，因为它可能根本没有底。<br><br>　　学会让资金分批入场。一旦首次入场头寸发生亏损，第一原则就是不能加码。最初的损失往往就是最小的损失，正确的做法就是应该直接出场。如果行情持续不利于首次进场头寸，就是差劲的交易，不管成本多高，立即认赔。<br><br>　　希望在底部或头部一次搞定的人，总会拿到烫手山芋。熊市下跌途中，钱多也不能赢。机构常常比散户死的难看。小资金没有战略建仓的必要，不需要为来年未知行情提前做准备。不需要和主力患难到底。明显下跌趋势中，20-30点的小反弹，根本不值得兴奋和参与。有所不为才能有所为。行动多并不一定就效果好。有时什么也不做，就是一种最好的选择。<br><br>　　不要担心错失机会，善猎者必善等待。在没有大机会的时候，要安静的如一块石头。交易之道在于，耐心等待机会，耐心等待最有利的风险/报酬比，耐心掌握机会。熊市里，总有一些机构，拿着别人的钱，即使只有万分之几的希望，也拼命找机会挣扎，以求突围解困。我们拿着的是自己的钱，要格外珍惜才对。不要去盲目测底，更不要盲目炒底。<br><br>　　要知道，底部和顶部，都是最容易赔大钱的区域。当你感到困惑时，不要作出任何交易决定。不需要勉强进行交易，如果没有适当的行情。没有胜算较高的机会，不要勉强进场。股市如战场，资金就是你的士兵。在大方向正确的情况下，才能从容地投入战斗。要先胜而后求战，不能先战而后求胜。<br><br>　　投机的核心就是尽量回避不确定走势，只在明显的涨势中下注。并且在有相当把握的行动之前，再给自己买一份保险(止损位摆脱出局)，以防自己的主观错误。<br><br>　　做交易，必须要拥有二次重来的能力，包括资金上，信心上和机会上。你可以被市场打败，但千万不能被市场消灭。我们来到这个市场是为了赚钱，但是这个市场却不是全自动提款机。进入股市，就是要抢劫那些时刻准备抢劫你的人。股票投机讲究时机和技巧，机会不是天天有，即使有，也不是人人都能抓住。要学会分析自己擅长把握的机会，以己之长，攻彼之短。有机会就捞一票，没机会就观望，离开。如果自己都不清楚自己擅长什么，就不要轻举妄动。与鳄共泳有风险，入市捞钱需谨慎。做交易,最忌讳使用压力资金。资金一旦有了压力,心态就会扭曲。你会因为市场上的正常波动而惊慌出局，以至事后才发现自己当初处于非常有利的位置。你也会因为受制于资金的使用时间，在没有机会的时候孤注一掷，最终满盘皆输。资金管理是战略，买卖股票是战术，具体价位是战斗。<br><br>　　在十次交易中，即使六次交易你失败了，但只要把这六次交易的亏损，控制在整个交易本金20%的损失内，剩下的四次成功交易里，哪怕用三次小赚，去填补整个交易本金 20% 的亏损，剩下一次大赚，也会令你的收益不低。<br><br>　　你无法控制市场的走向，所以不需要在自己控制不了的形势中浪费精力和情绪。不要担心市场将出现怎样的变化，要担心的是你将采取怎样的对策回应市场的变化。<br><br>　　判断对错并不重要，重要的是当你正确时，你获得了多大的利润，当你错误的时候，你能够承受多少亏损。<br><br>　　入场之前，静下心来多想想，想想自己有多少专业技能支撑自己在市场中拼杀，想想自己的心态是否可以禁得住大风大浪的起伏跌宕，想想自己口袋中有限的资金是否应付得了无限的机会和损失。<br><br>　　炒股如出海，避险才安全。海底的沉船都有一堆航海图。最重要的交易成功因素，并不在于用的是哪一套规则，而在于你的自律功夫。时间决定一切。人生并不只是谋略之争，某种程度上也是时间和生命的竞争。巴菲特 多活 10 年，每年哪怕只有 5% 的持续盈利，其财富的总增长，也足以笑傲天下。<br></blockquote>
-
-<p>上面谈了这些许，也得说说笔者自身的状态，否则容易给人一种泛泛而谈得感觉(即便真的只是如此，但出发点并非如此)；鉴于现实的无奈，随着时间的更替，笔者对资本兴趣也是正向指数增长；那些年从用某宝开始，投资买点理财产品，前两年也有买卖些基金，去年开始玩儿了股票，偶尔也倒腾点黄金；有赚有赔（你知道的，18 年伊始的的前三个月，市场各种震荡），有赔有赚（长久的市场，总是越发向好的，不是么？）。世人皆知，鸡蛋不能放在一个篮子，尤其是对于不够了解的篮子；所以，笔者也没有在这些方面投入过多精力去打理；投资自己或者信得过朋友，未尝不是更好的选择。就笔者而言，过去的这一年，蛮多业余时间就投在自己擅长的领域 —— Web 技术相关；自编自导，有塑造一款 Web 应用: <a href="https://nicelinks.site?from=139-aadbt" target="_blank" rel="external">「倾城之链｜NICE LINKS」</a>；在做好之前，倒没考虑靠其盈利；不过独自去设计、维护、运营，这本身对自身能力也是一种提炼。倘若，你信得过自己，那么还有什么比投资自己，来的更<strong>妙而稳</strong>呢？</p>
-<p>最后，让我们一起相信，明天将充盈更多的是美好，如果我们运气不差，且足够努力的话。</p>
-<p>@2018-03-31 于深圳.南山 Last Modify： 2018-04-23</p>]]></content>
-    
-    <summary type="html">
-    
-      交易之道，刚者易折。惟有至阴至柔，方可纵横天下。天下柔弱者莫如水，然上善若水。
-    
-    </summary>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
-    
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
   </entry>
   
