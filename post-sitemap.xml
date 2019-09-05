@@ -7,8 +7,32 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2018/06/04/141-talk-about-my-blogs/</loc>
+        <lastmod>2019-09-05T15:54:50.382Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2019/08/28/159-js-import-export-vs-require-module-exports/</loc>
-        <lastmod>2019-08-30T16:02:51.609Z</lastmod>
+        <lastmod>2019-09-03T15:08:41.672Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/</loc>
+        <lastmod>2019-09-03T15:07:30.335Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2018/08/31/143-develop-quick-app-experience-notes/</loc>
+        <lastmod>2019-09-03T14:48:51.371Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -543,22 +567,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2018/08/31/143-develop-quick-app-experience-notes/</loc>
-        <lastmod>2019-03-18T14:39:00.636Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/</loc>
-        <lastmod>2019-03-18T14:38:56.091Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2019/02/02/150-prettier-quickapp-plugin/</loc>
         <lastmod>2019-03-18T14:38:41.859Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -569,14 +577,6 @@
     <url>
         <loc>https://www.jeffjade.com/2019/01/20/149-how-to-elegantly-handle-quickapp-request/</loc>
         <lastmod>2019-02-14T05:22:14.605Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2018/06/04/141-talk-about-my-blogs/</loc>
-        <lastmod>2019-01-27T14:16:06.377Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
