@@ -70,13 +70,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/categories/Toss/</loc>
-        <lastmod>2019-08-28T05:24:46.711Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/</loc>
         <lastmod>2019-09-03T15:07:30.335Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -86,6 +79,13 @@
     <url>
         <loc>https://www.jeffjade.com/categories/Front-End/</loc>
         <lastmod>2019-09-05T15:54:50.382Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/categories/Toss/</loc>
+        <lastmod>2019-09-08T15:13:07.426Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
