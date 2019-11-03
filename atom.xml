@@ -1118,7 +1118,7 @@
     <link href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/"/>
     <id>https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/</id>
     <published>2018-12-23T09:21:00.000Z</published>
-    <updated>2019-11-03T16:28:41.738Z</updated>
+    <updated>2019-11-03T16:40:27.512Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://nicelinks.site?from=jeffjade.com" target="_blank" rel="external">倾城之链</a>，基于 Vue2 (Webpack4, Es6, Element-Ui…) Node（Koa2）、MongoDB、Nginx、Redis、Pm2、Prerender 等工具/技术，所构建的 Web 应用程序，旨在云集全球优秀网站，方便你我探索互联网中更广阔的世界。</p>
 <a id="more"></a>
@@ -1146,7 +1146,7 @@
 <li><p><strong>小程序</strong>：在初步完成 Web、「快应用」等版本蛮久以后，最近（2019.10）有基于 <code>mpvue</code> 构建了<a href="https://github.com/nicejade/nicelinks-miniprogram" target="_blank" rel="external">微信「小程序」版本</a>，通过微信扫码、或者在微信搜索「倾城之链」即可访问。</p>
 </li>
 </ul>
-<div align="center"><br>  <img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg" width="300px" alt="倾城之链小程序码"><br></div>
+<div align="center"><br>  <img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg" style="width: 300px;min-width: 300px" alt="倾城之链小程序码"><br></div>
 
 <ul>
 <li><strong>桌面应用</strong>：如果您想在 <code>MacOS</code>, <code>Windows</code> 或 <code>Linux</code> 中，获得更快捷的访问体验，您可以通过 <a href="https://github.com/jiahaog/nativefier" target="_blank" rel="external">Nativefier</a>（使任何网页成为桌面应用程序的一个命令行工具），轻松创建桌面版<a href="https://nicelinks.site?utm_source=github.com" target="_blank" rel="external">「倾城之链」</a>应用，只需运行以下命令即可：</li>
