@@ -205,13 +205,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Nice/</loc>
-        <lastmod>2019-05-30T05:03:43.249Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/jQuery/</loc>
         <lastmod>2019-06-03T16:30:23.082Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -242,13 +235,6 @@
     <url>
         <loc>https://www.jeffjade.com/tags/Atom/</loc>
         <lastmod>2019-06-04T13:45:59.110Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Thought/</loc>
-        <lastmod>2019-06-04T13:46:37.181Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -303,13 +289,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/</loc>
-        <lastmod>2019-09-03T15:07:30.335Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Android/</loc>
         <lastmod>2019-09-03T15:07:30.335Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -345,28 +324,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Tools/</loc>
-        <lastmod>2019-09-16T14:53:23.168Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Vue/</loc>
-        <lastmod>2019-09-16T14:53:23.168Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Toss/</loc>
-        <lastmod>2019-09-16T14:53:23.168Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Share/</loc>
         <lastmod>2019-09-16T14:53:23.168Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -382,6 +340,48 @@
     <url>
         <loc>https://www.jeffjade.com/tags/Arya/</loc>
         <lastmod>2019-09-16T14:53:23.168Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Thought/</loc>
+        <lastmod>2019-11-03T16:28:41.738Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Tools/</loc>
+        <lastmod>2019-11-03T16:28:41.738Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Toss/</loc>
+        <lastmod>2019-11-03T16:28:41.738Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Share/</loc>
+        <lastmod>2019-11-03T16:28:41.738Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/</loc>
+        <lastmod>2019-11-03T16:28:41.738Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Nice/</loc>
+        <lastmod>2019-11-03T16:28:41.738Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
