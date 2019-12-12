@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2019-12-12T05:05:50.481Z</updated>
+  <updated>2019-12-12T05:18:35.251Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/"/>
     <id>https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/</id>
     <published>2019-12-11T05:14:15.000Z</published>
-    <updated>2019-12-12T05:05:50.481Z</updated>
+    <updated>2019-12-12T05:18:35.251Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/nodejs-tutorial.md" target="_blank" rel="external">Node.js</a>，如今已经是<a href="https://github.com/nicejade/nice-front-end-tutorial" target="_blank" rel="external">前端开发</a>不可或缺的组成部分；<code>npm</code> 则是 Node.js 默认的、以 JavaScript 编写的软件包管理系统； 而 <code>npx</code> <strong>是 npm 软件包运行器</strong>，使用它，能够无需显式安装即可帮助执行 npm 软件包。它有很多用处，本就从其主要使用场景角度，来介绍下该命令。</p>
 <a id="more"></a>
@@ -32,7 +32,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">npm i -D rollup</div><div class="line">./node_modules/.bin/rollup -v</div><div class="line"></div><div class="line"><span class="comment">#or</span></div><div class="line">npm i -D rollup</div><div class="line">`npm bin`/rollup -v</div></pre></td></tr></table></figure>
 <p>npx 为你提供了更好的解决方案：<code>npx rollup</code> 是你使用本地安装所需的全部工作；如果你采取额外的步骤并配置 <a href="https://www.npmjs.com/package/npx#shell-auto-fallback" target="_blank" rel="external">shell 自动回退</a>。</p>
 <blockquote>
-<p>好处是，如果调用已经安装的二进制文件，<a href="https://twitter.com/maybekatz/status/877444832494596096" target="_blank" rel="external">npx 基本上没有开销</a> – 它足够聪明，可以将工具的代码，直接加载到当前运行的<code>node</code> 进程中！这与此类事情的速度差不多，并使其成为完全可以接受的脚本编写工具。</p>
+<p>好处是，如果调用已经安装的二进制文件，npx 基本上没有开销（Npx Official Description: Executes <command> either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for <command> to run.） – 它足够聪明，可以将工具的代码，直接加载到当前运行的<code>node</code> 进程中！这与此类事情的速度差不多，并使其成为完全可以接受的脚本编写工具。</p>
 </blockquote>
 <h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><h3 id="运行项目安装的模块"><a href="#运行项目安装的模块" class="headerlink" title="运行项目安装的模块"></a>运行项目安装的模块</h3><p>npx 想要解决的主要问题，就是调用项目内部安装的模块。比如，项目内部安装了打包工具 <code>rollup</code>。调用 rollup ，可在项目脚本和 package.json 的 <a href="https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/#%E5%BC%BA%E5%A4%A7%E5%A6%82%E6%96%AF%EF%BC%8Cnpm-%E8%84%9A%E6%9C%AC">scripts</a> 字段里面；如果想在命令行下调用，像下面 👇 这样使用，会更加方便。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npx rollup -v</div></pre></td></tr></table></figure>
@@ -51,7 +51,7 @@
 <ol>
 <li>npx <code>-c</code>参数，可以将所有命令都用 npx 来解释。于是，下面代码就可以正常工作：</li>
 </ol>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># npx -p cowsay -c "cowsay hey, bro"</span></div><div class="line">npx -p cowsay -p arya-jarvis -c <span class="string">"arya ip | cowsay"</span></div><div class="line">...</div><div class="line"> ______________</div><div class="line"><span class="variable">&lt; 172.25.40.22 &gt;</span></div><div class="line"> --------------</div><div class="line">        \   ^__^</div><div class="line">         \  (oo)\_______</div><div class="line">            (__)\       )\/\</div><div class="line">                ||<span class="string">----w </span>|</div><div class="line">                ||<span class="string">     </span>||</div></pre></td></tr></table></figure>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># npx -p cowsay -c "cowsay hey, bro"</span></div><div class="line">npx -p cowsay -p arya-jarvis -c <span class="string">"arya ip | cowsay"</span></div><div class="line">...</div><div class="line"> ______________</div><div class="line"><span class="variable">&lt; 172.13.14.21 &gt;</span></div><div class="line"> --------------</div><div class="line">        \   ^__^</div><div class="line">         \  (oo)\_______</div><div class="line">            (__)\       )\/\</div><div class="line">                ||<span class="string">----w </span>|</div><div class="line">                ||<span class="string">     </span>||</div></pre></td></tr></table></figure>
 <ol start="2">
 <li><code>-c</code> 参数的另一个作用是，可以把这些 npm 的环境变量带入 npx 命令，如下代码：</li>
 </ol>
