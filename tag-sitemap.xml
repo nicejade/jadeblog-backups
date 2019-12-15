@@ -345,27 +345,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Webpack/</loc>
-        <lastmod>2019-12-12T15:44:13.383Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/NodeJs/</loc>
-        <lastmod>2019-12-12T15:44:13.383Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/npm/</loc>
-        <lastmod>2019-12-12T15:44:13.383Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Vue/</loc>
         <lastmod>2019-12-12T16:35:11.717Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -389,6 +368,27 @@
     <url>
         <loc>https://www.jeffjade.com/tags/Markdown/</loc>
         <lastmod>2019-12-12T16:35:11.717Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Webpack/</loc>
+        <lastmod>2019-12-15T13:44:43.649Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/NodeJs/</loc>
+        <lastmod>2019-12-15T13:44:43.649Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/npm/</loc>
+        <lastmod>2019-12-15T13:44:43.649Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

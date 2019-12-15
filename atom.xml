@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2019-12-12T15:44:13.383Z</updated>
+  <updated>2019-12-15T13:44:43.649Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/"/>
     <id>https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/</id>
     <published>2019-12-11T05:14:15.000Z</published>
-    <updated>2019-12-12T15:44:13.383Z</updated>
+    <updated>2019-12-15T13:44:43.649Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/nodejs-tutorial.md" target="_blank" rel="external">Node.js</a>，如今已经是<a href="https://github.com/nicejade/nice-front-end-tutorial" target="_blank" rel="external">前端开发</a>不可或缺的组成部分；<code>npm</code> 则是 Node.js 默认的、以 JavaScript 编写的软件包管理系统； 而 <code>npx</code> <strong>是 npm 软件包运行器</strong>，使用它，能够无需显式安装即可帮助执行 npm 软件包。它有很多用处，本就从其主要使用场景角度，来介绍下该命令。</p>
 <a id="more"></a>
@@ -38,7 +38,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npx rollup -v</div></pre></td></tr></table></figure>
 <p>npx 的原理很简单，就是运行的时候，会到<code>node_modules/.bin</code>路径和环境变量<code>$PATH</code>里面，检查命令是否存在。由于 npx 会检查环境变量<code>$PATH</code>，所以系统命令也可以调用。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npx ls <span class="comment"># 等价于 npx ls</span></div><div class="line">npx <span class="built_in">which</span> npm <span class="comment"># 等价于 which npm</span></div></pre></td></tr></table></figure>
-<h3 id="一次性调用，无需本地安装"><a href="#一次性调用，无需本地安装" class="headerlink" title="一次性调用，无需本地安装"></a>一次性调用，无需本地安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 开启一个本地静态服务器</span></div><div class="line">npx arya s</div><div class="line"><span class="comment"># or</span></div><div class="line">npx http-server</div></pre></td></tr></table></figure>
+<h3 id="一次性调用，无需本地安装"><a href="#一次性调用，无需本地安装" class="headerlink" title="一次性调用，无需本地安装"></a>一次性调用，无需本地安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 开启一个本地静态服务器</span></div><div class="line">npx arya-jarvis s</div><div class="line"><span class="comment"># or</span></div><div class="line">npx http-server</div></pre></td></tr></table></figure>
 <h3 id="执行-GitHub-上面的模块源码"><a href="#执行-GitHub-上面的模块源码" class="headerlink" title="执行 GitHub 上面的模块源码"></a>执行 GitHub 上面的模块源码</h3><p><strong>注意</strong>，远程代码必须是一个模块，即必须包含 <code>package.json</code> 和入口脚本。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 从 gist 服务上调用命令</span></div><div class="line">npx https://gist.github.com/nicejade/406f154e882a836de1b2e12d02b84aab</div><div class="line"></div><div class="line"><span class="comment"># 从 github 仓库中调用命令</span></div><div class="line">npx github:piuccio/cowsay hello</div></pre></td></tr></table></figure>
 <p>值得一提的是，上述 <a href="https://gist.github.com/nicejade/406f154e882a836de1b2e12d02b84aab" target="_blank" rel="external">gist 代码片段</a>，是为写此篇文章，特意写来测试用（使用 npx 命令来快速生成一个标准的 <code>README.md</code>）；有了 <code>npx</code> 这个功能，即可为朋友们分享一些脚本，提供更加便捷 &amp; 快捷的方式（相比之下，npm 仓库的脚本，发布和使用，都显得更加繁琐些；当然，你需要注意 ⚠️ 安全，请务必仔细阅读 gists 代码，如同运行<code>.sh</code> 脚本时一样！）。</p>
