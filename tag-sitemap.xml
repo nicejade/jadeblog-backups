@@ -261,20 +261,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Efficiency/</loc>
-        <lastmod>2019-08-21T05:20:57.231Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Chrome/</loc>
-        <lastmod>2019-08-21T05:20:57.231Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Hexo/</loc>
         <lastmod>2019-08-28T05:24:46.711Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -304,13 +290,6 @@
 
     <url>
         <loc>https://www.jeffjade.com/tags/Thought/</loc>
-        <lastmod>2019-11-03T16:40:27.512Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Tools/</loc>
         <lastmod>2019-11-03T16:40:27.512Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -389,6 +368,27 @@
     <url>
         <loc>https://www.jeffjade.com/tags/npm/</loc>
         <lastmod>2019-12-15T13:44:43.649Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Efficiency/</loc>
+        <lastmod>2019-12-23T16:47:17.233Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Tools/</loc>
+        <lastmod>2019-12-23T16:47:17.233Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Chrome/</loc>
+        <lastmod>2019-12-23T16:47:17.233Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
