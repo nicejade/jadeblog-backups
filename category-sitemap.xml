@@ -49,13 +49,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/categories/Share/</loc>
-        <lastmod>2019-06-04T13:45:31.381Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/categories/Thought/</loc>
         <lastmod>2019-06-04T13:46:37.181Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -77,15 +70,22 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/categories/Front-End/</loc>
-        <lastmod>2019-12-15T13:44:43.649Z</lastmod>
+        <loc>https://www.jeffjade.com/categories/Toss/</loc>
+        <lastmod>2019-12-23T16:47:17.233Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/categories/Toss/</loc>
-        <lastmod>2019-12-23T16:47:17.233Z</lastmod>
+        <loc>https://www.jeffjade.com/categories/Front-End/</loc>
+        <lastmod>2020-02-29T14:21:56.491Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/categories/Share/</loc>
+        <lastmod>2020-02-29T14:33:56.683Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
