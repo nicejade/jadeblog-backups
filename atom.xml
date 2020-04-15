@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2020-02-29T15:55:02.425Z</updated>
+  <updated>2020-04-15T15:56:06.894Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端开发与 DevOps 实践</title>
+    <link href="https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/"/>
+    <id>https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/</id>
+    <published>2020-04-15T14:22:22.000Z</published>
+    <updated>2020-04-15T15:56:06.894Z</updated>
+    
+    <content type="html"><![CDATA[<p>DevOps（Development 和 Operations 的组合词）是一种重视“软件开发人员（Dev）”和“IT 运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。DevOps（Development 和 Operations 的组合词）是一种重视“软件开发人员（Dev）”和“IT 运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠（<code>维基百科</code>中给的解释）。</p>
+<a id="more"></a>
+<p><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ" alt="前端开发与 DevOps 实践"></p>
+<h2 id="DevOps-的诞生"><a href="#DevOps-的诞生" class="headerlink" title="DevOps 的诞生"></a>DevOps 的诞生</h2><p>2009 年，Patrick Debois 发起了一个名为 DevOpsDays 的会议，始于比利时，现已传播到多个国家。术语 DevOps 现在已经在多种情况下使用。Bass, Weber 和 Zhu 提出的定义是：</p>
+<p>DevOps 是一组旨在保证高质量的同时，减少将更改提交到系统、以及将更改放入正常生产之间的实践。</p>
+<p>即 DevOps 的目的在于：<strong>保证高质量的同时，减少发布流程的总耗时</strong>。DevOps 早在 2009 年就有人提出来，但是，为什么近几年才开始受到越来越多的企业重视和实践呢？因为 DevOps 的发展是独木不成林的，现在有越来越多的技术支撑。微服务架构理念、容器技术使得 DevOps 的实施变得更加容易，计算能力提升和云环境的发展，使得快速开发的产品可以立刻获得更广泛的使用。</p>
+<h2 id="DevOps-的价值"><a href="#DevOps-的价值" class="headerlink" title="DevOps 的价值"></a>DevOps 的价值</h2><p>几乎所有的开发、测试、运维都听过敏捷软件开发，有些公司也是采用这种模式，来进行产品的快速迭代，以此验证产品的可行性，快速抢占市场、拿到更多投资；或提供更多的功能给用户使用；或修复软件 Bug 解决用户的抱怨。快速迭代意味着产品需要频繁的部署上线，这也就意味着研发、测试、运维团队必须克服这种频繁上线带来的诸多问题：研发质量低；测试不充分，上线后 Bug 层出不穷；运维上线部署慢、跟不上研发的节奏，经常由于环境、配置等问题导致应用不能正常提供服务等等。</p>
+<p>一方面公司希望快速将产品交付给用户使用，另一方面技术人员又害怕这种快速交付，毕竟越快越容易出问题，而且压力巨大。正是在这种背景下，DevOps 应运而生。<strong>为研发、测试、运维团队提供了理论性指导</strong>。</p>
+<h2 id="DevOps-的实践"><a href="#DevOps-的实践" class="headerlink" title="DevOps 的实践"></a>DevOps 的实践<a href="https://quickapp.lovejade.cn/front-end-development-and-devops-practice/#DevOps%20%E7%9A%84%E5%AE%9E%E8%B7%B5" target="_blank" rel="external"></a></h2><p>DevOps  运动的主要特点是强烈倡导对构建软件的所有环节 (从集成、测试、发布到部署和基础架构管理) 进行全面的自动化和监控。就目前而言（2020），DevOps 实践渗透，已早已不止<code>持续集成</code>、<code>持续交付</code>、<code>持续部署</code>、<code>监控</code>等方向，有团队出品了一个 <a href="https://devops.phodal.com/home" target="_blank" rel="external">DevOps 元素周期表</a>，它所关联的工具、涉及的服务之多，可见一斑。</p>
+<p><img src="https://quickapp.lovejade.cn/content/images/2020/04/DevOps-----.png" alt="DevOps 元素周期表"></p>
+<p>在 <a href="https://github.com/kamranahmedse/developer-roadmap/" target="_blank" rel="external">Web Developer Roadmap 2020</a>，有列出前端、后端、以及 <a href="https://roadmap.sh/devops" target="_blank" rel="external">DevOps</a> 三大块，这里列出来以供大家参考。</p>
+<p><img src="https://roadmap.sh/roadmaps/devops.png" alt="DevOps Roadmap"></p>
+<p>借助这个思想，可以将其延伸至其他各个方面，如编码、学习、娱乐等；在遇到第二次做相类似的事儿，就该想着用极客的思维、精益求精的态度，将其<strong>简单快捷化</strong>，从而达到<strong>节省时间、愉悦心情</strong>之目的；在这段节省出来的时间内，可以尽情去玩儿，享受生活。倘若再抽出时间，用力学习以及打造属于自己神兵利器，至此一个优良的循环♻️就被营造出来了。笔者在此也有过一些尝试  ── <a href="https://arya.lovejade.cn/#/" target="_blank" rel="external">Arya Jarvis</a>：将平时常用的功能做了简化和集成，在需要的时候，一键即可完成，体验贼爽（每有新的诉求，就利用闲暇以扩展之）。</p>
+<p>用好 Mac（Window）以及常用编辑器，能让你更好的编码；了解 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/markdown-tutorial.md" target="_blank" rel="external">Markdown</a> 语法，能帮助你写文章、文档；玩转搜索引擎，可帮你解决掉绝大部分开发常见问题；熟悉 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/chrome-tutorial.md" target="_blank" rel="external">Crhome</a>，无疑可以提升前端开发技巧；掌握诸如 Shell、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/gulp-tutorial.md" target="_blank" rel="external">Gulp</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/python-tutorial.md" target="_blank" rel="external">Python</a> 等可以让你更快完成一些脚本；精通 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/git-tutorial.md" target="_blank" rel="external">Git</a>，能更好管理你的项目代码；运用 CI/CD 工具，可协助你打造自动化流程…… 其他如 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/docker-tutorial.md" target="_blank" rel="external">Docker</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/graphql-tutorial.md" target="_blank" rel="external">GraphQL</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/serverless-tutorial.md" target="_blank" rel="external">ServerLess</a> 等等，更是能给如今的前端开发者，带来极大的便利（更多可参见<a href="https://github.com/nicejade/nice-front-end-tutorial" target="_blank" rel="external">与时俱进版前端资源教程</a>），嗟夫！<strong>善用工具兮、妙趣无穷哉</strong>。</p>
+<h2 id="工具也是思想"><a href="#工具也是思想" class="headerlink" title="工具也是思想"></a>工具也是思想</h2><ol>
+<li>技术与工具，是为解决问题、提升效率而生而用；  倘若只是为用（追逐新颖 or 时髦）而用，多少有些违背初衷，走火入魔；</li>
+<li>正如《人月神话》中所说：“没有饮弹”；  软件开发过程里，没有万能的终极武器；  只有「综合」而「灵活」运用个各种方法，才是解决之道；</li>
+<li>采取「微服务架构」模式，提倡将复杂庞大的系统，拆分成各个不同小组服务（粒度小，专注做一件事），服务之间相互配合、，渐进融合；</li>
+<li>切勿追求一步到位（没必要，也不可能）；唯有变才是唯一不变；避免前期过于复杂的拆分，以及人力、时间成本，做好预判、支持扩展；</li>
+<li>保持学习、保持激情，主动去了解新的技术、工具、思想，然后适时采用；</li>
+</ol>
+<p>最后补充一句：<strong>君子生非异也，善假于物也</strong>，共勉。</p>
+<p>于 2020 年 04 月，深圳.福田。</p>
+<p>原文首发于个人最新博客：<a href="https://quickapp.lovejade.cn/front-end-development-and-devops-practice/" target="_blank" rel="external">静轩之别苑 — 前端开发与 DevOps 实践</a>。</p>]]></content>
+    
+    <summary type="html">
+    
+      DevOps 的目的在于：保证高质量的同时，减少发布流程的总耗时。DevOps 早在 2009 年就有人提出来，但是，为什么近几年才开始受到越来越多的企业重视和实践呢？因为 DevOps 的发展是独木不成林的，现在有越来越多的技术支撑。微服务架构理念、容器技术使得 DevOps 的实施变得更加容易，计算能力提升和云环境的发展，使得快速开发的产品可以立刻获得更广泛的使用。
+    
+    </summary>
+    
+      <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
+    
+    
+      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
+    
+      <category term="DevOps" scheme="https://www.jeffjade.com/tags/DevOps/"/>
+    
+  </entry>
   
   <entry>
     <title>如何为项目编写良好 README</title>
@@ -1976,85 +2023,6 @@
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
       <category term="Android" scheme="https://www.jeffjade.com/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用ESLint ＆ Prettier美化Vue代码</title>
-    <link href="https://www.jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/"/>
-    <id>https://www.jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/</id>
-    <published>2018-06-18T10:18:00.000Z</published>
-    <updated>2018-06-18T16:17:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/prettier/prettier" target="_blank" rel="external">Prettier</a> 是一个有见识的代码格式化工具。它通过解析代码并使用自己的规则重新打印它，并考虑最大行长来强制执行一致的样式，并在必要时包装代码。如今，它已成为解决所有代码格式问题的优选方案；支持 <code>JavaScript</code>、 <code>Flow</code>、 <code>TypeScript</code>、 <code>CSS</code>、 <code>SCSS</code>、 <code>Less</code>、 <code>JSX</code>、 <code>Vue</code>、 <code>GraphQL</code>、 <code>JSON</code>、 <code>Markdown</code> 等语言，您可以结合 ESLint 和 Prettier，检测代码中潜在问题的同时，还能统一团队代码风格，从而促使写出高质量代码，来提升工作效率。</p>
-<a id="more"></a>
-<p><img src="https://image.nicelinks.site/prettier-girl.jpg" alt="beautify-vue-by-eslint-and-prettier"></p>
-<blockquote>
-<p><strong>备注</strong>，此文首发于使用 <code>Vuepress</code> 搭建的新 Web 应用：<a href="https://nice.lovejade.cn/" target="_blank" rel="external">静晴轩别苑</a>；如果您对此感兴趣，可以移步查看：<a href="https://nice.lovejade.cn/zh/article/beautify-vue-by-eslint-and-prettier.html" target="_blank" rel="external">使用ESLint ＆ Prettier美化Vue代码</a>。</p>
-</blockquote>
-<h2 id="初始化-Vue-项目推介"><a href="#初始化-Vue-项目推介" class="headerlink" title="初始化 Vue 项目推介"></a>初始化 Vue 项目推介</h2><p>在格式化代码方面， Prettier 确实和 ESLint 有重叠，但两者侧重点不同：ESLint 主要工作就是检查代码质量并给出提示，它所能提供的格式化功能很有限；而 Prettier 在格式化代码方面具有更大优势。而 Prettier 被设计为易于与 ESLint 集成，所以你可以轻松在项目中使两者，而无需担心冲突。本文就如何使用 ESLint ＆ Prettier，来格式并美化 Vue 代码做下探讨；如果您使用其他类型框架，这份经验绝大部份依旧适用。</p>
-<p>正如在 <a href="https://jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/" target="_blank" rel="external">开箱即用的 Vue Webpack 脚手架模版</a> 所倡导的：<code>vue-cli3</code>在这个版本，它集成了更多丰富的功能，以及更多默认配置，可通过附带的图形用户界面创建、开发和管理项目… 而且已发布 <code>RC</code> 版本，核心功能已准备就绪，<code>API</code> 已趋于稳定，所以，建议采用 <code>vue-cli3</code> 来创建您的项目；您只需运行 <code>vue create my-project</code> 命令，接下来按照提示进行选择即可；为了您的项目可持续性愉快进行，<code>ESlint</code> 是您必要的选项。如果，您这样做了，您就可以在 <em>package.json</em> 中 <code>eslintConfig</code> 属性下，找到 <code>ESLint</code> 配置；接下来，只需将 <code>Prettier</code> 与 <code>ESLint</code> 集成即可。</p>
-<h2 id="集成-ESLint-amp-Prettier"><a href="#集成-ESLint-amp-Prettier" class="headerlink" title="集成 ESLint &amp; Prettier"></a>集成 ESLint &amp; Prettier</h2><p>对于二者集成，可以利用插件来完成；<a href="https://github.com/prettier/eslint-plugin-prettier" target="_blank" rel="external">eslint-plugin-prettier</a> 公开了一个 “recommended” 配置，将 <code>plugin:prettier/recommended</code> 添加到 <code>extends</code> 的子属性 <code>plugin:vue/essential</code> 之后，以默认设置在 <code>ESLint</code> 中启用对 <code>Prettier</code> 的支持：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">"eslintConfig": &#123;</div><div class="line">    "root": true,</div><div class="line">    "extends": [</div><div class="line">      "plugin:vue/essential",</div><div class="line">      "plugin:prettier/recommended",</div><div class="line">      "eslint:recommended"</div><div class="line">    ]</div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
-<p>当然，还需安装依赖库： eslint-plugin-prettier 和 eslint-config-prettier (下文会讲到此依赖的作用)，更详细信息可以参见 Prettier 文档： <a href="https://prettier.io/docs/en/eslint.html" target="_blank" rel="external">Integrating with ESLint
-</a>。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn add --dev eslint-plugin-prettier eslint-config-prettier prettier-eslint-cli</div></pre></td></tr></table></figure>
-<p>这里需要补充说明下的是 <code>eslint-plugin-prettier</code> 得工作原理，它会对比格式化前和用 Prettier 格式化后的代码，有不一致的地方就会报错提示；我们可以借助一些工具来修复，比如： <code>eslint --fix</code>，<a href="https://github.com/prettier/prettier-eslint-cli" target="_blank" rel="external">prettier-eslint-cli</a>；可将其配置在 package scripts 中，以方便使用：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"eslint-fix"</span>: <span class="string">"eslint src/**/**/*.vue --fix"</span>,</div><div class="line">    <span class="attr">"format-code"</span>: <span class="string">"prettier-eslint --write \"src/**/*.js\" \"src/**/*.vue\""</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="https://image.nicelinks.site/vue-eslint-prettier.png" alt="beautify-vue-by-eslint-and-prettier"></p>
-<h2 id="修改规则配置"><a href="#修改规则配置" class="headerlink" title="修改规则配置"></a>修改规则配置</h2><p>您需要知道的是，两者混合使用时候，需要修改规则，以防止重复或冲突；<code>eslint-config-prettier</code> 即为解决此问题的存在，可以使用它关闭所有可能引起冲突的规则。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">"rules": &#123;</div><div class="line">  "prettier/prettier": "error"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>事实上，当在项目中如此配置，可能会出现些“诡异”的报错，即便采用如上修复，也无法解决；而且这也不是您预期的提示；</p>
-<p><span style="color: red">error</span>: Delete <code>⏎</code> (prettier/prettier) at src/pages/xxx</p>
-<p>此时，可以对规则进行甄别、梳理，择选出适宜的规则；对于此，您可以参考 <a href="https://prettier.io/docs/en/options.html" target="_blank" rel="external">Configuring Prettier Options</a> &amp; <a href="https://github.com/prettier/eslint-plugin-prettier" target="_blank" rel="external">eslint-plugin-prettier#options</a>；依据个人编码习惯，有采取如下配置 ( 可在 <a href="https://github.com/nicejade/awesome-vue-cli3-example/blob/master/package.json" target="_blank" rel="external">awesome-vue-cli3-example</a> 查看源码)：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">"rules": &#123;</div><div class="line">  "no-console": 0,</div><div class="line">  "prettier/prettier": [</div><div class="line">    "error",</div><div class="line">    &#123;</div><div class="line">      "singleQuote": true,</div><div class="line">      "trailingComma": "none",</div><div class="line">      "bracketSpacing": true,</div><div class="line">      "jsxBracketSameLine": true,</div><div class="line">      "parser": "flow"</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="添加编辑器配置"><a href="#添加编辑器配置" class="headerlink" title="添加编辑器配置"></a>添加编辑器配置</h2><h4 id="Atom-编辑器"><a href="#Atom-编辑器" class="headerlink" title="Atom 编辑器"></a>Atom 编辑器</h4><p>可以安装 <a href="https://atom.io/packages/prettier-atom" target="_blank" rel="external">prettier-atom</a>；<code>Atom</code> 编辑器还会提示你安装更多辅助插件；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apm install prettier-atom</div></pre></td></tr></table></figure>
-<p>它有两种模式可以使用：   </p>
-<ul>
-<li>保存时自动格式化（Packages → Prettier → Toggle Format on Save）   </li>
-<li>使用键盘快捷方式手动调用（如果没有选择，整个文件被格式化）：<code>CTRL + ALT + F</code>   </li>
-</ul>
-<h4 id="VS-Code-编辑器"><a href="#VS-Code-编辑器" class="headerlink" title="VS Code 编辑器"></a>VS Code 编辑器</h4><p>安装插件：<a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target="_blank" rel="external">ESlint</a>，<a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" target="_blank" rel="external">Prettier</a>，VS Code 插件配置统一在 preference  → setting  → user setting 设置 (快捷键： <code>Command + ,</code>)，即可实现保存时自动格式化：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"prettier.eslintIntegration"</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">"eslint.autoFixOnSave"</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">"editor.formatOnSave"</span>: <span class="literal">true</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Sublime-Text-编辑器"><a href="#Sublime-Text-编辑器" class="headerlink" title="Sublime Text 编辑器"></a>Sublime Text 编辑器</h3><p>安装插件：<a href="https://github.com/jonlabelle/SublimeJsPrettier" target="_blank" rel="external">JsPrettier</a>，它有依赖到 <code>Prettier</code>  等，所以需要全局安装：<code>yarn global add prettier</code>；在 “Preferences  → Setting” 中添加如下设置，即可实现保存时自动格式化；</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"auto_format_on_save"</span>: <span class="literal">true</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>当然您也可以自定义快捷键，以按需格式化代码；在 “Preferences  → Key Binding” 的 User Keymap 中，参考如下示例，注入命令即可 (Windows OS 则是：<code>ctrl + alt + f</code>)：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; <span class="attr">"keys"</span>: [<span class="string">"command+alt+f"</span>], <span class="attr">"command"</span>: <span class="string">"js_prettier"</span> &#125;</div></pre></td></tr></table></figure>
-<p>更多设置、使用细节，可参见 <a href="https://github.com/jonlabelle/SublimeJsPrettier#usage" target="_blank" rel="external">SublimeJsPrettier#Usage</a>。</p>
-<h2 id="Pre-commit-Hook-约束代码提交"><a href="#Pre-commit-Hook-约束代码提交" class="headerlink" title="Pre-commit Hook 约束代码提交"></a>Pre-commit Hook 约束代码提交</h2><p>以上探讨了如何运用 ESLint ＆ Prettier 写出优质代码，这都是针对个人的推荐性行为；为保证团队统一代码风格，则必须采取些手段以强制约束；假如您的团队使用 <code>Git</code> 作为代码管理工具，在 <code>commit</code> 行为及之前进行甄别约束，是很棒的选择；于此，可借助 <a href="https://github.com/typicode/husky" target="_blank" rel="external">husky</a> &amp; <a href="https://github.com/okonet/lint-staged" target="_blank" rel="external">lint-staged</a> 来实现之。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># install husky &amp; lint-staged</span></div><div class="line">yarn add lint-staged husky --dev</div><div class="line"></div><div class="line"><span class="comment"># package.json config</span></div><div class="line"><span class="string">"lint-staged"</span>: &#123;</div><div class="line">  <span class="string">"**/**.&#123;js,json,pcss,md,vue&#125;"</span>: [</div><div class="line">    <span class="string">"prettier --write"</span>,</div><div class="line">    <span class="string">"git add"</span></div><div class="line">  ]</div><div class="line">&#125;,</div><div class="line"><span class="string">"husky"</span>: &#123;</div><div class="line">  <span class="string">"hooks"</span>: &#123;</div><div class="line">    <span class="string">"pre-commit"</span>: <span class="string">"yarn run precommit-msg &amp;&amp; lint-staged"</span>,</div><div class="line">    <span class="string">"pre-push"</span>: <span class="string">"yarn test"</span></div><div class="line">  &#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
-<p>值得一提的是，在实际项目中， <code>husky</code> 很可能由于各种原因，导致不能很好的工作；这多半是由于 <code>.git/hooks/pre-commit</code> 与期待目标不匹配所致，您可以手动修改，也可以采取如下办法 (备注：如果您的 <code>husky</code> 版本在 0.14 及以上)：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">rm -rf .git/hooks/*</div><div class="line">node node_modules/husky/lib/installer/bin install</div></pre></td></tr></table></figure>
-<h2 id="写在文章最后"><a href="#写在文章最后" class="headerlink" title="写在文章最后"></a>写在文章最后</h2><p>“上邪，我欲与君相知，长命无绝衰。山无陵，江水为竭。冬雷震震，夏雨雪。天地合，乃敢与君绝”。这突如其来的一首古诗，乍看起来，与本文没有丝毫关系；但需要提醒的是：<strong>您在编写高质量代码时付出的努力越多，您花在调试上的时间就越少</strong>。如果您为项目开发工作流程，做了足够充分而适宜的建设，这不仅可以极大提升代码编写质量与速度，同时可节省调试、解决问题时间开销，而且还能避免无端而起的坏心情，从而更进一步促进工作效率，如此造就的这份优质循环，可以使得您拥有更多时间去学习、折腾、品味人生，这其中自然也可包括品读优美<code>古诗词</code>🐉☺️；所以？<strong>工欲善其事，必先利其器</strong>，您学到了么？</p>
-<p>@2018-06-15 于深圳.南山 Last Modify： 2018-06-15</p>
-<hr>
-<h3 id="你可能感兴趣-有用-的文章："><a href="#你可能感兴趣-有用-的文章：" class="headerlink" title="你可能感兴趣(/有用)的文章："></a><strong>你可能感兴趣(/有用)的文章：</strong></h3><ul>
-<li><a href="https://jeffjade.com/2017/03/11/120-how-to-write-vue-better/" target="_blank" rel="external">如何写一手漂亮的Vue</a></li>
-<li><a href="https://jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/" target="_blank" rel="external">Webpack 打包优化之速度篇</a></li>
-<li><a href="//jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/">Webpack 打包优化之体积篇</a></li>
-<li><a href="https://jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/" target="_blank" rel="external">Npm vs Yarn 之备忘详单</a></li>
-<li><a href="https://jeffjade.com/2016/03/30/104-front-end-tutorial/" target="_blank" rel="external">『引』最全前端资源汇集</a></li>
-<li><a href="https://jeffjade.com/2017/09/28/127-nice-front-end-tutorial/" target="_blank" rel="external">与时俱进版前端资源教程</a></li>
-<li><a href="https://jeffjade.com/2017/10/09/130-front-end-notes/" target="_blank" rel="external">晚晴幽草说之-前端札记</a></li>
-<li><a href="https://jeffjade.com/2016/05/14/106-front-end-learning-record/" target="_blank" rel="external">所历前端“姿势”更替记(其一)</a></li>
-<li><a href="https://jeffjade.com/2015/02/01/2015-02-01-recommended-article/" target="_blank" rel="external">墙裂推荐文章集锦</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      Prettier 是一个有见识的代码格式化工具。它通过解析代码并使用自己的规则重新打印它，并考虑最大行长来强制执行一致的样式，并在必要时包装代码。如今，它已成为解决所有代码格式问题的优选方案；您可以结合 ESLint 和 Prettier，检测代码中潜在问题的同时，还能统一团队代码风格，从而促使写出高质量代码，来提升工作效率。
-    
-    </summary>
-    
-      <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
-    
-    
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
-      <category term="Prettier" scheme="https://www.jeffjade.com/tags/Prettier/"/>
     
   </entry>
   
