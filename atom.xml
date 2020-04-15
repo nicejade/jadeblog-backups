@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2020-04-15T15:56:06.894Z</updated>
+  <updated>2020-04-15T16:07:49.745Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/"/>
     <id>https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/</id>
     <published>2020-04-15T14:22:22.000Z</published>
-    <updated>2020-04-15T15:56:06.894Z</updated>
+    <updated>2020-04-15T16:07:49.745Z</updated>
     
     <content type="html"><![CDATA[<p>DevOps（Development 和 Operations 的组合词）是一种重视“软件开发人员（Dev）”和“IT 运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。DevOps（Development 和 Operations 的组合词）是一种重视“软件开发人员（Dev）”和“IT 运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠（<code>维基百科</code>中给的解释）。</p>
 <a id="more"></a>
-<p><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ" alt="前端开发与 DevOps 实践"></p>
+<p><img src="https://image.nicelinks.site/devops-infinity.png" alt="前端开发与 DevOps 实践"></p>
 <h2 id="DevOps-的诞生"><a href="#DevOps-的诞生" class="headerlink" title="DevOps 的诞生"></a>DevOps 的诞生</h2><p>2009 年，Patrick Debois 发起了一个名为 DevOpsDays 的会议，始于比利时，现已传播到多个国家。术语 DevOps 现在已经在多种情况下使用。Bass, Weber 和 Zhu 提出的定义是：</p>
 <p>DevOps 是一组旨在保证高质量的同时，减少将更改提交到系统、以及将更改放入正常生产之间的实践。</p>
 <p>即 DevOps 的目的在于：<strong>保证高质量的同时，减少发布流程的总耗时</strong>。DevOps 早在 2009 年就有人提出来，但是，为什么近几年才开始受到越来越多的企业重视和实践呢？因为 DevOps 的发展是独木不成林的，现在有越来越多的技术支撑。微服务架构理念、容器技术使得 DevOps 的实施变得更加容易，计算能力提升和云环境的发展，使得快速开发的产品可以立刻获得更广泛的使用。</p>
@@ -38,14 +38,22 @@
 <p>用好 Mac（Window）以及常用编辑器，能让你更好的编码；了解 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/markdown-tutorial.md" target="_blank" rel="external">Markdown</a> 语法，能帮助你写文章、文档；玩转搜索引擎，可帮你解决掉绝大部分开发常见问题；熟悉 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/chrome-tutorial.md" target="_blank" rel="external">Crhome</a>，无疑可以提升前端开发技巧；掌握诸如 Shell、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/gulp-tutorial.md" target="_blank" rel="external">Gulp</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/python-tutorial.md" target="_blank" rel="external">Python</a> 等可以让你更快完成一些脚本；精通 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/git-tutorial.md" target="_blank" rel="external">Git</a>，能更好管理你的项目代码；运用 CI/CD 工具，可协助你打造自动化流程…… 其他如 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/docker-tutorial.md" target="_blank" rel="external">Docker</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/graphql-tutorial.md" target="_blank" rel="external">GraphQL</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/serverless-tutorial.md" target="_blank" rel="external">ServerLess</a> 等等，更是能给如今的前端开发者，带来极大的便利（更多可参见<a href="https://github.com/nicejade/nice-front-end-tutorial" target="_blank" rel="external">与时俱进版前端资源教程</a>），嗟夫！<strong>善用工具兮、妙趣无穷哉</strong>。</p>
 <h2 id="工具也是思想"><a href="#工具也是思想" class="headerlink" title="工具也是思想"></a>工具也是思想</h2><ol>
 <li>技术与工具，是为解决问题、提升效率而生而用；  倘若只是为用（追逐新颖 or 时髦）而用，多少有些违背初衷，走火入魔；</li>
-<li>正如《人月神话》中所说：“没有饮弹”；  软件开发过程里，没有万能的终极武器；  只有「综合」而「灵活」运用个各种方法，才是解决之道；</li>
+<li>正如《人月神话》中所说：“没有饮弹”；软件开发过程里，没有万能的终极武器；只有「综合」而「灵活」运用个各种方法，才是解决之道；</li>
 <li>采取「微服务架构」模式，提倡将复杂庞大的系统，拆分成各个不同小组服务（粒度小，专注做一件事），服务之间相互配合、，渐进融合；</li>
 <li>切勿追求一步到位（没必要，也不可能）；唯有变才是唯一不变；避免前期过于复杂的拆分，以及人力、时间成本，做好预判、支持扩展；</li>
 <li>保持学习、保持激情，主动去了解新的技术、工具、思想，然后适时采用；</li>
 </ol>
 <p>最后补充一句：<strong>君子生非异也，善假于物也</strong>，共勉。</p>
 <p>于 2020 年 04 月，深圳.福田。</p>
-<p>原文首发于个人最新博客：<a href="https://quickapp.lovejade.cn/front-end-development-and-devops-practice/" target="_blank" rel="external">静轩之别苑 — 前端开发与 DevOps 实践</a>。</p>]]></content>
+<p>原文首发于个人最新博客：<a href="https://quickapp.lovejade.cn/front-end-development-and-devops-practice/" target="_blank" rel="external">静轩之别苑 — 前端开发与 DevOps 实践</a>。</p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/">Npm vs Yarn 之备忘详单</a></li>
+<li><a href="https://quickapp.lovejade.cn/git-common-problems-and-solutions/" target="_blank" rel="external">Git 常见问题及解决办法</a></li>
+<li><a href="https://www.jeffjade.com/2019/08/25/156-arya-jarvis-born-for-efficiency/">为高效而生：Arya Jarvis</a></li>
+<li><a href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/">Arya - 在线 Markdown 编辑器</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/02/150-prettier-quickapp-plugin/">Prettier 插件为更漂亮快应用代码</a></li>
+<li><a href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/">基于 Puppeteer 构建简易机器人</a></li>
+</ul>]]></content>
     
     <summary type="html">
     
