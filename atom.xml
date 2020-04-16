@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2020-04-15T16:07:49.745Z</updated>
+  <updated>2020-04-16T15:38:38.573Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/"/>
     <id>https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/</id>
     <published>2020-04-15T14:22:22.000Z</published>
-    <updated>2020-04-15T16:07:49.745Z</updated>
+    <updated>2020-04-16T15:38:38.573Z</updated>
     
     <content type="html"><![CDATA[<p>DevOps（Development 和 Operations 的组合词）是一种重视“软件开发人员（Dev）”和“IT 运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。DevOps（Development 和 Operations 的组合词）是一种重视“软件开发人员（Dev）”和“IT 运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠（<code>维基百科</code>中给的解释）。</p>
 <a id="more"></a>
@@ -35,10 +35,10 @@
 <p>在 <a href="https://github.com/kamranahmedse/developer-roadmap/" target="_blank" rel="external">Web Developer Roadmap 2020</a>，有列出前端、后端、以及 <a href="https://roadmap.sh/devops" target="_blank" rel="external">DevOps</a> 三大块，这里列出来以供大家参考。</p>
 <p><img src="https://roadmap.sh/roadmaps/devops.png" alt="DevOps Roadmap"></p>
 <p>借助这个思想，可以将其延伸至其他各个方面，如编码、学习、娱乐等；在遇到第二次做相类似的事儿，就该想着用极客的思维、精益求精的态度，将其<strong>简单快捷化</strong>，从而达到<strong>节省时间、愉悦心情</strong>之目的；在这段节省出来的时间内，可以尽情去玩儿，享受生活。倘若再抽出时间，用力学习以及打造属于自己神兵利器，至此一个优良的循环♻️就被营造出来了。笔者在此也有过一些尝试  ── <a href="https://arya.lovejade.cn/#/" target="_blank" rel="external">Arya Jarvis</a>：将平时常用的功能做了简化和集成，在需要的时候，一键即可完成，体验贼爽（每有新的诉求，就利用闲暇以扩展之）。</p>
-<p>用好 Mac（Window）以及常用编辑器，能让你更好的编码；了解 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/markdown-tutorial.md" target="_blank" rel="external">Markdown</a> 语法，能帮助你写文章、文档；玩转搜索引擎，可帮你解决掉绝大部分开发常见问题；熟悉 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/chrome-tutorial.md" target="_blank" rel="external">Crhome</a>，无疑可以提升前端开发技巧；掌握诸如 Shell、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/gulp-tutorial.md" target="_blank" rel="external">Gulp</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/python-tutorial.md" target="_blank" rel="external">Python</a> 等可以让你更快完成一些脚本；精通 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/git-tutorial.md" target="_blank" rel="external">Git</a>，能更好管理你的项目代码；运用 CI/CD 工具，可协助你打造自动化流程…… 其他如 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/docker-tutorial.md" target="_blank" rel="external">Docker</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/graphql-tutorial.md" target="_blank" rel="external">GraphQL</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/serverless-tutorial.md" target="_blank" rel="external">ServerLess</a> 等等，更是能给如今的前端开发者，带来极大的便利（更多可参见<a href="https://github.com/nicejade/nice-front-end-tutorial" target="_blank" rel="external">与时俱进版前端资源教程</a>），嗟夫！<strong>善用工具兮、妙趣无穷哉</strong>。</p>
+<p>用好 Mac（Window）以及常用编辑器，能让你更好的编码；了解 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/markdown-tutorial.md" target="_blank" rel="external">Markdown</a> 语法，能帮助你写文章、文档；玩转搜索引擎，可帮你解决掉绝大部分开发常见问题；熟悉 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/chrome-tutorial.md" target="_blank" rel="external">Chrome</a>，无疑可以提升前端开发技巧；掌握诸如 Shell、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/gulp-tutorial.md" target="_blank" rel="external">Gulp</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/python-tutorial.md" target="_blank" rel="external">Python</a> 等可以让你更快完成一些脚本；精通 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/git-tutorial.md" target="_blank" rel="external">Git</a>，能更好管理你的项目代码；运用 CI/CD 工具，可协助你打造自动化流程…… 其他如 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/docker-tutorial.md" target="_blank" rel="external">Docker</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/graphql-tutorial.md" target="_blank" rel="external">GraphQL</a>、<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/serverless-tutorial.md" target="_blank" rel="external">ServerLess</a> 等等，更是能给如今的前端开发者，带来极大的便利（更多可参见<a href="https://github.com/nicejade/nice-front-end-tutorial" target="_blank" rel="external">与时俱进版前端资源教程</a>），嗟夫！<strong>善用工具兮、妙趣无穷哉</strong>。</p>
 <h2 id="工具也是思想"><a href="#工具也是思想" class="headerlink" title="工具也是思想"></a>工具也是思想</h2><ol>
 <li>技术与工具，是为解决问题、提升效率而生而用；  倘若只是为用（追逐新颖 or 时髦）而用，多少有些违背初衷，走火入魔；</li>
-<li>正如《人月神话》中所说：“没有饮弹”；软件开发过程里，没有万能的终极武器；只有「综合」而「灵活」运用个各种方法，才是解决之道；</li>
+<li>正如《人月神话》中所说：“没有银弹”；软件开发过程里，没有万能的终极武器；只有「综合」而「灵活」运用各种方法，才是解决之道；</li>
 <li>采取「微服务架构」模式，提倡将复杂庞大的系统，拆分成各个不同小组服务（粒度小，专注做一件事），服务之间相互配合、，渐进融合；</li>
 <li>切勿追求一步到位（没必要，也不可能）；唯有变才是唯一不变；避免前期过于复杂的拆分，以及人力、时间成本，做好预判、支持扩展；</li>
 <li>保持学习、保持激情，主动去了解新的技术、工具、思想，然后适时采用；</li>
