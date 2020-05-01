@@ -133,11 +133,15 @@
     <link href="https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/"/>
     <id>https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/</id>
     <published>2019-12-11T05:14:15.000Z</published>
-    <updated>2020-02-29T14:21:56.491Z</updated>
+    <updated>2020-05-01T15:58:03.839Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/nodejs-tutorial.md" target="_blank" rel="external">Node.js</a>，如今已经是<a href="https://github.com/nicejade/nice-front-end-tutorial" target="_blank" rel="external">前端开发</a>不可或缺的组成部分；<code>npm</code> 则是 Node.js 默认的、以 JavaScript 编写的软件包管理系统； 而 <code>npx</code> <strong>是 npm 软件包运行器</strong>，使用它，能够无需显式安装即可帮助执行 npm 软件包。它有很多用处，本就从其主要使用场景角度，来介绍下该命令。</p>
 <a id="more"></a>
 <p><img src="https://image.nicelinks.site/node-npm-npx.jpg" alt="前端利器之 npx 使用纪要"></p>
+<blockquote>
+<p><strong><span style="color: #d71345">『有则推荐』</span></strong>: 自 2017 年初，就有开始利用闲余时光，打磨个人最新作品——<a href="https://nicelinks.site/?from=jeffjade.com" target="_blank" rel="external"><strong>「倾城之链」</strong></a> ，有意将其打造成优良开放型平台，旨在云集全球优秀网站，让您更为便捷地探索互联网中那更广阔的世界；在这里，您可以轻松<strong>发现</strong>、<strong>学习</strong>、<strong>分享</strong>更多<code>有用</code>或<code>有趣</code>的事物。目前仍在不断迭代、优化中，如果您对此感兴趣，不妨先尝试一下： <a href="https://nicelinks.site/?from=jeffjade.com" target="_blank" rel="external">「倾城之链」</a>；亦十分欢迎提出您宝贵意见或建议（亦可通过微信扫，描如下小程序码进行体验）。 (Upade@2020-05-01 于深圳.南山)。</p>
+</blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" alt="小程序码 - 倾城之链"></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>更新 npm 至 <em>&gt;= @5.2.0</em>，就会自动安装 <a href="https://www.npmjs.com/package/npx" target="_blank" rel="external">npx</a>；可以通过 <code>which npx</code> 来查看其绝对路径 ；如果由于某种原因它不可用，请按照以下说明安装或更新它即可：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g npx</div></pre></td></tr></table></figure>
 <h2 id="存在价值"><a href="#存在价值" class="headerlink" title="存在价值"></a>存在价值</h2><p>多年来，npm 生态系统越来越倾向于将工具安装为项目本地 <code>devDependencies</code>，而不是要求用户在全局范围内安装它们。这意味着像 <a href="https://npm.im/mocha" target="_blank" rel="external">mocha</a>，<a href="https://www.jeffjade.com/tags/Gulp/">gulp</a> 和 <a href="https://npm.im/bower" target="_blank" rel="external">bower</a> 这样曾经主要全局安装在系统上的工具现在可以在每个项目的基础上管理它们的版本。这也意味着，要使基于 npm 的项目启动并运行，你需要做的就是确保在系统上有 <code>node+npm</code>，克隆 <code>Git repo</code>，然后执行 <code>npm install</code> 和 <code>npm run xx</code> 来安装依赖以及运行命令。由于<code>npm run-script</code> 将本地二进制文件添加到路径，这样就可以了！</p>

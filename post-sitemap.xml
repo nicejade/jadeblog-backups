@@ -7,6 +7,78 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/</loc>
+        <lastmod>2020-05-01T15:58:21.233Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/</loc>
+        <lastmod>2020-05-01T15:58:03.839Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2017/03/11/120-how-to-write-vue-better/</loc>
+        <lastmod>2020-05-01T15:57:30.801Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2017/01/23/118-chrome_awesome_plug-in/</loc>
+        <lastmod>2020-05-01T15:56:49.312Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/</loc>
+        <lastmod>2020-05-01T15:56:14.649Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/</loc>
+        <lastmod>2020-05-01T15:55:54.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
+        <lastmod>2020-05-01T15:55:40.753Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2016/03/11/2016-03-11-autohotkey/</loc>
+        <lastmod>2020-05-01T15:55:31.708Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/</loc>
+        <lastmod>2020-05-01T15:50:51.561Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/</loc>
         <lastmod>2020-04-16T15:38:38.573Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,22 +89,6 @@
     <url>
         <loc>https://www.jeffjade.com/2020/02/29/161-how-to-write-a-good-readme-for-your-project/</loc>
         <lastmod>2020-02-29T15:55:02.425Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/</loc>
-        <lastmod>2020-02-29T14:21:56.491Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2017/01/23/118-chrome_awesome_plug-in/</loc>
-        <lastmod>2019-12-23T16:47:17.233Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -143,14 +199,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/</loc>
-        <lastmod>2019-06-04T13:47:03.247Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2016/01/19/2016-01-19-toss-gulp/</loc>
         <lastmod>2019-06-04T13:46:48.781Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -185,14 +233,6 @@
     <url>
         <loc>https://www.jeffjade.com/2016/03/03/2016-03-02-how-to-use-atom/</loc>
         <lastmod>2019-06-04T13:45:59.110Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2016/03/11/2016-03-11-autohotkey/</loc>
-        <lastmod>2019-06-04T13:45:45.293Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -321,14 +361,6 @@
     <url>
         <loc>https://www.jeffjade.com/2016/05/22/108-Listary-Everything-Wox-Launch/</loc>
         <lastmod>2019-03-28T05:24:27.836Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/</loc>
-        <lastmod>2019-03-26T14:31:16.763Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -472,14 +504,6 @@
 
     <url>
         <loc>https://www.jeffjade.com/2017/10/14/131-some-filth-such-as-jianshu/</loc>
-        <lastmod>2019-03-26T14:31:16.652Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/</loc>
         <lastmod>2019-03-26T14:31:16.652Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -663,22 +687,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
-        <lastmod>2018-05-10T16:49:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/</loc>
-        <lastmod>2018-05-10T16:35:22.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2015/01/08/2015-01-08-lua-standard-libraries/</loc>
         <lastmod>2018-04-25T12:47:56.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -729,14 +737,6 @@
     <url>
         <loc>https://www.jeffjade.com/2017/10/29/132-feeling-love-and-life/</loc>
         <lastmod>2017-11-25T12:21:27.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2017/03/11/120-how-to-write-vue-better/</loc>
-        <lastmod>2017-10-28T09:28:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
