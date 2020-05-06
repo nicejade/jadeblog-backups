@@ -1,3 +1,4 @@
+https://www.jeffjade.com/2020/04/30/163-front-end-project-development-specification-opinion/
 https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/
 https://www.jeffjade.com/2020/02/29/161-how-to-write-a-good-readme-for-your-project/
 https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/
@@ -72,8 +73,8 @@ https://www.jeffjade.com/2016/01/10/2016-01-10-javacript-setTimeout/
 https://www.jeffjade.com/2016/01/01/2016-01-01-movie2015/
 https://www.jeffjade.com/2015/12/26/2015-12-26-sum_up-in-the-end-of-year/
 https://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/
-https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/
 https://www.jeffjade.com/2015/11/25/2015-11-31-jQuery-vs-javaScript/
+https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/
 https://www.jeffjade.com/2015/11/14/2015-11-14-css-achieve-horizontal_vertical_center/
 https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/
 https://www.jeffjade.com/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/
@@ -97,4 +98,3 @@ https://www.jeffjade.com/2015/07/24/2015-07-24-why-programmer-love-mac/
 https://www.jeffjade.com/2015/07/21/2015-07-21-muisc-of-wukong/
 https://www.jeffjade.com/2015/07/19/2015-07-19-movie-about-MonkeyKing-HeroisBack/
 https://www.jeffjade.com/2015/07/05/2015-07-05-thought-of-life/
-https://www.jeffjade.com/2015/06/29/2015-06-29-css-background/
