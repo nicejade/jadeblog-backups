@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="author" content="www.jeffjade.com">
-	<meta name="keywords" content="web前端开发,CSS,Html,CSS水平居中">
-	<meta name="description" content="文本水平居中总结">
-	<title>垂直水平居中</title>
-	<style>
-	*{padding:0;margin:0;box-sizing:border-box;}
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="author" content="www.jeffjade.com"><meta name="keywords" content="web前端开发,CSS,Html,CSS水平居中"><meta name="description" content="文本水平居中总结"><title>垂直水平居中</title><style>*{padding:0;margin:0;box-sizing:border-box;}
 	body,input{font-family:'Microsoft Yahei';}
 	h1{font-size:30px;line-height: 2}
 	h4{font-size:18px;color:#333;line-height:2;font-weight:normal;}
@@ -32,31 +23,7 @@
 	#p2>.son{margin:auto;}
 	#p3>.son{position: absolute;left:50%;background-color: transparent;border:2px dashed #ccc;}
 	#p3>.son>.cont{margin-left:-50%;height:200px;width:100%;background-color: rgba(0,0,0,.5);z-index:-1;margin-top: -2px;}
-	#p3>.son>.cont:before{margin-left:-50%;}
-	</style>
-</head>
-<body>
-	<a class="next" href="demo2.html"></a>
-	<div class="wrapper">
-		<h1>水平居中方式</h1>
-		<h4><i>01.</i>假若子元素是<b>行内元素</b>，只需为<b>父元素</b>添加<span>text-align:center</span>即可</h4>
-		<div class="parent" id="p1">
-			<img src="http://placekitten.com/g/500/200">
-		</div>
-		<h4><i>02.</i>假若子元素是<b>块状元素</b>，只需为<b>子元素</b>添加<span>margin:auto</span>即可</h4>
-		<div class="parent" id="p2">
-			<div class="son"></div>
-		</div>
-		<h4><i>03.</i><b>绝对定位</b>元素水平居中</h4>
-		<pre><code>
+	#p3>.son>.cont:before{margin-left:-50%;}</style></head><body><a class="next" href="demo2.html"></a><div class="wrapper"><h1>水平居中方式</h1><h4><i>01.</i>假若子元素是<b>行内元素</b>，只需为<b>父元素</b>添加<span>text-align:center</span>即可</h4><div class="parent" id="p1"><img src="https://image.nicelinks.site/blank.gif" data-echo="http://placekitten.com/g/500/200"></div><h4><i>02.</i>假若子元素是<b>块状元素</b>，只需为<b>子元素</b>添加<span>margin:auto</span>即可</h4><div class="parent" id="p2"><div class="son"></div></div><h4><i>03.</i><b>绝对定位</b>元素水平居中</h4><pre><code>
   .son{position: absolute;left: 50%;}
   .cont{margin-left: -50%;width: 100%;}
-</code></pre>
-		<div class="parent" id="p3">
-			<div class="son">
-				<div class="cont"></div>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+</code></pre><div class="parent" id="p3"><div class="son"><div class="cont"></div></div></div></div></body></html>
