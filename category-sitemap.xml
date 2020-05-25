@@ -70,13 +70,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/categories/Front-End/</loc>
-        <lastmod>2020-05-11T15:38:48.981Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/categories/Program/</loc>
         <lastmod>2020-05-11T15:52:22.278Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -86,6 +79,13 @@
     <url>
         <loc>https://www.jeffjade.com/categories/Share/</loc>
         <lastmod>2020-05-21T17:00:10.228Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/categories/Front-End/</loc>
+        <lastmod>2020-05-25T16:07:51.974Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
