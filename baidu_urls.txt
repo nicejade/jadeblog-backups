@@ -1,4 +1,5 @@
 https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/
+https://www.jeffjade.com/2020/08/17/167-how-to-use-the-quickapp-api-gracefully/
 https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/
 https://www.jeffjade.com/2020/05/25/164-adding-shadow-effect-to-batch-image/
 https://www.jeffjade.com/2020/04/30/163-front-end-project-development-specification-opinion/
@@ -97,4 +98,3 @@ https://www.jeffjade.com/2015/08/28/2015-09-02-js-string-compare/
 https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/
 https://www.jeffjade.com/2015/08/03/2015-08-03-javascript-this/
 https://www.jeffjade.com/2015/07/29/2015-07-29-mac-musthave-software/
-https://www.jeffjade.com/2015/07/24/2015-07-24-why-programmer-love-mac/
