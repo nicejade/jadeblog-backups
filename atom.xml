@@ -97,7 +97,7 @@
     <link href="https://www.jeffjade.com/2020/08/17/167-how-to-use-the-quickapp-api-gracefully/"/>
     <id>https://www.jeffjade.com/2020/08/17/167-how-to-use-the-quickapp-api-gracefully/</id>
     <published>2020-08-17T01:10:00.000Z</published>
-    <updated>2020-08-18T05:37:24.965Z</updated>
+    <updated>2020-08-18T05:40:34.335Z</updated>
     
     <content type="html"><![CDATA[<p>查阅<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发文档，可以知道官方提供了诸多<a href="https://doc.quickapp.cn/features/" target="_blank" rel="external">接口</a>；对于如何使用，文档中也给出了简单的说明和代码示例；但照着示例写法，在实际项目中，不够优雅且更不高效；所以，在开发中需要加以变通去写，使得大幅提升开发效率，同时也令整个代码优雅，以便于维护。所以在此篇文章的存在，旨在于讨论：如何优雅使用「快应用」API。</p>
 <a id="more"></a>
@@ -119,7 +119,7 @@
 <p>当然，您也可以使用 Promise 更常用的方式，如 <a href="https://github.com/vivoquickapp/quickapp-typescript-template/blob/master/src/pages/Main/index.ux#L73-L108" target="_blank" rel="external">qa.prompt .showDialog</a> 写法。为了更好的诠释这些用法，有讲这些经验融入于 <a href="https://github.com/vivoquickapp/quickapp-typescript-template" target="_blank" rel="external">quickapp-typescript-template</a>（基于 TypeScript 编写「<code>快应用</code>」模版），以供参考。</p>
 <p>于 2020 年 08 月，深圳.福田。</p>
 <blockquote>
-<p>原文首发于个人最新博客：<a href="https://quickapp.vivo.com.cn/how-to-use-the-quickapp-api-gracefully/" target="_blank" rel="external">vivo 快应用官方博客 — 如何优雅使用「快应用」API</a>。</p>
+<p>原文首发于 <a href="https://quickapp.vivo.com.cn/how-to-use-the-quickapp-api-gracefully/" target="_blank" rel="external">vivo 快应用官方博客 — 如何优雅使用「快应用」API</a>。</p>
 </blockquote>
 <h3 id="您可能会感兴趣的文章"><a href="#您可能会感兴趣的文章" class="headerlink" title="您可能会感兴趣的文章"></a>您可能会感兴趣的文章</h3><ul>
 <li><a href="https://nice.lovejade.cn/zh/article/develop-quick-app-experience-notes.html" target="_blank" rel="external">快应用之开发体验纪要</a></li>
@@ -245,9 +245,9 @@
     
       <category term="Front-End" scheme="https://www.jeffjade.com/tags/Front-End/"/>
     
-      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="图片" scheme="https://www.jeffjade.com/tags/%E5%9B%BE%E7%89%87/"/>
+    
+      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
