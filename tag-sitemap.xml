@@ -135,13 +135,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/CSS/</loc>
-        <lastmod>2019-03-26T14:31:16.757Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/React/</loc>
         <lastmod>2019-04-28T14:21:57.877Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -401,22 +394,29 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/</loc>
+        <loc>https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/</loc>
         <lastmod>2020-09-25T10:11:08.735Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/CSS/</loc>
+        <lastmod>2020-09-29T16:27:50.697Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/</loc>
+        <lastmod>2020-09-29T16:27:50.697Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.jeffjade.com/tags/Front-End/</loc>
-        <lastmod>2020-09-25T10:11:08.735Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/</loc>
-        <lastmod>2020-09-25T10:11:08.735Z</lastmod>
+        <lastmod>2020-09-29T16:27:50.697Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
