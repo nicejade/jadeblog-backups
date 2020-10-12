@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2020-09-29T16:27:50.697Z</updated>
+  <updated>2020-10-12T15:59:01.024Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -16,17 +16,156 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>OKR 工作法，带你聚焦目标，高效工作</title>
+    <link href="https://www.jeffjade.com/2020/10/12/172-okr-working-method-let-you-more-efficiently/"/>
+    <id>https://www.jeffjade.com/2020/10/12/172-okr-working-method-let-you-more-efficiently/</id>
+    <published>2020-10-12T15:23:00.000Z</published>
+    <updated>2020-10-12T15:59:01.024Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 《高效能人士的七个习惯》一书中，提及了时间管理矩阵：要重视第二象限那些<strong>重要但不紧急</strong>的事情；但不紧急的事情，很是容易被我们忽略啊，该如何呢？其办法就是：<strong>将它们变得紧急</strong>。而 <code>OKR</code> 就是一个能实现这个变革的工具：帮你<strong>聚焦核心目标，落实推进，减少不理性的分心</strong>。</p>
+<p><img src="https://image.nicelinks.site/four-quadrant-method.png" alt="四象限法则"></p>
+<h2 id="什么是-OKR-工作法"><a href="#什么是-OKR-工作法" class="headerlink" title="什么是 OKR 工作法"></a>什么是 OKR 工作法</h2><p>OKR 的名词解释：O 是 Objectives，KR 是 Key Results，OKR 就是 Objectives and Key Results，即<strong>目标与关键结果法</strong>。</p>
+<ul>
+<li>OKR 是一种<code>战略目标任务体系</code>，是一套明确目标并跟踪其完成情况的管理工具和方法，由英特尔公司发明，被谷歌公司发扬光大。</li>
+<li>OKR 是一套严密的<code>思考框架</code>和持续的<code>纪律要求</code>，旨在确保员工紧密协作，把精力聚焦在能够促进组织成长、可衡量的贡献上</li>
+<li>OKR 由一个需要<code>极致聚焦的明确目标</code>和<code>量化该目标的数个关键结果</code>这两大主要部分组成。比如你的目标是“运营一款线上游戏”，那么关键结果，就可以是“一天 10 万下载量”或“一天 2 万元营收”。</li>
+</ul>
+<p><img src="https://image.nicelinks.site/okr-working-method.jpg" alt="OKR 工作法"></p>
+<h2 id="达成-OKR-后的收益"><a href="#达成-OKR-后的收益" class="headerlink" title="达成 OKR 后的收益"></a>达成 OKR 后的收益</h2><ol>
+<li>更快的开展节奏，更加敏捷；</li>
+<li>把精力聚焦在最重要的事情之上；</li>
+<li>提升团队成员的敬业度；</li>
+<li>促进团队成员可以有前瞻性思考；</li>
+<li>凝聚团队力量，促使更好达成目标；</li>
+</ol>
+<h2 id="如何设定一个好的-OKR？"><a href="#如何设定一个好的-OKR？" class="headerlink" title="如何设定一个好的 OKR？"></a>如何设定一个好的 OKR？</h2><h3 id="一个好的-OKR-是什么样的？"><a href="#一个好的-OKR-是什么样的？" class="headerlink" title="一个好的 OKR 是什么样的？"></a>一个好的 OKR 是什么样的？</h3><ol>
+<li>按照年度、季度设置 OKR 都可以，但一定要关联上团队的愿景使命。使命让你保持正确的方向，OKR 给你明确的里程碑，关键结果用来量化目标，使团队和个人聚焦在一个有挑战性的目标上。</li>
+<li>如果你发现一起床，就有做事的激情，说明你设置了一个好的目标；如果你看到关键结果时有点担心，那这个关键结果的设置就是恰当的。</li>
+<li>一个好的 OKR 的目标必须是可衡量的，是有挑战性却又不至于让人绝望的，对于完成它，你们大约抱有 50% 左右的信心。</li>
+</ol>
+<p><strong>确定目标是「WHAT」，关键成果就是「HOW」</strong>。用心想一下，要达成目标，需要做到哪些事情？OKR 告诉你，时间及资源有限，如果需要完成 10 件事，要先聚焦在最重要的 3~5 件事，这个步骤强迫你思考待办事项的先后顺序，<strong>专注投入优先要务</strong>！</p>
+<h3 id="好的-KR-必备特征"><a href="#好的-KR-必备特征" class="headerlink" title="好的 KR 必备特征"></a>好的 KR 必备特征</h3><ul>
+<li>定量的；</li>
+<li>有挑战性；</li>
+<li>具体的；</li>
+<li>自主制定的；</li>
+<li>基于进度的；</li>
+<li>上下左右对齐一致；</li>
+<li>驱动正确的行为表现；</li>
+</ul>
+<h3 id="如何设定-OKR？"><a href="#如何设定-OKR？" class="headerlink" title="如何设定 OKR？"></a>如何设定 OKR？</h3><ol>
+<li>在设定 OKR 之前，<strong>先明确你的或团队的使命</strong>。它不必多么优雅，但应当简洁、好记，像纲领一样具有指导性，它会提醒你不要把时间消耗在无用的事情上。</li>
+<li>如果是一个团队，从 OKR 的层级上，<strong>应自上而下</strong>，先设定公司层面的 OKR，然后才是部门的 OKR、个人 OKR（可选）。</li>
+<li>目标必须是有<strong>挑战性的</strong>，这样大家才会全力以赴，隐藏实力不是实施 OKR 的目的。</li>
+<li>如果不是拥有多条产品线的企业，<strong>目标最好不要多于 1 个</strong>，一次用心做好一件事。</li>
+<li>制定目标时，<strong>可以自下而上地搜集全员的看法和创意</strong>，看看在员工心里认为公司目前最应聚焦的是什么目标，高管开会时再补充上他们的目标。设定 OKR 的会议上，把这些目标集体过一遍，<strong>剔除重复的，整合相似的</strong>，最终通过投票把目标减少到三个。</li>
+<li>设定好目标后，针对目标<strong>设置 3~4 个能衡量目标是否实现的关键结果</strong>。</li>
+<li>设定好关键结果后，给每个关键结果<strong>设定一个初始信心指数</strong>（即你们预估完成这一关键结果的概率为多少，初始值一般建议都为 50%），并在今后的 OKR 运行中跟踪这一数字。</li>
+</ol>
+<p>认识 OKR 概念很简单，切实执行起来却很难；因此，对于如何设定和运行你的 OKR，需要不断的练习与反思。</p>
+<h3 id="设定-OKR-目标的-3-个原则"><a href="#设定-OKR-目标的-3-个原则" class="headerlink" title="设定 OKR 目标的 3 个原则"></a>设定 OKR 目标的 3 个原则</h3><ol>
+<li>目标要明确方向且鼓舞人心。</li>
+<li>目标要有时间期限，有确定的截止日期更有助于目标实现。</li>
+<li>由独立的团队来实现目标，即执行的主体必须清清楚楚。</li>
+</ol>
+<p>除此之外，我们还当有两条非常必要的认知（意识）：</p>
+<ul>
+<li><strong>困难的目标</strong>比容易的目标更有效提升绩效；</li>
+<li><strong>明确的目标</strong>比含糊的目标造就更高水准产出；</li>
+</ul>
+<h2 id="如何运行你的-OKR？"><a href="#如何运行你的-OKR？" class="headerlink" title="如何运行你的 OKR？"></a>如何运行你的 OKR？</h2><h3 id="执行前的心理建设"><a href="#执行前的心理建设" class="headerlink" title="执行前的心理建设"></a>执行前的心理建设</h3><ol>
+<li>当 OKR 制定完毕，确保它具有一个<strong>十分明确的目标</strong>。</li>
+<li>有了 OKR 后，记住你需要反复传达给所有人，直到<strong>所有人步调一致向目标聚焦</strong>。</li>
+<li>你<strong>必须付出时间来实现目标</strong>，而不是无尽地寄希望于明天。</li>
+<li>做好失败的准备，<strong>准备好从失败中学习</strong>，并重新尝试。</li>
+<li><strong>不要中途更改 OKR</strong>，对于一个已设定的 OKR，要么成功，要么失败；如果失败，下次吸取经验就会做得更好，没有哪个团队第一次就能很完美地设定 OKR。</li>
+<li>OKR 这类方法不是为了确定企业最有可能达成的一个目标是什么，而是为了识别有可能完成的最大目标，因此在制定关键结果时，不要抱着以此作为绩效考核标准的心思，这会使人们制定出隐藏实力的关键结果数值。关键结果全部未达成，或达成了所有关键结果但对企业成长却无所影响都是失败。</li>
+</ol>
+<h3 id="掌握“承担责任-庆祝成果”的节奏"><a href="#掌握“承担责任-庆祝成果”的节奏" class="headerlink" title="掌握“承担责任-庆祝成果”的节奏"></a>掌握“承担责任-庆祝成果”的节奏</h3><ol>
+<li>每周一，团队一起开会盘点 OKR，来明确本周具体负责完成哪些任务。</li>
+<li>每周五，召开“胜利会议”，让每个团队都可以展示本周的工作成果，并准备一些酒水饮料和点心等庆祝这些成果。</li>
+</ol>
+<p>每周重复这些事情，反复这样“明确责任”-“庆祝胜利”的节奏，就实现了 OKR 的分步骤落实。</p>
+<h3 id="易造成目标无法达成的-5-个因素"><a href="#易造成目标无法达成的-5-个因素" class="headerlink" title="易造成目标无法达成的 5 个因素"></a>易造成目标无法达成的 5 个因素</h3><ol>
+<li>设置多个目标但没有给目标设定优先级。</li>
+<li>缺乏充分沟通，导致团队其他成员没能准确理解目标。</li>
+<li>没有做好具体落实目标的计划，只是空谈目标。</li>
+<li>没有把时间花在重要的事情上，而去做了许多偏离目标的事情。</li>
+<li>遇到挫折，或其他任务插入，就轻易放弃。</li>
+</ol>
+<h2 id="OKR-四象限看板"><a href="#OKR-四象限看板" class="headerlink" title="OKR 四象限看板"></a>OKR 四象限看板</h2><p>《OKR 工作法》一书中提及，针对团队在盘点目标执行时，推荐使用一种<strong>四象象限</strong>的 OKR 展示形式：</p>
+<ul>
+<li><strong>第一象限</strong>：OKR 的核心<br>让团队成员<strong>聚焦</strong>于这段时间内<strong>最重要的事情</strong>，并且清楚地知晓，围绕目标，需要达成的关键结果。</li>
+<li><strong>第二象限</strong>：本周任务<br>明确本周内需要完成任务，划分优先级（只 P1、P2，没有 P3 或更不重要的事，须要取舍有度），哪些必须完成，哪些尽量完成。</li>
+<li><strong>第三象限</strong>：当前进展<br>截至目前，关键成果的最新进展，根据目前的完成度，团队成员需要共同探讨，执行策略及重点方向是否需要调整，应该如何调整？</li>
+<li><strong>第四象限</strong>：本月任务<br>一些未来四周的计划项，主要为了能让团队意识到未来有这些事项，当事项发生时需要跨部门合作时，不同部门之间的沟通不至于太仓促。</li>
+</ul>
+<h2 id="OKR-工作法的使用场景"><a href="#OKR-工作法的使用场景" class="headerlink" title="OKR 工作法的使用场景"></a>OKR 工作法的使用场景</h2><p><img src="https://image.nicelinks.site/okr-6-scenes-to-be-used.png" alt="OKR 的 6 大使用场景"></p>
+<p>OKR 是一种先进的<code>目标管理工具</code>，它基于内在动机理念。它强调目标的公开透明、目标和评价解耦、自下而上以及敏捷开放。内在动机的一个前提条件是：<strong>工作本身是有趣的，或者是有有意义的</strong>。当员工觉得一件工作值得做时，他势必会全力以赴。所以 OKR 特别适合高复杂、高创造性工作的场合；这些工作本身充满了趣味性，这个时候 OKR 能充分激发员工的内在潜能。所以，OKR 所适用场景，可以说非常广泛；如个人学习计划，创作者产出安排，职场三五年规划等等。</p>
+<h3 id="大学时期求学规划"><a href="#大学时期求学规划" class="headerlink" title="大学时期求学规划"></a>大学时期求学规划</h3><p>有一天，可不再会为生活而疲于劳作，很想寻觅一所大学，重新享受大学美好时光。如果可以为当年我的大学时光，设定一个 OKR，依照现在的心境，将会如此去计划：</p>
+<ul>
+<li><code>目标（O）</code>：快乐且精彩的度过大学时光，且有所得；</li>
+<li><code>关键结果1（KR1）</code>：好好读书；每半年，读好书至少 30 本；</li>
+<li><code>关键结果2（KR2）</code>：早睡早起，锻炼身体；每周运动至少 6 个小时以上；</li>
+<li><code>关键结果3（KR3）</code>：坚持写作，每月至少产出两篇高质量博文；</li>
+<li><code>关键结果4（KR4）</code>：靠自己努力赚钱，每半年，至少跨省旅行一次；</li>
+<li><code>关键结果5（KR5）</code>：学习编程，至少熟练掌握一门编程语言，并有相应作品；</li>
+</ul>
+<h3 id="独立个人产品规划"><a href="#独立个人产品规划" class="headerlink" title="独立个人产品规划"></a>独立个人产品规划</h3><p>早在 2017 年初，就有开始利用闲余时光，打磨个人最新作品——<a href="https://nicelinks.site/" target="_blank" rel="external"><strong>「倾城之链」</strong></a>；近三五年来虽有偶有产出，但距离最初设定的目标相去甚远；最近因为团队工作上，需要借助 OKR 工作法来加以改善；也正好借此机会，将 OKR 工作法，运用于对<code>倾城之链</code>这款产品的迭代中。经过一番思考，为其所做的 <code>OKR</code> 如下：</p>
+<ul>
+<li><code>目标（O）</code>：在 2020 年 Q4 将 <a href="https://nicelinks.site/" target="_blank" rel="external">「倾城之链」</a>影响力提升一倍；</li>
+<li><code>关键结果1（KR1）</code>：网站 12 月平均访问量，相比 9 月份，翻一倍；</li>
+<li><code>关键结果2（KR2）</code>：12 月<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>小程序收入，相比 9 月份，翻一倍；</li>
+<li><code>关键结果3（KR3）</code>：截止 12 月底，至少完成 5 项目新功能，并上线发布；</li>
+<li><code>关键结果4（KR4）</code>：截止 12 月底，新收录优质网站，数量至少达到 450；</li>
+</ul>
+<p>OKR 工作法，无论是在工作上或个人学习，都很值得效仿，推荐所有人了解这套目标管理方式的精髓，让自己能够朝着目标前进！</p>
+<p>笔于深圳.福田 2020 年 10 月.</p>
+<p>原文首发于个人最新博客：<a href="https://quickapp.lovejade.cn/okr-working-method-let-you-more-efficiently/" target="_blank" rel="external">OKR 工作法，带你聚焦目标，高效工作 | 静轩之别苑</a>。</p>
+<hr>
+<h2 id="您可能会感兴趣的文章"><a href="#您可能会感兴趣的文章" class="headerlink" title="您可能会感兴趣的文章"></a>您可能会感兴趣的文章</h2><ul>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/#">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://jeffjade.com/2017/10/09/130-front-end-notes/" target="_blank" rel="external">晚晴幽草说之-前端札记</a></li>
+<li><a href="https://jeffjade.com/2017/02/05/119-wanqingyoucaoshuo-/" target="_blank" rel="external">《晚晴幽草说－序》</a></li>
+<li><a href="https://jeffjade.com/2017/09/29/128-talking-about-movies-or-life/" target="_blank" rel="external">晚晴幽草说之 — 谈用心</a></li>
+<li><a href="https://www.jeffjade.com/2015/04/12/2015-04-12-thought-choose-effort/">努力，思考，选择</a></li>
+<li><a href="https://www.jeffjade.com/2015/02/02/2015-02-02-thoughtof-overtime-work/">关于加班这件事儿的随想</a></li>
+<li><a href="https://www.jeffjade.com/2015/04/02/2015-04-01-thought-do/">做，还是不做？做！</a></li>
+<li><a href="https://www.jeffjade.com/2015/07/05/2015-07-05-thought-of-life/">写在人生边上之守心</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      在 《高效能人士的七个习惯》一书中，提及了时间管理矩阵：要重视第二象限那些重要但不紧急的事情；但不紧急的事情，很是容易被我们忽略啊，该如何呢？其办法就是：将它们变得紧急。而 OKR 就是一个能实现这个变革的工具：帮你聚焦核心目标，落实推进，减少不理性的分心。
+    
+    </summary>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="OKR" scheme="https://www.jeffjade.com/tags/OKR/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一键拷贝常用精美 CSS 动效代码</title>
     <link href="https://www.jeffjade.com/2020/09/29/171-click-to-copy-css-effects/"/>
     <id>https://www.jeffjade.com/2020/09/29/171-click-to-copy-css-effects/</id>
     <published>2020-09-29T15:23:00.000Z</published>
-    <updated>2020-09-29T16:27:50.697Z</updated>
+    <updated>2020-10-12T15:51:29.629Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://cssfx.lovejade.cn/" target="_blank" rel="external">CSS Effects</a>，一个 CSS 动效相关的网站。她集合 Web 开发中常用的动画效果，如鼠标悬停、输入框获取焦点、加载、以及其他动画；不仅有展示效果，并提供一键拷贝至剪切板，以便您可以在自己的项目中使用。</p>
 <a id="more"></a>
 <p><img src="https://oss.nicelinks.site/cssfx.lovejade.cn.png?x-oss-process=style/png2jpg" alt="一键拷贝常用精美 CSS 动效代码"></p>
-<h2 id="项目说明"><a href="#项目说明" class="headerlink" title="项目说明"></a>项目说明</h2><p><a href="https://cssfx.lovejade.cn/" target="_blank" rel="external">CSS Effects</a> 原本 fork 自 GitHub 项目：<a href="https://github.com/jolaleye/cssfx" target="_blank" rel="external">CSSFX</a> ；在其基础上，添加了十余个常用动画效果；目前有收录各种品类动效 64 个。感兴趣的朋友也可以 fork 去，维护一个属于自己的专属<code>动效池</code>，在需要的时候，一键拷贝（copy），即可使用，很是方便。（这个项目，基于 <code>Nuxt</code> 开发，项目组织与配置具佳、更新或是维护，都十分便捷）。更详细的介绍，请参见 <a href="https://nicelinks.site/post/5f5e441489e6731f83f508a2" target="_blank" rel="external">CSSFX - Beautifully simple click-to-copy CSS effects | 倾城之链</a>。</p>
-<h2 id="存在价值"><a href="#存在价值" class="headerlink" title="存在价值"></a>存在价值</h2><p>对于 Web 开发者，实现动画的方式有很多种；如 Js 组合 Html （性能不高）、Svg （复杂，成本高）、Gif 动画（成本高、体积大）、Flash 动画（已被淘汰）、Javascript 组合 Canvas （略微复杂、性能问题）等等；还有就是基于 CSS3 Transition / Animation 来实现动画，它摆脱了对 Js 的控制，且能利用硬件加速，并能实现复杂动画效果，而且复杂度也不是很高；已经成为 Web 动画实现方案首选。而很多常见简单动画效果，已经有开发者基于 CSS 实现，您大可不必每次手动编写，即拷（Copy）即用，岂不美哉？假如您尚不知其中奥妙，也正好可以学习一下。</p>
+<h2 id="项目说明"><a href="#项目说明" class="headerlink" title="项目说明"></a>项目说明</h2><p><a href="https://cssfx.lovejade.cn/" target="_blank" rel="external">CSS Effects</a> 原本 fork 自 GitHub 项目：<a href="https://github.com/jolaleye/cssfx" target="_blank" rel="external">CSSFX</a> ；在其基础上，增添了十余个常用动画效果；目前有收录各种品类动效 54 个。感兴趣的朋友也可以 fork 去，维护一个属于自己的专属<code>动效池</code>，在需要的时候，一键拷贝（copy），即可使用，很是方便。（这个项目，基于 <code>Nuxt</code> 开发，项目组织与配置具佳、更新或是维护，都十分便捷）。更详细的介绍，请参见 <a href="https://nicelinks.site/post/5f5e441489e6731f83f508a2" target="_blank" rel="external">CSSFX - Beautifully simple click-to-copy CSS effects | 倾城之链</a>。</p>
+<h2 id="存在价值"><a href="#存在价值" class="headerlink" title="存在价值"></a>存在价值</h2><p>对于 Web 开发，实现动画的方式有很多种；如 Js 组合 Html （性能限制）、Svg （复杂，成本高）、Gif 动画（成本高、体积大）、Flash 动画（已被淘汰）、Javascript 组合 Canvas （略微复杂、性能问题）等等；还有就是基于 CSS3 Transition / Animation 来实现动画，它摆脱了对 Js 的控制，且能利用硬件加速，并能实现复杂动画效果，而且复杂度也不是很高；已经成为 Web 动画实现方案首选。而很多常见简单动画效果，已经有开发者基于 CSS 实现，您大可不必每次手动编写，即拷（Copy）即用，岂不美哉？假如您尚不知其中奥妙，也正好可以学习一下。</p>
 <h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>打开 <a href="https://cssfx.lovejade.cn/" target="_blank" rel="external">CSS Effects</a> 网站，点击您需要的效果，即会弹出具体实现的代码（Html + CSS），点击 <code>copy</code> 按钮即可。如下视频所示：</p>
 <iframe src="//player.bilibili.com/player.html?aid=202138668&bvid=BV1Eh411X7s6&cid=238812649&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="vedio-iframe"> </iframe>
 
@@ -34,6 +173,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/TheHumanComedy/cssfx.git</div><div class="line">cd cssfx </div><div class="line">npm i npm run dev</div></pre></td></tr></table></figure>
 <h2 id="适用人群"><a href="#适用人群" class="headerlink" title="适用人群"></a>适用人群</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS" target="_blank" rel="external">CSS</a>，(<strong>层叠样式表</strong> Cascading Style Sheets），是一种<a href="https://developer.mozilla.org/zh-CN/docs/DOM/stylesheet" target="_blank" rel="external">样式表</a> 语言，用来描述 <a href="https://developer.mozilla.org/zh-CN/docs/HTML" title="The HyperText Mark-up Language" target="_blank" rel="external">HTML</a> 或 <a href="https://developer.mozilla.org/zh-CN/docs/XML_%E4%BB%8B%E7%BB%8D" title="zh-CN/docs/XML" target="_blank" rel="external">XML</a> 文档的呈现。CSS 描述了在屏幕、纸质、音频等其它媒体上的元素应该如何被渲染的问题。它是 Web 开发中不可获取的组成部分。</p>
 <p>而 <a href="https://cssfx.lovejade.cn/" target="_blank" rel="external">CSS Effects</a> 中涉及了 CSS3、CSS 动画、以及伪元素、伪类、Flex 等相关技术，融入了大量技巧，以简单组合，实现精美效果；这对于 Web 开发人员具有非常高的参考价值。如果您在 Web 前端这块，拥有丰富经验，则可以需要的时候，直接 Copy 加以使用；倘若您还是初学者，精美的动画效果，以及这精湛的实现方式，可以带您一起见识 CSS 的作用与强大；复制加以修改，又可以学习 CSS 技巧。</p>
+<h2 id="更多作品"><a href="#更多作品" class="headerlink" title="更多作品"></a>更多作品</h2><ul>
+<li><a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>：作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</li>
+<li><a href="https://markdown.lovejade.cn/" target="_blank" rel="external">Arya - 在线 Markdown 编辑器</a>：一款基于 Vue、Vditor，为未来而构建的在线 Markdown 编辑器；轻量且强大：内置粘贴 HTML 自动转换为 Markdown，支持流程图、甘特图、时序图、任务列表，可导出携带样式的图片、PDF、微信公众号特制的 HTML 等等。</li>
+<li><a href="https://arya.lovejade.cn/#/zh-cn" target="_blank" rel="external">为高效而生：Arya Jarvis</a>：荀子在《劝学》曰：君子生非异也，善假于物也。对于重复而精确性的事物，理想的目标是：有贴心工具加以协助，使得可以用更便捷的方式处理；Github 创建仓库：ARYA JARVIS，即是为此而做的尝试 ── 她旨在为开发人员节省更多时间、精力以及体力。</li>
+</ul>
 <h2 id="写于文末"><a href="#写于文末" class="headerlink" title="写于文末"></a>写于文末</h2><p>最后，如果您对 CSS 感兴趣，不妨关注<a href="https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/">晚晴幽草轩</a>一直在维护的<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/css3-tutorial.md" target="_blank" rel="external">与时俱进版前端资源教程 CSS 部分</a>；这里不仅有 CSS 基础、进阶教程；更是涵盖诸如各种动画资源、CSS 编写规范、预处理、CSS 样式库、以及非常实用的 CSS 技巧，以及不断革新的 CSS 标准和话题；是非常值得关注的 CSS 教程资源。</p>
 <p>于深圳.福田，2020 年 9 月。</p>
 <h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h2><ul>
@@ -591,9 +735,9 @@
     
       <category term="Front-End" scheme="https://www.jeffjade.com/tags/Front-End/"/>
     
-      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="图片" scheme="https://www.jeffjade.com/tags/%E5%9B%BE%E7%89%87/"/>
+    
+      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -1592,104 +1736,6 @@
       <category term="React" scheme="https://www.jeffjade.com/tags/React/"/>
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>快应用开发常见问题及解决方案</title>
-    <link href="https://www.jeffjade.com/2019/03/10/151-quickapp-common-problems-and-solutions/"/>
-    <id>https://www.jeffjade.com/2019/03/10/151-quickapp-common-problems-and-solutions/</id>
-    <published>2019-03-10T14:22:00.000Z</published>
-    <updated>2019-06-02T15:14:29.836Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>是移动互联网新型应用生态，与手机系统深度整合，为用户提供更加场景化的体验。具备传统 APP 完整的应用体验，但无需安装、即点即用。<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>是基于手机硬件平台的新型应用形态，由国内十大手机厂商基于硬件平台共同推出，其标准是由主流手机厂商组成的快应用联盟联合制定。这里记录下在<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发中，涉及的常见问题及其对应解决方案；同时也会给出如何更好开发<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>的一些建议。</p>
-<a id="more"></a>
-<blockquote>
-<p><strong>温馨提醒</strong>：如果您目前有涉及进行快应用开发，那么您不妨看下<a href="https://nice.lovejade.cn/zh/article/quickapp-boilerplate-template.html#" target="_blank" rel="external">快应用脚手架，为优雅而生</a>一文，其中将开发所遇到的一些问题、以及开发体验都作了很大程度上的优化，相信会给你带来帮助(另外， Github 上的 <a href="https://github.com/nicejade/awesome-quickapp" target="_blank" rel="external">awesome-quickapp</a> 仓库：云集最新快应用相关教程文章、开发资源、项目案例及新闻动态；相信也会给您更好进行快应用开发，提供更多帮助)。</p>
-</blockquote>
-<blockquote>
-<p><strong>微注</strong>：原文首发于个人基于 <a href="https://nicelinks.site/post/5c3f3151a5957e07a40b30ff" target="_blank" rel="external">Ghost</a> 所搭建的最新博客：<a href="https://quickapp.lovejade.cn/quickapp-common-problems-and-solutions/" target="_blank" rel="external">静轩之别苑 | 快应用开发常见问题及解决方案</a>。</p>
-</blockquote>
-<h2 id="快应用引擎相关"><a href="#快应用引擎相关" class="headerlink" title="快应用引擎相关"></a>快应用引擎相关</h2><h3 id="快应用生命周期函数"><a href="#快应用生命周期函数" class="headerlink" title="快应用生命周期函数"></a>快应用生命周期函数</h3><ul>
-<li><strong>现有的APP生命周期函数有</strong>： onCreate, onDestroy</li>
-<li><strong>现有的页面级组件生命周期函数</strong>：onCreate、onInit、onReady、onShow、onHide、onDestroy（onBackPress、onMenuPress）</li>
-<li><strong>已有的自定义组件生命周期函数</strong>： onCreate、onInit、onReady、onDestroy（onDestroy 只会在页面销毁的时候触发，用 <code>if</code> 指令卸载无法触发）</li>
-</ul>
-<h3 id="快应用的-app、-def、-data-以及-global"><a href="#快应用的-app、-def、-data-以及-global" class="headerlink" title="快应用的 $app、$def、$data 以及 global"></a>快应用的 $app、$def、$data 以及 global</h3><p>在快应用中，暴露了 <code>$app</code> 对象；此对象下有暴露出  <code>$def</code>，<code>$data</code>等字段：</p>
-<ul>
-<li><code>$def</code>： 使用 this.$app.$def 获取在 app.ux 中暴露的对象;</li>
-<li><code>$data</code>：使用 this.$app.$data 获取在 manifest.json 的 config.data 中声明的全局数据；</li>
-</ul>
-<p>但需要注意的是：直接挂在于 <code>this</code> 上，需通过 this.$app 来取；挂在于 <code>this.$def</code> 上，才可通过 this.$app.$def 来取，二者不可混淆。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// app.ux</span></div><div class="line"><span class="keyword">import</span> device <span class="keyword">from</span> <span class="string">'@system.device'</span></div><div class="line"><span class="keyword">const</span> hook2global = global.__proto__ || global</div><div class="line">hook2global.$apis = $apis</div><div class="line"></div><div class="line">  &lt; script &gt;</div><div class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="attr">$deviceInfo</span>: &#123;&#125;,</div><div class="line">  <span class="attr">$xDeviceInfo</span>: &#123;&#125;,</div><div class="line">  <span class="keyword">async</span> onCreate() &#123;</div><div class="line">    <span class="keyword">this</span>.$def.$deviceInfo = <span class="keyword">await</span> <span class="keyword">this</span>.getInfo()</div><div class="line">    <span class="keyword">this</span>.$xDeviceInfo = <span class="keyword">await</span> <span class="keyword">this</span>.getInfo()</div><div class="line">  &#125;,</div><div class="line">  <span class="keyword">async</span> getInfo() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</div><div class="line">      device.getInfo(&#123;</div><div class="line">        <span class="attr">success</span>: <span class="function"><span class="params">ret</span> =&gt;</span> &#123;</div><div class="line">          resolve(ret)</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">fail</span>: <span class="function"><span class="params">err</span> =&gt;</span> &#123;</div><div class="line">          <span class="built_in">console</span>.log(err)</div><div class="line">        &#125;</div><div class="line">      &#125;)</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;<span class="regexp">/script &gt;</span></div></pre></td></tr></table></figure>
-<p>如上示例代码，在其他页面代码中，this.$app.$def.$deviceInfo、 this.$app.$xDeviceInfo 这两种调用方式是期待的写法；如果混淆调用，得到的结果则是 <code>undefined</code>。</p>
-<p>而挂在于 <code>global</code> 的变量(如 $apis )，可通过 global.$apis 或直接 $apis 来调用；但如果在 DOM 结构中，不可直接使用，因为其默认主题是页面级 <code>this</code>，所以 Toolkit 编译出的结果就会是 this.$apis or this.global.$apis，如此就不能达到预期；在页面属性中定义声明下即可，如下代码示例：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">    <span class="attr">$apis</span>: $apis <span class="comment">// or global.$apis</span></div><div class="line">  &#125;</div><div class="line">&lt;script&gt;</div></pre></td></tr></table></figure>
-<h3 id="如何解决快应用-Input-失去焦点，输入法不收起来问题"><a href="#如何解决快应用-Input-失去焦点，输入法不收起来问题" class="headerlink" title="如何解决快应用 Input 失去焦点，输入法不收起来问题"></a>如何解决快应用 Input 失去焦点，输入法不收起来问题</h3><p>目前(<code>1050-</code>)可以解决的办法是，在空白区域，添加事件，注入如下逻辑：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$element(<span class="string">'yourInputId'</span>).focus(&#123;<span class="attr">focus</span>: <span class="literal">false</span>&#125;)</div></pre></td></tr></table></figure>
-<h3 id="如何解决快应用-textarea-无法清空数据问题"><a href="#如何解决快应用-textarea-无法清空数据问题" class="headerlink" title="如何解决快应用 textarea 无法清空数据问题"></a>如何解决快应用 textarea 无法清空数据问题</h3><p>快应用（version &lt;= <code>1030</code>）目前存在 textarea 无法清空数据问题，目前只能采取 Hack 的办法解决，即在需要清除时候 <code>this.$delete</code> 掉该绑定的值，<strong>onchange</strong> 回调中再通过 <code>this.$set</code> 将数据属性添加回去，使得可以正常工作；</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">onchange</span>=<span class="string">'handleChange'</span> <span class="attr">placeholder</span>=<span class="string">"&#123;&#123;placeholder&#125;&#125;"</span> <span class="attr">value</span>=<span class="string">"&#123;&#123;contentValue&#125;&#125;"</span> <span class="attr">id</span>=<span class="string">"keyborder"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"input"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"onHandleBtnClick"</span> <span class="attr">value</span>=<span class="string">"处理"</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  handleChange(response) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(response, <span class="literal">null</span>, <span class="number">2</span>))</div><div class="line"></div><div class="line">    <span class="comment">// 以 Hack 的方式解决无法清空 textarea 输入数据@18-12-06;</span></div><div class="line">    <span class="keyword">this</span>.$set(<span class="string">'contentValue'</span>, response.text)</div><div class="line">  &#125;,</div><div class="line">  onHandleBtnClick() &#123;</div><div class="line">    <span class="comment">// Here ....... 处理你的数据；</span></div><div class="line"></div><div class="line">    <span class="comment">// 以 Hack 的方式解决无法清空 textarea 输入数据@18-12-06;</span></div><div class="line">    <span class="keyword">this</span>.$<span class="keyword">delete</span>(<span class="string">'contentValue'</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="快应用中如何使用「字体图标」"><a href="#快应用中如何使用「字体图标」" class="headerlink" title="快应用中如何使用「字体图标」"></a>快应用中如何使用「字体图标」</h3><p>在应用中，可以使用<strong>字体图标</strong>如 <a href="https://icomoon.io/" target="_blank" rel="external">icomoon</a>，可以帮着有更好的方案来展示应用图标；在快应用中，可以直接在 dom 中使用，如下示例。但，对于定义在变量中的字体编码，则需要借助 <code>unescape</code> 做一层转换。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">    &lt;text class="font-icon" style="font-size: &#123;&#123;fontSize&#125;&#125;px;"&gt;&amp;#xe900;&lt;/text&gt;</div><div class="line">  &lt;text class="font-icon" style="font-size: &#123;&#123;fontSize&#125;&#125;px;"&gt;&#123;&#123; iconCode &#125;&#125;&lt;/text&gt;</div><div class="line">  &lt;text class="font-icon" style="font-size: &#123;&#123;fontSize&#125;&#125;px;"&gt;&#123;&#123; unescapeFontIconCode(iconCode) &#125;&#125;&lt;/text&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">export default &#123;</div><div class="line">  private: &#123;</div><div class="line">    fontSize: 100,</div><div class="line">    iconCode: '&amp;#xe900;'</div><div class="line">  &#125;,</div><div class="line">  unescapeFontIconCode(iconCode = '') &#123;</div><div class="line">  return unescape(iconCode.replace(/&amp;#x/g, '%u').replace(/;/g, ''))</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">@font-face &#123;</div><div class="line">  font-family: iconfont;</div><div class="line">  src: url('./../../assets/fonts/icomoon.ttf');</div><div class="line">&#125;</div><div class="line"></div><div class="line">.font-icon &#123;</div><div class="line">  font-family: iconfont;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
-<h3 id="如何动态处理修改快应用样式"><a href="#如何动态处理修改快应用样式" class="headerlink" title="如何动态处理修改快应用样式"></a>如何动态处理修改快应用样式</h3><p>鉴于些原因快应用 <code>hap-toolkit</code> 打包，无法对逻辑代码进行处理；而快应用引擎内部，也没有对逻辑代码中样式做很好的兼顾；所以，当需要动态处理修改快应用样式时，你需要对涉及的代码进行转义处理，如下代码示例（备注：在 <code>1030</code> 版本，组件的 style 属性，支持直接绑定 Object 或 String）：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper-padding"</span> <span class="attr">style</span>=<span class="string">"&#123;&#123; styleObj &#125;&#125;"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">text</span>&gt;</span>如何动态处理修改快应用样式<span class="tag">&lt;/<span class="name">text</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="attr">protected</span>: &#123;</div><div class="line">    <span class="attr">styleObj</span>: &#123;&#125;,</div><div class="line">    <span class="attr">dynamicUrl</span>: <span class="string">'https://image.nicelinks.site/jpg/nice-links-039.jpg'</span></div><div class="line">  &#125;,</div><div class="line">  onReady() &#123;</div><div class="line">    <span class="keyword">this</span>.styleObj = &#123;</div><div class="line">      <span class="attr">backgroundColor</span>: <span class="string">'#fe0'</span>,</div><div class="line">      <span class="attr">color</span>: <span class="string">'#212121'</span>,</div><div class="line">      <span class="attr">backgroundImage</span>: <span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.dynamicUrl&#125;</span>`</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>至于为何要这么处理，可以参看开发时，<code>build</code> 目录下所打包后的代码，<code>hap-toolkit</code> 是对样式进行了处理，只要逻辑层的代码修改，跟打包后的样式处置保持一致，那么就可以实现动态处理修改快应用样式；如上代码中对 <code>background-image</code> 的设置，就是为了兼容快应用内部打包适配（此解决方案针对 <code>1040</code> 及以前版本，未知快应用何时修复）。</p>
-<h3 id="如何从外部打开快应用："><a href="#如何从外部打开快应用：" class="headerlink" title="如何从外部打开快应用："></a>如何从外部打开快应用：</h3><p>从外部打开快应用，可以是从一个快应用，打开另一个快应用；也可以是从网页上打开快应用；实现此共功能，可以使用快应用提供的 <code>deeplink</code> 接口，其语法格式如下：</p>
-<blockquote>
-<p><a href="http://hapjs.org/app/" target="_blank" rel="external">http://hapjs.org/app/</a><package>/[path][?key=value]<br><a href="https://hapjs.org/app/" target="_blank" rel="external">https://hapjs.org/app/</a><package>/[path][?key=value]<br>hap://app/<package>/[path][?key=value]</package></package></package></p>
-</blockquote>
-<p><strong>具体参数说明如下</strong>：</p>
-<p><strong>package</strong>: 应用包名，必选;<br><strong>path</strong>: 应用内页面的 path，可选，默认为首页;<br><strong>key-value</strong>: 希望传给页面的参数，可选，可以有多个;</p>
-<p><strong>EG</strong>: hap://app/com.quickapp.nicelinks/?utm_source=quickapp-blog；</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"link"</span> <span class="attr">href</span>=<span class="string">"hap://app/com.quickapp.nicelinks"</span>&gt;</span>打开倾城之链快应用<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="网页中打开「快应用」"><a href="#网页中打开「快应用」" class="headerlink" title="网页中打开「快应用」"></a>网页中打开「快应用」</h4><p>嵌入如下 <code>JS</code> 代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"//statres.quickapp.cn/quickapp/js/routerinline.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 调起应用 --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript"></span></span></div><div class="line">  <span class="comment">// 无需用户确认的调用方式，xxx.yyy.zzz 为包名</span></div><div class="line">  appRouter(<span class="string">"xxx.yyy.zzz"</span>, <span class="string">"/Home"</span>, &#123; paramA: <span class="number">1</span>, paramB: <span class="string">'2'</span> &#125;)</div><div class="line">  <span class="comment">// 需要用户确认的调用方式，xxx.yyy.zzz为包名</span></div><div class="line">  appRouter(<span class="string">'xxx.yyy.zzz'</span>, <span class="string">'/Home'</span>, &#123; paramA: <span class="number">1</span>, paramB: <span class="string">'2'</span> &#125;, <span class="string">'显示给用户的应用名称'</span>);</div><div class="line">  <span class="comment">// Eg: 比如跳转至「倾城之链」，路径只能为 `/`，因为在 manifest.json 中 router 配置为：pages/Home;</span></div><div class="line">  appRouter(<span class="string">'com.quickapp.nicelinks'</span>, <span class="string">'/'</span>, &#123; utm_source: <span class="string">'github'</span> &#125;);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>需要额外注意的是，你所要跳转的快应用，如果在 <code>manifest.json</code> 中对路由加前缀，需要使用 <code>path</code> 字段予以“修正”，否则使用 <code>deeplink</code> 功能时候，将不能很好的工作。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="string">"router"</span>: &#123;</div><div class="line">  <span class="string">"entry"</span>: <span class="string">"pages/Main"</span>,</div><div class="line">  <span class="string">"pages"</span>: &#123;</div><div class="line">    <span class="string">"pages/Main"</span>: &#123;</div><div class="line">      <span class="string">"component"</span>: <span class="string">"index"</span></div><div class="line">      <span class="comment">// ✗ appRouter('com.quickapp.nicelinks', '/pages/Main' );</span></div><div class="line">      <span class="comment">// ✓ appRouter('com.quickapp.nicelinks', '/about' );</span></div><div class="line">      <span class="string">"path"</span>: <span class="string">"/about"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="如何解决快应用“莫名”报错"><a href="#如何解决快应用“莫名”报错" class="headerlink" title="如何解决快应用“莫名”报错"></a>如何解决快应用“莫名”报错</h3><p>在开发快应用时候，有时会遇到些“莫名”报错提示，比如下面这样：</p>
-<blockquote>
-<p><span style="color: red">TypeError: Cannot read property ‘manifest’ of null<br>at XPage.initMeta (<anonymous>:xxxx:yy) <span></span></anonymous></span></p>
-</blockquote>
-<p>从经验上看，由于些未知原因，导致程序出错，但没有给出具体错误原因，从而引起的抛出异常不精准（从错误提示上看，是因为在 initMeta 方法体中，某空对象调用了 <code>manifest</code> 属性）；但，引起该问题的根本原因，就很多，比如 <code>hap-toolkit</code> 升级打包出错，或者该页面初始化前的代码存在异常等，都有可能导致该问题；这时能做的就是：仔细检查下代码以及打包（在官方修复之前）。</p>
-<h2 id="打包工具相关"><a href="#打包工具相关" class="headerlink" title="打包工具相关"></a>打包工具相关</h2><h3 id="如何升级-hap-toolkit-从-lt-0-0-38-至最新："><a href="#如何升级-hap-toolkit-从-lt-0-0-38-至最新：" class="headerlink" title="如何升级 hap-toolkit 从 &lt;0.0.38 至最新："></a>如何升级 <code>hap-toolkit</code> 从 <code>&lt;0.0.38</code> 至最新：</h3><ol>
-<li>将本地 <code>hap-toolkit</code> 升级至新版本如 <code>0.2.0</code>: <code>yarn upgrade hap-toolkit@0.1.0</code>;</li>
-<li>运行 <code>npx hap update --force</code> 命令将本地配置升级（会新建 <code>package.json</code>, 原文件成 <em>old package.json</em>）;  </li>
-<li>手动将 <em>old package.json</em> 中的自己的额外配置，同步至新的 <code>package.json</code>；</li>
-<li>将本地的 <em>node_modules</em> 和 <em>package-lock.json</em>: <code>rm -rf node_modules</code>; </li>
-<li>重新安装依赖即可：重新运行 <code>yarn</code> or <code>npm i</code>;</li>
-</ol>
-<h3 id="如何为快应用设置别名-alias"><a href="#如何为快应用设置别名-alias" class="headerlink" title="如何为快应用设置别名(alias)"></a>如何为快应用设置别名(alias)</h3><p>在已有项目根目录下创建 <code>config</code> 文件夹，并在该文件夹下添加 <code>webpack.config.js</code>,然后注入类似如下代码即可：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">postHook</span>: <span class="function"><span class="keyword">function</span>(<span class="params">webpackConf, options</span>)</span>&#123;</div><div class="line">    <span class="keyword">const</span> alias = <span class="built_in">Object</span>.assign(webpackConf.resolve.alias || &#123;&#125;, &#123;</div><div class="line">      <span class="string">'@components'</span>: path.join(process.cwd(), <span class="string">'src/components'</span>)</div><div class="line">    &#125;)</div><div class="line">    webpackConf.resolve.alias = alias</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>如此，对于 import 自定义组件或方法，就会得到优化，而不用费神去关心相对路径（需要提醒的是：因为快应用现有设计缘故，别名不能作用于 Dom 结构以及 style）；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">import</span> name=<span class="string">"HellorWorld"</span> src=<span class="string">"./../../components/HellorWorld"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">import</span>&gt;</span></span></div><div class="line"><span class="comment">// 为快应用注入别名(alias)之后的写法</span></div><div class="line">&lt;<span class="keyword">import</span> name=<span class="string">"HellorWorld"</span> src=<span class="string">"@components/HellorWorld"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">import</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>备注</strong>：这种方法，在 <code>0.4.*</code> 版本中，已被快应用引擎相关开发擅自移除（新增了所谓 <code>hap.config.js</code>，但并不具备添加别名的功能）；强烈谴责相关设计人员，这种奇葩、且不向前兼容的武断决定；我们都该引以为戒，从而避免给别人造成类似糟糕体验。</p>
-</blockquote>
-<p>@2019-02-24 于深圳.福田 Last Modify：2018-03-07</p>
-<hr>
-<h3 id="您可能会感兴趣的文章："><a href="#您可能会感兴趣的文章：" class="headerlink" title="您可能会感兴趣的文章："></a>您可能会感兴趣的文章：</h3><ul>
-<li><a href="https://www.jeffjade.com/2017/10/09/146-talk-about-nice-links/150-prettier-quickapp-plugin">Prettier 插件为更漂亮快应用代码</a></li>
-<li><a href="https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/">快应用脚手架，为优雅而生</a></li>
-<li><a href="https://www.jeffjade.com/2017/10/09/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://nice.lovejade.cn/zh/article/develop-quick-app-experience-notes.html" target="_blank" rel="external">快应用之开发体验纪要</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/21/146-awesome-vue-cli3-example/">快应用开发资源、教程汇聚
-</a></li>
-<li><a href="https://www.jeffjade.com/2018/10/13/144-top-100-front-end-awesome-awesome-list/">TOP 100 大前端超棒精选列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      快应用是移动互联网新型应用生态，与手机系统深度整合，为用户提供更加场景化的体验。具备传统 APP 完整的应用体验，但无需安装、即点即用。快应用是基于手机硬件平台的新型应用形态，由国内十大手机厂商基于硬件平台共同推出，其标准是由主流手机厂商组成的快应用联盟联合制定。这里记录下在快应用开发中，涉及的常见问题及其对应解决方案；同时也会给出如何更好开发快应用的一些建议。
-    
-    </summary>
-    
-      <category term="快应用" scheme="https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
   </entry>
   
