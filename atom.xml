@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2020-11-11T15:55:58.971Z</updated>
+  <updated>2020-11-11T16:01:22.161Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2020/11/11/173-screenshot-and-upload-to-ali-oss/"/>
     <id>https://www.jeffjade.com/2020/11/11/173-screenshot-and-upload-to-ali-oss/</id>
     <published>2020-11-11T15:23:00.000Z</published>
-    <updated>2020-11-11T15:55:58.971Z</updated>
+    <updated>2020-11-11T16:01:22.161Z</updated>
     
     <content type="html"><![CDATA[<p><strong><a href="https://nicelinks.site/?utm_source=github.com" target="_blank" rel="external">倾城之链</a>，旨在云集全球优秀网站，方便你我探索互联网中更广阔的世界</strong>。在倾城，您可以分享（提交）所欢喜的网站；后台将自动为所提交网站首页进行<strong>截图</strong>、压缩、并上传至阿里云 OSS，从而在对应介绍页引用，展示给用户。此篇文章在于分享，如何实现：一键自动化为指定网站截图、压缩 &amp; 上传至阿里 OSS。</p>
 <a id="more"></a>
@@ -75,7 +75,7 @@
 <p>最后，跟朋友们分享下<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>收录网站的流程。任何注册的用户，都可以<a href="https://nicelinks.site/share-link" target="_blank" rel="external">分享 | 提交</a>您觉得好的网站；只需输入网站地址，后台将会自动抓取该网站对应的<code>标题</code>、<code>关键字</code>以及<code>描述</code>；您只需为该网站选择合适的<code>主题</code>、<code>分类</code>，打上<code>标签</code>🏷（最多三个）即可提交（当然，您如果可以亲自写好<strong>推荐语</strong>，就更棒了）。</p>
 <p>用户提交的网站，我在后台会进行一番审核，符合收<a href="https://nicelinks.site/about" target="_blank" rel="external">倾城录标准</a>，即会将其发布对外；后台在收到<code>审核通过</code>消息，就会发起命令，对该网站首页截图、压缩、然后上传至阿里云 OSS；<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>前端页面，将以固定规则，拉取并展示存储在 OSS 上的图片，至此整个流程业已完成。</p>
 <p>下面是<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>的小程序版本，如果您对其感兴趣，不妨扫码体验，一探究竟🎉。</p>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/250/h/250/interlace/1/ignore-error/1" alt="倾城之链 - 小程序码"></p>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="min-width: 300px" alt="小程序码 - 倾城之链"></p>
 <h3 id="您可能喜欢的文章"><a href="#您可能喜欢的文章" class="headerlink" title="您可能喜欢的文章"></a>您可能喜欢的文章</h3><ul>
 <li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
 <li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
