@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2020-10-13T13:56:44.258Z</updated>
+  <updated>2020-11-11T15:55:58.971Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,95 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一键截图、压缩 &amp; 上传至阿里 OSS</title>
+    <link href="https://www.jeffjade.com/2020/11/11/173-screenshot-and-upload-to-ali-oss/"/>
+    <id>https://www.jeffjade.com/2020/11/11/173-screenshot-and-upload-to-ali-oss/</id>
+    <published>2020-11-11T15:23:00.000Z</published>
+    <updated>2020-11-11T15:55:58.971Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><a href="https://nicelinks.site/?utm_source=github.com" target="_blank" rel="external">倾城之链</a>，旨在云集全球优秀网站，方便你我探索互联网中更广阔的世界</strong>。在倾城，您可以分享（提交）所欢喜的网站；后台将自动为所提交网站首页进行<strong>截图</strong>、压缩、并上传至阿里云 OSS，从而在对应介绍页引用，展示给用户。此篇文章在于分享，如何实现：一键自动化为指定网站截图、压缩 &amp; 上传至阿里 OSS。</p>
+<a id="more"></a>
+<p><img src="https://image.nicelinks.site/nicelinks.site-mpb.png" alt="一键截图、压缩 &amp; 上传至阿里 OSS | 倾城之链"></p>
+<h3 id="写在前言"><a href="#写在前言" class="headerlink" title="写在前言"></a>写在前言</h3><p>在系统的设计理念上，我认为，当下还不足以朝着超大且强的方向，该是类如编写代码般，按照功能模块，封装出一个函数（微组件），然后按需将其组合使用；从而达到<strong>易于使用、便于维护，可复用、可扩展</strong>的目的。另外就是，无论是工作、还是生活，应该尽可能多地、将些可能会重复做的事儿，抽象出来，以代码实现，从而提升效率，节省时间，使得可有更多时间享受生活，学习新事物。</p>
+<p>在搭建<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>周边能力时，也是基于这些思想，这使得整个过程轻松，且有条理。早先所发布的 <a href="https://arya.lovejade.cn/#/zh-cn" target="_blank" rel="external">Arya Jarvis</a>、<a href="https://markdown.lovejade.cn/" target="_blank" rel="external">Arya - 在线 Markdown 编辑器</a>，同样是这些理念下的产物。</p>
+<p>实现“一键截图、压缩 &amp; 上传至阿里 OSS”，每一步都有对应工具，只需将其串联即可；具体代码实现，可参见在 Github 创建的 <a href="https://github.com/nicejade/screenshot-and-upload-to-ali-oss" target="_blank" rel="external">screenshot-and-upload-to-ali-oss</a> 仓库。具体使用方式，在下文中有做详细说明。</p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/nicejade/screenshot-and-upload-to-ali-oss.git</div><div class="line"><span class="built_in">cd</span> screenshot-and-upload-to-ali-oss</div><div class="line">yarn</div></pre></td></tr></table></figure>
+<p>额外地，您需要安装 <a href="https://github.com/vladocar/screenshoteer" target="_blank" rel="external">screenshoteer</a>。自动化为指定网页截图，在 Node.js 领域，最好用的工具莫过于谷歌公司所推出的 <a href="https://www.jeffjade.com/2017/12/17/134-kinds-of-toss-using-puppeteer/">puppeteer</a>，功能强大，使用简单。而 screenshoteer 是对 puppeteer 的再封装，使用起来更为方便，因此就直接用了它。具体安装方式如下：</p>
+<blockquote>
+<p>Make website screenshots and mobile emulations from the command line.</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yarn add global screenshoteer</div><div class="line"><span class="comment"># Or</span></div><div class="line">npm i screenshoteer -g</div></pre></td></tr></table></figure>
+<p>您如果只需对网站进行截图，只需用 <a href="https://github.com/vladocar/screenshoteer" target="_blank" rel="external">screenshoteer</a> 即可；它不仅可以自定义尺寸（宽高，全屏），模拟不同设备（如指定为 “iPhone 10”），而且还可指定格式（如 <code>pdf</code>）、指定主题（如 <code>dark</code>），保存文件名等等，其他如排除图片，关联用户名密码，也都是支持，具体可参见其 <a href="https://github.com/vladocar/screenshoteer#example-" target="_blank" rel="external">Example 说明</a>。</p>
+<h3 id="隐私配置"><a href="#隐私配置" class="headerlink" title="隐私配置"></a>隐私配置</h3><p>考虑到要上传至 OSS，其中需要用到些<code>私密配置</code>；因此，这里需要您自行配置；只需在<code>根目录</code>下，创建 secret.config.js 文件，具体内容与格式，可以参考 secret.config.example.js。</p>
+<p>对于其中字段需要说明下， <code>tinifyKey</code> 为 TinyPNG 压缩秘钥；使用邮箱登录 <a href="https://tinypng.com/utm_source=nicelinks.site" target="_blank" rel="external">TinyPNG</a>，即可根据免费🆓账号生成 API Key，可供每月 500 张图片压缩处理。其余四个字段，皆为<a href="https://nicelinks.site/post/5b3e412d615bf842b6091041" target="_blank" rel="external">阿里云</a> OSS 所需，在其后台操作下，即可获得。需要说明下的是，它功能强大，支持对图片做各种处理（加水印、格式转换等）；价格按所用收费，相对较为便宜。</p>
+<h3 id="使用命令"><a href="#使用命令" class="headerlink" title="使用命令"></a>使用命令</h3><p>在项目根目录下，可以基于 <code>npm link</code> 命令，将 <code>screenshot</code> 命令 link 至全局，即可方便使用；具体操作方式如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">screenshot --url http://nicelinks.site/</div><div class="line"><span class="comment"># OR</span></div><div class="line">screenshot --url http://nicelinks.site/ -ns -nu</div><div class="line"><span class="comment"># OR</span></div><div class="line">screenshot --url http://nicelinks.site/ -nt -nu</div></pre></td></tr></table></figure>
+<h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">简写</th>
+<th style="text-align:center">功能描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>--url</code></td>
+<td style="text-align:center"><code>-u</code></td>
+<td style="text-align:center">指定要截图网站的 url 地址.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>--noscreenshot</code></td>
+<td style="text-align:center"><code>-ns</code></td>
+<td style="text-align:center">无需截图，上传本地图片.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>--notinify</code></td>
+<td style="text-align:center"><code>-nt</code></td>
+<td style="text-align:center">不压缩图片，直接上传.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>--noupload</code></td>
+<td style="text-align:center"><code>-nu</code></td>
+<td style="text-align:center">不上传截图至指定的 OSS.</td>
+</tr>
+</tbody>
+</table>
+<p>可能目标网站设置了反爬虫策略，或者别的因素影响，基于 Puppeteer 来截取网站，也不是百分百能成功。在不能正常工作的情形之下，可以借助 Chrome 扩展，手动完成完成✅截图；余下压缩、上传步骤，是无需要手动操作的。因此在设计工具时候，就要对此有所考虑。默认是一键完成三项任务，在此像 Git <code>--no-edit</code> 参数一般，借助参数做减法，是一个比较可取的策略。这也是 <code>-noscreenshot</code>、<code>-notinify</code>  等参数存在的动机之一。</p>
+<hr>
+<p>最后，跟朋友们分享下<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>收录网站的流程。任何注册的用户，都可以<a href="https://nicelinks.site/share-link" target="_blank" rel="external">分享 | 提交</a>您觉得好的网站；只需输入网站地址，后台将会自动抓取该网站对应的<code>标题</code>、<code>关键字</code>以及<code>描述</code>；您只需为该网站选择合适的<code>主题</code>、<code>分类</code>，打上<code>标签</code>🏷（最多三个）即可提交（当然，您如果可以亲自写好<strong>推荐语</strong>，就更棒了）。</p>
+<p>用户提交的网站，我在后台会进行一番审核，符合收<a href="https://nicelinks.site/about" target="_blank" rel="external">倾城录标准</a>，即会将其发布对外；后台在收到<code>审核通过</code>消息，就会发起命令，对该网站首页截图、压缩、然后上传至阿里云 OSS；<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>前端页面，将以固定规则，拉取并展示存储在 OSS 上的图片，至此整个流程业已完成。</p>
+<p>下面是<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>的小程序版本，如果您对其感兴趣，不妨扫码体验，一探究竟🎉。</p>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/250/h/250/interlace/1/ignore-error/1" alt="倾城之链 - 小程序码"></p>
+<h3 id="您可能喜欢的文章"><a href="#您可能喜欢的文章" class="headerlink" title="您可能喜欢的文章"></a>您可能喜欢的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/">工具 vs 产品 And 知识 vs 思维</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      倾城之链，旨在云集全球优秀网站，方便你我探索互联网中更广阔的世界。在倾城，您可以分享（提交）所欢喜的网站；后台将自动为所提交网站首页进行截图、压缩、并上传至阿里云 OSS，从而在对应介绍页引用，展示给用户。此篇文章在于分享，如何实现：一键自动化为指定网站截图、压缩 &amp; 上传至阿里 OSS。
+    
+    </summary>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>OKR 工作法，带你聚焦目标，高效工作</title>
@@ -1682,59 +1771,6 @@
     
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
-    
-      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最好的前端黑客秘籍</title>
-    <link href="https://www.jeffjade.com/2019/03/18/153-best-front-end-hacking-cheatsheets/"/>
-    <id>https://www.jeffjade.com/2019/03/18/153-best-front-end-hacking-cheatsheets/</id>
-    <published>2019-03-18T14:22:00.000Z</published>
-    <updated>2019-04-28T14:21:57.877Z</updated>
-    
-    <content type="html"><![CDATA[<p>对于编程开发而言，用心记住所有 <code>API</code> 是不可能的，也没有这个必要；精力有限，你应该将放在更多重要的事情上；出于效率角度考虑，一份好的 <code>API</code> 备忘单是你须要拥有的；这是我所见收集的最好的前端备忘单（ Front-end Hacking Cheatsheets）,悉心整理至此，希望对你的工作有所帮助。</p>
-<a id="more"></a>
-<p>需要说明的是，这份列表引自 <a href="https://www.strilliant.com/2017/10/26/the-best-front-end-hacking-cheatsheets-%E2%80%94-all-in-one-place/" target="_blank" rel="external">The best front-end hacking cheatsheets</a>；如果您知晓更多喜欢的前端备忘单，不妨留言相告，一起完善使其能帮助到更多人。关于更多流行语言、框架和开发工具的精选备忘单，可以参见 <a href="https://github.com/LeCoupa/awesome-cheatsheets/?utm_source=jeffjade.com" target="_blank" rel="external">Awesome Cheatsheets</a>。</p>
-<blockquote>
-<p><strong>微注</strong>：原文首发于个人基于 <a href="https://nicelinks.site/post/5c3f3151a5957e07a40b30ff" target="_blank" rel="external">Ghost</a> 所搭建的最新博客：<a href="https://quickapp.lovejade.cn/best-front-end-hacking-cheatsheets/" target="_blank" rel="external">静轩之别苑 | 最好的前端黑客秘籍</a>。</p>
-</blockquote>
-<h2 id="Javascript-ES2015-Cheatsheet"><a href="#Javascript-ES2015-Cheatsheet" class="headerlink" title="Javascript ES2015 Cheatsheet"></a><a href="https://devhints.io/es6?utm_source=quickapp.lovejade.cn" target="_blank" rel="external">Javascript ES2015 Cheatsheet</a></h2><p><img src="https://quickapp.lovejade.cn/content/images/2019/03/es6-cheatsheet.jpg" alt="es6-cheatsheet"></p>
-<h2 id="JavaScript-Cheatsheet"><a href="#JavaScript-Cheatsheet" class="headerlink" title="JavaScript Cheatsheet"></a><a href="http://overapi.com/javascript?utm_source=quickapp.lovejade.cn" target="_blank" rel="external">JavaScript Cheatsheet</a></h2><p><img src="https://quickapp.lovejade.cn/content/images/2019/03/javascript-cheatsheet.jpg" alt="javascript-cheatsheet"></p>
-<h2 id="Vue-Cheatsheet"><a href="#Vue-Cheatsheet" class="headerlink" title="Vue Cheatsheet"></a><a href="https://vuejs-tips.github.io/cheatsheet/?utm_source=quickapp.lovejade.cn" target="_blank" rel="external">Vue Cheatsheet</a></h2><p><img src="https://quickapp.lovejade.cn/content/images/2019/03/vue-cheatsheet.jpg" alt="vue-cheatsheet"></p>
-<h2 id="Vuex-Cheatsheet"><a href="#Vuex-Cheatsheet" class="headerlink" title="Vuex Cheatsheet"></a><a href="https://vuejs-tips.github.io/vuex-cheatsheet/?utm_source=quickapp.lovejade.cn" target="_blank" rel="external">Vuex Cheatsheet</a></h2><p><img src="https://quickapp.lovejade.cn/content/images/2019/03/vuex-cheatsheet.jpg" alt="vuex-cheatsheet"></p>
-<h2 id="React-Cheatsheet"><a href="#React-Cheatsheet" class="headerlink" title="React Cheatsheet"></a><a href="https://devhints.io/react?utm_source=quickapp.lovejade.cn" target="_blank" rel="external">React Cheatsheet</a></h2><p><img src="https://quickapp.lovejade.cn/content/images/2019/03/react-cheatsheet.jpg" alt="react-cheatsheet"></p>
-<h2 id="Angular4-Cheatsheet"><a href="#Angular4-Cheatsheet" class="headerlink" title="Angular4 Cheatsheet"></a><a href="https://angular.io/guide/cheatsheet?utm_source=quickapp.lovejade.cn" target="_blank" rel="external">Angular4 Cheatsheet</a></h2><p><img src="https://quickapp.lovejade.cn/content/images/2019/03/angular4-cheatsheet.jpg" alt="angular4-cheatsheet"></p>
-<h2 id="Flexbox-Cheatsheet"><a href="#Flexbox-Cheatsheet" class="headerlink" title="Flexbox Cheatsheet"></a><a href="https://yoksel.github.io/flex-cheatsheet/?utm_source=quickapp.lovejade.cn" target="_blank" rel="external">Flexbox Cheatsheet</a></h2><p><img src="https://quickapp.lovejade.cn/content/images/2019/03/flex-cheatsheet.jpg" alt="flexbox-cheatsheet"></p>
-<h2 id="SCSS-Cheatsheet"><a href="#SCSS-Cheatsheet" class="headerlink" title="SCSS Cheatsheet"></a><a href="https://devhints.io/sass?utm_source=quickapp.lovejade.cn" target="_blank" rel="external">SCSS Cheatsheet</a></h2><p><img src="https://quickapp.lovejade.cn/content/images/2019/03/scss-cheatsheet-1.png" alt="scss-cheatsheet-1"></p>
-<h2 id="Stylus-Cheatsheet"><a href="#Stylus-Cheatsheet" class="headerlink" title="Stylus Cheatsheet"></a><a href="https://devhints.io/stylus?utm_source=quickapp.lovejade.cn" target="_blank" rel="external">Stylus Cheatsheet</a></h2><p><img src="https://quickapp.lovejade.cn/content/images/2019/03/stylus-cheatsheet.png" alt="stylus-cheatsheet"></p>
-<h2 id="GraphQL-Cheatsheet"><a href="#GraphQL-Cheatsheet" class="headerlink" title="GraphQL Cheatsheet"></a><a href="https://raw.githubusercontent.com/sogko/graphql-shorthand-notation-cheat-sheet/master/graphql-shorthand-notation-cheat-sheet.png?utm_source=quickapp.lovejade.cn" target="_blank" rel="external">GraphQL Cheatsheet</a></h2><p><img src="https://raw.githubusercontent.com/sogko/graphql-shorthand-notation-cheat-sheet/master/graphql-shorthand-notation-cheat-sheet.png?utm_source=quickapp.lovejade.cn" alt="GraphQL Cheatsheet"></p>
-<hr>
-<h3 id="您可能会感兴趣的文章："><a href="#您可能会感兴趣的文章：" class="headerlink" title="您可能会感兴趣的文章："></a>您可能会感兴趣的文章：</h3><ul>
-<li><a href="https://www.jeffjade.com/2018/10/13/144-top-100-front-end-awesome-awesome-list/">TOP 100 大前端超棒精选列表</a></li>
-<li><a href="https://quickapp.lovejade.cn/aweome-beautiful-picture-website-list/" target="_blank" rel="external">高质量美图资源，一网收尽</a></li>
-<li><a href="https://quickapp.lovejade.cn/vim-common-shortcuts/" target="_blank" rel="external">Vim 常用快捷键分类备忘单</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/21/146-awesome-quickapp-resource-tutorial/">快应用开发资源、教程汇聚</a></li>
-<li><a href="https://www.jeffjade.com/2017/11/29/133-high-quality-front-end-channel/">『优质』前端频道汇聚</a></li>
-<li><a href="https://www.jeffjade.com/2018/06/04/141-talk-about-my-blogs/">轩帅的博客之旅</a></li>
-<li><a href="https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/">与时俱进版前端资源教程</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      对于编程开发而言，用心记住所有 API 是不可能的，也没有这个必要；精力有限，你应该将放在更多重要的事情上；出于效率角度考虑，一份好的 API 备忘单是你须要拥有的；这是我所见收集的最好的前端备忘单（ Front-end Hacking Cheatsheets）,悉心整理至此，希望对你的工作有所帮助。
-    
-    </summary>
-    
-      <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
-    
-    
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="React" scheme="https://www.jeffjade.com/tags/React/"/>
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
