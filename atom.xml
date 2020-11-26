@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2020-11-17T15:09:52.025Z</updated>
+  <updated>2020-11-26T16:14:40.451Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -16,11 +16,122 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Markdown 用法中的奇技淫巧</title>
+    <link href="https://www.jeffjade.com/2020/11/26/173-markdown-magic-tricks/"/>
+    <id>https://www.jeffjade.com/2020/11/26/173-markdown-magic-tricks/</id>
+    <published>2020-11-26T13:21:00.000Z</published>
+    <updated>2020-11-26T16:14:40.451Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/tags/Markdown?sort=hottest" target="_blank" rel="external">Markdown</a> 是一种轻量级的「标记语言」，旨在简洁、高效；它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档；它的优点很多，目前也被越来越多的写作爱好者、撰稿者广泛使用。自从 14 年首次接触到 <a href="https://nicelinks.site/tags/Markdown?sort=hottest" target="_blank" rel="external">Markdown</a>，就被这种学习简单，功能强大、使用高效的的设计所吸引，也是此后许多年写文章、做 PPT 、记录代办事项等首选工具。本文在于分享 Markdown 相关资源、以及高阶用法的奇技淫巧。</p>
+<p><strong>备注</strong>：请不要被「标记」、「语言」所迷惑，<a href="https://nicelinks.site/tags/Markdown?sort=hottest" target="_blank" rel="external">Markdown</a> 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的 HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本极低（5 分钟即可学会），且一旦熟悉这种语法规则，会有一劳永逸的效果。有百千种资源平台以供使用的同时，也衍生出越来越多开源库，可供我们在代码中调用。</p>
+<p><strong>适用人群</strong>：Markdown 适用于所有需要撰写文档、文章、电子书等用户；因为它具有这几个优势：</p>
+<ul>
+<li>轻量级的「标记语言」，学习成本极低；</li>
+<li>可以令人专注写内容，而<strong>无需关注排版</strong>；</li>
+<li>支持一键转换为 Word、PDF、HTML、图片等。</li>
+</ul>
+<p>在<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/markdown-tutorial.md" target="_blank" rel="external">与时俱进版前端资源教程 | Markdown 篇</a>中，收录了大量 <code>Markdown</code> 相关，涵盖入门技巧、资源平台、Markdown 相关的工具库、组件库等等，有需要的朋友，可以参考下。本篇文章的撰写，也是基于之前开发的 <a href="https://markdown.lovejade.cn/" target="_blank" rel="external">Arya - 在线 Markdown 编辑器</a>完成。</p>
+<p>自此，有必要介绍下  <a href="https://markdown.lovejade.cn/" target="_blank" rel="external">Arya - 在线 Markdown 编辑器</a>：📝 她是基于 <a href="https://nicelinks.site/post/5b1a221c0526c920d6dfaada" target="_blank" rel="external">Vue</a>、<a href="https://hacpai.com/tag/vditor?utm_source=github.com" target="_blank" rel="external">Vditor</a>，所构建的<strong>在线</strong> <a href="https://nicelinks.site/tags/Markdown/?utm_source=github.com" target="_blank" rel="external">Markdown</a> 编辑器，支持绘制<strong>流程图</strong>、甘特图、时序图、任务列表、echarts 图表、五线谱…..另外支持 PPT 预览；视频音频解析；<strong>HTML 自动转换为 Markdown</strong>；<strong>所见即所得</strong>编辑模式；支持复制到微信公众号；支持<strong>导出</strong>携带样式的 PDF、PNG、HTML；凡此种种，不胜枚举…….感兴趣的朋友，欢迎体验品尝。下面进入正题，一起看下 Markdown 有哪些值得运用的奇技淫巧。</p>
+<p><strong>备注</strong>：Markdown 由 John Gruber 在 2004 创建，已被运用于几乎所有主流网站广泛使用。但至今没有统一标准化，因此除了基本语法外，高阶运法在不同解释器，可能有所不同。因为 Markdown 其实 HTML 的一种书写格式（变体），所以 Markdown 兼容 HTML，这就使得 Markdown 不能实现的效果，可以通过 HTML + CSS 来完成。</p>
+<h3 id="在-Markdown-中创建一个-Git-Diff"><a href="#在-Markdown-中创建一个-Git-Diff" class="headerlink" title="在 Markdown 中创建一个 Git Diff"></a>在 Markdown 中创建一个 Git Diff</h3><p>首先，不要指定编程语言，而是在回标后使用 <code>diff</code>。然后，在任何你想显示为删除的代码行的开头，添加一个<code>-</code>，在任何你想显示为添加的代码行的开头，添加一个<code>+</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">```diff</div><div class="line">function addTwoNumbers (num1, num2) &#123;</div><div class="line">-  return 1 + 2</div><div class="line">+  return num1 + num2</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>具体效果如下所示：</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function addTwoNumbers (num1, num2) &#123;</div><div class="line"><span class="deletion">-  return 1 + 2</span></div><div class="line"><span class="addition">+  return num1 + num2</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Markdown-如何处理长链接"><a href="#Markdown-如何处理长链接" class="headerlink" title="Markdown 如何处理长链接"></a>Markdown 如何处理长链接</h3><p>文章中充满大量的链接使用时，会使源文本不易阅读，当链接地址过长时尤为明显。此时可以使用键或引用，来设置链接地址，使得链接与文本分离；即可正常工作，又不影响正文显示。具体如下图示说明：</p>
+<p><img src="https://image.nicelinks.site/markdown-skill.png" alt="Markdown 如何处理长链接"></p>
+<h3 id="如何基于-Markdown-来做-PPT"><a href="#如何基于-Markdown-来做-PPT" class="headerlink" title="如何基于 Markdown 来做 PPT"></a>如何基于 Markdown 来做 PPT</h3><p>基于 Markdown 来做 PPT，在这里也有非常多的工具来完成，如 <a href="https://github.com/gnab/remark" target="_blank" rel="external">remark</a>、<a href="https://revealjs.com/" target="_blank" rel="external">revealjs</a>、<a href="https://github.com/presenta-software/presenta-lib" target="_blank" rel="external">presenta-lib</a> 等库；也可以借助 <a href="https://github.com/marp-team/marp/" target="_blank" rel="external">Marp</a> 等桌面应用；还可以基于 <a href="https://github.com/googleworkspace/md2googleslides" target="_blank" rel="external">md2googleslides</a>、<a href="https://github.com/ksky521/nodeppt" target="_blank" rel="external">nodeppt</a>、<a href="https://github.com/jdan/cleaver" target="_blank" rel="external">cleaver</a> 等命令行工具，你可根据自己的喜好，选择性使用。</p>
+<h3 id="Markdown-设置文字属性"><a href="#Markdown-设置文字属性" class="headerlink" title="Markdown 设置文字属性"></a>Markdown 设置文字属性</h3><p>在 Markdown 中，对于文字有<strong>加粗</strong>、<em>斜体</em>、加<del>删除线</del>，<code>行内代码块</code>等默认操作；如果要根据自己设置颜色、字体尺寸、加阴影等属性，可以借助 Html 知识来设置；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color: #696969;font-size: 28px;text-shadow: black 0.1em 0.1em 0.2em"</span>&gt;</span>在 Markdown 中，为文字设置其他属性<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color: #ef4136;font-size: 28px;text-shadow: 0 0 0.2em #2edfa3, 0 0 0.2em #FF8877"</span>&gt;</span>天意怜芳草，人间重晚晴。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"font-size: 28px;background-image: linear-gradient(to right bottom, rgb(255,0,0), rgb(255,128,0), rgb(255,255,0), rgb(0,255,0), rgb(0,255,128), rgb(0,255,255), rgb(0,128,255), rgb(0,0,255), rgb(128,0,255), rgb(255,0,255), rgb(255,0,128)); -webkit-background-clip: text;color: transparent;"</span>&gt;</span>悲莫悲兮生别离, 乐莫乐兮新相知。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"background-color: #cccccc"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color: #C8C8C8;font-size: 28px;text-shadow: 1px 1px white, -1px -1px #444444;"</span>&gt;</span>As you think, so shall you become.<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><span style="color: #696969;font-size: 28px;text-shadow: black 0.1em 0.1em 0.2em">在 Markdown 中，为文字设置其他属性</span><br><span style="color: #ef4136;font-size: 28px;text-shadow: 0 0 0.2em #2edfa3, 0 0 0.2em #FF8877">天意怜芳草，人间重晚晴。</span><br><span style="font-size: 28px;background-image: linear-gradient(to right bottom, rgb(255,0,0), rgb(255,128,0), rgb(255,255,0), rgb(0,255,0), rgb(0,255,128), rgb(0,255,255), rgb(0,128,255), rgb(0,0,255), rgb(128,0,255), rgb(255,0,255), rgb(255,0,128)); -webkit-background-clip: text;color: transparent">悲莫悲兮生别离, 乐莫乐兮新相知。</span></p>
+<div style="background-color: #cccccc"><span style="color: #C8C8C8;font-size: 28px;text-shadow: 1px 1px white, -1px -1px #444444">As you think, so shall you become.</span></div>
+
+<h3 id="在-Markdown-中添加表格"><a href="#在-Markdown-中添加表格" class="headerlink" title="在 Markdown 中添加表格"></a>在 Markdown 中添加表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">| Key | Value | 备注 |</div><div class="line">| :--- | :---: | ---: |</div><div class="line">|居左对齐 | 居中对齐  | 居右对齐 |</div><div class="line">|  |  |  |</div><div class="line">| [倾城之链](https://nicelinks.site/)❤️ | `开放平台`🙌🏻  |  **优秀网站** 📘|</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Key</th>
+<th style="text-align:center">Value</th>
+<th style="text-align:right">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">居左对齐</td>
+<td style="text-align:center">居中对齐</td>
+<td style="text-align:right">居右对齐</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>❤️</td>
+<td style="text-align:center"><code>开放平台</code>🙌🏻</td>
+<td style="text-align:right"><strong>优秀网站</strong> 📘</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Markdown-中使图片居中"><a href="#Markdown-中使图片居中" class="headerlink" title="Markdown 中使图片居中"></a>Markdown 中使图片居中</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![倾城之链，云集全球优秀网站](https://image.nicelinks.site/倾城之链-Banner.png)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://image.nicelinks.site/倾城之链-Banner.png&quot; alt=&quot;倾城之链，云集全球优秀网站&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
+<div align="center"><img src="https://image.nicelinks.site/倾城之链-Banner.png" alt="倾城之链，云集全球优秀网站"></div>
+
+<h3 id="Markdown-中折叠一部分内容"><a href="#Markdown-中折叠一部分内容" class="headerlink" title="Markdown 中折叠一部分内容"></a>Markdown 中折叠一部分内容</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span>点击我，了解「倾城之链」<span class="tag">&lt;/<span class="name">summary</span>&gt;</span> </div><div class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></div><div class="line">    作为一个开放平台，</div><div class="line">    旨在云集全球优秀网站，</div><div class="line">    探索互联网中更广阔的世界；</div><div class="line">    在这里，你可以轻松<span class="tag">&lt;<span class="name">strong</span>&gt;</span>发现、学习、分享更多有用或有趣的事物<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>。</div><div class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></div></pre></td></tr></table></figure>
+<details><br><summary>点击我，了解「倾城之链」</summary><br><pre><br>    作为一个开放平台，<br>    旨在云集全球优秀网站，<br>    探索互联网中更广阔的世界；<br>    在这里，你可以轻松<strong>发现、学习、分享更多有用或有趣的事物</strong>。<br><pre><br></pre></pre></details>
+
+<h3 id="Markdown-中插入视频"><a href="#Markdown-中插入视频" class="headerlink" title="Markdown 中插入视频"></a>Markdown 中插入视频</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">video</span> <span class="attr">id</span>=<span class="string">"video"</span> <span class="attr">controls</span>=<span class="string">""</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">preload</span>=<span class="string">"none"</span> <span class="attr">poster</span>=<span class="string">"your-poster-path"</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">source</span> <span class="attr">id</span>=<span class="string">"mp4"</span> <span class="attr">src</span>=<span class="string">"your-video-path"</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<ul>
+<li><strong>src</strong>：视频地址；</li>
+<li><strong>controls</strong>：显示或隐藏播放器（ true/false）；</li>
+<li><strong>width</strong>：播放器宽度（px / 百分比）；</li>
+<li><strong>height</strong>：播放器的高度（px / 百分比）；</li>
+<li><strong>poster</strong>：指定封面（图片地址）；</li>
+</ul>
+<h3 id="如何在前端开发中运用-Markdown"><a href="#如何在前端开发中运用-Markdown" class="headerlink" title="如何在前端开发中运用 Markdown"></a>如何在前端开发中运用 Markdown</h3><p>Markdown 要不 HTML 来的<strong>更快捷</strong>；在前端开发中，使用 Markdown 来绘制界面，处于开发效率，也是比较可取的选择。通常有两种实现方式：借助解释器如 <a href="https://github.com/markedjs/marked" target="_blank" rel="external">marked</a>；运用 <a href="https://mdxjs.com/" target="_blank" rel="external">MDX</a>。</p>
+<p>在开发独立个人产品<a href="https://nicelinks.site/?utm_source=nicelinks.site" target="_blank" rel="external">「倾城之链」</a>的<a href="https://nicelinks.site/about" target="_blank" rel="external">关于 | About</a> 页面，以及「倾城之链」小程序，就采取 Markdown 结合 marked 方式；具体实现可参见 <a href="https://github.com/nicejade/nicelinks-vue-client/blob/master/src/views/About.vue#L13" target="_blank" rel="external">nicelinks-vue-client</a>。在 vue 中的用法大致如下所示：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div class="markdown-body" v-html="beParsedVal"&gt;&lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">import marked from 'marked'</div><div class="line">export default &#123;</div><div class="line">  name: 'PreviewMd',</div><div class="line">  data() &#123;</div><div class="line">    return &#123;</div><div class="line">        beParsedVal: ''</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  created() &#123;</div><div class="line">    const content = `[「倾城之链」](https://nicelinks.site/?utm_source=nicelinks.site)，作为一个开放平台....`</div><div class="line">    this.beParsedVal = marked(content, &#123;</div><div class="line">        sanitize: true,</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>以上，即 Markdown 常用语法之外的些许“奇技淫巧“，欢迎朋友分享更多精彩用法。</p>
+<p>于深圳.福田，2020.11.25 ~ 2020.11.26</p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2020/10/12/172-okr-working-method-let-you-more-efficiently/">OKR 工作法，带你聚焦目标，高效工作</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/">工具 vs 产品 And 知识 vs 思维</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      Markdown 是一种轻量级的「标记语言」，旨在简洁、高效；它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档；它的优点很多，目前也被越来越多的写作爱好者、撰稿者广泛使用。自从 14 年首次接触到 Markdown，就被这种学习简单，功能强大、使用高效的的设计所吸引，也是此后许多年写文章、做 PPT 、记录代办事项等首选工具。本文在于分享 Markdown 相关资源、以及高阶用法的奇技淫巧。
+    
+    </summary>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
+    
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
+    
+      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="小程序" scheme="https://www.jeffjade.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>开启技术变现之路，探索第三收入来源</title>
     <link href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/"/>
     <id>https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/</id>
     <published>2020-11-17T13:21:00.000Z</published>
-    <updated>2020-11-17T15:09:52.025Z</updated>
+    <updated>2020-11-17T15:17:16.390Z</updated>
     
     <content type="html"><![CDATA[<p>2020 年 5 月底，<a href="https://nicelinks.site/post/59c8e9208f066a5dda100f4b" target="_blank" rel="external">SegmentFault</a> 正式推出<a href="https://segmentfault.com/a/1190000022747255" target="_blank" rel="external">「思否独立开发者支持计划」</a>，希望借助社区的资源，为独立开发者提供相应的个人品牌、独立项目的曝光推介，从而帮助独立开发者建立影响力。前段时间才关注到，略作申请，就有收到<code>采访</code>邀约；有<a href="https://segmentfault.com/a/1190000038196276" target="_blank" rel="external">将采访的相关内容</a>，同步至此，希望可以给更多对「独立开发者」感兴趣的朋友，带来些许参考；此外，更渴望结识更多志同道合的朋友，相互交流，共同成长。</p>
 <a id="more"></a>
@@ -28,7 +139,7 @@
 <p>备注，关于<code>倾城之链</code>已经分享两篇文章；而本篇所涉及的内容，绝大部分也是与“倾城”相关思考；其第二个标题，应该是“云集优站，尽在「倾城之链」番外篇”，将会是『倾城之链』系列文章组成部分。</p>
 </blockquote>
 <h2 id="项目相关问题"><a href="#项目相关问题" class="headerlink" title="项目相关问题"></a>项目相关问题</h2><p>独立项目名称：<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a><br>月收入（选答）：暂不到 1000<br>思否社区 ID：<a href="https://segmentfault.com/u/jeffjade" target="_blank" rel="external">jeffjade</a>   </p>
-<h3 id="1-自我介绍，你的背景是？最近在忙什么？"><a href="#1-自我介绍，你的背景是？最近在忙什么？" class="headerlink" title="1. 自我介绍，你的背景是？最近在忙什么？"></a>1. 自我介绍，你的背景是？最近在忙什么？</h3><p>业余独立开发者<a href="https://www.jeffjade.com/about-me">杨轩帅</a>，目前在国内一家智能手机研发公司做<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>相关；目前，工作侧重管理、工具型产品，当然也仍会写写代码；出于对高效工作的追求，比较热衷与创造一些好产品 / 工具，相比之下，业余时间写代码会更多一些。</p>
+<h3 id="1-自我介绍，你的背景是？最近在忙什么？"><a href="#1-自我介绍，你的背景是？最近在忙什么？" class="headerlink" title="1. 自我介绍，你的背景是？最近在忙什么？"></a>1. 自我介绍，你的背景是？最近在忙什么？</h3><p>业余独立开发者<a href="https://www.jeffjade.com/about-me">杨轩帅</a>，目前在国内一家智能手机研发公司做<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>相关；目前，工作侧重管理、工具型产品，当然也仍会写写代码；出于对高效工作的追求，比较热衷于创造一些好产品 / 工具，相比之下，业余时间写代码会更多一些。</p>
 <h3 id="2-为什么选择成为一名独立开发者？"><a href="#2-为什么选择成为一名独立开发者？" class="headerlink" title="2. 为什么选择成为一名独立开发者？"></a>2. 为什么选择成为一名独立开发者？</h3><p>目前仍是一名<code>业余独立开发者</code>。工作内外，都有很多想法，以及一些痛点；个人非常倾向将其抽象出来，加以设计，用代码实现出一个工具，或是一款产品，为自己和他人都能带来价值；即便只有自己用，也觉得很酷（极客范儿）。</p>
 <p>从另一角度回答这个问题，有必要理解下其定义；<strong>『独立开发者』</strong>，一般指的是“从产品立项、设计、开发、推广、到盈利的闭环全部独立完成的人”。也想有更多志同道合朋友，组成一个团队，聚集起来完成一款产品；但这并不容易，只能是自己事必躬亲，孤军奋战。所有业余项目，包括<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>在内，全部工作都须自己去做，在不擅长的领域，难免捉襟见肘，比如 UI 设计、交互设计，推广等环节。</p>
 <h3 id="3-设计思考，为什么开始这个（几个）项目？"><a href="#3-设计思考，为什么开始这个（几个）项目？" class="headerlink" title="3. 设计思考，为什么开始这个（几个）项目？"></a>3. 设计思考，为什么开始这个（几个）项目？</h3><p><strong>项目立项</strong>：这里主要介绍下<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>这个项目；从 17 年初，有开始立项，在业余时间策划、设计、编写以及部署等。主要部分功能，也是在 17 年就初步完成；这几年有陆续完善体验，塑造周边能力，以及发<code>小程序</code>、<code>快应用</code>等版本。</p>
@@ -1713,101 +1824,6 @@
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
       <category term="Puppeteer" scheme="https://www.jeffjade.com/tags/Puppeteer/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arya - 在线 Markdown 编辑器</title>
-    <link href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/"/>
-    <id>https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/</id>
-    <published>2019-05-31T10:19:20.000Z</published>
-    <updated>2019-12-12T16:35:11.717Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a>，是一款基于 <code>Vue</code>、<code>Vditor</code>，为未来而构建的在线 Markdown 编辑器；轻量且强大：内置粘贴 HTML 自动转换为 Markdown，支持流程图、甘特图、时序图、任务列表，可导出携带样式的图片、PDF、以及转换 Markdown 成微信公众号特制的 HTML 等；另外支持<strong>实时预览</strong>、<strong>本地存储</strong>、字符计数，提供常用快捷键（含<strong>Tab</strong>），及代码块添加复制等功能。</p>
-<a id="more"></a>
-<p><img src="https://image.nicelinks.site/arya-markdown-editor.jpg" alt="Arya - 在线 Markdown 编辑器"></p>
-<blockquote>
-<p><a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a> 另一大优点在于：编辑内容只会在您本地进行保存，不会上传您的数据至服务器，<strong>绝不窥测用户个人隐私，可放心使用</strong>；Github 源码：<a href="https://github.com/nicejade/markdown-online-editor" target="_blank" rel="external">markdown-online-editor</a>，部分功能仍在开发🚧，敬请期待。</p>
-</blockquote>
-<h2 id="背景初衷"><a href="#背景初衷" class="headerlink" title="背景初衷"></a>背景初衷</h2><p>早期就有关注到由<a href="https://hacpai.com/?utm_source=jeffjade.com" target="_blank" rel="external">黑客派</a>所出品的 <a href="https://hacpai.com/tag/vditor?utm_source=jeffjade.com" target="_blank" rel="external">Vditor</a>：一款为未来而构建的下一代 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">Markdown</a> 编辑器。然，现而今市面上所存在的 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">Markdown</a> 编辑器，或多或少都存在一些问题（或功能不全，或高级功能收费…），因此基于自身所需，加之 <a href="https://hacpai.com/tag/vditor?utm_source=jeffjade.com" target="_blank" rel="external">Vditor</a> 的强大，就诞生了做一款<a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">在线 Markdown 编辑器</a> 的念头；取其名曰：<code>Arya</code>，个中原由，有在<a href="https://quickapp.lovejade.cn/talking-game-of-thrones/?utm_source=jeffjade.com" target="_blank" rel="external">观《权利的游戏》感记</a>一文有做记载。</p>
-<h2 id="功能支持🎉"><a href="#功能支持🎉" class="headerlink" title="功能支持🎉"></a>功能支持🎉</h2><input type="checkbox" checked="checked" disabled="disabled">     🎉 通常 <code>Markdown</code> 解析器自带的基本功能；<br><input type="checkbox" checked="checked" disabled="disabled">     ✨ 支持<strong>流程图</strong>、<strong>甘特图</strong>、<strong>时序图</strong>、<strong>任务列表</strong>；<br><input type="checkbox" checked="checked" disabled="disabled">     🏁 支持粘贴 HTML 自动转换为 Markdown；<br><input type="checkbox" checked="checked" disabled="disabled">     💃🏻 支持插入原生 Emoji、设置常用表情列表；<br><input type="checkbox" checked="checked" disabled="disabled">     🚑 支持编辑内容保存<strong>本地存储</strong>，防止意外丢失；<br><input type="checkbox" checked="checked" disabled="disabled">     📝 支持<strong>实时预览</strong>，主窗口大小拖拽，字符计数；<br><input type="checkbox" checked="checked" disabled="disabled">     🛠 支持常用快捷键(<strong>Tab</strong>)，及代码块添加复制；<br><input type="checkbox" checked="checked" disabled="disabled">     🚧 支持<strong>导出</strong>携带样式PDF、PNG、JPEG 等；<br><input type="checkbox" checked="checked" disabled="disabled">     ✨ 注入 <a href="https://revealjs.com/#/" target="_blank" rel="external">RevealJs</a>，增设对 <code>PPT</code> 预览支持；<br><input type="checkbox" checked="checked" disabled="disabled">     👏 支持检查并格式化 Markdown 语法，使其专业；<br><input type="checkbox" checked="checked" disabled="disabled">     🦑 支持五线谱、及<a href="https://github.com/b3log/vditor/issues/117?utm_source=hacpai.com#issuecomment-526986052" target="_blank" rel="external">部分站点、视频、音频解析</a>;<br><input type="checkbox" disabled="disabled">     🚧 增加对<strong>所见即所得</strong>编辑模式的支持(开发中)；
-
-<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>清空目前 <a href="https://markdown.lovejade.cn/?utm_source=github.com" target="_blank" rel="external">Arya</a> 编辑区默认文档，即可使用。</p>
-<h3 id="PPT-预览"><a href="#PPT-预览" class="headerlink" title="PPT 预览"></a>PPT 预览</h3><p>如果您用作 <code>PPT</code> 预览（入口在<code>设置</code>中），需要注意，这里暂还不能支持各种图表的渲染；您可以使用 <code>---</code> 来定义水平方向上幻灯片，用 <code>--</code> 来定义垂直幻灯片；更多设定可以参见 <a href="https://github.com/hakimel/reveal.js#table-of-contents" target="_blank" rel="external">RevealJs 文档</a>。</p>
-<h2 id="如何开发"><a href="#如何开发" class="headerlink" title="如何开发"></a>如何开发</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 🎉 克隆项目</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/nicejade/markdown-online-editor.git</div><div class="line"><span class="built_in">cd</span> markdown-online-editor</div><div class="line"></div><div class="line"><span class="comment"># ➕ 安装依赖(跳过安装 )</span></div><div class="line">env PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=<span class="literal">true</span> yarn</div><div class="line"></div><div class="line"><span class="comment"># 🚧 开始开发</span></div><div class="line">yarn start</div><div class="line"></div><div class="line"><span class="comment"># 🚀 部署 Github Pages(需修改 commands/deploy.sh)</span></div><div class="line">yarn deploy</div></pre></td></tr></table></figure>
-<blockquote>
-<p>关于本应用构建：因采用 <a href="https://github.com/chrisvfritz/prerender-spa-plugin" target="_blank" rel="external">prerender-spa-plugin</a> 以解决 SPA SEO 问题，故而，您需要在根目录下创建 <code>arya.config.js</code>，根据 <em>arya.config.sample.js</em> 中示例格式，来设定 <code>executablePath</code> 参数，从而指定插件中捆绑的 <strong>Chromium</strong> 所在目录，使得 <code>prerender-spa-plugin</code> 可以正常工作。更多详情，可以参见 <a href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85">Puppeteer 安装注意事项</a>。</p>
-</blockquote>
-<h2 id="关于定位📌"><a href="#关于定位📌" class="headerlink" title="关于定位📌"></a>关于定位📌</h2><p>众所周知，早在几年前，市面上就充盈百余种不同的 <code>Markdown</code>  编辑器；其中不乏很多功能强大，体验良好的 <code>Markdown</code>  神器；在 <a href="https://nicelinks.site/tags/Markdown/?utm_source=jeffjade.com" target="_blank" rel="external">倾城之链 | Markdown</a>  标签中，也是收录了些 <code>Markdown</code>  相关工具。但，就如在<code>初衷</code>中提及的，那些工具或多或少都存在一些问题比如：功能不全，使用不便，体验不佳，或高级功能收费等；对于 <a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a>，无意让她在 <code>Markdown</code>  的江湖逐鹿中原，目前给其设定就是：<strong>轻盈且强大</strong>，<strong>免费又安全</strong>。关于 <a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya</a> 能做的，可参见 <a href="https://github.com/nicejade/markdown-online-editor#功能支持" target="_blank" rel="external">Arya Markdown 功能支持</a>；当然，那并不是 <code>Arya</code> 最终形态，如果您有更多关于 <code>Markdown</code> 相关的诉求或建议，欢迎👏提给我（可以通过<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">各种渠道</a>），这边会尽最大努力满足您。</p>
-<blockquote>
-<p>额外补充，因为数据使它们更具说服力且易于理解，能够将可视化嵌入到文本中的技术非常重要；受益于 <a href="https://github.com/geekplux/markvis" target="_blank" rel="external">markvis</a> (make visualization in markdown.) 的启发，完全可以将 <code>Arya</code> 中内置 <code>d3</code> 等可视化库，从而使用户可以更加方便，在 <a href="https://markdown.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">Arya Markdown</a> 中进行数据可视化操作；再辅之以导出功能，哇哦，至少这些功能于我而言，是超有用的存在。另外，很多同学，在写中文文案时候，不太会注重格式，如中英文间未有空格等；后面 <code>Arya</code> 也会考虑注入自动格式化文档的功能….. 诸此等等；此篇文章，也会随之而来的新想法、新功能以及其他新建议，而不断完善；总之呢，敬请期待。（2019.06.02）</p>
-</blockquote>
-<p>于 2019 年 5 月 19 号，深圳.福田；last modify: 2019.06.02。</p>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
-<li><a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" rel="external"><strong>倾城之链</strong></a></li>
-<li><a href="https://about.me/nicejade?utm_source=jeffjade.com" target="_blank" rel="external">About Me</a></li>
-<li><a href="https://jeffjade.com/nicelinks?utm_source=jeffjade.com" target="_blank" rel="external">个人博客</a></li>
-<li><a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">静轩之别苑</a></li>
-<li><a href="https://nice.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">静晴轩别苑</a></li>
-<li><a href="https://docz.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">吾意静晴轩</a></li>
-<li><a href="https://blog.lovejade.cn/?utm_source=jeffjade.com" target="_blank" rel="external">天意人间舫</a></li>
-<li><a href="https://weibo.com/jeffjade?utm_source=jeffjade.com" target="_blank" rel="external">新浪微博</a></li>
-<li><a href="https://www.zhihu.com/people/yang-qiong-pu/" target="_blank" rel="external">知乎主页</a></li>
-<li><a href="https://www.jianshu.com/u/9aae3d8f4c3d" target="_blank" rel="external">简书主页</a></li>
-<li><a href="https://segmentfault.com/u/jeffjade" target="_blank" rel="external">SegmentFault</a></li>
-<li><a href="https://twitter.com/nicejadeyang" target="_blank" rel="external">Twitter</a></li>
-<li><a href="https://www.facebook.com/nice.jade.yang" target="_blank" rel="external">Facebook</a></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">微信公众号</th>
-<th style="text-align:center">前端微信群</th>
-<th style="text-align:center">推荐 Web 应用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">😉 静晴轩</td>
-<td style="text-align:center">✨ 大前端联盟</td>
-<td style="text-align:center">🎉 倾城之链</td>
-</tr>
-<tr>
-<td style="text-align:center"><img src="https://image.nicelinks.site/qrcode_jqx.jpg" alt="静晴轩" width="200px"></td>
-<td style="text-align:center"><img src="https://image.nicelinks.site/wqycx-weixin.png?ver=1" alt="倾城之链" width="200px"></td>
-<td style="text-align:center"><img src="https://image.nicelinks.site/nice-links.png" width="200px" alt="倾城之链"></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="您可能会感兴趣的文章"><a href="#您可能会感兴趣的文章" class="headerlink" title="您可能会感兴趣的文章"></a>您可能会感兴趣的文章</h3><ul>
-<li><a href="https://www.jeffjade.com/2019/08/25/156-arya-jarvis-born-for-efficiency">为高效而生：Arya Jarvis</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/02/150-prettier-quickapp-plugin/">Prettier 插件为更漂亮快应用代码</a></li>
-<li><a href="https://www.jeffjade.com/2019/01/13/146-awesome-vue-cli3-example/">基于 Vue-Cli3 构建的脚手架模版</a></li>
-<li><a href="https://www.jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/">开箱即用的 Vue Webpack 脚手架模版</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/21/146-awesome-quickapp-resource-tutorial/">快应用开发资源、教程汇聚</a></li>
-<li><a href="https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/">快应用脚手架，为优雅而生</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/">与时俱进版前端资源教程</a></li>
-<li><a href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/">基于 Puppeteer 构建简易机器人</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      Arya，是一款基于 Vue、Vditor，为未来而构建的在线 Markdown 编辑器；轻量且强大：内置粘贴 HTML 自动转换为 Markdown，支持流程图、甘特图、时序图、任务列表，可导出携带样式的图片、PDF、以及转换 Markdown 成微信公众号特制的 HTML 等；另外支持实时预览、本地存储、字符计数，提供常用快捷键(Tab)，及代码块添加复制等功能。
-    
-    </summary>
-    
-      <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
-    
-    
-      <category term="Vue" scheme="https://www.jeffjade.com/tags/Vue/"/>
-    
-      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
-    
-      <category term="Arya" scheme="https://www.jeffjade.com/tags/Arya/"/>
-    
-      <category term="Markdown" scheme="https://www.jeffjade.com/tags/Markdown/"/>
     
   </entry>
   
