@@ -22,7 +22,7 @@
 <meta property="og:description" content="Markdown 是一种轻量级的「标记语言」，旨在简洁、高效；它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档；它的优点很多，目前也被越来越多的写作爱好者、撰稿者广泛使用。自从 14 年首次接触到 Markdown，就被这种学习简单，功能强大、使用高效的的设计所吸引，也是此后许多年写文章、做 PPT 、记录代办事项等首选工具。本文在于分享 Markdo">
 <meta property="og:image" content="https://image.nicelinks.site/markdown-skill.png">
 <meta property="og:image" content="https://image.nicelinks.site/倾城之链-Banner.png">
-<meta property="og:updated_time" content="2020-11-26T16:36:51.564Z">
+<meta property="og:updated_time" content="2020-11-30T15:51:26.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown 用法中的奇技淫巧">
 <meta name="twitter:description" content="Markdown 是一种轻量级的「标记语言」，旨在简洁、高效；它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档；它的优点很多，目前也被越来越多的写作爱好者、撰稿者广泛使用。自从 14 年首次接触到 Markdown，就被这种学习简单，功能强大、使用高效的的设计所吸引，也是此后许多年写文章、做 PPT 、记录代办事项等首选工具。本文在于分享 Markdo">
@@ -145,7 +145,13 @@
 <p>自此，有必要介绍下  <a href="https://markdown.lovejade.cn/" target="_blank" rel="external">Arya - 在线 Markdown 编辑器</a>：📝 她是基于 <a href="https://nicelinks.site/post/5b1a221c0526c920d6dfaada" target="_blank" rel="external">Vue</a>、<a href="https://hacpai.com/tag/vditor?utm_source=github.com" target="_blank" rel="external">Vditor</a>，所构建的<strong>在线</strong> <a href="https://nicelinks.site/tags/Markdown/?utm_source=github.com" target="_blank" rel="external">Markdown</a> 编辑器，支持绘制<strong>流程图</strong>、甘特图、时序图、任务列表、echarts 图表、五线谱…..另外支持 PPT 预览；视频音频解析；<strong>HTML 自动转换为 Markdown</strong>；<strong>所见即所得</strong>编辑模式；支持复制到微信公众号；支持<strong>导出</strong>携带样式的 PDF、PNG、HTML；凡此种种，不胜枚举…….感兴趣的朋友，欢迎体验品尝。下面进入正题，一起看下 Markdown 有哪些值得运用的奇技淫巧。</p>
 <p><strong>备注</strong>：Markdown 由 John Gruber 在 2004 创建，已被运用于几乎所有主流网站广泛使用。但至今没有统一标准化，因此除了基本语法外，高阶运法在不同解释器，可能有所不同。因为 Markdown 其实 HTML 的一种书写格式（变体），所以 Markdown 兼容 HTML，这就使得 Markdown 不能实现的效果，可以通过 HTML + CSS 来完成。</p>
 <h3 id="在-Markdown-中创建一个-Git-Diff"><a href="#在-Markdown-中创建一个-Git-Diff" class="headerlink" title="在 Markdown 中创建一个 Git Diff"></a>在 Markdown 中创建一个 Git Diff</h3><p>首先，不要指定编程语言，而是在回标后使用 <code>diff</code>。然后，在任何你想显示为删除的代码行的开头，添加一个<code>-</code>，在任何你想显示为添加的代码行的开头，添加一个<code>+</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">```diff</div><div class="line">function addTwoNumbers (num1, num2) &#123;</div><div class="line">-  return 1 + 2</div><div class="line">+  return num1 + num2</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<pre>
+<code>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function addTwoNumbers (num1, num2) &#123;</div><div class="line"><span class="deletion">-  return 1 + 2</span></div><div class="line"><span class="addition">+  return num1 + num2</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</code>
+</pre>
+
 <p>具体效果如下所示：</p>
 <figure class="highlight diff"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function addTwoNumbers (num1, num2) &#123;</div><div class="line"><span class="deletion">-  return 1 + 2</span></div><div class="line"><span class="addition">+  return num1 + num2</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="Markdown-如何处理长链接"><a href="#Markdown-如何处理长链接" class="headerlink" title="Markdown 如何处理长链接"></a>Markdown 如何处理长链接</h3><p>文章中充满大量的链接使用时，会使源文本不易阅读，当链接地址过长时尤为明显。此时可以使用键或引用，来设置链接地址，使得链接与文本分离；即可正常工作，又不影响正文显示。具体如下图示说明：</p>
