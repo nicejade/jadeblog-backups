@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2020-12-07T15:37:04.587Z</updated>
+  <updated>2020-12-07T16:04:25.149Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>如何为 Mac 不同应用窗口，切换不同输入法</title>
-    <link href="https://www.jeffjade.com/2020/12/06/176-ow-to-switch-between-different-input-methods-for-different-mac-app/"/>
-    <id>https://www.jeffjade.com/2020/12/06/176-ow-to-switch-between-different-input-methods-for-different-mac-app/</id>
+    <title>如何为不同应用窗口，自动切换不同输入法</title>
+    <link href="https://www.jeffjade.com/2020/12/06/176-how-to-auto-switch-between-different-input-methods-for-different-app/"/>
+    <id>https://www.jeffjade.com/2020/12/06/176-how-to-auto-switch-between-different-input-methods-for-different-app/</id>
     <published>2020-12-06T13:21:00.000Z</published>
-    <updated>2020-12-07T15:37:04.587Z</updated>
+    <updated>2020-12-07T16:04:25.149Z</updated>
     
     <content type="html"><![CDATA[<p>对于编程人员，经常会遇到这样一个场景：在写代码时候，有消息过来，需要去回复；这样切换应用窗口后，不得不反复切换<code>输入法</code>；有时候忘记切换，在输入后才发现，就不会删掉重新切换、再写。这不仅浪费时间，且消耗精力。倘若能根据不同应用窗口，自动切换预先设定的输入法，善莫大焉！</p>
 <a id="more"></a>
@@ -33,10 +33,10 @@
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask install switchkey</div></pre></td></tr></table></figure>
 <p>当然，您也可以手动下载安装包来安装，地址：<a href="https://github.com/itsuhane/SwitchKey/releases" target="_blank" rel="external">SwitchKey Releases</a>。</p>
 <h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>初次打开 <code>SwitchKey</code> 时，你需要在系统偏好设置中，为其启用辅助功能权限，随后便可以开始使用。</p>
-<p><img src="/content/images/2020/12/mac-switch-key.jpg" alt="mac-switch-key"></p>
+<p><img src="https://quickapp.lovejade.cn/content/images/2020/12/mac-switch-key.jpg" alt="如何为不同应用窗口，自动切换不同输入法"></p>
 <p>SwitchKey 的用法相当简单，在任意 App 中切换至想指定的输入法，点击 <code>SwitchKey</code> 的菜单栏图标，选择 <strong>Add Current</strong>，下次打开该 App 时就会自动恢复指定输入状态。如果不小心配置错误，选中记录值后按 <code>Delete</code> 键即可，轻松高效。</p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>经过设置之后，在切换应用窗口时候，就自动在使用它那美好功能。</p>
-<p><img src="/content/images/2020/12/switch-between-different-input-methods-for-different-mac-app.jpg" alt="switch-between-different-input-methods-for-different-mac-app"></p>
+<p><img src="https://quickapp.lovejade.cn/content/images/2020/12/switch-between-different-input-methods-for-different-mac-app.jpg" alt="如何为不同应用窗口，自动切换不同输入法"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上，是这边对常用的几款工具，做的设置；就初步体验来看，操作非常简单；用来非常稳当，随时切换，随时变更输入法的状态，流畅丝滑。自此编程代码 &amp; 打字聊天，彼此切换，效率又高一步，完美解决。</p>
 <hr>
 <p>针对 <strong>Windows 系统</strong>，有检索到一篇文章： <a href="https://link.zhihu.com/?target=https%3A//tech.sina.cn/2013-02-20/detail-iawzuney1492006.d.html" target="_blank" rel="external">为不同应用窗口自动切换输入法</a>，里面以 Win8 为例，详细介绍了如何通过系统设置来完成，切换程序窗口时，自动切换输入法以及输入状态（手头儿没有 Windows 电脑，就没有亲自测试，不知道可用性是否足够好）。</p>
