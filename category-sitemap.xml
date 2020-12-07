@@ -49,13 +49,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/categories/Toss/</loc>
-        <lastmod>2020-05-05T16:43:09.643Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/categories/Program/</loc>
         <lastmod>2020-05-11T15:52:22.278Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -85,7 +78,14 @@
 
     <url>
         <loc>https://www.jeffjade.com/categories/Share/</loc>
-        <lastmod>2020-11-30T15:51:26.559Z</lastmod>
+        <lastmod>2020-11-30T15:57:52.489Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/categories/Toss/</loc>
+        <lastmod>2020-12-07T15:29:17.820Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

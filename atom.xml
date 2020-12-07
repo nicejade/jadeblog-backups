@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2020-11-30T15:51:26.559Z</updated>
+  <updated>2020-11-30T15:57:52.489Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2020/11/26/173-markdown-magic-tricks/"/>
     <id>https://www.jeffjade.com/2020/11/26/173-markdown-magic-tricks/</id>
     <published>2020-11-26T13:21:00.000Z</published>
-    <updated>2020-11-30T15:51:26.559Z</updated>
+    <updated>2020-11-30T15:57:52.489Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://nicelinks.site/tags/Markdown?sort=hottest" target="_blank" rel="external">Markdown</a> 是一种轻量级的「标记语言」，旨在简洁、高效；它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档；它的优点很多，目前也被越来越多的写作爱好者、撰稿者广泛使用。自从 14 年首次接触到 <a href="https://nicelinks.site/tags/Markdown?sort=hottest" target="_blank" rel="external">Markdown</a>，就被这种学习简单，功能强大、使用高效的的设计所吸引，也是此后许多年写文章、做 PPT 、记录代办事项等首选工具。本文在于分享 Markdown 相关资源、以及高阶用法的奇技淫巧。</p>
 <a id="more"></a>
@@ -36,10 +36,8 @@
 <p><strong>备注</strong>：Markdown 由 John Gruber 在 2004 创建，已被运用于几乎所有主流网站广泛使用。但至今没有统一标准化，因此除了基本语法外，高阶运法在不同解释器，可能有所不同。因为 Markdown 其实 HTML 的一种书写格式（变体），所以 Markdown 兼容 HTML，这就使得 Markdown 不能实现的效果，可以通过 HTML + CSS 来完成。</p>
 <h3 id="在-Markdown-中创建一个-Git-Diff"><a href="#在-Markdown-中创建一个-Git-Diff" class="headerlink" title="在 Markdown 中创建一个 Git Diff"></a>在 Markdown 中创建一个 Git Diff</h3><p>首先，不要指定编程语言，而是在回标后使用 <code>diff</code>。然后，在任何你想显示为删除的代码行的开头，添加一个<code>-</code>，在任何你想显示为添加的代码行的开头，添加一个<code>+</code>。</p>
 <pre>
-<code>
 <figure class="highlight diff"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function addTwoNumbers (num1, num2) &#123;</div><div class="line"><span class="deletion">-  return 1 + 2</span></div><div class="line"><span class="addition">+  return num1 + num2</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-</code>
 </pre>
 
 <p>具体效果如下所示：</p>
@@ -130,6 +128,73 @@
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
       <category term="小程序" scheme="https://www.jeffjade.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何为 Mac 不同应用窗口，切换不同输入法</title>
+    <link href="https://www.jeffjade.com/2020/11/17/176-ow-to-switch-between-different-input-methods-for-different-mac-app/"/>
+    <id>https://www.jeffjade.com/2020/11/17/176-ow-to-switch-between-different-input-methods-for-different-mac-app/</id>
+    <published>2020-11-17T13:21:00.000Z</published>
+    <updated>2020-12-07T15:29:17.820Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于编程人员，经常会遇到这样一个场景：在写代码时候，有消息过来，需要去回复；这样切换应用窗口后，不得不反复切换<code>输入法</code>；有时候忘记切换，在输入后才发现，就不会删掉重新切换、再写。这不仅浪费时间，且消耗精力。倘若能根据不同应用窗口，自动切换预先设定的输入法，善莫大焉！</p>
+<a id="more"></a>
+<h2 id="SwitchKey"><a href="#SwitchKey" class="headerlink" title="SwitchKey"></a>SwitchKey</h2><p><strong><a href="https://github.com/itsuhane/SwitchKey" target="_blank" rel="external">SwitchKey</a></strong> 是解决这一困扰的完美方案。</p>
+<blockquote>
+<p>Automatically use the correct input source.</p>
+<p>Ever hassled by wrong input source when switching application?<br>SwitchKey can automatically activate your choice for you.</p>
+</blockquote>
+<p><code>SwitchKey</code>，它可以帮助我们为特定应用程序<strong>指定默认输入法</strong>；例如，当打开 VsCode 时自动切换为英文，打开 Chrome 时自动切换为中文，省去敲键盘的工夫。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew cask install switchkey</div></pre></td></tr></table></figure>
+<p>当然，您也可以手动下载安装包来安装，地址：<a href="https://github.com/itsuhane/SwitchKey/releases" target="_blank" rel="external">SwitchKey Releases</a>。</p>
+<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>初次打开 <code>SwitchKey</code> 时，你需要在系统偏好设置中，为其启用辅助功能权限，随后便可以开始使用。</p>
+<p><img src="/content/images/2020/12/mac-switch-key.jpg" alt="mac-switch-key"></p>
+<p>SwitchKey 的用法相当简单，在任意 App 中切换至想指定的输入法，点击 <code>SwitchKey</code> 的菜单栏图标，选择 <strong>Add Current</strong>，下次打开该 App 时就会自动恢复指定输入状态。如果不小心配置错误，选中记录值后按 <code>Delete</code> 键即可，轻松高效。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>经过设置之后，在切换应用窗口时候，就自动在使用它那美好功能。</p>
+<p><img src="/content/images/2020/12/switch-between-different-input-methods-for-different-mac-app.jpg" alt="switch-between-different-input-methods-for-different-mac-app"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上，是这边对常用的几款工具，做的设置；就初步体验来看，操作非常简单；用来非常稳当，随时切换，随时变更输入法的状态，流畅丝滑。自此编程代码 &amp; 打字聊天，彼此切换，效率又高一步，完美解决。</p>
+<hr>
+<p>针对 <strong>Windows 系统</strong>，有检索到一篇文章： <a href="https://link.zhihu.com/?target=https%3A//tech.sina.cn/2013-02-20/detail-iawzuney1492006.d.html" target="_blank" rel="external">为不同应用窗口自动切换输入法</a>，里面以 Win8 为例，详细介绍了如何通过系统设置来完成，切换程序窗口时，自动切换输入法以及输入状态（手头儿没有 Windows 电脑，就没有亲自测试，不知道可用性是否足够好）。</p>
+<p>另外值得一提的是，<code>SwitchKey</code> 的 zip 安装包，只有 5M 多一点。在 iMac 机器上长时间运行，所占用的内层，也才 16M 左右。相比其他动辄就几百兆，甚至数 G 内层占用的程序，<code>SwitchKey</code> 这点内存消耗几乎可忽略不计。</p>
+<p>以上内容，主要参考了<a href="https://nicelinks.site/post/5aed6b44757c01768c88e26c" target="_blank" rel="external">少数派</a>已有文章（<a href="https://sspai.com/post/54721" target="_blank" rel="external">在 Mac 上自动切换输入法，SwitchKey 能帮上忙</a>）；在此记录下来，除了要分享给更多人，主要是提醒自己，在工作或生活的道路上，无论年纪几何，生命不息，折腾不止，这会让有限的生命，焕发出更多美好。这里要感谢知乎<a href="https://www.zhihu.com/people/cao-mo-41-96" target="_blank" rel="external">@草莫</a>提出的问题；很多时候，<strong>正是我们忍受了当下略微不好的状态，才使得使用体验不能更上一层楼</strong>；与诸君共勉。</p>
+<p>有在<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/tools-tutorial.md#mac" target="_blank" rel="external">与时俱进版前端资源教程 | Mac 篇</a>，收录了大量 Mac 相关文章或应用，感兴趣的朋友可以参考下。同时，欢迎更多朋友分享您更多使用心得，或已知困惑，集众人之智力，相互交流，共同提高。</p>
+<hr>
+<blockquote>
+<p><strong>『有则推荐』</strong>: 自 2017 年初，就有开始利用闲余时光，打磨个人最新作品——<a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" rel="external"><strong>「倾城之链」</strong></a> ，有意将其打造成优良开放型平台，旨在云集全球优秀网站，让您更为便捷地探索互联网中那更广阔的世界；在这里，您可以轻松<strong>发现</strong>、<strong>学习</strong>、<strong>分享</strong>更多<code>有用</code>或<code>有趣</code>的事物。目前仍在不断迭代、优化中，如果您对此感兴趣，不妨先尝试一下： <a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" rel="external">「倾城之链」</a>；亦十分欢迎提出您宝贵意见或建议（亦可通过微信扫，描如下小程序码进行体验）。</p>
+</blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="min-width: 300px" alt="小程序码 - 倾城之链"></p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://quickapp.lovejade.cn/how-to-add-shadow-effects-to-image/" target="_blank" rel="external">为文章图片添加外阴影效果</a></li>
+<li><a href="https://quickapp.lovejade.cn/markdown-magic-tricks/" target="_blank" rel="external">Markdown 用法中的奇技淫巧</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2020/10/12/172-okr-working-method-let-you-more-efficiently/">OKR 工作法，带你聚焦目标，高效工作</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/">工具 vs 产品 And 知识 vs 思维</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      对于编程人员，经常会遇到这样一个场景：在写代码时候，有消息过来，需要去回复；这样切换应用窗口后，不得不反复切换输入法；有时候忘记切换，在输入后才发现，就不会删掉重新切换、在写。这不仅浪费时间，而且消耗精力。倘若能在根据不同应用窗口，自动切换预先设定的输入法，何其妙哉。
+    
+    </summary>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/categories/Toss/"/>
+    
+    
+      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Mac" scheme="https://www.jeffjade.com/tags/Mac/"/>
     
   </entry>
   
@@ -1760,77 +1825,6 @@
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="Hexo" scheme="https://www.jeffjade.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于 Puppeteer 构建简易机器人</title>
-    <link href="https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/"/>
-    <id>https://www.jeffjade.com/2019/06/14/156-puppeteer-robot/</id>
-    <published>2019-06-14T05:14:15.000Z</published>
-    <updated>2019-07-09T15:11:32.667Z</updated>
-    
-    <content type="html"><![CDATA[<p>呼，身处这数字信息化智能时代，即便是个人，也是很有必要利用各种工具，打造属于自己的自动化机器人，以协助完成些精确性事物，使得可以节省更多的时间，来学习或者做更有意义的事情；基于这种想法、以及那越发繁忙的现实，现终于开始尝试；<a href="https://github.com/nicejade/puppeteer-robot" target="_blank" rel="external">Puppeteer Robot</a> 仓库的建立，即为这漫漫长路，所迈出的第一步。此文即对此仓库的背景、目标、使用以及进化历程做下阐述。</p>
-<a id="more"></a>
-<p><img src="https://image.nicelinks.site/puppeteer-robot.jpeg?v1" alt="Puppeteer Robot"></p>
-<h2 id="目标与哲学"><a href="#目标与哲学" class="headerlink" title="目标与哲学"></a>目标与哲学</h2><blockquote>
-<p>身处这数字信息化智能时代，即便是个人，也是很有必要利用各种工具，打造属于自己的自动化机器人，以协助完成些精确性事物，使得可以节省更多的时间，来学习或者做更有意义的事情；基于新学到技能，再反过来改进、完善自动化流程；如此，形成良性循环，坚持往复，从而在此大争之世，获取更多一些竞争力，以期达成过自己想要的生活。此 <a href="https://github.com/nicejade/puppeteer-robot" target="_blank" rel="external">Puppeteer Robot 仓库</a>的建立，就是为此目标而做的初步尝试。</p>
-</blockquote>
-<p>截止目前，它可以完成以下事宜：</p>
-<ul>
-<li>每天指定时间，自动登录<a href="https://hacpai.com/register?r=jeffjade" target="_blank" rel="external">黑客派</a>社区网站，并进行签到；</li>
-</ul>
-<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><p><code>Puppeteer</code> 至少需要 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a> v6.4.0，但下面的示例使用 <code>async</code> / <code>await</code>，它仅在 Node v7.6.0 或更高版本中受支持。</p>
-<h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 🎉 clone the project</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/nicejade/puppeteer-robot.git your-project-name</div><div class="line"><span class="built_in">cd</span> your-project-name</div><div class="line"></div><div class="line"><span class="comment"># ➕ install dependencies &amp; start dev</span></div><div class="line">yarn</div></pre></td></tr></table></figure>
-<p>此外，你需要单独下载  <code>Chromium</code>（国内用户可以在 <a href="https://npm.taobao.org/mirrors/chromium-browser-snapshots/" target="_blank" rel="external">Taobao Mirrors</a> 根据系统按需下载）,并将其放置到项目根目录下即可；当然，你也可以通过修改代码，指定其所在的其他位置。</p>
-<blockquote>
-<p><strong>备注：</strong> <code>Puppeteer</code> 需要用到 <code>Chromium</code>，但，即便处于 Science 上网的姿态， 也会遇到 Chromium 无法成功下载的问题；所以在此项目中，有替换成使用 <a href="https://github.com/GoogleChrome/puppeteer#puppeteer-core" target="_blank" rel="external">puppeteer-core</a> （默认情况下不下载 Chromium，使用时须要确保您安装的 <code>puppeteer-core</code> 版本与您要连接的浏览器兼容）；鉴于此，还是手动下载 <code>Chromium</code>，通过设定 <code>executablePath</code> 来使用。</p>
-</blockquote>
-<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>您需要在 <code>src/config</code> 目录下，根据 <code>secretSample.js</code> 格式，创建 <code>secret.js</code> 文件，并修改其中配置；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn start</div></pre></td></tr></table></figure>
-<h2 id="有用链接"><a href="#有用链接" class="headerlink" title="有用链接"></a>有用链接</h2><ul>
-<li><a href="https://pptr.dev/" target="_blank" rel="external">Headless Chrome Node API</a></li>
-<li><a href="https://github.com/transitive-bullshit/awesome-puppeteer" target="_blank" rel="external">Awesome Puppeteer Curated List</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/17/134-kinds-of-toss-using-puppeteer/">大前端神器安利之 Puppeteer</a></li>
-</ul>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul>
-<li><a href="https://nicelinks.site?utm_source=github.com" target="_blank" rel="external"><strong>倾城之链</strong></a></li>
-<li><a href="https://about.me/nicejade?utm_source=github.com" target="_blank" rel="external">About Me</a></li>
-<li><a href="https://jeffjade.com/nicelinks?utm_source=github.com" target="_blank" rel="external">晚晴幽草轩</a></li>
-<li><a href="https://quickapp.lovejade.cn/?utm_source=github.com" target="_blank" rel="external">静轩之别苑</a></li>
-<li><a href="https://nice.lovejade.cn/?utm_source=github.com" target="_blank" rel="external">静晴轩别苑</a></li>
-<li><a href="https://blog.lovejade.cn/?utm_source=github.com" target="_blank" rel="external">天意人间舫</a></li>
-<li><a href="https://weibo.com/jeffjade?utm_source=github.com" target="_blank" rel="external">新浪微博</a></li>
-<li><a href="https://www.zhihu.com/people/yang-qiong-pu/" target="_blank" rel="external">知乎主页</a></li>
-<li><a href="https://www.jianshu.com/u/9aae3d8f4c3d" target="_blank" rel="external">简书主页</a></li>
-<li><a href="https://segmentfault.com/u/jeffjade" target="_blank" rel="external">SegmentFault</a></li>
-<li><a href="https://twitter.com/nicejadeyang" target="_blank" rel="external">Twitter</a></li>
-<li><a href="https://www.facebook.com/nice.jade.yang" target="_blank" rel="external">Facebook</a></li>
-</ul>
-<h3 id="您可能会感兴趣的文章："><a href="#您可能会感兴趣的文章：" class="headerlink" title="您可能会感兴趣的文章："></a>您可能会感兴趣的文章：</h3><ul>
-<li><a href="https://www.jeffjade.com/2017/12/17/134-kinds-of-toss-using-puppeteer/">大前端神器安利之 Puppeteer</a></li>
-<li><a href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/">Arya - 在线 Markdown 编辑器</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/02/150-prettier-quickapp-plugin/">Prettier 插件为更漂亮快应用代码</a></li>
-<li><a href="https://www.jeffjade.com/2019/01/13/146-awesome-vue-cli3-example/">基于 Vue-Cli3 构建的脚手架模版</a></li>
-<li><a href="https://www.jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/">开箱即用的 Vue Webpack 脚手架模版</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/21/146-awesome-quickapp-resource-tutorial/">快应用开发资源、教程汇聚</a></li>
-<li><a href="https://www.jeffjade.com/2018/11/11/145-quickapp-boilerplate-template/">快应用脚手架，为优雅而生</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2017/09/28/127-nice-front-end-tutorial/">与时俱进版前端资源教程</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      身处这数字信息化智能时代，即便是个人，也是很有必要利用各种工具，打造属于自己的自动化机器人，以协助完成些精确性事物，使得可以节省更多的时间，来学习或者做更有意义的事情；基于新学到技能，再反过来改进、完善自动化流程；如此，形成良性循环，坚持往复，从而在此大争之世，获取更多一些竞争力，以期达成过自己想要的生活。此 Puppeteer Robot 仓库的建立，就是为此目标而做的初步尝试。
-    
-    </summary>
-    
-      <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
-    
-    
-      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
-    
-      <category term="Puppeteer" scheme="https://www.jeffjade.com/tags/Puppeteer/"/>
     
   </entry>
   
