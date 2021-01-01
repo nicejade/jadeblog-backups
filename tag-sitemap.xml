@@ -408,20 +408,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Tools/</loc>
-        <lastmod>2020-12-07T16:04:25.149Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/Toss/</loc>
-        <lastmod>2020-12-07T16:04:25.149Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Share/</loc>
         <lastmod>2020-12-07T16:04:25.149Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -431,6 +417,27 @@
     <url>
         <loc>https://www.jeffjade.com/tags/Mac/</loc>
         <lastmod>2020-12-07T16:04:25.149Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Tools/</loc>
+        <lastmod>2021-01-01T15:59:07.899Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Toss/</loc>
+        <lastmod>2021-01-01T15:59:07.899Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Python/</loc>
+        <lastmod>2021-01-01T15:59:07.899Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
