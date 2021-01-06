@@ -146,7 +146,7 @@
 <p><strong>toString</strong>:把数组转换为字符串，并返回结果。</p>
 <p><strong>lastIndexOf</strong>：返回在数组中搜索到的与给定参数相等的元素的最后（最大）索引。</p>
 <p><strong>toSource()</strong>: 返回一个字符串,代表该数组的源代码.<font color="red">该特性是非标准的，请尽量不要在生产环境中使用它！</font> <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource" target="_blank" rel="external">Array.prototype.toSource()</a></p>
-<h3 id="9-求两个数组的交集、差集和并集？"><a href="#9-求两个数组的交集、差集和并集？" class="headerlink" title="9. 求两个数组的交集、差集和并集？"></a>9. <strong>求两个数组的交集、差集和并集？</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 求交集（a ∩ b）两种方法</span></div><div class="line"><span class="keyword">let</span> intersection = a.filter(<span class="function"><span class="params">v</span> =&gt;</span> b.includes(v))</div><div class="line"></div><div class="line"><span class="keyword">let</span> intersectionSet = <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>([...a].filter(<span class="function"><span class="params">x</span> =&gt;</span> b.includes(x))))</div><div class="line"></div><div class="line"><span class="comment">// 求差集（a - b）两种方法</span></div><div class="line"><span class="keyword">let</span> difference = a.concat(b).filter(<span class="function"><span class="params">v</span> =&gt;</span> !a.includes(v) || !b.includes(v))</div><div class="line"></div><div class="line"><span class="keyword">let</span> differenceSet = <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>([...a].filter(<span class="function"><span class="params">x</span> =&gt;</span> !b.includes(x))))</div><div class="line"></div><div class="line"><span class="comment">// 求并集（a u b)两种方法</span></div><div class="line"><span class="keyword">let</span> union ＝ a.concat(b).filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> array.indexOf(item) === index;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">let</span> unionSet = <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>([...a, ...b]))</div></pre></td></tr></table></figure>
+<h3 id="9-求两个数组的交集、差集和并集？"><a href="#9-求两个数组的交集、差集和并集？" class="headerlink" title="9. 求两个数组的交集、差集和并集？"></a>9. <strong>求两个数组的交集、差集和并集？</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">// 求交集（a ∩ b）两种方法</div><div class="line">let intersection = a.filter(v =&gt; b.includes(v))</div><div class="line"></div><div class="line">let intersectionSet = Array.from(new Set([...a].filter(x =&gt; b.includes(x))))</div><div class="line"></div><div class="line">// 求差集（a - b）两种方法</div><div class="line">let difference = a.concat(b).filter(v =&gt; !a.includes(v) || !b.includes(v))</div><div class="line"></div><div class="line">let differenceSet = Array.from(new Set([...a].filter(x =&gt; !b.includes(x))))</div><div class="line"></div><div class="line">// 求并集（a u b)两种方法</div><div class="line">let union ＝ a.concat(b).filter(function(item, index, array) &#123;</div><div class="line">  return array.indexOf(item) === index;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">let unionSet = Array.from(new Set([...a, ...b]))</div></pre></td></tr></table></figure>
 <h2 id="二、数组对象的3个属性"><a href="#二、数组对象的3个属性" class="headerlink" title="二、数组对象的3个属性"></a><strong>二、数组对象的3个属性</strong></h2><h3 id="1-length属性"><a href="#1-length属性" class="headerlink" title="1. length属性"></a>1. <strong>length属性</strong></h3><p>Length属性表示数组的长度，即其中元素的个数。因为数组的索引总是由0开始，所以一个数组的上下限分别是：0和length-1。和其他大多数语言不同的是，JavaScript数组的length属性是可变的，这一点需要特别注意。当length属性被设置得更大时，整个数组的状态事实上不会发生变化，仅仅是length属性变大；当length属性被设置得比原来小时，则原先数组中索引大于或等于length的元素的值全部被丢失。下面是演示改变length属性的例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">12</span>,<span class="number">23</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">25</span>,<span class="number">98</span>,<span class="number">76</span>,<span class="number">54</span>,<span class="number">56</span>,<span class="number">76</span>];<span class="comment">//定义了一个包含10个数字的数组</span></div><div class="line">alert(arr.length); <span class="comment">//显示数组的长度10</span></div><div class="line"></div><div class="line">arr.length=<span class="number">12</span>; <span class="comment">//增大数组的长度</span></div><div class="line">alert(arr.length); <span class="comment">//显示数组的长度已经变为12</span></div><div class="line">alert(arr[<span class="number">8</span>]); <span class="comment">//显示第9个元素的值，为56</span></div><div class="line"></div><div class="line">arr.length=<span class="number">5</span>; <span class="comment">//将数组的长度减少到5，索引等于或超过5的元素被丢弃</span></div><div class="line">alert(arr[<span class="number">8</span>]); <span class="comment">//显示第9个元素已经变为"undefined"</span></div><div class="line"></div><div class="line">arr.length=<span class="number">10</span>; <span class="comment">//将数组长度恢复为10</span></div><div class="line">alert(arr[<span class="number">8</span>]); <span class="comment">//虽然长度被恢复为10，但第9个元素却无法收回，显示"undefined"</span></div></pre></td></tr></table></figure></p>
 <p>由上面的代码我们可以清楚的看到length属性的性质。但length对象不仅可以显式的设置，它也有可能被隐式修改。JavaScript中可以使用一个未声明过的变量，同样，也可以使用一个未定义的数组元素（指索引超过或等于length的元素），这时，length属性的值将被设置为所使用元素索引的值加1。例如下面的代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">12</span>,<span class="number">23</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">25</span>,<span class="number">98</span>,<span class="number">76</span>,<span class="number">54</span>,<span class="number">56</span>,<span class="number">76</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.length);  <span class="comment">// 10</span></div><div class="line"></div><div class="line">arr[<span class="number">15</span>] = <span class="number">34</span>;</div><div class="line"><span class="built_in">console</span>.log(arr.length);  <span class="comment">//16</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(arr[<span class="number">10</span>]);     <span class="comment">//undefine</span></div><div class="line"><span class="built_in">console</span>.log(arr.toString())</div><div class="line"><span class="comment">//12,23,5,3,25,98,76,54,56,76,,,,,,34</span></div></pre></td></tr></table></figure></p>
 <p>代码中同样是先定义了一个包含10个数字的数组，通过alert语句可以看出其长度为10。随后使用了索引为15的元素，将其赋值为15，即 arr[15]=34，这时再用alert语句输出数组的长度，得到的是16。无论如何，对于习惯于强类型编程的开发人员来说，这是一个很令人惊讶的特性。事实上，使用new Array()形式创建的数组，其初始长度就是为0，正是对其中未定义元素的操作，才使数组的长度发生变化。</p>
@@ -464,7 +464,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -531,7 +531,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -567,15 +567,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -587,19 +587,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -611,7 +607,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -619,19 +615,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -643,15 +631,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -659,7 +659,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -874,9 +874,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

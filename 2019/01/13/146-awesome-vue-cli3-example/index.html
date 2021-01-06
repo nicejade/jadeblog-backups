@@ -179,12 +179,12 @@
 <h3 id="即刻创建原型"><a href="#即刻创建原型" class="headerlink" title="即刻创建原型"></a>即刻创建原型</h3><p><strong>Vue-Cli3</strong>：用单个 Vue 文件即刻实践新的灵感。Vue CLI3 带有疯狂的新功能。 当您想要使用组件时，您可以创建单个文件组件（.vue 文件），而不是创建新项目，并通过运行<code>vue serve MyAwesomeComponent.vue</code>在浏览器中提供它。您甚至可以构建组件并在需要时进行部署。</p>
 <h3 id="面向未来"><a href="#面向未来" class="headerlink" title="面向未来"></a>面向未来</h3><p><strong>Vue-Cli3</strong>：为现代浏览器轻松产出原生的 ES2015 代码，或将你的 Vue 组件构建为原生的 Web Components 组件。</p>
 <h4 id="vue-cli-service-serve"><a href="#vue-cli-service-serve" class="headerlink" title="vue-cli-service serve"></a>vue-cli-service serve</h4><p>用法：vue-cli-service serve [options] [entry] 选项：</p>
-<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">-open    在服务器启动时打开浏览器</span></div><div class="line">-<span class="ruby">-copy    在服务器启动时将 URL 复制到剪切版</span></div><div class="line">-<span class="ruby">-mode    指定环境模式 (默认值：development)</span></div><div class="line">-<span class="ruby">-host    指定 host (默认值：<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>)</span></div><div class="line">-<span class="ruby">-port    指定 port (默认值：<span class="number">8080</span>)</span></div><div class="line">-<span class="ruby">-https   使用 https (默认值：<span class="literal">false</span>)</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">--open    在服务器启动时打开浏览器</div><div class="line">--copy    在服务器启动时将 URL 复制到剪切版</div><div class="line">--mode    指定环境模式 (默认值：development)</div><div class="line">--host    指定 host (默认值：0.0.0.0)</div><div class="line">--port    指定 port (默认值：8080)</div><div class="line">--https   使用 https (默认值：false)</div></pre></td></tr></table></figure>
 <h4 id="vue-cli-service-serve-1"><a href="#vue-cli-service-serve-1" class="headerlink" title="vue-cli-service serve"></a>vue-cli-service serve</h4><p>命令会启动一个开发服务器 (基于<a href="https://github.com/webpack/webpack-dev-server" target="_blank" rel="external">webpack-dev-server</a>) 并附带开箱即用的模块热重载 (Hot-Module-Replacement)。</p>
 <p>除了通过命令行参数，你也可以使用 vue.config.js 里的<a href="https://cli.vuejs.org/zh/config/#devserver" target="_blank" rel="external">devServer</a>字段配置开发服务器。</p>
 <h4 id="vue-cli-service-build"><a href="#vue-cli-service-build" class="headerlink" title="vue-cli-service build"></a>vue-cli-service build</h4><p>用法：vue-cli-service build [options] [entry|pattern]</p>
 <p>选项：</p>
-<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">-mode        指定环境模式 (默认值：production)</span></div><div class="line">-<span class="ruby">-dest        指定输出目录 (默认值：dist)</span></div><div class="line">-<span class="ruby">-modern      面向现代浏览器不带自动回退地构建应用</span></div><div class="line">-<span class="ruby">-target      app <span class="params">| lib |</span> wc <span class="params">| wc-async (默认值：app)</span></span></div><div class="line">-<span class="ruby"><span class="params">-name        库或 Web Components 模式下的名字 (默认值：package.json 中的 "name" 字段或入口文件名)</span></span></div><div class="line">-<span class="ruby"><span class="params">-no-clean    在构建项目之前不清除目标目录</span></span></div><div class="line">-<span class="ruby"><span class="params">-report      生成 report.html 以帮助分析包内容</span></span></div><div class="line">-<span class="ruby"><span class="params">-report-json 生成 report.json 以帮助分析包内容</span></span></div><div class="line">-<span class="ruby"><span class="params">-watch       监听文件变化</span></span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">--mode        指定环境模式 (默认值：production)</div><div class="line">--dest        指定输出目录 (默认值：dist)</div><div class="line">--modern      面向现代浏览器不带自动回退地构建应用</div><div class="line">--target      app | lib | wc | wc-async (默认值：app)</div><div class="line">--name        库或 Web Components 模式下的名字 (默认值：package.json 中的 &quot;name&quot; 字段或入口文件名)</div><div class="line">--no-clean    在构建项目之前不清除目标目录</div><div class="line">--report      生成 report.html 以帮助分析包内容</div><div class="line">--report-json 生成 report.json 以帮助分析包内容</div><div class="line">--watch       监听文件变化</div></pre></td></tr></table></figure>
 <p><code>vue-cli-service build</code>会在<em>dist/</em>目录产生一个可用于生产环境的包，带有 JS/CSS/HTML 的压缩，和为更好的缓存而做的自动的 vendor chunk splitting。它的 chunk manifest 会内联在 HTML 里。</p>
 <p>这里还有一些有用的命令参数：</p>
 <ul>
@@ -267,7 +267,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Vue/">Vue</a><a href="/tags/Toss/">Toss</a><a href="/tags/Share/">Share</a>
+  <span></span> <a href="/tags/Share/">Share</a><a href="/tags/Vue/">Vue</a><a href="/tags/Toss/">Toss</a>
   </div>
 
 </div>
@@ -427,7 +427,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -494,7 +494,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -530,15 +530,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -550,19 +550,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -574,7 +570,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -582,19 +578,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -606,15 +594,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -622,7 +622,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -837,9 +837,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

@@ -139,9 +139,9 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">data-source</span>=<span class="string">"string"</span> <span class="attr">data-name</span>=<span class="string">"conf.titleText"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">class</span>=<span class="string">"call-toast"</span> <span class="attr">data-source</span>=<span class="string">"string"</span> <span class="attr">data-name</span>=<span class="string">"conf.conf.callToastText"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">style</span>=<span class="string">"display:none"</span>&gt;</span></div><div class="line">truetrue<span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"act-rule"</span> <span class="attr">data-source</span>=<span class="string">"list"</span> <span class="attr">data-name</span>=<span class="string">"conf.actRule"</span>&gt;</span><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line">true<span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>也是在学习了下这套机制后，方晓得这是团队那时自定义的一套，方式大抵如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> system = &#123;</div><div class="line">true<span class="attr">addData</span> : <span class="function"><span class="keyword">function</span>(<span class="params">setting</span>)</span>&#123;</div><div class="line">truetrue$(<span class="string">"[data-name]"</span>).html(<span class="string">""</span>);</div><div class="line"></div><div class="line">truetrue$(<span class="string">"[data-source='string']"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">truetruetrue<span class="keyword">var</span> key = $(<span class="keyword">this</span>).data(<span class="string">"name"</span>);</div><div class="line">truetruetrue<span class="keyword">var</span> type = $(<span class="keyword">this</span>).data(<span class="string">"source"</span>);</div><div class="line">truetruetrue$(<span class="keyword">this</span>).html(<span class="built_in">eval</span>(<span class="string">"setting."</span>+key));</div><div class="line">truetrue&#125;);</div><div class="line"></div><div class="line">truetrue$(<span class="string">"[data-source='img']"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">truetruetrue<span class="keyword">var</span> key = $(<span class="keyword">this</span>).data(<span class="string">"name"</span>);</div><div class="line">truetruetrue<span class="keyword">var</span> type = $(<span class="keyword">this</span>).data(<span class="string">"source"</span>);</div><div class="line">truetruetrue$(<span class="keyword">this</span>).attr(<span class="string">"src"</span>,vars.cdn+<span class="built_in">eval</span>(<span class="string">"setting."</span>+key));</div><div class="line">truetrue&#125;);</div><div class="line">true&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>在页面请求得数据后，调用自定义方法像这样：system.addData(data); 在涉及到时间响应时候，现在看来，那时采取的办法也挺原始了：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'.call-toast'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="comment">// do call toast &#125;</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&apos;.call-toast&apos;).click(function()&#123;</div><div class="line">  // do call toast &#125;</div><div class="line">)</div></pre></td></tr></table></figure>
 <p>话说这 <strong>jQuery</strong> 的运用，确实在那时给带来N多好处；同时，也引来了不少问题：在不怎么熟悉它的情况就能用它，却因此也很容易造成问题；依稀记得那时被这样的写法折腾挺惨；为此有熟悉下 <strong>jQuery</strong>， 同时也留下一篇学习笔记：<a href="https://www.jeffjade.com/2015/08/03/2015-08-03-javascript-this/">JavaScript 之 this 详解</a>。后来也才学会需当这样去运用：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'.call-toast'</span>).on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">// do call toast &#125;)</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;.call-toast&apos;).on(&apos;click&apos;,function()&#123; // do call toast &#125;)</div></pre></td></tr></table></figure>
 <p>在这个阶段中，前后端虽然分离，却未彻底；前端页面布局和逻辑还是写在<code>php</code>文件中，只样式和资源拿取出来，部署于cdn。还有一事记忆犹新的是：工作机制里，做好需求后要先行在内网测试，okay后提交svn，再之后发布线上，如此一直延续至今。这事儿吧，一经谈起给人感觉像是在吐槽or抱怨，其实不然，只是不怎么情愿浪费这些许不必要时间而已。就拿这本地文件同步 ftp 来说吧，当时被教化的是借助 <strong>Xftp 4</strong>。哈哈，每做改动，就手动同步 ftp，我可做不来：手会被点的痛不说，时间会被浪费的；故此，都是用<strong>Xftp 4</strong>打开线上文件写，要发布时才同步到本地。</p>
 <h3 id="阶段二：jQuery-Backbone-Underscore"><a href="#阶段二：jQuery-Backbone-Underscore" class="headerlink" title="阶段二：jQuery+Backbone+Underscore"></a><strong>阶段二：jQuery+Backbone+Underscore</strong></h3><p>大概在一两个月后，各平台才陆续迁移至新的机制： jQuery+Backbone+Underscore；现在看来，<strong>选择真是很重要</strong>；那时如何没有采用<strong>Angular</strong>  <strong>React</strong> 已不得而知（<strong>Vue</strong> 想必那时还没今天这么火,可参见<a href="http://noeticforce.com/best-Javascript-frameworks-for-single-page-modern-web-applications" target="_blank" rel="external">JavaScript Frameworks: The Best 10 for Modern Web Apps</a>)； 这一用就用到了如今；事情做起来让人觉得容易了，往往导致这项事物难以进步；现在看来<strong>Backbone</strong>的使用，即是如此；以<strong>Backbone</strong> <strong>Underscore</strong> 来实现工作所需，其模式如下：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">conf.titleText</span> %&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">class</span>=<span class="string">"call-toast"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">conf.callToastText</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">style</span>=<span class="string">"display:none"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"act-rule"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%_.each(conf.actRule</span> , <span class="attr">function</span>(<span class="attr">ruleDesc</span> ,<span class="attr">index</span>)&#123;%&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">ruleDesc</span> %&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">                <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line">true<span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -149,7 +149,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mainView = Backbone.View.extend(&#123;</div><div class="line">true, <span class="attr">initialize</span>: <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</div><div class="line">truetrue<span class="comment">// this.listenTo(this.model,"change",this.render);</span></div><div class="line">truetrue<span class="keyword">this</span>.render();</div><div class="line">true&#125;		</div><div class="line">true, <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">truetrueApp.V.prototype.render.apply(<span class="keyword">this</span>);</div><div class="line">truetrue<span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">true&#125;</div><div class="line">true, <span class="attr">events</span>:   &#123;</div><div class="line">true    <span class="string">'click  .call-toast'</span>:<span class="string">'onCallToast'</span>,</div><div class="line">true&#125;</div><div class="line">true, <span class="attr">onCallToast</span> : <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">truetrue<span class="comment">// do call toast</span></div><div class="line">true&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>在这个阶段，比于先前，从开发效率角度来看，并未有多少提高；不过，工具上摒弃了 <strong>Xftp 4</strong>,<strong>WinScp</strong>等，采用<code>Sublime</code>的<strong>sftp</strong> 插件，虽然这插件老弹框，却也好用蛮多，有兴高采烈地将其记载于 <a href="https://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/">如何优雅地使用Sublime Text</a>；人谁想折腾呢？都是对现况不舒服而做的反抗啊。</p>
 <h3 id="阶段三：jQuery-Backbone-Underscore-RequireJs"><a href="#阶段三：jQuery-Backbone-Underscore-RequireJs" class="headerlink" title="阶段三：jQuery+Backbone+Underscore+RequireJs"></a><strong>阶段三：jQuery+Backbone+Underscore+RequireJs</strong></h3><p>在这个阶段有引入RequireJs，也是经历近两个多月才陆续迁移的；本身这倒可不列为一阶段，不过前端项目开发结构大改：前端后完全分离；布局，逻辑，样式首次完全独立。其模式比于上一个阶段，主要变化如下：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">define(<span class="string">'text!xyz/default.tpl'</span>,[],<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="string">'Html template String'</span>;&#125;);</div><div class="line">define(<span class="string">'xyz/main'</span>,[<span class="string">"tool"</span>,<span class="string">"app"</span>, <span class="string">"text!xyz/default.tpl"</span>],<span class="function"><span class="keyword">function</span><span class="params">(Tool, App, tpl)</span></span>&#123;</div><div class="line">    <span class="keyword">var</span> mainView = App.V.extend(&#123;</div><div class="line">    	, initialize: <span class="function"><span class="keyword">function</span><span class="params">(options)</span></span>&#123;</div><div class="line">    		<span class="comment">// this.listenTo(this.model,"change",this.render);</span></div><div class="line">    		<span class="keyword">this</span>.render();</div><div class="line">    	&#125;, render: <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    		App.V.prototype.render.apply(<span class="keyword">this</span>);</div><div class="line">    		<span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">    	&#125;, events:   &#123;</div><div class="line">    	    <span class="string">'click  .call-toast'</span>:<span class="string">'onCallToast'</span>,</div><div class="line">    	&#125;, onCallToast : <span class="function"><span class="keyword">function</span><span class="params">(e)</span></span>&#123;</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">define(&apos;text!xyz/default.tpl&apos;,[],function () &#123; return &apos;Html template String&apos;;&#125;);</div><div class="line">define(&apos;xyz/main&apos;,[&quot;tool&quot;,&quot;app&quot;, &quot;text!xyz/default.tpl&quot;],function(Tool, App, tpl)&#123;</div><div class="line">    var mainView = App.V.extend(&#123;</div><div class="line">    	, initialize: function(options)&#123;</div><div class="line">    		// this.listenTo(this.model,&quot;change&quot;,this.render);</div><div class="line">    		this.render();</div><div class="line">    	&#125;, render: function()&#123;</div><div class="line">    		App.V.prototype.render.apply(this);</div><div class="line">    		return this;</div><div class="line">    	&#125;, events:   &#123;</div><div class="line">    	    &apos;click  .call-toast&apos;:&apos;onCallToast&apos;,</div><div class="line">    	&#125;, onCallToast : function(e)&#123;</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>可喜的是，项目终于开启了<strong>模块化</strong>的进程；可悲的是，即便如此然并卵；坦率来讲，这个阶段，并为此感到兴奋；因为模块化的引进，并未给开发效率带来任何提升；反而下降不少：一是，前后端完全分离，前端js，样式，资源全部署cdn，然而并未有很好cdn缓存清理机制，导致发布后有问题，难以快速有效更新(蛮久之后才出一折衷方案)。二，布局写成模板(default.tpl)，没当要发布，因线上存在的跨域问题，需当模板文件压缩成string，以如下模式注入mian.js:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">define(<span class="string">'text!xyz/default.tpl'</span>,[],<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="string">'html template content string'</span>;&#125;);</div></pre></td></tr></table></figure>
 <p>也是后来很久才知道，require.js提供了对应的打包方式；可是那时并不知道，在几次发布十分忘记合并（合并也不容易），造成十二分不爽后，才去研究下了，此时得知<strong>Gulp</strong>；为此学会gulp之后，有改善了整个流程：以<code>gulp-tlp2mod</code>来将tpl转化为js并借助<code>gulp-concat</code>进行合并打包；如此Sublime的sftp插件就显得不能很好作用，因此也找到<code>gulp-sftp</code>予以替代；其他如代码检测，压缩；图片一键压缩等也是在这时期优化的。</p>
@@ -159,7 +159,7 @@
 <p>如若采用 <code>jade</code> 像写 <code>python</code> 一般写html模板，可有感觉一股简洁美铺面开来？示例如下：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">lang</span>=<span class="string">"jade"</span>&gt;</span></div><div class="line">    div.content</div><div class="line">        section</div><div class="line">            p &#123;&#123; conf.titleText &#125;&#125;</div><div class="line">            a(href="javascript:;" class="call-toast" @click="onCallToast") &#123;&#123; conf.callToastText &#125;&#125;</div><div class="line">        section(style="display:none")</div><div class="line">            table(class="act-rule" v-for='ruleDesc in conf.actRule')</div><div class="line">                tr  </div><div class="line">                    td &#123;&#123; ruleDesc &#125;&#125;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>虽然 布局，逻辑，样式又回归至原始阶段，然而却是全新的概念，这般描述网上充盈，就不多赘述；因为组件化的引入，上述示例即可改造成如下模样：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&lt;template lang=<span class="string">"jade"</span>&gt;</div><div class="line">    div.content</div><div class="line">        section</div><div class="line">            p &#123;&#123; conf.titleText &#125;&#125;</div><div class="line">            a(href=<span class="string">"#"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"call-toast"</span> @click=<span class="string">"onCallToast"</span>) &#123;&#123; conf.callToastText &#125;&#125;</div><div class="line">            act-rule-copm</div><div class="line"></div><div class="line">&lt;template&gt;</div><div class="line"></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></div><div class="line"><span class="keyword">import</span> ActTools <span class="keyword">from</span>  <span class="string">"ActTools"</span>;</div><div class="line"><span class="keyword">import</span> ActRuleComp <span class="keyword">from</span> <span class="string">"ActRuleComp"</span>;<span class="comment">//这里路径是利用webpack做了别名控制的；</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">    data () &#123;</div><div class="line">        <span class="keyword">return</span>&#123;</div><div class="line">            <span class="attr">conf</span>: &#123;&#125;,</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">methods</span>: &#123;</div><div class="line">        <span class="attr">callToast</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">// do call toast</span></div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        <span class="comment">/*-----------------Callback Function--------------------Private Func*/</span></div><div class="line">        onCallToast: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">this</span>.callToast();</div><div class="line">        &#125;</div><div class="line">    &#125;，</div><div class="line">    components: &#123;</div><div class="line">        ActRuleComp,</div><div class="line">    &#125;,</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&lt;template lang=&quot;jade&quot;&gt;</div><div class="line">    div.content</div><div class="line">        section</div><div class="line">            p &#123;&#123; conf.titleText &#125;&#125;</div><div class="line">            a(href=&quot;#&quot; class=&quot;call-toast&quot; @click=&quot;onCallToast&quot;) &#123;&#123; conf.callToastText &#125;&#125;</div><div class="line">            act-rule-copm</div><div class="line"></div><div class="line">&lt;template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">import ActTools from  &quot;ActTools&quot;;</div><div class="line">import ActRuleComp from &quot;ActRuleComp&quot;;//这里路径是利用webpack做了别名控制的；</div><div class="line"></div><div class="line">export default &#123;</div><div class="line">    data () &#123;</div><div class="line">        return&#123;</div><div class="line">            conf: &#123;&#125;,</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    methods: &#123;</div><div class="line">        callToast: function()&#123;</div><div class="line">            // do call toast</div><div class="line">        &#125;,</div><div class="line"></div><div class="line">        /*-----------------Callback Function--------------------Private Func*/</div><div class="line">        onCallToast: function()&#123;</div><div class="line">            this.callToast();</div><div class="line">        &#125;</div><div class="line">    &#125;，</div><div class="line">    components: &#123;</div><div class="line">        ActRuleComp,</div><div class="line">    &#125;,</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>一经这般，公用代码得以提取为组件，在各大纷繁的应用中得以轻易复用；这样虽然对于大型Web应用开发，虽然裨益不太大，但对于千百相类似SPA页面的缔造，意义重大。再者：借助 <strong>jade</strong> 模板可以清晰而简洁；借助 <strong>ec6</strong>，更方便书写js，借助 <strong>webpack+gulp</strong>，U Can Do what  U Want To Do；如此一来，运行效率，产品体验，开发效率各大方面均有大幅度提升，其所怀悦，幸甚至哉。</p>
 <p>前端框架更迭如此迅速，即便当然模式已然觉得挺okay，也不当停滞不前；想来日后撸起前端来，将更为便捷；即便就目前状态而言，很多已经存在妙处，还当去学习&amp;使用：譬如jQuery的替代；虚拟Dom的使用(前不久发布的Vue2.0已添此法)等等；故而先行在文章命名后有加<code>（其一）</code>，至于<code>（其二）</code>想必不就得将来即会将其唠叨来，Fighting。</p>
 <p>以上，于深圳.南山 16-05-14 晴</p>
@@ -226,7 +226,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Vue/">Vue</a><a href="/tags/Webpack/">Webpack</a><a href="/tags/JavaScript/">JavaScript</a><a href="/tags/Gulp/">Gulp</a>
+  <span></span> <a href="/tags/JavaScript/">JavaScript</a><a href="/tags/Vue/">Vue</a><a href="/tags/Gulp/">Gulp</a><a href="/tags/Webpack/">Webpack</a>
   </div>
 
 </div>
@@ -386,7 +386,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -453,7 +453,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -489,15 +489,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -509,19 +509,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -533,7 +529,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -541,19 +537,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -565,15 +553,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -581,7 +581,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -796,9 +796,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

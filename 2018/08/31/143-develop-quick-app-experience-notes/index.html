@@ -187,7 +187,7 @@
 <li>鉴于<code>「快应用」</code>基于前端技术栈来开发，因此需要安装 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a> (&gt;= 6.0)；<a href="https://yarnpkg.com/" target="_blank" rel="external">yarn</a> （推荐使用）。</li>
 <li>安装 <a href="https://www.npmjs.com/package/hap-toolkit" target="_blank" rel="external">hap-toolkit</a> ；它是针对<code>「快应用」</code>衍生出的开发者工具；</li>
 </ul>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yarn <span class="keyword">global</span> <span class="keyword">add</span> hap-toolkit</div><div class="line"><span class="comment">// 检测是否成功安装 hap-toolkit</span></div><div class="line">hap -V</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yarn global add hap-toolkit</div><div class="line">// 检测是否成功安装 hap-toolkit</div><div class="line">hap -V</div></pre></td></tr></table></figure>
 <ul>
 <li>手机安装<a href="https://www.quickapp.cn/docCenter/post/69" target="_blank" rel="external">「快应用」调试器</a> ── 一个 <code>Android</code> 应用程序，它可以连接到手机系统内的快应用执行环境，包含<code>扫码安装</code>、<code>本地安装</code>、<code>在线更新</code>、<code>开始调试</code>、等功能；</li>
 </ul>
@@ -200,11 +200,11 @@
 </blockquote>
 <h3 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h3><p>在「快应用」中，对<a href="https://doc.quickapp.cn/tutorial/getting-started/code-edit-conf.html" target="_blank" rel="external">代码编辑配置</a>做了说明；你可以使用 <code>VsCode</code>、<code>Sublime Text</code>、<code>WebStorm</code> 等工具来开发。鉴于官方针对 <code>VsCode</code> 推出了 <a href="https://marketplace.visualstudio.com/items?itemName=hap.Hap" target="_blank" rel="external">Hap Extension</a> 扩展，这里推荐使用 <a href="https://code.visualstudio.com/Download" target="_blank" rel="external">VsCode</a> 来编写快应用代码（据悉，专门用于开发「快应用」的编辑器，尚在开发中 18-08-15）。</p>
 <h3 id="开发调试"><a href="#开发调试" class="headerlink" title="开发调试"></a>开发调试</h3><p>在开发文档<a href="https://doc.quickapp.cn/tools/debugging-tools.html" target="_blank" rel="external">调试工具</a>一节，对此有详细说明；从一般性开发角度总结而言，只需运行以下两个命令: <code>npm run server</code> 和 <code>npm run watch</code>；前者会在终端会输出一个二维码，用手机上启动快应用调试器，点击<code>扫码安装</code>扫描，即可下载安装 <code>apk</code> 包，并运行之；而后者将会启动文件监视器，每次修改工程文件时，会自动编译并在手机端刷新，速度蛮快；至于日志查看，可利用 devtools 调试界面 console 输出，也可利用 <code>adb</code> 工具，在终端进行查看：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb logcat <span class="_">-s</span> JsConsole</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb logcat -s JsConsole</div></pre></td></tr></table></figure>
 <h2 id="快应用示例"><a href="#快应用示例" class="headerlink" title="快应用示例"></a>快应用示例</h2><p>在安装 <code>Toolkit</code> 工具后，可通过全局 <code>hap</code> 命令创建一个项目模板，如下所示：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hap init <span class="tag">&lt;<span class="name">YourProjectName</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hap init &lt;YourProjectName&gt;</div></pre></td></tr></table></figure>
 <p>鉴于其内置的 Demo 项目示例，尚处于入门级项目设定(@18-08)，不便于用户着手开发，且不利于高效编写、维护；因此，有将编写的快应用 <a href="https://github.com/nicejade/nicelinks-quick-app" target="_blank" rel="external">nicelinks-quick-app</a> 开源，借此以探索新型应用设计；此外，也是在探索如何构建优质<code>快应用</code>，希望可以在此事儿上提供些参考。其代码组织结构如下：</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">├── sign                <span class="comment"># 存储 rpk 包签名模块;</span></div><div class="line">│   ├── <span class="built_in">debug</span>           <span class="comment"># 调试环境证书/私钥文件</span></div><div class="line">│   └── release         <span class="comment"># 正式环境证书/私钥文件</span></div><div class="line">└── src</div><div class="line">│   ├── assets          <span class="comment"># 公用的资源(Images/Styles/字体...)</span></div><div class="line">│   │   ├──images       <span class="comment"># 存储 png/jpg/svg 等公共图片资源</span></div><div class="line">│   │   └──styles       <span class="comment"># 存放 less/css/sass 等公共样式资源</span></div><div class="line">│   ├── helper          <span class="comment"># 项目自定义辅助各类工具</span></div><div class="line">│   │   ├──apis         <span class="comment"># 存储与后台请求接口相关(已封装好)</span></div><div class="line">│   │   ├──ajax.<span class="keyword">js </span>     <span class="comment"># 对系统提供的 fetch api 进行链式封装</span></div><div class="line">│   │   └──util.<span class="keyword">js </span>     <span class="comment"># 存放项目所需公共工具类方法</span></div><div class="line">│   ├── pages           <span class="comment"># 统一存放项目页面级代码</span></div><div class="line">│   ├── app.ux          <span class="comment"># 应用程序代码的人口文件</span></div><div class="line">│   └── manifest.<span class="keyword">json </span>  <span class="comment"># 配置应用基本信息</span></div><div class="line">└── package.<span class="keyword">json </span>       <span class="comment"># 定义项目需要的各种模块及配置信息</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">├── sign                # 存储 rpk 包签名模块;</div><div class="line">│   ├── debug           # 调试环境证书/私钥文件</div><div class="line">│   └── release         # 正式环境证书/私钥文件</div><div class="line">└── src</div><div class="line">│   ├── assets          # 公用的资源(Images/Styles/字体...)</div><div class="line">│   │   ├──images       # 存储 png/jpg/svg 等公共图片资源</div><div class="line">│   │   └──styles       # 存放 less/css/sass 等公共样式资源</div><div class="line">│   ├── helper          # 项目自定义辅助各类工具</div><div class="line">│   │   ├──apis         # 存储与后台请求接口相关(已封装好)</div><div class="line">│   │   ├──ajax.js      # 对系统提供的 fetch api 进行链式封装</div><div class="line">│   │   └──util.js      # 存放项目所需公共工具类方法</div><div class="line">│   ├── pages           # 统一存放项目页面级代码</div><div class="line">│   ├── app.ux          # 应用程序代码的人口文件</div><div class="line">│   └── manifest.json   # 配置应用基本信息</div><div class="line">└── package.json        # 定义项目需要的各种模块及配置信息</div></pre></td></tr></table></figure>
 <p>有必要谈及的是，此项目秉承在<a href="https://nice.lovejade.cn/zh/article/vue-webpack-boilerplate-template.html" target="_blank" rel="external">高效开发 Web 单页应用解决方案</a>中所传递的理念：为<strong>高效开发</strong>而设计；相比于其内置简陋而凌乱的 Demo，这份脚手架做了以下诸多改进：</p>
 <ul>
 <li>✔️ <strong>对项目结构进行优化</strong>；如上组织结构所示，将各资源模块，更专业的分门别类，使之可以便捷的去编写、维护、查找，同时也是基于前端开发既定共识去设计，更容易为初接触者所理解 &amp; 上手；</li>
@@ -476,7 +476,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -543,7 +543,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -579,15 +579,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -599,19 +599,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -623,7 +619,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -631,19 +627,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -655,15 +643,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -671,7 +671,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -886,9 +886,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

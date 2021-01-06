@@ -164,9 +164,9 @@
 <p>运用的话，只需要<code>rake new</code>开启命令，按照其提示的一步步输入：title categories tags keywords description 等</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">➜  nicejade.github.io git:(master) ✗ rake new</div><div class="line">Input File Path(book/life/resource/tech/tool,default _posts Root)：</div><div class="line">life</div><div class="line">Input File Name(<span class="keyword">for</span> Url)：</div><div class="line">the pleasure of thinking</div><div class="line">Input Article Title(<span class="keyword">for</span> Article)：</div><div class="line">思维的的乐趣</div><div class="line">Input Article Categories(工具｜资源｜生活｜技术｜读书 Separated By Spaces)：</div><div class="line">生活</div><div class="line">Input Article Tags(Separated By ,)</div><div class="line">Thinking,Essay</div><div class="line">Input Article Keywords(Separated By ,)</div><div class="line">思维的乐趣</div><div class="line">Input Article Description(Article Desc)：</div><div class="line">王小波散文随笔：思维的录乐趣</div></pre></td></tr></table></figure>
 <p><strong>Rake</strong>即可帮着在 <code>_posts/life</code>目录下创建命名为“2016-03-26-the-pleasure-of-thinking.md”的文件，并根据所输入的生成以下内容：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">layout:</span> post</div><div class="line"><span class="attr">title:</span> 思维的乐趣</div><div class="line"><span class="attr">date:</span> <span class="number">2016</span><span class="bullet">-03</span><span class="bullet">-26</span> <span class="number">00</span>:<span class="number">22</span>:<span class="number">39</span> +<span class="number">0800</span></div><div class="line"><span class="attr">categories:</span> 生活</div><div class="line"><span class="attr">tags:</span> Thinking,Essay</div><div class="line"><span class="attr">keywords:</span> 思维的乐趣</div><div class="line"><span class="attr">description:</span> 王小波散文随笔：思维的乐趣</div><div class="line"><span class="meta">---</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">layout: post</div><div class="line">title: 思维的乐趣</div><div class="line">date: 2016-03-26 00:22:39 +0800</div><div class="line">categories: 生活</div><div class="line">tags: Thinking,Essay</div><div class="line">keywords: 思维的乐趣</div><div class="line">description: 王小波散文随笔：思维的乐趣</div><div class="line">---</div></pre></td></tr></table></figure>
 <p>接下来只管产出内容即可。当然了，之前提到需要一点配置，就是需要在<code>_config.yml</code>种对template,page,git等进行配置，譬如：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="attr">post:</span></div><div class="line"><span class="attr">  template:</span> _post.txt</div><div class="line"><span class="attr">  extension:</span> md</div><div class="line"><span class="attr">page:</span></div><div class="line"><span class="attr">  template:</span> _page.txt</div><div class="line"><span class="attr">  extension:</span> md</div><div class="line"><span class="attr">editor:</span> atom</div><div class="line"><span class="attr">git:</span></div><div class="line"><span class="attr">  branch:</span> master</div><div class="line"><span class="attr">transfer:</span></div><div class="line"><span class="attr">  command:</span> rsync</div><div class="line"><span class="attr">  settings:</span> -av</div><div class="line"><span class="attr">  source:</span> _site/</div><div class="line"><span class="attr">  destination:</span> ~/Git/yourGithubName.github.com/</div></pre></td></tr></table></figure></p>
-<p>对应可以按需在<code>_config.yml</code>目录下 创建<strong>_post.txt</strong> <strong>_page.txt</strong>即可；根据Html种<strong>Meta</strong>对于<strong>SEO</strong>的重要，以及站点分类需要，个人配置内容如下：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">title:</span></div><div class="line"><span class="attr">date:</span></div><div class="line"><span class="attr">categories:</span></div><div class="line"><span class="attr">tags:</span></div><div class="line"><span class="attr">keywords:</span></div><div class="line"><span class="attr">description:</span></div><div class="line"><span class="meta">---</span></div></pre></td></tr></table></figure></p>
+<p>对应可以按需在<code>_config.yml</code>目录下 创建<strong>_post.txt</strong> <strong>_page.txt</strong>即可；根据Html种<strong>Meta</strong>对于<strong>SEO</strong>的重要，以及站点分类需要，个人配置内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title:</div><div class="line">date:</div><div class="line">categories:</div><div class="line">tags:</div><div class="line">keywords:</div><div class="line">description:</div><div class="line">---</div></pre></td></tr></table></figure></p>
 <p>如此配置完毕，即可运行如下命令：</p>
 <blockquote>
 <p>rake new  // 新建文章<br>rake post[“TitleName”] // 生成纯净文章模版配置<br>rake deploy “message”=”Commit Message” //一键发布文章<br>rake preview   //一键预览(还会自主协助打开浏览器)<br>rake build      //Build the site<br>rake post[“Title”] //创建文章(tags,keywords等洁净的)</p>
@@ -409,7 +409,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -476,7 +476,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -512,15 +512,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -532,19 +532,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -556,7 +552,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -564,19 +560,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -588,15 +576,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -604,7 +604,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -819,9 +819,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

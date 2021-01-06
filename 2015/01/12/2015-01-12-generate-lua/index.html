@@ -132,15 +132,15 @@
 		<p>前些日子准备学习下关于lua coroutine更为强大的功能，然而发现根据lua 5.1.4版本来运行一段代码的话也会导致 <font color="purple">“lua: attempt to yield across metamethod/C-call boundary”</font>的错误(据悉主线程中调用yield也会如此)。<br>于是就想使用5.2以上的版本试试;windows下没有5.2以上的版本，又不愿意使用VS编译出lua.exe;就在网上搜索下了关于使用命令行生成lua的静态库.动态库.lua.exe和luac.exe资料:现整理如下：</p>
 <a id="more"></a>
 <p>将下载的lua源码解压,在src目录下 打开<a href="#jump">VC命令行</a>提示窗口 执行如下代码即可(针对5.1):</p>
-<p>生成~~~ 静态库：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">del</span> *<span class="selector-class">.obj</span> liblua<span class="selector-class">.lib</span></div><div class="line"> </div><div class="line">cl -c -nologo -O2 -Ob1 -Oi -Gs -MT lapi<span class="selector-class">.c</span> lcode<span class="selector-class">.c</span> ldebug<span class="selector-class">.c</span> ldo<span class="selector-class">.c</span> ldump<span class="selector-class">.c</span> lfunc<span class="selector-class">.c</span> lgc<span class="selector-class">.c</span> llex<span class="selector-class">.c</span> lmem<span class="selector-class">.c</span> lobject<span class="selector-class">.c</span> lopcodes<span class="selector-class">.c</span> lparser<span class="selector-class">.c</span> lstate<span class="selector-class">.c</span> lstring<span class="selector-class">.c</span> ltable<span class="selector-class">.c</span> ltm<span class="selector-class">.c</span> lundump<span class="selector-class">.c</span> lvm<span class="selector-class">.c</span> lzio<span class="selector-class">.c</span> lauxlib<span class="selector-class">.c</span> lbaselib<span class="selector-class">.c</span> ldblib<span class="selector-class">.c</span> liolib<span class="selector-class">.c</span> lmathlib<span class="selector-class">.c</span> loslib<span class="selector-class">.c</span> ltablib<span class="selector-class">.c</span> lstrlib<span class="selector-class">.c</span> loadlib<span class="selector-class">.c</span> linit<span class="selector-class">.c</span></div><div class="line"> </div><div class="line">link -lib -out:liblua<span class="selector-class">.lib</span> -verbose:lib *.obj</div></pre></td></tr></table></figure></p>
-<p>生成~~~ 动态库：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">del</span> *<span class="selector-class">.obj</span> liblua<span class="selector-class">.dll</span></div><div class="line"> </div><div class="line">cl -c -nologo -O2 -Ob1 -Oi -Gs -MT -DLUA_BUILD_AS_DLL lapi<span class="selector-class">.c</span> lcode<span class="selector-class">.c</span> ldebug<span class="selector-class">.c</span> ldo<span class="selector-class">.c</span> ldump<span class="selector-class">.c</span> lfunc<span class="selector-class">.c</span> lgc<span class="selector-class">.c</span> llex<span class="selector-class">.c</span> lmem<span class="selector-class">.c</span> lobject<span class="selector-class">.c</span> lopcodes<span class="selector-class">.c</span> lparser<span class="selector-class">.c</span> lstate<span class="selector-class">.c</span> lstring<span class="selector-class">.c</span> ltable<span class="selector-class">.c</span> ltm<span class="selector-class">.c</span> lundump<span class="selector-class">.c</span> lvm<span class="selector-class">.c</span> lzio<span class="selector-class">.c</span> lauxlib<span class="selector-class">.c</span> lbaselib<span class="selector-class">.c</span> ldblib<span class="selector-class">.c</span> liolib<span class="selector-class">.c</span> lmathlib<span class="selector-class">.c</span> loslib<span class="selector-class">.c</span> ltablib<span class="selector-class">.c</span> lstrlib<span class="selector-class">.c</span> loadlib<span class="selector-class">.c</span> linit<span class="selector-class">.c</span></div><div class="line"> </div><div class="line">link -link -dll -out:liblua<span class="selector-class">.dll</span> -verbose:lib *.obj</div></pre></td></tr></table></figure></p>
-<p>生成~~~ lua.exe：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">del</span> *<span class="selector-class">.obj</span> lua<span class="selector-class">.exe</span></div><div class="line"> </div><div class="line">cl -c -nologo -O2 -Ob1 -Oi -Gs -MT lapi<span class="selector-class">.c</span> lcode<span class="selector-class">.c</span> ldebug<span class="selector-class">.c</span> ldo<span class="selector-class">.c</span> ldump<span class="selector-class">.c</span> lfunc<span class="selector-class">.c</span> lgc<span class="selector-class">.c</span> llex<span class="selector-class">.c</span> lmem<span class="selector-class">.c</span> lobject<span class="selector-class">.c</span> lopcodes<span class="selector-class">.c</span> lparser<span class="selector-class">.c</span> lstate<span class="selector-class">.c</span> lstring<span class="selector-class">.c</span> ltable<span class="selector-class">.c</span> ltm<span class="selector-class">.c</span> lundump<span class="selector-class">.c</span> lvm<span class="selector-class">.c</span> lzio<span class="selector-class">.c</span> lauxlib<span class="selector-class">.c</span> lbaselib<span class="selector-class">.c</span> ldblib<span class="selector-class">.c</span> liolib<span class="selector-class">.c</span> lmathlib<span class="selector-class">.c</span> loslib<span class="selector-class">.c</span> ltablib<span class="selector-class">.c</span> lstrlib<span class="selector-class">.c</span> loadlib<span class="selector-class">.c</span> linit<span class="selector-class">.c</span> lua<span class="selector-class">.c</span></div><div class="line"> </div><div class="line">link -link  -out:lua<span class="selector-class">.exe</span> -verbose:lib *.obj</div></pre></td></tr></table></figure></p>
+<p>生成~~~ 静态库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">del *.obj liblua.lib</div><div class="line"> </div><div class="line">cl -c -nologo -O2 -Ob1 -Oi -Gs -MT lapi.c lcode.c ldebug.c ldo.c ldump.c lfunc.c lgc.c llex.c lmem.c lobject.c lopcodes.c lparser.c lstate.c lstring.c ltable.c ltm.c lundump.c lvm.c lzio.c lauxlib.c lbaselib.c ldblib.c liolib.c lmathlib.c loslib.c ltablib.c lstrlib.c loadlib.c linit.c</div><div class="line"> </div><div class="line">link -lib -out:liblua.lib -verbose:lib *.obj</div></pre></td></tr></table></figure></p>
+<p>生成~~~ 动态库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">del *.obj liblua.dll</div><div class="line"> </div><div class="line">cl -c -nologo -O2 -Ob1 -Oi -Gs -MT -DLUA_BUILD_AS_DLL lapi.c lcode.c ldebug.c ldo.c ldump.c lfunc.c lgc.c llex.c lmem.c lobject.c lopcodes.c lparser.c lstate.c lstring.c ltable.c ltm.c lundump.c lvm.c lzio.c lauxlib.c lbaselib.c ldblib.c liolib.c lmathlib.c loslib.c ltablib.c lstrlib.c loadlib.c linit.c</div><div class="line"> </div><div class="line">link -link -dll -out:liblua.dll -verbose:lib *.obj</div></pre></td></tr></table></figure></p>
+<p>生成~~~ lua.exe：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">del *.obj lua.exe</div><div class="line"> </div><div class="line">cl -c -nologo -O2 -Ob1 -Oi -Gs -MT lapi.c lcode.c ldebug.c ldo.c ldump.c lfunc.c lgc.c llex.c lmem.c lobject.c lopcodes.c lparser.c lstate.c lstring.c ltable.c ltm.c lundump.c lvm.c lzio.c lauxlib.c lbaselib.c ldblib.c liolib.c lmathlib.c loslib.c ltablib.c lstrlib.c loadlib.c linit.c lua.c</div><div class="line"> </div><div class="line">link -link  -out:lua.exe -verbose:lib *.obj</div></pre></td></tr></table></figure></p>
 <p>生成~~~ luac.exe：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">del</span> *<span class="selector-class">.obj</span> luac<span class="selector-class">.exe</span></div><div class="line"> </div><div class="line">cl -c -nologo -O2 -Ob1 -Oi -Gs -MT lapi<span class="selector-class">.c</span> lcode<span class="selector-class">.c</span> ldebug<span class="selector-class">.c</span> ldo<span class="selector-class">.c</span> ldump<span class="selector-class">.c</span> lfunc<span class="selector-class">.c</span> lgc<span class="selector-class">.c</span> llex<span class="selector-class">.c</span> lmem<span class="selector-class">.c</span> lobject<span class="selector-class">.c</span> lopcodes<span class="selector-class">.c</span> lparser<span class="selector-class">.c</span> lstate<span class="selector-class">.c</span> lstring<span class="selector-class">.c</span> ltable<span class="selector-class">.c</span> ltm<span class="selector-class">.c</span> lundump<span class="selector-class">.c</span> lvm<span class="selector-class">.c</span> lzio<span class="selector-class">.c</span> lauxlib<span class="selector-class">.c</span> lbaselib<span class="selector-class">.c</span> ldblib<span class="selector-class">.c</span> liolib<span class="selector-class">.c</span> lmathlib<span class="selector-class">.c</span> loslib<span class="selector-class">.c</span> ltablib<span class="selector-class">.c</span> lstrlib<span class="selector-class">.c</span> loadlib<span class="selector-class">.c</span> linit<span class="selector-class">.c</span> print<span class="selector-class">.c</span> luac<span class="selector-class">.c</span></div><div class="line"> </div><div class="line">link -link -out:luac<span class="selector-class">.exe</span> -verbose:lib *.obj</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">del *.obj luac.exe</div><div class="line"> </div><div class="line">cl -c -nologo -O2 -Ob1 -Oi -Gs -MT lapi.c lcode.c ldebug.c ldo.c ldump.c lfunc.c lgc.c llex.c lmem.c lobject.c lopcodes.c lparser.c lstate.c lstring.c ltable.c ltm.c lundump.c lvm.c lzio.c lauxlib.c lbaselib.c ldblib.c liolib.c lmathlib.c loslib.c ltablib.c lstrlib.c loadlib.c linit.c print.c luac.c</div><div class="line"> </div><div class="line">link -link -out:luac.exe -verbose:lib *.obj</div></pre></td></tr></table></figure>
 <hr>
 <p>以上是针对5.1.4的;想比较于5.2而言,变动还是蛮大的，就需要根据源码中Doc目录下readme.html所提醒的去编译：</p>
 <p>比如我要编译5.2.3,生成lua.exe的话，执行之下代码即可：</p>
-<p>del *.obj lua.exe<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cl -c -nologo -O2 -Ob1 -Oi -Gs -MT lapi<span class="selector-class">.c</span> lcode<span class="selector-class">.c</span> lctype<span class="selector-class">.c</span> ldebug<span class="selector-class">.c</span> ldo<span class="selector-class">.c</span> ldump<span class="selector-class">.c</span> lfunc<span class="selector-class">.c</span> lgc<span class="selector-class">.c</span> llex<span class="selector-class">.c</span> lmem<span class="selector-class">.c</span> lobject<span class="selector-class">.c</span> lopcodes<span class="selector-class">.c</span> lparser<span class="selector-class">.c</span> lstate<span class="selector-class">.c</span> lstring<span class="selector-class">.c</span> ltable<span class="selector-class">.c</span> ltm<span class="selector-class">.c</span> lundump<span class="selector-class">.c</span> lvm<span class="selector-class">.c</span> lzio<span class="selector-class">.c</span> lauxlib<span class="selector-class">.c</span> lbaselib<span class="selector-class">.c</span> lbitlib<span class="selector-class">.c</span> lcorolib<span class="selector-class">.c</span> ldblib<span class="selector-class">.c</span> liolib<span class="selector-class">.c</span> lmathlib<span class="selector-class">.c</span> loslib<span class="selector-class">.c</span> lstrlib<span class="selector-class">.c</span> ltablib<span class="selector-class">.c</span> loadlib<span class="selector-class">.c</span> linit<span class="selector-class">.c</span> lua<span class="selector-class">.c</span>  </div><div class="line"></div><div class="line">link -link  -out:lua<span class="selector-class">.exe</span> -verbose:lib *.obj</div></pre></td></tr></table></figure></p>
+<p>del *.obj lua.exe<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cl -c -nologo -O2 -Ob1 -Oi -Gs -MT lapi.c lcode.c lctype.c ldebug.c ldo.c ldump.c lfunc.c lgc.c llex.c lmem.c lobject.c lopcodes.c lparser.c lstate.c lstring.c ltable.c ltm.c lundump.c lvm.c lzio.c lauxlib.c lbaselib.c lbitlib.c lcorolib.c ldblib.c liolib.c lmathlib.c loslib.c lstrlib.c ltablib.c loadlib.c linit.c lua.c  </div><div class="line"></div><div class="line">link -link  -out:lua.exe -verbose:lib *.obj</div></pre></td></tr></table></figure></p>
 <p>Building Lua on other systems(eg:windows)原文如下：<br>If you’re not using the usual Unix tools, then the instructions for building Lua depend on the compiler you use. You’ll need to create projects (or whatever your compiler uses) for building the library, the interpreter, and the compiler, as follows:</p>
 <blockquote>
 <p>library:<br>lapi.c lcode.c lctype.c ldebug.c ldo.c ldump.c lfunc.c lgc.c llex.c lmem.c lobject.c lopcodes.c lparser.c lstate.c lstring.c ltable.c ltm.c lundump.c lvm.c lzio.c lauxlib.c lbaselib.c lbitlib.c lcorolib.c ldblib.c liolib.c lmathlib.c loslib.c lstrlib.c ltablib.c loadlib.c linit.c</p>
@@ -389,7 +389,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -456,7 +456,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -492,15 +492,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -512,19 +512,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -536,7 +532,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -544,19 +540,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -568,15 +556,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -584,7 +584,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -799,9 +799,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

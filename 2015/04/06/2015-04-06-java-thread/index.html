@@ -160,7 +160,7 @@
 <p>执行的结果如下：<br>A -&gt; order success!<br>A -&gt; order success!<br>A -&gt; order success!<br>A -&gt; order success!<br>A -&gt; order success!<br>A -&gt; order success!<br>A -&gt; order success!<br>A -&gt; order success!<br>A -&gt; order success!<br>A -&gt; order success!<br>A -&gt; order success!</p>
 <h2 id="五、ThreadPoolExecutor"><a href="#五、ThreadPoolExecutor" class="headerlink" title="五、ThreadPoolExecutor"></a>五、ThreadPoolExecutor</h2><p>如果有大量线程，建议使用线程池管理，下面是ThreadPoolExecutor的示例用法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.cnblogs.yjmyzz;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.concurrent.ArrayBlockingQueue;</div><div class="line"><span class="keyword">import</span> java.util.concurrent.ThreadPoolExecutor;</div><div class="line"><span class="keyword">import</span> java.util.concurrent.TimeUnit;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RunnableDemo7</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;        </div><div class="line"></div><div class="line">        ThreadPoolExecutor threadPool = <span class="keyword">new</span> ThreadPoolExecutor(<span class="number">2</span>, <span class="number">10</span>, <span class="number">1</span>,</div><div class="line">                TimeUnit.SECONDS, <span class="keyword">new</span> ArrayBlockingQueue&lt;Runnable&gt;(<span class="number">3</span>));</div><div class="line">        </div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</div><div class="line">            threadPool.execute(<span class="keyword">new</span> MyRunnable(<span class="string">"R"</span>+i, <span class="number">5</span>));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p><a href="http://www.iteye.com/topic/1118660" target="_blank" rel="external">ThreadPoolExecutor几点使用建议</a><br><a href="http://jiaguwen123.iteye.com/blog/1017636" target="_blank" rel="external">ThreadPoolExecutor</a><br><img src="http://images.cnitblog.com/blog/27612/201411/131555523973501.jpg" alt="ThreadPoolExecutor"></p>
-<h2 id="六、ThreadPoolTaskExecutor"><a href="#六、ThreadPoolTaskExecutor" class="headerlink" title="六、ThreadPoolTaskExecutor"></a>六、ThreadPoolTaskExecutor</h2><p>终于轮到我大Spring出场了，Spring框架提供了org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor类，可以用注入的形式生成线程池<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span><span class="meta">?&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></div><div class="line">    <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="attr">xmlns:aop</span>=<span class="string">"http://www.springframework.org/schema/aop"</span></div><div class="line">    <span class="attr">xmlns:tx</span>=<span class="string">"http://www.springframework.org/schema/tx"</span> <span class="attr">xmlns:jdbc</span>=<span class="string">"http://www.springframework.org/schema/jdbc"</span></div><div class="line">    <span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span></div><div class="line">    <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></div><div class="line">     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd</div><div class="line">     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd</div><div class="line">     http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd</div><div class="line">     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd</div><div class="line">     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"</div><div class="line">    <span class="attr">default-autowire</span>=<span class="string">"byName"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"threadPoolTaskExecutor"</span></span></div><div class="line">        <span class="attr">class</span>=<span class="string">"org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor"</span>&gt;</div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"corePoolSize"</span> <span class="attr">value</span>=<span class="string">"2"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"maxPoolSize"</span> <span class="attr">value</span>=<span class="string">"10"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"queueCapacity"</span> <span class="attr">value</span>=<span class="string">"1000"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"keepAliveSeconds"</span> <span class="attr">value</span>=<span class="string">"15"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"rejectedExecutionHandler"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"java.util.concurrent.ThreadPoolExecutor$CallerRunsPolicy"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="六、ThreadPoolTaskExecutor"><a href="#六、ThreadPoolTaskExecutor" class="headerlink" title="六、ThreadPoolTaskExecutor"></a>六、ThreadPoolTaskExecutor</h2><p>终于轮到我大Spring出场了，Spring框架提供了org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor类，可以用注入的形式生成线程池<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></div><div class="line">    <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="attr">xmlns:aop</span>=<span class="string">"http://www.springframework.org/schema/aop"</span></div><div class="line">    <span class="attr">xmlns:tx</span>=<span class="string">"http://www.springframework.org/schema/tx"</span> <span class="attr">xmlns:jdbc</span>=<span class="string">"http://www.springframework.org/schema/jdbc"</span></div><div class="line">    <span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span></div><div class="line">    <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></div><div class="line">     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd</div><div class="line">     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd</div><div class="line">     http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd</div><div class="line">     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd</div><div class="line">     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"</div><div class="line">    <span class="attr">default-autowire</span>=<span class="string">"byName"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"threadPoolTaskExecutor"</span></span></div><div class="line">        <span class="attr">class</span>=<span class="string">"org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor"</span>&gt;</div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"corePoolSize"</span> <span class="attr">value</span>=<span class="string">"2"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"maxPoolSize"</span> <span class="attr">value</span>=<span class="string">"10"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"queueCapacity"</span> <span class="attr">value</span>=<span class="string">"1000"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"keepAliveSeconds"</span> <span class="attr">value</span>=<span class="string">"15"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"rejectedExecutionHandler"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"java.util.concurrent.ThreadPoolExecutor$CallerRunsPolicy"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>配置好以后，就可以直接使用了</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.cnblogs.yjmyzz;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</div><div class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</div><div class="line"><span class="keyword">import</span> org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RunnableDemo8</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"resource"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line"></div><div class="line">        ApplicationContext applicationContext = <span class="keyword">new</span> ClassPathXmlApplicationContext(</div><div class="line">                <span class="string">"spring.xml"</span>);</div><div class="line">        ThreadPoolTaskExecutor taskExecutor = applicationContext.getBean(</div><div class="line">                <span class="string">"threadPoolTaskExecutor"</span>, ThreadPoolTaskExecutor.class);</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</div><div class="line">            taskExecutor.execute(<span class="keyword">new</span> MyRunnable(<span class="string">"R"</span> + i, <span class="number">5</span>));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="七、FutureTask"><a href="#七、FutureTask" class="headerlink" title="七、FutureTask"></a>七、FutureTask<t></t></h2><p>如果某些线程的处理非常耗时，不希望它阻塞其它线程，可以考虑使用FutureTask，正如字面意义一样，该线程启用后，马上开始，但是处理结果将在”未来”某一时刻，才真正需要，在此之前，其它线程可以继续处理自己的事情<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.cnblogs.yjmyzz;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.concurrent.Callable;</div><div class="line"><span class="keyword">import</span> java.util.concurrent.ExecutionException;</div><div class="line"><span class="keyword">import</span> java.util.concurrent.FutureTask;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RunnableDemo9</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException,</span></div><div class="line">            ExecutionException &#123;</div><div class="line"></div><div class="line">        FutureTask&lt;String&gt; task = <span class="keyword">new</span> FutureTask&lt;String&gt;(</div><div class="line">                <span class="keyword">new</span> Callable&lt;String&gt;() &#123;</div><div class="line">                    <span class="function"><span class="keyword">public</span> String <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</div><div class="line">                        System.out.println(<span class="string">"FutureTask开始处理..."</span>);</div><div class="line">                        Thread.sleep(<span class="number">1000</span>);</div><div class="line">                        <span class="keyword">return</span> <span class="string">"hello world"</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">        System.out.println(<span class="string">"FutureTask准备开始..."</span>);</div><div class="line">        <span class="keyword">new</span> Thread(task).run();</div><div class="line">        System.out.println(<span class="string">"其它处理开始..."</span>);</div><div class="line">        Thread.sleep(<span class="number">1000</span>);</div><div class="line">        System.out.println(<span class="string">"其它处理完成..."</span>);</div><div class="line">        System.out.println(<span class="string">"FutureTask处理结果："</span> + task.get());</div><div class="line">        System.out.println(<span class="string">"全部处理完成"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -408,7 +408,7 @@ FutureTask处理结果：hello world
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -475,7 +475,7 @@ FutureTask处理结果：hello world
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -511,15 +511,15 @@ FutureTask处理结果：hello world
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -531,19 +531,15 @@ FutureTask处理结果：hello world
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -555,7 +551,7 @@ FutureTask处理结果：hello world
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -563,19 +559,11 @@ FutureTask处理结果：hello world
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -587,15 +575,27 @@ FutureTask处理结果：hello world
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -603,7 +603,7 @@ FutureTask处理结果：hello world
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -818,9 +818,9 @@ FutureTask处理结果：hello world
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

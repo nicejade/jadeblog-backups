@@ -211,7 +211,7 @@
 <p>　　使用会话会对系统伸缩性造成负面影响，当服务器端要在很多台服务器上同步复制会话对象时，系统性能会受到较大伤害，尤其会话对象较大时。这种情况下可以采用cookie，将需要记录的信息保存在客户端，每次请求时发送到服务器端，服务器端不保留状态信息，避免在服务器端多台机器上复制会话而造成的性能下降。
 　　</p>
 <h3 id="Cookie-基本操作"><a href="#Cookie-基本操作" class="headerlink" title="Cookie 基本操作"></a><strong>Cookie 基本操作</strong></h3><p>对于 Cookie 得常用操作有，存取，读取，以及设置有效期；具体可以参照 <a href="http://www.cnblogs.com/Darren_code/archive/2011/11/24/Cookie.html" target="_blank" rel="external">JavaScript 操作 Cookie</a> 一文；但，近期在前端编码方面，皆以<strong>Vue</strong>为冲锋利器，所以就有用到一款插件 <a href="https://github.com/alfhen/vue-cookie/blob/master/src/vue-cookie.js" target="_blank" rel="external">vue-cookie</a>,其代码仅30行，堪称精妙，读取操作如下：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span>: <span class="function"><span class="keyword">function</span> <span class="params">(name, value, days)</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> d = <span class="keyword">new</span> Date;</div><div class="line">    d.setTime(d.getTime() + <span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>*days);</div><div class="line">    window.document.cookie = name + <span class="string">"="</span> + value + <span class="string">";path=/;expires="</span> + d.toGMTString();</div><div class="line">&#125;,</div><div class="line"></div><div class="line"><span class="keyword">get</span>: <span class="function"><span class="keyword">function</span> <span class="params">(name)</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> v = window.document.cookie.match(<span class="string">'(^|;) ?'</span> + name + <span class="string">'=([^;]*)(;|$)'</span>);</div><div class="line">    <span class="keyword">return</span> v ? v[<span class="number">2</span>] : <span class="literal">null</span>;</div><div class="line">&#125;,</div><div class="line"></div><div class="line"><span class="keyword">delete</span>: <span class="function"><span class="keyword">function</span> <span class="params">(name)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.set(name, <span class="string">''</span>, <span class="number">-1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">set: function (name, value, days) &#123;</div><div class="line">    var d = new Date;</div><div class="line">    d.setTime(d.getTime() + 24*60*60*1000*days);</div><div class="line">    window.document.cookie = name + &quot;=&quot; + value + &quot;;path=/;expires=&quot; + d.toGMTString();</div><div class="line">&#125;,</div><div class="line"></div><div class="line">get: function (name) &#123;</div><div class="line">    var v = window.document.cookie.match(&apos;(^|;) ?&apos; + name + &apos;=([^;]*)(;|$)&apos;);</div><div class="line">    return v ? v[2] : null;</div><div class="line">&#125;,</div><div class="line"></div><div class="line">delete: function (name) &#123;</div><div class="line">    this.set(name, &apos;&apos;, -1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="cookie-域概念"><a href="#cookie-域概念" class="headerlink" title="cookie 域概念"></a><strong>cookie 域概念</strong></h3><p>路径能解决在同一个域下访问 cookie 的问题，咱们接着说 cookie 实现同域之间访问的问题。语法如下：</p>
 <blockquote>
 <p>document.cookie = “name=value;path=path;<span style="color:#f00">domain=domain</span>“</p>
@@ -480,7 +480,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -547,7 +547,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -583,15 +583,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -603,19 +603,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -627,7 +623,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -635,19 +631,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -659,15 +647,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -675,7 +675,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -890,9 +890,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

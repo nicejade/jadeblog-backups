@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2020/01/05/178-recommendations-for-quality-online-services-in-2021/</loc>
+        <lastmod>2021-01-06T05:30:24.268Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2020/12/31/177-generating-word-cloud-based-on-python/</loc>
         <lastmod>2021-01-01T16:04:03.269Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -175,6 +183,22 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2016/11/24/116-JavaScript-string-operation/</loc>
+        <lastmod>2020-05-11T15:30:54.852Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2017/03/11/120-how-to-write-vue-better/</loc>
+        <lastmod>2020-05-05T16:43:09.679Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
         <lastmod>2020-05-05T16:43:09.679Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -191,31 +215,15 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/03/11/120-how-to-write-vue-better/</loc>
-        <lastmod>2020-05-05T16:43:09.679Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/</loc>
-        <lastmod>2020-05-05T16:43:09.643Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2016/03/11/2016-03-11-autohotkey/</loc>
-        <lastmod>2020-05-05T16:43:09.643Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/</loc>
+        <lastmod>2020-05-05T16:43:09.643Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/</loc>
         <lastmod>2020-05-05T16:43:09.643Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -231,7 +239,15 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/</loc>
+        <loc>https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/</loc>
+        <lastmod>2020-05-05T16:43:09.643Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2016/03/11/2016-03-11-autohotkey/</loc>
         <lastmod>2020-05-05T16:43:09.643Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -313,6 +329,14 @@
     <url>
         <loc>https://www.jeffjade.com/2018/08/31/143-develop-quick-app-experience-notes/</loc>
         <lastmod>2019-09-03T14:48:51.371Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2018/12/21/146-awesome-quickapp-resource-tutorial/</loc>
+        <lastmod>2019-09-03T14:44:09.302Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -495,14 +519,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2018/12/21/146-awesome-quickapp-resource-tutorial/</loc>
-        <lastmod>2019-04-03T16:08:27.781Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2016/05/22/108-Listary-Everything-Wox-Launch/</loc>
         <lastmod>2019-03-28T05:24:27.836Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -535,14 +551,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/</loc>
-        <lastmod>2019-03-26T14:31:16.735Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2015/06/18/2015-06-18-perfect-music/</loc>
         <lastmod>2019-03-26T14:31:16.735Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -552,6 +560,14 @@
 
     <url>
         <loc>https://www.jeffjade.com/2015/06/29/2015-06-29-css-background/</loc>
+        <lastmod>2019-03-26T14:31:16.735Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/</loc>
         <lastmod>2019-03-26T14:31:16.735Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -575,7 +591,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/</loc>
+        <loc>https://www.jeffjade.com/2016/03/30/104-front-end-tutorial/</loc>
         <lastmod>2019-03-26T14:31:16.724Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -591,7 +607,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2016/03/30/104-front-end-tutorial/</loc>
+        <loc>https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/</loc>
         <lastmod>2019-03-26T14:31:16.724Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -656,14 +672,6 @@
 
     <url>
         <loc>https://www.jeffjade.com/2016/12/31/117-written_at-the-end-of-2016/</loc>
-        <lastmod>2019-03-26T14:31:16.645Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2016/11/24/116-JavaScript-string-operation/</loc>
         <lastmod>2019-03-26T14:31:16.645Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -927,7 +935,23 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/04/12/2015-04-12-thought-choose-effort/</loc>
+        <loc>https://www.jeffjade.com/2016/10/31/115-summary-of-cookie/</loc>
+        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2017/04/30/121-sigh-life/</loc>
+        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2014/12/25/2014-12-25-regular-expression/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -951,23 +975,15 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2015/04/12/2015-04-12-thought-choose-effort/</loc>
+        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2015/06/14/2015-06-14-programer-health/</loc>
-        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2016/10/31/115-summary-of-cookie/</loc>
-        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2017/04/30/121-sigh-life/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -984,14 +1000,6 @@
 
     <url>
         <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
-        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2014/12/25/2014-12-25-regular-expression/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1071,7 +1079,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/01/07/2015-01-07-java-study/</loc>
+        <loc>https://www.jeffjade.com/2015/01/06/2015-01-06-hashmap-work-principle/</loc>
         <lastmod>2017-03-08T15:10:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1079,7 +1087,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/01/06/2015-01-06-hashmap-work-principle/</loc>
+        <loc>https://www.jeffjade.com/2015/01/07/2015-01-07-java-study/</loc>
         <lastmod>2017-03-08T15:10:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

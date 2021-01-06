@@ -132,7 +132,7 @@
 		<p><a href="https://nicelinks.site/post/5c16083e819ae45de1453caa" target="_blank" rel="external">Prettier</a> 是一个固定的代码格式化程序。此插件集成 <a href="https://github.com/nicejade/prettier-plugin-quickapp" target="_blank" rel="external">prettier-plugin-ux</a> 到 Prettier 中，因此为您提供了代码格式化的通用接口。<code>.ux</code> 通过 Prettier API 处理文件，它可以为项目和团队提供通用的样式指南，并且可以协助发现代码潜在的很多问题；使用它来编写<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>，将能极大提升开发效率和幸福感。</p>
 <a id="more"></a>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn add --dev --exact prettier prettier-plugin-ux</div></pre></td></tr></table></figure>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">prettier --<span class="built_in">write</span> <span class="string">"**/*.ux"</span></div><div class="line"><span class="meta"># or</span></div><div class="line">npx prettier --<span class="built_in">write</span> <span class="string">"**/*.ux"</span></div></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">prettier --write &quot;**/*.ux&quot;</div><div class="line"># or</div><div class="line">npx prettier --write &quot;**/*.ux&quot;</div></pre></td></tr></table></figure>
 <p>您可以在 package.json 的 <code>scripts</code> 增加类似如下配置，即可一键美化（<code>yarn prettier</code>）您的快应用代码；其中包括使用到的 css、less、sass 等，当然也可以用来美化 markdown 等等，您可以在 <a href="https://github.com/prettier/prettier#opinionated-code-formatter" target="_blank" rel="external">opinionated-code-formatter</a> 看到 <code>prettier</code> 内置了对多种不用语言的支持。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"prettier"</span>: <span class="string">"prettier --write 'src/**/*.js' 'src/**/*.ux'"</span>,</div></pre></td></tr></table></figure>
 <p>除此外，您还可以注入 <a href="https://github.com/Qard/onchange" target="_blank" rel="external">onchange</a> 依赖，它使用 <code>glob</code> 模式来监视文件，能在添加，更改或删除任何内容时运行命令。如果您在 package.json 的 <code>scripts</code> 增加类似如下配置，在开发时候，运行 <code>yarn prettier-watch</code> 命令，即可在保存后对代码进行美化，这无疑将极大提升您的开发效率和体验。</p>
@@ -151,7 +151,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"onCreateShortcut"</span> <span class="attr">value</span>=<span class="string">"创建快捷方式"</span> /&gt;</span></div></pre></td></tr></table></figure>
 <p>因为 <code>Prettier</code> (Vue &amp; Html)对于 <code>input</code> 标签，期待的是如上 <code>self-close</code> 写法。为提升使用体验，您可以注入任意类型脚本（如下这段 <code>node.js</code> 版），使得在 <code>Prettier</code> 前，将 <code>input</code> 标签修正即可;</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * @file: selfCloseInputTag.js</div><div class="line"> * @desc: 遍历指定目录下 .ux 文件，将其中 input 标签由 &lt;input&gt;&lt;/input&gt; 转换为 &lt;input /&gt;</div><div class="line"> * @date: 2019-01-23</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"></div><div class="line"><span class="keyword">const</span> quickappCodePath = <span class="string">'./src/'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> main = <span class="function"><span class="params">codePath</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">const</span> traversing = <span class="function"><span class="params">cpath</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> files = fs.readdirSync(cpath)</div><div class="line">    files.forEach(<span class="function"><span class="params">fileName</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> fPath = path.join(cpath, fileName)</div><div class="line">      <span class="keyword">const</span> stats = fs.statSync(fPath)</div><div class="line">      stats.isDirectory() &amp;&amp; traversing(fPath)</div><div class="line">      stats.isFile() &amp;&amp; fPath.endsWith(<span class="string">'.ux'</span>) &amp;&amp; matchAndReplace(fPath)</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">  traversing(codePath)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> matchAndReplace = <span class="function"><span class="params">path</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">const</span> pageContent = fs.readFileSync(path, <span class="string">'UTF-8'</span>)</div><div class="line">  <span class="keyword">const</span> newContent = pageContent.replace(<span class="regexp">/(&lt;[\s\S]*?input\b[\s\S]*?)&gt;([\s\S]*?)(&lt;\/input&gt;)/g</span>, <span class="string">'$1 /&gt;'</span>)</div><div class="line">  fs.writeFile(path, newContent, error =&gt; &#123;</div><div class="line">    <span class="keyword">if</span> (error) <span class="keyword">throw</span> <span class="string">`Something went wrong: <span class="subst">$&#123;error&#125;</span>`</span></div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">main(quickappCodePath)</div></pre></td></tr></table></figure>
-<p>在 <code>package.json</code> 文件中，可将对应脚本修改为如下模样：<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"script"</span>: &#123;</div><div class="line">    <span class="string">"prettier"</span>: <span class="string">"node ./command/selfCloseInputTag.js &amp;&amp; prettier --write \"</span>src/**/*.&#123;js,ts,ux,css&#125;\<span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在 <code>package.json</code> 文件中，可将对应脚本修改为如下模样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&quot;script&quot;: &#123;</div><div class="line">    &quot;prettier&quot;: &quot;node ./command/selfCloseInputTag.js &amp;&amp; prettier --write \&quot;src/**/*.&#123;js,ts,ux,css&#125;\&quot;&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>@2019-01-15 于深圳.福田 Last Modify：2018-02-02</p>
 <hr>
 <h3 id="您可能会感兴趣的文章："><a href="#您可能会感兴趣的文章：" class="headerlink" title="您可能会感兴趣的文章："></a>您可能会感兴趣的文章：</h3><ul>
@@ -386,7 +386,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -453,7 +453,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -489,15 +489,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -509,19 +509,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -533,7 +529,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -541,19 +537,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -565,15 +553,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -581,7 +581,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -796,9 +796,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

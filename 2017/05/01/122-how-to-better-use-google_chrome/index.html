@@ -159,24 +159,24 @@
 <ul>
 <li><strong>配置 Shadowsocks 服务端</strong><br>安装好 Shadowsocks 以后，可以通过以下指令，来启动 Shadowsocks 服务：</li>
 </ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssserver -<span class="selector-tag">p</span> <span class="number">8836</span> -k yourPassword -m rc4-md5</div></pre></td></tr></table></figure>
-<p>以上这种法子，诸多不便，推荐使用配置文件来操纵；新建配置文件，运行命令 <code>vim /etc/shadowsocks.json</code><br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"server"</span>:<span class="string">"your_server_ip"</span>,</div><div class="line">  <span class="attr">"server_port"</span>:<span class="number">8388</span>,</div><div class="line">  <span class="attr">"password"</span>:<span class="string">"yourpassword"</span>,</div><div class="line">  <span class="attr">"timeout"</span>:<span class="number">300</span>,</div><div class="line">  <span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span>,</div><div class="line">  <span class="attr">"fast_open"</span>:<span class="literal">false</span>,</div><div class="line">  <span class="attr">"workers"</span>: <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssserver -p 8836 -k yourPassword -m rc4-md5</div></pre></td></tr></table></figure>
+<p>以上这种法子，诸多不便，推荐使用配置文件来操纵；新建配置文件，运行命令 <code>vim /etc/shadowsocks.json</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;server&quot;:&quot;your_server_ip&quot;,</div><div class="line">  &quot;server_port&quot;:8388,</div><div class="line">  &quot;password&quot;:&quot;yourpassword&quot;,</div><div class="line">  &quot;timeout&quot;:300,</div><div class="line">  &quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line">  &quot;fast_open&quot;:false,</div><div class="line">  &quot;workers&quot;: 1</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p><strong>server</strong>：服务器 IP地址 (IPv4/IPv6)<br><strong>server_port</strong>：服务器监听的端口，一般设为80，443等，注意不要设为使用中的端口<br><strong>password</strong>：设置密码，自定义<br><strong>timeout</strong>：超时时间（单位：秒）<br><strong>method</strong>：加密方法，可选择 “aes-256-cfb”, “rc4-md5”等等。推荐使用 “rc4-md5”<br><strong>fast_open</strong>：true 或 false。如果你的服务器 Linux 内核在3.7+，可以开启 fast_open 以降低延迟。<br><strong>workers</strong>：workers数量，默认为 1。</p>
 </blockquote>
-<p>备注：亦配置多个 Shadowsocks 账户，具体可以参考如下的代码配置：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"server"</span>:<span class="string">"your_server_ip"</span>,</div><div class="line">  <span class="attr">"port_password"</span>:&#123;</div><div class="line">    <span class="attr">"8001"</span>:<span class="string">"pass01"</span>,</div><div class="line">    <span class="attr">"8002"</span>:<span class="string">"pass02"</span>,</div><div class="line">    <span class="attr">"8003"</span>:<span class="string">"pass03"</span>,</div><div class="line">    <span class="attr">"8004"</span>:<span class="string">"pass04"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"timeout"</span>:<span class="number">60</span>,</div><div class="line">  <span class="attr">"method"</span>:<span class="string">"rc4-md5"</span>,</div><div class="line">  <span class="attr">"fast_open"</span>:<span class="literal">false</span>,</div><div class="line">  <span class="attr">"workers"</span>:<span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>备注：亦配置多个 Shadowsocks 账户，具体可以参考如下的代码配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;server&quot;:&quot;your_server_ip&quot;,</div><div class="line">  &quot;port_password&quot;:&#123;</div><div class="line">    &quot;8001&quot;:&quot;pass01&quot;,</div><div class="line">    &quot;8002&quot;:&quot;pass02&quot;,</div><div class="line">    &quot;8003&quot;:&quot;pass03&quot;,</div><div class="line">    &quot;8004&quot;:&quot;pass04&quot;</div><div class="line">  &#125;,</div><div class="line">  &quot;timeout&quot;:60,</div><div class="line">  &quot;method&quot;:&quot;rc4-md5&quot;,</div><div class="line">  &quot;fast_open&quot;:false,</div><div class="line">  &quot;workers&quot;:1</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>接下来,你就可以使用下面这个指令启动服务咯，是不是很简单？</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssserver -c <span class="regexp">/etc/</span>shadowsocks.json</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssserver -c /etc/shadowsocks.json</div></pre></td></tr></table></figure>
 <ul>
 <li><strong>下载 Shadowsocks 客户端并填入</strong><br>这里没什么好介绍的，Shadowsocks 的客户端支持各大主流平台，而且客户端的配置相当简单；下载之，填入需要对应的: 服务器IP，端口，密码，加密方式，即可；至此就可以在浩瀚无垠的网上浪起来了。Shadowsocks 客户端下载地址传送门：<a href="https://sourceforge.net/projects/shadowsocksgui/files/dist/" target="_blank" rel="external">OS X</a>、 <a href="https://sourceforge.net/projects/shadowsocksgui/files/dist/" target="_blank" rel="external">Windows</a>、 <a href="https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients#android" target="_blank" rel="external">Android</a>、<a href="https://github.com/shadowsocks/shadowsocks-iOS/wiki/Help" target="_blank" rel="external">IOS</a>。</li>
 </ul>
 <hr>
 <p>【做个补充】：运用命令 <code>ssserver -c /etc/shadowsocks.json</code> 来开启服务，很不方便，一旦退出服务器，下次就得再次开启。于此，Shadowsocks 也提供了后台运行的命令：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssserver -c /etc/shadowsocks<span class="selector-class">.json</span> -d start</div><div class="line">ssserver -c /etc/shadowsocks<span class="selector-class">.json</span> -d stop</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssserver -c /etc/shadowsocks.json -d start</div><div class="line">ssserver -c /etc/shadowsocks.json -d stop</div></pre></td></tr></table></figure>
 <p>然而在真正实施上，却会遭遇报错：<a href="https://github.com/shadowsocks/shadowsocks/issues/320" target="_blank" rel="external">option -d not recognized</a>，根据 Issues 给出的回答，唯有升级版本才能解决该问题。而事实上，shadowsocks 开源库，已经根据规定被移除（Removed according to regulations）。折腾再三，幸而找见了更好的衍生产品： <a href="https://github.com/shadowsocks/shadowsocks-libev" target="_blank" rel="external">shadowsocks-libev</a> —— 一个纯 C 实现，并且对于数千个连接而言具有非常小的占用空间（几兆字节），用于嵌入式设备和低端盒的轻量级的安全 SOCKS5 代理；值得推荐使用。对于安装和配置也都挺方便，如果你是 Ubuntu 14.04 and 16.04 使用者的话：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">// <span class="keyword">install</span> <span class="keyword">from</span> PPA</div><div class="line">sudo <span class="keyword">add</span>-apt-repository ppa:<span class="keyword">max</span>-c-lv/shadowsocks-libev</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">update</span></div><div class="line">sudo apt <span class="keyword">install</span> shadowsocks-libev</div><div class="line"></div><div class="line">// <span class="keyword">Build</span> deb <span class="keyword">package</span> <span class="keyword">from</span> <span class="keyword">source</span></div><div class="line">mkdir -p ~/<span class="keyword">build</span>-area/</div><div class="line">cp ./scripts/build_deb.sh ~/<span class="keyword">build</span>-area/</div><div class="line">cd ~/<span class="keyword">build</span>-area</div><div class="line">./build_deb.sh</div><div class="line"></div><div class="line">// Configure <span class="keyword">and</span> <span class="keyword">start</span> the service（配置，同上文所讲）</div><div class="line"># Edit the configuration <span class="keyword">file</span></div><div class="line">sudo vim /etc/shadowsocks-libev/config.json</div><div class="line"></div><div class="line"># <span class="keyword">Start</span> the service</div><div class="line">sudo /etc/init.d/shadowsocks-libev <span class="keyword">start</span>    # <span class="keyword">for</span> sysvinit, <span class="keyword">or</span></div><div class="line">sudo systemctl <span class="keyword">start</span> shadowsocks-libev      # <span class="keyword">for</span> systemd</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">// install from PPA</div><div class="line">sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev</div><div class="line">sudo apt-get update</div><div class="line">sudo apt install shadowsocks-libev</div><div class="line"></div><div class="line">// Build deb package from source</div><div class="line">mkdir -p ~/build-area/</div><div class="line">cp ./scripts/build_deb.sh ~/build-area/</div><div class="line">cd ~/build-area</div><div class="line">./build_deb.sh</div><div class="line"></div><div class="line">// Configure and start the service（配置，同上文所讲）</div><div class="line"># Edit the configuration file</div><div class="line">sudo vim /etc/shadowsocks-libev/config.json</div><div class="line"></div><div class="line"># Start the service</div><div class="line">sudo /etc/init.d/shadowsocks-libev start    # for sysvinit, or</div><div class="line">sudo systemctl start shadowsocks-libev      # for systemd</div></pre></td></tr></table></figure>
 <p>如此，简单的一次操作之后，就能长久的欢乐嗨皮了；更多系统的安装配置方法，请自行参见 <a href="https://github.com/shadowsocks/shadowsocks-libev" target="_blank" rel="external">shadowsocks-libev</a>。还需要提及的是，使用这个库，也有些弊端性，就是不能方便的支持多端口，可以参见<a href="https://github.com/shadowsocks/shadowsocks-libev/issues/5" target="_blank" rel="external">issues/#5</a>；可以有的办法是，启用多个配置来曲线达成所愿，操作方法如下：</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ss-server -c <span class="built_in">config1</span>.<span class="keyword">json </span>-f pid1</div><div class="line">ss-server -c <span class="built_in">config2</span>.<span class="keyword">json </span>-f pid2</div><div class="line">ss-server -c <span class="built_in">config3</span>.<span class="keyword">json </span>-f pid3</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ss-server -c config1.json -f pid1</div><div class="line">ss-server -c config2.json -f pid2</div><div class="line">ss-server -c config3.json -f pid3</div></pre></td></tr></table></figure>
 <p>如此即可；也可通过运行 <code>netstat -tlnp</code> 命令，查看 ss-server 是否监听了多个配置文件的端口。如果略嫌这样操作麻烦的话，也可以用 Shadowsocks 的 Go 版本 —— <a href="https://github.com/shadowsocks/shadowsocks-go" target="_blank" rel="external">shadowsocks-go</a>，它更为方便的支持多端口的设置（update@2017-05-15）。</p>
 <hr>
 <blockquote>
@@ -299,7 +299,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Efficiency/">Efficiency</a><a href="/tags/Tools/">Tools</a><a href="/tags/Toss/">Toss</a><a href="/tags/Chrome/">Chrome</a>
+  <span></span> <a href="/tags/Tools/">Tools</a><a href="/tags/Efficiency/">Efficiency</a><a href="/tags/Toss/">Toss</a><a href="/tags/Chrome/">Chrome</a>
   </div>
 
 </div>
@@ -459,7 +459,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -526,7 +526,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -562,15 +562,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -582,19 +582,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -606,7 +602,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -614,19 +610,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -638,15 +626,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -654,7 +654,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -869,9 +869,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

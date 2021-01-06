@@ -141,12 +141,12 @@
 <p>如果你用 Mac，恭喜你！输入<code>cat /etc/shells</code>可以看到Mac系统自带这ZSH。<br>如果你用 Redhat Linux，执行：sudo yum install zsh<br>如果你用 Ubuntu Linux，执行：sudo apt-get install zsh<br>如果你用 Windows……去洗洗睡吧。</p>
 </blockquote>
 <p>安装完成后设置当前用户使用 zsh：chsh -s /bin/zsh，根据提示输入当前用户的密码就可以了。</p>
-<h3 id="安装oh-my-zsh"><a href="#安装oh-my-zsh" class="headerlink" title="安装oh my zsh"></a><strong>安装oh my zsh</strong></h3><p>安装「oh my zsh」可以自动安装也可以手动安装。<br>自动安装：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/robbyrussell/</span>oh-my-zsh<span class="regexp">/raw/m</span>aster<span class="regexp">/tools/i</span>nstall.sh -O - | sh</div></pre></td></tr></table></figure></p>
-<p>手动安装：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git clone <span class="symbol">git:</span>/<span class="regexp">/github.com/robbyrussell</span><span class="regexp">/oh-my-zsh.git ~/</span>.oh-my-zsh</div><div class="line">cp ~<span class="regexp">/.oh-my-zsh/templates</span><span class="regexp">/zshrc.zsh-template ~/</span>.zshrc</div></pre></td></tr></table></figure></p>
+<h3 id="安装oh-my-zsh"><a href="#安装oh-my-zsh" class="headerlink" title="安装oh my zsh"></a><strong>安装oh my zsh</strong></h3><p>安装「oh my zsh」可以自动安装也可以手动安装。<br>自动安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh</div></pre></td></tr></table></figure></p>
+<p>手动安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</div><div class="line">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</div></pre></td></tr></table></figure></p>
 <p>都不复杂，安装完成之后退出当前会话重新打开一个终端窗口，你就可以见到这个彩色的提示了：<br><img src="//image.nicelinks.site/mac-zsh.png" alt="ZSH"></p>
 <h3 id="ZSH-的配置"><a href="#ZSH-的配置" class="headerlink" title="ZSH 的配置"></a><strong>ZSH 的配置</strong></h3><p>　　zsh 的配置主要集中在用户当前目录的.zshrc里(在mac的用户目录下<code>ls -a</code>命令就可以看到)，用 vim 或你喜欢的其他编辑器打开.zshrc，在最下面会发现这么一行字：</p>
 <p># Customize to your needs…</p>
-<p>可以在此处定义自己的环境变量和别名，当然，oh my zsh；在安装时已经自动读取当前的环境变量并进行了设置，你可以继续追加其他环境变量。接下来进行别名的设置，请看下池建强先生的部分配置如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">alias</span> cls=<span class="string">'clear'</span></div><div class="line"><span class="built_in">alias</span> ll=<span class="string">'ls -l'</span></div><div class="line"><span class="built_in">alias</span> la=<span class="string">'ls -a'</span></div><div class="line"><span class="built_in">alias</span> vi=<span class="string">'vim'</span></div><div class="line"><span class="built_in">alias</span> javac=<span class="string">"javac -J-Dfile.encoding=utf8"</span></div><div class="line"><span class="built_in">alias</span> grep=<span class="string">"grep --color=auto"</span></div><div class="line"><span class="built_in">alias</span> <span class="_">-s</span> html=mate   <span class="comment"># 在命令行直接输入后缀为 html 的文件名，会在 TextMate 中打开</span></div><div class="line"><span class="built_in">alias</span> <span class="_">-s</span> rb=mate     <span class="comment"># 在命令行直接输入 ruby 文件，会在 TextMate 中打开</span></div><div class="line"><span class="built_in">alias</span> <span class="_">-s</span> py=vi       <span class="comment"># 在命令行直接输入 python 文件，会用 vim 中打开，以下类似</span></div><div class="line"><span class="built_in">alias</span> <span class="_">-s</span> js=vi</div><div class="line"><span class="built_in">alias</span> <span class="_">-s</span> c=vi</div><div class="line"><span class="built_in">alias</span> <span class="_">-s</span> java=vi</div><div class="line"><span class="built_in">alias</span> <span class="_">-s</span> txt=vi</div><div class="line"><span class="built_in">alias</span> <span class="_">-s</span> gz=<span class="string">'tar -xzvf'</span></div><div class="line"><span class="built_in">alias</span> <span class="_">-s</span> tgz=<span class="string">'tar -xzvf'</span></div><div class="line"><span class="built_in">alias</span> <span class="_">-s</span> zip=<span class="string">'unzip'</span></div><div class="line"><span class="built_in">alias</span> <span class="_">-s</span> bz2=<span class="string">'tar -xjvf'</span></div></pre></td></tr></table></figure></p>
+<p>可以在此处定义自己的环境变量和别名，当然，oh my zsh；在安装时已经自动读取当前的环境变量并进行了设置，你可以继续追加其他环境变量。接下来进行别名的设置，请看下池建强先生的部分配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">alias cls=&apos;clear&apos;</div><div class="line">alias ll=&apos;ls -l&apos;</div><div class="line">alias la=&apos;ls -a&apos;</div><div class="line">alias vi=&apos;vim&apos;</div><div class="line">alias javac=&quot;javac -J-Dfile.encoding=utf8&quot;</div><div class="line">alias grep=&quot;grep --color=auto&quot;</div><div class="line">alias -s html=mate   # 在命令行直接输入后缀为 html 的文件名，会在 TextMate 中打开</div><div class="line">alias -s rb=mate     # 在命令行直接输入 ruby 文件，会在 TextMate 中打开</div><div class="line">alias -s py=vi       # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似</div><div class="line">alias -s js=vi</div><div class="line">alias -s c=vi</div><div class="line">alias -s java=vi</div><div class="line">alias -s txt=vi</div><div class="line">alias -s gz=&apos;tar -xzvf&apos;</div><div class="line">alias -s tgz=&apos;tar -xzvf&apos;</div><div class="line">alias -s zip=&apos;unzip&apos;</div><div class="line">alias -s bz2=&apos;tar -xjvf&apos;</div></pre></td></tr></table></figure></p>
 <p>zsh 的霸气之处在于不仅可以设置通用别名，还能针对文件类型设置对应的打开程序，比如：<code>alias -s html=mate</code>，意思就是你在命令行输入 hello.html，zsh会为你自动打开 TextMat 并读取 hello.html； alias -s gz=’tar -xzvf’，表示自动解压后缀为 gz 的压缩包。</p>
 <p>总之，<strong>只有想不到，木有做不到</strong>。</p>
 <h3 id="折腾ZSH的初衷"><a href="#折腾ZSH的初衷" class="headerlink" title="折腾ZSH的初衷"></a><strong>折腾ZSH的初衷</strong></h3><p>　　开始折腾不仅是因为读了池建强先生的那篇博文；近来也是折腾Web前端，每次建立个html页面，因Mac下目测不能直接建立一个文件，只好在Terminal 那里<code>touch</code>一个。可是习惯玩儿Sublime Text的自己，不怎么折腾Vim，那打开该html可酒繁琐咯。总不能每次都拖进去或者使用open吧。而ZSH就可以利用其强大的配置，能针对文件类型设置对应的打开程序，哇哦，完美有木有？</p>
@@ -222,7 +222,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Efficiency/">Efficiency</a><a href="/tags/Toss/">Toss</a><a href="/tags/Share/">Share</a><a href="/tags/Mac/">Mac</a>
+  <span></span> <a href="/tags/Share/">Share</a><a href="/tags/Efficiency/">Efficiency</a><a href="/tags/Toss/">Toss</a><a href="/tags/Mac/">Mac</a>
   </div>
 
 </div>
@@ -382,7 +382,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -449,7 +449,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -485,15 +485,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -505,19 +505,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -529,7 +525,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -537,19 +533,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -561,15 +549,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -577,7 +577,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -792,9 +792,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

@@ -141,7 +141,7 @@
 <li><p>https url 在push的时候是需要验证用户名和密码的；而 SSH 在push的时候，是不需要输入用户名的，如果配置SSH key的时候设置了密码，则需要输入密码的，否则直接是不需要输入密码的。</p>
 </li>
 </ol>
-<h2 id="在Github上添加SSH-key的步骤："><a href="#在Github上添加SSH-key的步骤：" class="headerlink" title="在Github上添加SSH key的步骤："></a><strong>在Github上添加SSH key的步骤：</strong></h2><h3 id="1、首先需要检查你电脑是否已经有-SSH-key"><a href="#1、首先需要检查你电脑是否已经有-SSH-key" class="headerlink" title="1、首先需要检查你电脑是否已经有 SSH key"></a><strong>1、首先需要检查你电脑是否已经有 SSH key</strong></h3><p>运行 git Bash 客户端，输入如下代码：<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> cd ~/.ssh</div><div class="line"><span class="symbol">$</span> ls</div></pre></td></tr></table></figure></p>
+<h2 id="在Github上添加SSH-key的步骤："><a href="#在Github上添加SSH-key的步骤：" class="headerlink" title="在Github上添加SSH key的步骤："></a><strong>在Github上添加SSH key的步骤：</strong></h2><h3 id="1、首先需要检查你电脑是否已经有-SSH-key"><a href="#1、首先需要检查你电脑是否已经有-SSH-key" class="headerlink" title="1、首先需要检查你电脑是否已经有 SSH key"></a><strong>1、首先需要检查你电脑是否已经有 SSH key</strong></h3><p>运行 git Bash 客户端，输入如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd ~/.ssh</div><div class="line">$ ls</div></pre></td></tr></table></figure></p>
 <p>这两个命令就是检查是否已经存在 id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，那么你可以跳过步骤2，直接进入步骤3。</p>
 <h3 id="2、创建一个-SSH-key"><a href="#2、创建一个-SSH-key" class="headerlink" title="2、创建一个 SSH key"></a><strong>2、创建一个 SSH key</strong></h3><p>$ ssh-keygen -t rsa -C “<a href="mailto:your_email@example.com" target="_blank" rel="external">your_email@example.com</a>“<br>代码参数含义：</p>
 <p>-t 指定密钥类型，默认是 rsa ，可以省略。<br>-C 设置注释文字，比如邮箱。<br>-f 指定密钥文件存储文件名。</p>
@@ -156,7 +156,7 @@
 <h3 id="3、添加你的SSH-key-到-github上面去"><a href="#3、添加你的SSH-key-到-github上面去" class="headerlink" title="3、添加你的SSH key 到 github上面去"></a><strong>3、添加你的SSH key 到 github上面去</strong></h3><p>a、首先你需要拷贝 id_rsa.pub 文件的内容，你可以用编辑器打开文件复制，也可以用git命令复制该文件的内容，如：</p>
 <p>$ clip &lt; ~/.ssh/id_rsa.pub<br>b、登录你的github账号，从又上角的设置（ Account Settings ）进入，然后点击菜单栏的 SSH key 进入页面添加 SSH key。</p>
 <p>c、点击 Add SSH key 按钮添加一个 SSH key 。把你复制的 SSH key 代码粘贴到 key 所对应的输入框中，记得 SSH key 代码的前后不要留有空格或者回车。当然，上面的 Title 所对应的输入框你也可以输入一个该 SSH key 显示在 github 上的一个别名。默认的会使用你的邮件名称。</p>
-<h3 id="4、测试一下该SSH-key"><a href="#4、测试一下该SSH-key" class="headerlink" title="4、测试一下该SSH key"></a><strong>4、测试一下该SSH key</strong></h3><p>在git Bash 中输入以下代码<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>ssh -T git<span class="variable">@github</span>.com</div></pre></td></tr></table></figure></p>
+<h3 id="4、测试一下该SSH-key"><a href="#4、测试一下该SSH-key" class="headerlink" title="4、测试一下该SSH key"></a><strong>4、测试一下该SSH key</strong></h3><p>在git Bash 中输入以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure></p>
 <p>当你输入以上代码时，会有一段警告代码，如：</p>
 <blockquote>
 <p>The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>Are you sure you want to continue connecting (yes/no)?</p>
@@ -393,7 +393,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -460,7 +460,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -496,15 +496,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -516,19 +516,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -540,7 +536,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -548,19 +544,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -572,15 +560,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -588,7 +588,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -803,9 +803,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

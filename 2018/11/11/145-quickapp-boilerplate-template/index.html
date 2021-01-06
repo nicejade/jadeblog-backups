@@ -138,7 +138,7 @@
 <a id="more"></a>
 <p><img src="https://image.nicelinks.site/jpg/nice-links-007.jpg" alt="快应用脚手架模板"></p>
 <h2 id="目标与哲学"><a href="#目标与哲学" class="headerlink" title="目标与哲学"></a>目标与哲学</h2><p><a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>是一种新型的应用形态，由国内九大手机厂商基于硬件平台共同推出；秒开即点即用，更易于应用的传播和留存，可以为用户提供更高效的服务。在可预见的未来，其将有不错的应用场景和发展空间。此 <a href="https://github.com/nicejade/quickapp-boilerplate-template" target="_blank" rel="external">quickapp-boilerplate-template</a> 仓库的建立，旨在探索如何更为优雅的开发<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>，为广大<code>快应用开发者</code>提供便利和参考，尽可能提升开发效率、优化开发体验，使得可以在更短时间内，塑造出更为优质的<code>快应用</code>。关于<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发更详细资料，可参见<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/quickapp-tutorial.md" target="_blank" rel="external">快应用教程资源列表</a>。</p>
-<h2 id="组织结构"><a href="#组织结构" class="headerlink" title="组织结构"></a>组织结构</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">├── sign                <span class="comment"># 存储 rpk 包签名模块;</span></div><div class="line">│   ├── <span class="built_in">debug</span>           <span class="comment"># 调试环境证书/私钥文件</span></div><div class="line">│   └── release         <span class="comment"># 正式环境证书/私钥文件</span></div><div class="line">└── src</div><div class="line">│   ├── assets          <span class="comment"># 公用的资源(images/styles/字体...)</span></div><div class="line">│   │   ├──images       <span class="comment"># 存储 png/jpg/svg 等公共图片资源</span></div><div class="line">│   │   ├──<span class="keyword">js </span>          <span class="comment"># 存储公共 javaScript 代码资源</span></div><div class="line">│   │   └──styles       <span class="comment"># 存放 less/css/sass 等公共样式资源</span></div><div class="line">│   ├── helper          <span class="comment"># 项目自定义辅助各类工具</span></div><div class="line">│   │   ├──apis         <span class="comment"># 存储与后台请求接口相关(已封装好)</span></div><div class="line">│   │   ├──ajax.<span class="keyword">js </span>     <span class="comment"># 对系统提供的 fetch api 进行链式封装</span></div><div class="line">│   │   └──utils        <span class="comment"># 存放项目所封装的工具类方法</span></div><div class="line">│   ├── pages           <span class="comment"># 统一存放项目页面级代码</span></div><div class="line">│   ├── app.ux          <span class="comment"># 应用程序代码的人口文件</span></div><div class="line">│   └── manifest.<span class="keyword">json </span>  <span class="comment"># 配置快应用基本信息</span></div><div class="line">└── package.<span class="keyword">json </span>       <span class="comment"># 定义项目需要的各种模块及配置信息</span></div></pre></td></tr></table></figure>
+<h2 id="组织结构"><a href="#组织结构" class="headerlink" title="组织结构"></a>组织结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">├── sign                # 存储 rpk 包签名模块;</div><div class="line">│   ├── debug           # 调试环境证书/私钥文件</div><div class="line">│   └── release         # 正式环境证书/私钥文件</div><div class="line">└── src</div><div class="line">│   ├── assets          # 公用的资源(images/styles/字体...)</div><div class="line">│   │   ├──images       # 存储 png/jpg/svg 等公共图片资源</div><div class="line">│   │   ├──js           # 存储公共 javaScript 代码资源</div><div class="line">│   │   └──styles       # 存放 less/css/sass 等公共样式资源</div><div class="line">│   ├── helper          # 项目自定义辅助各类工具</div><div class="line">│   │   ├──apis         # 存储与后台请求接口相关(已封装好)</div><div class="line">│   │   ├──ajax.js      # 对系统提供的 fetch api 进行链式封装</div><div class="line">│   │   └──utils        # 存放项目所封装的工具类方法</div><div class="line">│   ├── pages           # 统一存放项目页面级代码</div><div class="line">│   ├── app.ux          # 应用程序代码的人口文件</div><div class="line">│   └── manifest.json   # 配置快应用基本信息</div><div class="line">└── package.json        # 定义项目需要的各种模块及配置信息</div></pre></td></tr></table></figure>
 <h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/nicejade/quickapp-boilerplate-template.git</div><div class="line"><span class="built_in">cd</span> quickapp-boilerplate-template &amp;&amp; yarn</div><div class="line">yarn start <span class="comment"># 推荐 ✅✅</span></div><div class="line"></div><div class="line"><span class="comment"># 或者运行以下命令</span></div><div class="line">yarn server &amp; yarn watch</div><div class="line"></div><div class="line"><span class="comment"># 或者在终端一 Tab 下运行：</span></div><div class="line">yarn server</div><div class="line"><span class="comment"># 在终端另一 Tab 下运行：</span></div><div class="line">yarn watch</div><div class="line"></div><div class="line"><span class="comment"># ✨ 新增「快应用」页面</span></div><div class="line">yarn gen YourPageName</div></pre></td></tr></table></figure>
 <p>用一台 <code>Android</code> 手机，下载安装<a href="https://www.quickapp.cn/docCenter/post/69" target="_blank" rel="external">「快应用」调试器</a>，打开后操作<code>扫码安装</code>，扫描如上命令生成的二维码，即可看到效果；更多讯息，请参见<a href="https://nice.lovejade.cn/zh/article/develop-quick-app-experience-notes.html#环境搭建" target="_blank" rel="external">快应用环境搭建</a>。</p>
 <h2 id="改进优势"><a href="#改进优势" class="headerlink" title="改进优势"></a>改进优势</h2><p>有必要谈及的是，此项目秉承在<a href="https://nice.lovejade.cn/zh/article/vue-webpack-boilerplate-template.html" target="_blank" rel="external">高效开发 Web 单页应用解决方案</a>中所传递的理念：为<strong>高效开发</strong>而设计；相比于其内置简陋而凌乱的 Demo，这份脚手架做了以下诸多改进：</p>
@@ -475,7 +475,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -542,7 +542,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -578,15 +578,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -598,19 +598,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -622,7 +618,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -630,19 +626,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -654,15 +642,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -670,7 +670,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -885,9 +885,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

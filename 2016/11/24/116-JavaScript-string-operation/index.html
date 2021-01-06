@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://www.jeffjade.com/2016/11/24/116-JavaScript-string-operation/index.html">
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="JavaScript 字符串常用方法整理；字符串截取，去除空白行，字符串反转，字符串转化为多维数组。">
-<meta property="og:updated_time" content="2019-03-26T14:31:16.645Z">
+<meta property="og:updated_time" content="2020-05-11T15:30:54.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 字符串实用常操纪要">
 <meta name="twitter:description" content="JavaScript 字符串常用方法整理；字符串截取，去除空白行，字符串反转，字符串转化为多维数组。">
@@ -194,51 +194,51 @@
 
 <div class="picture-bg"><br><p class="change-color">JavaScript</p><br><p class="change-color small-size">字符串实用常操纪要</p><br></div>
 
-<h2 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a><strong>字符串截取</strong></h2><h3 id="1-substring"><a href="#1-substring" class="headerlink" title="1. substring()"></a><strong>1. substring()</strong></h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xString.substring(<span class="built_in">start</span>,<span class="keyword">end</span>)</div></pre></td></tr></table></figure>
+<h2 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a><strong>字符串截取</strong></h2><h3 id="1-substring"><a href="#1-substring" class="headerlink" title="1. substring()"></a><strong>1. substring()</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xString.substring(start,end)</div></pre></td></tr></table></figure>
 <blockquote>
 <p>substring()是最常用到的字符串截取方法，它可以接收两个参数(参数不能为负值)，分别是要截取的开始位置和结束位置，它将返回一个新的字符串，其内容是从start处到end-1处的所有字符。若结束参数(end)省略，则表示从start位置一直截取到最后。</p>
 </blockquote>
-<figure class="highlight openscad"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">let</span> <span class="built_in">str</span> = 'www.jeffjade.com'</div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.substring(<span class="number">0</span>,<span class="number">3</span>)) <span class="comment">// www</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.substring(<span class="number">0</span>))   <span class="comment">//www.jeffjade.com</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.substring(-<span class="number">2</span>))  <span class="comment">//www.jeffjade.com (传负值则视为0)</span></div></pre></td></tr></table></figure>
-<h3 id="2-slice"><a href="#2-slice" class="headerlink" title="2. slice()"></a><strong>2. slice()</strong></h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">stringObject.slice(start, </span><span class="meta">end</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let str = &apos;www.jeffjade.com&apos;</div><div class="line">console.log(str.substring(0,3)) // www</div><div class="line">console.log(str.substring(0))   //www.jeffjade.com</div><div class="line">console.log(str.substring(-2))  //www.jeffjade.com (传负值则视为0)</div></pre></td></tr></table></figure>
+<h3 id="2-slice"><a href="#2-slice" class="headerlink" title="2. slice()"></a><strong>2. slice()</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.slice(start, end)</div></pre></td></tr></table></figure>
 <blockquote>
 <p>slice()方法与substring()方法非常类似，它传入的两个参数也分别对应着开始位置和结束位置。而区别在于，slice()中的参数可以为负值，如果参数是负数，则该参数规定的是从字符串的尾部开始算起的位置。也就是说，-1 指字符串的最后一个字符。</p>
 </blockquote>
-<figure class="highlight openscad"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">let</span> <span class="built_in">str</span> = 'www.jeffjade.com'</div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.slice(<span class="number">0</span>, <span class="number">3</span>))    <span class="comment">// www</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.slice(-<span class="number">3</span>, -<span class="number">1</span>))  <span class="comment">// co</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.slice(<span class="number">1</span>, -<span class="number">1</span>))   <span class="comment">// www.jeffjade.co</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.slice(<span class="number">2</span>, <span class="number">1</span>))    <span class="comment">// '' (返回空字符串,start须小于end)</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.slice(-<span class="number">3</span>, <span class="number">0</span>))   <span class="comment">// '' (返回空字符串,start须小于end)</span></div></pre></td></tr></table></figure>
-<h3 id="3-substr"><a href="#3-substr" class="headerlink" title="3. substr()"></a><strong>3. substr()</strong></h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.substr(<span class="built_in">start</span>,<span class="built_in">length</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let str = &apos;www.jeffjade.com&apos;</div><div class="line">console.log(str.slice(0, 3))    // www</div><div class="line">console.log(str.slice(-3, -1))  // co</div><div class="line">console.log(str.slice(1, -1))   // www.jeffjade.co</div><div class="line">console.log(str.slice(2, 1))    // &apos;&apos; (返回空字符串,start须小于end)</div><div class="line">console.log(str.slice(-3, 0))   // &apos;&apos; (返回空字符串,start须小于end)</div></pre></td></tr></table></figure>
+<h3 id="3-substr"><a href="#3-substr" class="headerlink" title="3. substr()"></a><strong>3. substr()</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.substr(start,length)</div></pre></td></tr></table></figure>
 <blockquote>
 <p>substr()方法可在字符串中抽取从start下标开始的指定数目的字符。其返回值为一个字符串，包含从 stringObject的start（包括start所指的字符）处开始的length个字符。如果没有指定 length，那么返回的字符串包含从start到stringObject的结尾的字符。另外如果start为负数，则表示从字符串尾部开始算起。</p>
 </blockquote>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let str = 'www.jeffjade.com'</div><div class="line">console.<span class="built_in">log</span>(webStr.<span class="built_in">substr</span>(1, 3))   <span class="comment">// ww.</span></div><div class="line">console.<span class="built_in">log</span>(webStr.<span class="built_in">substr</span>(0))      <span class="comment">// www.jeffjade.com</span></div><div class="line">console.<span class="built_in">log</span>(webStr.<span class="built_in">substr</span>(-3, 3))  <span class="comment">// com</span></div><div class="line">console.<span class="built_in">log</span>(webStr.<span class="built_in">substr</span>(-1, 5))  <span class="comment">// m  (目标长度较大的话，以实际截取的长度为准)</span></div></pre></td></tr></table></figure>
-<h3 id="4-split"><a href="#4-split" class="headerlink" title="4. split()"></a><strong>4. split()</strong></h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">str.split([<span class="string">separator</span>][<span class="symbol">, limit</span>])</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let str = &apos;www.jeffjade.com&apos;</div><div class="line">console.log(webStr.substr(1, 3))   // ww.</div><div class="line">console.log(webStr.substr(0))      // www.jeffjade.com</div><div class="line">console.log(webStr.substr(-3, 3))  // com</div><div class="line">console.log(webStr.substr(-1, 5))  // m  (目标长度较大的话，以实际截取的长度为准)</div></pre></td></tr></table></figure>
+<h3 id="4-split"><a href="#4-split" class="headerlink" title="4. split()"></a><strong>4. split()</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">str.split([separator][, limit])</div></pre></td></tr></table></figure>
 <blockquote>
 <ul>
 <li><strong>separator</strong> 指定用来分割字符串的字符（串）。separator 可以是一个字符串或正则表达式。 如果忽略 separator，则返回整个字符串的数组形式。如果 separator 是一个空字符串，则 str 将会把原字符串中每个字符的数组形式返回。</li>
 <li><strong>limit</strong> 一个整数，限定返回的分割片段数量。split 方法仍然分割每一个匹配的 separator，但是返回的数组只会截取最多 limit 个元素。</li>
 </ul>
 </blockquote>
-<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let <span class="built_in">str</span> = <span class="string">'www.jeffjade.com'</span></div><div class="line"><span class="built_in">str</span>.<span class="built_in">split</span>(<span class="string">'.'</span>)      <span class="comment">// ["www", "jeffjade", "com"]</span></div><div class="line"><span class="built_in">str</span>.<span class="built_in">split</span>(<span class="string">'.'</span>, <span class="number">1</span>)   <span class="comment">// ["www"]</span></div><div class="line"><span class="built_in">str</span>.<span class="built_in">split</span>(<span class="string">'.'</span>).<span class="built_in">join</span>(<span class="string">''</span>) <span class="comment">// wwwjeffjadecom</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">let str = &apos;www.jeffjade.com&apos;</div><div class="line">str.split(&apos;.&apos;)      // [&quot;www&quot;, &quot;jeffjade&quot;, &quot;com&quot;]</div><div class="line">str.split(&apos;.&apos;, 1)   // [&quot;www&quot;]</div><div class="line">str.split(&apos;.&apos;).join(&apos;&apos;) // wwwjeffjadecom</div></pre></td></tr></table></figure>
 <p>话说这个函数真心好用，很多时候的字符截取需求，就是依赖于某个字符；而以上三个函数都需知道其位置。我们当然可以借助 <code>indexOf</code> 等方法获取，很显然这很繁琐；而借助 <code>split</code> 则显得更轻而易举。</p>
 <h3 id="5-replace"><a href="#5-replace" class="headerlink" title="5. replace()"></a><strong>5. replace()</strong></h3><p>replace，这个方法挺有用。如果是在稍微擅长正则的情形下，用 <code>replace</code> 等方法，来截取字符串，也是一个挺不错的选择；这对于某些场景下，可达到事半功倍之效，如下示例：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let str = <span class="string">'jeff@nice&amp;jade'</span></div><div class="line">str.replace(<span class="regexp">/@[\s\S]*/g</span>, <span class="string">''</span>)       <span class="regexp">//</span> <span class="string">"jeff"</span></div><div class="line">str.replace(<span class="regexp">/@[\s\S]*&amp;/g</span>, <span class="string">''</span>)      <span class="regexp">//</span> <span class="string">"jeffjade"</span></div></pre></td></tr></table></figure>
-<h2 id="查找类方法"><a href="#查找类方法" class="headerlink" title="查找类方法"></a><strong>查找类方法</strong></h2><h3 id="1-indexOf-amp-includes"><a href="#1-indexOf-amp-includes" class="headerlink" title="1. indexOf() &amp; includes()"></a><strong>1. indexOf() &amp; includes()</strong></h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">stringObject</span><span class="selector-class">.indexOf</span>(<span class="selector-tag">searchValue</span>,<span class="selector-tag">fromIndex</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let str = &apos;jeff@nice&amp;jade&apos;</div><div class="line">str.replace(/@[\s\S]*/g, &apos;&apos;)       // &quot;jeff&quot;</div><div class="line">str.replace(/@[\s\S]*&amp;/g, &apos;&apos;)      // &quot;jeffjade&quot;</div></pre></td></tr></table></figure>
+<h2 id="查找类方法"><a href="#查找类方法" class="headerlink" title="查找类方法"></a><strong>查找类方法</strong></h2><h3 id="1-indexOf-amp-includes"><a href="#1-indexOf-amp-includes" class="headerlink" title="1. indexOf() &amp; includes()"></a><strong>1. indexOf() &amp; includes()</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.indexOf(searchValue,fromIndex)</div></pre></td></tr></table></figure>
 <blockquote>
 <p>indexOf()用来检索指定的字符串值在字符串中首次出现的位置。它可以接收两个参数，searchValue 表示要查找的子字符串，fromIndex 表示查找的开始位置，省略的话则从开始位置进行检索。</p>
 </blockquote>
-<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let <span class="built_in">str</span> = <span class="string">'www.jeffjade.com'</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.indexOf(<span class="string">'.'</span>))     <span class="comment">// 3</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.indexOf(<span class="string">'.'</span>, <span class="number">1</span>))  <span class="comment">// 3</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.indexOf(<span class="string">'.'</span>, <span class="number">5</span>))  <span class="comment">// 12</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.indexOf(<span class="string">'.'</span>, <span class="number">12</span>)) <span class="comment">// -1</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let str = &apos;www.jeffjade.com&apos;</div><div class="line">console.log(str.indexOf(&apos;.&apos;))     // 3</div><div class="line">console.log(str.indexOf(&apos;.&apos;, 1))  // 3</div><div class="line">console.log(str.indexOf(&apos;.&apos;, 5))  // 12</div><div class="line">console.log(str.indexOf(&apos;.&apos;, 12)) // -1</div></pre></td></tr></table></figure>
 <p>虽然 <code>indexOf()</code>用来检索指定的字符串值在字符串中首次出现的位置  ，然而很多时候，使用它的场景在于判断字符串中是否存在指定的字符串；因此代码就会如此：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (str.indexOf(<span class="string">'yoursPecifiedStr'</span>) !== <span class="number">-1</span>) &#123;</div><div class="line">  <span class="comment">// do something</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>要知道在这样的场景下，<span class="es6">ES6</span> 语言中的<strong>includes()</strong>就显得更优雅许多；<strong>includes()</strong> 方法用于判断一个字符串是否被包含在另一个字符串中，如果是返回true，否则返回false。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">str</span><span class="selector-class">.includes</span>(<span class="selector-tag">searchString</span><span class="selector-attr">[, position]</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">str.includes(searchString[, position])</div></pre></td></tr></table></figure>
 <blockquote>
 <p><em>searchString</em> 将要搜寻的子字符串。<em>position</em> 可选。从当前字符串的哪个索引位置开始搜寻子字符串；默认为0。需要注意的是，<strong>includes()</strong> 是区分大小写的。</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="string">'Blue Whale'</span>.includes(<span class="string">'blue'</span>); <span class="comment">// returns false</span></div><div class="line"><span class="string">'乔峰乔布斯乔帮主'</span>.includes(<span class="string">'乔布斯'</span>); <span class="comment">// returns true</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> (str.includes(<span class="string">'yoursPecifiedStr'</span>)) &#123;</div><div class="line">  <span class="comment">// do something(这样写是不是更为人性化？Yeah，这是一个更趋向人性化的时代嘛)</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="2-lastIndexOf"><a href="#2-lastIndexOf" class="headerlink" title="2.  lastIndexOf()"></a><strong>2.  lastIndexOf()</strong></h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">stringObject</span><span class="selector-class">.lastIndexOf</span>(<span class="selector-tag">searchValue</span>,<span class="selector-tag">fromIndex</span>)</div></pre></td></tr></table></figure>
+<h3 id="2-lastIndexOf"><a href="#2-lastIndexOf" class="headerlink" title="2.  lastIndexOf()"></a><strong>2.  lastIndexOf()</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.lastIndexOf(searchValue,fromIndex)</div></pre></td></tr></table></figure>
 <blockquote>
 <p>lastIndexOf()语法与indexOf()类似，它返回的是一个指定的子字符串值最后出现的位置，其检索顺序是从后向前。</p>
 </blockquote>
-<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let <span class="built_in">str</span> = <span class="string">'www.jeffjade.com'</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.lastIndexOf(<span class="string">'.'</span>))     <span class="comment">// 12</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.lastIndexOf(<span class="string">'.'</span>, <span class="number">1</span>))  <span class="comment">// -1</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.lastIndexOf(<span class="string">'.'</span>, <span class="number">5</span>))  <span class="comment">// 3</span></div><div class="line">console.<span class="built_in">log</span>(<span class="built_in">str</span>.lastIndexOf(<span class="string">'.'</span>, <span class="number">12</span>)) <span class="comment">// 12</span></div></pre></td></tr></table></figure>
-<h3 id="search"><a href="#search" class="headerlink" title="search()"></a><strong>search()</strong></h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">stringObject</span><span class="selector-class">.search</span>(<span class="selector-tag">substr</span>)</div><div class="line"><span class="selector-tag">stringObject</span><span class="selector-class">.search</span>(<span class="selector-tag">regexp</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">let str = &apos;www.jeffjade.com&apos;</div><div class="line">console.log(str.lastIndexOf(&apos;.&apos;))     // 12</div><div class="line">console.log(str.lastIndexOf(&apos;.&apos;, 1))  // -1</div><div class="line">console.log(str.lastIndexOf(&apos;.&apos;, 5))  // 3</div><div class="line">console.log(str.lastIndexOf(&apos;.&apos;, 12)) // 12</div></pre></td></tr></table></figure>
+<h3 id="search"><a href="#search" class="headerlink" title="search()"></a><strong>search()</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">stringObject.search(substr)</div><div class="line">stringObject.search(regexp)</div></pre></td></tr></table></figure>
 <blockquote>
 <p>search()方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。它会返回第一个匹配的子字符串的起始位置，如果没有匹配的，则返回-1。</p>
 </blockquote>
@@ -270,7 +270,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> str = <span class="string">'www.jeffjade.com'</span></div><div class="line"><span class="built_in">console</span>.log(str.toLowerCase())   <span class="comment">// www.jeffjade.com</span></div><div class="line"><span class="built_in">console</span>.log(str.toUpperCase())   <span class="comment">// WWW.JEFFJADE.COM</span></div></pre></td></tr></table></figure>
 <h3 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a><strong>模板字符串</strong></h3><p>这个也是 ES6 才引入进来的新语法，来解决传统输出String模板的蹩脚问题；其功能之强大，设计之贴心，着实令人得到极大满足感，好如久旱逢甘霖一般的舒畅。更何况，在当今 <code>MVVM</code> 前端框架大行其道的时代，使用 <strong>ES6</strong> 语法也是不用自己个儿去操心兼容性问题，对于塑造 <code>Dom Template</code> 更是如虎添翼，令人爱不释手。</p>
 <p>对于她的使用，阮一峰在<a href="http://es6.ruanyifeng.com/#docs/string#模板字符串" target="_blank" rel="external">ECMAScript 6 入门</a>有过详细的描述以及示例，在此就不赘述。只需要明白我们可以像这样去操作了，试问爽否？</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ncieFunc</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">"四海无人对夕阳"</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> niceMan = <span class="string">"陈寅恪"</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> jadeTalk = <span class="string">`一生负气成今日 \n <span class="subst">$&#123;ncieFunc()&#125;</span> ,</span></div><div class="line">语出 <span class="subst">$&#123;niceMan&#125;</span> 的《忆故居》。</div><div class="line">`</div><div class="line"><span class="built_in">console</span>.log(jadeTalk)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function ncieFunc() &#123;</div><div class="line">  return &quot;四海无人对夕阳&quot;;</div><div class="line">&#125;</div><div class="line">var niceMan = &quot;陈寅恪&quot;;</div><div class="line"></div><div class="line">var jadeTalk = `一生负气成今日 \n $&#123;ncieFunc()&#125; ,</div><div class="line">语出 $&#123;niceMan&#125; 的《忆故居》。</div><div class="line">`</div><div class="line">console.log(jadeTalk)</div></pre></td></tr></table></figure>
 <p>运行之，Chrome Console 输出结果如下：</p>
 <blockquote>
 <p>一生负气成今日<br> 四海无人对夕阳 ,<br>语出 陈寅恪 的《忆故居》。</p>
@@ -523,7 +523,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -590,7 +590,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -626,15 +626,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -646,19 +646,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -670,7 +666,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -678,19 +674,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -702,15 +690,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -718,7 +718,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -933,9 +933,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

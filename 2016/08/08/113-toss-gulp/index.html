@@ -141,28 +141,28 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'upload'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src( jadeWorkDir + <span class="string">'**'</span> )</div><div class="line">    .pipe(sftp(&#123;</div><div class="line">        <span class="attr">host</span>: jadeConfig.sftp.host,</div><div class="line">        <span class="attr">user</span>: jadeConfig.sftp.user,</div><div class="line">        <span class="attr">port</span>: jadeConfig.sftp.port,</div><div class="line">        <span class="attr">key</span>: jadeConfig.sftp.key,</div><div class="line">        <span class="attr">pass</span>: jadeConfig.sftp.pass,</div><div class="line">        <span class="attr">remotePath</span>: jadeConfig.sftp.remotePath + jadeConfig.objectDirName</div><div class="line">    &#125;));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>但是用它也存在一个问题：比如开启一个新的项目，初始化上传改文件夹时候（运行: <code>gulp
 upload</code>），总会报如下错误：</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">[<span class="number">15</span>:<span class="number">22</span>:<span class="number">46</span>] Starting <span class="string">'upload'</span>...</div><div class="line">[<span class="number">15</span>:<span class="number">22</span>:<span class="number">46</span>] Authenticating <span class="keyword">with</span> password.</div><div class="line">events.<span class="symbol">js:</span><span class="number">141</span></div><div class="line">    throw er; <span class="regexp">//</span> Unhandled <span class="string">'error'</span> event</div><div class="line">      ^</div><div class="line"><span class="symbol">Error:</span> No such file</div><div class="line">    at SFTP._parse (<span class="symbol">E:</span>\web\cdn\ns\node_modules\ssh2\<span class="class"><span class="keyword">lib</span>\<span class="title">SFTP</span>\<span class="title">SFTPv3</span>.<span class="title">js</span>:1090:23)</span></div><div class="line">    at ChannelStream.&lt;anonymous&gt; (<span class="symbol">E:</span>\web\cdn\ns\node_modules\ssh2\<span class="class"><span class="keyword">lib</span>\<span class="title">SFTP</span>\<span class="title">SFTPv3</span>.<span class="title">js</span>:72:10)</span></div><div class="line">    at emitOne (events.<span class="symbol">js:</span><span class="number">77</span>:<span class="number">13</span>)</div><div class="line">    at ChannelStream.emit (events.<span class="symbol">js:</span><span class="number">169</span>:<span class="number">7</span>)</div><div class="line">    at readableAddChunk (_stream_readable.<span class="symbol">js:</span><span class="number">146</span>:<span class="number">16</span>)</div><div class="line">    at ChannelStream.Readable.push (_stream_readable.<span class="symbol">js:</span><span class="number">110</span>:<span class="number">10</span>)</div><div class="line">    at Parser.&lt;anonymous&gt; (<span class="symbol">E:</span>\web\cdn\ns\node_modules\ssh2\<span class="class"><span class="keyword">lib</span>\<span class="title">Channel</span>.<span class="title">js</span>:102:25)</span></div><div class="line">    at emitOne (events.<span class="symbol">js:</span><span class="number">77</span>:<span class="number">13</span>)</div><div class="line">    at Parser.emit (events.<span class="symbol">js:</span><span class="number">169</span>:<span class="number">7</span>)</div><div class="line">    at Parser.parsePacket (<span class="symbol">E:</span>\web\cdn\ns\node_modules\ssh2\<span class="class"><span class="keyword">lib</span>\<span class="title">Parser</span>.<span class="title">js</span>:607:12)</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">[15:22:46] Starting &apos;upload&apos;...</div><div class="line">[15:22:46] Authenticating with password.</div><div class="line">events.js:141</div><div class="line">    throw er; // Unhandled &apos;error&apos; event</div><div class="line">      ^</div><div class="line">Error: No such file</div><div class="line">    at SFTP._parse (E:\web\cdn\ns\node_modules\ssh2\lib\SFTP\SFTPv3.js:1090:23)</div><div class="line">    at ChannelStream.&lt;anonymous&gt; (E:\web\cdn\ns\node_modules\ssh2\lib\SFTP\SFTPv3.js:72:10)</div><div class="line">    at emitOne (events.js:77:13)</div><div class="line">    at ChannelStream.emit (events.js:169:7)</div><div class="line">    at readableAddChunk (_stream_readable.js:146:16)</div><div class="line">    at ChannelStream.Readable.push (_stream_readable.js:110:10)</div><div class="line">    at Parser.&lt;anonymous&gt; (E:\web\cdn\ns\node_modules\ssh2\lib\Channel.js:102:25)</div><div class="line">    at emitOne (events.js:77:13)</div><div class="line">    at Parser.emit (events.js:169:7)</div><div class="line">    at Parser.parsePacket (E:\web\cdn\ns\node_modules\ssh2\lib\Parser.js:607:12)</div></pre></td></tr></table></figure>
 <p>查究了一番，原来是<strong>gulp-sftp</strong>不存在的远程文件夹不容创建（忧）。</p>
 <blockquote>
 <p>Folders which do not exist remotely can´t be created. 参见<a href="https://github.com/gtg092x/gulp-sftp/issues/22" target="_blank" rel="external">gtg092x/gulp-sftp</a>；</p>
 </blockquote>
 <p>（update@2016-06-28）有得一些空闲，又重新回看这个问题；有想过，设定 <code>remotePath</code> 为外层文件夹，显然这不是一个好的解决办法；也尝试一个新的插件譬如 <a href="https://www.npmjs.com/package/gulp-ftp" target="_blank" rel="external">gulp-ftp</a>，竟然不能很好地工作。阴差阳错的对<code>remotePath</code>配置的路径做了改变，这问题就消失了；更改 <em>“/xxx/yyy/zzz/targetFolder/”</em> 为 <em>“/xxx/yyy/zzz/targetFolder”</em>，即okay了。</p>
-<h3 id="gulp-autoprefixer-Prefix-CSS"><a href="#gulp-autoprefixer-Prefix-CSS" class="headerlink" title="gulp-autoprefixer:Prefix CSS"></a><a href="https://www.npmjs.com/package/gulp-autoprefixer" target="_blank" rel="external">gulp-autoprefixer</a>:Prefix CSS</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">gulp.<span class="keyword">task</span>(<span class="symbol">'autoprefixer</span>', <span class="keyword">function</span> <span class="title"></span>() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="type">gulp.src(</span> [<span class="symbol">'src</span>/css/*.css<span class="string">','</span>!src/css/*.min.css'] )</div><div class="line">        .pipe(autoprefixer(&#123;</div><div class="line">            browsers: [<span class="symbol">'last</span> <span class="number">2</span> versions', <span class="symbol">'safari</span> <span class="number">8</span>', <span class="symbol">'ie</span> <span class="number">9</span>', <span class="symbol">'ie</span> <span class="number">10</span>', '&gt; <span class="number">5</span>%', <span class="symbol">'Firefox</span> &gt; <span class="number">10</span>'],</div><div class="line">            cascade: <span class="literal">false</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(gulp.dest( basePath + <span class="symbol">'css</span>/' ));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="gulp-autoprefixer-Prefix-CSS"><a href="#gulp-autoprefixer-Prefix-CSS" class="headerlink" title="gulp-autoprefixer:Prefix CSS"></a><a href="https://www.npmjs.com/package/gulp-autoprefixer" target="_blank" rel="external">gulp-autoprefixer</a>:Prefix CSS</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">gulp.task(&apos;autoprefixer&apos;, function () &#123;</div><div class="line">    return gulp.src( [&apos;src/css/*.css&apos;,&apos;!src/css/*.min.css&apos;] )</div><div class="line">        .pipe(autoprefixer(&#123;</div><div class="line">            browsers: [&apos;last 2 versions&apos;, &apos;safari 8&apos;, &apos;ie 9&apos;, &apos;ie 10&apos;, &apos;&gt; 5%&apos;, &apos;Firefox &gt; 10&apos;],</div><div class="line">            cascade: false</div><div class="line">        &#125;))</div><div class="line">        .pipe(gulp.dest( basePath + &apos;css/&apos; ));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>使用gulp-autoprefixer根据设置浏览器版本自动处理浏览器前缀。使用她我们可以很潇洒地写代码，不必考虑各浏览器兼容前缀。【特别是开发移动端页面时，就能充分体现它的优势。例如兼容性不太好的flex布局。】但是，使用这东西，需要注意的点是，她不能很好的工作，对于已然压缩过的CSS文件。</p>
 <h3 id="gulp-useref-gulp-rev"><a href="#gulp-useref-gulp-rev" class="headerlink" title="gulp-useref |  gulp-rev"></a><a href="https://www.npmjs.com/package/gulp-useref" target="_blank" rel="external">gulp-useref</a> |  <a href="https://github.com/sindresorhus/gulp-rev" target="_blank" rel="external">gulp-rev</a></h3><p><strong>活久见</strong>是蛮有意思的，如此就可以更多体验那些存在；这两个插件也是在用了<code>webpack</code>之后，接触别的古董型项目才了解到的；这 <code>gulp-useref</code> 她可以把html里零碎的这些引入合并成一个文件，当然<strong>它只负责合并，不负责压缩</strong>！所以合并出来的文件我们要自行压缩，压缩以后调用 <code>gulp-rev</code> 负责在文件名后追加hash（如果项目使用CDN容易造成缓存的话）。最后调用<code>gulp-rev-replace</code> 抑或 <code>gulp-rev-collector</code> 负责把最终的文件名替换回HTML中去；看起来是不是有些意思呢？对此官方给出的如下：</p>
 <blockquote>
 <p><strong>gulp-useref</strong>:Parse build blocks in HTML files to replace references to non-optimized scripts or stylesheets.<br><strong>gulp-rev</strong>: Static asset revisioning by appending content hash to filenames unicorn.css → unicorn-d41d8cd98f.css</p>
 </blockquote>
 <p>gulp-useref识别的就是build开头的注释，build后面首先跟的是类型扩展名，然后后面的路径就是build区块中的所有文件进行合并后的文件路径，这个相对路径是相对于这个HTML的路径。一个简单的示例如下：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- build:css css/combined.css --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"css/one.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"css/two.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- endbuild --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- build:js scripts/combined.js --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"scripts/one.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"scripts/two.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- endbuild --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;!-- build:css css/combined.css --&gt;</div><div class="line">    &lt;link href=&quot;css/one.css&quot; rel=&quot;stylesheet&quot;&gt;</div><div class="line">    &lt;link href=&quot;css/two.css&quot; rel=&quot;stylesheet&quot;&gt;</div><div class="line">    &lt;!-- endbuild --&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;!-- build:js scripts/combined.js --&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;scripts/one.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;scripts/two.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;!-- endbuild --&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <p>经过运行一段蛮复杂的gulp脚本之后，以上示例将会被打包成这样(当然这里未使用<code>gulp-rev</code>来做版本控制)：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css/combined.css"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"scripts/combined.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/combined.css&quot;/&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;script src=&quot;scripts/combined.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <p>脚本写完了，写代码也还需注意的蛮多，比如说，这带有<code>&lt;!--build:xxx  --&gt;&lt;!-- endbuild --&gt;</code>的内部，所引用的资源得是本地的，如果其中链接一发在线css/js，抱歉打包工作将不能很好的进行了；再有其中如果引用js，也不能将书写js代码，只能是引用本地js文件；如果项目中有多个 html,那么每个文件中所规定合成的文件名也须当做下区分 ……；所以说这般使用，多少有些古董化玩儿法，还是<code>Vue + Webpack</code>大法好；这里的稍作介绍，也是对这过去的某种玩儿法的一种缅怀，当然了，如今你想这么玩儿，写下来也能是一点点参考。</p>
 <h3 id="gulp-order-指定次序"><a href="#gulp-order-指定次序" class="headerlink" title="gulp-order: 指定次序"></a><a href="https://github.com/sirlantis/gulp-order" target="_blank" rel="external">gulp-order</a>: 指定次序</h3><blockquote>
 <p>The gulp plugin gulp-order allows you to reorder a stream of files using the same syntax as of gulp.src.</p>
 </blockquote>
 <p>众所周知在写js时候，文件引入总要有一定顺序，至少依赖了某个文件，总要在使用该文件之前引入；即便是合并压缩到一起。故而就使得再合并js之后，有可能就不能很好的工作（毕竟执行gulp stream 的顺序，并不会依照写script标签的次序），这就需要额外指定压合并顺序，<code>gulp-order</code>就能很好承担这项工作，示例如下：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gulp</span><span class="selector-class">.task</span>(<span class="string">'mergeJs'</span>, function()&#123;</div><div class="line">    <span class="selector-tag">gulp</span><span class="selector-class">.src</span>(<span class="string">'./src/*.js'</span>)</div><div class="line">    <span class="selector-class">.pipe</span>(order([</div><div class="line">            <span class="string">'jquery-2.1.4.min.js'</span>,</div><div class="line">            <span class="string">'*.js'</span>,</div><div class="line">            <span class="string">'bootstrap.min.js'</span></div><div class="line">        ]))</div><div class="line">    <span class="selector-class">.pipe</span>(concat(<span class="string">'combined.js'</span>))</div><div class="line">    <span class="selector-class">.pipe</span>(rename(&#123;<span class="attribute">suffix</span>: <span class="string">'.min'</span>&#125;))</div><div class="line">    <span class="selector-class">.pipe</span>(gulp.dest(distPath))</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">gulp.task(&apos;mergeJs&apos;, function()&#123;</div><div class="line">    gulp.src(&apos;./src/*.js&apos;)</div><div class="line">    .pipe(order([</div><div class="line">            &apos;jquery-2.1.4.min.js&apos;,</div><div class="line">            &apos;*.js&apos;,</div><div class="line">            &apos;bootstrap.min.js&apos;</div><div class="line">        ]))</div><div class="line">    .pipe(concat(&apos;combined.js&apos;))</div><div class="line">    .pipe(rename(&#123;suffix: &apos;.min&apos;&#125;))</div><div class="line">    .pipe(gulp.dest(distPath))</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>冰心说：『眼因多流泪水而愈益清明，心因饱经忧患而愈益温厚』；这是对生活有多么丰富的经历，以及透彻领悟才能锻造出来的心怀态度啊。对于技术，其实本源也是如此；只有我们主动去见识，去尝试，去折腾，去塑新，才能雕琢出更强大的自己(/技术)；也才不会在事情降临之时，显得无助与见肘。相信吧：<strong>A Problem Is A Chance For You To Your Best.</strong>。既然谈及了些鸡汤，那就不妨再荐一发广告：有在简书，建立专题<a href="http://www.jianshu.com/collection/2f6a49e22121" target="_blank" rel="external">《折腾之美》</a>着重搜集汇藏“折腾”之法，以令生活更简洁而丰美为定调。虽然简书已然演化为鸡汤遍野，壮语横行的一席催进地；希冀这《折腾之美》醉中流醒，仍为一抔实用田。</p>
 <hr>
 <p><strong>猜你喜欢：</strong><br><a href="https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/">Gulp探究折腾之路(I)</a><br><a href="https://www.jeffjade.com/2016/01/19/2016-01-19-toss-gulp/">Gulp折腾之路(II)</a></p>
@@ -228,7 +228,7 @@ upload</code>），总会报如下错误：</p>
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/NodeJs/">NodeJs</a><a href="/tags/Gulp/">Gulp</a>
+  <span></span> <a href="/tags/Gulp/">Gulp</a><a href="/tags/NodeJs/">NodeJs</a>
   </div>
 
 </div>
@@ -388,7 +388,7 @@ upload</code>），总会报如下错误：</p>
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -455,7 +455,7 @@ upload</code>），总会报如下错误：</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -491,15 +491,15 @@ upload</code>），总会报如下错误：</p>
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -511,19 +511,15 @@ upload</code>），总会报如下错误：</p>
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -535,7 +531,7 @@ upload</code>），总会报如下错误：</p>
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -543,19 +539,11 @@ upload</code>），总会报如下错误：</p>
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -567,15 +555,27 @@ upload</code>），总会报如下错误：</p>
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -583,7 +583,7 @@ upload</code>），总会报如下错误：</p>
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -798,9 +798,9 @@ upload</code>），总会报如下错误：</p>
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

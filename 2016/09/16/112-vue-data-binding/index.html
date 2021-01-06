@@ -139,7 +139,7 @@
 <p><strong>微注：</strong> 本博客也基于 <em>Hexo</em> 驱动，其目测不支持多个大括号渲染，所以这里只好暂时先用<code>\</code>做下转义了。另外，为了方便电脑端阅读，自此有对网页加入 <code>Enter</code> 键监听，用以切换 show / hide 侧边栏。</p>
 </blockquote>
 <p>在文档中，我们可以轻易的知道，Vue 为数据，Class, Style，表单控件的绑定；属性的计算，条件、列表渲染；方法、事件处理等等等提供了诸多便捷的方法；所以我们可以很简洁的写出模版，例如这样的；</p>
-<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Bindind Message Using Mustache（双大括号）: </span><span class="template-variable">&#123;&#123; msg &#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>This will never change(mustache with *): <span class="template-variable">&#123;\&#123;* msg &#125;</span><span class="xml">\&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Bing htmlText using three Mustache label Like This : <span class="template-variable">&#123;\&#123;\&#123; htmlText &#125;</span><span class="xml">\&#125;\&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"item-</span></span><span class="template-variable">&#123;\&#123; id &#125;</span><span class="xml"><span class="tag"><span class="string">\&#125;"</span>&gt;</span>Html Attributes Using Mustache<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="template-variable">&#123;\&#123; message.split('').reverse().join('') &#125;</span><span class="xml">\&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"</span></span><span class="template-variable">&#123;\&#123; className &#125;</span><span class="xml"><span class="tag"><span class="string">\&#125;"</span>&gt;</span>Binding class using Mustache Label<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;span&gt;Bindind Message Using Mustache（双大括号）: &#123;&#123; msg &#125;&#125;&lt;/span&gt;</div><div class="line">&lt;span&gt;This will never change(mustache with *): &#123;\&#123;* msg &#125;\&#125;&lt;/span&gt;</div><div class="line">&lt;div&gt;Bing htmlText using three Mustache label Like This : &#123;\&#123;\&#123; htmlText &#125;\&#125;\&#125;&lt;/div&gt;</div><div class="line">&lt;div id=&quot;item-&#123;\&#123; id &#125;\&#125;&quot;&gt;Html Attributes Using Mustache&lt;/div&gt;</div><div class="line">&lt;div&gt;&#123;\&#123; message.split(&apos;&apos;).reverse().join(&apos;&apos;) &#125;\&#125;&lt;/div&gt;</div><div class="line">&lt;div class=&quot;&#123;\&#123; className &#125;\&#125;&quot;&gt;Binding class using Mustache Label&lt;/div&gt;</div></pre></td></tr></table></figure>
 <p>谈及这数据的绑定就涉及到好几种符号®，比如：Mustache 语法标签的<code>{\{ }\}</code>,三Mustache标签，引号(单双)，括号<code>()</code>，对象<code>{}</code>，甚至数组<code>[]</code>；初始用起来，挺容易使人迷惑的，如果没认真读文档的话；用了蛮久之后，回过头再读文档，有以下感悟，如有不准确处，请慷慨予以指正：</p>
 <blockquote>
 <ol>
@@ -151,8 +151,8 @@
 <li>对于上一条，Vue 温馨的考量到字符串拼接麻烦又易错，所以对于<code>class</code> 和 <code>style</code>的绑定，除了支持字符串外，还额外增强使其能支持对象或数组，所以就可以有以下用法：</li>
 </ol>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"static"</span> v-bind:<span class="class"><span class="keyword">class</span></span>=<span class="string">"&#123; 'class-a': isA, 'class-b': isB &#125;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">&lt;div v-bind:<span class="class"><span class="keyword">class</span></span>=<span class="string">"[classA, classB]"</span>&gt;</div></pre></td></tr></table></figure>
-<p>以上这写几点，有使用 <strong>jsfiddle</strong> 做一小 Demo 予以说明，这也是对部分特殊写法的一个小记录；其中有提到这样的写法：<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:style</span>=<span class="string">"</span></span></span><span class="template-variable">&#123;'width': `$&#123;100 / this.count&#125;</span><span class="xml"><span class="tag"><span class="string">%`&#125;"</span>&gt;</span>Text Desc<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;static&quot; v-bind:class=&quot;&#123; &apos;class-a&apos;: isA, &apos;class-b&apos;: isB &#125;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div v-bind:class=&quot;[classA, classB]&quot;&gt;</div></pre></td></tr></table></figure>
+<p>以上这写几点，有使用 <strong>jsfiddle</strong> 做一小 Demo 予以说明，这也是对部分特殊写法的一个小记录；其中有提到这样的写法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div :style=&quot;&#123;&apos;width&apos;: `$&#123;100 / this.count&#125;%`&#125;&quot;&gt;Text Desc&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 <p>这样的动态写法虽然看起来不是很优雅，用起来也不是很方便，但不失为一种用法，这其中也运用了 Es6 语法；然而这种写法使用用起来，还是挺使得人很是沮丧的，即便用了 babel 转化，某些时候却不能得到正确的解析，Vue 给出了如下警告：</p>
 <blockquote>
 <p>Invalid expression. Generated function body:  {‘width’:<code>scope.${100/this.count}%</code>}</p>
@@ -164,7 +164,7 @@
 <p>当然，大多情形之下，并不是很肯定将各种 class, style 的操纵，放置于<strong>Template</strong>中，即便使用<code>jade</code>等一些模版语言辅助，也会使得整个 Dom 结构看起来，没那么清晰明朗，能方便切类予以实现的，最好用这种方式，毕竟简洁才美。但，总有些略为复杂的需求，相比于在逻辑中去循环遍历，以操弄 Dom 来动态改变，那么在模版中去操纵 style 反而显得会更优雅；我们已经知道，Mustache语法，可以解析表达式；表达式中可以以 String 来映射对象，数组，想必也可以对应调用其实例中的方法，试一试？</p>
 <script async src="//jsfiddle.net/ozbg045w/50/embed/js,html,css,result/dark/"></script>
 
-<p>如上例所示，果然，Vue 真是贴心；记得上次做某个看似颇有些复杂的需求，试用此法，将判断逻辑固定 <code>methods</code>中，免去了再次遍历的无奈，很是优雅的解决问题。这岂能不令人欢喜？更何况，Vue 还提供了其它若干十分人性化的处理方案，譬如：<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> @<span class="attr">click</span>=<span class="string">"onXxxClick(param)"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></div><div class="line"><span class="comment">&lt;!-- 阻止单击事件冒泡 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> @<span class="attr">click.stop</span>=<span class="string">"doThisFunc"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 修饰符可以串联 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.stop.prevent</span>=<span class="string">"doThat"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">slider</span>(@<span class="attr">mouseover</span>=<span class="string">"pause &amp;&amp; pausePlay()"</span>, @<span class="attr">mouseout</span>=<span class="string">"pause &amp;&amp; goPlay()"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>)</div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-on:keyup.13</span>=<span class="string">"submitFuncName"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-on:keyup.enter</span>=<span class="string">"submitFuncName"</span>&gt;</span> //为最常用的按键提供别名</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 用 v-model 指令在表单控件元素上创建双向数据绑定 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"checked"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"checkbox"</span>&gt;</span><span class="template-variable">&#123;\&#123; checked &#125;</span><span class="xml">\&#125;<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 在 "change" 而不是 "input" 事件中更新 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"msg"</span> <span class="attr">lazy</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>如上例所示，果然，Vue 真是贴心；记得上次做某个看似颇有些复杂的需求，试用此法，将判断逻辑固定 <code>methods</code>中，免去了再次遍历的无奈，很是优雅的解决问题。这岂能不令人欢喜？更何况，Vue 还提供了其它若干十分人性化的处理方案，譬如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;javascript:;&quot; @click=&quot;onXxxClick(param)&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;!-- 阻止单击事件冒泡 --&gt;</div><div class="line">&lt;a @click.stop=&quot;doThisFunc&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;!-- 修饰符可以串联 --&gt;</div><div class="line">&lt;a v-on:click.stop.prevent=&quot;doThat&quot;&gt;</div><div class="line"></div><div class="line">&lt;div slider(@mouseover=&quot;pause &amp;&amp; pausePlay()&quot;, @mouseout=&quot;pause &amp;&amp; goPlay()&quot;&gt;&lt;/div&gt;)</div><div class="line">&lt;input v-on:keyup.13=&quot;submitFuncName&quot;&gt;</div><div class="line">&lt;input v-on:keyup.enter=&quot;submitFuncName&quot;&gt; //为最常用的按键提供别名</div><div class="line"></div><div class="line">&lt;!-- 用 v-model 指令在表单控件元素上创建双向数据绑定 --&gt;</div><div class="line">&lt;input type=&quot;checkbox&quot; id=&quot;checkbox&quot; v-model=&quot;checked&quot;&gt;</div><div class="line">&lt;label for=&quot;checkbox&quot;&gt;&#123;\&#123; checked &#125;\&#125;&lt;/label&gt;</div><div class="line"></div><div class="line">&lt;!-- 在 &quot;change&quot; 而不是 &quot;input&quot; 事件中更新 --&gt;</div><div class="line">&lt;input v-model=&quot;msg&quot; lazy&gt;</div></pre></td></tr></table></figure></p>
 <p>关于 Vue，文档写的再清楚没有了，所以也没有额外啰嗦的必要。但，使用之时毕竟还牵扯到很多插件、库、组件等，涉及诸多不同的机制，对于不是很熟悉的部分，偶尔会陷入一些麻烦；为此也会偶尔将遇到的这些问题，做下整理记录在 <a href="http://nicejade.github.io/2016/09/14/solve-vue-common-problems.html" target="_blank" rel="external">Vue 常见问题解决方案记录</a>。</p>
 <p>很久很久以前，荀子《劝学》中有言道：<strong>君子生非异也 善假于物也</strong>，纵隔千年万载，大有其理。在前端行走的这大半年，十二分感谢有 <code>Vue</code> 这般的器具存在，使得总产生一种感觉，有这利器存在，任何需求插来都不虚。据<strong>学以致用<em>**</em></strong>的道理，那么就先言及于此，其余的比如源码什么的，需要时候再学再纪录。谈到这<strong>善假于物也</strong>，在使用<code>Vue</code>伊始，基本都是自己个儿亲手搭建<code>vue</code>项目，编写常用组件，以及做<code>Webpack</code>、<code>Gulp</code>等配置；近期琐事儿繁忙，也就多去假于物了；这其中用了不少组件或者库，用来甚是趁手，安利如下：</p>
 <blockquote>
@@ -249,7 +249,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Vue/">Vue</a><a href="/tags/JavaScript/">JavaScript</a>
+  <span></span> <a href="/tags/JavaScript/">JavaScript</a><a href="/tags/Vue/">Vue</a>
   </div>
 
 </div>
@@ -409,7 +409,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -476,7 +476,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -512,15 +512,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -532,19 +532,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -556,7 +552,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -564,19 +560,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -588,15 +576,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -604,7 +604,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -819,9 +819,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

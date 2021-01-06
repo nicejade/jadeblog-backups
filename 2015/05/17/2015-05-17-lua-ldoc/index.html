@@ -143,9 +143,9 @@
 </ul>
 </blockquote>
 <p>　　Ldoc虽然可以针对某个lua文件生成文档，但是更加推荐的方式是通过config.ld来对需要生成文档的项目进行配置，之后，只要在config.ld所在的文档使用Ldoc .即可对配置好的文件夹生成文档。</p>
-<h3 id="Ldoc安装"><a href="#Ldoc安装" class="headerlink" title="Ldoc安装"></a><strong>Ldoc安装</strong></h3><p>　　Ldoc唯一依赖的库是<a href="https://github.com/stevedonovan/Penlight" target="_blank" rel="external">Penlight</a>,PenLight又依赖于<a href="http://keplerproject.github.io/luafilesystem/" target="_blank" rel="external">LuaFileSystem</a>,这些库在LuaForWindows中都已经有了。可以直接通过luarocks来安装LDoc:<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">luarocks <span class="keyword">install</span> Ldoc -v</div></pre></td></tr></table></figure></p>
-<p>　　而<code>luarocks</code>可以参见D.H.Q的烂笔头的这篇文章<a href="http://dhq.me/luarocks-a-deployment-and-management-system-for-lua-modules" target="_blank" rel="external">Lua 的模块安装和部署工具 - LuaRocks</a>；讲的很详细，也可以接触更多关于LuaRocks的功能。在Mac下面安装<code>luarocks</code> 可以直接使用<a href="https://jeffjade.com/2015/05/16/2015-05-16-mac-musthave-software/" target="_blank" rel="external">brew</a>来安装(当然也有可能不会成功，如果Brew没有内置luarocks的话)：<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">brew </span><span class="keyword">install </span>luarocks -v</div></pre></td></tr></table></figure></p>
-<p>　　最好还是安装<a href="https://luarocks.org" target="_blank" rel="external">luarocks官网</a>上的办法(Installing LuaRocks in a Unix system:)：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">wget</span> http://luarocks.org/releases/luarocks-2.2.1.tar.gz</div><div class="line">tar zxpf luarocks-<span class="number">2</span>.<span class="number">2</span>.<span class="number">1</span>.tar.gz</div><div class="line">cd luarocks-<span class="number">2</span>.<span class="number">2</span>.<span class="number">1</span></div><div class="line">./configure; <span class="attribute">sudo</span> make bootstrap</div><div class="line">sudo luarocks install luasocket</div></pre></td></tr></table></figure></p>
+<h3 id="Ldoc安装"><a href="#Ldoc安装" class="headerlink" title="Ldoc安装"></a><strong>Ldoc安装</strong></h3><p>　　Ldoc唯一依赖的库是<a href="https://github.com/stevedonovan/Penlight" target="_blank" rel="external">Penlight</a>,PenLight又依赖于<a href="http://keplerproject.github.io/luafilesystem/" target="_blank" rel="external">LuaFileSystem</a>,这些库在LuaForWindows中都已经有了。可以直接通过luarocks来安装LDoc:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">luarocks install Ldoc -v</div></pre></td></tr></table></figure></p>
+<p>　　而<code>luarocks</code>可以参见D.H.Q的烂笔头的这篇文章<a href="http://dhq.me/luarocks-a-deployment-and-management-system-for-lua-modules" target="_blank" rel="external">Lua 的模块安装和部署工具 - LuaRocks</a>；讲的很详细，也可以接触更多关于LuaRocks的功能。在Mac下面安装<code>luarocks</code> 可以直接使用<a href="https://jeffjade.com/2015/05/16/2015-05-16-mac-musthave-software/" target="_blank" rel="external">brew</a>来安装(当然也有可能不会成功，如果Brew没有内置luarocks的话)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install luarocks -v</div></pre></td></tr></table></figure></p>
+<p>　　最好还是安装<a href="https://luarocks.org" target="_blank" rel="external">luarocks官网</a>上的办法(Installing LuaRocks in a Unix system:)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">wget http://luarocks.org/releases/luarocks-2.2.1.tar.gz</div><div class="line">tar zxpf luarocks-2.2.1.tar.gz</div><div class="line">cd luarocks-2.2.1</div><div class="line">./configure; sudo make bootstrap</div><div class="line">sudo luarocks install luasocket</div></pre></td></tr></table></figure></p>
 <p>wget，Mac下是没有自带的，可以使用brew来安装；brew也是没有自带的，其安装可以参见<a href="https://jeffjade.com/2015/05/16/2015-05-16-mac-musthave-software/" target="_blank" rel="external">Here</a>；</p>
 <h3 id="Ldoc使用"><a href="#Ldoc使用" class="headerlink" title="Ldoc使用"></a><strong>Ldoc使用</strong></h3><p>　　第一步我们需要配置一个config.ld文件来说明我们的项目，在这次演示中，我们创建了一个名字叫做testLDoc的项目，config.ld中的内容如下：</p>
 <blockquote>
@@ -223,7 +223,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Toss/">Toss</a><a href="/tags/Share/">Share</a><a href="/tags/Lua/">Lua</a>
+  <span></span> <a href="/tags/Share/">Share</a><a href="/tags/Toss/">Toss</a><a href="/tags/Lua/">Lua</a>
   </div>
 
 </div>
@@ -383,7 +383,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -450,7 +450,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -486,15 +486,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -506,19 +506,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -530,7 +526,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -538,19 +534,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -562,15 +550,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -578,7 +578,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -793,9 +793,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

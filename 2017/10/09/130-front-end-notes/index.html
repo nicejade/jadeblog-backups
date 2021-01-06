@@ -138,7 +138,7 @@
 <h3 id="制作响应电子邮件模板"><a href="#制作响应电子邮件模板" class="headerlink" title="制作响应电子邮件模板"></a><strong>制作响应电子邮件模板</strong></h3><p>近期，为制作一套响应电子邮件模板，倍感疲惫，苦煞心也。当然也收获些许经验，当你需要的是一个非常简单的响应式HTML电子邮件模板时，你可以这样做：可参见 <a href="https://github.com/leemunroe/responsive-html-email-template" target="_blank" rel="external">responsive-html-email-template</a>。看起来真的很简单，但实践起来这不是简单且不友好的。当然，你可以使用一些工具，如 <code>gulp</code> ＆ <code>gulp-inline-css</code>，代码如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">  inlineCss = <span class="built_in">require</span>(<span class="string">'gulp-inline-css'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'inline-css'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> gulp.src(<span class="string">'./src/**/*.html'</span>)</div><div class="line">    .pipe(inlineCss())</div><div class="line">    .pipe(gulp.dest(<span class="string">'build/'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watch'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'./src/**/*.html'</span>, [<span class="string">'inline-css'</span>])</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watch'</span>])</div></pre></td></tr></table></figure>
 <p>它可以帮助你制作邮件模板，如写一个网页一样。但是你必须自己支持，哦，糟糕。你可能很无奈，直到你见到她 —— <a href="https://mjml.io/" target="_blank" rel="external">mjml</a>，她可能是你的救星，关于如何简单制作一套优质的响应式邮件模板。美中不足的是，她也有一些问题。所以，我提供了这个工具，让你更容易使用她，具体参见 <a href="https://github.com/nicejade/responsive-email-template" target="_blank" rel="external">responsive-email-template</a>。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git clone https:<span class="comment">//github.com/nicejade/responsive-email-template</span></div><div class="line">npm <span class="selector-tag">i</span> (yarn)</div><div class="line">./node_modules/.bin/mjml --watch src/index<span class="selector-class">.mjml</span> -o build/index<span class="selector-class">.html</span></div><div class="line"></div><div class="line">gulp (If you need extra style)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/nicejade/responsive-email-template</div><div class="line">npm i (yarn)</div><div class="line">./node_modules/.bin/mjml --watch src/index.mjml -o build/index.html</div><div class="line"></div><div class="line">gulp (If you need extra style)</div></pre></td></tr></table></figure>
 <blockquote>
 <p>@2017-10-12 于深圳.南山</p>
 </blockquote>
@@ -234,7 +234,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Vue/">Vue</a><a href="/tags/Share/">Share</a><a href="/tags/JavaScript/">JavaScript</a>
+  <span></span> <a href="/tags/Share/">Share</a><a href="/tags/JavaScript/">JavaScript</a><a href="/tags/Vue/">Vue</a>
   </div>
 
 </div>
@@ -394,7 +394,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -461,7 +461,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -497,15 +497,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -517,19 +517,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -541,7 +537,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -549,19 +545,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -573,15 +561,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -589,7 +589,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -804,9 +804,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

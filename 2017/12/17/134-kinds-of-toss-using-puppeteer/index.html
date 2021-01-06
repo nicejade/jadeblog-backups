@@ -156,16 +156,16 @@
 </blockquote>
 <hr>
 <h2 id="Puppeteer-轻松入门"><a href="#Puppeteer-轻松入门" class="headerlink" title="Puppeteer 轻松入门"></a><strong>Puppeteer 轻松入门</strong></h2><p>想要在项目中使用 <code>Puppeteer</code>，只需要运行如下命令安装即可；不过要注意的是：<code>Puppeteer</code> 至少需要 Node v6.4.0，如要使用 <strong>async / await</strong>，只有 Node v7.6.0 或更高版本才支持；另外，安装 <code>Puppeteer</code> 时，它会下载最新版本的 <strong>Chromium</strong>（〜71Mb Mac，〜90Mb Linux，〜110Mb Win），保证与 API 协同工作。</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yarn <span class="keyword">add</span><span class="bash"> puppeteer</span></div><div class="line"><span class="comment"># or "npm i puppeteer"</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yarn add puppeteer</div><div class="line"># or &quot;npm i puppeteer&quot;</div></pre></td></tr></table></figure>
 <p>对于如何使用 <code>Puppeteer</code>，这非常之容易；如下简易的示例，即实现了：导航到 <code>https://example.com</code> 并将截屏保存为 example.png；</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> puppeteer = <span class="built_in">require</span>(<span class="string">'puppeteer'</span>);</div><div class="line"></div><div class="line"><span class="function">(<span class="params"><span class="keyword">async</span> (</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> puppeteer.launch();</div><div class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.newPage();</div><div class="line">  <span class="keyword">await</span> page.goto(<span class="string">'https://example.com'</span>);</div><div class="line">  <span class="keyword">await</span> page.screenshot(&#123;<span class="attr">path</span>: <span class="string">'example.png'</span>&#125;);</div><div class="line"></div><div class="line">  <span class="keyword">await</span> browser.close();</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">const puppeteer = require(&apos;puppeteer&apos;);</div><div class="line"></div><div class="line">(async () =&gt; &#123;</div><div class="line">  const browser = await puppeteer.launch();</div><div class="line">  const page = await browser.newPage();</div><div class="line">  await page.goto(&apos;https://example.com&apos;);</div><div class="line">  await page.screenshot(&#123;path: &apos;example.png&apos;&#125;);</div><div class="line"></div><div class="line">  await browser.close();</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
 <p>更多示例可参考 <a href="https://github.com/GoogleChrome/puppeteer#usage" target="_blank" rel="external">GoogleChrome Puppeteer Usage</a>；在略为熟悉 <a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md" target="_blank" rel="external">Puppeteer的 Api</a> 之后，即可用来她操纵浏览器，来为你做些你想搞的事儿；不过值得一提的是，她现在还处于开发阶段，随着版本的更替，Api 接口也有可能会跟着略有变动。<a href="https://github.com/nicejade/toss-puppeteer" target="_blank" rel="external">Toss Puppeteer</a>，这是在 Github 创建的一个仓库，以承载尝试使用 GoogleChrome Puppeteer 做的各种的折腾，具体如下：</p>
 <hr>
 <blockquote>
 <p><strong>微注：</strong> 鉴于个人信息不便于提交，已设置 git 提交忽视私密配置文件；如要运行如下几个 Demo，需要手动在 <code>src/config</code> 目录下，创建 <em>secret.js</em>，格式如 <em>secretSample.js</em> 所示(🍀️)。</p>
 </blockquote>
 <h2 id="自动抓取指定网站文章分享至指定网站"><a href="#自动抓取指定网站文章分享至指定网站" class="headerlink" title="自动抓取指定网站文章分享至指定网站"></a><strong>自动抓取指定网站文章分享至指定网站</strong></h2><p>这番折腾，是基于 <code>Puppeteer</code> 抓取某网页链接（ 具体是在 <a href="https://jeffjade.com/categories/Front-End/" target="_blank" rel="external">https://jeffjade.com/categories/Front-End/</a> 中随机出一篇），将其推送到<a href="http://blogread.cn/news/" target="_blank" rel="external">技术头条</a>；其目的在于：练习初步运用 <code>Puppeteer</code>。</p>
-<h3 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a><strong>运行命令</strong></h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/nicejade/toss-puppeteer</div><div class="line">npm i (更推荐 yarn)</div><div class="line">yarn run shareBlogToBlogread</div></pre></td></tr></table></figure>
+<h3 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a><strong>运行命令</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/nicejade/toss-puppeteer</div><div class="line">npm i (更推荐 yarn)</div><div class="line">yarn run shareBlogToBlogread</div></pre></td></tr></table></figure>
 <h3 id="步骤详述"><a href="#步骤详述" class="headerlink" title="步骤详述"></a><strong>步骤详述</strong></h3><ul>
 <li>[X] 打开<a href="http://blogread.cn/news/submit.php" target="_blank" rel="external">技术头条-提交页面</a>，同时到 <a href="https://jeffjade.com/categories/Front-End/" target="_blank" rel="external">晚晴幽草轩-Front-End</a> 随机抓取一篇文章，获取到标题、地址、描述。</li>
 <li>[X] 模拟人为操作，点开“用微博登录”按钮(会跳转至微博登录页面)；</li>
@@ -174,9 +174,9 @@
 <li style="list-style: none"><input type="checkbox"> 将其部署于服务器，并设置任务，定时间隔性执行，完成自动按时分享。</li>
 </ul>
 <h3 id="提交🈯️定链接到指定网站"><a href="#提交🈯️定链接到指定网站" class="headerlink" title="提交🈯️定链接到指定网站"></a><strong>提交🈯️定链接到指定网站</strong></h3><p>处于某些分享需要，偶尔会涉及到这样的需求即：分享指定链接(Url)到指定网站；这个相比于如上功能，要省却些步骤。如果愿意折腾的话，还可以提交至多个不同的目标网站，只需增加设定目标地址，登录方式，以及提交表单的信息即可。当然，对于涉及到登录需要复杂的验证网站，额外需要多做些处理。这里只对<a href="http://blogread.cn/news/" target="_blank" rel="external">技术头条</a>做了配置，运行如下命令即可：(Update@17-12-17)</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Url=https://jeffjade.com/<span class="number">2017</span>/<span class="number">09</span>/<span class="number">28</span>/<span class="number">127</span>-nice-front-end-tutorial/ yarn <span class="keyword">run</span><span class="bash"> shareUrlToTheSite</span></div><div class="line">url=https://jeffjade.com/<span class="number">2017</span>/<span class="number">09</span>/<span class="number">28</span>/<span class="number">127</span>-nice-front-end-tutorial/ yarn <span class="keyword">run</span><span class="bash"> shareUrlToTheSite</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Url=https://jeffjade.com/2017/09/28/127-nice-front-end-tutorial/ yarn run shareUrlToTheSite</div><div class="line">url=https://jeffjade.com/2017/09/28/127-nice-front-end-tutorial/ yarn run shareUrlToTheSite</div></pre></td></tr></table></figure>
 <h2 id="抓取指定网站页面并将其打印成-PDF"><a href="#抓取指定网站页面并将其打印成-PDF" class="headerlink" title="抓取指定网站页面并将其打印成 PDF"></a><strong>抓取指定网站页面并将其打印成 PDF</strong></h2><p>此番折腾，是基于 <code>Puppeteer</code> 抓取指定网站页面(示例是 <a href="https://jeffjade.com/" target="_blank" rel="external">https://jeffjade.com/</a>  所有文章)，并将其打印成 PDF；其目的在于：进一步熟悉运用 <code>Puppeteer</code>。</p>
-<h3 id="运行命令-1"><a href="#运行命令-1" class="headerlink" title="运行命令"></a><strong>运行命令</strong></h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/nicejade/toss-puppeteer</div><div class="line">npm i (更推荐 yarn)</div><div class="line">npm run printWebsiteToPDF</div></pre></td></tr></table></figure>
+<h3 id="运行命令-1"><a href="#运行命令-1" class="headerlink" title="运行命令"></a><strong>运行命令</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/nicejade/toss-puppeteer</div><div class="line">npm i (更推荐 yarn)</div><div class="line">npm run printWebsiteToPDF</div></pre></td></tr></table></figure>
 <h3 id="步骤详述-1"><a href="#步骤详述-1" class="headerlink" title="步骤详述"></a><strong>步骤详述</strong></h3><ul>
 <li>[X] 打开 <a href="https://jeffjade.com/archives" target="_blank" rel="external">https://jeffjade.com/archives</a> 页面，从而得到博客文章总分页总数；</li>
 <li>[X] 运用 <code>axios</code> &amp; <code>cheerio</code> 抓取分页并分析，从而得到网站所有文章链接，并存储在数据中；</li>
@@ -188,7 +188,7 @@
 <p>嗟夫，真真是：独立的才是自己的。博客从最开始用<strong>多说</strong>，17年6月1日关闭服务后，转战<strong>网易云跟帖</strong>；未曾想它8月1日也跟着关闭了。索性转投靠至国外<strong>Disqus</strong>，奈何这堵墙厉害之极，家里虽也翻了墙，却仍不能很好访问；这才又转战至 <strong>Gitment</strong>；😂言多皆泪，感慨颇多啊——独立的才是自己的，之后得空时候，还是自己搞一套😪，Fighting。</p>
 </blockquote>
 <p>这提及的 <a href="https://github.com/imsun/gitment" target="_blank" rel="external">Gitment</a> 是基于 GitHub Issues 的评论系统；它本身的一些特征，使得它存在很多优势，对于维护“程序”相关话题博客。所以，个人博客<a href="https://jeffjade.com" target="_blank" rel="external">晚晴幽草轩</a>就采用此评论系统；但，它也会存在一些问题，譬如需要主动初始化评论,<a href="https://github.com/imsun/gitment#4-initialize-your-comments" target="_blank" rel="external">initialize-your-comments</a>，当然也可以运用些工具协助完成✅。对于已经写了 140+ 篇博文的<a href="https://jeffjade.com" target="_blank" rel="external">晚晴幽草轩</a>，这实在很有必要；所以，这里谈及即，使用 <code>Puppeteer</code> 一键来初始化 <code>Gitment</code> 评论系统（需要注明的是，每个系统结构有所区别，这里只具有些参考性，却不能直接加以使用）。</p>
-<h3 id="运行命令-2"><a href="#运行命令-2" class="headerlink" title="运行命令"></a><strong>运行命令</strong></h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/nicejade/toss-puppeteer</div><div class="line">npm i (更推荐 yarn)</div><div class="line">npm run initializeGitment</div></pre></td></tr></table></figure>
+<h3 id="运行命令-2"><a href="#运行命令-2" class="headerlink" title="运行命令"></a><strong>运行命令</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/nicejade/toss-puppeteer</div><div class="line">npm i (更推荐 yarn)</div><div class="line">npm run initializeGitment</div></pre></td></tr></table></figure>
 <h3 id="步骤详述-2"><a href="#步骤详述-2" class="headerlink" title="步骤详述"></a><strong>步骤详述</strong></h3><ul>
 <li>[X] 打开 <a href="https://jeffjade.com/archives" target="_blank" rel="external">https://jeffjade.com/archives</a> 页面，从而得到博客文章总分页总数；</li>
 <li>[X] 运用 <code>axios</code> &amp; <code>cheerio</code> 抓取分页并分析，从而得到网站所有文章链接，并存储在数据中；</li>
@@ -199,8 +199,8 @@
 <p><img src="https://raw.githubusercontent.com/nicejade/toss-puppeteer/master/screenshot/gitment01.png" alt="一键初始化 Gitment 评论系统"></p>
 <p>寄存的博客评论，可在 <a href="https://github.com/nicejade/jadeblog-backups/issues" target="_blank" rel="external">jadeblog-backups#issues</a> 查看;(实际上，在使用 <code>Gitment</code> 之时，触发初始化按钮，并未能真正完成初始化，猜测这可能是插件本身的问题，或者别的，需要进一步探究）(Update@17-11-23)。</p>
 <h2 id="用-Puppeteer-Trace-做性能分析"><a href="#用-Puppeteer-Trace-做性能分析" class="headerlink" title="用 Puppeteer Trace 做性能分析"></a><strong>用 <code>Puppeteer Trace</code> 做性能分析</strong></h2><p>可以使用 <code>tracing.start</code> 和 <code>tracing.stop</code> 创建一个可以在 Chrome 开发工具或时间线查看器中打开的跟踪文件(每个浏览器一次只能激活一个跟踪)，具体参见 <a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-tracing" target="_blank" rel="external">Puppeteer Trace Api</a>。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">await page<span class="selector-class">.tracing</span><span class="selector-class">.start</span>(&#123;path: <span class="string">'trace.json'</span>&#125;)</div><div class="line">await page.goto(<span class="string">'https://www.google.com'</span>)</div><div class="line">await page<span class="selector-class">.tracing</span><span class="selector-class">.stop</span>()</div></pre></td></tr></table></figure>
-<h3 id="运行命令-3"><a href="#运行命令-3" class="headerlink" title="运行命令"></a><strong>运行命令</strong></h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/nicejade/toss-puppeteer</div><div class="line">npm i (更推荐 yarn)</div><div class="line">npm run performanceAnalysis</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">await page.tracing.start(&#123;path: &apos;trace.json&apos;&#125;)</div><div class="line">await page.goto(&apos;https://www.google.com&apos;)</div><div class="line">await page.tracing.stop()</div></pre></td></tr></table></figure>
+<h3 id="运行命令-3"><a href="#运行命令-3" class="headerlink" title="运行命令"></a><strong>运行命令</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/nicejade/toss-puppeteer</div><div class="line">npm i (更推荐 yarn)</div><div class="line">npm run performanceAnalysis</div></pre></td></tr></table></figure>
 <p><img src="https://raw.githubusercontent.com/nicejade/toss-puppeteer/master/screenshot/blog-lovejade-cn-trace.jpg" alt="一键初始化 Gitment 评论系统"></p>
 <p>对于 Chrome Performance／Timeline，如何使用，可以参见 <a href="https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn" target="_blank" rel="external">Chrome 开发者工具</a>，或者移步至 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/chrome-tutorial.md" target="_blank" rel="external">Chrome Tutorial</a>，这里有比较详尽的，不断补充修缮的参考资料。</p>
 <hr>
@@ -280,7 +280,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/JavaScript/">JavaScript</a><a href="/tags/Puppeteer/">Puppeteer</a><a href="/tags/Chrome/">Chrome</a><a href="/tags/Google/">Google</a>
+  <span></span> <a href="/tags/JavaScript/">JavaScript</a><a href="/tags/Chrome/">Chrome</a><a href="/tags/Puppeteer/">Puppeteer</a><a href="/tags/Google/">Google</a>
   </div>
 
 </div>
@@ -440,7 +440,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -507,7 +507,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -543,15 +543,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -563,19 +563,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -587,7 +583,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -595,19 +591,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -619,15 +607,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -635,7 +635,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -850,9 +850,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

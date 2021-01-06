@@ -180,7 +180,7 @@
 <p>　　<br>背景图尺寸（<strong><em>百分比表示方式</em></strong>）：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#background-size2</span>&#123;</div><div class="line">    <span class="attribute">background-size</span>:<span class="number">30%</span> <span class="number">60%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>可以利用这个属性来获取一张图片的部分区域；比如下面这张图片：<br><img src="https://www.jeffjade.com/img/other/player.png" alt=""><br>可以利用其background-size属性，加上background-position（是用于定位图片作为背景时，显示在对象位置，其值有2个，两个值分别代表意义不同，前者值是水平方向定位，后者值是垂直竖向定位。其两者都可以为正，可以为负，也可以使用固定几个英文单词（left、right、center、top、bottom）进行定位背景图片。）属性，设置合适的值就能“获取”对应的区域。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.example</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">90%</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">46%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.example</span>&gt;<span class="selector-tag">li</span>&gt;<span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">26%</span>;</div><div class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(player.png) no-repeat <span class="number">0</span> <span class="number">0</span>;</div><div class="line">    <span class="attribute">background-size</span>: <span class="number">300%</span> <span class="number">100%</span>;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.example</span>&gt;<span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(2)</span>&gt;<span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">background-position</span>: <span class="number">50%</span> <span class="number">0</span>; <span class="comment">/*得到中间部分*/</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.example</span>&gt;<span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(3)</span>&gt;<span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">0</span>;<span class="comment">/*得到最后部分*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>背景图尺寸（<strong><em>等比扩展图片来填满元素，即cover值</em></strong>）：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#background-size3</span>&#123;</div><div class="line">    <span class="attribute">background-size</span>:cover;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>　　<br>背景图尺寸（<strong><em>等比缩小图片来适应元素的尺寸，即contain值</em></strong>）：<br>这个属性在遇到使用非矩形image(非透明部分不规则)填充元素时候很有用。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#background-size4</span>&#123;</div><div class="line">    <span class="attribute">background-size</span>:contain;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　<br>背景图尺寸（<strong><em>等比缩小图片来适应元素的尺寸，即contain值</em></strong>）：<br>这个属性在遇到使用非矩形image(非透明部分不规则)填充元素时候很有用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#background-size4&#123;</div><div class="line">    background-size:contain;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>背景图尺寸（<strong><em>以图片自身大小来填充元素，即auto值</em></strong>）：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#background-size5</span>&#123;</div><div class="line">    <span class="attribute">background-size</span>:auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>参考文章：<a href="http://paranimage.com/css-background-attribute/" target="_blank" rel="external">http://paranimage.com/css-background-attribute/</a><br>参考原文：<a href="http://www.smashingmagazine.com/2009/09/02/backgrounds-in-css-everything-you-need-to-know/" target="_blank" rel="external">http://www.smashingmagazine.com/2009/09/02/backgrounds-in-css-everything-you-need-to-know/</a><br>参考文章：<a href="http://www.daqianduan.com/3302.html" target="_blank" rel="external">http://www.daqianduan.com/3302.html</a></p>
 	</div>
@@ -405,7 +405,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>26</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
 		  
 		
 		  
@@ -472,7 +472,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>59</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>60</sup></a></li>
 			
 		
 			
@@ -508,15 +508,15 @@
 			
 		
 			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>8</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>9</sup></a></li>
 			
 		
 			
@@ -528,19 +528,15 @@
 			
 		
 			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -552,7 +548,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
 			
 		
 			
@@ -560,19 +556,11 @@
 			
 		
 			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
@@ -584,15 +572,27 @@
 			
 		
 			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -600,7 +600,7 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -815,9 +815,9 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
 		
-			<a href="https://aboutme.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		
 		</p>
 </div></footer>

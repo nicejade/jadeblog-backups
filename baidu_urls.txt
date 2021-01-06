@@ -15,6 +15,7 @@ https://www.jeffjade.com/2020/05/25/164-adding-shadow-effect-to-batch-image/
 https://www.jeffjade.com/2020/04/30/163-front-end-project-development-specification-opinion/
 https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/
 https://www.jeffjade.com/2020/02/29/161-how-to-write-a-good-readme-for-your-project/
+https://www.jeffjade.com/2020/01/05/178-recommendations-for-quality-online-services-in-2021/
 https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/
 https://www.jeffjade.com/2019/08/28/159-js-import-export-vs-require-module-exports/
 https://www.jeffjade.com/2019/08/25/156-arya-jarvis-born-for-efficiency/
@@ -95,6 +96,5 @@ https://www.jeffjade.com/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/
 https://www.jeffjade.com/2015/10/28/2015-10-28-css3-webfont/
 https://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/
 https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/
-https://www.jeffjade.com/2015/10/15/2015-10-16-cleaver-make-ppt/
 https://www.jeffjade.com/2015/10/15/2015-10-15-nice-animation-collection/
-https://www.jeffjade.com/2015/10/08/2015-10-08-js-object-length/
+https://www.jeffjade.com/2015/10/15/2015-10-16-cleaver-make-ppt/
