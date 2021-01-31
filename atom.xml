@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-01-31T15:55:45.366Z</updated>
+  <updated>2021-01-31T16:03:33.690Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2021/01/31/179-how-to-choose-css-preprocessor/"/>
     <id>https://www.jeffjade.com/2021/01/31/179-how-to-choose-css-preprocessor/</id>
     <published>2021-01-31T14:34:13.411Z</published>
-    <updated>2021-01-31T15:55:45.366Z</updated>
+    <updated>2021-01-31T16:03:33.690Z</updated>
     
     <content type="html"><![CDATA[<p>title: 关于 CSS 预处理器：Sass Vs Dart Sass<br>date: 2021-01-31 23:23<br>categories: Front-End<br>tags:</p>
 <ul>
@@ -1577,9 +1577,9 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
-    
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
       <category term="Efficiency" scheme="https://www.jeffjade.com/tags/Efficiency/"/>
     
