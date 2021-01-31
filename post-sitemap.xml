@@ -8,7 +8,7 @@
 
     <url>
         <loc>https://www.jeffjade.com/2021/01/31/179-how-to-choose-css-preprocessor/</loc>
-        <lastmod>2021-01-31T16:13:54.504Z</lastmod>
+        <lastmod>2021-01-31T16:23:03.031Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -207,7 +207,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/</loc>
+        <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
         <lastmod>2020-05-05T16:43:09.679Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -215,7 +215,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
+        <loc>https://www.jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/</loc>
         <lastmod>2020-05-05T16:43:09.679Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -559,14 +559,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/06/18/2015-06-18-perfect-music/</loc>
-        <lastmod>2019-03-26T14:31:16.735Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2015/06/29/2015-06-29-css-background/</loc>
         <lastmod>2019-03-26T14:31:16.735Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -576,6 +568,14 @@
 
     <url>
         <loc>https://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/</loc>
+        <lastmod>2019-03-26T14:31:16.735Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2015/06/18/2015-06-18-perfect-music/</loc>
         <lastmod>2019-03-26T14:31:16.735Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -999,7 +999,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
+        <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1007,7 +1007,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
+        <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1063,7 +1063,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/04/25/2015-04-25-lua-skill/</loc>
+        <loc>https://www.jeffjade.com/2015/04/24/2015-04-24-lua-tablesort/</loc>
         <lastmod>2017-03-08T15:14:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1071,7 +1071,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/04/24/2015-04-24-lua-tablesort/</loc>
+        <loc>https://www.jeffjade.com/2015/04/25/2015-04-25-lua-skill/</loc>
         <lastmod>2017-03-08T15:14:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

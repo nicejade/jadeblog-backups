@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-01-31T16:13:54.504Z</updated>
+  <updated>2021-01-31T16:23:03.031Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://www.jeffjade.com/2021/01/31/179-how-to-choose-css-preprocessor/"/>
     <id>https://www.jeffjade.com/2021/01/31/179-how-to-choose-css-preprocessor/</id>
     <published>2021-01-31T14:34:13.411Z</published>
-    <updated>2021-01-31T16:13:54.504Z</updated>
+    <updated>2021-01-31T16:23:03.031Z</updated>
     
-    <content type="html"><![CDATA[<p>title: 关于 CSS 预处理器：Sass Vs Dart Sass<br>date: 2021-01-31 23:23<br>categories: Front-End<br>tags:</p>
+    <content type="html"><![CDATA[<p>title: 关于 CSS 预处理器 Sass Vs Dart Sass<br>date: 2021-01-31 23:23<br>categories: Front-End<br>tags:</p>
 <ul>
 <li>Front-End</li>
 <li>CSS</li>
@@ -86,6 +86,7 @@
 <p>早在 2016 年，Sass 官方就宣布，他们开启了新的项目 Dart Sass，作为 Sass 的全新实现，旨在快速，易于安装和易于破解（designed to be fast, easy to install, and easy to hack on）。如果您想了解更多，如“为什么重写 Sass？”、“为什么选择 Dart？”等，详情可参见官方博客文章：<a href="https://sass-lang.com/blog/announcing-dart-sass" target="_blank" rel="external">Announcing Dart Sass</a>。如今 npm 上的 <code>dart-sass</code> 包已被弃用，直接更名为 <a href="https://www.npmjs.com/package/sass" target="_blank" rel="external">sass</a>，最新版本 <code>1.32.4</code>，周下载量近 300w（2021.01.13）。在选择预处理时 <code>vue-cli3</code> 也将 <code>dart-scss</code> 默认使用 <code>sass</code>。</p>
 <p><a href="https://github.com/sass/dart-sass" target="_blank" rel="external">dart-sass</a>，任何新功能都将首先得到支持，并且它已经在社区中稳定运行了很长时间，并且基本上没有缺陷。它易于安装的主要原因是因为它将被编译为纯 JavaScript，因此可以直接在 Node 环境中使用。尽管其运行速度将比基于 <a href="https://github.com/sass/libsass" target="_blank" rel="external">libsass</a> 运行速度慢，但这些速度的差异几乎可以忽略不计，如果您感兴趣，可以看到 <code>dart-sass</code> 具体的绩效评估：<a href="https://github.com/sass/dart-sass/blob/master/perf.md" target="_blank" rel="external">Dart Sass 性能报告</a>。整个社区现在都在拥抱<code>dart-sass</code>，我们没有理由拒绝！而且确实大大简化了用户的安装成本。</p>
 <p>人生苦短兮，预处理 CSS，我选 Less Or Stylus Or Dart Sass。</p>
+<p>原文首发于<a href="https://quickapp.lovejade.cn/why-sass-is-not-recommended-as-a-css-preprocessor/" target="_blank" rel="external"></a>、</p>
 <h2 id="您可能会感兴趣的文章"><a href="#您可能会感兴趣的文章" class="headerlink" title="您可能会感兴趣的文章"></a>您可能会感兴趣的文章</h2><ul>
 <li><a href="https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/">Npm vs Yarn 之备忘详单</a></li>
 <li><a href="https://www.jeffjade.com/2020/04/30/163-front-end-project-development-specification-opinion/">前端项目开发规范意见</a></li>
@@ -98,7 +99,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;title: 关于 CSS 预处理器：Sass Vs Dart Sass&lt;br&gt;date: 2021-01-31 23:23&lt;br&gt;categories: Front-End&lt;br&gt;tags:&lt;/p&gt;
+      &lt;p&gt;title: 关于 CSS 预处理器 Sass Vs Dart Sass&lt;br&gt;date: 2021-01-31 23:23&lt;br&gt;categories: Front-End&lt;br&gt;tags:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Front-End&lt;/li&gt;
 &lt;li&gt;CSS&lt;/li&gt;
@@ -353,9 +354,9 @@
       <category term="Toss" scheme="https://www.jeffjade.com/categories/Toss/"/>
     
     
-      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
-    
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
@@ -467,11 +468,11 @@
       <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
     
     
-      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
     
       <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
@@ -578,11 +579,11 @@
       <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
     
     
-      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
     
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
@@ -1453,9 +1454,9 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
-    
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
     
   </entry>
   
@@ -1577,11 +1578,11 @@
       <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
     
     
-      <category term="Efficiency" scheme="https://www.jeffjade.com/tags/Efficiency/"/>
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
     
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+      <category term="Efficiency" scheme="https://www.jeffjade.com/tags/Efficiency/"/>
     
       <category term="NodeJs" scheme="https://www.jeffjade.com/tags/NodeJs/"/>
     
