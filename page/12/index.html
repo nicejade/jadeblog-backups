@@ -467,7 +467,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/12/22/2014-12-24-lua-codepart/" class="title=&quot;Lua代码片段收集&quot;" itemprop="url">Lua代码片段收集</a>
+      <a href="/2014/12/22/2014-12-22-lua-weaktable/" class="title=&quot;Lua" table itemprop="url">Lua table之弱引用</a>
     
   </h1>
   <p class="article-author">By
@@ -481,12 +481,12 @@
 </header>
     <div class="article-content">
         
-        <h3 id="Lua实现闭包"><a href="#Lua实现闭包" class="headerlink" title="Lua实现闭包"></a>Lua实现闭包</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">--[[@Func :实现闭包</span></div><div class="line">    @Desc : 当一个函数内部嵌套另一个函数定义时，内部的函数体可以访问外部的函数的局部变量，这种特征我们称作词法定界]]</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fuck</span><span class="params">()</span></span></div><div class="line">    <span class="keyword">local</span> i = <span class="number">0</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">        i = i + <span class="number">1</span></div><div class="line">        <span class="keyword">return</span> i</div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line">c1 = fuck()</div><div class="line"><span class="built_in">print</span>(c1())</div><div class="line"><span class="built_in">print</span>(c1())</div></pre></td></tr></table></figure>
+        <p>Lua采用了基于垃圾收集的内存管理机制，因此对于程序员来说，在很多时候内存问题都将不再困扰他们。然而任何垃圾收集器都不是万能的，在有些特殊情况下，垃圾收集器是无法准确的判断是否应该将当前对象清理。这样就极有可能导致很多垃圾对象无法被释放。为了解决这一问题，就需要Lua的开发者予以一定程度上的配合。比如，当某个table对象被存放在容器中，而容器的外部不再有任何变量引用该对象，对于这样的对象，Lua的垃圾收集器是不会清理的，因为容器对象仍然引用着他。如果此时针对该容器的应用仅限于查找，而不是遍历的话，那么该对象将永远不会被用到。事实上，对于这样的对象我们是希望Lua的垃圾收集器可以将其清理掉的。见如下代码:</p>
         
         
         <p class="article-more-link">
           
-            <a href="/2014/12/22/2014-12-24-lua-codepart/#more">Read More</a>
+            <a href="/2014/12/22/2014-12-22-lua-weaktable/#more">Read More</a>
           
        </p>
     </div>
@@ -518,7 +518,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/12/22/2014-12-22-lua-weaktable/" class="title=&quot;Lua" table itemprop="url">Lua table之弱引用</a>
+      <a href="/2014/12/22/2014-12-24-lua-codepart/" class="title=&quot;Lua代码片段收集&quot;" itemprop="url">Lua代码片段收集</a>
     
   </h1>
   <p class="article-author">By
@@ -532,12 +532,12 @@
 </header>
     <div class="article-content">
         
-        <p>Lua采用了基于垃圾收集的内存管理机制，因此对于程序员来说，在很多时候内存问题都将不再困扰他们。然而任何垃圾收集器都不是万能的，在有些特殊情况下，垃圾收集器是无法准确的判断是否应该将当前对象清理。这样就极有可能导致很多垃圾对象无法被释放。为了解决这一问题，就需要Lua的开发者予以一定程度上的配合。比如，当某个table对象被存放在容器中，而容器的外部不再有任何变量引用该对象，对于这样的对象，Lua的垃圾收集器是不会清理的，因为容器对象仍然引用着他。如果此时针对该容器的应用仅限于查找，而不是遍历的话，那么该对象将永远不会被用到。事实上，对于这样的对象我们是希望Lua的垃圾收集器可以将其清理掉的。见如下代码:</p>
+        <h3 id="Lua实现闭包"><a href="#Lua实现闭包" class="headerlink" title="Lua实现闭包"></a>Lua实现闭包</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">--[[@Func :实现闭包</span></div><div class="line">    @Desc : 当一个函数内部嵌套另一个函数定义时，内部的函数体可以访问外部的函数的局部变量，这种特征我们称作词法定界]]</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fuck</span><span class="params">()</span></span></div><div class="line">    <span class="keyword">local</span> i = <span class="number">0</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">        i = i + <span class="number">1</span></div><div class="line">        <span class="keyword">return</span> i</div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line">c1 = fuck()</div><div class="line"><span class="built_in">print</span>(c1())</div><div class="line"><span class="built_in">print</span>(c1())</div></pre></td></tr></table></figure>
         
         
         <p class="article-more-link">
           
-            <a href="/2014/12/22/2014-12-22-lua-weaktable/#more">Read More</a>
+            <a href="/2014/12/22/2014-12-24-lua-codepart/#more">Read More</a>
           
        </p>
     </div>
@@ -1030,11 +1030,11 @@
 			
 		
 			
-				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>18</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Vue/" title="Vue">Vue<sup>18</sup></a></li>
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
 			
 		
 			
@@ -1042,11 +1042,11 @@
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>10</sup></a></li>
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>10</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>10</sup></a></li>
 			
 		
 			
@@ -1066,15 +1066,15 @@
 			
 		
 			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>6</sup></a></li>
 			
 		
 			
@@ -1090,11 +1090,11 @@
 			
 		
 			
-				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
 			
 		
 			
@@ -1114,6 +1114,10 @@
 			
 		
 			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
 			
 		
@@ -1122,15 +1126,11 @@
 			
 		
 			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
 			
 		
 			
@@ -1138,7 +1138,7 @@
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
 			
 		
 		</ul>
