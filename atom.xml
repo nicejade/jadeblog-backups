@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-02-06T16:43:46.325Z</updated>
+  <updated>2021-02-06T16:46:27.889Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2021/02/07/180-magic-tools-series-curl/"/>
     <id>https://www.jeffjade.com/2021/02/07/180-magic-tools-series-curl/</id>
     <published>2021-02-06T16:21:00.000Z</published>
-    <updated>2021-02-06T16:43:46.325Z</updated>
+    <updated>2021-02-06T16:46:27.889Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://curl.se/" target="_blank" rel="external">curl</a> 非常有用的命令行工具库，用于通过 URL 传输数据。它的名字就是客户端（client）的 URL 工具的意思（<strong>command line tool and library</strong> for transferring data with URLs）。它的功能非常强大，命令行参数多达几十种。如能熟练使用，可以在很多应用场景下，发挥巨大的价值。本篇文章，就跟大家一起探讨下 curl 以及关于它的那些妙用。</p>
 <a id="more"></a>
@@ -65,7 +65,7 @@
 <h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a><strong>文件上传</strong></h3><p>在<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>，先前收录了一个短链接文 + 件托管服务：<a href="https://nicelinks.site/redirect?url=https://0x0.st/" target="_blank" rel="external">THE NULL POINTER</a>，其使用示例如下（当然，上传文件，在某些场景下，也可以 <code>--form</code> 来完成）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 托管本地文件</span></div><div class="line">curl -F<span class="string">'file=@yourfile.png'</span> https://0x0.st</div><div class="line"></div><div class="line"><span class="comment"># 托管线上文件</span></div><div class="line">curl -F<span class="string">'url=http://example.cn/img.jpg'</span> https://0x0.st</div></pre></td></tr></table></figure>
 <h3 id="调用服务"><a href="#调用服务" class="headerlink" title="调用服务"></a><strong>调用服务</strong></h3><h4 id="缩短您指定的-url"><a href="#缩短您指定的-url" class="headerlink" title="缩短您指定的 url"></a>缩短您指定的 url</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -F<span class="string">'shorten=https://nicelinks.site'</span> https://0x0.st</div></pre></td></tr></table></figure>
-<h3 id="获取所在地-ip"><a href="#获取所在地-ip" class="headerlink" title="获取所在地 ip"></a>获取所在地 ip</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -L tool.lu/ip</div></pre></td></tr></table></figure>
+<h4 id="获取所在地-ip"><a href="#获取所在地-ip" class="headerlink" title="获取所在地 ip"></a>获取所在地 ip</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">curl -L tool.lu/ip</div><div class="line"><span class="comment"># or</span></div><div class="line">curl -L ip.tool.lu</div></pre></td></tr></table></figure>
 <blockquote>
 <p>当前IP: 119.120.121.122<br>归属地: 中国 xx省 oo市</p>
 </blockquote>
