@@ -42,13 +42,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/categories/Thought/</loc>
-        <lastmod>2019-06-04T13:46:37.181Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/</loc>
         <lastmod>2020-08-18T05:40:34.335Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -86,6 +79,13 @@
     <url>
         <loc>https://www.jeffjade.com/categories/Program/</loc>
         <lastmod>2021-02-06T16:46:27.889Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/categories/Thought/</loc>
+        <lastmod>2021-02-09T16:05:59.752Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

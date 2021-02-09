@@ -359,13 +359,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Thought/</loc>
-        <lastmod>2020-11-30T15:57:52.489Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/</loc>
         <lastmod>2020-11-30T15:57:52.489Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -422,13 +415,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Share/</loc>
-        <lastmod>2021-02-06T16:46:27.889Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Front-End/</loc>
         <lastmod>2021-02-06T16:46:27.889Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -438,6 +424,20 @@
     <url>
         <loc>https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/</loc>
         <lastmod>2021-02-06T16:46:27.889Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Share/</loc>
+        <lastmod>2021-02-09T16:05:59.752Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/Thought/</loc>
+        <lastmod>2021-02-09T16:05:59.752Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
