@@ -106,6 +106,95 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2021/03/01/186-nodejs-how-to-get-all-files-in-a-dir-sync/" class="title=&quot;Deno" itemprop="url">Deno 如何同步获取指定目录下所有文件？</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2021-03-01T13:21:00.000Z" itemprop="datePublished"> 发表于 2021-03-01</time>
+
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>在基于 Deno / Node.js 编写程序，时常会遇到类似这样的需求：“列出（遍历）目录下的所有文件，包括子目录“。如何实现这一点呢，很显然可以使用一些已写好的工具库，如 <a href="https://github.com/leizongmin/node-rd" target="_blank" rel="external">node-rd</a>、<a href="https://www.npmjs.com/package/walk" target="_blank" rel="external">node-walk</a>、<a href="https://www.npmjs.com/package/glob" target="_blank" rel="external">glob</a> 等；但她们或多或少，都有些弊端，不方便使用；那么手动写一个方法，来实现“同步获取指定目录下所有文件“呢？本篇文章，即同大家一起探讨下这个问题。</p>
+<blockquote>
+<p>本文首发于个人最新博客<a href="https://quickapp.lovejade.cn/nodejs-how-to-get-all-files-in-a-dir-sync/" target="_blank" rel="external">Node.js 如何同步获取指定目录下所有文件？ | 静轩之别苑</a>。</p>
+</blockquote>
+<p>如果要获得指定目录下文件，您可以使用 <code>fs.readdir</code> 或 <code>fs.readdirSync</code> 方法。fs 包含在 Node.js 核心中，因此无需安装任何软件。这非常简单，具体代码如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">const</span> exampleFolder = <span class="string">'./examples/'</span>;</div><div class="line"></div><div class="line"><span class="comment">// 异步调用</span></div><div class="line">fs.readdir(exampleFolder, (err, files) =&gt; &#123;</div><div class="line">  files.forEach(<span class="function"><span class="params">file</span> =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(file);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 同步调用</span></div><div class="line">fs.readdirSync(exampleFolder).forEach(<span class="function"><span class="params">file</span> =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(file);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>但指定的目录下，除了文件，也可能存在文件夹，这就要求需要通过递归循环遍历：如果判定为文件夹，则继续往文件夹内部走，直到该目录只有文件，而没有文件夹才停止。只是一个目录，同步获取其内容，这很容易；但多重嵌套的文件夹（目录），因为不知道何时能遍历完毕，想同步拿到结果，传统的递归遍历，是不足以完成。这就需要借助已经使用非常高频的 async/await 函数。</p>
+<p>下面是基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 以及 <a href="https://nicelinks.site/post/5f376ebe1751843ef894c899" target="_blank" rel="external">Node.js</a> 的两种实现；原理相同，都是基于 TypeScript 编写；只不过调用 API 不同；考虑到以 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 语言编写方式，更方便运行，也是未来新趋势，就将其写在前面；您只需安装下 <code>Deno</code>，运行如下命令即可：</p>
+<h3 id="Deno-同步获取指定目录下所有文件"><a href="#Deno-同步获取指定目录下所有文件" class="headerlink" title="Deno 同步获取指定目录下所有文件"></a>Deno 同步获取指定目录下所有文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">deno run --unstable --allow-net --allow-read deep-loop-travesal.ts</div></pre></td></tr></table></figure>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * @desc 深度循环遍历，检索指定目录下所有 .js .ts 文件，并 push 到指定数组；</div><div class="line"> * @param directory - 指定目录</div><div class="line"> * @param filePathArr - 指定数组</div><div class="line"> */</div><div class="line"><span class="keyword">import</span> * as path from <span class="string">"https://deno.land/std/path/mod.ts"</span>;</div><div class="line"><span class="keyword">const</span> deepLoopTraversal = async (directory: <span class="built_in">string</span>, filePathArr: <span class="built_in">any</span>[]) =&gt; &#123;</div><div class="line">  <span class="keyword">for</span> await (<span class="keyword">const</span> dirEntry of Deno.readDir(directory)) &#123;</div><div class="line">    <span class="keyword">const</span> filename = dirEntry.name</div><div class="line">    <span class="built_in">console</span>.log(filename)</div><div class="line">    <span class="keyword">const</span> filePath = path.join(directory, filename);</div><div class="line">    <span class="keyword">const</span> stats = Deno.statSync(filePath);</div><div class="line">    <span class="keyword">if</span> (stats.isDirectory) &#123;</div><div class="line">      await deepLoopTraversal(filePath, filePathArr)</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">const</span> isFile = stats.isFile;</div><div class="line">      <span class="keyword">const</span> extname = isFile ? path.extname(filePath) : <span class="string">''</span>;</div><div class="line">      <span class="keyword">if</span> (extname === <span class="string">'.js'</span> || extname === <span class="string">'.ts'</span>) &#123;</div><div class="line">        filePathArr.push(filePath)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> main = async () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> filePathArr: <span class="built_in">Array</span>&lt;<span class="built_in">string</span>&gt; = []</div><div class="line">  await deepLoopTraversal(Deno.cwd(),  filePathArr)</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`您指定的目录下，是 .js 或 .ts 文件，有以下内容：`</span>)</div><div class="line">  <span class="built_in">console</span>.log(filePathArr)</div><div class="line">&#125;</div><div class="line"></div><div class="line">main()</div></pre></td></tr></table></figure>
+<p>这里有必要<strong>申明</strong>的是，此处的 for 循环遍历，是不能够使用 <strong><code>forEach</code></strong> 等方法的；这具体缘由，看下 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank" rel="external">forEach</a>   的方法说明，就了然了：它接收第一个参数，是 callback，即便对它进行 async，但在外层，却是不知何里面是何时遍历完成，这就导致了不同步，从而引起问题。如果您想使用，可以看 StackoverFlow 上大家给出的一些办法：<a href="https://stackoverflow.com/questions/37576685/using-async-await-with-a-foreach-loop" target="_blank" rel="external">Using async/await with a forEach loop</a>。</p>
+<h3 id="Node-js-同步获取指定目录下所有文件"><a href="#Node-js-同步获取指定目录下所有文件" class="headerlink" title="Node.js 同步获取指定目录下所有文件"></a>Node.js 同步获取指定目录下所有文件</h3><p>以下为 <a href="https://nicelinks.site/post/5f376ebe1751843ef894c899" target="_blank" rel="external">Node.js</a> 写法，启动用到了 <code>fs-extra</code> npm 依赖，需要手动安装下。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * @desc 深度循环遍历，检索指定目录下所有 .js .ts 文件，并 push 到指定数组；</div><div class="line"> * @param directory - 指定目录</div><div class="line"> * @param filePathArr - 指定数组</div><div class="line"> */</div><div class="line"><span class="keyword">import</span> * as path from <span class="string">'path'</span>;</div><div class="line"><span class="keyword">const</span> fse = <span class="built_in">require</span>(<span class="string">'fs-extra'</span>);</div><div class="line"><span class="keyword">const</span> deepLoopTraversal = async (directory: <span class="built_in">string</span>, filePathArr: <span class="built_in">any</span>[]) =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> promiseList: Promise&lt;<span class="built_in">any</span>&gt;[] = [];</div><div class="line">  <span class="keyword">const</span> filesList = await fse.readdir(directory);</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len = filesList.length; i &lt; len; i++) &#123;</div><div class="line">    <span class="keyword">const</span> filename = filesList[i];</div><div class="line">    <span class="keyword">const</span> filePath = path.join(directory, filename);</div><div class="line">    <span class="keyword">const</span> stats = await fse.stat(filePath);</div><div class="line">    <span class="keyword">if</span> (stats.isDirectory()) &#123;</div><div class="line">      await deepLoopTraversal(filePath, filePathArr);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">const</span> isFile = stats.isFile();</div><div class="line">      <span class="keyword">const</span> extname = isFile ? path.extname(filePath) : <span class="string">''</span>;</div><div class="line">      <span class="keyword">if</span> (extname === <span class="string">'.js'</span> || extname === <span class="string">'.ts'</span>) &#123;</div><div class="line">        filePathArr.push(filePath)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> main = async () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> filePathArr: <span class="built_in">Array</span>&lt;<span class="built_in">string</span>&gt; = []</div><div class="line">  await deepLoopTraversal(process.cwd(),  filePathArr)</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`您指定的目录下，是 .js 或 .ts 文件，有以下内容：`</span>)</div><div class="line">  <span class="built_in">console</span>.log(filePathArr)</div><div class="line">&#125;</div><div class="line"></div><div class="line">main()</div></pre></td></tr></table></figure>
+<h3 id="实例说明"><a href="#实例说明" class="headerlink" title="实例说明"></a>实例说明</h3><p>建造「测试目录」如下，对其进行运行如上脚本，将会得到什么结果呢？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── a-dir</div><div class="line">│   ├── c-file.js</div><div class="line">│   └── d-dir</div><div class="line">│       └── e-file.js</div><div class="line">├── b-file.js</div><div class="line">└── deep-loop-travesal.ts</div></pre></td></tr></table></figure>
+<p>运行脚本，将得到如下结果（因为目录首字母、与文件首字母，决定了 readDir 得到的数组内容顺序，从而使得有以下结果）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[</div><div class="line">  ./~yun/a-dir/c-file.js&quot;,</div><div class="line">  ./~yun/a-dir/d-dir/e-file.js&quot;,</div><div class="line">  ./~yun/b-file.js&quot;,</div><div class="line">  ./~yun/deep-loop-travesal.ts&quot;</div><div class="line">]</div></pre></td></tr></table></figure>
+<h3 id="问题思考"><a href="#问题思考" class="headerlink" title="问题思考"></a>问题思考</h3><p>这里有个问题，需要思考下；上面所得到文件数组，顺序由每层文件名、文件夹名所决定。如果想要以从外至内的顺序，得到最终的结果数组，那么该如何处理呢？<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all" target="_blank" rel="external">Promise.all</a> 是解决这个问题的一剂良方。如果判定是文件夹，则将对它的递归循环，放置于一个数组（promiseList），后面将该数组传递给 Promise.all 方法予以调用，问题迎刃而解（目录中内容，将会延迟遍历）。</p>
+<blockquote>
+<p>Promise.all() 方法接收一个 promise 的 iterable 类型（注：Array，Map，Set 都属于 ES6 的 iterable 类型）的输入，并且只返回一个 Promise 实例， 那个输入的所有 promise 的 resolve 回调的结果是一个数组。这个 Promise 的 resolve 回调执行是在所有输入的 promise 的 resolve 回调都结束，或者输入的 iterable 里没有 promise 了的时候。它的 reject 回调执行是，只要任何一个输入的 promise 的 reject 回调执行或者输入不合法的 promise 就会立即抛出错误，并且 reject 的是第一个抛出的错误信息。</p>
+</blockquote>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * @file deep-loop-travesal.ts</div><div class="line"> * @desc 深度循环遍历，检索指定目录下所有 .js .ts 文件，并 push 到指定数组；</div><div class="line"> * @param directory - 指定目录</div><div class="line"> * @param filePathArr - 指定数组</div><div class="line"> */</div><div class="line"><span class="keyword">import</span> * as path from <span class="string">"https://deno.land/std/path/mod.ts"</span>;</div><div class="line"><span class="keyword">const</span> deepLoopTraversal = async (directory: <span class="built_in">string</span>, filePathArr: <span class="built_in">any</span>[]) =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> promiseList: Promise&lt;<span class="built_in">any</span>&gt;[] = [];</div><div class="line">  <span class="keyword">for</span> await (<span class="keyword">const</span> dirEntry of Deno.readDir(directory)) &#123;</div><div class="line">    <span class="keyword">const</span> filename = dirEntry.name</div><div class="line">    <span class="keyword">const</span> filePath = path.join(directory, filename);</div><div class="line">    <span class="keyword">const</span> stats = Deno.statSync(filePath);</div><div class="line">    <span class="keyword">if</span> (stats.isDirectory) &#123;</div><div class="line">      promiseList.push(deepLoopTraversal(filePath, filePathArr));</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">const</span> isFile = stats.isFile;</div><div class="line">      <span class="keyword">const</span> extname = isFile ? path.extname(filePath) : <span class="string">''</span>;</div><div class="line">      <span class="keyword">if</span> (extname === <span class="string">'.js'</span> || extname === <span class="string">'.ts'</span>) &#123;</div><div class="line">        filePathArr.push(filePath)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span> (promiseList.length) &#123;</div><div class="line">    await Promise.all(promiseList);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> main = async () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> filePathArr: <span class="built_in">Array</span>&lt;<span class="built_in">string</span>&gt; = []</div><div class="line">  await deepLoopTraversal(Deno.cwd(),  filePathArr)</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`您指定的目录下，是 .js 或 .ts 文件，有以下内容：`</span>)</div><div class="line">  <span class="built_in">console</span>.log(filePathArr)</div><div class="line">&#125;</div><div class="line"></div><div class="line">main()</div></pre></td></tr></table></figure>
+<p>依旧是上面的「测试目录」，运行如上改造后的脚本，将得到如下结果，结果符合预期；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[</div><div class="line">  ~/yun/b-file.js&quot;,</div><div class="line">  ~/yun/deep-loop-travesal.ts&quot;,</div><div class="line">  ~/yun/a-dir/c-file.js&quot;,</div><div class="line">  ~/yun/a-dir/d-dir/e-file.js&quot;</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>以上，便是关于“Node.js/Deno，如何同步获取指定目录下所有文件“问题的一点，如有谬误，欢请斧正。</p>
+<hr>
+<blockquote>
+<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
+</blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="min-width: 300px" alt="小程序码 - 倾城之链"></p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2020/12/31/177-generating-word-cloud-based-on-python/">基于 python 对文本做分词、生成词云图</a></li>
+<li><a href="https://www.jeffjade.com/2020/12/06/176-how-to-auto-switch-between-different-input-methods-for-different-app/">如何为不同应用窗口，自动切换不同输入法</a></li>
+<li><a href="https://quickapp.lovejade.cn/how-to-add-shadow-effects-to-image/" target="_blank" rel="external">为文章图片添加外阴影效果</a></li>
+<li><a href="https://quickapp.lovejade.cn/markdown-magic-tricks/" target="_blank" rel="external">Markdown 用法中的奇技淫巧</a></li>
+<li><a href="https://www.jeffjade.com/2021/01/31/179-how-to-choose-css-preprocessor/">关于 CSS 预处理器：Sass Vs Dart Sass</a></li>
+<li><a href="https://www.jeffjade.com/2019/08/28/159-js-import-export-vs-require-module-exports/">JavaScript 之 import export Vs require module.exports</a></li>
+<li><a href="https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/">前端利器之 npx 使用纪要</a></li>
+<li><a href="https://www.jeffjade.com/2020/04/30/163-front-end-project-development-specification-opinion/">前端项目开发规范意见</a></li>
+<li><a href="https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/">前端开发与 DevOps 实践</a></li>
+</ul>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Front-End/">Front-End</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Node/">Node</a><a href="/tags/Deno/">Deno</a>
+  </div>
+
+</div>
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+    </article>
+
+  <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2021/02/25/183-nicelinks-weekly-002/" class="title=&quot;优质网站同好者周刊（第" 2 - itemprop="url">优质网站同好者周刊（第 2 期）- 倾城之链</a>
     
   </h1>
@@ -816,57 +905,6 @@
 </footer>
     </article>
 
-  <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2020/09/11/169-high-quality-free-icon-resource-collection/" class="title=&quot;高质量免费" itemprop="url">高质量免费 🆓 图标资源大全</a>
-    
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
-		
-  </p><p class="article-time">
-    <time datetime="2020-09-11T13:21:00.000Z" itemprop="datePublished"> 发表于 2020-09-11</time>
-
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><a href="https://nicelinks.site/theme/icons?sort=hottest">图标（ICON）</a>，虽然看起来很小，但由于它富有意义、明确且简单；含有审美和吸引力，具备识别性和独特性，且自带适应性与一致性等特征，是对于任何原生 APP 和 Web 应用都是至关重要的。对于它看似简单，但与用户体验息息相关，是需要大量的时间和精力来设计。鉴于此，很多有心的人设计出大量免费、矢量图标，用于个人和商业用途。在个人独立维护的作品<a href="https://nicelinks.site/">倾城之链</a>中，精选了大量免费 🆓 图标资源，今汇聚于此，分享给有需要的朋友们。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2020/09/11/169-high-quality-free-icon-resource-collection/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/Share/">Share</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Share/">Share</a><a href="/tags/倾城之链/">倾城之链</a><a href="/tags/Front-End/">Front-End</a><a href="/tags/工具/">工具</a>
-  </div>
-
-</div>
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-    </article>
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -894,6 +932,10 @@
     <h3 class="widget-title asidetitle">近期文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/03/01/186-nodejs-how-to-get-all-files-in-a-dir-sync/">Deno 如何同步获取指定目录下所有文件？</a>
+          </li>
         
           <li>
             <a href="/2021/02/25/183-nicelinks-weekly-002/">优质网站同好者周刊（第 2 期）- 倾城之链</a>
@@ -951,10 +993,6 @@
             <a href="/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a>
           </li>
         
-          <li>
-            <a href="/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -968,7 +1006,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>55</sup></a></li>
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>56</sup></a></li>
 		  
 		
 		  
@@ -1087,11 +1125,11 @@
 			
 		
 			
-				<li><a href="/tags/工具/" title="工具">工具<sup>11</sup></a></li>
+				<li><a href="/tags/Android/" title="Android">Android<sup>11</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Android/" title="Android">Android<sup>11</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>11</sup></a></li>
 			
 		
 			
@@ -1107,7 +1145,7 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>7</sup></a></li>
 			
 		
 			
@@ -1115,15 +1153,15 @@
 			
 		
 			
-				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>7</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
 			
 		
 			
@@ -1151,15 +1189,11 @@
 			
 		
 			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
 			
 		
 			
@@ -1171,11 +1205,15 @@
 			
 		
 			
-				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
 			
 		
 			
@@ -1183,7 +1221,7 @@
 			
 		
 			
-				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
 		</ul>
