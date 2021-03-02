@@ -205,6 +205,13 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/tags/Node/</loc>
+        <lastmod>2019-09-16T14:53:23.168Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/tags/Markdown/</loc>
         <lastmod>2019-12-12T16:35:11.717Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -436,15 +443,22 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Node/</loc>
-        <lastmod>2021-03-02T11:30:24.443Z</lastmod>
+        <loc>https://www.jeffjade.com/tags/Deno/</loc>
+        <lastmod>2021-03-02T14:26:13.082Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/Deno/</loc>
-        <lastmod>2021-03-02T11:30:24.443Z</lastmod>
+        <loc>https://www.jeffjade.com/tags/Node-js/</loc>
+        <lastmod>2021-03-02T14:26:13.082Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/TypeScript/</loc>
+        <lastmod>2021-03-02T14:26:13.082Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
