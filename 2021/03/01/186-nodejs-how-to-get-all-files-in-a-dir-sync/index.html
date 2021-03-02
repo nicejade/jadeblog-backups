@@ -20,12 +20,13 @@
 <meta property="og:url" content="https://www.jeffjade.com/2021/03/01/186-nodejs-how-to-get-all-files-in-a-dir-sync/index.html">
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="在基于 Node.js（Deno） 编写程序，时常会遇到类似这样的需求：“列出（遍历）目录下的所有文件，包括子目录“。如何实现这一点呢，很显然可以使用一些已写好的工具库，如 node-rd、node-walk、glob 等；但她们或多或少，都有些弊端，不方便使用；那么手动写一个方法，来实现“同步获取指定目录下所有文件“呢？本篇文章，即同大家一起探讨下这个问题。">
+<meta property="og:image" content="https://image.nicelinks.site/nicelinks-miniprogram-code-tiny.png">
 <meta property="og:image" content="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1">
-<meta property="og:updated_time" content="2021-03-02T11:22:00.432Z">
+<meta property="og:updated_time" content="2021-03-02T11:30:24.443Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Deno 如何同步获取指定目录下所有文件？">
 <meta name="twitter:description" content="在基于 Node.js（Deno） 编写程序，时常会遇到类似这样的需求：“列出（遍历）目录下的所有文件，包括子目录“。如何实现这一点呢，很显然可以使用一些已写好的工具库，如 node-rd、node-walk、glob 等；但她们或多或少，都有些弊端，不方便使用；那么手动写一个方法，来实现“同步获取指定目录下所有文件“呢？本篇文章，即同大家一起探讨下这个问题。">
-<meta name="twitter:image" content="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1">
+<meta name="twitter:image" content="https://image.nicelinks.site/nicelinks-miniprogram-code-tiny.png">
 <meta name="twitter:creator" content="@nicejadeyang">
 
     
@@ -132,6 +133,8 @@
   </div>
 
 		<p>在基于 Deno / Node.js 编写程序，时常会遇到类似这样的需求：“列出（遍历）目录下的所有文件，包括子目录“。如何实现这一点呢，很显然可以使用一些已写好的工具库，如 <a href="https://github.com/leizongmin/node-rd" target="_blank" rel="external">node-rd</a>、<a href="https://www.npmjs.com/package/walk" target="_blank" rel="external">node-walk</a>、<a href="https://www.npmjs.com/package/glob" target="_blank" rel="external">glob</a> 等；但她们或多或少，都有些弊端，不方便使用；那么手动写一个方法，来实现“同步获取指定目录下所有文件“呢？本篇文章，即同大家一起探讨下这个问题。</p>
+<a id="more"></a>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code-tiny.png" alt="Deno 如何同步获取指定目录下所有文件？"></p>
 <blockquote>
 <p>本文首发于个人最新博客<a href="https://quickapp.lovejade.cn/nodejs-how-to-get-all-files-in-a-dir-sync/" target="_blank" rel="external">Node.js 如何同步获取指定目录下所有文件？ | 静轩之别苑</a>。</p>
 </blockquote>
