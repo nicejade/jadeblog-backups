@@ -7,8 +7,8 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2021/03/04/186-nicelinks-weekly-003/</loc>
-        <lastmod>2021-03-04T14:57:50.539Z</lastmod>
+        <loc>https://www.jeffjade.com/2021/02/19/182-nicelinks-weekly-001/</loc>
+        <lastmod>2021-03-04T15:01:09.588Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +16,15 @@
 
     <url>
         <loc>https://www.jeffjade.com/2021/02/25/183-nicelinks-weekly-002/</loc>
-        <lastmod>2021-03-04T14:57:15.291Z</lastmod>
+        <lastmod>2021-03-04T15:00:56.930Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2021/03/04/186-nicelinks-weekly-003/</loc>
+        <lastmod>2021-03-04T15:00:22.904Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,14 +33,6 @@
     <url>
         <loc>https://www.jeffjade.com/2021/03/01/186-nodejs-how-to-get-all-files-in-a-dir-sync/</loc>
         <lastmod>2021-03-02T14:26:13.082Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2021/02/19/182-nicelinks-weekly-001/</loc>
-        <lastmod>2021-02-25T16:33:53.723Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
