@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-03-04T15:00:22.904Z</updated>
+  <updated>2021-03-11T15:50:34.741Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,118 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>优质网站同好者周刊（第 4 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-004/"/>
+    <id>https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-004/</id>
+    <published>2021-03-11T14:22:00.000Z</published>
+    <updated>2021-03-11T15:50:34.741Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
+<a id="more"></a>
+<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、及博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
+<h2 id="新趣集-一起发现有趣的新产品"><a href="#新趣集-一起发现有趣的新产品" class="headerlink" title="新趣集 - 一起发现有趣的新产品"></a><a href="https://xinquji.com/?utm_source=nicelinks.site" target="_blank" rel="external">新趣集 - 一起发现有趣的新产品</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/发现" target="_blank" rel="external"><code>发现</code></a> · <a href="https://nicelinks.site/tags/社区" target="_blank" rel="external"><code>社区</code></a> · <a href="https://nicelinks.site/tags/产品" target="_blank" rel="external"><code>产品</code></a></p>
+<blockquote>
+<p>新趣集是一个产品发现社区，发现最新的网站，移动 App 和技术产品。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/xinquji.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 新趣集 - 一起发现有趣的新产品"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://xinquji.com/" target="_blank" rel="external">新趣集</a>是一个产品发现社区，发现最新的网站，移动 App 和技术产品；现在，他也是一个开放创业项目了，就是说关于新趣集的数据都是开放透明的，包括流量、收入等等信息。<a href="https://nicelinks.site/redirect?url=https://xinquji.com/" target="_blank" rel="external">新趣集</a>的整体设计，和 <a href="https://nicelinks.site/post/5f40d0bf15435e0906a0a26f" target="_blank" rel="external">Product Hunt</a>、<a href="https://nicelinks.site/post/5db1d4aba7d64d01501bc72a" target="_blank" rel="external">创造者日报</a>较为相似：将每天所收录的产品，集中到一起；并提供有<strong>时光机</strong>功能，可以查看历史某天收录的内容。您可以在这里，通过浏览、检索，发现寻找喜欢的产品；也可以提交您的产品，让 Ta 为更多人所知道。</p>
+<p>── 出自<a href="https://nicelinks.site/post/604a16ec5f9af714fe21dcc8" target="_blank" rel="external">倾城之链 - 新趣集 - 一起发现有趣的新产品</a></p>
+<h2 id="Docker-Hub"><a href="#Docker-Hub" class="headerlink" title="Docker Hub"></a><a href="https://hub.docker.com/?utm_source=nicelinks.site" target="_blank" rel="external">Docker Hub</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Docker" target="_blank" rel="external"><code>Docker</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a> · <a href="https://nicelinks.site/tags/应用" target="_blank" rel="external"><code>应用</code></a></p>
+<blockquote>
+<p>Build and Ship any Application Anywhere. Docker Hub is the world’s easiest way to create, manage, and deliver your teams’ container applications.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/hub.docker.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Docker Hub"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://hub.docker.com/" target="_blank" rel="external">Docker Hub</a> 是世界上最大的、<a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a> 官方维护的、容器镜像的库和社区；你可以在此浏览来自软件供应商、开源项目和社区的 100000 多个容器镜像（Container Images），如 NGINX、python、mongoDB、ubuntu、<a href="https://nicelinks.site/post/603e39560c8e4b046a182003" target="_blank" rel="external">Node.js</a>、Redis、<a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a>、mysql 等等，应有尽有；基于这些容器镜像，可随时随地构建和发布任何应用程序，<a href="https://nicelinks.site/redirect?url=https://hub.docker.com/" target="_blank" rel="external">Docker Hub</a> 是世界上创建、管理和交付团队容器应用的最简单方法。作为开发者，你可以在 <a href="https://nicelinks.site/redirect?url=https://hub.docker.com/" target="_blank" rel="external">Docker Hub</a>  上传、检索、下载 Docker 镜像，结合 docker-compose 或 <a href="https://nicelinks.site/post/5b2cad0a34c03342fda0f37e" target="_blank" rel="external">k8s</a>（<a href="https://nicelinks.site/redirect?url=https://kubernetes.io/" target="_blank" rel="external">Kubernetes</a>），堪称团队应用程序的理想之选。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6049dab45f9af714fe21dcc6" target="_blank" rel="external">倾城之链 - Docker Hub</a></p>
+<h2 id="名言通-美句佳句大全-伤感的句子-唯美的句子-优美的句子"><a href="#名言通-美句佳句大全-伤感的句子-唯美的句子-优美的句子" class="headerlink" title="名言通 | 美句佳句大全 伤感的句子 唯美的句子 优美的句子"></a><a href="https://www.mingyantong.com/?utm_source=nicelinks.site" target="_blank" rel="external">名言通 | 美句佳句大全 伤感的句子 唯美的句子 优美的句子</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/佳句" target="_blank" rel="external"><code>佳句</code></a> · <a href="https://nicelinks.site/tags/诗词" target="_blank" rel="external"><code>诗词</code></a> · <a href="https://nicelinks.site/tags/社区" target="_blank" rel="external"><code>社区</code></a></p>
+<p><strong>关键字</strong>：句子, 句子迷, 个性签名, QQ个性签名, 伤感的句子, 唯美的句子, 经典语录, 摘抄, 爱情语录, 诗词名句, 名人名言, 经典台词, 经典歌词</p>
+<blockquote>
+<p>名言通网站是提供高品质句子的专业句子网站，是一个名言和美句佳句的分享社区，在这里您可以轻松找到您喜欢的句子，句子迷优选。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.mingyantong.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 名言通 | 美句佳句大全 伤感的句子 唯美的句子 优美的句子"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.mingyantong.com/" target="_blank" rel="external">名言通</a>是提供高品质句子的专业句子网站（也有提供原生应用客户端），也是一个名言和美句佳句的分享<a href="https://nicelinks.site/tags/社区" target="_blank" rel="external">社区</a>，该网站有各种名人名言、经典句子、伤感的句子和唯美句子、摘抄、美句和佳句大全。</p>
+<p>在网站大划分上，分为偶遇句子、名人名言、精选句集、电影台词、小说摘抄、美图美句等 6 个；其次，根据句子出处（散文、随笔、诗歌、宋词、格言等等）、感觉、长度、适用场景做了分类。此外，还根据句子喜爱程度，做了推荐、热门、排行等等。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6049a4005f9af714fe21dcc4" target="_blank" rel="external">倾城之链 - 名言通 | 美句佳句大全 伤感的句子 唯美的句子 优美的句子</a></p>
+<h2 id="胡思-UX-知识库"><a href="#胡思-UX-知识库" class="headerlink" title="胡思 - UX 知识库"></a><a href="https://whose.design/?utm_source=nicelinks.site" target="_blank" rel="external">胡思 - UX 知识库</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/设计" target="_blank" rel="external"><code>设计</code></a> · <a href="https://nicelinks.site/tags/教程" target="_blank" rel="external"><code>教程</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
+<blockquote>
+<p>发现更多设计工具，掌握更多工具技巧</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/whose.design.png?x-oss-process=style/png2jpg" alt="倾城之链 - 胡思 - UX 知识库"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://whose.design/" target="_blank" rel="external">胡思 - UX 知识库</a>是基于 Next.js、<a href="https://nicelinks.site/post/5b1294b5e93ed2618cfac134" target="_blank" rel="external">React</a> 搭建的网站，主要承载<a href="https://nicelinks.site/tags/设计" target="_blank" rel="external">设计</a>相关内容，在这里，你可以发现更多设计工具（诸如 <a href="https://nicelinks.site/post/5a954cd40b0590113aa144cd" target="_blank" rel="external">Sketch</a>、Figma、Stark、mockdown、Cleanmock、component8、<a href="https://nicelinks.site/post/600e3d1d0c71de1fb957b64a" target="_blank" rel="external">蓝湖</a>、鹿班……），掌握更多工具技巧；其内容十分丰富，如果您有从事<strong>设计</strong>相关工作，这个 UX 知识库，值得关注。</p>
+<p>── 出自<a href="https://nicelinks.site/post/60497e785f9af714fe21dcc2" target="_blank" rel="external">倾城之链 - 胡思 - UX 知识库</a></p>
+<h2 id="VUE-Vlog-用-Vlog-记录生活，分享真实的你"><a href="#VUE-Vlog-用-Vlog-记录生活，分享真实的你" class="headerlink" title="VUE Vlog - 用 Vlog 记录生活，分享真实的你"></a><a href="https://vuevideo.net/?utm_source=nicelinks.site" target="_blank" rel="external">VUE Vlog - 用 Vlog 记录生活，分享真实的你</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Vlog" target="_blank" rel="external"><code>Vlog</code></a> · <a href="https://nicelinks.site/tags/短视频" target="_blank" rel="external"><code>短视频</code></a> · <a href="https://nicelinks.site/tags/视频" target="_blank" rel="external"><code>视频</code></a></p>
+<p><strong>关键字</strong>：VUE, VUEVlog, VUE Vlog, VUE视频, VUE App, VUE官网</p>
+<blockquote>
+<p>VUE Vlog 是国内领先的视频拍摄和编辑工具以及原创的 Vlog 短视频平台。VUE Vlog 提供海量的音乐、贴纸、边框、字体、滤镜、转场等样式和素材，让你不费吹灰之力，就能作出媲美欧阳娜娜的 Vlog。并且已有数万 Vloggers 在 VUE Vlog 安家，如果你也喜欢看邻家小姐姐周末玩了什么、柴犬被主人骗去洗澡是什么表情、环球旅行家每天去哪里… 那就快上 VUE Vlog 看看。除了目不暇接的精彩视频，你还可以和这些优秀 Vloggers 交朋友。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/vuevideo.net.png?x-oss-process=style/png2jpg" alt="倾城之链 - VUE Vlog - 用 Vlog 记录生活，分享真实的你"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://vuevideo.net/" target="_blank" rel="external">VUE</a> 是一款视频编辑器（跟编程前端流行框架 <a href="https://nicelinks.site/post/5b1a221c0526c920d6dfaada" target="_blank" rel="external">vue.js</a> 重名），让用户能够捕捉到值得纪念的时刻，通过添加滤镜、贴纸、音乐或蒙太奇进行编辑，然后与世界分享。</p>
+<p>VUE 并没有 Web 版本，有提供 Android、iOS、小程序（没有剪辑功能）。在 VUE 应用，为 Vloggers 提供了蛮多社区类功能，如频道、学院、专题等；你不仅可以用该工具剪辑视频，也可以分享到社区，还可以关注你喜欢的 Vlogger。</p>
+<p>就个人使用感受而言，<a href="https://nicelinks.site/redirect?url=https://vuevideo.net/" target="_blank" rel="external">VUE</a> 要比同类竞品好用很多（有用过手机自带、抖音剪辑、快剪辑、剪映、<a href="https://nicelinks.site/post/5f05efe82052901c2b15dea2" target="_blank" rel="external">轻剪</a>等产品）； VUE 功能强大且全面，操作尤其简单，具有海量素材，支持高清视频剪辑导出，而且全面适配微信、微博、优酷、腾讯视频等视频制作应用，轻松处理，即可剪辑出大片既视感，<strong>深得我心，极力推荐</strong>。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6048c67b5f9af714fe21dcc0" target="_blank" rel="external">倾城之链 - VUE Vlog - 用 Vlog 记录生活，分享真实的你</a></p>
+<h2 id="MyTemplate-xyz-No-Code-Developer-Website-Builder"><a href="#MyTemplate-xyz-No-Code-Developer-Website-Builder" class="headerlink" title="MyTemplate.xyz | No-Code Developer Website Builder"></a><a href="https://mytemplate.xyz/?utm_source=nicelinks.site" target="_blank" rel="external">MyTemplate.xyz | No-Code Developer Website Builder</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external"><code>网站生成器</code></a> · <a href="https://nicelinks.site/tags/零代码" target="_blank" rel="external"><code>零代码</code></a> · <a href="https://nicelinks.site/tags/开发者" target="_blank" rel="external"><code>开发者</code></a></p>
+<blockquote>
+<p>A No-Code developer website builder experiment created with ReScript. The builder creates a JSON from the user input and renders a pre-defined template. Supports links, Dev.to blog page, and GitHub repositories as input</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/mytemplate.xyz.png?x-oss-process=style/png2jpg" alt="倾城之链 - MyTemplate.xyz | No-Code Developer Website Builder"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://mytemplate.xyz/" target="_blank" rel="external">MyTemplate.xyz</a> 是一个<a href="https://nicelinks.site/tags/零代码" target="_blank" rel="external">零代码</a>（No-Code）开发者网站生成器，只需填写些个人数据，即可一键导出网站源码（一个 <code>.html</code> 文件）；<a href="https://nicelinks.site/redirect?url=https://mytemplate.xyz/" target="_blank" rel="external">MyTemplate.xyz</a> 是开源项目，使用简单，无需注册，没有广告，而且不收集用户数据；如果填写错误，点击 <code>Clear Cache</code> 按钮，即可重新填写。其缺点也比较明显：整体页面结果不支持定制化。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6048b7ea5f9af714fe21dcbe" target="_blank" rel="external">倾城之链 - MyTemplate.xyz | No-Code Developer Website Builder</a></p>
+<h2 id="Flarum-一款优雅简洁论坛软件"><a href="#Flarum-一款优雅简洁论坛软件" class="headerlink" title="Flarum | 一款优雅简洁论坛软件"></a><a href="https://flarum.org/?utm_source=nicelinks.site" target="_blank" rel="external">Flarum | 一款优雅简洁论坛软件</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/论坛" target="_blank" rel="external"><code>论坛</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/开源" target="_blank" rel="external"><code>开源</code></a></p>
+<blockquote>
+<p>Flarum is the next-generation forum software that makes online discussion fun. It’s simple, fast, and free.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/flarum.org.png?x-oss-process=style/png2jpg" alt="倾城之链 - Flarum | 一款优雅简洁论坛软件"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://flarum.org/" target="_blank" rel="external">Flarum</a> 是一款优雅简洁论坛软件，让在线交流变得更加轻松愉快。Flarum 基于 PHP 构建，因此很容易安装部署；目前尚处于 Beta 版本，正式版本即将发布。它具有以下功能特性：</p>
+<ul>
+<li><strong>快速</strong>：不臃肿、不复杂、不过度依赖。几分钟之内构建属于自己的社区；</li>
+<li><strong>精美的响应式布局</strong>：<code>Flarum</code> 不仅仅为程序员开发，而是为所有人开发的。Flarum 在设计之初就考虑了跨平台，开箱即用。</li>
+<li><strong>强大</strong>：  简约，并不简陋。具备定制性、可扩展性；Flarum 的开源架构是非常灵活的，他拥有完善的 API 和文档。</li>
+</ul>
+<p>── 出自<a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">倾城之链 - Flarum | 一款优雅简洁论坛软件</a></p>
+<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
+<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
+
+<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>人生追求的三个最高境界：思想自由、财务自由、时间自由；所谓思想自由，就是独立思考、独立判断，所谓时间自由，就是自由地支配自己的时间。思想自由是财务自由的前提，时间自由则是财务自由的终极目标。一个人所有的时间中，自己自由支配的部分越多，他的人生就越自由。</p>
+<blockquote>
+<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
+</blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2021/03/04/186-nicelinks-weekly-003/">优质网站同好者周刊（第 3 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/02/25/183-nicelinks-weekly-002/">优质网站同好者周刊（第 2 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/02/19/182-nicelinks-weekly-001/">优质网站同好者周刊（第 1 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/12/31/177-generating-word-cloud-based-on-python/">基于 python 对文本做分词、生成词云图</a></li>
+<li><a href="https://www.jeffjade.com/2020/12/06/176-how-to-auto-switch-between-different-input-methods-for-different-app/">如何为不同应用窗口，自动切换不同输入法</a></li>
+<li><a href="https://quickapp.lovejade.cn/how-to-add-shadow-effects-to-image/" target="_blank" rel="external">为文章图片添加外阴影效果</a></li>
+<li><a href="https://quickapp.lovejade.cn/markdown-magic-tricks/" target="_blank" rel="external">Markdown 用法中的奇技淫巧</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2020/10/12/172-okr-working-method-let-you-more-efficiently/">OKR 工作法，带你聚焦目标，高效工作</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/">工具 vs 产品 And 知识 vs 思维</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
+    
+    </summary>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>优质网站同好者周刊（第 3 期）- 倾城之链</title>
@@ -1935,63 +2047,6 @@
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何优雅使用「快应用」API</title>
-    <link href="https://www.jeffjade.com/2020/08/17/167-how-to-use-the-quickapp-api-gracefully/"/>
-    <id>https://www.jeffjade.com/2020/08/17/167-how-to-use-the-quickapp-api-gracefully/</id>
-    <published>2020-08-17T01:10:00.000Z</published>
-    <updated>2020-08-18T05:40:34.335Z</updated>
-    
-    <content type="html"><![CDATA[<p>查阅<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发文档，可以知道官方提供了诸多<a href="https://doc.quickapp.cn/features/" target="_blank" rel="external">接口</a>；对于如何使用，文档中也给出了简单的说明和代码示例；但照着示例写法，在实际项目中，不够优雅且更不高效；所以，在开发中需要加以变通去写，使得大幅提升开发效率，同时也令整个代码优雅，以便于维护。所以在此篇文章的存在，旨在于讨论：如何优雅使用「快应用」API。</p>
-<a id="more"></a>
-<p>熟悉<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发的朋友，应该知道，使用其接口，需要三个步骤：接口声明（大部分），导入模块，接口调用。坦白讲，对于使用前端技术栈的开发者朋友，这是不够友好的设定；无由来给开发者带来了额外的工作量，却没有换来任何实质性价值。下面就从优化这三个步骤，来完成本文的分享主旨：优雅使用「快应用」API。</p>
-<p><strong>备注</strong>：本文首发于 <a href="https://quickapp.vivo.com.cn/how-to-use-the-quickapp-api-gracefully/" target="_blank" rel="external">如何优雅使用「快应用」API - vivo 快应用官方博客</a>。</p>
-<h2 id="接口声明"><a href="#接口声明" class="headerlink" title="接口声明"></a>接口声明</h2><p>在<a href="https://doc.quickapp.cn/features/system/share.html" target="_blank" rel="external">快应用开发文档，如分享接口</a>中，在阐述如何使用该接口时，仍旧提及需要在 <code>manifest.json</code> 文件中做接口声明，如下示例：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"features"</span>: [</div><div class="line">        &#123;</div><div class="line">          <span class="attr">"name"</span>: <span class="string">"system.share"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">          <span class="attr">"name"</span>: <span class="string">"system.shortcut"</span></div><div class="line">        &#125;</div><div class="line">      ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><strong>事实上</strong>：作为开发者的您，已经无须如此；因为，快应用打包工具，在打包之时，已经帮着做了优化，帮着注入了<strong>接口声明</strong>；知晓这一点后，您大可以将 <code>manifest.json</code>  文件中的 features 字段给删除掉。</p>
-<h2 id="导入模块"><a href="#导入模块" class="headerlink" title="导入模块"></a>导入模块</h2><p>就拿<a href="https://doc.quickapp.cn/features/system/prompt.html" target="_blank" rel="external">弹窗接口</a>来说，在开发文档中，它介绍如何使用时，提到了须要<strong>导入模块</strong>，像如下示例这般：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> share <span class="keyword">from</span> <span class="string">'@system.prompt'</span> </div><div class="line"><span class="comment">//或 </span></div><div class="line"><span class="keyword">const</span> share = <span class="built_in">require</span>(<span class="string">'@system.prompt'</span>)</div></pre></td></tr></table></figure></p>
-<p>就如在前文所叙述那般，快应用接口设计不够友好，这便是例证；这样做是麻烦且没有必要；不仅让开发者朋友多敲了代码（增加了工作量），而且也会使得构建出的包增加了体积；它完全可以学习 Web 或 小程序，将这些挂载于全局对象如 <code>qa</code> （quickapp 的缩写），开发者只需用 <code>qa.[API-NAME]</code> 即可调用，岂不美哉？</p>
-<p>既然<code>快应用</code>并未对此处理好，我们在开发之时，完全多做一点工作，从而使得节省开发工作量、便捷后续维护、缩小包体积等等。思想很简单，<code>快应用</code>引擎没有挂载，我们<code>按需挂载</code>即可；具体的代码示例如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// global.js</span></div><div class="line"><span class="keyword">import</span> app <span class="keyword">from</span> <span class="string">'@system.app'</span></div><div class="line"><span class="keyword">import</span> prompt <span class="keyword">from</span> <span class="string">'@system.prompt'</span></div><div class="line"><span class="keyword">import</span> webview <span class="keyword">from</span> <span class="string">'@system.webview'</span></div><div class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">'@system.router'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> hook2global = global.__proto__ || global</div><div class="line">hook2global.qa = &#123;</div><div class="line">    app,</div><div class="line">    prompt,</div><div class="line">    webview,</div><div class="line">    router</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>如上代码示例，可以将代码封装于单独文件如 <code>global.js</code>，在 <code>app.ux</code> 中导入即可。之后就可以在项目代码中无忧使用了：<code>qa.app</code>， <code>qa.router</code>。相比较先前每逢使用，必先导入，要方便很多。除了这些需要用到的系统接口，您自己封装的方法、配置的常量，倘若使用频率很高，也可以像这样一并挂载，为您的快捷开发，打造康庄坦途。</p>
-<h2 id="接口调用"><a href="#接口调用" class="headerlink" title="接口调用"></a>接口调用</h2><p><a href="https://doc.quickapp.cn/features/" target="_blank" rel="external">快应用接口</a>分为两种：同步（立即返回调用结果）、异步（不会立即返回调用结果）。异步接口，需要在任务完成后执行某些操作，就得使用「回调函数」，如下示例：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 同步接口</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(app.getInfo()))</div><div class="line"></div><div class="line"><span class="comment">// 异步接口</span></div><div class="line">prompt.showContextMenu(&#123;</div><div class="line">  <span class="attr">itemList</span>: [<span class="string">'item1'</span>, <span class="string">'item2'</span>],</div><div class="line">  <span class="attr">itemColor</span>: <span class="string">'#ff33ff'</span>,</div><div class="line">  <span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'handling success'</span>)</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">fail</span>: <span class="function"><span class="keyword">function</span>(<span class="params">data, code</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`handling fail, code = <span class="subst">$&#123;code&#125;</span>`</span>)</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">cancel</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'handling cancel'</span>)</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">complete</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'handling complete'</span>)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>这样毕竟麻烦，也不符合当今时代写 JavaScript 的风格；是否能提供有一个类似小程序 API Promise 化（miniprogram-api-promise）的工具，使得所有接口支持 <code>promise</code>？答案是：<strong>没必要</strong>。快应用自 <code>1010</code> 之后，就支持调用异步接口返回 <code>Promise</code> 实例，开发者可以在返回的 Promise 实例上使用 <code>then</code>, <code>catch</code> 方法绑定回调函数；具体说明可以参见<a href="https://doc.quickapp.cn/features/#%E4%BD%BF%E7%94%A8-promise-1010" target="_blank" rel="external">接口概述</a>。</p>
-<p><strong>需要注意⚠️的是</strong>：只有在调用异步接口的实参中，<strong>不传递任何回调函数</strong>时，才会返回一个 <code>Promise</code> 实例。</p>
-<p>有了这个特性的支持，加上如上提及两点，<strong>优雅使用「快应用」API </strong>了🎉；其实，部分内容「快应用」本身，或者生态已经给出了优化方案，只不过没有在明显的文档、教程中给予说明，导致很多开发者朋友不知道这一点；本篇文章的价值就在于，将这些信息分享出来，希望可以帮助更多开发者朋友，高效工作，快乐生活。下面，就写一个完整的示例，来结束本篇分享：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">qa.prompt.showContextMenu(&#123;</div><div class="line">  <span class="attr">itemList</span>: [<span class="string">'快应用'</span>, <span class="string">'快应用+'</span>],</div><div class="line">  <span class="attr">itemColor</span>: <span class="string">'#ff33ff'</span></div><div class="line">&#125;).then(</div><div class="line">  <span class="function"><span class="params">res</span> =&gt;</span> &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`异步接口返回的数据：<span class="subst">$&#123;res.data&#125;</span>`</span>)</div><div class="line">  &#125;,</div><div class="line">  res =&gt; &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`异步接口返回的数据：<span class="subst">$&#123;res.data&#125;</span>`</span>)</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`异步接口返回的状态码：<span class="subst">$&#123;res.code&#125;</span>`</span>)</div><div class="line">    <span class="keyword">if</span> (res.code === <span class="number">100</span>) &#123;</div><div class="line">      <span class="comment">// 对应异步接口支持的回调函数中的 cancel</span></div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (res.code &gt;= <span class="number">200</span>) &#123;</div><div class="line">      <span class="comment">// 对应异步接口支持的回调函数中的 fail</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">)</div></pre></td></tr></table></figure>
-<p>当然，您也可以使用 Promise 更常用的方式，如 <a href="https://github.com/vivoquickapp/quickapp-typescript-template/blob/master/src/pages/Main/index.ux#L73-L108" target="_blank" rel="external">qa.prompt .showDialog</a> 写法。为了更好的诠释这些用法，有讲这些经验融入于 <a href="https://github.com/vivoquickapp/quickapp-typescript-template" target="_blank" rel="external">quickapp-typescript-template</a>（基于 TypeScript 编写「<code>快应用</code>」模版），以供参考。</p>
-<p>于 2020 年 08 月，深圳.福田。</p>
-<blockquote>
-<p>原文首发于 <a href="https://quickapp.vivo.com.cn/how-to-use-the-quickapp-api-gracefully/" target="_blank" rel="external">vivo 快应用官方博客 — 如何优雅使用「快应用」API</a>。</p>
-</blockquote>
-<h3 id="您可能会感兴趣的文章"><a href="#您可能会感兴趣的文章" class="headerlink" title="您可能会感兴趣的文章"></a>您可能会感兴趣的文章</h3><ul>
-<li><a href="https://nice.lovejade.cn/zh/article/develop-quick-app-experience-notes.html" target="_blank" rel="external">快应用之开发体验纪要</a></li>
-<li><a href="https://quickapp.lovejade.cn/how-to-use-the-quickapp-api-gracefully/" target="_blank" rel="external">如何优雅使用「快应用」API</a></li>
-<li><a href="https://quickapp.lovejade.cn/quickapp-boilerplate-template/" target="_blank" rel="external">快应用脚手架，为优雅而生</a></li>
-<li><a href="https://quickapp.lovejade.cn/how-to-elegantly-handle-quickapp-request/" target="_blank" rel="external">如何优雅处理「快应用」数据请求</a></li>
-<li><a href="https://quickapp.lovejade.cn/how-to-transfer-wechat-miniprogram-to-quickapp/" target="_blank" rel="external">如何快捷转微信小程序为快应用</a></li>
-<li><a href="https://quickapp.lovejade.cn/how-to-use-typescript-develop-quickapp/" target="_blank" rel="external">如何基于 Typescript 开发快应用</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/21/146-awesome-vue-cli3-example/">快应用开发资源、教程汇聚</a></li>
-<li><a href="https://quickapp.lovejade.cn/quickapp-common-problems-and-solutions/" target="_blank" rel="external">快应用开发常见问题及解决方案</a></li>
-<li><a href="https://quickapp.lovejade.cn/prettier-quickapp-plugin/" target="_blank" rel="external">Prettier 插件为更漂亮快应用代码</a></li>
-<li><a href="https://www.jeffjade.com/2018/10/13/144-top-100-front-end-awesome-awesome-list/">TOP 100 大前端超棒精选列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      查阅快应用开发文档，可以知道官方提供了诸多接口；对于如何使用，文档中也给出了简单的说明和代码示例；但照着示例写法，在实际项目中，不够优雅且更不高效；所以，在开发中需要加以变通去写，使得大幅提升开发效率，同时也令整个代码优雅，以便于维护。所以在此篇文章的存在，旨在于讨论：如何优雅使用「快应用」API。
-    
-    </summary>
-    
-      <category term="快应用" scheme="https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
-    
-    
-      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
     
       <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
