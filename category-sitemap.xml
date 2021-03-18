@@ -35,13 +35,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/categories/Movie/</loc>
-        <lastmod>2019-03-26T14:31:16.631Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/</loc>
         <lastmod>2020-08-18T05:40:34.335Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -84,8 +77,15 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/categories/Movie/</loc>
+        <lastmod>2021-03-18T14:50:28.851Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/</loc>
-        <lastmod>2021-03-11T15:50:34.741Z</lastmod>
+        <lastmod>2021-03-18T14:57:09.758Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

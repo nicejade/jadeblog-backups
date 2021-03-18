@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-03-11T15:50:34.741Z</updated>
+  <updated>2021-03-18T14:57:09.758Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,168 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>优质网站同好者周刊（第 5 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/03/18/188-nicelinks-weekly-006/"/>
+    <id>https://www.jeffjade.com/2021/03/18/188-nicelinks-weekly-006/</id>
+    <published>2021-03-18T14:22:00.000Z</published>
+    <updated>2021-03-18T14:57:09.758Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
+<a id="more"></a>
+<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、及博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
+<h2 id="悠然宜想亭"><a href="#悠然宜想亭" class="headerlink" title="悠然宜想亭"></a><a href="https://forum.lovejade.cn/?utm_source=nicelinks.site" target="_blank" rel="external">悠然宜想亭</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/社区" target="_blank" rel="external"><code>社区</code></a> · <a href="https://nicelinks.site/tags/论坛" target="_blank" rel="external"><code>论坛</code></a> · <a href="https://nicelinks.site/tags/分享" target="_blank" rel="external"><code>分享</code></a></p>
+<blockquote>
+<p>悠然宜想亭，旨在营造温润、宽厚、互助的现代化社区；您可以在这里探讨技术、寻求创意、分享美食、聊聊工作、发布科普等等，甚至是为喜欢的作品打 Call、推广，只要遵纪守法、恪守道德，此隅云间，便是您悠然交流、适宜分享之所。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/forum.lovejade.cn.png?x-oss-process=style/png2jpg" alt="倾城之链 - 悠然宜想亭"></p>
+<p><strong>推荐语</strong>：<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>是基于 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a> 所搭建的现代化社区，旨在营造温润、宽厚、互助的分享环境，也为互联网开放性做些努力；其内容以「经世济用」、有趣、有价值为主调。关于<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>，您如果想知道更多，可参阅如下几篇文章：</p>
+<ul>
+<li><a href="https://forum.lovejade.cn/d/1" target="_blank" rel="external">关于“悠然宜想亭”的由来，以及及未来</a>；</li>
+<li><a href="https://forum.lovejade.cn/d/8-tag" target="_blank" rel="external">悠然宜想亭，各 Tag 的设定说明</a>；</li>
+</ul>
+<p>── 出自<a href="https://nicelinks.site/post/60535e3306342c4b00e04ece" target="_blank" rel="external">倾城之链 - 悠然宜想亭</a></p>
+<h2 id="Gitpod-Dev-environments-built-for-the-cloud"><a href="#Gitpod-Dev-environments-built-for-the-cloud" class="headerlink" title="Gitpod - Dev environments built for the cloud"></a><a href="https://www.gitpod.io/?utm_source=nicelinks.site" target="_blank" rel="external">Gitpod - Dev environments built for the cloud</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/开发者" target="_blank" rel="external"><code>开发者</code></a> · <a href="https://nicelinks.site/tags/Github" target="_blank" rel="external"><code>Github</code></a> · <a href="https://nicelinks.site/tags/编辑器" target="_blank" rel="external"><code>编辑器</code></a></p>
+<p><strong>关键字</strong>：dev environment, development environment, devops, cloud ide, github ide, gitlab ide, javascript, online ide, web ide, code review</p>
+<blockquote>
+<p>Gitpod streamlines developer workflows by providing prebuilt, collaborative development environments in your browser - powered by VS Code.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.gitpod.io.png?x-oss-process=style/png2jpg" alt="倾城之链 - Gitpod - Dev environments built for the cloud"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.gitpod.io/" target="_blank" rel="external">Gitpod</a> 通过在浏览器中提供由 <a href="https://nicelinks.site/post/5af55777979f626ea3d37917" target="_blank" rel="external">VS Code</a> 提供的预建协作开发环境，简化了开发者的工作流程。Gitpod 具有以下功能特性：</p>
+<ul>
+<li><strong>为开发环境集成 CI / CD</strong>：应用程序代码，配置和基础结构都应作为机器可执行代码存储在git存储库中，并自动连续地应用于开发环境。</li>
+<li><strong>与团队一起编码</strong>：在 <strong>Gitpod</strong> 上进行代码审查，在一个工作空间中实时协同工作，与您的团队共享可复制的工作空间；</li>
+<li><strong>远程优先，设计安全</strong>：您不再需要功能强大的笔记本电脑进行编码，Gitpod 可以在 Chromebook 或 iPad 上同样流畅地工作，您只需要一个浏览器；</li>
+<li><strong>正确执行 Cloud Native 开发</strong>：完全在云上编码，构建，调试和运行 <a href="https://nicelinks.site/post/5b2cad0a34c03342fda0f37e" target="_blank" rel="external">K8s</a>（Kubernetes） 应用程序。为每个分支获取成熟的工作区并提取/合并请求，这些请求已预先配置并预先连接到自己的专用 K8s 部署。</li>
+</ul>
+<p>您可以安装浏览器扩展程序，该扩展程序会在您的 GitLab，GitHub 和 Bitbucket 项目中添加一个 <code>Gitpod</code> 按钮，从而只需单击一下即可轻松启动开发环境；或在任何 GitLab，GitHub 或 Bitbucket URL之前添加 <code>gitpod.io/#</code>。借助 Gitpod，您着手简化当今的软件编写方式；通过即时、自动化和现成代码的开发环境，使软件开发更易于访问。对于 Gitpod，用过的人，都说好。</p>
+<p>── 出自<a href="https://nicelinks.site/post/60534abf06342c4b00e04ecc" target="_blank" rel="external">倾城之链 - Gitpod - Dev environments built for the cloud</a></p>
+<h2 id="Defonic-A-fabulous-ambient-noise-generator"><a href="#Defonic-A-fabulous-ambient-noise-generator" class="headerlink" title="Defonic | A fabulous ambient noise generator"></a><a href="https://defonic.com/?utm_source=nicelinks.site" target="_blank" rel="external">Defonic | A fabulous ambient noise generator</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/应用" target="_blank" rel="external"><code>应用</code></a> · <a href="https://nicelinks.site/tags/噪音生成器" target="_blank" rel="external"><code>噪音生成器</code></a> · <a href="https://nicelinks.site/tags/声音" target="_blank" rel="external"><code>声音</code></a></p>
+<p><strong>关键字</strong>：nature sounds, background noise, ambient sounds, rain sound, noise generator</p>
+<blockquote>
+<p>Ambient sounds for use as background noise at home or in the office. Create your own unique sound environment with our noise generator.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/defonic.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Defonic | A fabulous ambient noise generator"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://defonic.com/" target="_blank" rel="external">Defonic</a> 一个神奇的环境噪音发生器。基于 Defonic，您可以创建您自己独特的声音环境，无论是在家里或办公室，都能享受愉悦设定。内置大量沉浸式背景声音，如虫鸣鸟叫、潺潺流水、风吹海浪、淅沥小雨、呼呼暖火、雷声阵阵等等自然声音；也有车水马龙、校园图书馆、猫的呼声、空气风扇等非自然之音，共 20 余种；并且可以同时开启多种声音组合，也可以采用 Defonic 预设的组合类型，如冥想、生产率、放松、睡觉、禅、耳目一新等；另外，Defonic 还支持时间设定、会员高级服务等。</p>
+<p>── 出自<a href="https://nicelinks.site/post/605336f606342c4b00e04eca" target="_blank" rel="external">倾城之链 - Defonic | A fabulous ambient noise generator</a></p>
+<h2 id="Rainbow-Hunt-Ultimate-rain-generator-for-relaxing-or-working"><a href="#Rainbow-Hunt-Ultimate-rain-generator-for-relaxing-or-working" class="headerlink" title="Rainbow Hunt | Ultimate rain generator for relaxing or working"></a><a href="https://rainbowhunt.com/?utm_source=nicelinks.site" target="_blank" rel="external">Rainbow Hunt | Ultimate rain generator for relaxing or working</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/应用" target="_blank" rel="external"><code>应用</code></a> · <a href="https://nicelinks.site/tags/噪音生成器" target="_blank" rel="external"><code>噪音生成器</code></a> · <a href="https://nicelinks.site/tags/声音" target="_blank" rel="external"><code>声音</code></a></p>
+<p><strong>关键字</strong>：raindrops sounds, rain sound, rain noise, rain simulator, background noise</p>
+<blockquote>
+<p>Ambient noise generator of rain sounds. Let the rain sing you a lullaby.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/rainbowhunt.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Rainbow Hunt | Ultimate rain generator for relaxing or working"></p>
+<p><strong>推荐语</strong>：您是否喜欢下雨天的慰藉？将此和平直接带到您的屏幕上、您的耳朵里。 <a href="https://nicelinks.site/redirect?url=https://rainbowhunt.com/" target="_blank" rel="external">RainbowHunt</a> 是一个 WebGL 雨水生成器，可重新创建舒适的工作环境（如果您喜欢雨水的声音和景象，而又不会弄湿或溺水）。RainbowHunt 支持多种类型，如小雨（Light Rain）、雨滴打在窗户上（Raindrops hitting a window）、暴雨（Rainstorm）、溅起的雨水（Splashing rainfall）、雷雨（Thunder）；并且支持这几种互相组合，而且每种类型的声音大小可设定。额外的，RainbowHunt 还支持其他设定，如白天、夜晚；屏幕雨滴数量；是否停止☔️等等，非常贴心。</p>
+<p>── 出自<a href="https://nicelinks.site/post/605323bd06342c4b00e04ec8" target="_blank" rel="external">倾城之链 - Rainbow Hunt | Ultimate rain generator for relaxing or working</a></p>
+<h2 id="卜卜口"><a href="#卜卜口" class="headerlink" title="卜卜口"></a><a href="https://mouto.org/?utm_source=nicelinks.site" target="_blank" rel="external">卜卜口</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/前端开发" target="_blank" rel="external"><code>前端开发</code></a> · <a href="https://nicelinks.site/tags/摄影" target="_blank" rel="external"><code>摄影</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a></p>
+<blockquote>
+<p>前端开发、人像写真</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/mouto.org.png?x-oss-process=style/png2jpg" alt="倾城之链 - 卜卜口"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://mouto.org/" target="_blank" rel="external">卜卜口</a>是基于<a href="https://nicelinks.site/redirect?url=https://github.com/itorr/imouto" target="_blank" rel="external">妹 Blog </a>（一个 充分的利用缓存、模板、模块化、静态化 以及不同以往的框架结构 来实现 快速、明确、极简 呈现内容为主的博客程序）搭建的快速、明确、极简博客。博主，于零九年接触<strong>程序</strong>~界面~开发，遵循<strong>极简主义</strong>、热爱新特性~走弯路~。喜欢参与<a href="https://nicelinks.site/redirect?url=https://mouto.org/projects" target="_blank" rel="external">有趣~无聊~的项目</a><del>拖延</del>，部分开源在 <a href="https://nicelinks.site/redirect?url=https://github.com/itorr" target="_blank" rel="external">GitHub</a>，其中<a href="https://nicelinks.site/redirect?url=https://github.com/itorr/nbnhhsh" target="_blank" rel="external">能不能好好说话？</a>（拼音首字母缩写翻译工具，用以理解社交平台上，通过拼音首字母缩写指代特定词句）给人留下深刻印象，现获得 Star 3.7K+；另有<strong>不会百度么</strong>（百度使用简易教程）等项目。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6052afa406342c4b00e04ec5" target="_blank" rel="external">倾城之链 - 卜卜口</a></p>
+<h2 id="Coder-The-Developer-Workspace-Platform"><a href="#Coder-The-Developer-Workspace-Platform" class="headerlink" title="Coder: The Developer Workspace Platform"></a><a href="https://coder.com/?utm_source=nicelinks.site" target="_blank" rel="external">Coder: The Developer Workspace Platform</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a> · <a href="https://nicelinks.site/tags/开发者" target="_blank" rel="external"><code>开发者</code></a> · <a href="https://nicelinks.site/tags/编码" target="_blank" rel="external"><code>编码</code></a></p>
+<blockquote>
+<p>Coder moves software development to your cloud, centralizing an organization’s development initiatives and unlocking substantial gains in both developer velocity and enterprise security.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/coder.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Coder: The Developer Workspace Platform"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://coder.com/" target="_blank" rel="external">Coder</a>：开发人员工作区平台；将软件开发转移到您的云中，并集中它们的创建和管理。借助云的强大功能和卓越的开发人员体验，使开发人员保持顺畅。对于编码人员，它具有以下好处：</p>
+<ul>
+<li><strong>一致的工作空间</strong>：开发环境是在几秒钟内，从集中式映像存储库（Docker）创建的。可以使用该映像将基础映像的更新推送到所有环境。不再有“它可以在我的机器上能正常工作”这种问题，并且消除了频繁配置的烦恼；</li>
+<li><strong>设计安全</strong>：源代码和数据，可以在群集或授权存储库中保持安全；不要让任何东西放在工作站或笔记本电脑上，只需等待进入，降低源代码泄漏的风险；</li>
+<li><strong>完全遥远</strong>：从任何地方，在任何设备上安全地编码。唯一的要求是互联网访问和 Web 浏览器。远程访问，与本机打开应用程序感觉一样；</li>
+</ul>
+<p>值得一提的是，<a href="https://nicelinks.site/redirect?url=https://coder.com/" target="_blank" rel="external">Coder</a> 还开源了 <a href="https://nicelinks.site/redirect?url=https://github.com/cdr/code-server" target="_blank" rel="external">cdr/code-server</a>（VS Code in the browser）项目，它允许开发人员使用浏览器访问运行 <a href="https://nicelinks.site/post/5af55777979f626ea3d37917" target="_blank" rel="external">VS Code</a> 的远程开发环境。<a href="https://nicelinks.site/redirect?url=https://coder.com/" target="_blank" rel="external">Coder</a>  以  <a href="https://nicelinks.site/redirect?url=https://github.com/cdr/code-server" target="_blank" rel="external">cdr/code-server</a> 的成功为基础，并增加了为企业团队设计的功能，包括对其他 <a href="https://nicelinks.site/tags/IDE" target="_blank" rel="external">IDE</a> 的支持和高级安全功能。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6051fe0706342c4b00e04ec3" target="_blank" rel="external">倾城之链 - Coder: The Developer Workspace Platform</a></p>
+<h2 id="Embed-so-Make-your-website-more-personal-and-engaging"><a href="#Embed-so-Make-your-website-more-personal-and-engaging" class="headerlink" title="Embed.so - Make your website more personal and engaging"></a><a href="https://embed.so/?utm_source=nicelinks.site" target="_blank" rel="external">Embed.so - Make your website more personal and engaging</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/视频" target="_blank" rel="external"><code>视频</code></a> · <a href="https://nicelinks.site/tags/网站" target="_blank" rel="external"><code>网站</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
+<blockquote>
+<p>Your website not only needs good copy, but also a personalized video to deeply connect with your users.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/embed.so.png?x-oss-process=style/png2jpg" alt="倾城之链 - Embed.so - Make your website more personal and engaging"></p>
+<p><strong>推荐语</strong>：使用 <a href="https://nicelinks.site/redirect?url=https://embed.so/" target="_blank" rel="external">embed.so</a> ，您只需要上传视频，几分钟之内即可获得嵌入代码。将代码放置到您的网站上，然后看到显示的视频；是时候升级您的网站，使其更具个性和吸引力。使用 <a href="https://nicelinks.site/redirect?url=https://embed.so/" target="_blank" rel="external">embed.so</a> 有以下特点：</p>
+<ol>
+<li>轻松上传视频；</li>
+<li>自定义嵌入视频；</li>
+<li>集中管理所嵌入的视频；</li>
+</ol>
+<p>── 出自<a href="https://nicelinks.site/post/6051e83c06342c4b00e04ec1" target="_blank" rel="external">倾城之链 - Embed.so - Make your website more personal and engaging</a></p>
+<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
+<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" width="200px" alt="倾城之链 - 客服微信"></div>
+
+<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>一个人如果愿意时常保有寻觅美好感觉的心，那么在事物的变迁之中，不论是生机盎然或枯落沉寂都可以看见美。那美的源不在事物，而在心灵、感觉、乃至眼睛。── 林清玄 《咸也好，淡也好》</p>
+<blockquote>
+<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
+</blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-004/">优质网站同好者周刊（第 4 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/03/04/186-nicelinks-weekly-003/">优质网站同好者周刊（第 3 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/02/25/183-nicelinks-weekly-002/">优质网站同好者周刊（第 2 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/02/19/182-nicelinks-weekly-001/">优质网站同好者周刊（第 1 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/12/31/177-generating-word-cloud-based-on-python/">基于 python 对文本做分词、生成词云图</a></li>
+<li><a href="https://www.jeffjade.com/2020/12/06/176-how-to-auto-switch-between-different-input-methods-for-different-app/">如何为不同应用窗口，自动切换不同输入法</a></li>
+<li><a href="https://quickapp.lovejade.cn/how-to-add-shadow-effects-to-image/" target="_blank" rel="external">为文章图片添加外阴影效果</a></li>
+<li><a href="https://quickapp.lovejade.cn/markdown-magic-tricks/" target="_blank" rel="external">Markdown 用法中的奇技淫巧</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2020/10/12/172-okr-working-method-let-you-more-efficiently/">OKR 工作法，带你聚焦目标，高效工作</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/">工具 vs 产品 And 知识 vs 思维</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
+    
+    </summary>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>觉醒年代，2021 不容错过的好剧</title>
+    <link href="https://www.jeffjade.com/2021/03/16/187-2021-the-age-of-awakening/"/>
+    <id>https://www.jeffjade.com/2021/03/16/187-2021-the-age-of-awakening/</id>
+    <published>2021-03-16T14:22:00.000Z</published>
+    <updated>2021-03-18T14:50:28.851Z</updated>
+    
+    <content type="html"><![CDATA[<p>《觉醒年代》是 2021 年中国大陆历史题材电视剧，导演张永新，主演张桐、于和伟、马少骅、朱刚日尧等，这也是庆祝中国共产党成立 100 周年的献礼剧，主要讲述以陈独秀、李大钊、胡适等文化人追求真理，寻找救国救民之道的故事。</p>
+<p>坦白讲，这部剧，在开播十余集后，我都不知道；有朋友强烈推荐，其原话是：“目前为止看过的最好的电视剧”。即便如此，按照惯例，也未曾心动；而女友那时竟也在追，就跟着一起看了几分钟，然后就一发不可收，大感<strong>相见恨晚</strong>。</p>
+<p>就所追的电视剧，上一部也是<strong>于和伟</strong>主演的《巡回检察组》，再往前就记不太清了；即便好评如潮的《大江大河2》、《山海情》，也只是看了很多片段，没有完整一追。而这部《觉醒年代》，可以很负责任的向朋友们强烈推荐。</p>
+<p>不在于本剧的特殊使命，就凭演员们精湛演技（未用流量“明星”）、颇为讲究的服装、化妆、道具，风格各异且恰到好处配乐，就国剧而言，堪属翘楚。再者，导演在细节上，处理甚好，微妙之间，透露出很多耐心寻味的信息，多少将境界拔高了一个层次。最后，即便是带着特殊使命的历史剧，一集集刷过，并未给这个年代的我们，带来“尴尬”之感，可见编剧、导演，在对整个情绪的把控上，处理得无可挑剔，实在难能可贵。</p>
+<p>一如大家评论，观看此剧，<strong>并未快进</strong>；每个出场的角色，无论立场如何，并未将其<strong>脸谱化</strong>；而在历史中，颇为负面的人物，只以”名字“的形式，在各个场景被提及，如此处理也是妙极，这就使得观看体验十分良好，且也感受那个年代的风雨飘摇，以及有识之士对此作出的思考、尝试与努力。</p>
+<p>历史，越是近代，其真假越是难辨；在时代大背景下，剧情与史实，难免有所出入（亦或刻意）；但笔者以为，即便真有其事，这部剧依然瑕不掩瑜，实属上乘佳作。记叙本文之时，依旧能想起：辜鸿铭老先生那别致的或漱口、或喝茶；越发崇敬的鲁迅先生那笔下挥刀，怒斩所斥；即便被骂的陈仲甫与骂他的学生，相见也是互相鞠躬，而后继续各之所为……</p>
+<p>“为什么我的眼里常含泪水？因为我对这土地爱得深沉……”，希望有时间的朋友，在工作之余，都可以抽出空来，领略下《觉醒年代》这部佳作。<strong>如果，您因上班而大忙，不得其时，我想此时，正是您该觉醒的年代</strong>。</p>
+<p><img src="https://oss.nicelinks.site/jue-xing-nian-dai.cn.png?x-oss-process=style/png2jpg" alt="觉醒年代，2021 不容错过的好剧"></p>
+<p>于深圳·福田 2021.03.16，上次修改 2021.03.17。</p>]]></content>
+    
+    <summary type="html">
+    
+      《觉醒年代》是 2021 年中国大陆历史题材电视剧，导演张永新，主演张桐、于和伟、马少骅、朱刚日尧等，这也是庆祝中国共产党成立 100 周年的献礼剧，主要讲述以陈独秀、李大钊、胡适等文化人追求真理，寻找救国救民之道的故事。
+    
+    </summary>
+    
+      <category term="Movie" scheme="https://www.jeffjade.com/categories/Movie/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
+    
+      <category term="Movie" scheme="https://www.jeffjade.com/tags/Movie/"/>
+    
+  </entry>
   
   <entry>
     <title>优质网站同好者周刊（第 4 期）- 倾城之链</title>
@@ -1876,177 +2038,6 @@
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
     
       <category term="Front-End" scheme="https://www.jeffjade.com/tags/Front-End/"/>
-    
-      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最想与朋友分享的网站列表</title>
-    <link href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/"/>
-    <id>https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/</id>
-    <published>2020-09-01T13:21:00.000Z</published>
-    <updated>2020-09-01T16:46:45.343Z</updated>
-    
-    <content type="html"><![CDATA[<p>知乎上有许多关于「网站」问题，诸如：“哪些网站帮你打开了新世界的大门？”，“哪些网站让你感觉发现了新大陆？”，“有哪些值得每天一看的网站？”，“有哪些网站，一旦知道，你就离不开了？”……有多朋友分享的内容，在<a href="https://nicelinks.site/explore/all?sort=hottest" target="_blank" rel="external"><strong>「倾城之链」</strong></a> 都有收录，加上有受邀来回答，也就抽空来谈一谈；此篇便为对该回复的整理，命名为：最想与朋友分享的网站列表。</p>
-<a id="more"></a>
-<p>沈从文先生写给张兆和的情书💌中，有一句这样写道：“<strong>我一辈子走过许多地方的路，行过许多地方的桥，看过许多形状的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人</strong>“。在此，需要借来化用一下：“我这七年走过许多不同的站点，听过许多人的分享，看过许多种类的网页，却只热衷于<a href="https://nicelinks.site/" target="_blank" rel="external">自己开发的那一款 Web 应用 ── 倾城之链</a>”。</p>
-<p>因为许多善于折腾的人，以及他们了不起的智慧与创造力，以至于网络中充盈了大量<strong>优质网站</strong>；他们为您带来或是问题解决方案，或高效、或灵感、或震撼、或消遣….. 数量太多，收藏虽易，需要时使用或者分享与他人，都很不方便。</p>
-<p>因此，自 2017 年初，就有开始利用闲余时光，打磨个人最新作品——<a href="https://nicelinks.site/explore/all?sort=hottest" target="_blank" rel="external"><strong>「倾城之链」</strong></a> ，有意将其打造成优良开放型平台，旨在云集全球优秀网站，让您更为便捷地探索互联网中那更广阔的世界；在这里，您可以轻松<strong>发现</strong>、<strong>学习</strong>、<strong>分享</strong>更多<code>有用</code>或<code>有趣</code>的事物。</p>
-<p>截止目前（2020.08.27），<a href="https://nicelinks.site/explore/all?sort=hottest" target="_blank" rel="external"><strong>「倾城之链」</strong></a> 已收录优质网站近 400 款；不仅记录网站<code>标题</code>、<code>关键字</code>，<code>描述</code>外，还自动截取<strong>首屏页面</strong>，做<strong>分类</strong>，打<strong>标签</strong>，配上细致的<strong>推荐语</strong>，同时还提供了<strong>站内检索</strong>，以便于您在需要时，能轻松找到适合的那一款。</p>
-<p>为了您能更清楚的了解<a href="https://nicelinks.site/explore/all?sort=hottest" target="_blank" rel="external"><strong>「倾城之链」</strong></a>目前所收录的内容，就拿<code>图片处理工具</code>网站来举例，就有精选数十个超有用网站，鉴于篇幅，这里简单列举几个：</p>
-<h2 id="智能处理"><a href="#智能处理" class="headerlink" title="智能处理"></a>智能处理</h2><h3 id="Remove-Background-from-Image-–-remove-bg"><a href="#Remove-Background-from-Image-–-remove-bg" class="headerlink" title="Remove Background from Image – remove.bg"></a><a href="https://www.remove.bg/?utm_source=nicelinks.site" target="_blank" rel="external">Remove Background from Image – remove.bg</a></h3><p>Remove Image Background: 100% automatically – in 5 seconds – without a single click</p>
-<p><img src="https://oss.nicelinks.site/www.remove.bg.png?x-oss-process=style/png2jpg" alt="Remove Background from Image – remove.bg   倾城之链"></p>
-<p><strong>推荐语：</strong><a href="https://www.remove.bg/?utm_source=nicelinks.site" target="_blank" rel="external">remove.bg</a> 是一款相当厉害的在线抠图工具，完全免费且过程全自动，只需五秒钟就能完美去除背景。<a href="https://www.remove.bg/?utm_source=nicelinks.site" target="_blank" rel="external">remove.bg</a> 通过时下相当热门的 <a href="https://nicelinks.site/tags/AI" target="_blank" rel="external">AI</a> 技术，训练出足以分辨前景（人物）和背景的工具，让机器实现快速去除背景，只留下前景中的人物，不用进行任何操作。对于图片来源，可以是本地上传，或者提供在线图片地址；但需要注意 ⚠️ 的是需要有一个人在照片中（目前还不支持处理动漫人物）。</p>
-<h3 id="Automatically-Remove-Background-from-image-slazzer-com"><a href="#Automatically-Remove-Background-from-image-slazzer-com" class="headerlink" title="Automatically Remove Background from image-slazzer.com"></a><a href="https://nicelinks.site/post/5f216d32b1689d3f5f920010" target="_blank" rel="external">Automatically Remove Background from image-slazzer.com</a></h3><p>Use slazzer.com Online background removal tool &amp; create transparent backgrounds automatically in just few seconds without a single click - Try it for Free</p>
-<p><img src="https://oss.nicelinks.site/slazzer.com.png?x-oss-process=style/png2jpg" alt="Automatically Remove Background from image-slazzer.com 倾城之链"></p>
-<p><strong>推荐语：</strong><a href="https://slazzer.com/?utm_source=nicelinks.site" target="_blank" rel="external">Slazzer</a>：<strong>基于 <a href="https://nicelinks.site/tags/AI" target="_blank" rel="external">AI</a> 技术，可以在短短几秒钟内自动删除图像背景</strong>，只需要 5 秒钟，即可实现<strong>一键抠图去除背景</strong>，同时 <a href="https://slazzer.com/?utm_source=nicelinks.site" target="_blank" rel="external">Slazzer</a> 也在不断的根据 <a href="https://nicelinks.site/tags/AI" target="_blank" rel="external">AI</a> 技术进行自我改进，目的为了不断的提升准确率。如果您有这方面的诉求，推荐使用。</p>
-<h3 id="Remove-Video-Background-–-Unscreen"><a href="#Remove-Video-Background-–-Unscreen" class="headerlink" title="Remove Video Background – Unscreen"></a><a href="https://www.unscreen.com/?utm_source=nicelinks.site" target="_blank" rel="external">Remove Video Background – Unscreen</a></h3><p>Remove the background of any video - 100% automatically, online &amp; free! Goodbye Greenscreen. Hello Unscreen.</p>
-<p><img src="https://oss.nicelinks.site/www.unscreen.com.png?x-oss-process=style/png2jpg" alt="Remove Video Background – Unscreen   倾城之链"></p>
-<p><strong>推荐语：</strong><a href="https://www.unscreen.com/" target="_blank" rel="external">Unscreen</a> 是一个<strong>在线免费的扣视频背景神器</strong>，它支持 mp4、 gif、 <code>.mov</code>、 <code>.webm</code>、<code>.ogg</code> 等格式，上传视频或 GIF 自动去除背景保留主体。使用及其简单，如果您有类似需求，不妨试试这款。值得一提的是，这也是 <a href="https://nicelinks.site/post/5c81f5dbb5107f082b971019" target="_blank" rel="external">remove bg</a> 公司的产品，他们以“使个人和企业，能够使用面向未来的产品，简化其工作流程“作为使命，创造了很多智能化产品，值得关注。</p>
-<h2 id="设备样机-Device-Mockups"><a href="#设备样机-Device-Mockups" class="headerlink" title="设备样机 Device Mockups"></a>设备样机 Device Mockups</h2><h3 id="Previewed-Screenshots-Mockups-and-Videos-for-your-app"><a href="#Previewed-Screenshots-Mockups-and-Videos-for-your-app" class="headerlink" title="Previewed - Screenshots, Mockups and Videos for your app"></a><a href="https://previewed.app/?utm_source=nicelinks.site" target="_blank" rel="external">Previewed - Screenshots, Mockups and Videos for your app</a></h3><p>Choose from ready-made templates to generate mockups, screenshots and video previews and for your app. All screenshots are ready for App Store and Google Play</p>
-<p><img src="https://oss.nicelinks.site/previewed.app.png?x-oss-process=style/png2jpg" alt="Previewed - Screenshots, Mockups and Videos for your app 倾城之链"></p>
-<p><strong>推荐语：</strong><a href="https://previewed.app/?utm_source=nicelinks.site" target="_blank" rel="external">Previewed.app</a>：一个非常漂亮的样机生成器网站；她上不仅能够快速生成 App Store 和 Google Play 的<strong>应用截图</strong>，还可以生成产品的<strong>宣传视频</strong>和精美的<strong>应用样机模板</strong>（App Mockup Templates）；在样机模板这块，它支持的设备也比较多样，比如：iPhone、iPad、Mac、Android 等机型；iPad、Apple Watch 等设备；Safari、Google Chrome 等浏览器；以及促销横幅（Promo Banners）、产品搜寻（Product Hunt）等场景。有了这款工具，您即可像让专业设计师一样，处理您的应用程序屏幕截图。坦白说，这是同类型产品中，我所见过最棒的，强烈推荐。</p>
-<p>如下两张图，即是这款工具，在几分钟内，所做的应用样机。</p>
-<p><img src="https://image.nicelinks.site/nicelinks-mocups.png" alt="应用样机模板 - 倾城之链"></p>
-<p><img src="https://image.nicelinks.site/nicelinks-mocups-imac.jpeg" alt="应用样机模板 - 倾城之链"></p>
-<h3 id="Device-Shots-—-Device-Mockups-for-Social-Platforms"><a href="#Device-Shots-—-Device-Mockups-for-Social-Platforms" class="headerlink" title="Device Shots — Device Mockups for Social Platforms"></a><a href="https://deviceshots.com/?utm_source=nicelinks.site" target="_blank" rel="external">Device Shots — Device Mockups for Social Platforms</a></h3><p><strong>关键字：</strong> device, shots, mockup, screenshot, screen, shot, mockups, screenshots, website, app, application, mobile, desktop, free, download, high, resolution, online, tool, design</p>
-<p>Easily generate device mockups with your screenshot for social media! Choose between different device categories like phones, tablets, computers, watches, displays, and home devices, for free.</p>
-<p><img src="https://oss.nicelinks.site/deviceshots.com.png?x-oss-process=style/png2jpg" alt="Device Shots — Device Mockups for Social Platforms 倾城之链"></p>
-<p><strong>推荐语：</strong><a href="https://deviceshots.com/" target="_blank" rel="external">Device Shots</a>，一个超棒的样机生成器网站；它能在几秒钟内即可创建不同设备的样机，通过网站或移动应用程序的屏幕截图，免费获取高分辨率的设备模型，比如：手机、平板电脑、电脑、手表等等。值得一提的是，它不仅访问速度超快，而且支持超多设备；点击任意一个设备机型，即可进入到编辑页面；您只需：选择一个设备，插入截图，选择一个社交平台（画布将自动调整为正确的纵横比），选择背景色，即能生成的模型下载为高分辨率 PNG 图像（您还可以调整画布的尺寸）。可以说，它与 <a href="https://nicelinks.site/post/5f3526391751843ef894c894" target="_blank" rel="external">Previewed.app</a> 并列所见同类型产品中最佳，强烈推荐。</p>
-<hr>
-<p>即便您很少活跃于互联网圈子，对于这些网站（Web 应用）并不是很感兴趣，但依然有带大量工具，值得您在日常生活中使用，譬如：</p>
-<h2 id="生活必备"><a href="#生活必备" class="headerlink" title="生活必备"></a>生活必备</h2><h3 id="wikiHow-您可以编辑的指导手册"><a href="#wikiHow-您可以编辑的指导手册" class="headerlink" title="wikiHow - 您可以编辑的指导手册"></a><a href="https://zh.wikihow.com/?utm_source=nicelinks.site" target="_blank" rel="external">wikiHow - 您可以编辑的指导手册</a></h3><p>wikiHow是一项协作项目，目标是建立世界最大的最高质量的指导手册。无论您想做什么，我们的多语种指导手册都可以为您提供免费的逐步指导。</p>
-<p><img src="https://oss.nicelinks.site/zh.wikihow.com.png?x-oss-process=style/png2jpg" alt="wikiHow - 您可以编辑的指导手册 倾城之链"></p>
-<p><strong>推荐语：</strong><a href="https://wikihow.com/?utm_source=nicelinks.site" target="_blank" rel="external">WikiHow</a>：一个全球最大的生活指南网站，包括学习、工作、生活技巧等等；当你有遇到不熟悉的事物，都可以来这里寻觅下答案；此处是其翻译过来的中文版。此网站页面简洁时尚，配色柔和，非常利于阅读；步骤说明，调理清晰，并配备精美实用插图，着实是良心制作。其中内容也是无所不包，开车做菜，化妆萌宠，哲学宗教，甚至还有如何赚钱，如何追女孩子，如何与占有欲强的男友分手，如何让自己有尿….等一些清新奇葩问题；您可以输入你想知道的事物，它就会给你相对更为优质的答案，实在是<strong>居家生活必备</strong>网站。当您有接触过它，相信你会“爱”上它。</p>
-<h3 id="今日热榜官网"><a href="#今日热榜官网" class="headerlink" title="今日热榜官网"></a><a href="https://tophub.today/?utm_source=nicelinks.site" target="_blank" rel="external">今日热榜官网</a></h3><p><strong>关键字：</strong> 今日热榜, Tophub, 热门新闻, 今日头条, 热搜, 热词, 新闻聚合, 摸鱼</p>
-<p>今日热榜提供各站热榜聚合：微信、今日头条、百度、知乎、V2EX、微博、贴吧、豆瓣、天涯、虎扑、Github、抖音…追踪全网热点、简单高效阅读。</p>
-<p><img src="https://oss.nicelinks.site/tophub.today.png?x-oss-process=style/png2jpg" alt="今日热榜官网 倾城之链"></p>
-<p><strong>推荐语：</strong>每天辗转于微信，微博，淘宝各种新闻媒体，浪费了不少时间，发现有个不错的网站── <a href="https://tophub.today/?utm_source=nicelinks.site" target="_blank" rel="external">今日热榜</a>，分享给大家，也免得重复造轮子。</p>
-<p>网站涵盖的内容非常多。不仅有常用的新闻，微博，还有科技，技术交流，甚至连 52pojie 的热帖、值得买张大妈每天最火的产品等都有收录，避免各位花冤枉钱。</p>
-<p>总之，上面只列举了很小一部分，如果你也在纠结着该看些什么，相信<a href="https://tophub.today/?utm_source=nicelinks.site" target="_blank" rel="external">今日热榜</a>会是一个不错的选择。</p>
-<h3 id="全历史"><a href="#全历史" class="headerlink" title="全历史"></a><a href="https://www.allhistory.com/?utm_source=nicelinks.site" target="_blank" rel="external">全历史</a></h3><p><strong>关键字：</strong> 历史, 全历史, 知识图谱, 时空化, 关联化数据, 数字人文, 社科, 历史人物, 历史事件</p>
-<p>全历史(Allhistory）以 AI 知识图谱为核心引擎，通过高度时空化、关联化数据的方式构造及展现数字人文内容，尤其是历史知识。让用户沉浸在纵横开阔、左图右史的（历史、人文、社科等）知识海洋中。</p>
-<p><img src="https://oss.nicelinks.site/www.allhistory.com.png?x-oss-process=style/png2jpg" alt="全历史 倾城之链"></p>
-<p><strong>推荐语：</strong><a href="https://www.allhistory.com/?utm_source=nicelinks.site" target="_blank" rel="external">全历史(Allhistory)</a> 以 <a href="https://nicelinks.site/tags/AI" target="_blank" rel="external">AI</a> 知识图谱为核心引擎，通过高度时空化、关联化数据的方式构造及展现数字人文内容，尤其是<code>历史知识</code>。网站有将内容划分为：全画作、全古籍、全帝国、全人物、全战争、全古迹等模块（在其专属应用 APP 上，还设有历史地图、关系图谱、古典音乐、国家简史、疆域变迁等、AB 路径等），并且将整个宇宙的时间压缩在了一根轴上，使得用户可以拖动滚动条，即能看到这根轴上发生的大事件。网站提供了聚类、综合、模块等搜索功能，使得您可以轻便的查看所想知道的事物；当然，网站也允许您注册账号，亲自参与编辑，增加条目等。对于如何<strong>快捷了解<a href="https://nicelinks.site/theme/history" target="_blank" rel="external">历史</a></strong>，这实在是不可多得工具网站，如果您对历史感兴趣，<strong>实可典藏</strong>。</p>
-<p>对于该网站所提供的功能，有必要举一例加以说明；比如您想对<a href="https://www.allhistory.com/detail/582c01ae05c3fb6176030572?alias=%E5%94%90%E4%BC%AF%E8%99%8E" target="_blank" rel="external">唐伯虎</a>增加了解，即可在搜索框输入<code>唐伯虎</code>，即可查阅其个人简介、生命主要历程（时间地图、时间线）、关系图谱（朋友、师从、归属、成就、影响等等）、作品（60 余画作且没有水印）及贡献、以及差不多同时期，世界上相同领域（画家 &amp; 文学）的名家….. 一番查阅下来，相信你也会感叹：这网站简直不能再强大。</p>
-<hr>
-<p><a href="https://nicelinks.site/explore/all?sort=hottest" target="_blank" rel="external"><strong>「倾城」</strong></a>所收所录内容，涵盖有技术、产品、工具、社区、旅行、美图、历史、人文、娱乐等诸多方向；欲更多了解更多优质网站，可移步至<a href="https://nicelinks.site/about" target="_blank" rel="external"><strong>「倾城之链」</strong></a> ，或是先前分享的文章：</p>
-<ul>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/">如何选定搭建个人独立博客工具</a></li>
-<li><a href="https://www.jeffjade.com/2019/03/18/153-best-front-end-hacking-cheatsheets/" title="最好的前端黑客秘籍">最好的前端黑客秘籍</a></li>
-</ul>
-<hr>
-<p>鉴于篇幅考虑，这里就先分享这些；如果您有相关诉求，推荐关注<code>倾城之链</code>小程序或<strong>网站应用</strong>，更多价值工具，有待您前去发现 &amp; 使用。如果您想了解关于<a href="https://nicelinks.site/about" target="_blank" rel="external">倾城之链</a>更多讯息，请移步至官网查看。</p>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="min-width: 300px" alt="小程序码 - 倾城之链"></p>
-<p>于 2020 年 09 月，深圳.福田。</p>
-<blockquote>
-<p>原文首发于个人最新博客：<a href="https://quickapp.lovejade.cn/list-of-websites-i-most-want-to-share-with-my-friends/" target="_blank" rel="external">静轩之别苑 — 最想与朋友分享的网站列表</a>。</p>
-</blockquote>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/05/25/164-adding-shadow-effect-to-batch-image/">为批量图片添加外阴影效果</a></li>
-<li><a href="https://www.jeffjade.com/2020/04/30/163-front-end-project-development-specification-opinion/">前端项目开发规范意见</a></li>
-<li><a href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/">Arya - 在线 Markdown 编辑器</a></li>
-<li><a href="https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/">前端开发与 DevOps 实践</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/">Npm vs Yarn 之备忘详单</a></li>
-<li><a href="https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/">前端利器之 npx 使用纪要</a></li>
-<li><a href="https://quickapp.lovejade.cn/npm-package-json/" target="_blank" rel="external">关乎 package.json 的详细介绍</a></li>
-<li><a href="https://www.jeffjade.com/2020/02/29/161-how-to-write-a-good-readme-for-your-project/">如何为项目编写良好 README</a></li>
-<li><a href="https://www.jeffjade.com/2019/03/18/153-best-front-end-hacking-cheatsheets/">最好的前端黑客秘籍</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      沈从文先生写给张兆的情书中，有一句这样写道：“我一辈子走过许多地方的路，行过许多地方的桥，看过许多形状的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人”。在此，需要借来化用一下：“我这七年走过许多不同的站点，听过许多人的分享，看过许多种类的网页，却只热衷于自己开发的那一款 Web 应用”。
-    
-    </summary>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工具 vs 产品 And 知识 vs 思维</title>
-    <link href="https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/"/>
-    <id>https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/</id>
-    <published>2020-08-17T16:30:00.000Z</published>
-    <updated>2020-08-18T04:24:12.483Z</updated>
-    
-    <content type="html"><![CDATA[<p>自 2017 年开始，就有想塑造些优质个人产品；目前仍继续在维护的<a href="https://nicelinks.site/" target="_blank" rel="external"><strong>倾城之链</strong></a>，就是对这一夙愿的实践和坚持；在「<a href="https://nicelinks.site/about" target="_blank" rel="external">倾城</a>」的设计和运营中，接触了蛮多工具型产品，颇受启发的同时，也起到了很大帮助；此篇文章，旨在跟朋友们分享下那些<code>神器</code>、以及对工具 vs 产品、知识 vs 思维相关思考。</p>
-<a id="more"></a>
-<h3 id="超棒的样机生成器"><a href="#超棒的样机生成器" class="headerlink" title="超棒的样机生成器"></a>超棒的样机生成器</h3><blockquote>
-<p>Choose from ready-made templates to generate mockups, screenshots and video previews and for your app. All screenshots are ready for App Store and Google Play</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/previewed.app.png?x-oss-process=style/png2jpg" alt="Previewed - Screenshots, Mockups and Videos for your app 倾城之链"></p>
-<p><strong>推荐语：</strong><a href="https://previewed.app/?utm_source=nicelinks.site" target="_blank" rel="external">Previewed.app</a>：一个非常漂亮的样机生成器网站；它上不仅能够快速生成 App Store 和 Google Play 的<strong>应用截图</strong>，还可以生成产品的<strong>宣传视频</strong>和精美的<strong>应用样机模板</strong>（App Mockup Templates）；在样机模板这块，它支持的设备也比较多样，比如：iPhone、iPad、Mac、Android 等机型；iPad、Apple Watch 等设备；Safari、Google Chrome 等浏览器；以及促销横幅（Promo Banners）、产品搜寻（Product Hunt）等场景。有了这款工具，您即可像让专业设计师一样，处理您的应用程序屏幕截图。坦白说，这是同类型产品中，我所见过最棒的，强烈推荐。</p>
-<p><img src="https://image.nicelinks.site/nicelinks-mockup.png" alt="Previewed.app - 倾城之链"></p>
-<h3 id="Photopea-Online-Image-Editor"><a href="#Photopea-Online-Image-Editor" class="headerlink" title="Photopea | Online Image Editor"></a><a href="https://www.photopea.com/?utm_source=nicelinks.site" target="_blank" rel="external">Photopea | Online Image Editor</a></h3><p><strong>关键字：</strong> Photopea, PSD, XCF, Sketch, Photoshop, Gimp, 图片编辑器, 在线, 免费, Convert</p>
-<blockquote>
-<p>Open and edit PSD, XCF, Sketch (Photoshop, Gimp and Sketch) or any other image files. Inspect PSD and Sketch files. Convert Sketch to PSD. Apply photo effects and filters. A perfect alternative to Photoshop or Gimp.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.photopea.com.png?x-oss-process=style/png2jpg" alt="Photopea | Online Image Editor 倾城之链"></p>
-<p><strong>推荐语：</strong><a href="https://www.photopea.com/?utm_source=nicelinks.site" target="_blank" rel="external">Photopea</a> 是一款免费的在线图像编辑器；它能打开并编辑 <code>PSD</code>，<code>XCF</code>，草图（<code>Photoshop</code>，<code>Gimp</code> 和<code>Sketch</code> ）或任何其他图像文件。 检查 <code>PSD</code> 和 <code>Sketch</code> 文件。 将草图转换为 PSD。 应用照片效果和滤镜。是 <code>Photoshop</code> 或 <code>Gimp</code> 的完美替代品。</p>
-<p>鉴于篇幅，本文就暂分享这两款在线 Web 应用；接下来，想通过这两款应用，跟朋友们谈一谈「<strong>工具和产品的区别</strong>」，以及「<strong>知识储量与思维能力之差异</strong>」，从而探讨下抉择时之侧重倾向；;如果您对类似网站感兴趣，可以参见先前写的系列文章：</p>
-<ul>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/">如何选定搭建个人独立博客工具</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-</ul>
-<h3 id="关于工具和产品的区别"><a href="#关于工具和产品的区别" class="headerlink" title="关于工具和产品的区别"></a><strong>关于工具和产品的区别</strong></h3><p>产品的发展，将经历了概念、原型、Demo 版本、工具化、产品化等诸个阶段。其中有个简要的说法：Demo 版本，是给研发人员使用； <strong>工具</strong>的用户对象是专业人士；产品则是普通用户来用（强调用户体验，简单便捷）。从工具到产品，其实凝聚了最关键的一段路程：<strong>如何提供符合用户使用场景</strong>；良好使用的产品是需要不断打磨。换句话陈述则是：<strong>产品是在降低人类掌握技能的门槛，而<code>工具</code>只是在优化操作体验</strong>。</p>
-<p>虽然，<a href="https://www.photopea.com/?utm_source=nicelinks.site" target="_blank" rel="external">Photopea</a> 做的已经比较人性化，但非专业人士用起来，依旧很是吃力；自然只能将其界定为<code>工具</code>，同类型的仍有很多，诸如<code>编程语言</code>、汽车、飞机等等。而 <a href="https://previewed.app/?utm_source=nicelinks.site" target="_blank" rel="external">Previewed.app</a>，是普通人也可以轻松使用，那么即可将其归结为工具型<code>产品</code>，譬如微信、抖音、支付宝云云。这两者无所谓孰优孰劣，只不过使用成本高低不同罢了。</p>
-<p>于芸芸众生，更推荐留意些优质工具；知晓它，才有使用的可能；运用它，方可衍生更多可能；它可以帮你<strong>节省效率同时，更能带给你处理问题不同方式、甚至解决问题创新思维</strong>，更能拉开你与他人的差距。比如同样是抓取网络简历、处理 Excel 表，如果懂些 Python 或 Node.js， 写个脚本，手到擒来，相比手动操作，要高效快捷。</p>
-<p>有朋友可能会觉得，用简单“产品”，也可以完成<code>专业工具</code>所做的事儿，如用手机美图替代 PhotoShop；事实上，这只是能替代些相对简单操作，更高阶任务，仍是遥不可及。如果人类日常生活、工作、研究等，都可以基于轻松即可使用<code>产品</code>完成，那么将可断定人类，已进入相对现在更为崭新的文明。程序员群体，是所有行业平均薪资最高，也是一个有力佐证，毕竟使用编程工具，对于绝大多数人，属于较高门槛一类。</p>
-<h3 id="知识储量-VS-思维能力"><a href="#知识储量-VS-思维能力" class="headerlink" title="知识储量 VS 思维能力"></a>知识储量 VS 思维能力</h3><blockquote>
-<p>思维能力：是通过分析（检索）、综合、概括、抽象、比较、具体化和系统化等一系列过程，对感性材料进行加工，并转化为理性认识，从而解决问题的一种能力。</p>
-</blockquote>
-<p>信息时代，知识储量并不是最重要的，Google 和 Wikepedia（国内如无法使用，对应的是某度某狗，和相关性百科） 可以找到绝大多数信息，最重要的是<code>思维能力</code>：分析问题的本源，清晰用力的方向，知道要获取什么、从何处获取、怎么去获取，如何过滤以及处理得到信息，从而找到解决问题方案；人脑要在一些电脑不及的地方拓展，而不是和电脑去竞争计算和存储。</p>
-<hr>
-<p>在两千年前的战国时期，荀子就有感悟曰：</p>
-<blockquote>
-<p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。<strong>君子生非异也，善假于物也</strong>。</p>
-</blockquote>
-<p><strong>君子生非异也，善假于物也</strong>。远古时期，以石头、铁，青铜器为生存工具；文字的发明，使得历史得以记载；…… 工业时代，各类工具如雨后春笋般骤起，使得交流、运输、医疗等更是有了质的飞跃；进入信息数字化时代，<code>工具</code>可谓是伴随于世间生灵左右，甚至“左右”了世间生灵。于此，当不断更新自己思维，立于更高维度来看待它，了解它，运用它，<strong>取其精华，成心中所愿</strong>；而不是被某些“产品”蹉跎了光阴、夺取了心智，以致辛苦兮连连，却仍总是碌碌而无为。</p>
-<p>如果您尚未有良好途径来获取优质工具，不妨关注「<a href="https://nicelinks.site/explore/all" target="_blank" rel="external">倾城之链</a>」：她作为一个开放平台，旨在云集全球优秀 Web 应用，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。目前有提供 Web、小程序、快应用等版本；下面是倾城小程序码：</p>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="min-width: 300px" alt="小程序码 - 倾城之链"></p>
-<p>于 2020 年 08 月，深圳.福田。</p>
-<blockquote>
-<p>原文首发于个人最新博客：<a href="https://quickapp.lovejade.cn/tools-vs-products-and-knowledge-vs-thinking/" target="_blank" rel="external">静轩之别苑 — 工具 vs 产品 And 知识 vs 思维</a>。</p>
-</blockquote>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/05/25/164-adding-shadow-effect-to-batch-image/">为批量图片添加外阴影效果</a></li>
-<li><a href="https://www.jeffjade.com/2020/04/30/163-front-end-project-development-specification-opinion/">前端项目开发规范意见</a></li>
-<li><a href="https://www.jeffjade.com/2019/05/31/155-arya-markdown-online-editor/">Arya - 在线 Markdown 编辑器</a></li>
-<li><a href="https://www.jeffjade.com/2020/04/15/162-front-end-development-and-devops-practice/">前端开发与 DevOps 实践</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/">Npm vs Yarn 之备忘详单</a></li>
-<li><a href="https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/">前端利器之 npx 使用纪要</a></li>
-<li><a href="https://quickapp.lovejade.cn/npm-package-json/" target="_blank" rel="external">关乎 package.json 的详细介绍</a></li>
-<li><a href="https://www.jeffjade.com/2020/02/29/161-how-to-write-a-good-readme-for-your-project/">如何为项目编写良好 README</a></li>
-<li><a href="https://www.jeffjade.com/2019/03/18/153-best-front-end-hacking-cheatsheets/">最好的前端黑客秘籍</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      自 2017 年开始，就有想塑造些优质个人产品；目前仍继续在维护的倾城之链，就是对这一夙愿的实践和坚持；在「倾城」的设计和运营中，接触了颇多工具型产品，受启发的同时，也起到了很大作用；此篇文章，旨在跟朋友们分享下那些神器、以及对工具 vs 产品、知识 vs 思维相关思考。
-    
-    </summary>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
     
       <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
