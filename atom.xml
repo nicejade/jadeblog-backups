@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-03-20T03:21:08.828Z</updated>
+  <updated>2021-03-22T15:54:13.661Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,84 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何基于 Flarum 搭建一个优雅简洁论坛？</title>
+    <link href="https://www.jeffjade.com/2021/03/22/189-how-to-install-flarum-based-on-docker/"/>
+    <id>https://www.jeffjade.com/2021/03/22/189-how-to-install-flarum-based-on-docker/</id>
+    <published>2021-03-22T14:22:00.000Z</published>
+    <updated>2021-03-22T15:54:13.661Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果，您有了解 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a>，或者使用 <a href="https://nicelinks.site/post/5c9a2064df13c46502a09026" target="_blank" rel="external">Wappalyzer</a> 工具，那您应该很容易了解到，前段时间，吾所搭建的<a href="https://forum.lovejade.cn/" target="_blank" rel="external"><strong>悠然宜想亭</strong></a>社区，是基于 <code>Flarum</code> 来搭建；在这过程中，有过一番折腾；此篇文章，旨在与感兴趣的朋友们，分享下：”如何基于 Flarum，快速 搭建一个优雅简洁论坛”。</p>
+<a id="more"></a>
+<p><img src="https://oss.nicelinks.site/flarum.org.png?x-oss-process=style/png2jpg" alt="Flarum | 一款优雅简洁论坛软件"></p>
+<p>在 <a href="https://docs.flarum.org/install.html" target="_blank" rel="external">Flarum Installation</a> 文档中，颇为清晰的说明 <code>Flarum</code> 该如何安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer create-project flarum/flarum . --stability=beta</div></pre></td></tr></table></figure>
+<p>但实际操作却有着很多问题；如安装 composer，升级 PHP（PHP 须是 7.2.9+）等等；就升级 PHP  这一项，在 Mac 和两台 Linux 服务器上，都根据 stackoverflow 上的回答，分别做了尝试，却仍有其他各种问题；在耗了蛮长时间后，突然想到，<code>Flarum</code> 这么好的工具，肯定有被集成至 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a> 呀，在 <a href="https://nicelinks.site/post/6049dab45f9af714fe21dcc6" target="_blank" rel="external">Docker Hub</a> 一经检索，果然存在——<a href="https://github.com/mondediefr/docker-flarum" target="_blank" rel="external">mondediefr/docker-flarum</a>：💬 🐳 Docker image of Flarum。按照 README 进行操作，很快就搭建完成，并发布上线；在此，跟大家分享下具体操作：</p>
+<ol start="0">
+<li>基于如下方法搭建，须要一个前提，即：安装 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a> 和 docker-compose；</li>
+<li>建议 <code>docker-compose.yml</code>，并做如下配置：</li>
+</ol>
+<figure class="highlight docker"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">version: <span class="string">"2"</span></div><div class="line"></div><div class="line">services:</div><div class="line">  flarum:</div><div class="line">    image: mondedie/flarum:stable</div><div class="line">    container_name: flarum</div><div class="line">    env_file:</div><div class="line">      - ./flarum/flarum.<span class="keyword">env</span></div><div class="line">    volumes:</div><div class="line">      - ./flarum/assets:/flarum/app/public/assets</div><div class="line">      - ./flarum/extensions:/flarum/app/extensions</div><div class="line">      - ./flarum/nginx:/etc/nginx/flarum</div><div class="line">    ports:</div><div class="line">      - <span class="number">8888</span>:<span class="number">8888</span></div><div class="line">    depends_on:</div><div class="line">      - mariadb</div><div class="line"></div><div class="line">  mariadb:</div><div class="line">    image: mariadb:<span class="number">10.5</span></div><div class="line">    container_name: mariadb</div><div class="line">    environment:</div><div class="line">      - MYSQL_ROOT_PASSWORD=xxxxxxxxxxx</div><div class="line">      - MYSQL_DATABASE=flarum</div><div class="line">      - MYSQL_USER=flarum</div><div class="line">      - MYSQL_PASSWORD=xxxxxxxxxxx</div><div class="line">    volumes:</div><div class="line">      - ./mysql/db:/var/lib/mysql</div></pre></td></tr></table></figure>
+<ol start="2">
+<li>建立本地目录 <code>flarum</code> 及文件 <code>flarum/flarum.dev</code>，并做配置：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># vim ./flarum/flarum.env</span></div><div class="line"></div><div class="line">FORUM_URL=https://forum.lovejade.cn</div><div class="line"></div><div class="line"><span class="comment"># Database configuration</span></div><div class="line">DB_HOST=mariadb</div><div class="line">DB_NAME=flarum</div><div class="line">DB_USER=flarum</div><div class="line">DB_PASS=xxxxxxxxxxx</div><div class="line">DB_PREF=flarum_</div><div class="line">DB_PORT=3306</div><div class="line"></div><div class="line"><span class="comment"># User admin flarum (environment variable for first installation)</span></div><div class="line"><span class="comment"># /!\ admin password must contain at least 8 characters /!\</span></div><div class="line">FLARUM_ADMIN_USER=admin</div><div class="line">FLARUM_ADMIN_PASS=xxxxxxxxxxx</div><div class="line">FLARUM_ADMIN_MAIL=xyz@xyz.com</div><div class="line">FLARUM_TITLE=<span class="string">"悠然宜想亭"</span></div></pre></td></tr></table></figure>
+<ol start="3">
+<li>基于 <code>docker-compse</code> 运行命令，启动 Flarum 服务：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker-compse up <span class="_">-d</span></div></pre></td></tr></table></figure>
+<ol start="4">
+<li>解析域名，配置 Nginx 反代 Flarum 服务（设定为：8888 端口）：<br>解析域名，这就不在多说了，在域名商处，对想要的域名，添加 A，指定服务器 IP 即可，非常简单；至于 Nginx 配置，也比较简单，即在 <code>nginx/conf.d</code> 目录下，添加了 <code>forum-lovejade-cn.conf</code> 文件，并做了简单配置即可：</li>
+</ol>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">upstream</span> forum &#123;</div><div class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:8888</span>;</div><div class="line">    <span class="attribute">keepalive</span> <span class="number">8</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">    <span class="attribute">listen</span> <span class="number">443</span>;</div><div class="line">    <span class="attribute">ssl</span> <span class="literal">on</span>;</div><div class="line">    <span class="attribute">ssl_certificate</span> 1_forum.xyz_bundle.crt;</div><div class="line">    <span class="attribute">ssl_certificate_key</span> 2_forum.xyz.key;</div><div class="line">    <span class="attribute">ssl_session_timeout</span> <span class="number">5m</span>;</div><div class="line">    <span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>; <span class="comment">#按照这个协议配置</span></div><div class="line">    <span class="attribute">ssl_ciphers</span> ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;<span class="comment">#按照这个套件配置</span></div><div class="line">    <span class="attribute">ssl_prefer_server_ciphers</span> <span class="literal">on</span>;</div><div class="line">    <span class="attribute">server_name</span> forum.lovejade.cn;</div><div class="line"></div><div class="line">    <span class="attribute">location</span> / &#123;</div><div class="line">        <span class="attribute">proxy_set_header</span> Host <span class="variable">$http_host</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Real-IP <span class="variable">$remote_addr</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Forwarded-Proto <span class="variable">$scheme</span>;</div><div class="line">        <span class="attribute">proxy_pass</span> http://forum;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>需要补充说明的是，在 <code>nginx/nginx.conf</code> 文件，原本已经添加 <code>include</code> 命令（如下），因此上面说在 <code>nginx/conf.d</code> 目录下，直接添加新的 <code>*.conf</code> 文件，重启 Nginx 即能生效。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">include /etc/nginx/conf.d/*.conf;</div></pre></td></tr></table></figure>
+<ol start="5">
+<li>重启 Nginx（<code>nginx -s reload</code>），见证奇迹：浏览器打开域名地址，填写数据库信息以及管理员信息，点击安装即可（如下图）。于是<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>就这么搭建了起来，👏。</li>
+</ol>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Flarum-Install.png" alt="Flarum Install"></p>
+<p>以上，便是”如何基于 Flarum 搭建一个优雅简洁论坛”的大部分内容，有同欲者，可按照如上方法，搭建属于您的论坛（社区），如有问题，欢迎留言探讨。就使用体验来看，Flarum 有几个明显优点点：</p>
+<ol>
+<li>响应速度，出奇的快，本站未做额外处理，且服务器使用的是 <a href="https://m.do.co/c/046a8e6b255c" target="_blank" rel="external">DigitalOcean</a>，朋友们可访问本站，以体验之；</li>
+<li>界面简洁，支持自定义；功能丰富，尤其是后台，支持各种设定；下面就部分功能做了截图，大家可感受下；</li>
+</ol>
+<p><img src="https://oss.nicelinks.site/forum.lovejade.cn-admin.com.png?x-oss-process=style/png2jpg" alt="Flarum 论坛后台"></p>
+<p>早些时候倒也想过，手动写一个社区，考虑到所需耗时太长、精力过重，就作罢了；搭建<a href="https://forum.lovejade.cn/" target="_blank" rel="external"><strong>悠然宜想亭</strong></a>，有率先考虑 <a href="https://nicelinks.site/post/5fe33ded9b4e656960bd8468" target="_blank" rel="external">Discuz！Q</a>、<a href="https://github.com/88250/symphony" target="_blank" rel="external">88250/symphony</a> 并做尝试，只不过几番操作，却不能快速成事；这才转而折腾 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a>，深入了解，大感其妙。从 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a> 的设计哲学，也学到很多：类似工具，须当以简易搭建而始，更多设定，该是在网站后台提供操作；否则，将很多用户绝于道途，这样可不好。</p>
+<p>于深圳·福田  2021.03.13，上次修改 2021.03.22。</p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2020/12/31/177-generating-word-cloud-based-on-python/">基于 python 对文本做分词、生成词云图</a></li>
+<li><a href="https://www.jeffjade.com/2020/12/06/176-how-to-auto-switch-between-different-input-methods-for-different-app/">如何为不同应用窗口，自动切换不同输入法</a></li>
+<li><a href="https://quickapp.lovejade.cn/how-to-add-shadow-effects-to-image/" target="_blank" rel="external">为文章图片添加外阴影效果</a></li>
+<li><a href="https://quickapp.lovejade.cn/markdown-magic-tricks/" target="_blank" rel="external">Markdown 用法中的奇技淫巧</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2020/10/12/172-okr-working-method-let-you-more-efficiently/">OKR 工作法，带你聚焦目标，高效工作</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/">工具 vs 产品 And 知识 vs 思维</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      如果，您有了解 Flarum，或者使用 Wappalyzer 工具，那您应该很容易了解到，前段时间，吾所搭建的悠然宜想亭社区，是基于 Flarum 来搭建；在这过程中，有过一番折腾；此篇文章，旨在与感兴趣的朋友们，分享下：&quot;如何基于 Flarum，快速 搭建一个优雅简洁论坛&quot;。
+    
+    </summary>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/categories/Toss/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Flarum" scheme="https://www.jeffjade.com/tags/Flarum/"/>
+    
+  </entry>
   
   <entry>
     <title>优质网站同好者周刊（第 5 期）- 倾城之链</title>
@@ -140,84 +218,6 @@
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何基于 Flarum 搭建一个优雅简洁论坛？</title>
-    <link href="https://www.jeffjade.com/2021/03/18/189-how-to-install-flarum-based-on-docker/"/>
-    <id>https://www.jeffjade.com/2021/03/18/189-how-to-install-flarum-based-on-docker/</id>
-    <published>2021-03-18T14:22:00.000Z</published>
-    <updated>2021-03-22T15:34:42.579Z</updated>
-    
-    <content type="html"><![CDATA[<p>如果，您有了解 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a>，或者使用 <a href="https://nicelinks.site/post/5c9a2064df13c46502a09026" target="_blank" rel="external">Wappalyzer</a> 工具，那您应该很容易了解到，前段时间，吾所搭建的<a href="https://forum.lovejade.cn/" target="_blank" rel="external"><strong>悠然宜想亭</strong></a>社区，是基于 <code>Flarum</code> 来搭建；在这过程中，有过一番折腾；此篇文章，旨在与感兴趣的朋友们，分享下：”如何基于 Flarum，快速 搭建一个优雅简洁论坛”。</p>
-<a id="more"></a>
-<p><img src="https://oss.nicelinks.site/flarum.org.png?x-oss-process=style/png2jpg" alt="Flarum | 一款优雅简洁论坛软件"></p>
-<p>在 <a href="https://docs.flarum.org/install.html" target="_blank" rel="external">Flarum Installation</a> 文档中，颇为清晰的说明 <code>Flarum</code> 该如何安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer create-project flarum/flarum . --stability=beta</div></pre></td></tr></table></figure>
-<p>但实际操作却有着很多问题；如安装 composer，升级 PHP（PHP 须是 7.2.9+）等等；就升级 PHP  这一项，在 Mac 和两台 Linux 服务器上，都根据 stackoverflow 上的回答，分别做了尝试，却仍有其他各种问题；在耗了蛮长时间后，突然想到，<code>Flarum</code> 这么好的工具，肯定有被集成至 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a> 呀，在 <a href="https://nicelinks.site/post/6049dab45f9af714fe21dcc6" target="_blank" rel="external">Docker Hub</a> 一经检索，果然存在——<a href="https://github.com/mondediefr/docker-flarum" target="_blank" rel="external">mondediefr/docker-flarum</a>：💬 🐳 Docker image of Flarum。按照 README 进行操作，很快就搭建完成，并发布上线；在此，跟大家分享下具体操作：</p>
-<ol start="0">
-<li>基于如下方法搭建，须要一个前提，即：安装 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a> 和 docker-compose；</li>
-<li>建议 <code>docker-compose.yml</code>，并做如下配置：</li>
-</ol>
-<figure class="highlight docker"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">version: <span class="string">"2"</span></div><div class="line"></div><div class="line">services:</div><div class="line">  flarum:</div><div class="line">    image: mondedie/flarum:stable</div><div class="line">    container_name: flarum</div><div class="line">    env_file:</div><div class="line">      - ./flarum/flarum.<span class="keyword">env</span></div><div class="line">    volumes:</div><div class="line">      - ./flarum/assets:/flarum/app/public/assets</div><div class="line">      - ./flarum/extensions:/flarum/app/extensions</div><div class="line">      - ./flarum/nginx:/etc/nginx/flarum</div><div class="line">    ports:</div><div class="line">      - <span class="number">8888</span>:<span class="number">8888</span></div><div class="line">    depends_on:</div><div class="line">      - mariadb</div><div class="line"></div><div class="line">  mariadb:</div><div class="line">    image: mariadb:<span class="number">10.5</span></div><div class="line">    container_name: mariadb</div><div class="line">    environment:</div><div class="line">      - MYSQL_ROOT_PASSWORD=xxxxxxxxxxx</div><div class="line">      - MYSQL_DATABASE=flarum</div><div class="line">      - MYSQL_USER=flarum</div><div class="line">      - MYSQL_PASSWORD=xxxxxxxxxxx</div><div class="line">    volumes:</div><div class="line">      - ./mysql/db:/var/lib/mysql</div></pre></td></tr></table></figure>
-<ol start="2">
-<li>建立本地目录 <code>flarum</code> 及文件 <code>flarum/flarum.dev</code>，并做配置：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># vim ./flarum/flarum.env</span></div><div class="line"></div><div class="line">FORUM_URL=https://forum.lovejade.cn</div><div class="line"></div><div class="line"><span class="comment"># Database configuration</span></div><div class="line">DB_HOST=mariadb</div><div class="line">DB_NAME=flarum</div><div class="line">DB_USER=flarum</div><div class="line">DB_PASS=xxxxxxxxxxx</div><div class="line">DB_PREF=flarum_</div><div class="line">DB_PORT=3306</div><div class="line"></div><div class="line"><span class="comment"># User admin flarum (environment variable for first installation)</span></div><div class="line"><span class="comment"># /!\ admin password must contain at least 8 characters /!\</span></div><div class="line">FLARUM_ADMIN_USER=admin</div><div class="line">FLARUM_ADMIN_PASS=xxxxxxxxxxx</div><div class="line">FLARUM_ADMIN_MAIL=xyz@xyz.com</div><div class="line">FLARUM_TITLE=<span class="string">"悠然宜想亭"</span></div></pre></td></tr></table></figure>
-<ol start="3">
-<li>基于 <code>docker-compse</code> 运行命令，启动 Flarum 服务：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker-compse up <span class="_">-d</span></div></pre></td></tr></table></figure>
-<ol start="4">
-<li>解析域名，配置 Nginx 反代 Flarum 服务（设定为：8888 端口）：<br>解析域名，这就不在多说了，在域名商处，对想要的域名，添加 A，指定服务器 IP 即可，非常简单；至于 Nginx 配置，也比较简单，即在 <code>nginx/conf.d</code> 目录下，添加了 <code>forum-lovejade-cn.conf</code> 文件，并做了简单配置即可：</li>
-</ol>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">upstream</span> forum &#123;</div><div class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:8888</span>;</div><div class="line">    <span class="attribute">keepalive</span> <span class="number">8</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">    <span class="attribute">listen</span> <span class="number">443</span>;</div><div class="line">    <span class="attribute">ssl</span> <span class="literal">on</span>;</div><div class="line">    <span class="attribute">ssl_certificate</span> 1_forum.xyz_bundle.crt;</div><div class="line">    <span class="attribute">ssl_certificate_key</span> 2_forum.xyz.key;</div><div class="line">    <span class="attribute">ssl_session_timeout</span> <span class="number">5m</span>;</div><div class="line">    <span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>; <span class="comment">#按照这个协议配置</span></div><div class="line">    <span class="attribute">ssl_ciphers</span> ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;<span class="comment">#按照这个套件配置</span></div><div class="line">    <span class="attribute">ssl_prefer_server_ciphers</span> <span class="literal">on</span>;</div><div class="line">    <span class="attribute">server_name</span> forum.lovejade.cn;</div><div class="line"></div><div class="line">    <span class="attribute">location</span> / &#123;</div><div class="line">        <span class="attribute">proxy_set_header</span> Host <span class="variable">$http_host</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Real-IP <span class="variable">$remote_addr</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Forwarded-Proto <span class="variable">$scheme</span>;</div><div class="line">        <span class="attribute">proxy_pass</span> http://forum;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>需要补充说明的是，在 <code>nginx/nginx.conf</code> 文件，原本已经添加 <code>include</code> 命令（如下），因此上面说在 <code>nginx/conf.d</code> 目录下，直接添加新的 <code>*.conf</code> 文件，重启 Nginx 即能生效。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">include /etc/nginx/conf.d/*.conf;</div></pre></td></tr></table></figure>
-<ol start="5">
-<li>重启 Nginx（<code>nginx -s reload</code>），见证奇迹：浏览器打开域名地址，填写数据库信息以及管理员信息，点击安装即可（如下图）。于是<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>就这么搭建了起来，👏。</li>
-</ol>
-<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Flarum-Install.png" alt="Flarum Install"></p>
-<p>以上，便是”如何基于 Flarum 搭建一个优雅简洁论坛”的大部分内容，有同欲者，可按照如上方法，搭建属于您的论坛（社区），如有问题，欢迎留言探讨。就使用体验来看，Flarum 有几个明显优点点：</p>
-<ol>
-<li>响应速度，出奇的快，本站未做额外处理，且服务器使用的是 <a href="https://m.do.co/c/046a8e6b255c" target="_blank" rel="external">DigitalOcean</a>，朋友们可访问本站，以体验之；</li>
-<li>界面简洁，支持自定义；功能丰富，尤其是后台，支持各种设定；下面就部分功能做了截图，大家可感受下；</li>
-</ol>
-<p><img src="https://oss.nicelinks.site/forum.lovejade.cn-admin.com.png?x-oss-process=style/png2jpg" alt="Flarum 论坛后台"></p>
-<p>早些时候倒也想过，手动写一个社区，考虑到所需耗时太长、精力过重，就作罢了；搭建<a href="https://forum.lovejade.cn/" target="_blank" rel="external"><strong>悠然宜想亭</strong></a>，有率先考虑 <a href="https://nicelinks.site/post/5fe33ded9b4e656960bd8468" target="_blank" rel="external">Discuz！Q</a>、<a href="https://github.com/88250/symphony" target="_blank" rel="external">88250/symphony</a> 并做尝试，只不过几番操作，却不能快速成事；这才转而折腾 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a>，深入了解，大感其妙。从 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a> 的设计哲学，也学到很多：类似工具，须当以简易搭建而始，更多设定，该是在网站后台提供操作；否则，将很多用户绝于道途，这样可不好。</p>
-<p>于深圳·福田  2021.03.13，上次修改 2021.03.22。</p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://www.jeffjade.com/2020/12/31/177-generating-word-cloud-based-on-python/">基于 python 对文本做分词、生成词云图</a></li>
-<li><a href="https://www.jeffjade.com/2020/12/06/176-how-to-auto-switch-between-different-input-methods-for-different-app/">如何为不同应用窗口，自动切换不同输入法</a></li>
-<li><a href="https://quickapp.lovejade.cn/how-to-add-shadow-effects-to-image/" target="_blank" rel="external">为文章图片添加外阴影效果</a></li>
-<li><a href="https://quickapp.lovejade.cn/markdown-magic-tricks/" target="_blank" rel="external">Markdown 用法中的奇技淫巧</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2020/10/12/172-okr-working-method-let-you-more-efficiently/">OKR 工作法，带你聚焦目标，高效工作</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/">工具 vs 产品 And 知识 vs 思维</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      如果，您有了解 Flarum，或者使用 Wappalyzer 工具，那您应该很容易了解到，前段时间，吾所搭建的悠然宜想亭社区，是基于 Flarum 来搭建；在这过程中，有过一番折腾；此篇文章，旨在与感兴趣的朋友们，分享下：&quot;如何基于 Flarum，快速 搭建一个优雅简洁论坛&quot;。
-    
-    </summary>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/categories/Toss/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="Flarum" scheme="https://www.jeffjade.com/tags/Flarum/"/>
     
   </entry>
   
