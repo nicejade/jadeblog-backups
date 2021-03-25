@@ -106,6 +106,57 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2014/12/27/2014-12-27-readbook-thoughts/" class="title=&quot;阅《黄金时代》另类感&quot;" itemprop="url">阅《黄金时代》另类感</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2014-12-27T04:00:00.000Z" itemprop="datePublished"> 发表于 2014-12-27</time>
+
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;昨夜，小读王小波的《黄金时代》，在其玩味的言语之间停不下来，只是未曾购得，只是才看了样章而已。今特查了他得生平和文集，也算很是青睐。知晓此人倒也很久，前段时间更也知道他对于计算机这块也是颇有研究，也算中国第一代程序员了；于现在的我而言，很是钦赞！</p>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2014/12/27/2014-12-27-readbook-thoughts/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Read/">Read</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Thought/">Thought</a><a href="/tags/Read/">Read</a>
+  </div>
+
+</div>
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+    </article>
+
+  <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2014/12/25/2014-12-25-regular-expression/" class="jade-cp-link" title="59分钟学会正则表达式" itemprop="url">59分钟学会正则表达式</a>
     
   </h1>
@@ -157,7 +208,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/12/22/2014-12-22-lua-weaktable/" class="title=&quot;Lua" table itemprop="url">Lua table之弱引用</a>
+      <a href="/2014/12/22/2014-12-24-lua-codepart/" class="title=&quot;Lua代码片段收集&quot;" itemprop="url">Lua代码片段收集</a>
     
   </h1>
   <p class="article-author">By
@@ -171,12 +222,12 @@
 </header>
     <div class="article-content">
         
-        <p>Lua采用了基于垃圾收集的内存管理机制，因此对于程序员来说，在很多时候内存问题都将不再困扰他们。然而任何垃圾收集器都不是万能的，在有些特殊情况下，垃圾收集器是无法准确的判断是否应该将当前对象清理。这样就极有可能导致很多垃圾对象无法被释放。为了解决这一问题，就需要Lua的开发者予以一定程度上的配合。比如，当某个table对象被存放在容器中，而容器的外部不再有任何变量引用该对象，对于这样的对象，Lua的垃圾收集器是不会清理的，因为容器对象仍然引用着他。如果此时针对该容器的应用仅限于查找，而不是遍历的话，那么该对象将永远不会被用到。事实上，对于这样的对象我们是希望Lua的垃圾收集器可以将其清理掉的。见如下代码:</p>
+        <h3 id="Lua实现闭包"><a href="#Lua实现闭包" class="headerlink" title="Lua实现闭包"></a>Lua实现闭包</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">--[[@Func :实现闭包</span></div><div class="line">    @Desc : 当一个函数内部嵌套另一个函数定义时，内部的函数体可以访问外部的函数的局部变量，这种特征我们称作词法定界]]</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fuck</span><span class="params">()</span></span></div><div class="line">    <span class="keyword">local</span> i = <span class="number">0</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">        i = i + <span class="number">1</span></div><div class="line">        <span class="keyword">return</span> i</div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line">c1 = fuck()</div><div class="line"><span class="built_in">print</span>(c1())</div><div class="line"><span class="built_in">print</span>(c1())</div></pre></td></tr></table></figure>
         
         
         <p class="article-more-link">
           
-            <a href="/2014/12/22/2014-12-22-lua-weaktable/#more">Read More</a>
+            <a href="/2014/12/22/2014-12-24-lua-codepart/#more">Read More</a>
           
        </p>
     </div>
@@ -208,7 +259,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/12/22/2014-12-24-lua-codepart/" class="title=&quot;Lua代码片段收集&quot;" itemprop="url">Lua代码片段收集</a>
+      <a href="/2014/12/22/2014-12-22-lua-weaktable/" class="title=&quot;Lua" table itemprop="url">Lua table之弱引用</a>
     
   </h1>
   <p class="article-author">By
@@ -222,12 +273,12 @@
 </header>
     <div class="article-content">
         
-        <h3 id="Lua实现闭包"><a href="#Lua实现闭包" class="headerlink" title="Lua实现闭包"></a>Lua实现闭包</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">--[[@Func :实现闭包</span></div><div class="line">    @Desc : 当一个函数内部嵌套另一个函数定义时，内部的函数体可以访问外部的函数的局部变量，这种特征我们称作词法定界]]</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fuck</span><span class="params">()</span></span></div><div class="line">    <span class="keyword">local</span> i = <span class="number">0</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">        i = i + <span class="number">1</span></div><div class="line">        <span class="keyword">return</span> i</div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line">c1 = fuck()</div><div class="line"><span class="built_in">print</span>(c1())</div><div class="line"><span class="built_in">print</span>(c1())</div></pre></td></tr></table></figure>
+        <p>Lua采用了基于垃圾收集的内存管理机制，因此对于程序员来说，在很多时候内存问题都将不再困扰他们。然而任何垃圾收集器都不是万能的，在有些特殊情况下，垃圾收集器是无法准确的判断是否应该将当前对象清理。这样就极有可能导致很多垃圾对象无法被释放。为了解决这一问题，就需要Lua的开发者予以一定程度上的配合。比如，当某个table对象被存放在容器中，而容器的外部不再有任何变量引用该对象，对于这样的对象，Lua的垃圾收集器是不会清理的，因为容器对象仍然引用着他。如果此时针对该容器的应用仅限于查找，而不是遍历的话，那么该对象将永远不会被用到。事实上，对于这样的对象我们是希望Lua的垃圾收集器可以将其清理掉的。见如下代码:</p>
         
         
         <p class="article-more-link">
           
-            <a href="/2014/12/22/2014-12-24-lua-codepart/#more">Read More</a>
+            <a href="/2014/12/22/2014-12-22-lua-weaktable/#more">Read More</a>
           
        </p>
     </div>
@@ -541,6 +592,10 @@
       <ul>
         
           <li>
+            <a href="/2021/03/25/190-nicelinks-weekly-006/">优质网站同好者周刊（第 6 期）- 倾城之链</a>
+          </li>
+        
+          <li>
             <a href="/2021/03/22/189-how-to-install-flarum-based-on-docker/">如何基于 Flarum 搭建一个优雅简洁论坛？</a>
           </li>
         
@@ -596,10 +651,6 @@
             <a href="/2020/12/06/176-how-to-auto-switch-between-different-input-methods-for-different-app/">如何为不同应用窗口，自动切换不同输入法</a>
           </li>
         
-          <li>
-            <a href="/2020/11/26/173-markdown-magic-tricks/">Markdown 用法中的奇技淫巧</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -649,7 +700,7 @@
 		  
 		
 		  
-			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>8</sup></a></li>
+			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>9</sup></a></li>
 		  
 		
 		  
@@ -700,7 +751,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>69</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>70</sup></a></li>
 			
 		
 			
@@ -728,7 +779,7 @@
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>15</sup></a></li>
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>16</sup></a></li>
 			
 		
 			
