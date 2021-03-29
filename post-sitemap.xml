@@ -7,8 +7,24 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2021/03/16/187-2021-the-age-of-awakening/</loc>
+        <lastmod>2021-03-29T15:22:02.736Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2021/03/22/189-how-to-install-flarum-based-on-docker/</loc>
+        <lastmod>2021-03-29T15:21:29.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2021/03/28/191-talk-about-suitable-forum/</loc>
-        <lastmod>2021-03-28T07:28:24.870Z</lastmod>
+        <lastmod>2021-03-29T15:19:57.988Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -23,24 +39,8 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2021/03/22/189-how-to-install-flarum-based-on-docker/</loc>
-        <lastmod>2021-03-22T15:54:13.661Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2021/03/18/188-nicelinks-weekly-006/</loc>
         <lastmod>2021-03-20T03:21:08.828Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2021/03/16/187-2021-the-age-of-awakening/</loc>
-        <lastmod>2021-03-18T16:52:42.099Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
