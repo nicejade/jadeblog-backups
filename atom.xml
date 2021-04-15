@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-04-15T14:40:18.492Z</updated>
+  <updated>2021-04-15T14:53:04.169Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,9 +20,11 @@
     <link href="https://www.jeffjade.com/2021/04/15/194-2021-learn-more-about-what-is-quickapp/"/>
     <id>https://www.jeffjade.com/2021/04/15/194-2021-learn-more-about-what-is-quickapp/</id>
     <published>2021-04-15T13:21:00.000Z</published>
-    <updated>2021-04-15T14:40:18.492Z</updated>
+    <updated>2021-04-15T14:53:04.169Z</updated>
     
     <content type="html"><![CDATA[<p>何谓<a href="https://www.quickapp.cn/" target="_blank" rel="external">「快应用」</a>呢？它是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的<code>快应用联盟</code>联合制定（2018 年 3 月）。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>具备传统 APP 完整的应用体验，<code>无需安装、即点即用</code>；<code>覆盖 10 亿设备</code>，<code>与操作系统深度集成，探索新型应用场景</code>。快应用 ──<strong>复杂生活的简单答案，让生活更顺畅</strong> ── 来自 <a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用官方网站 | 倾城之链</a>。</p>
+<a id="more"></a>
+<p><strong>微注</strong>：原文首发于最新维护的社区：<a href="https://forum.lovejade.cn/d/13-2021" target="_blank" rel="external">2021，深入了解什么是「快应用」？ | 悠然宜想亭</a>。</p>
 <h2 id="如何体验快应用？"><a href="#如何体验快应用？" class="headerlink" title="如何体验快应用？"></a>如何体验快应用？</h2><p>如果您有一台 Android 手机（vivo、OPPO、华为、小米、魅族等），看到带有「<strong>秒开</strong>」字样的应用，就是快应用。您可以通过在负一屏、全局、自带浏览器等，发起关键字检索，如快应用中心、云缴费等；或者是笔者常用的快应用：小睡眠、当当极速版等。点开，即能使用，如下截图。</p>
 <p><img src="https://z3.ax1x.com/2021/03/25/6XJMK1.jpg" alt="小睡眠 - 快应用"></p>
 <h2 id="快应用特点"><a href="#快应用特点" class="headerlink" title="快应用特点"></a>快应用特点</h2><p>下面列出些关于「快应用」特点，这将有助于对它有更深刻的理解；</p>
@@ -103,118 +105,11 @@
   </entry>
   
   <entry>
-    <title>优质网站同好者周刊（第 8 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/04/08/193-nicelinks-weekly-008/"/>
-    <id>https://www.jeffjade.com/2021/04/08/193-nicelinks-weekly-008/</id>
-    <published>2021-04-08T13:21:00.000Z</published>
-    <updated>2021-04-08T15:24:42.232Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="Zapier-The-easiest-way-to-automate-your-workMicrosoft-Logo"><a href="#Zapier-The-easiest-way-to-automate-your-workMicrosoft-Logo" class="headerlink" title="Zapier | The easiest way to automate your workMicrosoft Logo"></a><a href="https://zapier.com/?utm_source=nicelinks.site" target="_blank" rel="external">Zapier | The easiest way to automate your workMicrosoft Logo</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/效率" target="_blank" rel="external"><code>效率</code></a> · <a href="https://nicelinks.site/tags/工作" target="_blank" rel="external"><code>工作</code></a> · <a href="https://nicelinks.site/tags/自动化" target="_blank" rel="external"><code>自动化</code></a></p>
-<blockquote>
-<p>Easy automation for busy people. Zapier moves info between your web apps automatically, so you can focus on your most important work.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/zapier.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Zapier | The easiest way to automate your workMicrosoft Logo"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://zapier.com/" target="_blank" rel="external">Zapier</a> 是连接您的应用程序并自动化工作流程工具。它的存在，方便忙碌的人实现自动化。 Zapier 会自动在 Web 应用程序之间传递信息，因此您可以专注于最重要的工作。目前，<a href="https://nicelinks.site/redirect?url=https://zapier.com/" target="_blank" rel="external">Zapier</a>有聚合超过 3000 款应用，诸如 Dropbox、<a href="https://nicelinks.site/post/605b4055bffb5e532f3be233" target="_blank" rel="external">Slack</a>、Gmail、谷歌表格、谷歌文档等等，它具有以下功能特征：</p>
-<h3 id="整合"><a href="#整合" class="headerlink" title="整合"></a>整合</h3><p>只需单击几下即可链接您的 Web 应用程序，以便它们可以共享数据。</p>
-<h3 id="自动化"><a href="#自动化" class="headerlink" title="自动化"></a>自动化</h3><p>通过名为 Zaps 的工作流在应用程序之间传递信息。</p>
-<h3 id="创新"><a href="#创新" class="headerlink" title="创新"></a>创新</h3><p>更快地构建流程并完成更多工作，无需代码。</p>
-<p>── 出自<a href="https://nicelinks.site/post/606ef48f00d67605dca7de64" target="_blank" rel="external">倾城之链 - Zapier | The easiest way to automate your workMicrosoft Logo</a></p>
-<h2 id="Paged-js-—-Paged-js"><a href="#Paged-js-—-Paged-js" class="headerlink" title="Paged.js — Paged.js"></a><a href="https://www.pagedjs.org/?utm_source=nicelinks.site" target="_blank" rel="external">Paged.js — Paged.js</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/JavaScript" target="_blank" rel="external"><code>JavaScript</code></a> · <a href="https://nicelinks.site/tags/HTML5" target="_blank" rel="external"><code>HTML5</code></a> · <a href="https://nicelinks.site/tags/PDF" target="_blank" rel="external"><code>PDF</code></a></p>
-<blockquote>
-<p>The home of paged.js, the library to turn HTML into PDF</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.pagedjs.org.png?x-oss-process=style/png2jpg" alt="倾城之链 - Paged.js — Paged.js"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.pagedjs.org/" target="_blank" rel="external">Paged.js</a> 是一个免费且开源的 JavaScript 库，它可以在浏览器中对内容进行分页，从任何 HTML 内容中创建 <a href="https://nicelinks.site/tags/PDF" target="_blank" rel="external">PDF</a> 输出。这意味着你可以使用 HTML 和 CSS 来设计印刷作品（例如书籍）！<a href="https://nicelinks.site/redirect?url=https://www.pagedjs.org/" target="_blank" rel="external">Paged.js</a> 遵循 W3C 发布的 Paged Media 标准（即分页媒体模块，以及<strong>分页</strong>媒体模块的生成内容）。实际上，Paged.js 的作用是为 CSS 模块提供了一个多角填充，以便使用浏览器尚未支持的功能来打印内容。关于的使用，可以参见教程指南： <a href="https://nicelinks.site/post/606ac1ca00d67605dca7de60" target="_blank" rel="external">Beautiful PDFs from HTML</a>。</p>
-<p>── 出自<a href="https://nicelinks.site/post/606ac24900d67605dca7de62" target="_blank" rel="external">倾城之链 - Paged.js — Paged.js</a></p>
-<h2 id="Beautiful-PDFs-from-HTML"><a href="#Beautiful-PDFs-from-HTML" class="headerlink" title="Beautiful PDFs from HTML"></a><a href="https://pdf.math.dev/?utm_source=nicelinks.site" target="_blank" rel="external">Beautiful PDFs from HTML</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/PDF" target="_blank" rel="external"><code>PDF</code></a> · <a href="https://nicelinks.site/tags/教程" target="_blank" rel="external"><code>教程</code></a></p>
-<blockquote>
-<p>This guide provides a basic tutorial to using paged.js, about how to generate beautiful PDFs from HTML.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/pdf.math.dev.png?x-oss-process=style/png2jpg" alt="倾城之链 - Beautiful PDFs from HTML"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/post/606ac24900d67605dca7de62" target="_blank" rel="external">Paged.js</a> 提供了一个天才的想法，它可以填充所需的功能，允许浏览器以本机方式处理分页媒体，而不必从头构建整个呈现引擎。<a href="https://nicelinks.site/redirect?url=https://pdf.math.dev/" target="_blank" rel="external">Beautiful PDFs from HTML</a> 网站，介绍了 <a href="https://nicelinks.site/post/606ac24900d67605dca7de62" target="_blank" rel="external">Paged.js</a> 的安装、使用、基本特征、高级功能，以及其他注意事项。值得一提的是，该网站，即是使用 <a href="https://nicelinks.site/post/606ac24900d67605dca7de62" target="_blank" rel="external">Paged.js</a> 参与处理，可以访问查看效果。</p>
-<p>── 出自<a href="https://nicelinks.site/post/606ac1ca00d67605dca7de60" target="_blank" rel="external">倾城之链 - Beautiful PDFs from HTML</a></p>
-<h2 id="独立个人博客推荐-BlogHub"><a href="#独立个人博客推荐-BlogHub" class="headerlink" title="独立个人博客推荐 - BlogHub"></a><a href="https://bloghub.fun/?utm_source=nicelinks.site" target="_blank" rel="external">独立个人博客推荐 - BlogHub</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/个人博客" target="_blank" rel="external"><code>个人博客</code></a> · <a href="https://nicelinks.site/tags/导航" target="_blank" rel="external"><code>导航</code></a> · <a href="https://nicelinks.site/tags/开源" target="_blank" rel="external"><code>开源</code></a></p>
-<blockquote>
-<p>一群自由而有趣的灵魂，终将在此相遇</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/bloghub.fun.png?x-oss-process=style/png2jpg" alt="倾城之链 - 独立个人博客推荐 - BlogHub"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://bloghub.fun/" target="_blank" rel="external">BlogHub</a> 是一个开源的，中文独立博客导航站（基于 <a href="https://nicelinks.site/post/5b1294b5e93ed2618cfac134" target="_blank" rel="external">React.js</a>、<a href="https://nicelinks.site/post/5f376ebe1751843ef894c899" target="_blank" rel="external">Node.js</a> 所搭建，支持 RSS 订阅）。希望能帮助大家探索更多有趣的独立博客，发现其中蕴藏的有趣灵魂。</p>
-<p>── 出自<a href="https://nicelinks.site/post/606aa9c700d67605dca7de5e" target="_blank" rel="external">倾城之链 - 独立个人博客推荐 - BlogHub</a></p>
-<h2 id="The-Go-Programming-Language"><a href="#The-Go-Programming-Language" class="headerlink" title="The Go Programming Language"></a><a href="https://golang.org/?utm_source=nicelinks.site" target="_blank" rel="external">The Go Programming Language</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Go" target="_blank" rel="external"><code>Go</code></a> · <a href="https://nicelinks.site/tags/编程" target="_blank" rel="external"><code>编程</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a></p>
-<blockquote>
-<p>Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/golang.org.png?x-oss-process=style/png2jpg" alt="倾城之链 - The Go Programming Language"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://golang.org/" target="_blank" rel="external">Go</a>，又称 <strong>Golang</strong>，是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的、开源的编程语言。它能让构造简单、可靠且高效的软件变得容易。Go 是从 2007 年末由 Robert Griesemer, Rob Pike, Ken Thompson 主持开发，后来还加入了 Ian Lance Taylor, Russ Cox 等人，并最终于 2009 年 11 月开源，在 2012 年早些时候发布了 <code>Go 1</code> 稳定版本。如今，<a href="https://nicelinks.site/redirect?url=https://golang.org/" target="_blank" rel="external">Go</a> 的开发已经是完全开放，并且拥有一个活跃的社区。</p>
-<p><a href="https://nicelinks.site/redirect?url=https://golang.org/" target="_blank" rel="external">Go</a> 的语法接近 C 语言，但对于变量的声明有所不同。Go 支持垃圾回收功能。与 C++ 相比，Go 并不包括如枚举、异常处理、继承、断言、虚函数等功能，但增加了 切片(Slice) 型、并发、管道、垃圾回收功能、接口等特性的语言级支持。</p>
-<h3 id="Go-语言特色"><a href="#Go-语言特色" class="headerlink" title="Go 语言特色"></a>Go 语言特色</h3><ul>
-<li>简洁、快速、安全；</li>
-<li>并行、有趣、开源；</li>
-<li>内存管理、数组安全、编译迅速；</li>
-</ul>
-<h3 id="Go-语言用途"><a href="#Go-语言用途" class="headerlink" title="Go 语言用途"></a>Go 语言用途</h3><p>Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。</p>
-<p>── 出自<a href="https://nicelinks.site/post/606aa86a00d67605dca7de5c" target="_blank" rel="external">倾城之链 - The Go Programming Language</a></p>
-<h2 id="Rust-Programming-Language"><a href="#Rust-Programming-Language" class="headerlink" title="Rust Programming Language                "></a><a href="https://www.rust-lang.org/?utm_source=nicelinks.site" target="_blank" rel="external">Rust Programming Language                </a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Rust" target="_blank" rel="external"><code>Rust</code></a> · <a href="https://nicelinks.site/tags/编程" target="_blank" rel="external"><code>编程</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a></p>
-<blockquote>
-<p>A language empowering everyone to build reliable and efficient software.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.rust-lang.org.png?x-oss-process=style/png2jpg" alt="倾城之链 - Rust Programming Language                "></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.rust-lang.org/" target="_blank" rel="external">Rust</a> 是一门系统编程语言 ，专注于安全 ，尤其是并发安全，支持函数式和命令式以及泛型等编程范式的多范式语言。<a href="https://nicelinks.site/redirect?url=https://www.rust-lang.org/" target="_blank" rel="external">Rust</a> 在语法上和 <code>C++</code> 类似 ，但是设计者想要在保证性能的同时提供更好的内存安全。 <a href="https://nicelinks.site/redirect?url=https://www.rust-lang.org/" target="_blank" rel="external">Rust</a> 最初是由 Mozilla 研究院的 Graydon Hoare 设计创造，然后在 Dave Herman, Brendan Eich 以及很多其他人的贡献下逐步完善。为什么选择 <a href="https://nicelinks.site/redirect?url=https://www.rust-lang.org/" target="_blank" rel="external">Rust</a>？官方给出了以下几个主要原因：</p>
-<h3 id="高性能"><a href="#高性能" class="headerlink" title="高性能"></a>高性能</h3><p>Rust 速度惊人且内存利用率极高。由于没有运行时和垃圾回收，它能够胜任对性能要求特别高的服务，可以在嵌入式设备上运行，还能轻松和其他语言集成。</p>
-<h3 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h3><p>Rust 丰富的类型系统和所有权模型保证了内存安全和线程安全，让您在编译期就能够消除各种各样的错误。</p>
-<h3 id="生产力"><a href="#生产力" class="headerlink" title="生产力"></a>生产力</h3><p>Rust 拥有出色的文档、友好的编译器和清晰的错误提示信息， 还集成了一流的工具——包管理器和构建工具， 智能地自动补全和类型检验的多编辑器支持， 以及自动格式化代码等等。</p>
-<p>2018 年，Rust 社区决定在几个不同的领域中提升编程体验（见 <a href="https://nicelinks.site/redirect?url=https://blog.rust-lang.org/2018/03/12/roadmap.html" target="_blank" rel="external">2018 年路线图</a>）。您可以找到许多高质量的 crates 和一些精彩的入门指南。如今，用 Rust 构建应用，已经可以在多领域实施，如：</p>
-<h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>使用 Rust 强大的生态系统快速实现命令行工具。Rust 可助您放心维护，轻松分发应用程序。</p>
-<h3 id="WebAssembly"><a href="#WebAssembly" class="headerlink" title="WebAssembly"></a>WebAssembly</h3><p>使用 Rust 来逐个增强您的 JavaScript 模块。发布到 npm，使用 webpack 打包，即可感受到惊人的速度提升。</p>
-<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><p>可预见的性能，极小的资源占用，坚如磐石的可靠性。Rust 极其适合网络服务。</p>
-<h3 id="嵌入式"><a href="#嵌入式" class="headerlink" title="嵌入式"></a>嵌入式</h3><p>针对资源匮乏的设备？需要底层控制而又不失上层抽象的便利？Rust 包您满意！</p>
-<p>全世界已有数百家公司<strong>在生产环境</strong>中使用 Rust，以达到快速、跨平台、低资源占用的目的。很多著名且受欢迎的软件，例如 Firefox、 Dropbox 和 Cloudflare 都在使用 Rust。从初创公司到大型企业，从嵌入式设备到可扩展的 Web 服务，Rust 都完全合适。</p>
-<p>── 出自<a href="https://nicelinks.site/post/606a826800d67605dca7de5a" target="_blank" rel="external">倾城之链 - Rust Programming Language                </a><br>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>瞽（/gǔ/）者善听，聋者善视。绝利一源，用师十倍。三返昼夜，用师万倍。心生于物，死于物，机在于目。天之无恩而大恩生。迅雷烈风，莫不蠢然。至乐性余，至静性廉。天之至私，用之至公。禽之制在气。生者死之根，死者生之根。<strong>恩生于害，害生于恩</strong>。──《黄帝阴符经》</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://www.jeffjade.com/2021/04/01/192-nicelinks-weekly-007/">优质网站同好者周刊（第 7 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-006/">优质网站同好者周刊（第 6 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-005/">优质网站同好者周刊（第 5 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优质网站同好者周刊（第 8 期）- 倾城之链</title>
+    <title>优质网站同好者周刊（第 9 期）- 倾城之链</title>
     <link href="https://www.jeffjade.com/2021/04/08/195-nicelinks-weekly-009/"/>
     <id>https://www.jeffjade.com/2021/04/08/195-nicelinks-weekly-009/</id>
-    <published>2021-04-08T13:21:00.000Z</published>
-    <updated>2021-04-15T14:44:57.853Z</updated>
+    <published>2021-04-08T14:22:00.000Z</published>
+    <updated>2021-04-15T14:51:34.906Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
 <a id="more"></a>
@@ -305,6 +200,113 @@
 <p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
 <h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
 <li><a href="https://www.jeffjade.com/2021/04/08/193-nicelinks-weekly-008/">优质网站同好者周刊（第 8 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/04/01/192-nicelinks-weekly-007/">优质网站同好者周刊（第 7 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-006/">优质网站同好者周刊（第 6 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-005/">优质网站同好者周刊（第 5 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
+    
+    </summary>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优质网站同好者周刊（第 8 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/04/08/193-nicelinks-weekly-008/"/>
+    <id>https://www.jeffjade.com/2021/04/08/193-nicelinks-weekly-008/</id>
+    <published>2021-04-08T13:21:00.000Z</published>
+    <updated>2021-04-08T15:24:42.232Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
+<a id="more"></a>
+<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
+<h2 id="Zapier-The-easiest-way-to-automate-your-workMicrosoft-Logo"><a href="#Zapier-The-easiest-way-to-automate-your-workMicrosoft-Logo" class="headerlink" title="Zapier | The easiest way to automate your workMicrosoft Logo"></a><a href="https://zapier.com/?utm_source=nicelinks.site" target="_blank" rel="external">Zapier | The easiest way to automate your workMicrosoft Logo</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/效率" target="_blank" rel="external"><code>效率</code></a> · <a href="https://nicelinks.site/tags/工作" target="_blank" rel="external"><code>工作</code></a> · <a href="https://nicelinks.site/tags/自动化" target="_blank" rel="external"><code>自动化</code></a></p>
+<blockquote>
+<p>Easy automation for busy people. Zapier moves info between your web apps automatically, so you can focus on your most important work.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/zapier.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Zapier | The easiest way to automate your workMicrosoft Logo"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://zapier.com/" target="_blank" rel="external">Zapier</a> 是连接您的应用程序并自动化工作流程工具。它的存在，方便忙碌的人实现自动化。 Zapier 会自动在 Web 应用程序之间传递信息，因此您可以专注于最重要的工作。目前，<a href="https://nicelinks.site/redirect?url=https://zapier.com/" target="_blank" rel="external">Zapier</a>有聚合超过 3000 款应用，诸如 Dropbox、<a href="https://nicelinks.site/post/605b4055bffb5e532f3be233" target="_blank" rel="external">Slack</a>、Gmail、谷歌表格、谷歌文档等等，它具有以下功能特征：</p>
+<h3 id="整合"><a href="#整合" class="headerlink" title="整合"></a>整合</h3><p>只需单击几下即可链接您的 Web 应用程序，以便它们可以共享数据。</p>
+<h3 id="自动化"><a href="#自动化" class="headerlink" title="自动化"></a>自动化</h3><p>通过名为 Zaps 的工作流在应用程序之间传递信息。</p>
+<h3 id="创新"><a href="#创新" class="headerlink" title="创新"></a>创新</h3><p>更快地构建流程并完成更多工作，无需代码。</p>
+<p>── 出自<a href="https://nicelinks.site/post/606ef48f00d67605dca7de64" target="_blank" rel="external">倾城之链 - Zapier | The easiest way to automate your workMicrosoft Logo</a></p>
+<h2 id="Paged-js-—-Paged-js"><a href="#Paged-js-—-Paged-js" class="headerlink" title="Paged.js — Paged.js"></a><a href="https://www.pagedjs.org/?utm_source=nicelinks.site" target="_blank" rel="external">Paged.js — Paged.js</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/JavaScript" target="_blank" rel="external"><code>JavaScript</code></a> · <a href="https://nicelinks.site/tags/HTML5" target="_blank" rel="external"><code>HTML5</code></a> · <a href="https://nicelinks.site/tags/PDF" target="_blank" rel="external"><code>PDF</code></a></p>
+<blockquote>
+<p>The home of paged.js, the library to turn HTML into PDF</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.pagedjs.org.png?x-oss-process=style/png2jpg" alt="倾城之链 - Paged.js — Paged.js"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.pagedjs.org/" target="_blank" rel="external">Paged.js</a> 是一个免费且开源的 JavaScript 库，它可以在浏览器中对内容进行分页，从任何 HTML 内容中创建 <a href="https://nicelinks.site/tags/PDF" target="_blank" rel="external">PDF</a> 输出。这意味着你可以使用 HTML 和 CSS 来设计印刷作品（例如书籍）！<a href="https://nicelinks.site/redirect?url=https://www.pagedjs.org/" target="_blank" rel="external">Paged.js</a> 遵循 W3C 发布的 Paged Media 标准（即分页媒体模块，以及<strong>分页</strong>媒体模块的生成内容）。实际上，Paged.js 的作用是为 CSS 模块提供了一个多角填充，以便使用浏览器尚未支持的功能来打印内容。关于的使用，可以参见教程指南： <a href="https://nicelinks.site/post/606ac1ca00d67605dca7de60" target="_blank" rel="external">Beautiful PDFs from HTML</a>。</p>
+<p>── 出自<a href="https://nicelinks.site/post/606ac24900d67605dca7de62" target="_blank" rel="external">倾城之链 - Paged.js — Paged.js</a></p>
+<h2 id="Beautiful-PDFs-from-HTML"><a href="#Beautiful-PDFs-from-HTML" class="headerlink" title="Beautiful PDFs from HTML"></a><a href="https://pdf.math.dev/?utm_source=nicelinks.site" target="_blank" rel="external">Beautiful PDFs from HTML</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/PDF" target="_blank" rel="external"><code>PDF</code></a> · <a href="https://nicelinks.site/tags/教程" target="_blank" rel="external"><code>教程</code></a></p>
+<blockquote>
+<p>This guide provides a basic tutorial to using paged.js, about how to generate beautiful PDFs from HTML.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/pdf.math.dev.png?x-oss-process=style/png2jpg" alt="倾城之链 - Beautiful PDFs from HTML"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/post/606ac24900d67605dca7de62" target="_blank" rel="external">Paged.js</a> 提供了一个天才的想法，它可以填充所需的功能，允许浏览器以本机方式处理分页媒体，而不必从头构建整个呈现引擎。<a href="https://nicelinks.site/redirect?url=https://pdf.math.dev/" target="_blank" rel="external">Beautiful PDFs from HTML</a> 网站，介绍了 <a href="https://nicelinks.site/post/606ac24900d67605dca7de62" target="_blank" rel="external">Paged.js</a> 的安装、使用、基本特征、高级功能，以及其他注意事项。值得一提的是，该网站，即是使用 <a href="https://nicelinks.site/post/606ac24900d67605dca7de62" target="_blank" rel="external">Paged.js</a> 参与处理，可以访问查看效果。</p>
+<p>── 出自<a href="https://nicelinks.site/post/606ac1ca00d67605dca7de60" target="_blank" rel="external">倾城之链 - Beautiful PDFs from HTML</a></p>
+<h2 id="独立个人博客推荐-BlogHub"><a href="#独立个人博客推荐-BlogHub" class="headerlink" title="独立个人博客推荐 - BlogHub"></a><a href="https://bloghub.fun/?utm_source=nicelinks.site" target="_blank" rel="external">独立个人博客推荐 - BlogHub</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/个人博客" target="_blank" rel="external"><code>个人博客</code></a> · <a href="https://nicelinks.site/tags/导航" target="_blank" rel="external"><code>导航</code></a> · <a href="https://nicelinks.site/tags/开源" target="_blank" rel="external"><code>开源</code></a></p>
+<blockquote>
+<p>一群自由而有趣的灵魂，终将在此相遇</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/bloghub.fun.png?x-oss-process=style/png2jpg" alt="倾城之链 - 独立个人博客推荐 - BlogHub"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://bloghub.fun/" target="_blank" rel="external">BlogHub</a> 是一个开源的，中文独立博客导航站（基于 <a href="https://nicelinks.site/post/5b1294b5e93ed2618cfac134" target="_blank" rel="external">React.js</a>、<a href="https://nicelinks.site/post/5f376ebe1751843ef894c899" target="_blank" rel="external">Node.js</a> 所搭建，支持 RSS 订阅）。希望能帮助大家探索更多有趣的独立博客，发现其中蕴藏的有趣灵魂。</p>
+<p>── 出自<a href="https://nicelinks.site/post/606aa9c700d67605dca7de5e" target="_blank" rel="external">倾城之链 - 独立个人博客推荐 - BlogHub</a></p>
+<h2 id="The-Go-Programming-Language"><a href="#The-Go-Programming-Language" class="headerlink" title="The Go Programming Language"></a><a href="https://golang.org/?utm_source=nicelinks.site" target="_blank" rel="external">The Go Programming Language</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Go" target="_blank" rel="external"><code>Go</code></a> · <a href="https://nicelinks.site/tags/编程" target="_blank" rel="external"><code>编程</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a></p>
+<blockquote>
+<p>Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/golang.org.png?x-oss-process=style/png2jpg" alt="倾城之链 - The Go Programming Language"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://golang.org/" target="_blank" rel="external">Go</a>，又称 <strong>Golang</strong>，是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的、开源的编程语言。它能让构造简单、可靠且高效的软件变得容易。Go 是从 2007 年末由 Robert Griesemer, Rob Pike, Ken Thompson 主持开发，后来还加入了 Ian Lance Taylor, Russ Cox 等人，并最终于 2009 年 11 月开源，在 2012 年早些时候发布了 <code>Go 1</code> 稳定版本。如今，<a href="https://nicelinks.site/redirect?url=https://golang.org/" target="_blank" rel="external">Go</a> 的开发已经是完全开放，并且拥有一个活跃的社区。</p>
+<p><a href="https://nicelinks.site/redirect?url=https://golang.org/" target="_blank" rel="external">Go</a> 的语法接近 C 语言，但对于变量的声明有所不同。Go 支持垃圾回收功能。与 C++ 相比，Go 并不包括如枚举、异常处理、继承、断言、虚函数等功能，但增加了 切片(Slice) 型、并发、管道、垃圾回收功能、接口等特性的语言级支持。</p>
+<h3 id="Go-语言特色"><a href="#Go-语言特色" class="headerlink" title="Go 语言特色"></a>Go 语言特色</h3><ul>
+<li>简洁、快速、安全；</li>
+<li>并行、有趣、开源；</li>
+<li>内存管理、数组安全、编译迅速；</li>
+</ul>
+<h3 id="Go-语言用途"><a href="#Go-语言用途" class="headerlink" title="Go 语言用途"></a>Go 语言用途</h3><p>Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。</p>
+<p>── 出自<a href="https://nicelinks.site/post/606aa86a00d67605dca7de5c" target="_blank" rel="external">倾城之链 - The Go Programming Language</a></p>
+<h2 id="Rust-Programming-Language"><a href="#Rust-Programming-Language" class="headerlink" title="Rust Programming Language                "></a><a href="https://www.rust-lang.org/?utm_source=nicelinks.site" target="_blank" rel="external">Rust Programming Language                </a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Rust" target="_blank" rel="external"><code>Rust</code></a> · <a href="https://nicelinks.site/tags/编程" target="_blank" rel="external"><code>编程</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a></p>
+<blockquote>
+<p>A language empowering everyone to build reliable and efficient software.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.rust-lang.org.png?x-oss-process=style/png2jpg" alt="倾城之链 - Rust Programming Language                "></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.rust-lang.org/" target="_blank" rel="external">Rust</a> 是一门系统编程语言 ，专注于安全 ，尤其是并发安全，支持函数式和命令式以及泛型等编程范式的多范式语言。<a href="https://nicelinks.site/redirect?url=https://www.rust-lang.org/" target="_blank" rel="external">Rust</a> 在语法上和 <code>C++</code> 类似 ，但是设计者想要在保证性能的同时提供更好的内存安全。 <a href="https://nicelinks.site/redirect?url=https://www.rust-lang.org/" target="_blank" rel="external">Rust</a> 最初是由 Mozilla 研究院的 Graydon Hoare 设计创造，然后在 Dave Herman, Brendan Eich 以及很多其他人的贡献下逐步完善。为什么选择 <a href="https://nicelinks.site/redirect?url=https://www.rust-lang.org/" target="_blank" rel="external">Rust</a>？官方给出了以下几个主要原因：</p>
+<h3 id="高性能"><a href="#高性能" class="headerlink" title="高性能"></a>高性能</h3><p>Rust 速度惊人且内存利用率极高。由于没有运行时和垃圾回收，它能够胜任对性能要求特别高的服务，可以在嵌入式设备上运行，还能轻松和其他语言集成。</p>
+<h3 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h3><p>Rust 丰富的类型系统和所有权模型保证了内存安全和线程安全，让您在编译期就能够消除各种各样的错误。</p>
+<h3 id="生产力"><a href="#生产力" class="headerlink" title="生产力"></a>生产力</h3><p>Rust 拥有出色的文档、友好的编译器和清晰的错误提示信息， 还集成了一流的工具——包管理器和构建工具， 智能地自动补全和类型检验的多编辑器支持， 以及自动格式化代码等等。</p>
+<p>2018 年，Rust 社区决定在几个不同的领域中提升编程体验（见 <a href="https://nicelinks.site/redirect?url=https://blog.rust-lang.org/2018/03/12/roadmap.html" target="_blank" rel="external">2018 年路线图</a>）。您可以找到许多高质量的 crates 和一些精彩的入门指南。如今，用 Rust 构建应用，已经可以在多领域实施，如：</p>
+<h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>使用 Rust 强大的生态系统快速实现命令行工具。Rust 可助您放心维护，轻松分发应用程序。</p>
+<h3 id="WebAssembly"><a href="#WebAssembly" class="headerlink" title="WebAssembly"></a>WebAssembly</h3><p>使用 Rust 来逐个增强您的 JavaScript 模块。发布到 npm，使用 webpack 打包，即可感受到惊人的速度提升。</p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><p>可预见的性能，极小的资源占用，坚如磐石的可靠性。Rust 极其适合网络服务。</p>
+<h3 id="嵌入式"><a href="#嵌入式" class="headerlink" title="嵌入式"></a>嵌入式</h3><p>针对资源匮乏的设备？需要底层控制而又不失上层抽象的便利？Rust 包您满意！</p>
+<p>全世界已有数百家公司<strong>在生产环境</strong>中使用 Rust，以达到快速、跨平台、低资源占用的目的。很多著名且受欢迎的软件，例如 Firefox、 Dropbox 和 Cloudflare 都在使用 Rust。从初创公司到大型企业，从嵌入式设备到可扩展的 Web 服务，Rust 都完全合适。</p>
+<p>── 出自<a href="https://nicelinks.site/post/606a826800d67605dca7de5a" target="_blank" rel="external">倾城之链 - Rust Programming Language                </a><br>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
+<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
+
+<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>瞽（/gǔ/）者善听，聋者善视。绝利一源，用师十倍。三返昼夜，用师万倍。心生于物，死于物，机在于目。天之无恩而大恩生。迅雷烈风，莫不蠢然。至乐性余，至静性廉。天之至私，用之至公。禽之制在气。生者死之根，死者生之根。<strong>恩生于害，害生于恩</strong>。──《黄帝阴符经》</p>
+<blockquote>
+<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
+</blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
 <li><a href="https://www.jeffjade.com/2021/04/01/192-nicelinks-weekly-007/">优质网站同好者周刊（第 7 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-006/">优质网站同好者周刊（第 6 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-005/">优质网站同好者周刊（第 5 期）- 倾城之链</a></li>
