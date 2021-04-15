@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-04-08T15:24:42.232Z</updated>
+  <updated>2021-04-15T14:40:18.492Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,93 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021，深入了解什么是「快应用」？</title>
+    <link href="https://www.jeffjade.com/2021/04/15/194-2021-learn-more-about-what-is-quickapp/"/>
+    <id>https://www.jeffjade.com/2021/04/15/194-2021-learn-more-about-what-is-quickapp/</id>
+    <published>2021-04-15T13:21:00.000Z</published>
+    <updated>2021-04-15T14:40:18.492Z</updated>
+    
+    <content type="html"><![CDATA[<p>何谓<a href="https://www.quickapp.cn/" target="_blank" rel="external">「快应用」</a>呢？它是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的<code>快应用联盟</code>联合制定（2018 年 3 月）。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>具备传统 APP 完整的应用体验，<code>无需安装、即点即用</code>；<code>覆盖 10 亿设备</code>，<code>与操作系统深度集成，探索新型应用场景</code>。快应用 ──<strong>复杂生活的简单答案，让生活更顺畅</strong> ── 来自 <a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用官方网站 | 倾城之链</a>。</p>
+<h2 id="如何体验快应用？"><a href="#如何体验快应用？" class="headerlink" title="如何体验快应用？"></a>如何体验快应用？</h2><p>如果您有一台 Android 手机（vivo、OPPO、华为、小米、魅族等），看到带有「<strong>秒开</strong>」字样的应用，就是快应用。您可以通过在负一屏、全局、自带浏览器等，发起关键字检索，如快应用中心、云缴费等；或者是笔者常用的快应用：小睡眠、当当极速版等。点开，即能使用，如下截图。</p>
+<p><img src="https://z3.ax1x.com/2021/03/25/6XJMK1.jpg" alt="小睡眠 - 快应用"></p>
+<h2 id="快应用特点"><a href="#快应用特点" class="headerlink" title="快应用特点"></a>快应用特点</h2><p>下面列出些关于「快应用」特点，这将有助于对它有更深刻的理解；</p>
+<ul>
+<li>基于手机硬件平台，标准由主流手机厂商组成的快应用联盟制定；</li>
+<li>无需安装、即点即用，且具备传统 APP 完整的应用体验；</li>
+<li>与操作系统深度集成，一键直达；</li>
+<li>更新直接推送，新版本直接更新到后台，用户无感知快应用的技术实现；</li>
+<li>基于前端技术栈开发、可快速迭代；</li>
+<li>通过全新的引擎，将系统原生的渲染机制和接口能力提供给上层应用；</li>
+<li>运行在框架应用进程中，对每个快应用会开一个 <code>Launcher</code> 进程快应用的开发、发布和使用流程；</li>
+<li>开发者需要在快应用官网注册，上传至快应用官网，测试并通过审核后即可进行分发；</li>
+<li>使用前端技术栈进行开发，经过编译、签名后最终产出 <code>rpk</code> 文件；</li>
+<li>开发者需登录快应用官网进行上传和发布，发布前会经过审核快应用与小程序的对比；</li>
+<li>快应用使用 <code>native</code> 渲染，性能体验会比较好，而小程序是使用 <code>webview</code> 渲染 ；</li>
+<li>快应用的系统级能力更强，能调用更多系统级 API；</li>
+</ul>
+<p>因为「快应用」基于前端技术开发，由原生 Android 来渲染，带来性能上的优势，却使得开发变得要困难一些；这体现在几个方面：原生没有完全对应 Web 标准，如 CSS 新特性、Canvas 等，导致部分效果无法实现。有一套属于快应用的语法，市面上仍未有支持快应用开发的第三方框架；而小程序，则可以基于 mpvue、taro 等支持多端统一框架来开发。当然，这远比开发原生应用高效太多，在后面的文章中，会分享：“如何高效开发一款快应用”。</p>
+<h2 id="快应用发展历程"><a href="#快应用发展历程" class="headerlink" title="快应用发展历程"></a>快应用发展历程</h2><ul>
+<li>2018 年 3 月：10家厂商组成快应用联盟，正式推出标准；</li>
+<li>2019 年 3 月：中国移动、海信加入快应用联盟；</li>
+<li>2020 年：推出广告变现能力，开启商业化；</li>
+</ul>
+<p>在此期间，快应用引擎能力，快应用开发工具（IDE），以及周边生态如组件库，辅助化编程工具，都在不断迭代、完善。</p>
+<h2 id="为何开发快应用？"><a href="#为何开发快应用？" class="headerlink" title="为何开发快应用？"></a>为何开发快应用？</h2><p>以往的手机端应用主要有三种方式：<strong>网页应用</strong>、<strong>原生应用</strong>、<strong>混合应用</strong>。网页无需安装，体验欠佳。原生应用体验流畅，却需要从应用商店下载安装，难以一步直达用户（混合外层也是原生）。快应用的出现，就是希望能够让用户无需下载安装，并且还能流畅的体验应用内容。</p>
+<p>为了达到上面的目标，快应用建立一种新的语言开发规范，同时提供一系列的开发套件辅助支持。简单来说，开发者主要利用前端知识与技能，以及对应的 IDE，手机设备就可以做原型的开发。快应用使用前端技术栈开发，原生渲染，同时具备 H5 与原生应用的双重优点，开发者使用的前端技术栈资料多，学习成本低。</p>
+<p>2018 年 3 月份，由小米，OPPO，vivo，华为等 10 家国内主流厂商成立了<strong>快应用联盟</strong>，从技术规范层面做了统一，并保证了开发者所开发的快应用，审核通过，可在联盟内厂商所有的的手机设备上运行。</p>
+<h2 id="快应用存在的价值"><a href="#快应用存在的价值" class="headerlink" title="快应用存在的价值"></a>快应用存在的价值</h2><p><strong>为用户</strong>：更快的触达、更优的体验、更省的存储空间、丰富的场景化、海量垂直类服务；<br><strong>为企业</strong>：更低的接入成本、更短的开发周期、支持与系统场景深度结合、流量扶持、变现；</p>
+<h2 id="快应用目前现状"><a href="#快应用目前现状" class="headerlink" title="快应用目前现状"></a>快应用目前现状</h2><h3 id="覆盖分类"><a href="#覆盖分类" class="headerlink" title="覆盖分类"></a>覆盖分类</h3><p>生活服务、实用工具、图书阅读、金融理财、娱乐消费、网购优惠、新闻资讯、旅游出行、医疗健康等。</p>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>就目前而言，快应用主流的应用场景，是手机设备；另外诸如小米、华为等厂商已经将其用于车载等设备；未来，像手表、电视、以及更多智能家居，肯定都会接入，可以说未来应用场景，可谓广泛。而快应用这种高性能的基础，则可以使得快应用在这些场景，游刃有余；对此，值得期待。</p>
+<h3 id="入口场景"><a href="#入口场景" class="headerlink" title="入口场景"></a>入口场景</h3><p>目前，快应用入口场景有：DeepLink 外部拉起、负一屏、全局搜索、浏览器搜索、Push、快应用码、短信、分享跳转、锁屏、语音助手、应用商店等等，具体各家支持情况，可参加如下截图说明（据悉，在之后还将会有更多场景，陆续开放）：</p>
+<p><img src="https://z3.ax1x.com/2021/03/25/6XdfsJ.jpg" alt="快应用场景"></p>
+<h2 id="如何基于快应用盈利？"><a href="#如何基于快应用盈利？" class="headerlink" title="如何基于快应用盈利？"></a>如何基于快应用盈利？</h2><p>与其他原生应用、小程序一样，快应用，大体上也有三种盈利模式：<strong>接入广告</strong>、<strong>电子商务</strong>、<strong>提供服务</strong>。因为，快应用具有<strong>即点即用</strong>、<strong>无需下载</strong>的特性，以及厂商流量扶持，便捷的一键加桌….. 而且可以基于 DeepLink 从外部（微信、朋友圈、H5 网页）拉起；那么您可以非常方便，从外部引入流量，从而基于广告，开赚取收入；而这也是实现代价最小、无需长期积淀，就可以做的“好生意”——只需低成本的开发，以及推广即可。</p>
+<h2 id="与小程序、App-Clips-对比"><a href="#与小程序、App-Clips-对比" class="headerlink" title="与小程序、App Clips 对比"></a>与小程序、App Clips 对比</h2><p>6 月 23 日，苹果公司在其全球开发者（WWDC）大会上，介绍了 未来一个重要卖点功能 <a href="https://developer.apple.com/app-clips/" target="_blank" rel="external">App clips</a>；它与已经存在的小程序、<a href="https://quickapp.vivo.com.cn/tag/quickapp/" target="_blank" rel="external">快应用</a>，颇为相似：<strong>即时使用</strong>；因此，有朋友就根据现有体验，对这三种应用形态，在人机交互、生态、体验、平台能力等方面，做了横向对比；在此与大家分享。</p>
+<p><img src="https://quickapp.lovejade.cn/content/images/2020/06/----App_Clips-------.jpg" alt="小程序、快应用、App Clips 对比"></p>
+<p><a href="https://mp.weixin.qq.com/cgi-bin/wx" target="_blank" rel="external">小程序</a>，是一种新的开放能力，开发者可以快速地开发一个小程序。小程序可以在微信内被便捷地获取和传播，同时具有出色的使用体验（2016年 1 月 11 日，由微信之父张小龙首次提出；2016 年 9 月 21 日，正式开启内测；2017 年 1 月 9 日，第一批正式低调上线；如今量级已达数百万）。</p>
+<p><a href="https://quickapp.vivo.com.cn/tag/quickapp/" target="_blank" rel="external">快应用</a>，是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的快应用联盟联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。快应用具备传统APP完整的应用体验，无需安装、即点即用；覆盖 10 亿设备，与操作系统深度集成，探索新型应用场景（2018 年 3 月 20 日在北京推出“快应用”标准；2019 年末，各家厂商已上线快应用千余款）。</p>
+<p><a href="https://developer.apple.com/app-clips/" target="_blank" rel="external">App clips</a>，是 <a href="https://www.apple.com/ios/ios-14-preview/" target="_blank" rel="external">iOS 14</a> 的一个重要“卖点”，它提供了一种“即时使用”的方式，让用户可以在特定时间、特定场景，在不下载完整 app 的前提下，体验到你的 app 的核心功能。（2020 年 6 月 23  日 WWDC（Apple Worldwide Developers Conference）首次提出，许于 2020 年秋季正式发布）。</p>
+<p>除了以上差异，还需要补充说明的是：三者与“原生应用”的关系；苹果的 <a href="https://developer.apple.com/app-clips/" target="_blank" rel="external">App clips</a> 与原生应用，具有强依赖关系，而且一一对应，一个 App，只能对应一个 App Clip；<a href="https://developer.apple.com/app-clips/" target="_blank" rel="external">App clips</a> ，是用户快速访问和体验您的应用程序所提供内容的一种好方法，当用户安装了该应用，就不再推荐 App Clip 了。而小程序与<a href="https://quickapp.vivo.com.cn/tag/quickapp/" target="_blank" rel="external">快应用</a>，与原生就没什么必然关系，两者独立存在，甚至是竞争关系。双方都希望，用户可以在这里完成体验，而不是向用户推荐原生应用。</p>
+<p><img src="https://quickapp.lovejade.cn/content/images/2020/06/app-clips-invocation.jpg" alt="app-clips-invocation"></p>
+<p>为何有以上差异，主要是因为立场不同；Apple 公司的 iPhone 手机，执全球智能手机之牛耳，在设计他们的“小程序”，除了兼顾功能与体验外，必会考虑与原本应用的关系。所以 <code>App clips</code> 在触发时机（invocation），系统显示一个建议运行 app clip 的卡片（app clip card），点击按钮，即可运行 app clip；用户如果觉得体验好，可以下载原生应用；可以参见 <a href="https://developer.apple.com/app-clips/" target="_blank" rel="external">App Clips</a> 官方的说法：</p>
+<blockquote>
+<p>App Clips 是一个机会，可以快速展示您的应用程序的价值。为了使用户更容易获得完整的应用程序，可以在适当的时间在应用程序剪辑中提供一个下载选项。您甚至可以保留用户提供的任何信息，并将其无缝过渡到完整的应用程序。</p>
+</blockquote>
+<p>通过官方介绍，打开 App Clips，有以下几种方式：</p>
+<ul>
+<li>NFC 近场通信或者扫描二维码；</li>
+<li>点击 Siri Suggestions 基于位置的建议；</li>
+<li>点击 Maps app 里的连接；</li>
+<li>点击网站的 Smart App Banner；</li>
+<li>点击短信里别人分享的链接；</li>
+<li>最近使用的 app clips；</li>
+</ul>
+<p>对比，可以发现 App Clips，做到了需要时发现；但半年过去，在国内，鲜有遇到可用场景；而<code>小程序</code>随着大潮退去，社交分享已不再那么频繁；随处可见，是微信那无处不在的<code>小程序码</code>；另外小程序进一步拓展了分享至朋友圈、H5 拉起小程序等周边生态；由国内各厂商主导的快应用，没有微信那强大的社交应用，虽有<code>快应用码</code>，所见却是寥寥，更多则是手机的推送，以及网页中的 <code>DeepLink</code> 拉起。</p>
+<p>从各产品定位，结合背后的应用场景来看，<a href="https://quickapp.vivo.com.cn/tag/quickapp/" target="_blank" rel="external">快应用</a>的流量，就自带了点缺陷；因此，各厂商都衍生出各自的<code>快应用商店</code>：<strong>快应用中心</strong>，用它来作为中心分发，从而使得用户可以发现更多可用内容；而<code>小程序</code>就无此烦恼，也未做中心分发，只在小程序入口类目中，有附近的小程序、我的小程序，最近使用的小程序；从现有资料来看，App Clips 在这块并无更多设计。</p>
+<h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h2><ul>
+<li><a href="https://forum.lovejade.cn/d/17-quickapp" target="_blank" rel="external">如何高效开发高质量快应用（quickapp）？</a></li>
+<li><a href="https://forum.lovejade.cn/d/13-2021" target="_blank" rel="external">2021，深入了解什么是「快应用」？</a></li>
+<li><a href="https://forum.lovejade.cn/d/15-windowsmacos-adb" target="_blank" rel="external">如何在 Windows、MacOS 上安装 adb</a></li>
+</ul>
+<ul>
+<li><a href="https://quickapp.vivo.com.cn/how-to-configure-code-snippets-gracefully-in-quickapp-development/" target="_blank" rel="external">如何优雅地配置快应用的代码片段</a>；</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      快应用是移动互联网新型应用生态，与手机系统深度整合，为用户提供更加场景化的体验。具备传统 APP 完整的应用体验，但无需安装、即点即用。快应用是基于手机硬件平台的新型应用形态，由国内十大手机厂商基于硬件平台共同推出，其标准是由主流手机厂商组成的快应用联盟联合制定。这里记录下在快应用开发中，涉及的常见问题及其对应解决方案；同时也会给出如何更好开发快应用的一些建议。
+    
+    </summary>
+    
+      <category term="快应用" scheme="https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>优质网站同好者周刊（第 8 期）- 倾城之链</title>
@@ -94,6 +181,130 @@
 </blockquote>
 <p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
 <h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2021/04/01/192-nicelinks-weekly-007/">优质网站同好者周刊（第 7 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-006/">优质网站同好者周刊（第 6 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-005/">优质网站同好者周刊（第 5 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
+    
+    </summary>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优质网站同好者周刊（第 8 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/04/08/195-nicelinks-weekly-009/"/>
+    <id>https://www.jeffjade.com/2021/04/08/195-nicelinks-weekly-009/</id>
+    <published>2021-04-08T13:21:00.000Z</published>
+    <updated>2021-04-15T14:44:57.853Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
+<a id="more"></a>
+<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
+<h2 id="微图云·让图标云、照片墙设计更简单"><a href="#微图云·让图标云、照片墙设计更简单" class="headerlink" title="微图云·让图标云、照片墙设计更简单"></a><a href="https://www.weitucloud.com/?utm_source=nicelinks.site" target="_blank" rel="external">微图云·让图标云、照片墙设计更简单</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/网页设计" target="_blank" rel="external"><code>网页设计</code></a> · <a href="https://nicelinks.site/tags/产品设计" target="_blank" rel="external"><code>产品设计</code></a> · <a href="https://nicelinks.site/tags/图片" target="_blank" rel="external"><code>图片</code></a></p>
+<p><strong>关键字</strong>：微图云, 照片墙, 图标组成, 图标云, 图案组合</p>
+<blockquote>
+<p>微图云是一款简单易用的「图标组合」在线生成器，拥有自由和有序风格两种生成器，让照片墙、照片组合、图标云、图案组合设计简单起来，不管您是设计师、运营者、市场精英、学生还老师都可以生成好看的图片组合</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.weitucloud.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 微图云·让图标云、照片墙设计更简单"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.weitucloud.com/" target="_blank" rel="external">微图云</a>是一款简单易用的「图标组合」在线生成器；其目标是：<strong>让图标云、照片墙设计更简单</strong>；使命为：使用户利益最大化，打造优质体验；使用微图云，任何关于图片组合、照片组合、图标组合的设计都可以轻松实现。它具有以下功能特征：</p>
+<ul>
+<li><strong>丰富的场景</strong>：涵盖照片墙、图标云、实体包装、创意海报、图案背景、PPT配图等，满足您的多样化需求；</li>
+<li><strong>上手简单，功能强大</strong>：丰富自定义功能、海量商用图标素材、配置功能多样、智能排版，让您很容易做出您中意的作品；</li>
+<li><strong>设计效果贼好</strong>：无论您用来制作海报设计还是包装设计，使用微图云，只需三步，就能制作高质量作品，智能排版让设计简单好看；</li>
+<li><strong>多种格式下载</strong>： 支持下载矢量图 SVG 格式、透明背景 PNG 格式、常用的 JPG 格式；</li>
+<li><strong>提供丰富模版</strong>：我们提供精选模版，满足不同场景下设计需求，让设计简单起来；</li>
+<li><strong>一键智能排版</strong>：简单修改配置，就能一键智能排版，多种多样的排版风格任意选；</li>
+</ul>
+<p><a href="https://nicelinks.site/redirect?url=https://www.weitucloud.com/" target="_blank" rel="external">微图云</a>都可以用来做什么？可用来实现多图片可以随机组合，一键智能排版；以及图标组合类的可视化设计；还适合用于照片墙类型的设计，如员工容貌展示、学生容貌展示，活动照片展示、家庭照片展示等；除此之外，也可以应用到背景图案设计上，如设计类型中背景图案、包装纸图案、布料上的图案等。如果您想了解更多，可参见<a href="https://nicelinks.site/redirect?url=https://www.weitucloud.com/doc/#/quickstart" target="_blank" rel="external">微图云使用指南</a>。</p>
+<p>── 出自<a href="https://nicelinks.site/post/607833be00d67605dca7de83" target="_blank" rel="external">倾城之链 - 微图云·让图标云、照片墙设计更简单</a></p>
+<h2 id="Plasmic-the-visual-page-builder-and-web-design-tool-that-works-with-React"><a href="#Plasmic-the-visual-page-builder-and-web-design-tool-that-works-with-React" class="headerlink" title="Plasmic - the visual page builder and web design tool that works with React"></a><a href="https://www.plasmic.app/?utm_source=nicelinks.site" target="_blank" rel="external">Plasmic - the visual page builder and web design tool that works with React</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/设计" target="_blank" rel="external"><code>设计</code></a> · <a href="https://nicelinks.site/tags/Web开发" target="_blank" rel="external"><code>Web开发</code></a> · <a href="https://nicelinks.site/tags/可视化" target="_blank" rel="external"><code>可视化</code></a></p>
+<blockquote>
+<p>Build beautiful experiences fast. The visual builder and web design tool that works seamlessly with your codebase. Unblock your team, and empower anyone to ship.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.plasmic.app.png?x-oss-process=style/png2jpg" alt="倾城之链 - Plasmic - the visual page builder and web design tool that works with React"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.plasmic.app/" target="_blank" rel="external">Plasmic</a> 与您的代码库一起使用的、可视化 Web 设计工具和前端构建器，可与 <a href="https://nicelinks.site/post/5b1294b5e93ed2618cfac134" target="_blank" rel="external">React</a>、Next.js、<a href="https://nicelinks.site/post/5e0d4f3016bdad16b0f5b20e" target="_blank" rel="external">Gatsby</a>、<a href="https://nicelinks.site/post/59ba80d93df6765c75b77911" target="_blank" rel="external">Github</a>) 等配合使用。该工具最大的特点是：使您的产品对整个团队都是可编辑的，使非开发人员可以发布页面和自由格式的内容；让开发人员专注于代码，加速前端开发；消除各角色间的交接，都在同一个页面上操作。除此之外，<a href="https://nicelinks.site/redirect?url=https://www.plasmic.app/" target="_blank" rel="external">Plasmic</a> 支持灵活的集成 &amp; 部署、毫不阻碍开发人员的控制，极快的构建速度以及优化，简单但功能齐全的响应式布局，随时切换 codegen 模式，以弹出干净现代的 React 代码…….</p>
+<p>── 出自<a href="https://nicelinks.site/post/6078306e00d67605dca7de81" target="_blank" rel="external">倾城之链 - Plasmic - the visual page builder and web design tool that works with React</a></p>
+<h2 id="Landing-Page-IdeasLanding-Page-Inspirations-100-Tools-to-Build-a-Landing-PageLanding-Page-ChecklistProduct-Hunt-Launch"><a href="#Landing-Page-IdeasLanding-Page-Inspirations-100-Tools-to-Build-a-Landing-PageLanding-Page-ChecklistProduct-Hunt-Launch" class="headerlink" title="Landing Page IdeasLanding Page Inspirations | 100+ Tools to Build a Landing PageLanding Page ChecklistProduct Hunt Launch"></a><a href="https://landingpage.fyi/?utm_source=nicelinks.site" target="_blank" rel="external">Landing Page IdeasLanding Page Inspirations | 100+ Tools to Build a Landing PageLanding Page ChecklistProduct Hunt Launch</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/开发者" target="_blank" rel="external"><code>开发者</code></a></p>
+<blockquote>
+<p>Landing Page Checklist is a complete library of resources for building high-converting landing pages. Check it out!</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/landingpage.fyi.png?x-oss-process=style/png2jpg" alt="倾城之链 - Landing Page IdeasLanding Page Inspirations | 100+ Tools to Build a Landing PageLanding Page ChecklistProduct Hunt Launch"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://landingpage.fyi/" target="_blank" rel="external">Landing Page Checklist</a> 是一个精选的网页资源清单，它提供超过 100+ 工具，分在 16 个不同类别，从而帮助开发者，可以建立您的最佳 网页（Landing Page 着陆页）。其中涉及资源类别有：查找域名、网页构建器、托管服务提供商、Logo 设计工具、免费插图创建工具、营销文案撰写工具、关键字研究工具、对话（Chatbot）关系平台、网站跟踪分析工具、收集客户反馈工具、网站效果衡量工具…..</p>
+<p>── 出自<a href="https://nicelinks.site/post/60782adb00d67605dca7de7f" target="_blank" rel="external">倾城之链 - Landing Page IdeasLanding Page Inspirations | 100+ Tools to Build a Landing PageLanding Page ChecklistProduct Hunt Launch</a></p>
+<h2 id="cleanuri-com-—-Long-URL-Shortener"><a href="#cleanuri-com-—-Long-URL-Shortener" class="headerlink" title="cleanuri.com — Long URL Shortener"></a><a href="https://cleanuri.com/?utm_source=nicelinks.site" target="_blank" rel="external">cleanuri.com — Long URL Shortener</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/短链接" target="_blank" rel="external"><code>短链接</code></a></p>
+<blockquote>
+<p>Paste a link to shorten it</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/cleanuri.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - cleanuri.com — Long URL Shortener"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://cleanuri.com/" target="_blank" rel="external">cleanuri.com</a>（Long URL Shortener）是款免费的 URL 缩短器；只需粘贴 URL 地址，即可以为您的业务创建完美的 URL，从而帮助您大规模地创建和共享自定义域名的品牌链接。值得一提的是，<a href="https://nicelinks.site/redirect?url=https://cleanuri.com/" target="_blank" rel="external">cleanuri.com</a> 还提供了 API 可供使用，它通过应用程序编程接口公开其数据，因此开发人员可以以编程方式与应用程序进行交互。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6076f5b200d67605dca7de7c" target="_blank" rel="external">倾城之链 - cleanuri.com — Long URL Shortener</a></p>
+<h2 id="Portal-Lite-Privoce-一站式导航-网站-工具-小组件"><a href="#Portal-Lite-Privoce-一站式导航-网站-工具-小组件" class="headerlink" title="Portal Lite - Privoce - 一站式导航 - 网站 - 工具 - 小组件"></a><a href="https://nicegoodthings.com/?utm_source=nicelinks.site" target="_blank" rel="external">Portal Lite - Privoce - 一站式导航 - 网站 - 工具 - 小组件</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/导航" target="_blank" rel="external"><code>导航</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
+<blockquote>
+<p>Portal Lite 一站式导航-网站-工具-小组件</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/nicegoodthings.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Portal Lite - Privoce - 一站式导航 - 网站 - 工具 - 小组件"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://nicegoodthings.com/" target="_blank" rel="external">Portal Lite - Privoce</a> 是一个类似苹果小组件的 Web 版小组件库，目前有两个版本（网站、谷歌浏览器插件），可根据自己需要，选择组件库中内容，展示在网页上。 它有几个特点：用户数据均存本地，可导出&amp;导入，没有后台；页面干净无广告；定制化、个性化程度高，一切均是组件，可自由选择组合排列。截止目前，<a href="https://nicelinks.site/redirect?url=https://nicegoodthings.com/" target="_blank" rel="external">Portal Lite - Privoce</a> 组件库提供小组件有：搜索引擎、导航、新冠疫情概览、国际时钟、天气、Github 个人仓库列表、科学计算器、人生进程计算器、微博热搜、公众号热文、豆瓣热门话题、GitHub 流行榜、每日诗词、历史上的今天、必应壁纸、我的日程、亲戚关系计算器。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6076dd2900d67605dca7de7a" target="_blank" rel="external">倾城之链 - Portal Lite - Privoce - 一站式导航 - 网站 - 工具 - 小组件</a></p>
+<h2 id="The-best-Favicon-Generator-completely-free-favicon-io"><a href="#The-best-Favicon-Generator-completely-free-favicon-io" class="headerlink" title="The best Favicon Generator (completely free) - favicon.io"></a><a href="https://favicon.io/?utm_source=nicelinks.site" target="_blank" rel="external">The best Favicon Generator (completely free) - favicon.io</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/图标" target="_blank" rel="external"><code>图标</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/转换" target="_blank" rel="external"><code>转换</code></a></p>
+<blockquote>
+<p>The only favicon generator you need for your next project. Quickly generate your favicon from text, image, or choose from hundreds of emojis.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/favicon.io.png?x-oss-process=style/png2jpg" alt="倾城之链 - The best Favicon Generator (completely free) - favicon.io"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://favicon.io/" target="_blank" rel="external">favicon.io</a>  非常棒的图标生成器：支持从文本，图像或数百种表情符号，快速生成您的收藏夹图标（Favicon）。适用之下，发现 <a href="https://nicelinks.site/redirect?url=https://favicon.io/" target="_blank" rel="external">favicon.io</a> 强大且贴心，不仅可以生成 <code>.ico</code>，还会生成 android、ios 及各尺寸 <code>.png</code> 图标，另外附带了 Web manifest 配置，对网站 PWA 化，有所帮助。除此之外，<a href="https://nicelinks.site/redirect?url=https://favicon.io/" target="_blank" rel="external">favicon.io</a> 还提供了<a href="https://nicelinks.site/redirect?url=https://favicon.io/tutorials/" target="_blank" rel="external">相关教程</a>，诸如：什么是收藏夹图标？为什么我需要一个收藏夹图标，如何生成一个收藏夹图标？如何将 ICO 格式图标添加到网站-？如何将 PNG 格式图标添加到网站？</p>
+<p>── 出自<a href="https://nicelinks.site/post/6076d32a00d67605dca7de78" target="_blank" rel="external">倾城之链 - The best Favicon Generator (completely free) - favicon.io</a></p>
+<h2 id="数字游民指南-远程办公-环游世界-数字游民社区"><a href="#数字游民指南-远程办公-环游世界-数字游民社区" class="headerlink" title="数字游民指南 - 远程办公|环游世界|数字游民社区"></a><a href="https://www.nomadguide.cn/?utm_source=nicelinks.site" target="_blank" rel="external">数字游民指南 - 远程办公|环游世界|数字游民社区</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/分享" target="_blank" rel="external"><code>分享</code></a> · <a href="https://nicelinks.site/tags/工作" target="_blank" rel="external"><code>工作</code></a> · <a href="https://nicelinks.site/tags/社区" target="_blank" rel="external"><code>社区</code></a></p>
+<p><strong>关键字</strong>：远程办公, 环游世界, 旅行指南, 数字游民, 数字游牧民族, 自由职业, 远程协助, 远程沟通, 在家办公, 共享办公, 只工作不上班, 共享办公, digital nomads, remote work, co-working, telecomunitcation, Digital Nomads, Travelers, Backpackers, Remote Workers, Freelance, Coworking, Entrepreneurship, Location Independent Businesses, Digital Lifestyle, Creative Freelancers, Digital nomad, Global Nomad, Work At Home, Work from H</p>
+<blockquote>
+<p>数字游民指南博客文章，集聚远程办公、环游世界内容动态，分享数字游民生活精彩。主题包括 远程办公|环游世界|旅行指南|数字游牧民族|自由职业|远程协助|远程沟通|在家办公|共享办公。欢迎加入数字游民指南社区，分享您的精彩故事！</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.nomadguide.cn.png?x-oss-process=style/png2jpg" alt="倾城之链 - 数字游民指南 - 远程办公|环游世界|数字游民社区"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.nomadguide.cn/" target="_blank" rel="external">数字游民指南</a>是一个数字游民<a href="https://nicelinks.site/tags/社区" target="_blank" rel="external">社区</a>（digital nomad community，基于 <a href="https://nicelinks.site/post/602e4a576eaf2a7660805af1" target="_blank" rel="external">WordPress</a> 所搭建)，提倡【远程办公、环游世界】自由生活方式。 在这里分享您的精彩，在这里找到小伙伴！</p>
+<p>── 出自<a href="https://nicelinks.site/post/6075b11700d67605dca7de72" target="_blank" rel="external">倾城之链 - 数字游民指南 - 远程办公|环游世界|数字游民社区</a></p>
+<h2 id="Tobias-Ahlin"><a href="#Tobias-Ahlin" class="headerlink" title="Tobias Ahlin"></a><a href="https://tobiasahlin.com/?utm_source=nicelinks.site" target="_blank" rel="external">Tobias Ahlin</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/个人博客" target="_blank" rel="external"><code>个人博客</code></a> · <a href="https://nicelinks.site/tags/设计师" target="_blank" rel="external"><code>设计师</code></a> · <a href="https://nicelinks.site/tags/设计" target="_blank" rel="external"><code>设计</code></a></p>
+<p><strong>关键字</strong>：tobias ahlin, github, spotify, hyper island</p>
+<blockquote>
+<p>SpinKit, Moving Letters, projects, and more.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/tobiasahlin.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Tobias Ahlin"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://tobiasahlin.com/" target="_blank" rel="external">Tobias Ahlin</a> 是基于 Ruby on Rails 所搭建的极具设计的网站，用来承载作者所写的博客、创建的教程（<code>Tutorials</code>），所做的演讲（<code>Speaking</code>），以及很多出色动画、Web 字体等等（如 <a href="https://nicelinks.site/redirect?url=https://tobiasahlin.com/moving-letters/" target="_blank" rel="external">Moving Letters</a>、<a href="https://nicelinks.site/redirect?url=https://tobiasahlin.com/typesource/" target="_blank" rel="external">TypeSource</a>、<a href="https://nicelinks.site/redirect?url=https://tobiasahlin.com/spinkit/" target="_blank" rel="external">SpinKit</a>）；<code>Tobias Ahlin</code> 喜欢设计和制造新鲜事物；他是以为出色的设计师，同时，还写过课程，并教过编程，设计，统计，数据策略和修辞学；除此外，还在各种科技公司和初创公司（例如 Spotify，Minecraft，GitHub 和 Hyper Island）进行演讲，教学和咨询… 如果您是位程序员或设计师，想必非常乐意结识这位才华出众的「设计师」。</p>
+<p>── 出自<a href="https://nicelinks.site/post/60756bfd00d67605dca7de70" target="_blank" rel="external">倾城之链 - Tobias Ahlin</a></p>
+<h2 id="TesterHome"><a href="#TesterHome" class="headerlink" title="TesterHome"></a><a href="https://testerhome.com/?utm_source=nicelinks.site" target="_blank" rel="external">TesterHome</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/社区" target="_blank" rel="external"><code>社区</code></a> · <a href="https://nicelinks.site/tags/技术" target="_blank" rel="external"><code>技术</code></a> · <a href="https://nicelinks.site/tags/测试" target="_blank" rel="external"><code>测试</code></a></p>
+<blockquote>
+<p>TesterHome 社区，测试之家，由众多测试工程师组织和维护的技术社区，致力于帮助新人成长，提高测试地位，推进质量发展。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/testerhome.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - TesterHome"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://testerhome.com/" target="_blank" rel="external">TesterHome</a> 是公益性的测试技术社区（基于 Ruby on Rails 所搭建），旨在帮助测试新人成长，提高测试工程师地位，推动测试行业的技术发展。社区的特色：<strong>开源分享</strong>、草根接地气、社群文化。</p>
+<p><a href="https://nicelinks.site/redirect?url=https://testerhome.com/" target="_blank" rel="external">TesterHome</a> 创始人思寒，先后任职于阿里巴巴、百度、雪球等公司，担任过测试工程师、测试开发工程师和测试架构师等。后来，于 2012 年成立了 TesterHome 测试社区，与大家分享 Appium 相关的技术。后又不满足 Appium 的功能，在它的基础之上，开发了新的智能遍历测试工具 AppCrawler。</p>
+<p>── 出自<a href="https://nicelinks.site/post/60742dd900d67605dca7de68" target="_blank" rel="external">倾城之链 - TesterHome</a><br>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
+<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
+
+
+<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p><code>马太效应</code>，所谓强者越强，弱者愈弱，一个人如获得成功，什么好事都会找到他头上。大丈夫立世，不应怨天尤人，人最大的敌人是自己。态度积极主动执着，那么你就赢得了物质或者精神财富，获得财富后，你的态度更加强化了你的积极主动性，如此循环，你才能把马太效应的正效果发挥极致。</p>
+<blockquote>
+<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
+</blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2021/04/08/193-nicelinks-weekly-008/">优质网站同好者周刊（第 8 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/04/01/192-nicelinks-weekly-007/">优质网站同好者周刊（第 7 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-006/">优质网站同好者周刊（第 6 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-005/">优质网站同好者周刊（第 5 期）- 倾城之链</a></li>
@@ -1831,237 +2042,6 @@
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
       <category term="Mac" scheme="https://www.jeffjade.com/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown 用法中的奇技淫巧</title>
-    <link href="https://www.jeffjade.com/2020/11/26/173-markdown-magic-tricks/"/>
-    <id>https://www.jeffjade.com/2020/11/26/173-markdown-magic-tricks/</id>
-    <published>2020-11-26T13:21:00.000Z</published>
-    <updated>2020-11-30T15:57:52.489Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/tags/Markdown?sort=hottest" target="_blank" rel="external">Markdown</a> 是一种轻量级的「标记语言」，旨在简洁、高效；它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档；它的优点很多，目前也被越来越多的写作爱好者、撰稿者广泛使用。自从 14 年首次接触到 <a href="https://nicelinks.site/tags/Markdown?sort=hottest" target="_blank" rel="external">Markdown</a>，就被这种学习简单，功能强大、使用高效的的设计所吸引，也是此后许多年写文章、做 PPT 、记录代办事项等首选工具。本文在于分享 Markdown 相关资源、以及高阶用法的奇技淫巧。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：请不要被「标记」、「语言」所迷惑，<a href="https://nicelinks.site/tags/Markdown?sort=hottest" target="_blank" rel="external">Markdown</a> 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的 HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本极低（5 分钟即可学会），且一旦熟悉这种语法规则，会有一劳永逸的效果。有百千种资源平台以供使用的同时，也衍生出越来越多开源库，可供我们在代码中调用。</p>
-<p><strong>适用人群</strong>：Markdown 适用于所有需要撰写文档、文章、电子书等用户；因为它具有这几个优势：</p>
-<ul>
-<li>轻量级的「标记语言」，学习成本极低；</li>
-<li>可以令人专注写内容，而<strong>无需关注排版</strong>；</li>
-<li>支持一键转换为 Word、PDF、HTML、图片等。</li>
-</ul>
-<p>在<a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/markdown-tutorial.md" target="_blank" rel="external">与时俱进版前端资源教程 | Markdown 篇</a>中，收录了大量 <code>Markdown</code> 相关，涵盖入门技巧、资源平台、Markdown 相关的工具库、组件库等等，有需要的朋友，可以参考下。本篇文章的撰写，也是基于之前开发的 <a href="https://markdown.lovejade.cn/" target="_blank" rel="external">Arya - 在线 Markdown 编辑器</a>完成。</p>
-<p>自此，有必要介绍下  <a href="https://markdown.lovejade.cn/" target="_blank" rel="external">Arya - 在线 Markdown 编辑器</a>：📝 她是基于 <a href="https://nicelinks.site/post/5b1a221c0526c920d6dfaada" target="_blank" rel="external">Vue</a>、<a href="https://hacpai.com/tag/vditor?utm_source=github.com" target="_blank" rel="external">Vditor</a>，所构建的<strong>在线</strong> <a href="https://nicelinks.site/tags/Markdown/?utm_source=github.com" target="_blank" rel="external">Markdown</a> 编辑器，支持绘制<strong>流程图</strong>、甘特图、时序图、任务列表、echarts 图表、五线谱…..另外支持 PPT 预览；视频音频解析；<strong>HTML 自动转换为 Markdown</strong>；<strong>所见即所得</strong>编辑模式；支持复制到微信公众号；支持<strong>导出</strong>携带样式的 PDF、PNG、HTML；凡此种种，不胜枚举…….感兴趣的朋友，欢迎体验品尝。下面进入正题，一起看下 Markdown 有哪些值得运用的奇技淫巧。</p>
-<p><strong>备注</strong>：Markdown 由 John Gruber 在 2004 创建，已被运用于几乎所有主流网站广泛使用。但至今没有统一标准化，因此除了基本语法外，高阶运法在不同解释器，可能有所不同。因为 Markdown 其实 HTML 的一种书写格式（变体），所以 Markdown 兼容 HTML，这就使得 Markdown 不能实现的效果，可以通过 HTML + CSS 来完成。</p>
-<h3 id="在-Markdown-中创建一个-Git-Diff"><a href="#在-Markdown-中创建一个-Git-Diff" class="headerlink" title="在 Markdown 中创建一个 Git Diff"></a>在 Markdown 中创建一个 Git Diff</h3><p>首先，不要指定编程语言，而是在回标后使用 <code>diff</code>。然后，在任何你想显示为删除的代码行的开头，添加一个<code>-</code>，在任何你想显示为添加的代码行的开头，添加一个<code>+</code>。</p>
-<pre>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function addTwoNumbers (num1, num2) &#123;</div><div class="line"><span class="deletion">-  return 1 + 2</span></div><div class="line"><span class="addition">+  return num1 + num2</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-</pre>
-
-<p>具体效果如下所示：</p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function addTwoNumbers (num1, num2) &#123;</div><div class="line"><span class="deletion">-  return 1 + 2</span></div><div class="line"><span class="addition">+  return num1 + num2</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Markdown-如何处理长链接"><a href="#Markdown-如何处理长链接" class="headerlink" title="Markdown 如何处理长链接"></a>Markdown 如何处理长链接</h3><p>文章中充满大量的链接使用时，会使源文本不易阅读，当链接地址过长时尤为明显。此时可以使用键或引用，来设置链接地址，使得链接与文本分离；即可正常工作，又不影响正文显示。具体如下图示说明：</p>
-<p><img src="https://image.nicelinks.site/markdown-skill.png" alt="Markdown 如何处理长链接"></p>
-<h3 id="如何基于-Markdown-来做-PPT"><a href="#如何基于-Markdown-来做-PPT" class="headerlink" title="如何基于 Markdown 来做 PPT"></a>如何基于 Markdown 来做 PPT</h3><p>基于 Markdown 来做 PPT，在这里也有非常多的工具来完成，如 <a href="https://github.com/gnab/remark" target="_blank" rel="external">remark</a>、<a href="https://revealjs.com/" target="_blank" rel="external">revealjs</a>、<a href="https://github.com/presenta-software/presenta-lib" target="_blank" rel="external">presenta-lib</a> 等库；也可以借助 <a href="https://github.com/marp-team/marp/" target="_blank" rel="external">Marp</a> 等桌面应用；还可以基于 <a href="https://github.com/googleworkspace/md2googleslides" target="_blank" rel="external">md2googleslides</a>、<a href="https://github.com/ksky521/nodeppt" target="_blank" rel="external">nodeppt</a>、<a href="https://github.com/jdan/cleaver" target="_blank" rel="external">cleaver</a> 等命令行工具，你可根据自己的喜好，选择性使用。</p>
-<h3 id="Markdown-设置文字属性"><a href="#Markdown-设置文字属性" class="headerlink" title="Markdown 设置文字属性"></a>Markdown 设置文字属性</h3><p>在 Markdown 中，对于文字有<strong>加粗</strong>、<em>斜体</em>、加<del>删除线</del>，<code>行内代码块</code>等默认操作；如果要根据自己设置颜色、字体尺寸、加阴影等属性，可以借助 Html 知识来设置；</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color: #696969;font-size: 28px;text-shadow: black 0.1em 0.1em 0.2em"</span>&gt;</span>在 Markdown 中，为文字设置其他属性<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color: #ef4136;font-size: 28px;text-shadow: 0 0 0.2em #2edfa3, 0 0 0.2em #FF8877"</span>&gt;</span>天意怜芳草，人间重晚晴。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"font-size: 28px;background-image: linear-gradient(to right bottom, rgb(255,0,0), rgb(255,128,0), rgb(255,255,0), rgb(0,255,0), rgb(0,255,128), rgb(0,255,255), rgb(0,128,255), rgb(0,0,255), rgb(128,0,255), rgb(255,0,255), rgb(255,0,128)); -webkit-background-clip: text;color: transparent;"</span>&gt;</span>悲莫悲兮生别离, 乐莫乐兮新相知。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"background-color: #cccccc"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color: #C8C8C8;font-size: 28px;text-shadow: 1px 1px white, -1px -1px #444444;"</span>&gt;</span>As you think, so shall you become.<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><span style="color: #696969;font-size: 28px;text-shadow: black 0.1em 0.1em 0.2em">在 Markdown 中，为文字设置其他属性</span><br><span style="color: #ef4136;font-size: 28px;text-shadow: 0 0 0.2em #2edfa3, 0 0 0.2em #FF8877">天意怜芳草，人间重晚晴。</span><br><span style="font-size: 28px;background-image: linear-gradient(to right bottom, rgb(255,0,0), rgb(255,128,0), rgb(255,255,0), rgb(0,255,0), rgb(0,255,128), rgb(0,255,255), rgb(0,128,255), rgb(0,0,255), rgb(128,0,255), rgb(255,0,255), rgb(255,0,128)); -webkit-background-clip: text;color: transparent">悲莫悲兮生别离, 乐莫乐兮新相知。</span></p>
-<div style="background-color: #cccccc"><span style="color: #C8C8C8;font-size: 28px;text-shadow: 1px 1px white, -1px -1px #444444">As you think, so shall you become.</span></div>
-
-<h3 id="在-Markdown-中添加表格"><a href="#在-Markdown-中添加表格" class="headerlink" title="在 Markdown 中添加表格"></a>在 Markdown 中添加表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">| Key | Value | 备注 |</div><div class="line">| :--- | :---: | ---: |</div><div class="line">|居左对齐 | 居中对齐  | 居右对齐 |</div><div class="line">|  |  |  |</div><div class="line">| [倾城之链](https://nicelinks.site/)❤️ | `开放平台`🙌🏻  |  **优秀网站** 📘|</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Key</th>
-<th style="text-align:center">Value</th>
-<th style="text-align:right">备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">居左对齐</td>
-<td style="text-align:center">居中对齐</td>
-<td style="text-align:right">居右对齐</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:right"></td>
-</tr>
-<tr>
-<td style="text-align:left"><a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>❤️</td>
-<td style="text-align:center"><code>开放平台</code>🙌🏻</td>
-<td style="text-align:right"><strong>优秀网站</strong> 📘</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Markdown-中使图片居中"><a href="#Markdown-中使图片居中" class="headerlink" title="Markdown 中使图片居中"></a>Markdown 中使图片居中</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![倾城之链，云集全球优秀网站](https://image.nicelinks.site/倾城之链-Banner.png)</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://image.nicelinks.site/倾城之链-Banner.png&quot; alt=&quot;倾城之链，云集全球优秀网站&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
-<div align="center"><img src="https://image.nicelinks.site/倾城之链-Banner.png" alt="倾城之链，云集全球优秀网站"></div>
-
-<h3 id="Markdown-中折叠一部分内容"><a href="#Markdown-中折叠一部分内容" class="headerlink" title="Markdown 中折叠一部分内容"></a>Markdown 中折叠一部分内容</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span>点击我，了解「倾城之链」<span class="tag">&lt;/<span class="name">summary</span>&gt;</span> </div><div class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></div><div class="line">    作为一个开放平台，</div><div class="line">    旨在云集全球优秀网站，</div><div class="line">    探索互联网中更广阔的世界；</div><div class="line">    在这里，你可以轻松<span class="tag">&lt;<span class="name">strong</span>&gt;</span>发现、学习、分享更多有用或有趣的事物<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>。</div><div class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></div></pre></td></tr></table></figure>
-<details><br><summary>点击我，了解「倾城之链」</summary><br><pre><br>    作为一个开放平台，<br>    旨在云集全球优秀网站，<br>    探索互联网中更广阔的世界；<br>    在这里，你可以轻松<strong>发现、学习、分享更多有用或有趣的事物</strong>。<br><pre><br></pre></pre></details>
-
-<h3 id="Markdown-中插入视频"><a href="#Markdown-中插入视频" class="headerlink" title="Markdown 中插入视频"></a>Markdown 中插入视频</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">video</span> <span class="attr">id</span>=<span class="string">"video"</span> <span class="attr">controls</span>=<span class="string">""</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">preload</span>=<span class="string">"none"</span> <span class="attr">poster</span>=<span class="string">"your-poster-path"</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">source</span> <span class="attr">id</span>=<span class="string">"mp4"</span> <span class="attr">src</span>=<span class="string">"your-video-path"</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<ul>
-<li><strong>src</strong>：视频地址；</li>
-<li><strong>controls</strong>：显示或隐藏播放器（ true/false）；</li>
-<li><strong>width</strong>：播放器宽度（px / 百分比）；</li>
-<li><strong>height</strong>：播放器的高度（px / 百分比）；</li>
-<li><strong>poster</strong>：指定封面（图片地址）；</li>
-</ul>
-<h3 id="如何在前端开发中运用-Markdown"><a href="#如何在前端开发中运用-Markdown" class="headerlink" title="如何在前端开发中运用 Markdown"></a>如何在前端开发中运用 Markdown</h3><p>Markdown 要不 HTML 来的<strong>更快捷</strong>；在前端开发中，使用 Markdown 来绘制界面，处于开发效率，也是比较可取的选择。通常有两种实现方式：借助解释器如 <a href="https://github.com/markedjs/marked" target="_blank" rel="external">marked</a>；运用 <a href="https://mdxjs.com/" target="_blank" rel="external">MDX</a>。</p>
-<p>在开发独立个人产品<a href="https://nicelinks.site/?utm_source=nicelinks.site" target="_blank" rel="external">「倾城之链」</a>的<a href="https://nicelinks.site/about" target="_blank" rel="external">关于 | About</a> 页面，以及「倾城之链」小程序，就采取 Markdown 结合 marked 方式；具体实现可参见 <a href="https://github.com/nicejade/nicelinks-vue-client/blob/master/src/views/About.vue#L13" target="_blank" rel="external">nicelinks-vue-client</a>。在 vue 中的用法大致如下所示：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div class="markdown-body" v-html="beParsedVal"&gt;&lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">import marked from 'marked'</div><div class="line">export default &#123;</div><div class="line">  name: 'PreviewMd',</div><div class="line">  data() &#123;</div><div class="line">    return &#123;</div><div class="line">        beParsedVal: ''</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  created() &#123;</div><div class="line">    const content = `[「倾城之链」](https://nicelinks.site/?utm_source=nicelinks.site)，作为一个开放平台....`</div><div class="line">    this.beParsedVal = marked(content, &#123;</div><div class="line">        sanitize: true,</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>以上，即 Markdown 常用语法之外的些许“奇技淫巧“，欢迎朋友分享更多精彩用法。</p>
-<p>于深圳.福田，2020.11.25 ~ 2020.11.26</p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2020/10/12/172-okr-working-method-let-you-more-efficiently/">OKR 工作法，带你聚焦目标，高效工作</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/">工具 vs 产品 And 知识 vs 思维</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      Markdown 是一种轻量级的「标记语言」，旨在简洁、高效；它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML）文档；它的优点很多，目前也被越来越多的写作爱好者、撰稿者广泛使用。自从 14 年首次接触到 Markdown，就被这种学习简单，功能强大、使用高效的的设计所吸引，也是此后许多年写文章、做 PPT 、记录代办事项等首选工具。本文在于分享 Markdown 相关资源、以及高阶用法的奇技淫巧。
-    
-    </summary>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
-    
-      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
-    
-      <category term="小程序" scheme="https://www.jeffjade.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开启技术变现之路，探索第三收入来源</title>
-    <link href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/"/>
-    <id>https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/</id>
-    <published>2020-11-17T13:21:00.000Z</published>
-    <updated>2020-11-17T15:17:16.390Z</updated>
-    
-    <content type="html"><![CDATA[<p>2020 年 5 月底，<a href="https://nicelinks.site/post/59c8e9208f066a5dda100f4b" target="_blank" rel="external">SegmentFault</a> 正式推出<a href="https://segmentfault.com/a/1190000022747255" target="_blank" rel="external">「思否独立开发者支持计划」</a>，希望借助社区的资源，为独立开发者提供相应的个人品牌、独立项目的曝光推介，从而帮助独立开发者建立影响力。前段时间才关注到，略作申请，就有收到<code>采访</code>邀约；有<a href="https://segmentfault.com/a/1190000038196276" target="_blank" rel="external">将采访的相关内容</a>，同步至此，希望可以给更多对「独立开发者」感兴趣的朋友，带来些许参考；此外，更渴望结识更多志同道合的朋友，相互交流，共同成长。</p>
-<a id="more"></a>
-<blockquote>
-<p>备注，关于<code>倾城之链</code>已经分享两篇文章；而本篇所涉及的内容，绝大部分也是与“倾城”相关思考；其第二个标题，应该是“云集优站，尽在「倾城之链」番外篇”，将会是『倾城之链』系列文章组成部分。</p>
-</blockquote>
-<h2 id="项目相关问题"><a href="#项目相关问题" class="headerlink" title="项目相关问题"></a>项目相关问题</h2><p>独立项目名称：<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a><br>月收入（选答）：暂不到 1000<br>思否社区 ID：<a href="https://segmentfault.com/u/jeffjade" target="_blank" rel="external">jeffjade</a>   </p>
-<h3 id="1-自我介绍，你的背景是？最近在忙什么？"><a href="#1-自我介绍，你的背景是？最近在忙什么？" class="headerlink" title="1. 自我介绍，你的背景是？最近在忙什么？"></a>1. 自我介绍，你的背景是？最近在忙什么？</h3><p>业余独立开发者<a href="https://www.jeffjade.com/about-me">杨轩帅</a>，目前在国内一家智能手机研发公司做<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>相关；目前，工作侧重管理、工具型产品，当然也仍会写写代码；出于对高效工作的追求，比较热衷于创造一些好产品 / 工具，相比之下，业余时间写代码会更多一些。</p>
-<h3 id="2-为什么选择成为一名独立开发者？"><a href="#2-为什么选择成为一名独立开发者？" class="headerlink" title="2. 为什么选择成为一名独立开发者？"></a>2. 为什么选择成为一名独立开发者？</h3><p>目前仍是一名<code>业余独立开发者</code>。工作内外，都有很多想法，以及一些痛点；个人非常倾向将其抽象出来，加以设计，用代码实现出一个工具，或是一款产品，为自己和他人都能带来价值；即便只有自己用，也觉得很酷（极客范儿）。</p>
-<p>从另一角度回答这个问题，有必要理解下其定义；<strong>『独立开发者』</strong>，一般指的是“从产品立项、设计、开发、推广、到盈利的闭环全部独立完成的人”。也想有更多志同道合朋友，组成一个团队，聚集起来完成一款产品；但这并不容易，只能是自己事必躬亲，孤军奋战。所有业余项目，包括<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>在内，全部工作都须自己去做，在不擅长的领域，难免捉襟见肘，比如 UI 设计、交互设计，推广等环节。</p>
-<h3 id="3-设计思考，为什么开始这个（几个）项目？"><a href="#3-设计思考，为什么开始这个（几个）项目？" class="headerlink" title="3. 设计思考，为什么开始这个（几个）项目？"></a>3. 设计思考，为什么开始这个（几个）项目？</h3><p><strong>项目立项</strong>：这里主要介绍下<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>这个项目；从 17 年初，有开始立项，在业余时间策划、设计、编写以及部署等。主要部分功能，也是在 17 年就初步完成；这几年有陆续完善体验，塑造周边能力，以及发<code>小程序</code>、<code>快应用</code>等版本。</p>
-<p><img src="https://quickapp.lovejade.cn/content/images/2020/11/nicelinks-screenshot.jpeg" alt="倾城之链 | 思否采访"></p>
-<p><strong>项目背景</strong>：开发这款项目，每个阶段，主要出发点都有些不同；<strong>最初</strong>：诞生这些想法，是出自个人需要。<strong>立项动机</strong>：开发一款产品，为自己带盐；修炼技艺，创造挑战，追名逐利。时隔三年，仍在<strong>积极维护</strong>，主要是想，探索是否能够依靠它作为第三收入来源。在 17 、 18 年，分别写了关于<a href="https://nicelinks.site/" target="_blank" rel="external">「倾城之链」</a>的文章，详细介绍了<code>故事起源</code>，<code>名字由来</code>，<code>核心价值</code>、<code>如何访问</code>、以及<code>如何运作</code>等等。</p>
-<ul>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-</ul>
-<p><strong>面向群体</strong>：“所有互联网用户，以及 Web 应用创造者”，这是原本设想。但在实际推广中发现，互联网从业者是主要用户，地域多分布在一、二线城市。曾今，有向家乡的亲友（对 Web 应用没有认知）推荐，这跟教它们编程一样艰难（摊手 🤷‍♂️）定位也就慢慢有所改变；目前主要面向的群体是：对先进技术或事物，有好奇心、上进心的“年轻人”。</p>
-<p>对于这样的现状，现在也有所释怀，毕竟不是娱乐性质、而且<strong>不能立刻为用户带来可见价值</strong>的产品，在我们现在这个环境，很难快速推广开来；毕竟，就我本人而言，下了班，也经常是看看视频、玩儿下游戏，无脑的放松自我。何况<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>，又是偏向让用户主动发现、学习、探索的类型。</p>
-<h3 id="4-如何做的第一版产品？"><a href="#4-如何做的第一版产品？" class="headerlink" title="4. 如何做的第一版产品？"></a>4. 如何做的第一版产品？</h3><p>2017 年那会儿，年富力强，在大前端这块儿，尚不能融会贯通；有了这个想法后，就立马动手策划、技术选型、设计、编码、测试、买域名、购服务器、部署、验证等；很快就出品了第一版。当然，那段时间，感情上也正处于“空窗期”，使得有专心于此的业余时间和外部环境。</p>
-<h3 id="5-独立开发过程中遇到过哪些困难？最难搞定的是什么？"><a href="#5-独立开发过程中遇到过哪些困难？最难搞定的是什么？" class="headerlink" title="5. 独立开发过程中遇到过哪些困难？最难搞定的是什么？"></a>5. 独立开发过程中遇到过哪些困难？最难搞定的是什么？</h3><p>最难莫过于：“<strong>交互设计，UI 设计</strong>”，技术不懂可以学，时间不足可以挤，但在界面设计这块儿，实在是苦煞人也；自认为在审美这块儿，比起些专业设计师，也不遑多让；但真正自己去设计，总不尽如人意。各种参考、改版，就目前所呈现出来的，也不是个人所满意的。如果能有一优秀设计师携手，想必<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>的现状，会比现在好很多。</p>
-<h3 id="6-项目目前取得了哪些成就？项目为你带来了什么？"><a href="#6-项目目前取得了哪些成就？项目为你带来了什么？" class="headerlink" title="6. 项目目前取得了哪些成就？项目为你带来了什么？"></a>6. 项目目前取得了哪些成就？项目为你带来了什么？</h3><p>目前所取得的成就，最令人兴奋的大概是：已经收录全球优质网站 400 余个，且还在不断增长。</p>
-<p><img src="https://quickapp.lovejade.cn/content/images/2020/11/------------2.png" alt="倾城之链 | 独立开发者"></p>
-<p><code>倾城</code>这项目，给我带来的就太多了；譬如：</p>
-<ul>
-<li>原本就为练技而始，开发 &amp; 维护倾城，在高效开发 Web 应用这块，积累蛮多经验；</li>
-<li>因为上一条，为自己的工作，或有形或无形，也带来非常大的帮助和价值；</li>
-<li>收录的所有 Web 应用，都须亲自逐一审核（<strong>+写推荐语</strong>），使得眼界大开；</li>
-<li>也因为上一条，使得接触到很多有价值产品，对工作，生活、或者写文都产品很大影响；</li>
-<li><a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>小程序发布几个月后，现在慢慢有了自然流量，接入广告后，每天都能带来些收益小惊喜；这比赚取工资来的开心。</li>
-</ul>
-<h3 id="7-你的商业模式是什么？是如何增长的？"><a href="#7-你的商业模式是什么？是如何增长的？" class="headerlink" title="7. 你的商业模式是什么？是如何增长的？"></a>7. 你的商业模式是什么？是如何增长的？</h3><p>截止目前，还没非常认真考虑商业模式；原本设想是，服务好用户（探索发现者，Web 应用创造者），不断丰富内容，从而逐渐产生更多价值；就会形成优良循环 ♻️，当用户达到一定规模，即可依靠接入广告来获取收益。</p>
-<p>但就目前而言，还未达到这一点；仍在积极收录优质 Web 应用、开发更多对用户有价值（粘性）的功能。接下来，有计划投入一笔广告，从而提升产品知名度。从而加快构建良性循环的速度。</p>
-<h3 id="8-近阶段项目有哪些更新，未来会做什么变动"><a href="#8-近阶段项目有哪些更新，未来会做什么变动" class="headerlink" title="8. 近阶段项目有哪些更新，未来会做什么变动"></a>8. 近阶段项目有哪些更新，未来会做什么变动</h3><p>最近更新是，为审核通过的网站，自动发起首页截图，并压缩、上传至阿里云 OSS，从而展示给用户，能让用户在打开 Web 应用前，能够对其有一个初步了解。最近也是写了篇文章<a href="https://quickapp.lovejade.cn/screenshot-and-upload-to-ali-oss/" target="_blank" rel="external">一键截图、压缩 &amp; 上传至阿里 OSS</a>，专门介绍了下具体实现和封装 📦。</p>
-<p>未来仍会持续维护、更新。功能路线图有在 <a href="https://github.com/nicejade/nicelinks-vue-client/issues" target="_blank" rel="external">Github Issues</a> 记录。具体会投入多大力度，取决于后续广告投入后，所产生的收益高低。如果远高于预期，也可以考虑专职全勤投入。</p>
-<h3 id="9-如果项目重来一次你会做哪些改变？"><a href="#9-如果项目重来一次你会做哪些改变？" class="headerlink" title="9. 如果项目重来一次你会做哪些改变？"></a>9. 如果项目重来一次你会做哪些改变？</h3><p>我想会提早开发并重视<strong>小程序</strong>、<strong>快应用</strong>版本（得注册一个公司）；从数据看，小程序所能带来的收益，要比 Google AdSense 多，且容易的多。</p>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="min-width: 300px" alt="小程序码 - 倾城之链"></p>
-<h2 id="个人相关问题"><a href="#个人相关问题" class="headerlink" title="个人相关问题"></a>个人相关问题</h2><h3 id="1-推荐你最喜欢的一款产品-游戏-App？并说明原因"><a href="#1-推荐你最喜欢的一款产品-游戏-App？并说明原因" class="headerlink" title="1. 推荐你最喜欢的一款产品 / 游戏 / App？并说明原因"></a>1. 推荐你最喜欢的一款产品 / 游戏 / App？并说明原因</h3><p>没有限制条件的话，当然是<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>啦。毕竟“亲儿子”；何况我也是「倾城」的重度 &amp; 忠实用户，而且还给自己带来了非常多实在的好处，最喜欢「倾城」，实属实至名归。</p>
-<p>但就那样回答，颇有些符合咱传统习惯；如 <a href="https://nicelinks.site/post/5f40d0bf15435e0906a0a26f" target="_blank" rel="external">Product Hunt</a>（一个供用户分享和发现<a href="https://nicelinks.site/theme/product" target="_blank" rel="external">产品</a>、专注于每日最佳新 APP 排行榜的<strong>社交新闻</strong>网站），Github 等，都是我非常喜欢的产品。尤其前者，<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>就需要向其多多学习；而且在这个阶段，<a href="https://nicelinks.site/post/5f40d0bf15435e0906a0a26f" target="_blank" rel="external">Product Hunt</a>，很多程度上，是我在互联网这块，视野拓展的主要源头之一。</p>
-<h3 id="2-分享一下你的技术栈和你日常的工作流？"><a href="#2-分享一下你的技术栈和你日常的工作流？" class="headerlink" title="2. 分享一下你的技术栈和你日常的工作流？"></a>2. 分享一下你的技术栈和你日常的工作流？</h3><p>在工作中，主要涉及开发快应用引擎、以及周边生态建设；使用的技术栈主要是：</p>
-<ul>
-<li>编程语言：JavaScript，TypeScript，Node.js、Css，Html 等；</li>
-<li>前端框架：Vue、React、Electron 等；</li>
-<li>构建工具：Webpack、Rollup、Gulp 等；</li>
-<li>应用类型：小程序、快应用、PWA 等；</li>
-</ul>
-<p>在进行些个人项目开发中，也会用到 MongoDB、Redis、Nginx、Docker、Python 等。</p>
-<p><strong>日常工作流</strong>：多年来，都使用 Mac 作为开发工具；基于 VsCode、Sublime Text3 编写代码（写快应用、小程序，会用到对应 IDE）；用 Git、Github、Gitlab 来控制项目版本；Jenkins 来持续集成；习惯使用 Markdown 写文档、博客；Xmind 绘制思维导图；使用各类 Terminal 命令行来提升效率（遇到没有诉求，会自己集成，如个人作品 <a href="https://arya.lovejade.cn/" target="_blank" rel="external">Arya Jarvis</a>）…….</p>
-<h3 id="3-对独立开发者或编程初学者有什么建议？"><a href="#3-对独立开发者或编程初学者有什么建议？" class="headerlink" title="3. 对独立开发者或编程初学者有什么建议？"></a>3. 对独立开发者或编程初学者有什么建议？</h3><p>对于独立开发者，鉴于每个人的初衷、身处环境、终极目标，都有所不同，暂没有更多建议。</p>
-<p>对于编程初学者，倒有满多想说的：</p>
-<ol>
-<li>对于编程，要“战略上藐视它 战术上重视它”，要认识到这并不是很难学，但须要付出努力，切勿眼高手低。</li>
-<li>方向上，先易后难（可以先学学 JavaScript 或 Python 等），多读文档，多敲代码，勤于思考，举一反三，善于总结，坚持写博文。</li>
-<li>找准方向后，建议采取“学以致用”的方式，循序渐进：可以定制一个需求，想法设法去实现，修炼编程基本功的同时，也锻炼了综合能力（如学习、搜索、排查问题等）。</li>
-<li>最后就是坚持（凡事贵在坚持）；坚持学习、总结、跟同行交流反馈、持续输出心得。须知：“念念不忘、必有回响”。</li>
-</ol>
-<h3 id="4-生活中有什么爱好？有什么个人的特别的工作习惯么？"><a href="#4-生活中有什么爱好？有什么个人的特别的工作习惯么？" class="headerlink" title="4. 生活中有什么爱好？有什么个人的特别的工作习惯么？"></a>4. 生活中有什么爱好？有什么个人的特别的工作习惯么？</h3><p>生活中爱好，可谓非常广泛；譬如游戏、读书、听歌、看电影（动漫）、写东西、跟朋友聊天…… 但在业余时间，真正做的比较多是：编程和游戏；前者是为了追逐名利；后者则是为了减压，或者偶尔的放纵（周末安装，玩儿完删掉，循环往复）。</p>
-<p>特别的工作习惯：个人崇尚效率（工欲善其事，必先利其器），每当遇到需求，总会先将需要的工具或者环境，快速准备妥帖，从而使得后续工作，尽可能顺畅、高效、省心。</p>
-<hr>
-<h3 id="聊聊你的思否的看法或对国内技术社区的看法"><a href="#聊聊你的思否的看法或对国内技术社区的看法" class="headerlink" title="聊聊你的思否的看法或对国内技术社区的看法"></a>聊聊你的思否的看法或对国内技术社区的看法</h3><p>早在 2015 年 3 月，就有加入思否社区。那时候入还比较年轻，精力充沛，成长欲也很强；有空就会扫一扫「<strong>问答</strong>」，挑些感兴趣的问题来回答下。慢慢地，空闲时间不在那么多，偶尔在博客产出些文章，会借助「<strong>发头条</strong>」功能，分享给用户，也能给自己的站带来些流量，时至如今，也是喜之不已。如今，思否又发起「<strong>独立开发者计划</strong>」，这简直是我辈福音。即便时间不是很充盈，也抽空来接受采访。坦白讲，我认为「思否」国内最友好的技术社区。</p>
-<p>国内其他技术社区，就有使用过的，也谈下个人看法：</p>
-<ul>
-<li><a href="https://nicelinks.site/post/59c8ecc88f066a5dda100f51" target="_blank" rel="external">博客园</a>：个人最初写博客的阵地；它在艰难的环境中成长、发展、壮大，博客园用户中成长出了一批又一批技术专家，在 IT 行业中大展身手！任互联网浪潮的此起彼伏，尽管时光流转岁月变迁，它依旧坚守初心，真的很棒。</li>
-<li><a href="https://nicelinks.site/post/5f3417101751843ef894c890" target="_blank" rel="external">CSDN</a>：很早就知道它，但用的很少；因为它的权重很高，检索问题，经常会出现在搜索结果中；但总体来看，它质量低劣，且抄袭遍地，很多时候不能解决所遇问题，早已借助 Chrome 扩展，将其从搜索结果中屏蔽。</li>
-<li><a href="https://nicelinks.site/post/5acce29a7dad51488f48ccae" target="_blank" rel="external">V2EX</a>：独具匠心的发布、回复话题奖励机制，让这里的内容多了一层更趋于优质的可能；但内容更多不是技术，而是技术圈人的感慨；有时候在 v2ex 推广些个人产品，确实能短时间内带来不少流量；同时，也要具备一定内心成熟能力。</li>
-<li><a href="https://nicelinks.site/post/5adf54a6cbf8b27043e5e9d7" target="_blank" rel="external">掘金</a>：一个帮助开发者成长的社区、面向互联网技术人的内容分享平台。倒是作为创作者，用过一段时间，但它那短时间内崛起的超大权重，远高于个人主博客，就不再用了。对于既得利益者，掘金是蛮好的存在。就个人使用感受，远不如「思否」友好。</li>
-</ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="有什么想聊的可以补充（比如：去哪对你产品进行深入了解）"><a href="#有什么想聊的可以补充（比如：去哪对你产品进行深入了解）" class="headerlink" title="有什么想聊的可以补充（比如：去哪对你产品进行深入了解）"></a>有什么想聊的可以补充（比如：去哪对你产品进行深入了解）</h3><p><a href="https://nicelinks.site/?utm_source=nicelinks.site" target="_blank" rel="external">「倾城之链」</a>，<strong>作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物</strong>。如果您感兴趣想进一步了解，可以参见<a href="https://nicelinks.site/about" target="_blank" rel="external">关于倾城</a>；之前也有对「倾城之链」的来龙去脉，在博客中做了分享，具体可以参见以下文章：</p>
-<ul>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-</ul>
-<p>除了「倾城」这款作品，利用闲暇也写了些工具，感兴趣的朋友，可以移步<a href="https://www.lovejade.cn/zh/works/" target="_blank" rel="external">轩帅个人作品集</a>查阅。</p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/">工具 vs 产品 And 知识 vs 思维</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链，作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Tools" scheme="https://www.jeffjade.com/tags/Tools/"/>
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
-      <category term="Nice" scheme="https://www.jeffjade.com/tags/Nice/"/>
-    
-      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
-    
-      <category term="小程序" scheme="https://www.jeffjade.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   

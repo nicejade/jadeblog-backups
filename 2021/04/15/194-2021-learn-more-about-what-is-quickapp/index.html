@@ -1,0 +1,1177 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+
+    <title>2021，深入了解什么是「快应用」？ | 晚晴幽草轩</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="晚晴幽草轩轩主">
+    
+    <meta name="theme-color" content="#fffffb">
+    <meta name="baidu-site-verification" content="PKEtLPjO56">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+
+    <meta name="keywords" content="快应用, 开发快应用, quickapp, 快应用开发者, 问题, 解决方案, 开发者">
+    <meta name="description" content="快应用是移动互联网新型应用生态，与手机系统深度整合，为用户提供更加场景化的体验。具备传统 APP 完整的应用体验，但无需安装、即点即用。快应用是基于手机硬件平台的新型应用形态，由国内十大手机厂商基于硬件平台共同推出，其标准是由主流手机厂商组成的快应用联盟联合制定。这里记录下在快应用开发中，涉及的常见问题及其对应解决方案；同时也会给出如何更好开发快应用的一些建议。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021，深入了解什么是「快应用」？">
+<meta property="og:url" content="https://www.jeffjade.com/2021/04/15/194-2021-learn-more-about-what-is-quickapp/index.html">
+<meta property="og:site_name" content="晚晴幽草轩">
+<meta property="og:description" content="快应用是移动互联网新型应用生态，与手机系统深度整合，为用户提供更加场景化的体验。具备传统 APP 完整的应用体验，但无需安装、即点即用。快应用是基于手机硬件平台的新型应用形态，由国内十大手机厂商基于硬件平台共同推出，其标准是由主流手机厂商组成的快应用联盟联合制定。这里记录下在快应用开发中，涉及的常见问题及其对应解决方案；同时也会给出如何更好开发快应用的一些建议。">
+<meta property="og:image" content="https://z3.ax1x.com/2021/03/25/6XJMK1.jpg">
+<meta property="og:image" content="https://z3.ax1x.com/2021/03/25/6XdfsJ.jpg">
+<meta property="og:image" content="https://quickapp.lovejade.cn/content/images/2020/06/----App_Clips-------.jpg">
+<meta property="og:image" content="https://quickapp.lovejade.cn/content/images/2020/06/app-clips-invocation.jpg">
+<meta property="og:updated_time" content="2021-04-15T14:40:18.492Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2021，深入了解什么是「快应用」？">
+<meta name="twitter:description" content="快应用是移动互联网新型应用生态，与手机系统深度整合，为用户提供更加场景化的体验。具备传统 APP 完整的应用体验，但无需安装、即点即用。快应用是基于手机硬件平台的新型应用形态，由国内十大手机厂商基于硬件平台共同推出，其标准是由主流手机厂商组成的快应用联盟联合制定。这里记录下在快应用开发中，涉及的常见问题及其对应解决方案；同时也会给出如何更好开发快应用的一些建议。">
+<meta name="twitter:image" content="https://z3.ax1x.com/2021/03/25/6XJMK1.jpg">
+<meta name="twitter:creator" content="@nicejadeyang">
+
+    
+    <link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/favicons/favicon.ico">
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/46931/5d0fa119f629d800fcbb4e49.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/style.css?190623">
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script">
+
+    <link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8586652723015758",
+        enable_page_level_ads: true
+      });
+    </script>
+</head></html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1>
+				<h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/" class="">Home</a></li>
+					
+						<li><a href="/nicelinks" class="">Links</a></li>
+					
+						<li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li>
+					
+						<li><a href="/archives" class="">Archives</a></li>
+					
+						<li><a href="/about-me" class="">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search">
+						<input type="hidden" name="q" value="site:www.jeffjade.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2021/04/15/194-2021-learn-more-about-what-is-quickapp/" class="title=&quot;2021，深入了解什么是「快应用」？&quot;" itemprop="url">2021，深入了解什么是「快应用」？</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2021-04-15T13:21:00.000Z" itemprop="datePublished"> 发表于 2021-04-15</time>
+
+  </p>
+</header>
+	<div class="article-content">
+		
+    <div class="bottom-gg-module">
+  <div class="jade-gg-block">
+    <a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank">
+      <img class="width-block-wrap" style="width: 100%;max-height: 200px" src="https://image.nicelinks.site/倾城之链-Banner.png" alt="倾城之链">
+    </a>
+    </div>
+  </div>
+
+		<p>何谓<a href="https://www.quickapp.cn/" target="_blank" rel="external">「快应用」</a>呢？它是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的<code>快应用联盟</code>联合制定（2018 年 3 月）。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>具备传统 APP 完整的应用体验，<code>无需安装、即点即用</code>；<code>覆盖 10 亿设备</code>，<code>与操作系统深度集成，探索新型应用场景</code>。快应用 ──<strong>复杂生活的简单答案，让生活更顺畅</strong> ── 来自 <a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用官方网站 | 倾城之链</a>。</p>
+<h2 id="如何体验快应用？"><a href="#如何体验快应用？" class="headerlink" title="如何体验快应用？"></a>如何体验快应用？</h2><p>如果您有一台 Android 手机（vivo、OPPO、华为、小米、魅族等），看到带有「<strong>秒开</strong>」字样的应用，就是快应用。您可以通过在负一屏、全局、自带浏览器等，发起关键字检索，如快应用中心、云缴费等；或者是笔者常用的快应用：小睡眠、当当极速版等。点开，即能使用，如下截图。</p>
+<p><img src="https://z3.ax1x.com/2021/03/25/6XJMK1.jpg" alt="小睡眠 - 快应用"></p>
+<h2 id="快应用特点"><a href="#快应用特点" class="headerlink" title="快应用特点"></a>快应用特点</h2><p>下面列出些关于「快应用」特点，这将有助于对它有更深刻的理解；</p>
+<ul>
+<li>基于手机硬件平台，标准由主流手机厂商组成的快应用联盟制定；</li>
+<li>无需安装、即点即用，且具备传统 APP 完整的应用体验；</li>
+<li>与操作系统深度集成，一键直达；</li>
+<li>更新直接推送，新版本直接更新到后台，用户无感知快应用的技术实现；</li>
+<li>基于前端技术栈开发、可快速迭代；</li>
+<li>通过全新的引擎，将系统原生的渲染机制和接口能力提供给上层应用；</li>
+<li>运行在框架应用进程中，对每个快应用会开一个 <code>Launcher</code> 进程快应用的开发、发布和使用流程；</li>
+<li>开发者需要在快应用官网注册，上传至快应用官网，测试并通过审核后即可进行分发；</li>
+<li>使用前端技术栈进行开发，经过编译、签名后最终产出 <code>rpk</code> 文件；</li>
+<li>开发者需登录快应用官网进行上传和发布，发布前会经过审核快应用与小程序的对比；</li>
+<li>快应用使用 <code>native</code> 渲染，性能体验会比较好，而小程序是使用 <code>webview</code> 渲染 ；</li>
+<li>快应用的系统级能力更强，能调用更多系统级 API；</li>
+</ul>
+<p>因为「快应用」基于前端技术开发，由原生 Android 来渲染，带来性能上的优势，却使得开发变得要困难一些；这体现在几个方面：原生没有完全对应 Web 标准，如 CSS 新特性、Canvas 等，导致部分效果无法实现。有一套属于快应用的语法，市面上仍未有支持快应用开发的第三方框架；而小程序，则可以基于 mpvue、taro 等支持多端统一框架来开发。当然，这远比开发原生应用高效太多，在后面的文章中，会分享：“如何高效开发一款快应用”。</p>
+<h2 id="快应用发展历程"><a href="#快应用发展历程" class="headerlink" title="快应用发展历程"></a>快应用发展历程</h2><ul>
+<li>2018 年 3 月：10家厂商组成快应用联盟，正式推出标准；</li>
+<li>2019 年 3 月：中国移动、海信加入快应用联盟；</li>
+<li>2020 年：推出广告变现能力，开启商业化；</li>
+</ul>
+<p>在此期间，快应用引擎能力，快应用开发工具（IDE），以及周边生态如组件库，辅助化编程工具，都在不断迭代、完善。</p>
+<h2 id="为何开发快应用？"><a href="#为何开发快应用？" class="headerlink" title="为何开发快应用？"></a>为何开发快应用？</h2><p>以往的手机端应用主要有三种方式：<strong>网页应用</strong>、<strong>原生应用</strong>、<strong>混合应用</strong>。网页无需安装，体验欠佳。原生应用体验流畅，却需要从应用商店下载安装，难以一步直达用户（混合外层也是原生）。快应用的出现，就是希望能够让用户无需下载安装，并且还能流畅的体验应用内容。</p>
+<p>为了达到上面的目标，快应用建立一种新的语言开发规范，同时提供一系列的开发套件辅助支持。简单来说，开发者主要利用前端知识与技能，以及对应的 IDE，手机设备就可以做原型的开发。快应用使用前端技术栈开发，原生渲染，同时具备 H5 与原生应用的双重优点，开发者使用的前端技术栈资料多，学习成本低。</p>
+<p>2018 年 3 月份，由小米，OPPO，vivo，华为等 10 家国内主流厂商成立了<strong>快应用联盟</strong>，从技术规范层面做了统一，并保证了开发者所开发的快应用，审核通过，可在联盟内厂商所有的的手机设备上运行。</p>
+<h2 id="快应用存在的价值"><a href="#快应用存在的价值" class="headerlink" title="快应用存在的价值"></a>快应用存在的价值</h2><p><strong>为用户</strong>：更快的触达、更优的体验、更省的存储空间、丰富的场景化、海量垂直类服务；<br><strong>为企业</strong>：更低的接入成本、更短的开发周期、支持与系统场景深度结合、流量扶持、变现；</p>
+<h2 id="快应用目前现状"><a href="#快应用目前现状" class="headerlink" title="快应用目前现状"></a>快应用目前现状</h2><h3 id="覆盖分类"><a href="#覆盖分类" class="headerlink" title="覆盖分类"></a>覆盖分类</h3><p>生活服务、实用工具、图书阅读、金融理财、娱乐消费、网购优惠、新闻资讯、旅游出行、医疗健康等。</p>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>就目前而言，快应用主流的应用场景，是手机设备；另外诸如小米、华为等厂商已经将其用于车载等设备；未来，像手表、电视、以及更多智能家居，肯定都会接入，可以说未来应用场景，可谓广泛。而快应用这种高性能的基础，则可以使得快应用在这些场景，游刃有余；对此，值得期待。</p>
+<h3 id="入口场景"><a href="#入口场景" class="headerlink" title="入口场景"></a>入口场景</h3><p>目前，快应用入口场景有：DeepLink 外部拉起、负一屏、全局搜索、浏览器搜索、Push、快应用码、短信、分享跳转、锁屏、语音助手、应用商店等等，具体各家支持情况，可参加如下截图说明（据悉，在之后还将会有更多场景，陆续开放）：</p>
+<p><img src="https://z3.ax1x.com/2021/03/25/6XdfsJ.jpg" alt="快应用场景"></p>
+<h2 id="如何基于快应用盈利？"><a href="#如何基于快应用盈利？" class="headerlink" title="如何基于快应用盈利？"></a>如何基于快应用盈利？</h2><p>与其他原生应用、小程序一样，快应用，大体上也有三种盈利模式：<strong>接入广告</strong>、<strong>电子商务</strong>、<strong>提供服务</strong>。因为，快应用具有<strong>即点即用</strong>、<strong>无需下载</strong>的特性，以及厂商流量扶持，便捷的一键加桌….. 而且可以基于 DeepLink 从外部（微信、朋友圈、H5 网页）拉起；那么您可以非常方便，从外部引入流量，从而基于广告，开赚取收入；而这也是实现代价最小、无需长期积淀，就可以做的“好生意”——只需低成本的开发，以及推广即可。</p>
+<h2 id="与小程序、App-Clips-对比"><a href="#与小程序、App-Clips-对比" class="headerlink" title="与小程序、App Clips 对比"></a>与小程序、App Clips 对比</h2><p>6 月 23 日，苹果公司在其全球开发者（WWDC）大会上，介绍了 未来一个重要卖点功能 <a href="https://developer.apple.com/app-clips/" target="_blank" rel="external">App clips</a>；它与已经存在的小程序、<a href="https://quickapp.vivo.com.cn/tag/quickapp/" target="_blank" rel="external">快应用</a>，颇为相似：<strong>即时使用</strong>；因此，有朋友就根据现有体验，对这三种应用形态，在人机交互、生态、体验、平台能力等方面，做了横向对比；在此与大家分享。</p>
+<p><img src="https://quickapp.lovejade.cn/content/images/2020/06/----App_Clips-------.jpg" alt="小程序、快应用、App Clips 对比"></p>
+<p><a href="https://mp.weixin.qq.com/cgi-bin/wx" target="_blank" rel="external">小程序</a>，是一种新的开放能力，开发者可以快速地开发一个小程序。小程序可以在微信内被便捷地获取和传播，同时具有出色的使用体验（2016年 1 月 11 日，由微信之父张小龙首次提出；2016 年 9 月 21 日，正式开启内测；2017 年 1 月 9 日，第一批正式低调上线；如今量级已达数百万）。</p>
+<p><a href="https://quickapp.vivo.com.cn/tag/quickapp/" target="_blank" rel="external">快应用</a>，是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的快应用联盟联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。快应用具备传统APP完整的应用体验，无需安装、即点即用；覆盖 10 亿设备，与操作系统深度集成，探索新型应用场景（2018 年 3 月 20 日在北京推出“快应用”标准；2019 年末，各家厂商已上线快应用千余款）。</p>
+<p><a href="https://developer.apple.com/app-clips/" target="_blank" rel="external">App clips</a>，是 <a href="https://www.apple.com/ios/ios-14-preview/" target="_blank" rel="external">iOS 14</a> 的一个重要“卖点”，它提供了一种“即时使用”的方式，让用户可以在特定时间、特定场景，在不下载完整 app 的前提下，体验到你的 app 的核心功能。（2020 年 6 月 23  日 WWDC（Apple Worldwide Developers Conference）首次提出，许于 2020 年秋季正式发布）。</p>
+<p>除了以上差异，还需要补充说明的是：三者与“原生应用”的关系；苹果的 <a href="https://developer.apple.com/app-clips/" target="_blank" rel="external">App clips</a> 与原生应用，具有强依赖关系，而且一一对应，一个 App，只能对应一个 App Clip；<a href="https://developer.apple.com/app-clips/" target="_blank" rel="external">App clips</a> ，是用户快速访问和体验您的应用程序所提供内容的一种好方法，当用户安装了该应用，就不再推荐 App Clip 了。而小程序与<a href="https://quickapp.vivo.com.cn/tag/quickapp/" target="_blank" rel="external">快应用</a>，与原生就没什么必然关系，两者独立存在，甚至是竞争关系。双方都希望，用户可以在这里完成体验，而不是向用户推荐原生应用。</p>
+<p><img src="https://quickapp.lovejade.cn/content/images/2020/06/app-clips-invocation.jpg" alt="app-clips-invocation"></p>
+<p>为何有以上差异，主要是因为立场不同；Apple 公司的 iPhone 手机，执全球智能手机之牛耳，在设计他们的“小程序”，除了兼顾功能与体验外，必会考虑与原本应用的关系。所以 <code>App clips</code> 在触发时机（invocation），系统显示一个建议运行 app clip 的卡片（app clip card），点击按钮，即可运行 app clip；用户如果觉得体验好，可以下载原生应用；可以参见 <a href="https://developer.apple.com/app-clips/" target="_blank" rel="external">App Clips</a> 官方的说法：</p>
+<blockquote>
+<p>App Clips 是一个机会，可以快速展示您的应用程序的价值。为了使用户更容易获得完整的应用程序，可以在适当的时间在应用程序剪辑中提供一个下载选项。您甚至可以保留用户提供的任何信息，并将其无缝过渡到完整的应用程序。</p>
+</blockquote>
+<p>通过官方介绍，打开 App Clips，有以下几种方式：</p>
+<ul>
+<li>NFC 近场通信或者扫描二维码；</li>
+<li>点击 Siri Suggestions 基于位置的建议；</li>
+<li>点击 Maps app 里的连接；</li>
+<li>点击网站的 Smart App Banner；</li>
+<li>点击短信里别人分享的链接；</li>
+<li>最近使用的 app clips；</li>
+</ul>
+<p>对比，可以发现 App Clips，做到了需要时发现；但半年过去，在国内，鲜有遇到可用场景；而<code>小程序</code>随着大潮退去，社交分享已不再那么频繁；随处可见，是微信那无处不在的<code>小程序码</code>；另外小程序进一步拓展了分享至朋友圈、H5 拉起小程序等周边生态；由国内各厂商主导的快应用，没有微信那强大的社交应用，虽有<code>快应用码</code>，所见却是寥寥，更多则是手机的推送，以及网页中的 <code>DeepLink</code> 拉起。</p>
+<p>从各产品定位，结合背后的应用场景来看，<a href="https://quickapp.vivo.com.cn/tag/quickapp/" target="_blank" rel="external">快应用</a>的流量，就自带了点缺陷；因此，各厂商都衍生出各自的<code>快应用商店</code>：<strong>快应用中心</strong>，用它来作为中心分发，从而使得用户可以发现更多可用内容；而<code>小程序</code>就无此烦恼，也未做中心分发，只在小程序入口类目中，有附近的小程序、我的小程序，最近使用的小程序；从现有资料来看，App Clips 在这块并无更多设计。</p>
+<h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h2><ul>
+<li><a href="https://forum.lovejade.cn/d/17-quickapp" target="_blank" rel="external">如何高效开发高质量快应用（quickapp）？</a></li>
+<li><a href="https://forum.lovejade.cn/d/13-2021" target="_blank" rel="external">2021，深入了解什么是「快应用」？</a></li>
+<li><a href="https://forum.lovejade.cn/d/15-windowsmacos-adb" target="_blank" rel="external">如何在 Windows、MacOS 上安装 adb</a></li>
+</ul>
+<ul>
+<li><a href="https://quickapp.vivo.com.cn/how-to-configure-code-snippets-gracefully-in-quickapp-development/" target="_blank" rel="external">如何优雅地配置快应用的代码片段</a>；</li>
+</ul>
+	</div>
+		<a href="#reward-modal-container" aria-label="Open Reward" id="open-reward-modal-a">打赏</a>
+<div id="reward-modal-container">
+		<div class="modal-div">
+			<h1 class="reward-title-h1">倾情打赏</h1>
+			<a href="javascript:history.go(-1)" aria-label="Close Modal" class="close-modal-a"></a>
+			<p class="reward-thx-p">感谢您的支持，我将继续努力！</p>
+			<div class="reward-img-div">
+				<img class="reward-qr-img weichat active" src="//image.nicelinks.site/weixin_pay.jpg" alt="微信赞助">
+				<img class="reward-qr-img alipay" src="//image.nicelinks.site/zhifubao_pay.jpg" alt="支付宝赞助">
+			</div>
+
+			<div id="reward-jade-moudle" node-type="platform-choice" class="platform-choice clearfix">
+				<div class="platform-item">
+					<span node-type="check-platform" data-id="weichat" class="platform-radio-box platform-checked"></span>
+					<span class="platform-logo weichat"></span>
+				</div>
+				<div class="platform-item">
+					<span node-type="check-platform" data-id="alipay" class="platform-radio-box"></span>
+					<span class="platform-logo alipay"></span>
+				</div>
+			</div>
+
+			<div class="reward-text-div">扫码打赏，建议金额1-10元</div>
+			<p class="reward-tip-p">
+				提醒：打赏金额将直接进此方账号，无法退款，请您谨慎操作。
+			</p>
+		</div>
+</div>
+    <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
+  <hr>
+  <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 2rem">
+    <img style="width: 256px;min-width: 200px !important" src="https://image.nicelinks.site/qrcode_jqx.jpg" alt="静晴轩 ~ 晚晴幽草轩">
+    <div style="padding: 0  1rem 1.5rem 1rem;text-align: center;line-height: 1.5rem"><strong>个人微信公众号</strong>：<a href="https://www.jeffjade.com/?utm_source=jeffjade.com">晚晴幽草轩</a>；名字取自：“天意怜幽草，人间重晚晴”。<br>专注互联网开发（Web 大前端、快应用、小程序），以及分享优质网站、AI 应用、效率工具、心得感悟等内容。
+    </div>
+  </div>
+<div></div></div>
+    <div id="cc-copyright" class="cc-content">
+    <h3>文档信息</h3>
+    <ul>
+      <li>版权声明：知识共享署名-非商业性使用-禁止演绎<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">（创意共享3.0许可证）</a></li>
+      <li>文章出处：<a href="http://www.jeffjade.com" title="晚晴幽草轩">晚晴幽草轩</a></li>
+      <li>发表日期：<time datetime="2021-04-15T13:21:00.000Z" itemprop="datePublished">2021-04-15</time></li>
+      <li>社交媒体：
+        <a href="http://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+        <a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+        <a href="https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+        <a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+      </li>
+    </ul>
+</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/快应用/">快应用</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Share/">Share</a><a href="/tags/快应用/">快应用</a>
+  </div>
+
+</div>
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://www.jeffjade.com/2021/04/15/194-2021-learn-more-about-what-is-quickapp/" data-title="2021，深入了解什么是「快应用」？ | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+	</article>
+	<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2021/04/08/193-nicelinks-weekly-008/" title="优质网站同好者周刊（第 8 期）- 倾城之链">
+ <strong>下一篇：</strong><br> 
+ <span>优质网站同好者周刊（第 8 期）- 倾城之链
+</span>
+</a>
+</div>
+
+</nav>
+	<hr>
+<div id="gitalk-container"></div>
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何体验快应用？"><span class="toc-number">1.</span> <span class="toc-text">如何体验快应用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快应用特点"><span class="toc-number">2.</span> <span class="toc-text">快应用特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快应用发展历程"><span class="toc-number">3.</span> <span class="toc-text">快应用发展历程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为何开发快应用？"><span class="toc-number">4.</span> <span class="toc-text">为何开发快应用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快应用存在的价值"><span class="toc-number">5.</span> <span class="toc-text">快应用存在的价值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快应用目前现状"><span class="toc-number">6.</span> <span class="toc-text">快应用目前现状</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#覆盖分类"><span class="toc-number">6.1.</span> <span class="toc-text">覆盖分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用场景"><span class="toc-number">6.2.</span> <span class="toc-text">应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#入口场景"><span class="toc-number">6.3.</span> <span class="toc-text">入口场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何基于快应用盈利？"><span class="toc-number">7.</span> <span class="toc-text">如何基于快应用盈利？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与小程序、App-Clips-对比"><span class="toc-number">8.</span> <span class="toc-text">与小程序、App Clips 对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#您可能感兴趣的文章"><span class="toc-number">9.</span> <span class="toc-text">您可能感兴趣的文章</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="linkslist">
+	<p class="asidetitle">倾情款赠</p>
+	<div style="width:100%"><img style="width:100%" src="https://image.nicelinks.site/%E8%B5%9E%E8%B5%8F%E7%A0%81.jpeg?imageView2/1/w/800/h/800/interlace/1/ignore-error/1" alt="倾情捐赠"></div>
+</div>
+
+  <div class="wbfollow">
+	<p class="asidetitle">微博互粉</p>
+	<span class="sidebar-top-tip">亦可点击 Enter 键隐藏侧边栏</span>
+	<iframe width="100%" height="119" class="share_self" frameborder="0" scrolling="no" src="//widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3235949794&verifier=5c6bff53&colors=f0f0f0,fff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+</div>
+
+  <div class="widget-wrap linkslist">
+    <h3 class="widget-title asidetitle">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/04/15/194-2021-learn-more-about-what-is-quickapp/">2021，深入了解什么是「快应用」？</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/08/193-nicelinks-weekly-008/">优质网站同好者周刊（第 8 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/08/195-nicelinks-weekly-009/">优质网站同好者周刊（第 8 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/01/192-nicelinks-weekly-007/">优质网站同好者周刊（第 7 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/28/191-talk-about-suitable-forum/">关于“悠然宜想亭”的由来，以及未来</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/25/190-nicelinks-weekly-006/">优质网站同好者周刊（第 6 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/22/189-how-to-install-flarum-based-on-docker/">如何基于 Flarum 搭建一个优雅简洁论坛？</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/18/188-nicelinks-weekly-006/">优质网站同好者周刊（第 5 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/16/187-2021-the-age-of-awakening/">觉醒年代，2021 不容错过的好剧</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/11/186-nicelinks-weekly-004/">优质网站同好者周刊（第 4 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/186-nicelinks-weekly-003/">优质网站同好者周刊（第 3 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/01/186-nodejs-how-to-get-all-files-in-a-dir-sync/">Deno 如何同步获取指定目录下所有文件？</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/25/183-nicelinks-weekly-002/">优质网站同好者周刊（第 2 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/19/182-nicelinks-weekly-001/">优质网站同好者周刊（第 1 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/09/181-write-on-the-road-of-life/">写在人生边上之“三十而立”</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="categorieslist">
+	<p class="asidetitle">云轩分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>56</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Health/" title="Health">Health<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Program/" title="Program">Program<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Read/" title="Read">Read<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Share/" title="Share">Share<sup>27</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Thought/" title="Thought">Thought<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Toss/" title="Toss">Toss<sup>26</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>12</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/快应用/" title="快应用">快应用<sup>8</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">广而告之</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="https://nicelinks.site?utm_source=jeffjade.com&pid=sidebar-advertisement" target="_blank" title="倾城之链">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg" alt="倾城之链 | 小程序码">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">最新作品</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="http://nicelinks.site/?utm_source=jeffjade.com&pid=aside" target="_blank" title="倾城之链">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/nicelinks-site.jpg" alt="倾城之链">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">轩站热度</p>
+  <!-- 
+    <font id="run_time_long"></font><br>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span style='color:purple' id="busuanzi_value_site_pv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_site_uv">
+      本站访客人数 <span style='color:purple' id="busuanzi_value_site_uv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量 <span style='color:purple' id="busuanzi_value_page_pv"></span> 次
+    </span>
+   -->
+  <div id="clustrmaps-count"></div>
+  <p style="text-align:center">( Start counting from 07 / 13 / 2017 )</p>
+</div>
+
+  <div class="tagslist">
+	<p class="asidetitle">云轩标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Share/" title="Share">Share<sup>75</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thought/" title="Thought">Thought<sup>41</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Toss/" title="Toss">Toss<sup>33</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>31</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>30</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>19</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">云轩关注</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.ruanyifeng.com/blog/?utm_source=jeffjade.com" target="_blank" title="阮一峰的网络日志">阮一峰的网络日志</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://blog.codingnow.com/?utm_source=jeffjade.com" target="_blank" title="云风Blog">云风Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.williamlong.info/?utm_source=jeffjade.com" target="_blank" title="月光博客">月光博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://coolshell.cn/?utm_source=jeffjade.com" target="_blank" title="酷壳－陈浩">酷壳－陈浩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.zhangxinxu.com/?utm_source=jeffjade.com" target="_blank" title="鑫空间-鑫生活">鑫空间-鑫生活</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://nice.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静晴轩别苑">静晴轩别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://pizida.com/?utm_source=jeffjade.com" target="_blank" title="痞子达的小站">痞子达的小站</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="天意人间舫">天意人间舫</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.cnblogs.com/jadeboy/?utm_source=jeffjade.com" target="_blank" title="云轩奕鹤">云轩奕鹤</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://refined-x.com/?utm_source=jeffjade.com" target="_blank" title="前端路上">前端路上</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://creatorsdaily.com?utm_source=jeffjade.com" target="_blank" title="创造者日报">创造者日报</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://calpa.me/?utm_source=jeffjade.com" target="_blank" title="Calpa&#39;s Blog">Calpa&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://istarvip.cn/links.html/?utm_source=jeffjade.com" target="_blank" title="猿码阁">猿码阁</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.nihaoshijie.com.cn/?utm_source=jeffjade.com" target="_blank" title="吕小鸣">吕小鸣</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://mayanbin.com/?utm_source=jeffjade.com" target="_blank" title="饮冰先生的博客">饮冰先生的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://konghy.cn/?utm_source=jeffjade.com" target="_blank" title="矿世的忧伤">矿世的忧伤</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://dbarobin.com/blogroll/?utm_source=jeffjade.com" target="_blank" title="温国兵的随想录">温国兵的随想录</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jeffjade.com/nicelinks/#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">好书推荐</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="浪潮之巅">浪潮之巅</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="平凡的世界">平凡的世界</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A82" target="_blank" title="代码大全2">代码大全2</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 追求卓越，成功就会在不经意间 追上你！ <br>
+			As you think, so shall you become. </p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="https://nicelinks.site/redirect?url=https://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="mailto:yunjeff@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+		
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://www.zhihu.com/people/yang-qiong-pu" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021
+		
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+		
+		</p>
+</div></footer>
+    <script src="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js"></script>
+
+<script type="text/javascript">
+echo.init({
+  offset: 200,
+  throttle: 250,
+  unload: false,
+  callback: function (element, op) {}
+});
+
+$(document).ready(function(){
+  console.log('Welcome To %c晚晴幽草轩','font-size:2.113em;color: #2edfa3');
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  var openAside = function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  }
+  var closeAside = function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  }
+  c.click(openAside);
+  o.click(closeAside);
+
+  document.onkeydown = function(e){
+    // 兼容FF和IE和Opera
+    var theEvent = e || window.event;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    var isInputTextarea = document.activeElement.id === 'search' || document.activeElement.nodeName === "TEXTAREA"
+    if (code === 13 && !isInputTextarea) {
+        if( o.css('display') === 'none'){
+          openAside()
+        }else{
+          closeAside()
+        }
+        return false;
+    }
+    return true;
+  }
+
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          // close auto-close sidebar @17-11-07
+          // c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="//s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"><i class="fa fa-weixin"></i></a>',
+  '<a href="//service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});
+</script>
+
+
+
+
+
+<link href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.6/css/jquery.fancybox.min.css" rel="stylesheet">
+<script async src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.6/js/jquery.fancybox.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      var srcVal = (this.src.indexOf('blank.gif') < 0) ? this.src : $(this).attr('data-echo')
+      $(this).wrap('<a href="' + srcVal + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+
+  // 处理打赏切换相关逻辑(@17-05-30)
+  $('#reward-jade-moudle .platform-radio-box').on('click', function (event) {
+    var currentChoiceId = event.currentTarget.dataset.id
+    $(".reward-img-div .reward-qr-img").removeClass('active')
+    $(".reward-img-div ." + currentChoiceId).addClass('active')
+
+    $(".platform-radio-box").removeClass('platform-checked')
+    event.currentTarget.className = "platform-radio-box platform-checked"
+  });
+});
+</script>
+
+
+<!-- Analytics Begin -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-67901984-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-67901984-1');
+</script>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd0ed9bb72df3b2b32bdd2274981a7d07' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<!-- <script src="/js/totop.js"></script> -->
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+<!-- MathJax End -->
+
+<!-- Move totop.js From totop.ejs To Here@0309 -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gitalk/1.2.2/gitalk.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+(function($) {
+  if (!Object.assign) {
+    Object.defineProperty(Object, "assign", {
+      enumerable: false,
+      configurable: true,
+      writable: true,
+      value: function(target, firstSource) {
+        "use strict";
+        if (target === undefined || target === null)
+          throw new TypeError("Cannot convert first argument to object");
+        var to = Object(target);
+        for (var i = 1; i < arguments.length; i++) {
+          var nextSource = arguments[i];
+          if (nextSource === undefined || nextSource === null) continue;
+          var keysArray = Object.keys(Object(nextSource));
+          for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+            var nextKey = keysArray[nextIndex];
+            var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+            if (desc !== undefined && desc.enumerable) to[nextKey] = nextSource[nextKey];
+          }
+        }
+        return to;
+      }
+    });
+  }
+
+  if (document.getElementById('gitalk-container')) {
+    var gitalk = new Gitalk({
+      clientID: '4bc2d1424c7939471ad4',
+      clientSecret: 'b3dc888873f473405f79f7d9394888478ba55ca4',
+      repo: 'jadeblog-backups',
+      owner: 'nicejade',
+      admin: ['nicejade'],
+      id: md5(location.pathname),
+      distractionFreeMode: false
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  var clustrmapsCount = document.getElementById('clustrmaps-count')
+  if (clustrmapsCount) {
+    var clustrmapsScript = document.createElement('script')
+    clustrmapsScript.type = 'text/javascript'
+    clustrmapsScript.id = 'clustrmaps'
+    clustrmapsScript.src = '//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a'
+    clustrmapsCount.appendChild(clustrmapsScript)
+  }
+
+  var wbScript = document.createElement('script')
+  wbScript.type = 'text/javascript'
+  wbScript.async = true
+  wbScript.charset = "utf-8"
+  wbScript.src = "//tjs.sjs.sinajs.cn/open/api/js/wb.js"
+  document.body.appendChild(wbScript)
+
+  // 为 Baidu 设置自动推送@2018-08-08
+  
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.async = true;
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.async = true;
+      bp.src = '//push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  
+
+  // When to show the scroll link
+  // higher number = scroll link appears further down the page
+  var upperLimit = 1000;
+
+  // Our scroll link element
+  var scrollElem = $('#totop');
+
+  // Scroll to top speed
+  var scrollSpeed = 500;
+
+  // Show and hide the scroll to top link based on scroll position
+  scrollElem.hide();
+  $(window).scroll(function () {
+      var scrollTop = $(document).scrollTop();
+      if ( scrollTop > upperLimit ) {
+          $(scrollElem).stop().fadeTo(300, 1); // fade back in
+      }else{
+          $(scrollElem).stop().fadeTo(300, 0); // fade out
+      }
+  });
+
+  // Scroll to top animation on click
+  $(scrollElem).click(function(){
+      $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+  });
+})(jQuery);
+</script>
+
+<!-- Inject service-worker@2018-01-09 -->
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js", {scope: '/'})
+    .then(registration => console.log('SW Registration Success！Scope: ', registration.scope))
+    .catch(err => console.log('SW Registration Failed! Error: ', err));
+}
+</script>
+
+<!-- Inject Anchor.js @2018-01-14 -->
+<script type="text/javascript">
+function async(u, c) {
+  var d = document,
+    t = 'script',
+    o = d.createElement(t),
+    s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+
+async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js",function(){
+  anchors.options = {
+    visible: 'hover',
+    placement: 'right'
+  }
+  anchors.add('#post h2, #post h3, #post h4');
+  anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+})
+</script>
+  </body>
