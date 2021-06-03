@@ -106,6 +106,57 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2014/12/22/2014-12-22-lua-weaktable/" class="title=&quot;Lua" table itemprop="url">Lua table之弱引用</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2014-12-22T04:00:00.000Z" itemprop="datePublished"> 发表于 2014-12-22</time>
+
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>Lua采用了基于垃圾收集的内存管理机制，因此对于程序员来说，在很多时候内存问题都将不再困扰他们。然而任何垃圾收集器都不是万能的，在有些特殊情况下，垃圾收集器是无法准确的判断是否应该将当前对象清理。这样就极有可能导致很多垃圾对象无法被释放。为了解决这一问题，就需要Lua的开发者予以一定程度上的配合。比如，当某个table对象被存放在容器中，而容器的外部不再有任何变量引用该对象，对于这样的对象，Lua的垃圾收集器是不会清理的，因为容器对象仍然引用着他。如果此时针对该容器的应用仅限于查找，而不是遍历的话，那么该对象将永远不会被用到。事实上，对于这样的对象我们是希望Lua的垃圾收集器可以将其清理掉的。见如下代码:</p>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2014/12/22/2014-12-22-lua-weaktable/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Program/">Program</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Lua/">Lua</a>
+  </div>
+
+</div>
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+    </article>
+
+  <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2014/12/22/2014-12-22-gitmemo/" class="title=&quot;Git常用命令备忘&quot;" itemprop="url">Git常用命令备忘</a>
     
   </h1>
@@ -388,6 +439,10 @@
       <ul>
         
           <li>
+            <a href="/2021/06/03/202-nicelinks-weekly-016/">优质网站同好者周刊（第 16 期）- 倾城之链</a>
+          </li>
+        
+          <li>
             <a href="/2021/05/27/201-nicelinks-weekly-015/">优质网站同好者周刊（第 15 期）- 倾城之链</a>
           </li>
         
@@ -443,10 +498,6 @@
             <a href="/2021/03/18/188-nicelinks-weekly-006/">优质网站同好者周刊（第 5 期）- 倾城之链</a>
           </li>
         
-          <li>
-            <a href="/2021/03/16/187-2021-the-age-of-awakening/">觉醒年代，2021 不容错过的好剧</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -496,7 +547,7 @@
 		  
 		
 		  
-			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>18</sup></a></li>
+			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>19</sup></a></li>
 		  
 		
 		  
@@ -547,7 +598,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>81</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>82</sup></a></li>
 			
 		
 			
@@ -567,7 +618,7 @@
 			
 		
 			
-				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>25</sup></a></li>
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>26</sup></a></li>
 			
 		
 			
