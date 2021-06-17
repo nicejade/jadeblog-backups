@@ -1,3 +1,4 @@
+https://www.jeffjade.com/2021/06/17/204-nicelinks-weekly-018/
 https://www.jeffjade.com/2021/06/10/203-nicelinks-weekly-017/
 https://www.jeffjade.com/2021/06/03/202-nicelinks-weekly-016/
 https://www.jeffjade.com/2021/05/27/201-nicelinks-weekly-015/
@@ -97,4 +98,3 @@ https://www.jeffjade.com/2016/05/22/108-Listary-Everything-Wox-Launch/
 https://www.jeffjade.com/2016/05/14/106-front-end-learning-record/
 https://www.jeffjade.com/2016/05/08/106-vue-es6-jade-scss-webpack-gulp/
 https://www.jeffjade.com/2016/04/16/105-talk-about-chuanqidazhanggui/
-https://www.jeffjade.com/2016/03/30/104-front-end-tutorial/
