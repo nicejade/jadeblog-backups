@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-07-15T15:12:58.464Z</updated>
+  <updated>2021-07-25T10:47:41.861Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -16,11 +16,122 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>优质网站同好者周刊（第 23 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/07/23/209-nicelinks-weekly-023/"/>
+    <id>https://www.jeffjade.com/2021/07/23/209-nicelinks-weekly-023/</id>
+    <published>2021-07-23T13:21:00.000Z</published>
+    <updated>2021-07-25T10:47:41.861Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
+<a id="more"></a>
+<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
+<h2 id="We-分析"><a href="#We-分析" class="headerlink" title="We 分析"></a><a href="https://nicelinks.site/post/60f81b5581b2dc066ea4bd75" target="_blank" rel="external">We 分析</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/微信" target="_blank" rel="external"><code>微信</code></a> · <a href="https://nicelinks.site/tags/分析" target="_blank" rel="external"><code>分析</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
+<blockquote>
+<p>We 分析，微信官方推出的数据分析平台，提供更健全的数据分析工具。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/wedata.weixin.qq.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - We 分析"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://wedata.weixin.qq.com/" target="_blank" rel="external">We 分析</a> 是微信官方提供的辅助数据分析能力。开通后，你可在小程序调用官方借出库接口进行数据接入，并进行数据事件管理。完成接入后，你可对小程序进行深入的数据分析，了解经营状况，寻找业务增长。主要功能：数据事件管理、数据分析工具、多维数据看板。</p>
+<ol>
+<li><strong>更全面深入的数据看板：</strong> 进一步挖掘小程序访问/支付场景，梳理整合流量渠道，提供更细粒度的访问/支付数据，包括但不限于小程序订阅消息下发/曝光/点击/退订情况，长按识别二维码访问小程序的具体渠道(朋友圈/群聊/H5链接)等。</li>
+<li><strong>更专业细致的分析功能：</strong> 陆续推出“事件分析”，“漏斗分析”，“留存分析”，“路径分析”等数据分析功能，支持商家个性化、精细化的分析需求，全方位洞察运营现状，辅助经营决策。</li>
+<li><strong>行业定制经营分析看板：</strong> 对不同行业的特色，推出定制化的经营分析看板。如对电商零售行业，会围绕“流量”、“商品”、“客户”3大维度，结合“曝光-访问-加购-下单”转化漏斗，推出电商行业数据看板及经营诊断，帮助商家快速了解运营现状。</li>
+<li><strong>微信域的数据画像洞察：</strong> 将在保护用户隐私的前提下，提供用户洞察工具，开放行业参考数据，帮助商家更好了解自身经营现状，洞察用户；并联动微信内的用户运营与营销工具，提供应用出口，帮助商家更好的精细化运营。</li>
+</ol>
+<p>── 出自<a href="https://nicelinks.site/post/60f81b5581b2dc066ea4bd75" target="_blank" rel="external">倾城之链 - We 分析</a></p>
+<h2 id="Unity-Real-Time-Development-Platform"><a href="#Unity-Real-Time-Development-Platform" class="headerlink" title="Unity Real-Time Development Platform"></a><a href="https://nicelinks.site/post/60f8020181b2dc066ea4bd73" target="_blank" rel="external">Unity Real-Time Development Platform</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/可视化" target="_blank" rel="external"><code>可视化</code></a> · <a href="https://nicelinks.site/tags/游戏" target="_blank" rel="external"><code>游戏</code></a> · <a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a></p>
+<p><strong>关键字</strong>：实时开发平台、实时开发, VR 可视化, AR 可视化, 3D 可视化, 3D 平台, 2D 平台, VR 平台, AR 平台, 3D 实时, AR 实时, 2D 开发、3D 开发、AR 开发、VR 开发, real-time development platform, real-time development, Vr visualization, AR visualization, 3d visualization, 3d platform, 2d platform, Vr platform, AR platform, 3d real-time, AR real-time, 2d Development, 3d Development, AR Development, VR Development</p>
+<blockquote>
+<p>Make real-time 3D projects for Games, Animation, Film, Automotive, Transportation, Architecture, Engineering, Manufacturing &amp; Construction. Visualize &amp; simulate  industrial projects in 3D, AR, &amp; VR.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/unity.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Unity Real-Time Development Platform"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://unity.com/" target="_blank" rel="external">Unity</a>，制作交互式实时内容的领先平台；您可以基于<a href="https://nicelinks.site/redirect?url=https://unity.com/" target="_blank" rel="external">Unity</a>， 快速构建 2D、3D 和 VR 游戏，制作面向动画、电影、汽车、交通运输、建筑、工程、制造和施工领域的实时 3D 项目。从美术师工具到常态化运营，将愿景化为现实，<a href="https://nicelinks.site/redirect?url=https://unity.com/" target="_blank" rel="external">Unity</a> 为您提供链路工具与服务。</p>
+<ul>
+<li><strong>游戏</strong>： Unity 不仅仅是一个引擎 - 查找用于创建和运营游戏的解决方案；</li>
+<li><strong>汽车、运输与制造</strong>：运用实时3D技术在快速变化的行业局势中夺得竞争优势；</li>
+<li><strong>电影与动画</strong>：为电影和动画项目提供前所未有的艺术创作自由与更快的制作速度；</li>
+<li><strong>建筑、工程与施工</strong>：为大规模的现实生活应用情形创建沉浸式3D模型体验；</li>
+</ul>
+<p><a href="https://nicelinks.site/redirect?url=https://unity.com/" target="_blank" rel="external">Unity</a> 不仅仅是世界上有名的实时开发平台，它还是一个可以帮助您获得成功的强大生态系统。借助 <a href="https://nicelinks.site/redirect?url=https://unity.com/" target="_blank" rel="external">Unity</a>，可实现一次构建，全局部署，覆盖逾 25 个领先平台和技术上的大规模受众。如果您想了解更多，可参见：<a href="https://nicelinks.site/redirect?url=https://blog.unity.com/" target="_blank" rel="external">Unity 官方博客</a>。</p>
+<p>── 出自<a href="https://nicelinks.site/post/60f8020181b2dc066ea4bd73" target="_blank" rel="external">倾城之链 - Unity Real-Time Development Platform</a></p>
+<h2 id="Glass-UI-The-definitive-CSS-UI-library-for-glassmorphism"><a href="#Glass-UI-The-definitive-CSS-UI-library-for-glassmorphism" class="headerlink" title="Glass UI - The definitive CSS UI library for glassmorphism"></a><a href="https://nicelinks.site/post/60f6bb7181b2dc066ea4bd71" target="_blank" rel="external">Glass UI - The definitive CSS UI library for glassmorphism</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/CSS" target="_blank" rel="external"><code>CSS</code></a> · <a href="https://nicelinks.site/tags/Web开发" target="_blank" rel="external"><code>Web开发</code></a> · <a href="https://nicelinks.site/tags/前端开发" target="_blank" rel="external"><code>前端开发</code></a></p>
+<blockquote>
+<p>A modern CSS UI library based on the glassmorphism design specifications that will help you quickly design and build websites and applications.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/ui.glass.png?x-oss-process=style/png2jpg" alt="倾城之链 - Glass UI - The definitive CSS UI library for glassmorphism"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://ui.glass/" target="_blank" rel="external">Glass UI</a> 基于玻璃形态设计原则的现代 CSS UI 库（正在开发中），可帮助您快速设计和构建漂亮的网站和应用程序。这对 Web 前端开发比较有用，您可以通过免费的<a href="https://nicelinks.site/redirect?url=https://ui.glass/generator/" target="_blank" rel="external">毛玻璃 CSS 生成器</a>，从而快速设计和自定义样式属性；它支持更换背景类型（图像、渐变、纯色）、卡片颜色、模糊值（Blur value）、不透明度（Opacity）、饱和度（Saturation）等等。</p>
+<p>── 出自<a href="https://nicelinks.site/post/60f6bb7181b2dc066ea4bd71" target="_blank" rel="external">倾城之链 - Glass UI - The definitive CSS UI library for glassmorphism</a></p>
+<h2 id="The-mobile-measurement-company-Adjust"><a href="#The-mobile-measurement-company-Adjust" class="headerlink" title=" The mobile measurement company | Adjust"></a><a href="https://nicelinks.site/post/60f5744181b2dc066ea4bd6f" target="_blank" rel="external"> The mobile measurement company | Adjust</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/营销" target="_blank" rel="external"><code>营销</code></a> · <a href="https://nicelinks.site/tags/自动化" target="_blank" rel="external"><code>自动化</code></a> · <a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a></p>
+<blockquote>
+<p>Mobile Measurement made easy: Adjust unifies all your marketing activities into one powerful platform, giving you the insights you need to scale your business.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.adjust.com.png?x-oss-process=style/png2jpg" alt="倾城之链 -  The mobile measurement company | Adjust"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 平台包括测量、网络安全、欺诈预防和活动<strong>自动化</strong>产品。它使营销变得更简单、更智能、更安全，以增强数据驱动型专业人员的能力。通过 <a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a>，可以发现每小时的数据趋势，获得有关用户偏好的见解，以推动增长并提供出色的应用内体验。该反欺诈解决方案使用行业认可的、透明的、可定制的和准确的方法，可保证数据质量并保护广告预算。</p>
+<p><a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 来自德国，2012 年在柏林的一间小公寓成立，2015 年实现营业独立，至今已在全球 15 个办公室拥有数百名员工，并且有数千家多家渠道合作伙伴，每天汇聚数百 TB 的数据。2018 年末，Adjust 完成了对数据整合平台 Acquired.io 的收购。2019 年初，<a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 又收购了网络安全与人工智能公司 Unbotify。前者可以帮助 <a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 减轻广告主清理、重组数据的工作压力，通过多渠道市场活动自动化提升用户体验。后者则可以通过检测应用内的自然用户流动路径，区分正常用户与机器人或者人工刷单这类作弊用户，以此应对应用内的外挂机器人。</p>
+<p>此外，<a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 会提供给用户一个整合的数据集，随后用户可自行定义销售规则，如定义投资回报率（ROI）或转化率，以此来适应自身需求。Adjust 通过集成客户 APP 上的开源 SDK，可以使应用营销人员了解并分析用户行为，进而规划未来的营销走向。除了提供监测服务之外，<a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 还提供防作弊套件服务，以此来识别数据造假。</p>
+<p>从 <a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 官方介绍来看，有以下优点：隐私至上、监控所有归因、跟踪 KPI、分析和细分用户、预防欺诈、导出用户级数据等。其使命是：为了维护广告主的利益，将反欺诈进行到底。</p>
+<p>── 出自<a href="https://nicelinks.site/post/60f5744181b2dc066ea4bd6f" target="_blank" rel="external">倾城之链 -  The mobile measurement company | Adjust</a></p>
+<h2 id="微信读书-正版书籍小说免费阅读"><a href="#微信读书-正版书籍小说免费阅读" class="headerlink" title="微信读书-正版书籍小说免费阅读"></a><a href="https://nicelinks.site/post/60f3e9e281b2dc066ea4bd6a" target="_blank" rel="external">微信读书-正版书籍小说免费阅读</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/发现" target="_blank" rel="external"><code>发现</code></a> · <a href="https://nicelinks.site/tags/阅读" target="_blank" rel="external"><code>阅读</code></a> · <a href="https://nicelinks.site/tags/微信" target="_blank" rel="external"><code>微信</code></a></p>
+<p><strong>关键字</strong>：微信读书, 微信读书电脑版, 小说, 小说排行榜, 言情小说, 玄幻小说, 免费小说</p>
+<blockquote>
+<p>微信读书提供海量正版书籍、小说、漫画、公众号、听书，多设备同步实现跨屏阅读。与微信好友一起发现更多精品好书，随时交流感想，让阅读不再孤独。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/weread.qq.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 微信读书-正版书籍小说免费阅读"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://weread.qq.com/" target="_blank" rel="external">微信读书</a>网页版，通过微信扫码登录，即可开启在 Web 端阅读；网页版除了提供读书外，还提供有「传书到手机」的功能。网页版阅读，也能方便的调整字体、设置背景、查阅目录、选中☑️进行操作（如复制、划线、写想法、查询等操作）；相比于<code>微信读书</code>应用，其网页版因为电脑屏幕更大，在某些场景下，也有相应优势；对读书感兴趣的朋友可以了解下。</p>
+<p>── 出自<a href="https://nicelinks.site/post/60f3e9e281b2dc066ea4bd6a" target="_blank" rel="external">倾城之链 - 微信读书-正版书籍小说免费阅读</a></p>
+<h2 id="番喜生活-生活常用网址导航！"><a href="#番喜生活-生活常用网址导航！" class="headerlink" title="番喜生活|生活常用网址导航！"></a><a href="https://nicelinks.site/post/60f3d29f81b2dc066ea4bd68" target="_blank" rel="external">番喜生活|生活常用网址导航！</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/互联网" target="_blank" rel="external"><code>互联网</code></a> · <a href="https://nicelinks.site/tags/导航" target="_blank" rel="external"><code>导航</code></a></p>
+<p><strong>关键字</strong>：番喜, 番喜生活, VIP电影, 实用网址, 高清免费电影, 老师常用网址, 免费PPT模板, 高清电影, 最新网址发布页, ppt模板, 精品软件, 网址导航, 网盘搜索, 镜像谷歌, 免费资源</p>
+<blockquote>
+<p>番喜生活-致力于提供优质的网址导航，围绕生活中的购物，旅游，办公，电影，音乐，求职，简历，PPT，资讯，创业，等行业，更高效的网上冲浪场景。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.fxsh.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 番喜生活|生活常用网址导航！"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.fxsh.com/" target="_blank" rel="external">番喜生活</a>，一款基于 <a href="https://nicelinks.site/post/602e4a576eaf2a7660805af1" target="_blank" rel="external">WordPress</a> 搭建，提供优质的网址（生活常用）导航网站，围绕生活中的购物，旅游，办公，电影，音乐，求职，简历，PPT，资讯，创业，等行业，让人们可以更高效的网上冲浪。</p>
+<p>── 出自<a href="https://nicelinks.site/post/60f3d29f81b2dc066ea4bd68" target="_blank" rel="external">倾城之链 - 番喜生活|生活常用网址导航！</a></p>
+<p>对倾城之链感兴趣的朋友，可通过 Web，<a href="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" target="_blank" rel="external">小程序</a>，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
+<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
+
+<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>每个人都会经过这个阶段，见到一座山，就想知道山后面是什么。我很想告诉他，可能翻过山后面，你会发现没什么特别。回望之下，可能会觉得这一边更好。但我知道他不会相信，像他这种人，没亲眼看到是不会甘心的。── 王家卫《东邪西毒》</p>
+<blockquote>
+<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
+</blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 22 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 21 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/07/01/206-nicelinks-weekly-020/">优质网站同好者周刊（第 20 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/06/24/205-nicelinks-weekly-019/">优质网站同好者周刊（第 19 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/06/17/204-nicelinks-weekly-018/">优质网站同好者周刊（第 18 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/06/10/203-nicelinks-weekly-017/">优质网站同好者周刊（第 17 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
+    
+    </summary>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>优质网站同好者周刊（第 22 期）- 倾城之链</title>
     <link href="https://www.jeffjade.com/2021/07/15/208-nicelinks-weekly-022/"/>
     <id>https://www.jeffjade.com/2021/07/15/208-nicelinks-weekly-022/</id>
     <published>2021-07-15T13:21:00.000Z</published>
-    <updated>2021-07-15T15:12:58.464Z</updated>
+    <updated>2021-07-25T10:46:24.894Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
 <a id="more"></a>
@@ -2177,85 +2288,6 @@
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何基于 Flarum 搭建一个优雅简洁论坛？</title>
-    <link href="https://www.jeffjade.com/2021/03/22/189-how-to-install-flarum-based-on-docker/"/>
-    <id>https://www.jeffjade.com/2021/03/22/189-how-to-install-flarum-based-on-docker/</id>
-    <published>2021-03-22T14:22:00.000Z</published>
-    <updated>2021-03-29T15:21:29.473Z</updated>
-    
-    <content type="html"><![CDATA[<p>如果，您有了解 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a>，或者使用 <a href="https://nicelinks.site/post/5c9a2064df13c46502a09026" target="_blank" rel="external">Wappalyzer</a> 工具，那您应该很容易了解到，前段时间，吾所搭建的<a href="https://forum.lovejade.cn/" target="_blank" rel="external"><strong>悠然宜想亭</strong></a>社区，是基于 <code>Flarum</code> 来搭建；在这过程中，有过一番折腾；此篇文章，旨在与感兴趣的朋友们，分享下：”如何基于 Flarum，快速 搭建一个优雅简洁论坛”。</p>
-<a id="more"></a>
-<p><strong>微注</strong>：本文首发于<a href="https://forum.lovejade.cn/d/2-flarum" target="_blank" rel="external">悠然宜想亭</a>──是基于 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a> 所搭建的现代化社区，旨在营造温润、宽厚、互助的现代化社区；您可以在这里探讨技术、寻求创意、分享美食、聊聊工作、发布科普等等，甚至是为喜欢的作品打 Call、推广……欲了解更多，可以参见<a href="https://forum.lovejade.cn/d/1" target="_blank" rel="external">关于“悠然宜想亭”的由来，以及未来</a>、<a href="https://forum.lovejade.cn/d/8-tag" target="_blank" rel="external">悠然宜想亭，各 Tag 的设定说明</a>等文章。</p>
-<p><img src="https://oss.nicelinks.site/flarum.org.png?x-oss-process=style/png2jpg" alt="Flarum | 一款优雅简洁论坛软件"></p>
-<p>在 <a href="https://docs.flarum.org/install.html" target="_blank" rel="external">Flarum Installation</a> 文档中，颇为清晰的说明 <code>Flarum</code> 该如何安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer create-project flarum/flarum . --stability=beta</div></pre></td></tr></table></figure>
-<p>但实际操作却有着很多问题；如安装 composer，升级 PHP（PHP 须是 7.2.9+）等等；就升级 PHP  这一项，在 Mac 和两台 Linux 服务器上，都根据 stackoverflow 上的回答，分别做了尝试，却仍有其他各种问题；在耗了蛮长时间后，突然想到，<code>Flarum</code> 这么好的工具，肯定有被集成至 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a> 呀，在 <a href="https://nicelinks.site/post/6049dab45f9af714fe21dcc6" target="_blank" rel="external">Docker Hub</a> 一经检索，果然存在——<a href="https://github.com/mondediefr/docker-flarum" target="_blank" rel="external">mondediefr/docker-flarum</a>：💬 🐳 Docker image of Flarum。按照 README 进行操作，很快就搭建完成，并发布上线；在此，跟大家分享下具体操作：</p>
-<ol start="0">
-<li>基于如下方法搭建，须要一个前提，即：安装 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a> 和 docker-compose；</li>
-<li>建议 <code>docker-compose.yml</code>，并做如下配置：</li>
-</ol>
-<figure class="highlight docker"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">version: <span class="string">"2"</span></div><div class="line"></div><div class="line">services:</div><div class="line">  flarum:</div><div class="line">    image: mondedie/flarum:stable</div><div class="line">    container_name: flarum</div><div class="line">    env_file:</div><div class="line">      - ./flarum/flarum.<span class="keyword">env</span></div><div class="line">    volumes:</div><div class="line">      - ./flarum/assets:/flarum/app/public/assets</div><div class="line">      - ./flarum/extensions:/flarum/app/extensions</div><div class="line">      - ./flarum/nginx:/etc/nginx/flarum</div><div class="line">    ports:</div><div class="line">      - <span class="number">8888</span>:<span class="number">8888</span></div><div class="line">    depends_on:</div><div class="line">      - mariadb</div><div class="line"></div><div class="line">  mariadb:</div><div class="line">    image: mariadb:<span class="number">10.5</span></div><div class="line">    container_name: mariadb</div><div class="line">    environment:</div><div class="line">      - MYSQL_ROOT_PASSWORD=xxxxxxxxxxx</div><div class="line">      - MYSQL_DATABASE=flarum</div><div class="line">      - MYSQL_USER=flarum</div><div class="line">      - MYSQL_PASSWORD=xxxxxxxxxxx</div><div class="line">    volumes:</div><div class="line">      - ./mysql/db:/var/lib/mysql</div></pre></td></tr></table></figure>
-<ol start="2">
-<li>建立本地目录 <code>flarum</code> 及文件 <code>flarum/flarum.dev</code>，并做配置：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># vim ./flarum/flarum.env</span></div><div class="line"></div><div class="line">FORUM_URL=https://forum.lovejade.cn</div><div class="line"></div><div class="line"><span class="comment"># Database configuration</span></div><div class="line">DB_HOST=mariadb</div><div class="line">DB_NAME=flarum</div><div class="line">DB_USER=flarum</div><div class="line">DB_PASS=xxxxxxxxxxx</div><div class="line">DB_PREF=flarum_</div><div class="line">DB_PORT=3306</div><div class="line"></div><div class="line"><span class="comment"># User admin flarum (environment variable for first installation)</span></div><div class="line"><span class="comment"># /!\ admin password must contain at least 8 characters /!\</span></div><div class="line">FLARUM_ADMIN_USER=admin</div><div class="line">FLARUM_ADMIN_PASS=xxxxxxxxxxx</div><div class="line">FLARUM_ADMIN_MAIL=xyz@xyz.com</div><div class="line">FLARUM_TITLE=<span class="string">"悠然宜想亭"</span></div></pre></td></tr></table></figure>
-<ol start="3">
-<li>基于 <code>docker-compse</code> 运行命令，启动 Flarum 服务：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker-compse up <span class="_">-d</span></div></pre></td></tr></table></figure>
-<ol start="4">
-<li>解析域名，配置 Nginx 反代 Flarum 服务（设定为：8888 端口）：<br>解析域名，这就不在多说了，在域名商处，对想要的域名，添加 A，指定服务器 IP 即可，非常简单；至于 Nginx 配置，也比较简单，即在 <code>nginx/conf.d</code> 目录下，添加了 <code>forum-lovejade-cn.conf</code> 文件，并做了简单配置即可：</li>
-</ol>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">upstream</span> forum &#123;</div><div class="line">    <span class="attribute">server</span> <span class="number">127.0.0.1:8888</span>;</div><div class="line">    <span class="attribute">keepalive</span> <span class="number">8</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">    <span class="attribute">listen</span> <span class="number">443</span>;</div><div class="line">    <span class="attribute">ssl</span> <span class="literal">on</span>;</div><div class="line">    <span class="attribute">ssl_certificate</span> 1_forum.xyz_bundle.crt;</div><div class="line">    <span class="attribute">ssl_certificate_key</span> 2_forum.xyz.key;</div><div class="line">    <span class="attribute">ssl_session_timeout</span> <span class="number">5m</span>;</div><div class="line">    <span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>; <span class="comment">#按照这个协议配置</span></div><div class="line">    <span class="attribute">ssl_ciphers</span> ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;<span class="comment">#按照这个套件配置</span></div><div class="line">    <span class="attribute">ssl_prefer_server_ciphers</span> <span class="literal">on</span>;</div><div class="line">    <span class="attribute">server_name</span> forum.lovejade.cn;</div><div class="line"></div><div class="line">    <span class="attribute">location</span> / &#123;</div><div class="line">        <span class="attribute">proxy_set_header</span> Host <span class="variable">$http_host</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Real-IP <span class="variable">$remote_addr</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Forwarded-Proto <span class="variable">$scheme</span>;</div><div class="line">        <span class="attribute">proxy_pass</span> http://forum;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>需要补充说明的是，在 <code>nginx/nginx.conf</code> 文件，原本已经添加 <code>include</code> 命令（如下），因此上面说在 <code>nginx/conf.d</code> 目录下，直接添加新的 <code>*.conf</code> 文件，重启 Nginx 即能生效。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">include /etc/nginx/conf.d/*.conf;</div></pre></td></tr></table></figure>
-<ol start="5">
-<li>重启 Nginx（<code>nginx -s reload</code>），见证奇迹：浏览器打开域名地址，填写数据库信息以及管理员信息，点击安装即可（如下图）。于是<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>就这么搭建了起来，👏。</li>
-</ol>
-<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Flarum-Install.png" alt="Flarum Install"></p>
-<p>以上，便是”如何基于 Flarum 搭建一个优雅简洁论坛”的大部分内容，有同欲者，可按照如上方法，搭建属于您的论坛（社区），如有问题，欢迎留言探讨。就使用体验来看，Flarum 有几个明显优点点：</p>
-<ol>
-<li>响应速度，出奇的快，本站未做额外处理，且服务器使用的是 <a href="https://m.do.co/c/046a8e6b255c" target="_blank" rel="external">DigitalOcean</a>，朋友们可访问本站，以体验之；</li>
-<li>界面简洁，支持自定义；功能丰富，尤其是后台，支持各种设定；下面就部分功能做了截图，大家可感受下；</li>
-</ol>
-<p><img src="https://oss.nicelinks.site/forum.lovejade.cn-admin.com.png?x-oss-process=style/png2jpg" alt="Flarum 论坛后台"></p>
-<p>早些时候倒也想过，手动写一个社区，考虑到所需耗时太长、精力过重，就作罢了；搭建<a href="https://forum.lovejade.cn/" target="_blank" rel="external"><strong>悠然宜想亭</strong></a>，有率先考虑 <a href="https://nicelinks.site/post/5fe33ded9b4e656960bd8468" target="_blank" rel="external">Discuz！Q</a>、<a href="https://github.com/88250/symphony" target="_blank" rel="external">88250/symphony</a> 并做尝试，只不过几番操作，却不能快速成事；这才转而折腾 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a>，深入了解，大感其妙。从 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a> 的设计哲学，也学到很多：类似工具，须当以简易搭建而始，更多设定，该是在网站后台提供操作；否则，将很多用户绝于道途，这样可不好。</p>
-<p>于深圳·福田  2021.03.13，上次修改 2021.03.22。</p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://www.jeffjade.com/2020/12/31/177-generating-word-cloud-based-on-python/">基于 python 对文本做分词、生成词云图</a></li>
-<li><a href="https://www.jeffjade.com/2020/12/06/176-how-to-auto-switch-between-different-input-methods-for-different-app/">如何为不同应用窗口，自动切换不同输入法</a></li>
-<li><a href="https://quickapp.lovejade.cn/how-to-add-shadow-effects-to-image/" target="_blank" rel="external">为文章图片添加外阴影效果</a></li>
-<li><a href="https://quickapp.lovejade.cn/markdown-magic-tricks/" target="_blank" rel="external">Markdown 用法中的奇技淫巧</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2020/10/12/172-okr-working-method-let-you-more-efficiently/">OKR 工作法，带你聚焦目标，高效工作</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/08/18/166-tools-vs-products-and-knowledge-vs-thinking/">工具 vs 产品 And 知识 vs 思维</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      如果，您有了解 Flarum，或者使用 Wappalyzer 工具，那您应该很容易了解到，前段时间，吾所搭建的悠然宜想亭社区，是基于 Flarum 来搭建；在这过程中，有过一番折腾；此篇文章，旨在与感兴趣的朋友们，分享下：&quot;如何基于 Flarum，快速 搭建一个优雅简洁论坛&quot;。
-    
-    </summary>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/categories/Toss/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="Flarum" scheme="https://www.jeffjade.com/tags/Flarum/"/>
     
   </entry>
   
