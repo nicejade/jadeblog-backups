@@ -1,3 +1,5 @@
+https://www.jeffjade.com/2021/08/19/213-nicelinks-weekly-027/
+https://www.jeffjade.com/2021/08/12/212-nicelinks-weekly-026/
 https://www.jeffjade.com/2021/08/05/211-nicelinks-weekly-025/
 https://www.jeffjade.com/2021/07/29/210-nicelinks-weekly-024/
 https://www.jeffjade.com/2021/07/23/209-nicelinks-weekly-023/
@@ -96,5 +98,3 @@ https://www.jeffjade.com/2016/12/31/117-written_at-the-end-of-2016/
 https://www.jeffjade.com/2016/11/24/116-JavaScript-string-operation/
 https://www.jeffjade.com/2016/10/31/115-summary-of-cookie/
 https://www.jeffjade.com/2016/10/28/114-talk-about-education/
-https://www.jeffjade.com/2016/09/16/112-vue-data-binding/
-https://www.jeffjade.com/2016/08/08/113-toss-gulp/
