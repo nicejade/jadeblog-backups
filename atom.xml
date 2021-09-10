@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-09-04T05:50:24.688Z</updated>
+  <updated>2021-09-10T15:56:47.749Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>优质网站同好者周刊（第 29 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/09/03/216-nicelinks-weekly-030/"/>
+    <id>https://www.jeffjade.com/2021/09/03/216-nicelinks-weekly-030/</id>
+    <published>2021-09-03T13:21:00.000Z</published>
+    <updated>2021-09-10T15:56:47.749Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
+<a id="more"></a>
+<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
+<h2 id="ZapBG-Remove-Backgrounds-From-Images-Easily"><a href="#ZapBG-Remove-Backgrounds-From-Images-Easily" class="headerlink" title="ZapBG - Remove Backgrounds From Images Easily"></a><a href="https://nicelinks.site/post/613a0f78442320788c733fc5" target="_blank" rel="external">ZapBG - Remove Backgrounds From Images Easily</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/图片" target="_blank" rel="external"><code>图片</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/AI" target="_blank" rel="external"><code>AI</code></a></p>
+<blockquote>
+<p>Remove backgrounds in just seconds with no learning curve and easily remove backgrounds fast. Like super fast. Our latest AI easily recognizes backgrounds</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.zapbg.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - ZapBG - Remove Backgrounds From Images Easily"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.zapbg.com/" target="_blank" rel="external">ZapBG</a> 是从图像中清除（remove）背景的极为简单方法，而无需经历使用软件或雇用任何人的麻烦（基于最新的 AI）。凭借在几秒钟内删除背景的能力，让您的创造力和想象力流动起来。官方给出的三个特征：<strong>无需安装</strong>、<strong>便于使用</strong>、<strong>可接受的价格</strong>。虽然说 <a href="https://nicelinks.site/redirect?url=https://www.zapbg.com/" target="_blank" rel="external">ZapBG</a> 需要付费使用（可免费试用），相比其他清除（remove）背景的产品，有些额外的特性：如允许撤销、支持立即更改背景等等。</p>
+<p>── 出自<a href="https://nicelinks.site/post/613a0f78442320788c733fc5" target="_blank" rel="external">倾城之链 - ZapBG - Remove Backgrounds From Images Easily</a></p>
+<h2 id="Hidden-Tools-Discover-a-collection-of-tools"><a href="#Hidden-Tools-Discover-a-collection-of-tools" class="headerlink" title="Hidden Tools: Discover a collection of tools"></a><a href="https://nicelinks.site/post/613996f8442320788c733fc3" target="_blank" rel="external">Hidden Tools: Discover a collection of tools</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/开发者" target="_blank" rel="external"><code>开发者</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a></p>
+<blockquote>
+<p>Explore a collection of tools to use for your next project. Search, filter, and find tools from a ton different categories.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/hiddentools.dev.png?x-oss-process=style/png2jpg" alt="倾城之链 - Hidden Tools: Discover a collection of tools"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://hiddentools.dev/" target="_blank" rel="external">Hidden Tools</a>是一个单页网站，由其社区贡献的一系列有价值的工具组成。无论您的项目如何，您几乎都可以在此处找到所需的任何工具，以帮助提高效率和速度。这个网站并不局限于开发工具的清单，还包括对<strong>生产力</strong>和<strong>写故事</strong>有帮助的工具。</p>
+<p>网站所收录的工具，十分丰富，对 Web 开发者尤其有用；其中包含有 CSS 渐变、文本编辑器、图标、插图、颜色（配色）、VsCode、分析、网站建设者、网站运行状态页面、排版、浏览器等等。</p>
+<p>── 出自<a href="https://nicelinks.site/post/613996f8442320788c733fc3" target="_blank" rel="external">倾城之链 - Hidden Tools: Discover a collection of tools</a></p>
+<h2 id="Infinite-Market-Cap"><a href="#Infinite-Market-Cap" class="headerlink" title="Infinite Market Cap"></a><a href="https://nicelinks.site/post/6137589e442320788c733fc1" target="_blank" rel="external">Infinite Market Cap</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/排名" target="_blank" rel="external"><code>排名</code></a> · <a href="https://nicelinks.site/tags/资讯" target="_blank" rel="external"><code>资讯</code></a></p>
+<blockquote>
+<p>Infinite Market Cap ranks the world’s top assets by Market Cap. Including precious metals such as Gold, Stocks, ETFs and cryptocurrencies</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/8marketcap.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Infinite Market Cap"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://8marketcap.com/" target="_blank" rel="external">Infinite Market Cap</a> (8MarketCap) 一个按市值对全球顶级资产进行排名的网站，涵盖公司、ETF、加密货币、贵金属等。包括黄金、白银、钯和铂等贵金属；苹果、谷歌、微软、亚马逊和特斯拉等上市公司（在排名前 100，国内企业有台积电（8）、腾讯（10）、阿里巴巴（14）、<strong>贵州茅台</strong>（29，近期有上涨一位排名）工商银行（42）、招商银行（54）、美团点评（62）、宁德时代（67）、中国建设银行（68）、中国农业银行（84）、平安保险（94）等）；QQQ 和 Vanguard S&amp;P 500 ETF 等 ETF（交易所交易基金）以及加密货币比如比特币和以太坊。</p>
+<p>值得一提的是，资产的市值，是根据其当前<strong>市场价格对其总价值的估计</strong>。根据资产类型，它以不同的方式计算：</p>
+<ul>
+<li>对于贵金属，市值的计算方法，是将其<strong>价格</strong>乘以迄今为止<strong>已开采的金属数量</strong>的估计值。这些估计值每年更新一次；</li>
+<li>对于股票，它的计算方法是将<strong>流通股数量乘以当前股价</strong>；</li>
+<li>加密货币的市值，是通过将<strong>流通供应量与代币价格相乘</strong>来计算的；</li>
+<li>ETF 数据根据 <strong>IEX 云计算的</strong>加密货币价格和市值数据；</li>
+</ul>
+<p>另外，<a href="https://nicelinks.site/redirect?url=https://8marketcap.com/" target="_blank" rel="external">Infinite Market Cap</a> 免责声明中写到：价格和市值数据有延迟。延迟的范围可以从几分钟到几个小时不等。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6137589e442320788c733fc1" target="_blank" rel="external">倾城之链 - Infinite Market Cap</a></p>
+<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
+<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
+
+<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>种豆南山下，草盛豆苗稀。<br>晨兴理荒秽，带月荷锄归。<br><strong>道狭草木长，夕露沾我衣。<br>衣沾不足惜，但使愿无违</strong>。<br>── 东晋 · 陶渊明《归园田居》</p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://www.jeffjade.com/2021/08/26/214-nicelinks-weekly-028/">优质网站同好者周刊（第 28 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/08/19/213-nicelinks-weekly-027/">优质网站同好者周刊（第 27 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/82-26" target="_blank" rel="external">优质网站同好者周刊（第 26 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/08/05/211-nicelinks-weekly-025/">优质网站同好者周刊（第 25 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/07/29/210-nicelinks-weekly-024/">优质网站同好者周刊（第 24 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/07/23/209-nicelinks-weekly-023/">优质网站同好者周刊（第 23 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 22 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 21 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/07/01/206-nicelinks-weekly-020/">优质网站同好者周刊（第 20 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/06/24/205-nicelinks-weekly-019/">优质网站同好者周刊（第 19 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2021/06/17/204-nicelinks-weekly-018/">优质网站同好者周刊（第 18 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
+    
+    </summary>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>优质网站同好者周刊（第 29 期）- 倾城之链</title>
@@ -2123,144 +2204,6 @@
 <li><a href="https://www.jeffjade.com/2021/04/15/195-nicelinks-weekly-009/">优质网站同好者周刊（第 9 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/04/08/193-nicelinks-weekly-008/">优质网站同好者周刊（第 8 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/04/01/192-nicelinks-weekly-007/">优质网站同好者周刊（第 7 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优质网站同好者周刊（第 10 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/04/22/196-nicelinks-weekly-010/"/>
-    <id>https://www.jeffjade.com/2021/04/22/196-nicelinks-weekly-010/</id>
-    <published>2021-04-22T14:22:00.000Z</published>
-    <updated>2021-04-22T14:53:59.667Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a><br>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="Relate-The-open-platform-to-create-for-the-web"><a href="#Relate-The-open-platform-to-create-for-the-web" class="headerlink" title="Relate - The open platform to create for the web"></a><a href="https://relate.app/?utm_source=nicelinks.site" target="_blank" rel="external">Relate - The open platform to create for the web</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external"><code>网站生成器</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/设计" target="_blank" rel="external"><code>设计</code></a></p>
-<blockquote>
-<p>Build a Website</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/relate.app.png?x-oss-process=style/png2jpg" alt="倾城之链 - Relate - The open platform to create for the web"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://relate.app/" target="_blank" rel="external">Relate</a>  是一个用来创建网站的开放平台；她足够<strong>简单</strong>，直观的“按代码设计”环境，可以像编辑文档一样创建和编辑网站；在设计时，在后台生成漂亮，干净，简单的 HTML 和 CSS 。基于 <a href="https://nicelinks.site/redirect?url=https://relate.app/" target="_blank" rel="external">Relate</a> 系统，你的业务蓬勃发展，依然无需切换平台。具有以下功能特征：</p>
-<ul>
-<li>您可以导入现有代码，复制整个网站或其中的一部分，或基于已经存在的网站构建新页面；</li>
-<li>友好支持第三方，你可以使用 Bootstrap，<a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">Tailwind</a> 和任何其他框架；</li>
-<li>导入样式表，连接现有 CSS 并将其应用于您的内容；</li>
-<li>100％准确：您的设计，简单，干净的语义代码，没有奇怪的东西；</li>
-<li>您如果已在 Figma，Sketch 或 XD 中创建了网站，Relate 将处理导入，因此您可以立即启动它；</li>
-</ul>
-<p><a href="https://nicelinks.site/redirect?url=https://relate.app/" target="_blank" rel="external">Relate</a> Slogan：生命之美在于，无限的可能性；如果您有创建网站的诉求，不妨基于 Relate 来设计，或许她能带给您惊喜。</p>
-<p>── 出自<a href="https://nicelinks.site/post/6081757e9947e6213fe43a86" target="_blank" rel="external">倾城之链 - Relate - The open platform to create for the web</a></p>
-<h2 id="Headers-me-Cover-images-that-get-you-followers"><a href="#Headers-me-Cover-images-that-get-you-followers" class="headerlink" title="Headers.me | Cover images that get you followers"></a><a href="https://www.headers.me/?utm_source=nicelinks.site" target="_blank" rel="external">Headers.me | Cover images that get you followers</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/图片" target="_blank" rel="external"><code>图片</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/设计" target="_blank" rel="external"><code>设计</code></a></p>
-<blockquote>
-<p>Create matching cover images for the social media platforms you love without the need of any complex design tools or templates.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.headers.me.png?x-oss-process=style/png2jpg" alt="倾城之链 - Headers.me | Cover images that get you followers"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.headers.me/" target="_blank" rel="external">Headers.me</a>，是一个工具型网站，它可以为您喜欢的社交媒体平台，创建与之匹配的<strong>封面图像</strong>，而无需任何复杂的设计工具或模板；您可以免费开始设计，而无需信用卡（当然，也提供高级收费功能）。</p>
-<p>── 出自<a href="https://nicelinks.site/post/60816f759947e6213fe43a84" target="_blank" rel="external">倾城之链 - Headers.me | Cover images that get you followers</a></p>
-<h2 id="All-posts-Soubai’s-stories"><a href="#All-posts-Soubai’s-stories" class="headerlink" title="All posts | Soubai’s stories"></a><a href="https://www.soubai.me/?utm_source=nicelinks.site" target="_blank" rel="external">All posts | Soubai’s stories</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a> · <a href="https://nicelinks.site/tags/JavaScript" target="_blank" rel="external"><code>JavaScript</code></a> · <a href="https://nicelinks.site/tags/Web开发" target="_blank" rel="external"><code>Web开发</code></a></p>
-<blockquote>
-<p>full stack JavaScript developer. I’m very interested in web Technologies &amp; cloud computing &amp; problem solving.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.soubai.me.png?x-oss-process=style/png2jpg" alt="倾城之链 - All posts | Soubai&#39;s stories"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.soubai.me/" target="_blank" rel="external">Soubai’s stories</a> 是基于 Next.js、Node.js 所搭建的网站，全栈 JavaScript 开发人员（Abderrahim Soubai-Elidrisi）撰写；作为作为 Web 开发人员，Abderrahim 的主要爱好是创建令人难忘的项目，以解决现实世界中的问题并满足业务需求。其中内容涵 <a href="https://nicelinks.site/post/60631f14bffb5e532f3be248" target="_blank" rel="external">Tensorflow.js</a>、<a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a>、JavaScript、TypeScript 等内容。</p>
-<p>── 出自<a href="https://nicelinks.site/post/6081087d9947e6213fe43a82" target="_blank" rel="external">倾城之链 - All posts | Soubai’s stories</a></p>
-<h2 id="Sourcery-Automatically-Improve-Python-Code-Quality"><a href="#Sourcery-Automatically-Improve-Python-Code-Quality" class="headerlink" title="Sourcery | Automatically Improve Python Code Quality"></a><a href="https://sourcery.ai/?utm_source=nicelinks.site" target="_blank" rel="external">Sourcery | Automatically Improve Python Code Quality</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a> · <a href="https://nicelinks.site/tags/AI" target="_blank" rel="external"><code>AI</code></a> · <a href="https://nicelinks.site/tags/Python" target="_blank" rel="external"><code>Python</code></a></p>
-<p><strong>关键字</strong>：sourcery, refactoring, developer tools, python, ai</p>
-<blockquote>
-<p>Sourcery instantly refactors your Python code. Try Sourcery for free to improve the quality of your code and speed up your team’s development.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/sourcery.ai.png?x-oss-process=style/png2jpg" alt="倾城之链 - Sourcery | Automatically Improve Python Code Quality"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://sourcery.ai/" target="_blank" rel="external">Sourcery</a>，一款自动提高 Python 代码质量的 AI 工具；它使用 <a href="https://nicelinks.site/redirect?url=https://sourcery.ai/" target="_blank" rel="external">Sourcery</a> 的编码助手，即时重构 Python 代码，使您的代码更清晰，更简洁，更 <code>Pythonic</code>；您可以在想要的地方使用，如将其添加到 PyCharm，添加到 VsCode 或者 Github。以下几个特征值得一提：</p>
-<ul>
-<li><strong>编写所有人都清楚的代码</strong>：Sourcery 在后台运行，并提出实时改进建议。从简化条件到提取方法，Sourcery 可以帮助您编写干净，结构合理的代码；</li>
-<li><strong>保持代码私密</strong>：Sourcery 在您的计算机上本地运行，从而确保所有代码的私密性和安全性；</li>
-<li><strong>支持免费开始使用</strong>：支持免费将其添加至 PyCharm、VsCode 或者 Github；当然，也提供了 Sourcery Pro 收费版本，将开放更多功能。</li>
-</ul>
-<p>── 出自<a href="https://nicelinks.site/post/60802c0b9947e6213fe43a80" target="_blank" rel="external">倾城之链 - Sourcery | Automatically Improve Python Code Quality</a></p>
-<h2 id="极简简历模板-PoleBrief"><a href="#极简简历模板-PoleBrief" class="headerlink" title="极简简历模板 PoleBrief"></a><a href="https://www.polebrief.com/?utm_source=nicelinks.site" target="_blank" rel="external">极简简历模板 PoleBrief</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/简历" target="_blank" rel="external"><code>简历</code></a> · <a href="https://nicelinks.site/tags/工作" target="_blank" rel="external"><code>工作</code></a></p>
-<p><strong>关键字</strong>：简历模板, 个人简历模板, 免费简历模板, 简历模板下载word格式, 电子简历, 在线简历制作, 简历模板下载</p>
-<blockquote>
-<p>极简简历是一个专业免费的个人简历制作平台，拥有专业简历模板，为求职者提供专业极致简约的简历模板，三分钟制作一份简历，可随时随地将在线制作的简历下载为图片、PDF、Word 格式文件。拥有优质海量简历模板、简历封面、英文简历、简历表格。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.polebrief.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 极简简历模板 PoleBrief"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.polebrief.com/" target="_blank" rel="external">极简简历模板 PoleBrief</a>，一款优质的简历制作平台；它具有<strong>优质模板</strong>、 <strong>快速制作</strong>、<strong>智能分析</strong>等特征，详细描述为：</p>
-<h3 id="极致、简约、专业、优质"><a href="#极致、简约、专业、优质" class="headerlink" title="极致、简约、专业、优质"></a>极致、简约、专业、优质</h3><ul>
-<li>非常Nice的简历模板。</li>
-<li>简约的风格，求职信息一目了然，告别花哨的外表。</li>
-<li>HR都喜欢的简历风格。</li>
-<li>优质的海量模板。</li>
-</ul>
-<h3 id="优于-Word-写简历，告别复杂化"><a href="#优于-Word-写简历，告别复杂化" class="headerlink" title="优于 Word 写简历，告别复杂化"></a>优于 Word 写简历，告别复杂化</h3><ul>
-<li>你只需专注于简历内容的填写。</li>
-<li>简单的增加、删除、拖拽操作即可完成简历的制作。</li>
-<li>PoleBrief实现 Office 的大多数功能，支持富文本编辑等。</li>
-</ul>
-<h3 id="更多的智能化功能"><a href="#更多的智能化功能" class="headerlink" title="更多的智能化功能"></a>更多的智能化功能</h3><ul>
-<li>目录的拖拽似乎更加方便快捷。</li>
-<li>提供海量的“内容模板”作为参考。</li>
-<li>边写、边看高分技巧。</li>
-<li>用智能的简历分析来高简历质量。</li>
-</ul>
-<p>只需用三个简单的步骤，即可创建你的求职简历：</p>
-<ol>
-<li>选择我们专业设计的简历之一；</li>
-<li>通过我们详细提示填写详细信息；</li>
-<li>立即下载并开始申请工作。</li>
-</ol>
-<p>── 出自<a href="https://nicelinks.site/post/608026379947e6213fe43a7e" target="_blank" rel="external">倾城之链 - 极简简历模板 PoleBrief</a></p>
-<h2 id="「信达」将微信作为服务器的控制台"><a href="#「信达」将微信作为服务器的控制台" class="headerlink" title="「信达」将微信作为服务器的控制台"></a><a href="https://sender.xzhsh.ch/?utm_source=nicelinks.site" target="_blank" rel="external">「信达」将微信作为服务器的控制台</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a> · <a href="https://nicelinks.site/tags/互联网" target="_blank" rel="external"><code>互联网</code></a> · <a href="https://nicelinks.site/tags/Go" target="_blank" rel="external"><code>Go</code></a></p>
-<p><strong>关键字</strong>：微信, 公众号, 服务器, 运维, 小工具, 消息推送</p>
-<blockquote>
-<p>正如「信达」所称，这是个在用户和服务器之间“送信”的应用。通过在公众号发送简短信令，服务器轮询到后即可执行特定指令完成工作。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/sender.xzhsh.ch.png?x-oss-process=style/png2jpg" alt="倾城之链 - 「信达」将微信作为服务器的控制台"></p>
-<p><strong>推荐语</strong>：就像名字<a href="https://nicelinks.site/redirect?url=https://sender.xzhsh.ch/" target="_blank" rel="external">「信达」</a>一样，这是个在用户和服务器之间“送信”的应用。这个需求源自于调试时频繁的 docker pull、NAS 上按需触发的打卡脚本等待。于是需要一个从用户手机到服务器的消息发送工具。（不给脚本暴露 API 是因为懒而且 NAS 没公网）</p>
-<p><a href="https://nicelinks.site/redirect?url=https://sender.xzhsh.ch/" target="_blank" rel="external">「信达」</a>的工作是这样的：微信公众号上发送信令（就是长得像指令的消息）；服务器保存这一个消息等到 Agent轮询获取；Agent根据信令匹配对应的 Shell 指令或者脚本（Hit: 关注公众号之后也需要到网站完成 Agent 创建）；<a href="https://nicelinks.site/redirect?url=https://sender.xzhsh.ch/" target="_blank" rel="external">「信达」</a>具有以下功能特征：</p>
-<ul>
-<li>不发送 shell 命令，而是信令；</li>
-<li>保存执行日志；</li>
-<li>执行结果微信回复；</li>
-<li>Agent支持转发信令（HTTP Forward）；</li>
-<li>相当于内网穿透；</li>
-<li>Agent开源；</li>
-<li>API 公开；</li>
-</ul>
-<p>── 出自<a href="https://nicelinks.site/post/607b831700d67605dca7de85" target="_blank" rel="external">倾城之链 - 「信达」将微信作为服务器的控制台</a><br>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。<strong>盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎</strong>？<strong>且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。惟江之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭</strong>。是造物者之无尽藏也，而吾与子之所共适。── 北宋 · 苏子瞻《前赤壁赋》</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://www.jeffjade.com/2021/04/15/195-nicelinks-weekly-009/">优质网站同好者周刊（第 9 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/04/08/193-nicelinks-weekly-008/">优质网站同好者周刊（第 8 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/04/01/192-nicelinks-weekly-007/">优质网站同好者周刊（第 7 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/03/11/186-nicelinks-weekly-006/">优质网站同好者周刊（第 6 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
 <li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
 <li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
