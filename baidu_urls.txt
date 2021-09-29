@@ -1,3 +1,4 @@
+https://www.jeffjade.com/2021/09/29/219-how-to-optimize-the-rpk-package-size-of-quickapp/
 https://www.jeffjade.com/2021/09/24/218-nicelinks-weekly-032/
 https://www.jeffjade.com/2021/09/17/217-nicelinks-weekly-031/
 https://www.jeffjade.com/2021/09/10/216-nicelinks-weekly-030/
@@ -97,4 +98,3 @@ https://www.jeffjade.com/2017/07/13/123-useful-regular-expression/
 https://www.jeffjade.com/2017/05/01/122-how-to-better-use-google_chrome/
 https://www.jeffjade.com/2017/04/30/121-sigh-life/
 https://www.jeffjade.com/2017/03/11/120-how-to-write-vue-better/
-https://www.jeffjade.com/2017/02/05/119-wanqingyoucaoshuo-/

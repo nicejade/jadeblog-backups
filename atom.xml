@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-09-25T13:18:23.706Z</updated>
+  <updated>2021-09-29T13:46:38.997Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -16,11 +16,107 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>优质网站同好者周刊（第 31 期）- 倾城之链</title>
+    <title>如何优化「快应用」rpk 包体积？</title>
+    <link href="https://www.jeffjade.com/2021/09/29/219-how-to-optimize-the-rpk-package-size-of-quickapp/"/>
+    <id>https://www.jeffjade.com/2021/09/29/219-how-to-optimize-the-rpk-package-size-of-quickapp/</id>
+    <published>2021-09-29T13:21:00.000Z</published>
+    <updated>2021-09-29T13:46:38.997Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>，相当于是手机厂商联合出品的<strong>小程序</strong>。如果您看过<a href="https://forum.lovejade.cn/t/quickapp" target="_blank" rel="external">快应用系列文章</a>，想必对如何高效开发快应用、如何利用快应用赚取税后收入等，有了大致了解。因为<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>也是<strong>即点即用</strong>（大致经历：下载 <code>rpk</code>，解压、校验签名、启动等步骤），更小提及的 <code>rpk</code> 包，有助于<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>秒开率的提升，对于所获取的体验和利润，也有更好的转化。故而，今在此与朋友们，就「<strong>如何优化「快应用」rpk 包体积</strong>」，做下探讨。</p>
+<a id="more"></a>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/quickapp-hero.jpeg" alt="如何优化「快应用」rpk 包体积？"></p>
+<h2 id="减小-rpk-体积的价值"><a href="#减小-rpk-体积的价值" class="headerlink" title="减小 rpk 体积的价值"></a>减小 rpk 体积的价值</h2><p>快应用引擎，早在 2019 年 2 月 <a href="https://doc.quickapp.cn/changelog/1040.html" target="_blank" rel="external">1040</a> 版本，就新增了「支持 RPK 分包加载」的功能；在那之前，还上线了一个功能 ── 支持 rpk 流式下载，即无须等 rpk 文件完全下载完成，在 app.js 下载成功后，就能开始执行（rpk 下载耗时埋点也就此终止）。这就是说，rpk 整体增加或减小 100KB，对 rpk 的下载，没有绝对相关性；但对后续执行速度，却是有一定影响。从大盘数据看（2021 年 8 月），创建应用时间（执行 app.js ），平均在 166ms，而 app.js 尺寸小于 100kb 的应用，其执行耗时远小于平均值；但 rpk 尺寸大于 200kb 的应用，其执行耗时则高于平均值（200ms+）。由此，也能得出一个结论：<strong>优化 rpk 体积（尤其是 <code>app.js</code> 及各页面所构建的 js 资源），有助于提升快应用执行速度</strong>。</p>
+<h2 id="RPK-体积优化建议"><a href="#RPK-体积优化建议" class="headerlink" title="RPK 体积优化建议"></a>RPK 体积优化建议</h2><h3 id="资源-CDN-化"><a href="#资源-CDN-化" class="headerlink" title="资源 CDN 化"></a>资源 CDN 化</h3><p>您知道，无论是开发 Web 应用、小程序还是原生应用，用到图片、图标、字体，甚至是视频等资源，是必不可少的。但这些资源，除了 Logo 图标外，其他的资源，最好可以放在云端，通过 CDN 加速，在应用上，既可以快速得到加载和适用、也能方便随时修改，还能极大促进 <code>rpk</code> 体积得到优化。</p>
+<h3 id="JavaScript-独立打包"><a href="#JavaScript-独立打包" class="headerlink" title="JavaScript 独立打包"></a>JavaScript 独立打包</h3><p>在<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>中，当不同页面同时引入同一 JavaScript 资源时，默认情况下编译工具会将该 JS 资源代码打包至该页面文件中。由于打包后相关页面文件都包含了重复的 JS 代码，会造成最终打包生成的 rpk 包体积较大。</p>
+<p>快应用平台自 <code>1080</code> 版本起支持将 JS 资源独立打包。当 app.ux 或页面文件两次或以上引用到同一 JS 资源时，会将该 JavaScript 资源抽取到独立的文件中，使得相关文件共用同一份 JS 代码，可有效减少整个 rpk 包体积。</p>
+<h4 id="抽取对象"><a href="#抽取对象" class="headerlink" title="抽取对象"></a>抽取对象</h4><p>所有被引用两次或以上的 JS 资源均会被抽取至独立文件中，包括：</p>
+<ul>
+<li>普通 JS 文件；</li>
+<li>子组件；</li>
+<li>node_modules 中被引用的外部库；</li>
+</ul>
+<h4 id="具体适用"><a href="#具体适用" class="headerlink" title="具体适用"></a>具体适用</h4><p>基本上所有项目，都可使用；尤其对多页面引入相同的 JS 资源，有着更明显的优化效果。</p>
+<h4 id="IDE-配置"><a href="#IDE-配置" class="headerlink" title="IDE 配置"></a>IDE 配置</h4><p>在项目根目录新建配置文件<code>quickapp.config.js</code>，并配置 <code>cli</code> 属性，如下示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// quickapp.config.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">cli</span>: &#123;</div><div class="line">    <span class="comment">// 请注意，这里的 SMART，须要是大写；</span></div><div class="line">    splitChunksMode: <span class="string">'SMART'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果您习惯基于<strong>命令行</strong>构建，只需在 <code>hap build</code> 命令后，接入 <code>--split-chunks-mode=smart</code> 参数即可。</p>
+<h3 id="常用方法抽离"><a href="#常用方法抽离" class="headerlink" title="常用方法抽离"></a>常用方法抽离</h3><p>先前，在<a href="https://quickapp.lovejade.cn/how-to-elegantly-handle-quickapp-request/" target="_blank" rel="external">如何优雅处理「快应用」数据请求</a>及<a href="https://quickapp.lovejade.cn/how-to-use-the-quickapp-api-gracefully/" target="_blank" rel="external">如何优雅使用「快应用」API</a>等文章中，就有提及，无论是编写 Web 应用、小程序、快应用，都可以尝试将常用的方法抽离（<code>help/utils.js</code>），在入口（快应用中是 <code>app.ux</code>）统一挂载到全局，从而方便在各页面、组件中使用，无需额外 <code>import</code> 操作，提升编码效率。在<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发中，IDE 默认并未采取独立打包模式，因此基于这种方式，则可以避免这类封装的方法，在各面被重复构建（只会被构建于 <code>app.js</code> 文件中）。</p>
+<p>当然，如果您抽离了大量公共方法，统一在 <code>app.ux</code>，或可能造成 <code>app.js</code> 体积增大，导致影响应用首屏执行时机和速度。除了开启 <strong>JavaScript 独立打包</strong>外， 另一种可取方案，是将这个方案，与 <code>1080</code> 提出的<strong>动态导入</strong>相结合。</p>
+<h3 id="动态导入-1080"><a href="#动态导入-1080" class="headerlink" title="动态导入 1080+"></a>动态导入 <code>1080+</code></h3><p>基于 JS 独立打包，开发者可使用 <code>import()</code> <strong>动态导入</strong>的能力，详见<a href="https://doc.quickapp.cn/" target="_blank" rel="external">快应用文档</a><strong>动态导入</strong>部分。</p>
+<h4 id="抽取对象-1"><a href="#抽取对象-1" class="headerlink" title="抽取对象"></a>抽取对象</h4><p>所有被动态导入的 JS 资源，均会被抽取至独立文件中。</p>
+<h4 id="具体适用-1"><a href="#具体适用-1" class="headerlink" title="具体适用"></a>具体适用</h4><p>标准用法的 import 导入的模块是静态的，会使所有被导入的 JavaScript，<strong>在加载时就被编译</strong>。如果一个页面依赖的 JavaScript 文件很大，并且又<strong>不是首次渲染所必须的</strong>，可以考虑以异步的形式加载 JavaScript 文件。</p>
+<p>可以使用 <code>import()</code> 函数动态导入 JavaScript 文件，从而减少首次渲染时间。如果使用 import() 函数动态导入 JavaScript 文件，必须使用 JavaScript 独立打包，将动态导入的 JavaScript 资源抽取到独立文件。</p>
+<p>使用 <code>import()</code> 方法动态导入，示例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div class=&quot;demo-page&quot;&gt;</div><div class="line">    &lt;text class=&quot;title&quot;&gt;&#123;&#123;count&#125;&#125;&lt;/text&gt;</div><div class="line">    &lt;input class=&quot;btn&quot; type=&quot;button&quot; value=&quot;点击导入动态 JS&quot; onclick=&quot;onImportDynamicJs&quot; /&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">export default &#123;</div><div class="line">  private: &#123;</div><div class="line">    count: 100</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  onImportDynamicJs() &#123;</div><div class="line">    import(&apos;./dynamic-js&apos;).then(res =&gt; &#123;</div><div class="line">      console.log(&apos;已动态导入 dynamic-js&apos;)</div><div class="line">      this.count = res.calculate(this.count)</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>动态导入 JavaScript 文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// dynamic-js.js</div><div class="line">const baseNum = 1314</div><div class="line"></div><div class="line">export function calculate(param)  &#123;</div><div class="line">  return baseNum + param</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="IDE-配置-1"><a href="#IDE-配置-1" class="headerlink" title="IDE 配置"></a>IDE 配置</h4><p>在项目根目录新建配置文件<code>quickapp.config.js</code>，并配置 <code>cli</code> 属性，如下示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// quickapp.config.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">cli</span>: &#123;</div><div class="line">    <span class="comment">// 请注意，这里的 SMART，须要是大写；</span></div><div class="line">    splitChunksMode: <span class="string">'SMART'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果您习惯基于<strong>命令行</strong>构建，只需在 <code>hap build</code> 命令后，接入 <code>--split-chunks-mode=smart</code> 参数即可。</p>
+<h3 id="基于分包加载"><a href="#基于分包加载" class="headerlink" title="基于分包加载"></a>基于分包加载</h3><p>当快应用体积较大时，可以使用<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>的分包加载功能。简单来说，就是<strong>将项目中的所有页面及资源，通过配置规则划分到多个单独的分包文件中，运行时单独下载，加快页面渲染</strong>。</p>
+<p>分包加载的能力，首先依赖于编译时工具，根据开发者在 manifest.json 中配置的 <code>subpackages</code> 规则，将项目打包成多个分包。</p>
+<p>这些分包包含一个基础包和若干个分包，基础包内容包含一些公共的资源、页面等内容，而分包内容则是根据开发者的配置资源目录进行划分。其次运行时，快应用将优先加载基础包和页面所在分包，其余分包会自动在后台进行预加载。</p>
+<p>目前快应用分包大小有以下限制：</p>
+<ul>
+<li>整个快应用的所有分包大小不超过 4M；</li>
+<li>单个分包/基础包大小不能超过 1M；</li>
+</ul>
+<p>分包加载，虽然不能减小 rpk 整体体积，但可以减小 rpk 首次下载时的体积，从而加快下载，促进页面渲染。是轻应用界常见的优化方案（小程序、快应用，都支持这种方案）。<a href="https://doc.quickapp.cn/framework/subpackage.html" target="_blank" rel="external">分包加载文档</a>已经写的比较详细，在此就不做过多赘述。</p>
+<hr>
+<p>除此上述提到的方法，还有蛮多其他技巧。您知道，快应用构建工具，其核心也是基于 Webpack（<code>5.24.0</code>），因而适用 Webpack  的优化方法，其中大部分，对于<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>同样起作用，如以下这些建议：</p>
+<ul>
+<li>确定引入第三方库的必要性，如十分必要，采取<strong>模块化引入</strong>（按需）方式；</li>
+<li><strong>尽可能引入更合适的包</strong>，如需要一个格式化时间工具，<a href="https://github.com/xx45/dayjs" target="_blank" rel="external">DAY.JS</a> 要比 <a href="https://github.com/moment/moment" target="_blank" rel="external">momentjs</a> 更划算；</li>
+<li>正式环境，剔除非必要代码，具体可参见<a href="https://forum.lovejade.cn/d/59" target="_blank" rel="external">快应用开发中，如何区分各种环境？</a>；</li>
+<li>通过 <a href="https://github.com/FullHuman/purgecss/tree/main/packages/purgecss-webpack-plugin" target="_blank" rel="external">purgecss-webpack-plugin</a>  插件，移除没有使用到的 CSS；</li>
+<li>…..</li>
+</ul>
+<h2 id="快应用包依赖分析工具"><a href="#快应用包依赖分析工具" class="headerlink" title="快应用包依赖分析工具"></a>快应用包依赖分析工具</h2><p>欲要优化构建后包体积，需对构建后的产物进行分析，定位出造成体积大的原因，才能彻底解决诉求。在快应用中，也可以运用 <a href="https://www.npmjs.com/package/webpack-bundle-analyzer" target="_blank" rel="external">webpack-bundle-analyzer</a> 插件（支持将内容束展示为方便交互的直观树状图，让开发者了解所构建包中真正引入的内容；从而发现它大体有哪些模块组成，找到不合时宜的存在，然后优化它）。<a href="https://www.npmjs.com/package/webpack-bundle-analyzer" target="_blank" rel="external">webpack-bundle-analyzer</a> 虽然内容丰富，展示也很直观，但针对<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a> rpk 包的分析，也存在很大局限性；因此快应用 IDE 研发团队，有推出「<code>代码静态依赖分析</code>插件（<code>hap-bundle-analyzer</code>）」，旨在方便开发者查看代码文件构成和依赖关系，以优化代码包大小和内容（优化资源尺寸、剔除重复构建等。</p>
+<p>快应用 IDE 提供<strong>代码静态依赖分析插件</strong>，旨在方便开发者查看代码文件构成和依赖关系，以优化代码包大小和内容（优化资源尺寸、剔除重复构建等，具体操作可参见文章 ── <a href="https://forum.lovejade.cn/d/83-rpk" target="_blank" rel="external">如何优化「快应用」rpk 包体积？</a>），从而促进应用程序运行更迅速。</p>
+<p><strong>注意：</strong> 需要先安装插件 <code>hap-bundle-analyzer</code>，请在插件市场安装。</p>
+<p>安装完成之后，可通过侧边栏「<strong>快捷入口</strong>」「<strong>依赖分析</strong>」或者 <code>ctrl + shift + p</code> 输入 <code>quickapp analyzer</code> 使用该功能。</p>
+<ul>
+<li><p><strong>资源依赖分析</strong><br>给予用户直观的显示打包后的资源文件的路径列表及其大小，方便用户优化资源文件的体积：</p>
+<ul>
+<li>资源文件大小超过 <strong>120 KB</strong>，可能导致包的体积过大，可优化。</li>
+<li>资源文件大小在 <strong>50 KB</strong> 到 <strong>120 KB</strong>之间。</li>
+<li>资源文件大小小于 <strong>50 KB</strong>。</li>
+</ul>
+<p><img src="https://statres.quickapp.cn/quickapp/show/img/210914/v5.0_1.png" alt="快应用代码静态依赖分析插件"></p>
+</li>
+<li><strong>重复引用分析</strong><br>该功能用于统计在打包之后，各个文件的被引用次数。只展示大于等于两次的引用，您可根据被引用的次数和大小，来优化代码，以减小 rpk 体积，您可点击「<strong>页面引用详情</strong>」下的「<strong>查看引用路径</strong>」来查看该文件被页面引用的详细路径。<br><img src="https://statres.quickapp.cn/quickapp/show/img/210914/v5.0_2.png" alt="快应用代码静态依赖分析插件"></li>
+<li><strong>依赖分析</strong><br>该功能用于统计在打包之后，各个文件的依赖关系。根节点为各个页面的路径，子节点为页面导入的组件或者是文件路径，显示的文件大小为原始没有经过 minify 处理的文件大小。<br><img src="https://statres.quickapp.cn/quickapp/show/img/210914/v5.0_3.png" alt="快应用代码静态依赖分析插件"></li>
+</ul>
+<h2 id="猜您可能感兴趣的文章"><a href="#猜您可能感兴趣的文章" class="headerlink" title="猜您可能感兴趣的文章"></a>猜您可能感兴趣的文章</h2><ul>
+<li><a href="https://quickapp.vivo.com.cn/quickapp-ide-getting-started/" target="_blank" rel="external">快应用开发工具入门介绍</a></li>
+<li><a href="https://forum.lovejade.cn/d/75-chrome-url" target="_blank" rel="external">Chrome 为何无法通过 url 拉起快应用？</a></li>
+<li><a href="https://forum.lovejade.cn/d/72" target="_blank" rel="external">团队开发快应用，如何统一代码风格？</a></li>
+<li><a href="https://forum.lovejade.cn/d/71-prettier" target="_blank" rel="external">如何用 Prettier 美化您的快应用代码？</a></li>
+<li><a href="https://quickapp.vivo.com.cn/quickapp-ide-pretest/" target="_blank" rel="external">如何通过 IDE 的预检测功能提高审核通过率</a></li>
+<li><a href="https://quickapp.vivo.com.cn/how-to-configure-code-snippets-gracefully-in-quickapp-development/" target="_blank" rel="external">如何优雅地配置快应用的代码片段</a></li>
+<li><a href="https://quickapp.vivo.com.cn/how-to-develop-quickapp-based-on-typescript/" target="_blank" rel="external">如何基于 Typescript 开发快应用</a></li>
+<li><a href="https://forum.lovejade.cn/d/59" target="_blank" rel="external">快应用开发中，如何区分各种环境？</a></li>
+<li><a href="https://forum.lovejade.cn/d/19-qa-spin" target="_blank" rel="external">快应用官方加载动画库：qa-spin</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      快应用，相当于是手机厂商联合出品的小程序。如果您看过快应用系列文章，想必对如何高效开发快应用、如何利用快应用赚取税后收入等，有了大致了解。因为快应用也是即点即用（大致经历：下载 rpk，解压、校验签名、启动等步骤），更小提及的 rpk 包，有助于快应用秒开率的提升，对于所获取的体验和利润，也有更好的转化。故而，今在此与朋友们，就「如何优化「快应用」rpk 包体积」，做下探讨。
+    
+    </summary>
+    
+      <category term="快应用" scheme="https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+    
+      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优质网站同好者周刊（第 32 期）- 倾城之链</title>
     <link href="https://www.jeffjade.com/2021/09/24/218-nicelinks-weekly-032/"/>
     <id>https://www.jeffjade.com/2021/09/24/218-nicelinks-weekly-032/</id>
     <published>2021-09-24T13:21:00.000Z</published>
-    <updated>2021-09-25T13:18:23.706Z</updated>
+    <updated>2021-09-29T13:42:01.356Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
 <a id="more"></a>
@@ -2108,112 +2204,6 @@
 <li><a href="https://www.jeffjade.com/2021/05/06/198-nicelinks-weekly-012/">优质网站同好者周刊（第 12 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/04/29/197-nicelinks-weekly-011/">优质网站同好者周刊（第 11 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/04/22/196-nicelinks-weekly-010/">优质网站同好者周刊（第 10 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优质网站同好者周刊（第 13 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/05/13/199-nicelinks-weekly-013/"/>
-    <id>https://www.jeffjade.com/2021/05/13/199-nicelinks-weekly-013/</id>
-    <published>2021-05-13T14:22:00.000Z</published>
-    <updated>2021-05-13T15:32:03.799Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="Create-beautiful-images-of-your-code"><a href="#Create-beautiful-images-of-your-code" class="headerlink" title="Create beautiful images of your code"></a><a href="https://ray.so/?utm_source=nicelinks.site" target="_blank" rel="external">Create beautiful images of your code</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/代码" target="_blank" rel="external"><code>代码</code></a> · <a href="https://nicelinks.site/tags/美图" target="_blank" rel="external"><code>美图</code></a></p>
-<p><strong>关键字</strong>：generate, create, convert, source, code, snippet, image, picture, share, export</p>
-<blockquote>
-<p>Turn your code into beautiful images. Choose from a range of syntax colors, hide or show the background, and toggle between a dark and light window.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/ray.so.png?x-oss-process=style/png2jpg" alt="倾城之链 - Create beautiful images of your code"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://ray.so/" target="_blank" rel="external">Create beautiful images of your code</a> 是一个可以帮助你<strong>创建和分享</strong>源代码美丽图像的小工具；类似于 <a href="https://nicelinks.site/post/5a92df875894d742c4050c90" target="_blank" rel="external">Carbon</a>。它由 <a href="https://nicelinks.site/redirect?url=https://raycast.com/" target="_blank" rel="external">Raycast</a> 团队构建，支持从多种语法颜色中进行选择，隐藏或显示背景，修改 Padding 颜色，拖拽改变图片宽度，以及在深色和浅色窗口之间切换；另外，您还可以使用键盘快捷键来加快处理速度。</p>
-<p>── 出自<a href="https://nicelinks.site/post/609d1c43a0289c0663f94dc4" target="_blank" rel="external">倾城之链 - Create beautiful images of your code</a></p>
-<h2 id="分享笔记-·-ShareNote"><a href="#分享笔记-·-ShareNote" class="headerlink" title="分享笔记 · ShareNote"></a><a href="https://sharenote.app/?utm_source=nicelinks.site" target="_blank" rel="external">分享笔记 · ShareNote</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/分享" target="_blank" rel="external"><code>分享</code></a> · <a href="https://nicelinks.site/tags/笔记" target="_blank" rel="external"><code>笔记</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<blockquote>
-<p>分享笔记，一个简单好用的文字分享工具</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/sharenote.app.png?x-oss-process=style/png2jpg" alt="倾城之链 - 分享笔记 · ShareNote"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://sharenote.app/" target="_blank" rel="external">分享笔记 · ShareNote</a> 是一个简单好用的文字分享工具（目前仍在测试阶段）。该工具起源在于，作者认为“在社交平台上想要优雅地分享一段文字，经常非常头疼“。有受到代码片段分享工具 <a href="https://nicelinks.site/redirect?url=https://ray.so/" target="_blank" rel="external">ray.so</a> 的启发，该作者做了一款<strong>文字生成图片</strong>的分享工具。提供多种主题样式，支持移动端样式、添加头图（顶部图片）、日期📅等显示效果。</p>
-<p>── 出自<a href="https://nicelinks.site/post/609d1730a0289c0663f94dc2" target="_blank" rel="external">倾城之链 - 分享笔记 · ShareNote</a></p>
-<h2 id="Video-chat-with-real-time-collaboration-DucklyMenu-icon"><a href="#Video-chat-with-real-time-collaboration-DucklyMenu-icon" class="headerlink" title="Video chat with real-time collaboration - DucklyMenu icon"></a><a href="https://duckly.com/?utm_source=nicelinks.site" target="_blank" rel="external">Video chat with real-time collaboration - DucklyMenu icon</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/视频" target="_blank" rel="external"><code>视频</code></a> · <a href="https://nicelinks.site/tags/沟通" target="_blank" rel="external"><code>沟通</code></a> · <a href="https://nicelinks.site/tags/Figma" target="_blank" rel="external"><code>Figma</code></a></p>
-<blockquote>
-<p>Duckly is a video chat tool built for software teams that enables you to talk and collaborate in real-time.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/duckly.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Video chat with real-time collaboration - DucklyMenu icon"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://duckly.com/" target="_blank" rel="external">Deathly</a> 是一个为软件团队打造的视频聊天工具，可以让你实时交谈和协作，超越屏幕共享和聊天功能。<a href="https://nicelinks.site/redirect?url=https://duckly.com/" target="_blank" rel="external">Deathly</a> 使团队能够实时地与任何网站，localhost，IDE 或甚至终端会话的类似 <a href="https://nicelinks.site/tags/Figma" target="_blank" rel="external">Figma</a> 的体验，达成快速共享和合作。<a href="https://nicelinks.site/redirect?url=https://duckly.com/" target="_blank" rel="external">Deathly</a> 具有以下功能特征：</p>
-<h3 id="共同浏览"><a href="#共同浏览" class="headerlink" title="共同浏览"></a>共同浏览</h3><p>使用多个游标在任何网站（或本地主机）上共享和协作。这就像屏幕共享，但是是交互式的。</p>
-<h3 id="实时代码共享"><a href="#实时代码共享" class="headerlink" title="实时代码共享"></a>实时代码共享</h3><p>共享您的代码，并独立于其 IDE 与其他开发人员进行协作。</p>
-<p>── 出自<a href="https://nicelinks.site/post/609bda07a0289c0663f94dc0" target="_blank" rel="external">倾城之链 - Video chat with real-time collaboration - DucklyMenu icon</a></p>
-<h2 id="Quickchat-AI-Assistants-that-talk-like-a-Human"><a href="#Quickchat-AI-Assistants-that-talk-like-a-Human" class="headerlink" title="Quickchat - AI Assistants that talk like a Human"></a><a href="https://www.quickchat.ai/?utm_source=nicelinks.site" target="_blank" rel="external">Quickchat - AI Assistants that talk like a Human</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/AI" target="_blank" rel="external"><code>AI</code></a> · <a href="https://nicelinks.site/tags/无代码" target="_blank" rel="external"><code>无代码</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<p><strong>关键字</strong>：deep learning, machine learning, ml, artificial intelligence, ai, neural network, chatbot, chat, bot, programming, developer, development, code</p>
-<blockquote>
-<p>Quickchat automates processes such as sales, customer support, onboarding or online booking.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.quickchat.ai.png?x-oss-process=style/png2jpg" alt="倾城之链 - Quickchat - AI Assistants that talk like a Human"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.quickchat.ai/" target="_blank" rel="external">Quickchat</a> 是像人类一样说话的多语言 AI 助手，它开箱即用，伴随着惊人的会话技巧和一般知识。通过提供有关公司，产品或项目的知识来培训您的用例。不需要编码！<a href="https://nicelinks.site/redirect?url=https://www.quickchat.ai/" target="_blank" rel="external">Quickchat</a> 可与任何网站，Messenger，Whatsapp 和更多集成。</p>
-<p><a href="https://nicelinks.site/redirect?url=https://www.quickchat.ai/" target="_blank" rel="external">Quickchat</a> 是一款完全对话和多语言的 AI 助手，由 <a href="https://nicelinks.site/redirect?url=https://openai.com/" target="_blank" rel="external">Open AI</a> GPT-3（一种具有 1750 亿个参数的最新语言模型）提供支持。Quickchat 聊天机器人可以识别并说出您的母语。您可以使用它来自动化您的客户支持，在线应用程序，搜索内部知识库和许多其他任务──有无穷∞多可能性；如果您想了解更多，可参见 <a href="https://nicelinks.site/redirect?url=https://www.quickchat.ai/product" target="_blank" rel="external">Quickchat 产品说明</a>。</p>
-<p>── 出自<a href="https://nicelinks.site/post/609bd280a0289c0663f94dbe" target="_blank" rel="external">倾城之链 - Quickchat - AI Assistants that talk like a Human</a></p>
-<h2 id="Free-online-photo-editor-PhotoKit-com"><a href="#Free-online-photo-editor-PhotoKit-com" class="headerlink" title="Free online photo editor - PhotoKit.com"></a><a href="https://photokit.com/?utm_source=nicelinks.site" target="_blank" rel="external">Free online photo editor - PhotoKit.com</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/图片" target="_blank" rel="external"><code>图片</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/AI" target="_blank" rel="external"><code>AI</code></a></p>
-<blockquote>
-<p>PhotoKit is an AI-based online photo editor, convenient and easy to use. You can remove background and delete objects from image. </p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/photokit.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Free online photo editor - PhotoKit.com"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://photokit.com/" target="_blank" rel="external">Photokit</a> 是基于 AI 的在线照片编辑器；<a href="https://nicelinks.site/redirect?url=https://photokit.com/" target="_blank" rel="external">Photokit</a> 集成了功能强大的在线照片编辑器，智能画笔，图像质量增强，曝光修复和图像滤镜，拼接，裁切，变换，绘画，调整大小，并且可以添加文本，形状，标签，框架，圆角等。无需下载，您可以一键在线剪切，修改和修饰图像。它具有以下特性功能：</p>
-<h3 id="删除图像的背景。"><a href="#删除图像的背景。" class="headerlink" title="删除图像的背景。"></a>删除图像的背景。</h3><p><a href="https://nicelinks.site/redirect?url=https://photokit.com/" target="_blank" rel="external">Photokit</a>  具有更丰富的前景识别类型和更精细的边缘细节。一键单击将在 5 秒钟内自动删除 100％ 的背景。</p>
-<h3 id="神奇地从图像中删除对象"><a href="#神奇地从图像中删除对象" class="headerlink" title="神奇地从图像中删除对象"></a>神奇地从图像中删除对象</h3><p>PhotoKit 智能画笔使用简单，一键即可达到专业设计师的水平。它可以快速修复旧照片，删除水印，去除皱纹和皮肤瑕疵以及删除不需要的物体。</p>
-<h3 id="提高图像质量，使图片更清晰"><a href="#提高图像质量，使图片更清晰" class="headerlink" title="提高图像质量，使图片更清晰"></a>提高图像质量，使图片更清晰</h3><p>使其提高图像质量，丰富信息量，增强图像解释和识别效果，使图像图片更清晰。它可用于提高网站图片，移动相册图片和抽框视频的图像质量。</p>
-<h3 id="一键控制曝光量"><a href="#一键控制曝光量" class="headerlink" title="一键控制曝光量"></a>一键控制曝光量</h3><p>PhotoKit 曝光修复可以通过一键控制曝光量，使被摄对象的亮度比率达到图像中的最佳效果。这可以理解为控制曝光，以便可以真实地复制对象的层，质量和颜色。</p>
-<p>── 出自<a href="https://nicelinks.site/post/609bd00ca0289c0663f94dbc" target="_blank" rel="external">倾城之链 - Free online photo editor - PhotoKit.com</a></p>
-<h2 id="古诗名句诗词名句大全古诗词大全-古诗词网"><a href="#古诗名句诗词名句大全古诗词大全-古诗词网" class="headerlink" title="古诗名句诗词名句大全古诗词大全_古诗词网"></a><a href="https://www.gushici.com/?utm_source=nicelinks.site" target="_blank" rel="external">古诗名句<em>诗词名句大全</em>古诗词大全_古诗词网</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/诗词" target="_blank" rel="external"><code>诗词</code></a> · <a href="https://nicelinks.site/tags/检索" target="_blank" rel="external"><code>检索</code></a> · <a href="https://nicelinks.site/tags/发现" target="_blank" rel="external"><code>发现</code></a></p>
-<p><strong>关键字</strong>：古诗词大全提供古诗大全, 名诗名句, 宋词名句, 古诗词三百首, 诗词名句, 古诗名句, 古诗词大全, 唐诗大全, 经典古诗文, 古诗文大全, 古诗文, 古代诗歌大全, 古诗大全, 古诗文鉴赏等诗词名句大全, 尽在古诗词网</p>
-<blockquote>
-<p>古诗词大全提供古诗大全, 名诗名句, 宋词名句, 古诗词三百首, 诗词名句, 古诗名句, 古诗词大全, 唐诗大全, 经典古诗文, 古诗文大全, 古诗文, 古代诗歌大全, 古诗大全, 古诗文鉴赏等诗词名句大全, 尽在古诗词网</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.gushici.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 古诗名句_诗词名句大全_古诗词大全_古诗词网"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.gushici.com/" target="_blank" rel="external">古诗词网</a>是提供古诗词内容相关网站；您可以根据自己需要检索诗词；网站按照诗词类型、朝代、作者、形式（诗、词、曲、文言文）做了分类；除此外，还依据诗词、作者、名句做了推荐。更棒的是，该网站不仅对收录的诗词，做了插图、译文以及注释，而且还讲明了创作背景和鉴赏。更棒的是，还根据当前的诗词，做了相关推荐。如果您是古诗词爱好者，<a href="https://nicelinks.site/redirect?url=https://www.gushici.com/" target="_blank" rel="external">古诗词网</a>是您非常值得关注的网站。</p>
-<p>── 出自<a href="https://nicelinks.site/post/609bc08ea0289c0663f94dba" target="_blank" rel="external">倾城之链 - 古诗名句<em>诗词名句大全</em>古诗词大全_古诗词网</a></p>
-<h2 id="兴趣小组"><a href="#兴趣小组" class="headerlink" title="兴趣小组"></a><a href="https://www.xqxz.cn/?utm_source=nicelinks.site" target="_blank" rel="external">兴趣小组</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/发现" target="_blank" rel="external"><code>发现</code></a> · <a href="https://nicelinks.site/tags/有趣" target="_blank" rel="external"><code>有趣</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a></p>
-<blockquote>
-<p>一个聚集各种兴趣爱好的小社区!</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.xqxz.cn.png?x-oss-process=style/png2jpg" alt="倾城之链 - 兴趣小组"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.xqxz.cn/" target="_blank" rel="external">兴趣小组</a>是一个聚集各种各样兴趣爱好的小社区，我们聚集在此，只因为有着同样的兴趣与爱好，在这里我们都是互相的同学，我们互相分享、学习、交流、一起成长！其愿景是：构建一个理想的社区（真诚、诚实、善良），像是图书馆一样，做好归类分组后，由你选择阅读，而不会使用推荐算法，控制你的阅读偏好（不讨论娱乐八卦新闻）。</p>
-<p>── 出自<a href="https://nicelinks.site/post/6096a17a9947e6213fe43aac" target="_blank" rel="external">倾城之链 - 兴趣小组</a><br>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>学习文史知识目的在于“温故”，有文史修养的人生活在从过去到现代一个漫长的时间段里。学习科学知识目的在于“知新”，有科学知识的人可以预见将来，他生活在从现在到广阔无垠的未来。假如你什么都不学习，那就只能生活在现时现世的一个小圈子里，狭窄得很。 ── 王小波 《思维的乐趣》</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://www.jeffjade.com/2021/05/06/198-nicelinks-weekly-012/">优质网站同好者周刊（第 12 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/04/29/197-nicelinks-weekly-011/">优质网站同好者周刊（第 11 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/04/22/196-nicelinks-weekly-010/">优质网站同好者周刊（第 10 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/04/15/195-nicelinks-weekly-009/">优质网站同好者周刊（第 9 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
 <li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
 <li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
