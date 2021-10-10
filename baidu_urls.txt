@@ -1,3 +1,5 @@
+https://www.jeffjade.com/2021/10/08/221-nicelinks-weekly-034/
+https://www.jeffjade.com/2021/09/30/220-nicelinks-weekly-033/
 https://www.jeffjade.com/2021/09/29/219-how-to-optimize-the-rpk-package-size-of-quickapp/
 https://www.jeffjade.com/2021/09/24/218-nicelinks-weekly-032/
 https://www.jeffjade.com/2021/09/17/217-nicelinks-weekly-031/
@@ -96,5 +98,3 @@ https://www.jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/
 https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/
 https://www.jeffjade.com/2017/07/13/123-useful-regular-expression/
 https://www.jeffjade.com/2017/05/01/122-how-to-better-use-google_chrome/
-https://www.jeffjade.com/2017/04/30/121-sigh-life/
-https://www.jeffjade.com/2017/03/11/120-how-to-write-vue-better/
