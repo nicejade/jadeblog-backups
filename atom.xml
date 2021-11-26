@@ -116,6 +116,128 @@
   </entry>
   
   <entry>
+    <title>优质网站同好者周刊（第 40 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/11/17/229-nicelinks-weekly-041/"/>
+    <id>https://www.jeffjade.com/2021/11/17/229-nicelinks-weekly-041/</id>
+    <published>2021-11-17T13:21:00.000Z</published>
+    <updated>2021-11-26T13:53:01.533Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
+<a id="more"></a>
+<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
+<h2 id="AppFlowy-IO"><a href="#AppFlowy-IO" class="headerlink" title="AppFlowy.IO"></a><a href="https://nicelinks.site/post/619e3b54465c2155e2d15882" target="_blank" rel="external">AppFlowy.IO</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/笔记" target="_blank" rel="external"><code>笔记</code></a> · <a href="https://nicelinks.site/tags/任务管理器" target="_blank" rel="external"><code>任务管理器</code></a> · <a href="https://nicelinks.site/tags/Notion" target="_blank" rel="external"><code>Notion</code></a></p>
+<blockquote>
+<p>AppFlowy is an open source alternative to Notion. You are in charge of your data and customizations.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.appflowy.io.png?x-oss-process=style/png2jpg" alt="倾城之链 - AppFlowy.IO"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.appflowy.io/" target="_blank" rel="external">AppFlowy.IO</a>，是 Notion 的开源替代品，### 专为需要更多控制和灵活性的团队而打造，您只需负责您的数据和自定义。<a href="https://nicelinks.site/redirect?url=https://www.appflowy.io/" target="_blank" rel="external">AppFlowy.IO</a> 的使命是：让任何人都可以创建适合他们需求的应用程序。根据官方描述，<a href="https://nicelinks.site/redirect?url=https://www.appflowy.io/" target="_blank" rel="external">AppFlowy.IO</a>  有以下功能特征“</p>
+<ol>
+<li><strong>100% 控制您的数据</strong>：在您的本地机器上下载并安装 AppFlowy。您拥有并控制您的个人数据。</li>
+<li><strong>可广泛扩展</strong>：对于那些没有编码经验的人，AppFlowy 使您能够创建适合您需求的应用程序。它建立在社区驱动的工具箱上，包括模板、插件、主题等。</li>
+<li><strong>真正的本土体验</strong>：支持离线模式，更快、更稳定。它还可以更好地与不同的设备集成。此外，AppFlowy 使用户能够访问网络上不可用的功能和可能性。</li>
+</ol>
+<p>为什么要建造 <a href="https://nicelinks.site/redirect?url=https://www.appflowy.io/" target="_blank" rel="external">AppFlowy.IO</a>？官方给出了解释：Notion 一直是他们喜欢的项目和<strong>知识管理工具</strong>，因为它具有美学吸引力和功能性。该团队每天都在使用它，而且正在使用它的付费计划。然而，众所周知，Notion 有其局限性。这些包括弱数据安全性和与移动设备的兼容性差。同样，替代的协作工作场所管理工具也有其局限性。所有这些局限性使得他们的使命成为必要 ──  让任何人都可以创建适合他们需求的应用程序。目前 AppFlowy 已发布 <code>v0.0.2</code> 版本，感兴趣的朋友不妨了解下。</p>
+<p>── 出自<a href="https://nicelinks.site/post/619e3b54465c2155e2d15882" target="_blank" rel="external">倾城之链 - AppFlowy.IO</a></p>
+<h2 id="Hurl-Run-and-Test-HTTP-Requests"><a href="#Hurl-Run-and-Test-HTTP-Requests" class="headerlink" title="Hurl - Run and Test HTTP Requests"></a><a href="https://nicelinks.site/post/619ce835465c2155e2d1587f" target="_blank" rel="external">Hurl - Run and Test HTTP Requests</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a></p>
+<blockquote>
+<p>Hurl, run and test HTTP requests with plain text and curl. Hurl can run fast automated integration tests.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/hurl.dev.png?x-oss-process=style/png2jpg" alt="倾城之链 - Hurl - Run and Test HTTP Requests"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://hurl.dev/" target="_blank" rel="external">Hurl</a> 是一个命令行工具，它运行以简单<strong>纯文本格式</strong>定义的 <strong>HTTP 请求</strong>。它可以执行请求、捕获值并评估对标头和正文响应的查询。Hurl 非常通用：它可以用于<strong>获取数据</strong>和<strong>测试 HTTP</strong> 会话；其作用类似于 <code>curl</code>，但它是特别为测试而设计的，配置文件里面允许写断言，很适合在命令行测试 HTTP 接口；而且，还可以用于测试 HTTP 端点的性能。</p>
+<p>为什么要使用 <a href="https://nicelinks.site/redirect?url=https://hurl.dev/" target="_blank" rel="external">Hurl</a>，官方给出以下几条优势特征：</p>
+<ul>
+<li><strong>文本格式</strong>：对于 DevOps 和开发人员友好；</li>
+<li><strong>快速命令行界</strong>面：本地开发和持续集成的命令行；</li>
+<li><strong>单二进制</strong>：  易于安装，无需运行时间；</li>
+</ul>
+<p><a href="https://nicelinks.site/redirect?url=https://hurl.dev/" target="_blank" rel="external">Hurl</a> 是一个用 Rust 编写的轻量级二进制文件，在幕后，Hurl HTTP 引擎由 libcurl（最强大、最可靠的文件传输库之一） 提供支持，凭借其文本文件格式，Hurl 添加了语法糖来运行和测试 HTTP 请求，目前（2021.11）仍处于测试阶段，初用了下，感觉这是一个蛮有用的工具。其使用方式大致如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># sample-test.hurl</span></div><div class="line">GET https://nicelinks.site/api/searchNiceLinks</div><div class="line">User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0</div><div class="line">[QueryStringParams]</div><div class="line">keyword: Git</div></pre></td></tr></table></figure>
+<p>只需在终端运行 <code>hurl sample-test.hurl</code>，即可得到结果。如果您对此感兴趣，想更多了解 Hurl 的文件格式或语法、功能，可以参见 <a href="https://nicelinks.site/redirect?url=https://hurl.dev/docs/hurl-file.html" target="_blank" rel="external">Hurl Doc</a>。</p>
+<p>── 出自<a href="https://nicelinks.site/post/619ce835465c2155e2d1587f" target="_blank" rel="external">倾城之链 - Hurl - Run and Test HTTP Requests</a></p>
+<h2 id="Zhaoyun-art-设计之路-我的学习笔记"><a href="#Zhaoyun-art-设计之路-我的学习笔记" class="headerlink" title="Zhaoyun.art | 设计之路 | 我的学习笔记"></a><a href="https://nicelinks.site/post/619a366360f6c5569db65f25" target="_blank" rel="external">Zhaoyun.art | 设计之路 | 我的学习笔记</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/设计" target="_blank" rel="external"><code>设计</code></a> · <a href="https://nicelinks.site/tags/个人博客" target="_blank" rel="external"><code>个人博客</code></a> · <a href="https://nicelinks.site/tags/设计师" target="_blank" rel="external"><code>设计师</code></a></p>
+<p><strong>关键字</strong>：设计, 个人博客, 用户体验设计师, UI设计师</p>
+<blockquote>
+<p>一个用户体验设计师的个人博客和对互联网的一点迷思。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.zhaoyun.art.png?x-oss-process=style/png2jpg" alt="倾城之链 - Zhaoyun.art | 设计之路 | 我的学习笔记"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.zhaoyun.art/" target="_blank" rel="external">Zhaoyun.art</a>，一个用户体验设计师的个人博客（基于 <a href="https://nicelinks.site/post/602e4a576eaf2a7660805af1" target="_blank" rel="external">WordPress</a> 所搭建），用来承载该博主对互联网的一点迷思。知晓该网站的存在，是通过 Google 检索苏轼的那句“江海寄余生“；该网站看起来，特色设计风格、颇具文艺性内容，给我留下很不错的初次印象；抱着好奇心逛了下，发现在深耕<strong>编程</strong>、产品之余，学习些设计（如图像合成、数字绘景、插画等等），也是非常值得倾向的技能方向🧭；对此感兴趣的朋友们，不妨前往了解一下。</p>
+<p>── 出自<a href="https://nicelinks.site/post/619a366360f6c5569db65f25" target="_blank" rel="external">倾城之链 - Zhaoyun.art | 设计之路 | 我的学习笔记</a></p>
+<h2 id="NutUI-移动端-Vue2、Vue3、小程序-组件库"><a href="#NutUI-移动端-Vue2、Vue3、小程序-组件库" class="headerlink" title="NutUI - 移动端 Vue2、Vue3、小程序 组件库"></a><a href="https://nicelinks.site/post/6199fe5760f6c5569db65f22" target="_blank" rel="external">NutUI - 移动端 Vue2、Vue3、小程序 组件库</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/组件库" target="_blank" rel="external"><code>组件库</code></a> · <a href="https://nicelinks.site/tags/CSS" target="_blank" rel="external"><code>CSS</code></a> · <a href="https://nicelinks.site/tags/Vue" target="_blank" rel="external"><code>Vue</code></a></p>
+<p><strong>关键字</strong>：Vue3组件库, 移动端组件库, Vite, Vue组件库, Vue3, Vue2</p>
+<blockquote>
+<p>京东风格的轻量级移动端 Vue 组件库。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/nutui.jd.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - NutUI - 移动端 Vue2、Vue3、小程序 组件库"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://nutui.jd.com/" target="_blank" rel="external">NutUI</a>，京东风格的轻量级移动端 Vue 组件库，适用于移动端 Vue2、Vue3、小程序等。相比较于其他组件库，<a href="https://nicelinks.site/redirect?url=https://nutui.jd.com/" target="_blank" rel="external">NutUI</a> 具有以下亮点特色：</p>
+<ul>
+<li><strong>京东风格</strong>：遵循京东 App 10.0 设计规范；</li>
+<li><strong>前沿技术</strong>：基于 Vue3 Vite2.x TypeScript；</li>
+<li><strong>适配多端</strong>：基于 Taro 轻松开发多端小程序；</li>
+<li><strong>组件丰富</strong>：70+ 组件，覆盖多数业务场景；</li>
+</ul>
+<p>此外，一些常规功能，也都具备，诸如：支持按需引用、支持服务端渲染、支持定制主题等等。就个人感知来看，<a href="https://nicelinks.site/redirect?url=https://nutui.jd.com/" target="_blank" rel="external">NutUI</a> 相较于其他组件库，更加漂亮，可直接作用于对外产品，而不是内部管理后台。倘若，之后还将开发个人独立产品，将会选择 <a href="https://nicelinks.site/redirect?url=https://nutui.jd.com/" target="_blank" rel="external">NutUI</a> 作为首选<strong>组件库</strong>。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6199fe5760f6c5569db65f22" target="_blank" rel="external">倾城之链 - NutUI - 移动端 Vue2、Vue3、小程序 组件库</a></p>
+<h2 id="飞书多维表格-融合表格和业务系统能力的新一代效率应用"><a href="#飞书多维表格-融合表格和业务系统能力的新一代效率应用" class="headerlink" title="飞书多维表格-融合表格和业务系统能力的新一代效率应用"></a><a href="https://nicelinks.site/post/6199f84c60f6c5569db65f20" target="_blank" rel="external">飞书多维表格-融合表格和业务系统能力的新一代效率应用</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/应用" target="_blank" rel="external"><code>应用</code></a> · <a href="https://nicelinks.site/tags/效率" target="_blank" rel="external"><code>效率</code></a> · <a href="https://nicelinks.site/tags/在线" target="_blank" rel="external"><code>在线</code></a></p>
+<p><strong>关键字</strong>：飞书多维表格, 多维表格, bitable, 数据管理, 业务管理系统, 轻量级业务系统, 零代码系统, 表格</p>
+<blockquote>
+<p>飞书多维表格是一款满足个性化需求的新一代效率应用。它具备表格的轻盈和业务系统的强大，融合了在线协作、信息管理和可视化能力，能够自适应团队思维和业务，满足你的个性化管理需求，让工具驱动业务飞跃。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/bitable.feishu.cn.png?x-oss-process=style/png2jpg" alt="倾城之链 - 飞书多维表格-融合表格和业务系统能力的新一代效率应用"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://bitable.feishu.cn/" target="_blank" rel="external">飞书多维表格</a>，是一款以表格为基础的新一代效率应用。它具备表格的轻盈和业务系统的强大，融合了在线协作、信息管理和可视化能力，能够自适应团队思维和业务发展需求，是具备个性化能力的业务管理工具。</p>
+<p><a href="https://nicelinks.site/redirect?url=https://bitable.feishu.cn/" target="_blank" rel="external">飞书多维表格</a>的每一行被称为「<strong>记录</strong>」，每一列被称为「<strong>字段</strong>」。每列字段的数据格式是固定的，保证你输入的数据规范有序。多维表格提供丰富的字段类型，满足你在表格中插入多样信息的需求。你可根据项目需求，选择添加不同的字段类型，以将每列的数据类型定为：多行文本、单选、多选、人员、日期、附件、数字、复选框、公式、单向关联、双向关联等。<strong>视图</strong>代表信息的展现形式。在飞书多维表格中，你可使用 5 种视图整理同一份数据。每新建一个视图，就等于为该份数据新增了一个展现、汇总形式。编辑任一视图中的数据信息，都将实时改变该数据源的其他视图。</p>
+<p>相较于普通表格，<a href="https://nicelinks.site/redirect?url=https://bitable.feishu.cn/" target="_blank" rel="external">多维表格</a>是一个立体的信息系统，能助你从多种维度管理项目。可从以下 4 点了解多维表格的功能特点：</p>
+<h3 id="规范化"><a href="#规范化" class="headerlink" title="规范化"></a>规范化</h3><p><strong>多维表格的每一行被称为记录，每列被称为字段</strong>。每列字段的数据格式是固定的，保证你输入的数据规范有序。多维表格提供丰富的字段类型，满足你在表格中插入多样信息的需求。可根据项目需求，选择添加不同的字段类型，以将每列的数据类型定为：多行文本、单选、多选（用于打多个标签）、人员、日期、附件、数字、公式、单向关联、双向关联、复选框、超链接等。</p>
+<h3 id="多视图"><a href="#多视图" class="headerlink" title="多视图"></a>多视图</h3><p><strong>多维表格能用多种视图呈现同一个数据源</strong>。所有放入多维表格的数据，都能被实时转换为不同形式，你可一键切换不同视图，满足各部门人员的查阅需求。多维表格现为你提供<strong>表格视图</strong>、<strong>看板视图</strong>、<strong>甘特视图</strong>、<strong>画册视图</strong>和<strong>表单视图</strong>共 5 种样式。</p>
+<h4 id="表格视图"><a href="#表格视图" class="headerlink" title="表格视图"></a>表格视图</h4><p>用表格视图添加、整理多种类型数据，为信息管理打下良好基础。你还可以使用筛选、分组、排列功能更清晰直观地查看数据。在下图的任务管理场景中，应用了多行文本、单选、人员、日期和双向关联字段（从左到右）。如需增加字段，只需点击表格右上角的 <strong>+ </strong>加号按钮选择想要的字段类型。</p>
+<h3 id="易用性"><a href="#易用性" class="headerlink" title="易用性"></a>易用性</h3><p>在多维表格，告别业务系统的学习成本，无需代码基础，极速上手，一用就会。<strong>轻轻拖动，更新数据</strong>：拖动甘特视图时间条即可更新进展排期；将看板卡片拖拽到另一列即可更新该卡片记录的状态，管理项目任务。</p>
+<h3 id="协作性"><a href="#协作性" class="headerlink" title="协作性"></a>协作性</h3><p>你可在多维表格和多位协作者同时在线编辑，轻松解决异地、时差等远程协同难题。你也可以随时调整权限设置，保证信息安全。</p>
+<p>玩转多维表格，让数据动起来，创建属于你的多维效率工具，<a href="https://nicelinks.site/redirect?url=https://bitable.feishu.cn/" target="_blank" rel="external">飞书多维表格</a>，或可了解一下。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6199f84c60f6c5569db65f20" target="_blank" rel="external">倾城之链 - 飞书多维表格-融合表格和业务系统能力的新一代效率应用</a></p>
+<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
+<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
+
+<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>夜饮东坡醒复醉，归来仿佛三更。家童鼻息已雷鸣。敲门都不应，倚杖听江声。长恨此身非我有，何时忘却营营。夜阑风静縠纹平。<strong>小舟从此逝，江海寄余生</strong>。── 北宋 · 苏轼《临江仙·夜饮东坡醒复醉》</p>
+<blockquote>
+<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
+</blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://forum.lovejade.cn/d/119-40" target="_blank" rel="external">优质网站同好者周刊（第 40 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/118-39" target="_blank" rel="external">优质网站同好者周刊（第 39 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/116-38" target="_blank" rel="external">优质网站同好者周刊（第 38 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/112-37" target="_blank" rel="external">优质网站同好者周刊（第 37 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/93-31" target="_blank" rel="external">优质网站同好者周刊（第 31 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
+    
+    </summary>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>优质网站同好者周刊（第 39 期）- 倾城之链</title>
     <link href="https://www.jeffjade.com/2021/11/11/227-nicelinks-weekly-039/"/>
     <id>https://www.jeffjade.com/2021/11/11/227-nicelinks-weekly-039/</id>
@@ -2015,117 +2137,6 @@ Jenkins
 <p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
 <h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
 <li><a href="https://www.jeffjade.com/2021/07/23/209-nicelinks-weekly-023/">优质网站同好者周刊（第 23 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 22 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 21 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/01/206-nicelinks-weekly-020/">优质网站同好者周刊（第 20 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/06/24/205-nicelinks-weekly-019/">优质网站同好者周刊（第 19 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/06/17/204-nicelinks-weekly-018/">优质网站同好者周刊（第 18 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/06/10/203-nicelinks-weekly-017/">优质网站同好者周刊（第 17 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优质网站同好者周刊（第 23 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/07/23/209-nicelinks-weekly-023/"/>
-    <id>https://www.jeffjade.com/2021/07/23/209-nicelinks-weekly-023/</id>
-    <published>2021-07-23T13:21:00.000Z</published>
-    <updated>2021-07-25T10:47:41.861Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="We-分析"><a href="#We-分析" class="headerlink" title="We 分析"></a><a href="https://nicelinks.site/post/60f81b5581b2dc066ea4bd75" target="_blank" rel="external">We 分析</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/微信" target="_blank" rel="external"><code>微信</code></a> · <a href="https://nicelinks.site/tags/分析" target="_blank" rel="external"><code>分析</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<blockquote>
-<p>We 分析，微信官方推出的数据分析平台，提供更健全的数据分析工具。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/wedata.weixin.qq.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - We 分析"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://wedata.weixin.qq.com/" target="_blank" rel="external">We 分析</a> 是微信官方提供的辅助数据分析能力。开通后，你可在小程序调用官方借出库接口进行数据接入，并进行数据事件管理。完成接入后，你可对小程序进行深入的数据分析，了解经营状况，寻找业务增长。主要功能：数据事件管理、数据分析工具、多维数据看板。</p>
-<ol>
-<li><strong>更全面深入的数据看板：</strong> 进一步挖掘小程序访问/支付场景，梳理整合流量渠道，提供更细粒度的访问/支付数据，包括但不限于小程序订阅消息下发/曝光/点击/退订情况，长按识别二维码访问小程序的具体渠道(朋友圈/群聊/H5链接)等。</li>
-<li><strong>更专业细致的分析功能：</strong> 陆续推出“事件分析”，“漏斗分析”，“留存分析”，“路径分析”等数据分析功能，支持商家个性化、精细化的分析需求，全方位洞察运营现状，辅助经营决策。</li>
-<li><strong>行业定制经营分析看板：</strong> 对不同行业的特色，推出定制化的经营分析看板。如对电商零售行业，会围绕“流量”、“商品”、“客户”3大维度，结合“曝光-访问-加购-下单”转化漏斗，推出电商行业数据看板及经营诊断，帮助商家快速了解运营现状。</li>
-<li><strong>微信域的数据画像洞察：</strong> 将在保护用户隐私的前提下，提供用户洞察工具，开放行业参考数据，帮助商家更好了解自身经营现状，洞察用户；并联动微信内的用户运营与营销工具，提供应用出口，帮助商家更好的精细化运营。</li>
-</ol>
-<p>── 出自<a href="https://nicelinks.site/post/60f81b5581b2dc066ea4bd75" target="_blank" rel="external">倾城之链 - We 分析</a></p>
-<h2 id="Unity-Real-Time-Development-Platform"><a href="#Unity-Real-Time-Development-Platform" class="headerlink" title="Unity Real-Time Development Platform"></a><a href="https://nicelinks.site/post/60f8020181b2dc066ea4bd73" target="_blank" rel="external">Unity Real-Time Development Platform</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/可视化" target="_blank" rel="external"><code>可视化</code></a> · <a href="https://nicelinks.site/tags/游戏" target="_blank" rel="external"><code>游戏</code></a> · <a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a></p>
-<p><strong>关键字</strong>：实时开发平台、实时开发, VR 可视化, AR 可视化, 3D 可视化, 3D 平台, 2D 平台, VR 平台, AR 平台, 3D 实时, AR 实时, 2D 开发、3D 开发、AR 开发、VR 开发, real-time development platform, real-time development, Vr visualization, AR visualization, 3d visualization, 3d platform, 2d platform, Vr platform, AR platform, 3d real-time, AR real-time, 2d Development, 3d Development, AR Development, VR Development</p>
-<blockquote>
-<p>Make real-time 3D projects for Games, Animation, Film, Automotive, Transportation, Architecture, Engineering, Manufacturing &amp; Construction. Visualize &amp; simulate  industrial projects in 3D, AR, &amp; VR.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/unity.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Unity Real-Time Development Platform"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://unity.com/" target="_blank" rel="external">Unity</a>，制作交互式实时内容的领先平台；您可以基于<a href="https://nicelinks.site/redirect?url=https://unity.com/" target="_blank" rel="external">Unity</a>， 快速构建 2D、3D 和 VR 游戏，制作面向动画、电影、汽车、交通运输、建筑、工程、制造和施工领域的实时 3D 项目。从美术师工具到常态化运营，将愿景化为现实，<a href="https://nicelinks.site/redirect?url=https://unity.com/" target="_blank" rel="external">Unity</a> 为您提供链路工具与服务。</p>
-<ul>
-<li><strong>游戏</strong>： Unity 不仅仅是一个引擎 - 查找用于创建和运营游戏的解决方案；</li>
-<li><strong>汽车、运输与制造</strong>：运用实时3D技术在快速变化的行业局势中夺得竞争优势；</li>
-<li><strong>电影与动画</strong>：为电影和动画项目提供前所未有的艺术创作自由与更快的制作速度；</li>
-<li><strong>建筑、工程与施工</strong>：为大规模的现实生活应用情形创建沉浸式3D模型体验；</li>
-</ul>
-<p><a href="https://nicelinks.site/redirect?url=https://unity.com/" target="_blank" rel="external">Unity</a> 不仅仅是世界上有名的实时开发平台，它还是一个可以帮助您获得成功的强大生态系统。借助 <a href="https://nicelinks.site/redirect?url=https://unity.com/" target="_blank" rel="external">Unity</a>，可实现一次构建，全局部署，覆盖逾 25 个领先平台和技术上的大规模受众。如果您想了解更多，可参见：<a href="https://nicelinks.site/redirect?url=https://blog.unity.com/" target="_blank" rel="external">Unity 官方博客</a>。</p>
-<p>── 出自<a href="https://nicelinks.site/post/60f8020181b2dc066ea4bd73" target="_blank" rel="external">倾城之链 - Unity Real-Time Development Platform</a></p>
-<h2 id="Glass-UI-The-definitive-CSS-UI-library-for-glassmorphism"><a href="#Glass-UI-The-definitive-CSS-UI-library-for-glassmorphism" class="headerlink" title="Glass UI - The definitive CSS UI library for glassmorphism"></a><a href="https://nicelinks.site/post/60f6bb7181b2dc066ea4bd71" target="_blank" rel="external">Glass UI - The definitive CSS UI library for glassmorphism</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/CSS" target="_blank" rel="external"><code>CSS</code></a> · <a href="https://nicelinks.site/tags/Web开发" target="_blank" rel="external"><code>Web开发</code></a> · <a href="https://nicelinks.site/tags/前端开发" target="_blank" rel="external"><code>前端开发</code></a></p>
-<blockquote>
-<p>A modern CSS UI library based on the glassmorphism design specifications that will help you quickly design and build websites and applications.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/ui.glass.png?x-oss-process=style/png2jpg" alt="倾城之链 - Glass UI - The definitive CSS UI library for glassmorphism"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://ui.glass/" target="_blank" rel="external">Glass UI</a> 基于玻璃形态设计原则的现代 CSS UI 库（正在开发中），可帮助您快速设计和构建漂亮的网站和应用程序。这对 Web 前端开发比较有用，您可以通过免费的<a href="https://nicelinks.site/redirect?url=https://ui.glass/generator/" target="_blank" rel="external">毛玻璃 CSS 生成器</a>，从而快速设计和自定义样式属性；它支持更换背景类型（图像、渐变、纯色）、卡片颜色、模糊值（Blur value）、不透明度（Opacity）、饱和度（Saturation）等等。</p>
-<p>── 出自<a href="https://nicelinks.site/post/60f6bb7181b2dc066ea4bd71" target="_blank" rel="external">倾城之链 - Glass UI - The definitive CSS UI library for glassmorphism</a></p>
-<h2 id="The-mobile-measurement-company-Adjust"><a href="#The-mobile-measurement-company-Adjust" class="headerlink" title=" The mobile measurement company | Adjust"></a><a href="https://nicelinks.site/post/60f5744181b2dc066ea4bd6f" target="_blank" rel="external"> The mobile measurement company | Adjust</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/营销" target="_blank" rel="external"><code>营销</code></a> · <a href="https://nicelinks.site/tags/自动化" target="_blank" rel="external"><code>自动化</code></a> · <a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a></p>
-<blockquote>
-<p>Mobile Measurement made easy: Adjust unifies all your marketing activities into one powerful platform, giving you the insights you need to scale your business.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.adjust.com.png?x-oss-process=style/png2jpg" alt="倾城之链 -  The mobile measurement company | Adjust"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 平台包括测量、网络安全、欺诈预防和活动<strong>自动化</strong>产品。它使营销变得更简单、更智能、更安全，以增强数据驱动型专业人员的能力。通过 <a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a>，可以发现每小时的数据趋势，获得有关用户偏好的见解，以推动增长并提供出色的应用内体验。该反欺诈解决方案使用行业认可的、透明的、可定制的和准确的方法，可保证数据质量并保护广告预算。</p>
-<p><a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 来自德国，2012 年在柏林的一间小公寓成立，2015 年实现营业独立，至今已在全球 15 个办公室拥有数百名员工，并且有数千家多家渠道合作伙伴，每天汇聚数百 TB 的数据。2018 年末，Adjust 完成了对数据整合平台 Acquired.io 的收购。2019 年初，<a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 又收购了网络安全与人工智能公司 Unbotify。前者可以帮助 <a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 减轻广告主清理、重组数据的工作压力，通过多渠道市场活动自动化提升用户体验。后者则可以通过检测应用内的自然用户流动路径，区分正常用户与机器人或者人工刷单这类作弊用户，以此应对应用内的外挂机器人。</p>
-<p>此外，<a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 会提供给用户一个整合的数据集，随后用户可自行定义销售规则，如定义投资回报率（ROI）或转化率，以此来适应自身需求。Adjust 通过集成客户 APP 上的开源 SDK，可以使应用营销人员了解并分析用户行为，进而规划未来的营销走向。除了提供监测服务之外，<a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 还提供防作弊套件服务，以此来识别数据造假。</p>
-<p>从 <a href="https://nicelinks.site/redirect?url=https://www.adjust.com/" target="_blank" rel="external">Adjust</a> 官方介绍来看，有以下优点：隐私至上、监控所有归因、跟踪 KPI、分析和细分用户、预防欺诈、导出用户级数据等。其使命是：为了维护广告主的利益，将反欺诈进行到底。</p>
-<p>── 出自<a href="https://nicelinks.site/post/60f5744181b2dc066ea4bd6f" target="_blank" rel="external">倾城之链 -  The mobile measurement company | Adjust</a></p>
-<h2 id="微信读书-正版书籍小说免费阅读"><a href="#微信读书-正版书籍小说免费阅读" class="headerlink" title="微信读书-正版书籍小说免费阅读"></a><a href="https://nicelinks.site/post/60f3e9e281b2dc066ea4bd6a" target="_blank" rel="external">微信读书-正版书籍小说免费阅读</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/发现" target="_blank" rel="external"><code>发现</code></a> · <a href="https://nicelinks.site/tags/阅读" target="_blank" rel="external"><code>阅读</code></a> · <a href="https://nicelinks.site/tags/微信" target="_blank" rel="external"><code>微信</code></a></p>
-<p><strong>关键字</strong>：微信读书, 微信读书电脑版, 小说, 小说排行榜, 言情小说, 玄幻小说, 免费小说</p>
-<blockquote>
-<p>微信读书提供海量正版书籍、小说、漫画、公众号、听书，多设备同步实现跨屏阅读。与微信好友一起发现更多精品好书，随时交流感想，让阅读不再孤独。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/weread.qq.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 微信读书-正版书籍小说免费阅读"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://weread.qq.com/" target="_blank" rel="external">微信读书</a>网页版，通过微信扫码登录，即可开启在 Web 端阅读；网页版除了提供读书外，还提供有「传书到手机」的功能。网页版阅读，也能方便的调整字体、设置背景、查阅目录、选中☑️进行操作（如复制、划线、写想法、查询等操作）；相比于<code>微信读书</code>应用，其网页版因为电脑屏幕更大，在某些场景下，也有相应优势；对读书感兴趣的朋友可以了解下。</p>
-<p>── 出自<a href="https://nicelinks.site/post/60f3e9e281b2dc066ea4bd6a" target="_blank" rel="external">倾城之链 - 微信读书-正版书籍小说免费阅读</a></p>
-<h2 id="番喜生活-生活常用网址导航！"><a href="#番喜生活-生活常用网址导航！" class="headerlink" title="番喜生活|生活常用网址导航！"></a><a href="https://nicelinks.site/post/60f3d29f81b2dc066ea4bd68" target="_blank" rel="external">番喜生活|生活常用网址导航！</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/互联网" target="_blank" rel="external"><code>互联网</code></a> · <a href="https://nicelinks.site/tags/导航" target="_blank" rel="external"><code>导航</code></a></p>
-<p><strong>关键字</strong>：番喜, 番喜生活, VIP电影, 实用网址, 高清免费电影, 老师常用网址, 免费PPT模板, 高清电影, 最新网址发布页, ppt模板, 精品软件, 网址导航, 网盘搜索, 镜像谷歌, 免费资源</p>
-<blockquote>
-<p>番喜生活-致力于提供优质的网址导航，围绕生活中的购物，旅游，办公，电影，音乐，求职，简历，PPT，资讯，创业，等行业，更高效的网上冲浪场景。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.fxsh.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 番喜生活|生活常用网址导航！"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.fxsh.com/" target="_blank" rel="external">番喜生活</a>，一款基于 <a href="https://nicelinks.site/post/602e4a576eaf2a7660805af1" target="_blank" rel="external">WordPress</a> 搭建，提供优质的网址（生活常用）导航网站，围绕生活中的购物，旅游，办公，电影，音乐，求职，简历，PPT，资讯，创业，等行业，让人们可以更高效的网上冲浪。</p>
-<p>── 出自<a href="https://nicelinks.site/post/60f3d29f81b2dc066ea4bd68" target="_blank" rel="external">倾城之链 - 番喜生活|生活常用网址导航！</a></p>
-<p>对倾城之链感兴趣的朋友，可通过 Web，<a href="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" target="_blank" rel="external">小程序</a>，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>每个人都会经过这个阶段，见到一座山，就想知道山后面是什么。我很想告诉他，可能翻过山后面，你会发现没什么特别。回望之下，可能会觉得这一边更好。但我知道他不会相信，像他这种人，没亲眼看到是不会甘心的。── 王家卫《东邪西毒》</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
 <li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 22 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 21 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/07/01/206-nicelinks-weekly-020/">优质网站同好者周刊（第 20 期）- 倾城之链</a></li>
