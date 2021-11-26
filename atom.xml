@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-11-18T15:54:08.336Z</updated>
+  <updated>2021-11-26T18:22:29.980Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -16,111 +16,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>优质网站同好者周刊（第 40 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/11/17/228-nicelinks-weekly-040/"/>
-    <id>https://www.jeffjade.com/2021/11/17/228-nicelinks-weekly-040/</id>
-    <published>2021-11-17T13:21:00.000Z</published>
-    <updated>2021-11-18T15:54:08.336Z</updated>
+    <title>腾讯云服务器使用感受，及折腾笔记</title>
+    <link href="https://www.jeffjade.com/2021/11/27/230-talk-about-tencent-cloud-cvm/"/>
+    <id>https://www.jeffjade.com/2021/11/27/230-talk-about-tencent-cloud-cvm/</id>
+    <published>2021-11-26T17:30:00.000Z</published>
+    <updated>2021-11-26T18:22:29.980Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
+    <content type="html"><![CDATA[<p>年岁渐长，有那么些时候，总要找个机会或方向，为整日疲于挣钱的自己花点钱。前阵子，有入手 Apple SERIES 7 外，趁着腾讯云搞促销，有购买一台云服务器，以供业余把玩些有趣的项目。先前有使用 DigitalOcean 以及阿里云的云服务器产品，但初入手腾讯云服务器，仍费了些功夫，在此记录一篇文章，以记载个中使用感受，及折腾感记，希望对“后来者”，有所帮助。</p>
 <a id="more"></a>
-<h2 id="IINA-The-modern-media-player-for-macOS"><a href="#IINA-The-modern-media-player-for-macOS" class="headerlink" title="IINA - The modern media player for macOS"></a><a href="https://nicelinks.site/post/6196456960f6c5569db65f1e" target="_blank" rel="external">IINA - The modern media player for macOS</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Mac" target="_blank" rel="external"><code>Mac</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/开源" target="_blank" rel="external"><code>开源</code></a></p>
-<p><strong>关键字</strong>：MacOS, Modern Media, Player, IINA, 免费, 开源, 画中画, 媒体播放器</p>
-<blockquote>
-<p>IINA - The modern media player for macOS. </p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/iina.io.png?x-oss-process=style/png2jpg" alt="倾城之链 - IINA - The modern media player for macOS"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://iina.io/" target="_blank" rel="external">IINA</a>，适用于 macOS 的 现代媒体播放器。她天生就是一个现代 macOS 应用程序，从它的框架到用户界面。它采用了 MacOS 的后 Yosemite 设计语言，并紧跟 Force Touch、Touch Bar、黑暗模式（包括经过调整的颜色、图标和纹理，提供时尚和统一的外观）和画中画（支持原生画中画模式，让您既可以享受本地视频，也可以享受在线视频，而不会分心）等新技术的步伐。除此之外，<a href="https://nicelinks.site/redirect?url=https://iina.io/" target="_blank" rel="external">IINA</a> 还提供触控栏、系统媒体控制、可定制 UI、在线字幕、音乐模式、鼠标和触控板手势、缩略图预览、插件系统等功能。</p>
-<p>IINA 是用 Swift 编程语言编写的，由开源媒体播放器 mpv 提供支持，<a href="https://nicelinks.site/redirect?url=https://iina.io/" target="_blank" rel="external">IINA</a> 可以播放您拥有的几乎所有媒体文件。在 youtube-dl 和我们的浏览器扩展程序的支持下，您还可以一键在 <code>IINA</code> 中播放各种在线流媒体。更令人惊喜的是，<a href="https://nicelinks.site/redirect?url=https://iina.io/" target="_blank" rel="external">IINA</a> 在 GPLv3 许可下，是<strong>免费</strong>、<strong>开源</strong>的，且仍在积极开发中。目前。已被来自世界各地的翻译人员，翻译成 20 多种语言。您可以通过<a href="https://nicelinks.site/redirect?url=https://translate.iina.io/" target="_blank" rel="external">翻译平台</a>（由 Crowdin 提供支持）自由改进翻译或添加新语言。</p>
-<p>── 出自<a href="https://nicelinks.site/post/6196456960f6c5569db65f1e" target="_blank" rel="external">倾城之链 - IINA - The modern media player for macOS</a></p>
-<h2 id="专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等-Affde营销"><a href="#专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等-Affde营销" class="headerlink" title="专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等 - Affde营销"></a><a href="https://nicelinks.site/post/6193ac80038ee31b947bb918" target="_blank" rel="external">专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等 - Affde营销</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/营销" target="_blank" rel="external"><code>营销</code></a> · <a href="https://nicelinks.site/tags/SEO" target="_blank" rel="external"><code>SEO</code></a> · <a href="https://nicelinks.site/tags/广告" target="_blank" rel="external"><code>广告</code></a></p>
-<p><strong>关键字</strong>：网络营销, seo, 亲属关系, 广告, 网站流量</p>
-<blockquote>
-<p>Affde 营销，专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.affde.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等 - Affde营销"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.affde.com/zh-CN/" target="_blank" rel="external">Affde 营销</a>，专业的营销网站，包括会员，谷歌广告，Adsense，出口电子商务等。所提供的内容，包含营销学、写博客、SEO、互联网销售、科技类、电子商务、电子邮件营销、社交媒体等等。最近通过 Google 检索些内容，很多都指向到 <a href="https://nicelinks.site/redirect?url=https://www.affde.com/zh-CN/" target="_blank" rel="external">Affde 营销</a>平台，进而才慢慢关注到它。值得一提的，该平台在短短半年内，流量从无做到月百万流量，其实力可见一斑。对<code>营销</code>感兴趣的朋友，可以考虑关注下，闲来研究。</p>
-<p>── 出自<a href="https://nicelinks.site/post/6193ac80038ee31b947bb918" target="_blank" rel="external">倾城之链 - 专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等 - Affde营销</a></p>
-<h2 id="SVG-to-PNG-–-Convert-SVG-files-to-PNG-Online"><a href="#SVG-to-PNG-–-Convert-SVG-files-to-PNG-Online" class="headerlink" title="SVG to PNG – Convert SVG files to PNG Online"></a><a href="https://nicelinks.site/post/61924680038ee31b947bb914" target="_blank" rel="external">SVG to PNG – Convert SVG files to PNG Online</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/SVG" target="_blank" rel="external"><code>SVG</code></a> · <a href="https://nicelinks.site/tags/转换" target="_blank" rel="external"><code>转换</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<blockquote>
-<p>This free online SVG to PNG converter allows you to convert SVG files to PNG images, quickly and easily.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/svgtopng.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - SVG to PNG – Convert SVG files to PNG Online"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://svgtopng.com/" target="_blank" rel="external">SVG to PNG</a>， 将 SVG 文件在线转换为 PNG 的工具；其具体操作步骤如下：</p>
-<ul>
-<li>点击上传文档按钮并且选择多达 20 个您希望转换的 SVG 文档。</li>
-<li>等候转换过程结束，并下载每一个文档，使用缩略图或者归类到 ZIP 压缩存档中。</li>
-</ul>
-<p>使用此免费在线 SVG 至 PNG 转换软件，允许您将 SVG 文档转换成 PNG 文档，轻松且简单，无需安装任何软件。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61924680038ee31b947bb914" target="_blank" rel="external">倾城之链 - SVG to PNG – Convert SVG files to PNG Online</a></p>
-<h2 id="Sourcegraph"><a href="#Sourcegraph" class="headerlink" title="Sourcegraph"></a><a href="https://nicelinks.site/post/6190d302038ee31b947bb912" target="_blank" rel="external">Sourcegraph</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/开发者" target="_blank" rel="external"><code>开发者</code></a> · <a href="https://nicelinks.site/tags/Github" target="_blank" rel="external"><code>Github</code></a> · <a href="https://nicelinks.site/tags/搜索" target="_blank" rel="external"><code>搜索</code></a></p>
-<blockquote>
-<p>Sourcegraph is a web-based code search and navigation tool for dev teams. Search, navigate, and review code. Find answers.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/sourcegraph.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Sourcegraph"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://sourcegraph.com/" target="_blank" rel="external">Sourcegraph</a> 是一个基于网络的开发团队的代码搜索和导航工具。通过搜索、导航和审查代码，来寻找答案。基于 <a href="https://nicelinks.site/redirect?url=https://sourcegraph.com/" target="_blank" rel="external">Sourcegraph</a>，可以使程序员，更好地搜索和浏览 GitHub上的代码。数以万计的开发者都在使用 <a href="https://nicelinks.site/redirect?url=https://sourcegraph.com/" target="_blank" rel="external">Sourcegraph</a>，来浏览和搜索 GitHub、GitLab 上的代码；不论是查看文件，还是 Review PR，都可以将鼠标悬停在代码上，以查看工具提示中的类型签名和文档，单击相应的 tooltip，还可以使用<strong>转到定义</strong>，查找引用或启动全文搜索功能。除了功能强大，Sourcegraph 给人最深的印象是：<strong>极速</strong>，<strong>免费</strong>。</p>
-<p>Sourcegraph 提供了 <a href="https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack" target="_blank" rel="external">Chrome 扩展</a>，安装后，可以向 GitHub、GitLab 和其他主机添加代码智能：悬停、定义、引用；适用于 20 多种语言。主要涉及的功能有：代码主机上的代码智能；带有文档和类型信息的悬停工具提示；转到定义；查找参考。除此之外，<a href="https://nicelinks.site/redirect?url=https://sourcegraph.com/" target="_blank" rel="external">Sourcegraph</a> 与第三方服务集成，例如 Codecov 覆盖覆盖、在编辑器中打开的按钮等与 Sourcegraph 扩展的集成。</p>
-<p>使用 <a href="https://nicelinks.site/redirect?url=https://sourcegraph.com/" target="_blank" rel="external">Sourcegraph</a> 更快地查找和修复所有代码中的问题。加入新的代码库，进行大规模重构，提高效率，解决安全风险，根本原因事件等。如果您也从事编程相关工作，Sourcegraph 你值得拥有；欲更多了解，可参见 <a href="https://nicelinks.site/redirect?url=https://about.sourcegraph.com/" target="_blank" rel="external">About Sourcegraph</a>。</p>
-<p>── 出自<a href="https://nicelinks.site/post/6190d302038ee31b947bb912" target="_blank" rel="external">倾城之链 - Sourcegraph</a></p>
-<h2 id="致美化-最专业的桌面美化交流平台-漫锋网"><a href="#致美化-最专业的桌面美化交流平台-漫锋网" class="headerlink" title="致美化 - 最专业的桌面美化交流平台 - 漫锋网"></a><a href="https://nicelinks.site/post/6190be06038ee31b947bb910" target="_blank" rel="external">致美化 - 最专业的桌面美化交流平台 - 漫锋网</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a> · <a href="https://nicelinks.site/tags/壁纸" target="_blank" rel="external"><code>壁纸</code></a> · <a href="https://nicelinks.site/tags/图片" target="_blank" rel="external"><code>图片</code></a></p>
-<p><strong>关键字</strong>：致美化, 美化, 主题, 漫锋网</p>
-<blockquote>
-<p>致美化是国内最专业的桌面美化研究平台，聚集了超过 50 万的活跃用户，你可以在此个性化你的设备，探索及下载丰富多彩的电脑主题、壁纸、图标、皮肤等酷炫的桌面美化素材及教程。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/zhutix.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 致美化 - 最专业的桌面美化交流平台 - 漫锋网"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://zhutix.com/" target="_blank" rel="external">致美化</a>，国内知名的桌面美化资源分享平台。创办于 2014  年，是一个集学习交流、作品展示、资源共享的大型视觉美化类网站平台。该站从创办之初，就致力服务于广大电脑用户，提供丰富实用的美化资源，深受广大电脑用户的喜爱，拥有全国各地近 20万 忠实用户群，且有以点带面、口碑相传的良好优势。网站成立数年来，流量保持稳定上升趋势。</p>
-<p><a href="https://nicelinks.site/redirect?url=https://zhutix.com/" target="_blank" rel="external">致美化</a>所提供的内容，也颇为丰富。包括电脑主题、使用教程、美化工具等（Windows 系统）。还提供雨滴皮肤、鼠标指针、横屏壁纸、竖屏壁纸、动态壁纸等。另外，还有专题、秀桌面、问答等模块。</p>
-<p>── 出自<a href="https://nicelinks.site/post/6190be06038ee31b947bb910" target="_blank" rel="external">倾城之链 - 致美化 - 最专业的桌面美化交流平台 - 漫锋网</a></p>
-<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>积土成山，风雨兴焉；积水成渊，蛟龙生焉；积善成德，而神明自得，圣心备焉。<strong>故不积跬步，无以至千里；不积小流，无以成江海</strong>。骐骥一跃，不能十步；驽马十驾，功在不舍。<strong>锲而舍之，朽木不折；锲而不舍，金石可镂</strong>。──  先秦 · 荀子《劝学》</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://forum.lovejade.cn/d/118-39" target="_blank" rel="external">优质网站同好者周刊（第 39 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/116-38" target="_blank" rel="external">优质网站同好者周刊（第 38 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/112-37" target="_blank" rel="external">优质网站同好者周刊（第 37 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/93-31" target="_blank" rel="external">优质网站同好者周刊（第 31 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/90-30" target="_blank" rel="external">优质网站同好者周刊（第 30 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
+<p><img src="https://nicelinks.oss-cn-shenzhen.aliyuncs.com/cloud.tencent.com.png" alt="腾讯云服务器使用感受，及折腾感记"></p>
+<p>有必要分享下所购买的规格及价格，腾讯云因为众所周知的原因，促销是真的便宜，2核 4GB 3Mbps，3 年也才 707 人民币；不过其续费是真的贵，一年就需要 4049 元；这种“杀熟”的玩法，国内的几个厂商，可谓“一丘之貉”；阿里云在这一块儿，有过之而无不及：1 核 1 GB 1Mbps，续费一年就需要 1700 元 ── 这也是想尝试下其他厂商产品的缘由。</p>
+<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ol>
+<li>腾讯或许是不自信？自家产品（无论是公众号、还是云服务器），对扫码登录，有一种无以复加的执著；即便是 QQ 注册账号，登录时也必须再加一道微信扫码。而且，登录有效期极短，这给人体验十分不好。</li>
+<li>比较习惯使用 Ubuntu 系统；首次登录时候，总也登录不上，说是账号密码错误，好一番折腾，各种查找文档才解决 ── 原来腾讯云 Ubuntu 系统账户名默认为 <code>ubuntu</code>；后起之辈，搞得与业界不一致，这样是处于什么考量呢？十分不解。</li>
+<li>基于「账号密码」登录服务器，相对来说很繁琐。原本想换成基于 SSH 登录，各种折腾，竟然不能如愿；后参考文档 ── <a href="https://cloud.tencent.com/document/product/213/35700" target="_blank" rel="external">使用 SSH 登录 Linux 实例</a>，一番操作倒是可以登录，却仍要输入密码，谜之设定，也是不得不服。</li>
+<li>无论是通过网页，还是基于终端操作，其体验尚可，与其他竞品倒是没有明显不足。值得一提的是，其云服务器，因为内置了 <a href="https://nicelinks.site/redirect?url=https://snapcraft.io/" target="_blank" rel="external">snap</a>，因此安装些软件（如 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a>、<a href="https://nicelinks.site/post/5b37d29e187e143b63cf01f0" target="_blank" rel="external">Flutter</a>），倒是非常方便。</li>
+</ol>
+<h2 id="折腾笔记"><a href="#折腾笔记" class="headerlink" title="折腾笔记"></a>折腾笔记</h2><h3 id="基于-Docker-部署-Wiki"><a href="#基于-Docker-部署-Wiki" class="headerlink" title="基于 Docker 部署 Wiki"></a>基于 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a> 部署 Wiki</h3>]]></content>
     
     <summary type="html">
     
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
+      年岁渐长，有那么些时候，总要找个机会或方向，为整日疲于挣钱的自己花点钱。前阵子，有入手 Apple SERIES 7 外，趁着腾讯云搞促销，有购买一台云服务器，以供业余把玩些有趣的项目。先前有使用 DigitalOcean 以及阿里云的云服务器产品，但初入手腾讯云服务器，仍费了些功夫，在此记录一篇文章，以记载个中使用感受，及折腾感记，希望对“后来者”，有所帮助。
     
     </summary>
     
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+      <category term="Toss" scheme="https://www.jeffjade.com/categories/Toss/"/>
     
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
   <entry>
-    <title>优质网站同好者周刊（第 40 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/11/17/229-nicelinks-weekly-041/"/>
-    <id>https://www.jeffjade.com/2021/11/17/229-nicelinks-weekly-041/</id>
-    <published>2021-11-17T13:21:00.000Z</published>
-    <updated>2021-11-26T13:53:01.533Z</updated>
+    <title>优质网站同好者周刊（第 41 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/11/26/229-nicelinks-weekly-041/"/>
+    <id>https://www.jeffjade.com/2021/11/26/229-nicelinks-weekly-041/</id>
+    <published>2021-11-26T13:21:00.000Z</published>
+    <updated>2021-11-26T18:22:02.806Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
 <a id="more"></a>
@@ -212,6 +146,106 @@
 <li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/93-31" target="_blank" rel="external">优质网站同好者周刊（第 31 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
+    
+    </summary>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优质网站同好者周刊（第 40 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/11/17/228-nicelinks-weekly-040/"/>
+    <id>https://www.jeffjade.com/2021/11/17/228-nicelinks-weekly-040/</id>
+    <published>2021-11-17T13:21:00.000Z</published>
+    <updated>2021-11-18T15:54:08.336Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
+<a id="more"></a>
+<h2 id="IINA-The-modern-media-player-for-macOS"><a href="#IINA-The-modern-media-player-for-macOS" class="headerlink" title="IINA - The modern media player for macOS"></a><a href="https://nicelinks.site/post/6196456960f6c5569db65f1e" target="_blank" rel="external">IINA - The modern media player for macOS</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Mac" target="_blank" rel="external"><code>Mac</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/开源" target="_blank" rel="external"><code>开源</code></a></p>
+<p><strong>关键字</strong>：MacOS, Modern Media, Player, IINA, 免费, 开源, 画中画, 媒体播放器</p>
+<blockquote>
+<p>IINA - The modern media player for macOS. </p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/iina.io.png?x-oss-process=style/png2jpg" alt="倾城之链 - IINA - The modern media player for macOS"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://iina.io/" target="_blank" rel="external">IINA</a>，适用于 macOS 的 现代媒体播放器。她天生就是一个现代 macOS 应用程序，从它的框架到用户界面。它采用了 MacOS 的后 Yosemite 设计语言，并紧跟 Force Touch、Touch Bar、黑暗模式（包括经过调整的颜色、图标和纹理，提供时尚和统一的外观）和画中画（支持原生画中画模式，让您既可以享受本地视频，也可以享受在线视频，而不会分心）等新技术的步伐。除此之外，<a href="https://nicelinks.site/redirect?url=https://iina.io/" target="_blank" rel="external">IINA</a> 还提供触控栏、系统媒体控制、可定制 UI、在线字幕、音乐模式、鼠标和触控板手势、缩略图预览、插件系统等功能。</p>
+<p>IINA 是用 Swift 编程语言编写的，由开源媒体播放器 mpv 提供支持，<a href="https://nicelinks.site/redirect?url=https://iina.io/" target="_blank" rel="external">IINA</a> 可以播放您拥有的几乎所有媒体文件。在 youtube-dl 和我们的浏览器扩展程序的支持下，您还可以一键在 <code>IINA</code> 中播放各种在线流媒体。更令人惊喜的是，<a href="https://nicelinks.site/redirect?url=https://iina.io/" target="_blank" rel="external">IINA</a> 在 GPLv3 许可下，是<strong>免费</strong>、<strong>开源</strong>的，且仍在积极开发中。目前。已被来自世界各地的翻译人员，翻译成 20 多种语言。您可以通过<a href="https://nicelinks.site/redirect?url=https://translate.iina.io/" target="_blank" rel="external">翻译平台</a>（由 Crowdin 提供支持）自由改进翻译或添加新语言。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6196456960f6c5569db65f1e" target="_blank" rel="external">倾城之链 - IINA - The modern media player for macOS</a></p>
+<h2 id="专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等-Affde营销"><a href="#专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等-Affde营销" class="headerlink" title="专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等 - Affde营销"></a><a href="https://nicelinks.site/post/6193ac80038ee31b947bb918" target="_blank" rel="external">专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等 - Affde营销</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/营销" target="_blank" rel="external"><code>营销</code></a> · <a href="https://nicelinks.site/tags/SEO" target="_blank" rel="external"><code>SEO</code></a> · <a href="https://nicelinks.site/tags/广告" target="_blank" rel="external"><code>广告</code></a></p>
+<p><strong>关键字</strong>：网络营销, seo, 亲属关系, 广告, 网站流量</p>
+<blockquote>
+<p>Affde 营销，专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/www.affde.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等 - Affde营销"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.affde.com/zh-CN/" target="_blank" rel="external">Affde 营销</a>，专业的营销网站，包括会员，谷歌广告，Adsense，出口电子商务等。所提供的内容，包含营销学、写博客、SEO、互联网销售、科技类、电子商务、电子邮件营销、社交媒体等等。最近通过 Google 检索些内容，很多都指向到 <a href="https://nicelinks.site/redirect?url=https://www.affde.com/zh-CN/" target="_blank" rel="external">Affde 营销</a>平台，进而才慢慢关注到它。值得一提的，该平台在短短半年内，流量从无做到月百万流量，其实力可见一斑。对<code>营销</code>感兴趣的朋友，可以考虑关注下，闲来研究。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6193ac80038ee31b947bb918" target="_blank" rel="external">倾城之链 - 专业的营销网站，包括会员，谷歌广告，adsense，出口电子商务等 - Affde营销</a></p>
+<h2 id="SVG-to-PNG-–-Convert-SVG-files-to-PNG-Online"><a href="#SVG-to-PNG-–-Convert-SVG-files-to-PNG-Online" class="headerlink" title="SVG to PNG – Convert SVG files to PNG Online"></a><a href="https://nicelinks.site/post/61924680038ee31b947bb914" target="_blank" rel="external">SVG to PNG – Convert SVG files to PNG Online</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/SVG" target="_blank" rel="external"><code>SVG</code></a> · <a href="https://nicelinks.site/tags/转换" target="_blank" rel="external"><code>转换</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
+<blockquote>
+<p>This free online SVG to PNG converter allows you to convert SVG files to PNG images, quickly and easily.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/svgtopng.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - SVG to PNG – Convert SVG files to PNG Online"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://svgtopng.com/" target="_blank" rel="external">SVG to PNG</a>， 将 SVG 文件在线转换为 PNG 的工具；其具体操作步骤如下：</p>
+<ul>
+<li>点击上传文档按钮并且选择多达 20 个您希望转换的 SVG 文档。</li>
+<li>等候转换过程结束，并下载每一个文档，使用缩略图或者归类到 ZIP 压缩存档中。</li>
+</ul>
+<p>使用此免费在线 SVG 至 PNG 转换软件，允许您将 SVG 文档转换成 PNG 文档，轻松且简单，无需安装任何软件。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61924680038ee31b947bb914" target="_blank" rel="external">倾城之链 - SVG to PNG – Convert SVG files to PNG Online</a></p>
+<h2 id="Sourcegraph"><a href="#Sourcegraph" class="headerlink" title="Sourcegraph"></a><a href="https://nicelinks.site/post/6190d302038ee31b947bb912" target="_blank" rel="external">Sourcegraph</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/开发者" target="_blank" rel="external"><code>开发者</code></a> · <a href="https://nicelinks.site/tags/Github" target="_blank" rel="external"><code>Github</code></a> · <a href="https://nicelinks.site/tags/搜索" target="_blank" rel="external"><code>搜索</code></a></p>
+<blockquote>
+<p>Sourcegraph is a web-based code search and navigation tool for dev teams. Search, navigate, and review code. Find answers.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/sourcegraph.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Sourcegraph"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://sourcegraph.com/" target="_blank" rel="external">Sourcegraph</a> 是一个基于网络的开发团队的代码搜索和导航工具。通过搜索、导航和审查代码，来寻找答案。基于 <a href="https://nicelinks.site/redirect?url=https://sourcegraph.com/" target="_blank" rel="external">Sourcegraph</a>，可以使程序员，更好地搜索和浏览 GitHub上的代码。数以万计的开发者都在使用 <a href="https://nicelinks.site/redirect?url=https://sourcegraph.com/" target="_blank" rel="external">Sourcegraph</a>，来浏览和搜索 GitHub、GitLab 上的代码；不论是查看文件，还是 Review PR，都可以将鼠标悬停在代码上，以查看工具提示中的类型签名和文档，单击相应的 tooltip，还可以使用<strong>转到定义</strong>，查找引用或启动全文搜索功能。除了功能强大，Sourcegraph 给人最深的印象是：<strong>极速</strong>，<strong>免费</strong>。</p>
+<p>Sourcegraph 提供了 <a href="https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack" target="_blank" rel="external">Chrome 扩展</a>，安装后，可以向 GitHub、GitLab 和其他主机添加代码智能：悬停、定义、引用；适用于 20 多种语言。主要涉及的功能有：代码主机上的代码智能；带有文档和类型信息的悬停工具提示；转到定义；查找参考。除此之外，<a href="https://nicelinks.site/redirect?url=https://sourcegraph.com/" target="_blank" rel="external">Sourcegraph</a> 与第三方服务集成，例如 Codecov 覆盖覆盖、在编辑器中打开的按钮等与 Sourcegraph 扩展的集成。</p>
+<p>使用 <a href="https://nicelinks.site/redirect?url=https://sourcegraph.com/" target="_blank" rel="external">Sourcegraph</a> 更快地查找和修复所有代码中的问题。加入新的代码库，进行大规模重构，提高效率，解决安全风险，根本原因事件等。如果您也从事编程相关工作，Sourcegraph 你值得拥有；欲更多了解，可参见 <a href="https://nicelinks.site/redirect?url=https://about.sourcegraph.com/" target="_blank" rel="external">About Sourcegraph</a>。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6190d302038ee31b947bb912" target="_blank" rel="external">倾城之链 - Sourcegraph</a></p>
+<h2 id="致美化-最专业的桌面美化交流平台-漫锋网"><a href="#致美化-最专业的桌面美化交流平台-漫锋网" class="headerlink" title="致美化 - 最专业的桌面美化交流平台 - 漫锋网"></a><a href="https://nicelinks.site/post/6190be06038ee31b947bb910" target="_blank" rel="external">致美化 - 最专业的桌面美化交流平台 - 漫锋网</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a> · <a href="https://nicelinks.site/tags/壁纸" target="_blank" rel="external"><code>壁纸</code></a> · <a href="https://nicelinks.site/tags/图片" target="_blank" rel="external"><code>图片</code></a></p>
+<p><strong>关键字</strong>：致美化, 美化, 主题, 漫锋网</p>
+<blockquote>
+<p>致美化是国内最专业的桌面美化研究平台，聚集了超过 50 万的活跃用户，你可以在此个性化你的设备，探索及下载丰富多彩的电脑主题、壁纸、图标、皮肤等酷炫的桌面美化素材及教程。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/zhutix.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 致美化 - 最专业的桌面美化交流平台 - 漫锋网"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://zhutix.com/" target="_blank" rel="external">致美化</a>，国内知名的桌面美化资源分享平台。创办于 2014  年，是一个集学习交流、作品展示、资源共享的大型视觉美化类网站平台。该站从创办之初，就致力服务于广大电脑用户，提供丰富实用的美化资源，深受广大电脑用户的喜爱，拥有全国各地近 20万 忠实用户群，且有以点带面、口碑相传的良好优势。网站成立数年来，流量保持稳定上升趋势。</p>
+<p><a href="https://nicelinks.site/redirect?url=https://zhutix.com/" target="_blank" rel="external">致美化</a>所提供的内容，也颇为丰富。包括电脑主题、使用教程、美化工具等（Windows 系统）。还提供雨滴皮肤、鼠标指针、横屏壁纸、竖屏壁纸、动态壁纸等。另外，还有专题、秀桌面、问答等模块。</p>
+<p>── 出自<a href="https://nicelinks.site/post/6190be06038ee31b947bb910" target="_blank" rel="external">倾城之链 - 致美化 - 最专业的桌面美化交流平台 - 漫锋网</a></p>
+<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
+<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
+
+<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>积土成山，风雨兴焉；积水成渊，蛟龙生焉；积善成德，而神明自得，圣心备焉。<strong>故不积跬步，无以至千里；不积小流，无以成江海</strong>。骐骥一跃，不能十步；驽马十驾，功在不舍。<strong>锲而舍之，朽木不折；锲而不舍，金石可镂</strong>。──  先秦 · 荀子《劝学》</p>
+<blockquote>
+<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
+</blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://forum.lovejade.cn/d/118-39" target="_blank" rel="external">优质网站同好者周刊（第 39 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/116-38" target="_blank" rel="external">优质网站同好者周刊（第 38 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/112-37" target="_blank" rel="external">优质网站同好者周刊（第 37 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/93-31" target="_blank" rel="external">优质网站同好者周刊（第 31 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/90-30" target="_blank" rel="external">优质网站同好者周刊（第 30 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
 <li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
 <li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
@@ -2004,138 +2038,6 @@ Jenkins
 <p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
 <h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
 <li><a href="https://www.jeffjade.com/2021/07/29/210-nicelinks-weekly-024/">优质网站同好者周刊（第 25 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/23/209-nicelinks-weekly-023/">优质网站同好者周刊（第 23 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 22 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 21 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/01/206-nicelinks-weekly-020/">优质网站同好者周刊（第 20 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/06/24/205-nicelinks-weekly-019/">优质网站同好者周刊（第 19 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/06/17/204-nicelinks-weekly-018/">优质网站同好者周刊（第 18 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/06/10/203-nicelinks-weekly-017/">优质网站同好者周刊（第 17 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优质网站同好者周刊（第 24 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/07/29/210-nicelinks-weekly-024/"/>
-    <id>https://www.jeffjade.com/2021/07/29/210-nicelinks-weekly-024/</id>
-    <published>2021-07-29T13:21:00.000Z</published>
-    <updated>2021-07-29T15:07:06.419Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="Builder-io-Drag-and-drop-page-builder-and-CMS-Builder-io"><a href="#Builder-io-Drag-and-drop-page-builder-and-CMS-Builder-io" class="headerlink" title="Builder.io Drag and drop page builder and CMS - Builder.io"></a><a href="https://nicelinks.site/post/61029aa88c195005d758ab87" target="_blank" rel="external">Builder.io Drag and drop page builder and CMS - Builder.io</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/无代码" target="_blank" rel="external"><code>无代码</code></a> · <a href="https://nicelinks.site/tags/可视化" target="_blank" rel="external"><code>可视化</code></a> · <a href="https://nicelinks.site/tags/编辑器" target="_blank" rel="external"><code>编辑器</code></a></p>
-<blockquote>
-<p>Build and optimize digital experiences for any tech stack, visually.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.builder.io.png?x-oss-process=style/png2jpg" alt="倾城之链 - Builder.io Drag and drop page builder and CMS - Builder.io"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.builder.io/" target="_blank" rel="external">Builder.io</a>，一个可视化的开发平台，可以用来快速创建落地页、管理内容、提高网站性能、定制体验、消除依赖、建立店面等等，且无需编码。<a href="https://nicelinks.site/redirect?url=https://www.builder.io/" target="_blank" rel="external">Builder.io</a> 提供强大灵活的拖放可视化编辑器；可与其他网站或应用程序集成，以无缝管理和发布内容；支持 A/B 测试体验、目标内容和细分受众以推动增长；除此之外，还具有以下特征（来自官方描述）：</p>
-<h3 id="可视化构建，增长更快"><a href="#可视化构建，增长更快" class="headerlink" title="可视化构建，增长更快"></a>可视化构建，增长更快</h3><ul>
-<li>无需经常依赖开发人员即可创建和管理内容；</li>
-<li>即时发布内容和体验；</li>
-<li>您创建的一切都在引擎盖下快速且高性能；</li>
-<li>加快那些宝贵的构建-测量-学习周期，以更快地找到增长；</li>
-</ul>
-<h3 id="非常的灵活性，没有限制"><a href="#非常的灵活性，没有限制" class="headerlink" title="非常的灵活性，没有限制"></a>非常的灵活性，没有限制</h3><ul>
-<li>与任何技术堆栈或平台兼容；</li>
-<li>利用您现有的设计系统，从 Figma 导入，或使用我们的模板；</li>
-<li>使用您自己的数据（如产品目录）构建动态体验；</li>
-<li>将任何自主开发的解决方案或第三方应用程序集成到平台中；</li>
-</ul>
-<h3 id="消除依赖，移动更快"><a href="#消除依赖，移动更快" class="headerlink" title="消除依赖，移动更快"></a>消除依赖，移动更快</h3><ul>
-<li>使用角色和权限控制您的工作流程；</li>
-<li>与您的团队实时协作；</li>
-<li>管理跨无数站点、应用程序、商店和区域设置的内容；</li>
-<li>解放开发人员来编写代码，而不是内容；</li>
-</ul>
-<p><a href="https://nicelinks.site/redirect?url=https://www.builder.io/" target="_blank" rel="external">Builder.io</a> 无需代码，即可直观地构建和优化数字体验。其目标是：使任何人都能够构建数字体验，并将更多想法变为现实。他们的方法是：将可视化连接到现有的软件系统，以满足开发人员和非开发人员的需求。如果您想了解更多，可以参见 <a href="https://nicelinks.site/redirect?url=https://www.builder.io/m/about-us" target="_blank" rel="external">关于 Builder.io</a>。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61029aa88c195005d758ab87" target="_blank" rel="external">倾城之链 - Builder.io Drag and drop page builder and CMS - Builder.io</a></p>
-<h2 id="美剧迷-美剧大全-最新好看的天天美剧下载-在线观看-美剧天堂"><a href="#美剧迷-美剧大全-最新好看的天天美剧下载-在线观看-美剧天堂" class="headerlink" title="美剧迷 - 美剧大全,最新好看的天天美剧下载,在线观看,美剧天堂"></a><a href="https://nicelinks.site/post/610296ca8c195005d758ab85" target="_blank" rel="external">美剧迷 - 美剧大全,最新好看的天天美剧下载,在线观看,美剧天堂</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/视频" target="_blank" rel="external"><code>视频</code></a> · <a href="https://nicelinks.site/tags/在线" target="_blank" rel="external"><code>在线</code></a> · <a href="https://nicelinks.site/tags/美剧" target="_blank" rel="external"><code>美剧</code></a></p>
-<p><strong>关键字</strong>：美剧, 美剧下载, 天天美剧, 美剧天堂, 美剧网, 美剧在线</p>
-<blockquote>
-<p>美剧迷【移动网络用❤meijumi.tv❤访问】专业的美剧下载网站，为您提供最新最全的高清美剧片源下载，各类精彩美剧第一时间更新,热门美剧排行榜，经典最好看美剧推荐。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.meijumi.net.png?x-oss-process=style/png2jpg" alt="倾城之链 - 美剧迷 - 美剧大全,最新好看的天天美剧下载,在线观看,美剧天堂"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.meijumi.net/" target="_blank" rel="external">美剧迷</a>，美剧在线观看网站（当然也有英剧、韩剧）；如果您是美剧爱好者，可以关注；它不仅提供最新的美剧，而且会给出非常详细的介绍，并且提供现在观看功能（带有多语言字幕）。除此之外，类型划分清晰，且提供搜索功能；额外还提供<code>随便看看</code>、<code>热剧排行</code>、<code>热门剧评</code>等模块，相信您可以快速从该网站，寻找到您喜欢的剧集。</p>
-<p>── 出自<a href="https://nicelinks.site/post/610296ca8c195005d758ab85" target="_blank" rel="external">倾城之链 - 美剧迷 - 美剧大全,最新好看的天天美剧下载,在线观看,美剧天堂</a></p>
-<h2 id="btw-顺便提一句"><a href="#btw-顺便提一句" class="headerlink" title="btw - 顺便提一句"></a><a href="https://nicelinks.site/post/61024db98c195005d758ab83" target="_blank" rel="external">btw - 顺便提一句</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/开源" target="_blank" rel="external"><code>开源</code></a> · <a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a></p>
-<blockquote>
-<p>btw is the open source platform to understand, delight and convert your users into paying customers. Tools to supercharge your product-led growth.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.btw.so.png?x-oss-process=style/png2jpg" alt="倾城之链 - btw - 顺便提一句"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.btw.so/" target="_blank" rel="external">btw</a> 是一个开源的平台，收录了 200 多种<a href="https://nicelinks.site/redirect?url=https://www.btw.so/zh/open-source-alternatives" target="_blank" rel="external">开源工具</a>，可替代企业日常运营所需。其核心价值在于，通过实时聊天（扩展您的客户支持并为您的客户服务）、自动捕获（花更少的时间设置跟踪以了解您的客户）、分析（衡量您的绩效并转化您的客户）等，协助将您的客户转变为超级粉丝，从而加速以产品为主导的增长。如果您感兴趣，可以深入了解下。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61024db98c195005d758ab83" target="_blank" rel="external">倾城之链 - btw - 顺便提一句</a></p>
-<h2 id="国内原创在线漫画平台-好看的漫画大全-漫客栈"><a href="#国内原创在线漫画平台-好看的漫画大全-漫客栈" class="headerlink" title="国内原创在线漫画平台_好看的漫画大全 - 漫客栈"></a><a href="https://nicelinks.site/post/610142bd21a633062a515e9b" target="_blank" rel="external">国内原创在线漫画平台_好看的漫画大全 - 漫客栈</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/漫画" target="_blank" rel="external"><code>漫画</code></a> · <a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a> · <a href="https://nicelinks.site/tags/在线" target="_blank" rel="external"><code>在线</code></a></p>
-<p><strong>关键字</strong>：漫画大全, 漫画图片, 漫画投稿, 在线漫画, 斗破苍穹漫画, 斗罗大陆漫画, 偷星九月天, 穿越西元3000后, 凤逆天下, 风起苍岚, 妃夕妍雪, BL漫画, 耽美漫画, 知音漫客, 飒漫画, 漫画下载</p>
-<blockquote>
-<p>中国领先的原创漫画平台，七年来积累了大量的签约作者和好看的漫画作品，斗破苍穹漫画、斗罗大陆漫画，更有APP和漫画下载等精彩内容等你发现，看漫画，就来漫客栈！</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.mkzhan.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 国内原创在线漫画平台_好看的漫画大全 - 漫客栈"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.mkzhan.com/" target="_blank" rel="external">漫客栈</a>，国内原创在线漫画平台；隶属小明太极（湖北）国漫文化有限公司，是该公司旗下互联网漫画平台之一；以「每日更新，全免快清」为特色，利用大数据分析用户的喜好，精准定制用户喜爱的漫画并自动推送，并根据用户反馈实时优化漫画内容，充分满足用户的阅读需要，为用户提供最优质的漫画作品。</p>
-<p><a href="https://nicelinks.site/redirect?url=https://www.mkzhan.com/" target="_blank" rel="external">漫客栈</a>涉及题材非常广泛，诸如：霸总、修真、恋爱、校园、冒险、搞笑、生活、热血、架空、后宫、励志、玄幻、悬疑、恐怖、灵异、动作、科幻、战争、古风、穿越、竞技、真人、同人等等；值得一提的是，<a href="https://nicelinks.site/redirect?url=https://www.mkzhan.com/" target="_blank" rel="external">漫客栈</a>是一个平台，无论您是<code>读者</code>，还是<code>作者</code>，都能在该平台有所得。</p>
-<p>── 出自<a href="https://nicelinks.site/post/610142bd21a633062a515e9b" target="_blank" rel="external">倾城之链 - 国内原创在线漫画平台_好看的漫画大全 - 漫客栈</a></p>
-<h2 id="AutoDraw-Fast-drawing-for-everyone"><a href="#AutoDraw-Fast-drawing-for-everyone" class="headerlink" title="AutoDraw - Fast drawing for everyone"></a><a href="https://nicelinks.site/post/61011b5021a633062a515e99" target="_blank" rel="external">AutoDraw - Fast drawing for everyone</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/AI" target="_blank" rel="external"><code>AI</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<blockquote>
-<p>Fast drawing for everyone. AutoDraw pairs machine learning with drawings from talented artists to help you draw stuff fast.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.autodraw.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - AutoDraw - Fast drawing for everyone"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.autodraw.com/" target="_blank" rel="external">AutoDraw </a> 是 Google 旗下的 A.I. Experiment 推出了一款新工具，在机器学习技术的加持下，<a href="https://nicelinks.site/redirect?url=https://www.autodraw.com/" target="_blank" rel="external">AutoDraw </a> 能识别出用户用简单线条画出的图形，并直接替换为系统内置的「准确」图形。Google 表示目前的快速绘图解决方案并不多，而通过 AutoDraw，希望用户能在短时间内完成海报、宣传单等作品的部分图形元素创作。</p>
-<p><a href="https://nicelinks.site/redirect?url=https://www.autodraw.com/" target="_blank" rel="external">AutoDraw </a> 的网页界面非常简洁，画板在正中位置，左侧是工具栏，在绘制过程中还能为图形填色（24 色），而上方则是图形候选区，比如你简单几笔画出了一辆自行车，上方会显示<strong>候选图案</strong>以供选择。绘制完成后，可以直接以 png 格式下载保存。更赞的是，<a href="https://nicelinks.site/redirect?url=https://www.autodraw.com/" target="_blank" rel="external">AutoDraw </a> 除了能<strong>免费</strong>使用外，它还几乎支持所有设备，毕竟这是一款 Web 端工具。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61011b5021a633062a515e99" target="_blank" rel="external">倾城之链 - AutoDraw - Fast drawing for everyone</a></p>
-<h2 id="界面新闻-只服务于独立思考的人群-Jiemian-com"><a href="#界面新闻-只服务于独立思考的人群-Jiemian-com" class="headerlink" title="界面新闻-只服务于独立思考的人群-Jiemian.com"></a><a href="https://nicelinks.site/post/60feafc421a633062a515e97" target="_blank" rel="external">界面新闻-只服务于独立思考的人群-Jiemian.com</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/新闻" target="_blank" rel="external"><code>新闻</code></a> · <a href="https://nicelinks.site/tags/资讯" target="_blank" rel="external"><code>资讯</code></a> · <a href="https://nicelinks.site/tags/媒体" target="_blank" rel="external"><code>媒体</code></a></p>
-<p><strong>关键字</strong>：界面网络, 界面新闻, 界面资讯, 界面财经, 摩尔, 歪楼, 正午, JMedia, 商业, 自媒体联盟, 资本市场, TMT, 交易, 股票</p>
-<blockquote>
-<p>界面新闻是中国具有影响力的原创财经新媒体，以财经、商业新闻为核心，布局近40个内容频道，旗下同时拥有正午故事、箭厂视频、歪楼等数个知名新媒体品牌。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.jiemian.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 界面新闻-只服务于独立思考的人群-Jiemian.com"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.jiemian.com/" target="_blank" rel="external">界面新闻</a>是中国具有影响力的原创财经新媒体，由上海报业集团出品，2014 年 9 月创立；其服务对象为：<strong>独立思考的人群</strong>。界面新闻以商业、财经新闻为核心，布局四大内容版块，超 40 个内容频道：</p>
-<ul>
-<li><strong>商业版块</strong>：在科技、地产、汽车、消费、工业、创业等领域持续关注商业前沿信息，报道国内外知名公司及品牌，树立对知名公司的影响力。</li>
-<li><strong>财经版块</strong>：从金融、投资、证券、宏观、股市等领域入手，深入资本市场，从宏观、二级市场、公司等各个层面，准确、快速、高质量报道中国资本市场动态。</li>
-<li><strong>新闻版块</strong>：专注中国时政、社会及国际重大新闻报道，同时，评论专栏及数据可视化文章提供多层次的新闻内容。</li>
-<li><strong>文化生活版块</strong>：关注流行文化，推荐品质生活，讨论文艺、书籍、历史、思想。同时寻找被主流媒体忽视的角落，用独特的社会视角和思想深度记录这个时代。</li>
-</ul>
-<p>除专业扎实的原创商业财经报道，界面新闻还通过自媒体平台、短视频、直播等形式孵化出众多有影响力的内容品牌：</p>
-<ol>
-<li><strong>界面号</strong>：原自媒体平台 JMedia 升级而成的新媒体品牌，通过财经号、城市号、媒体号三大垂直栏目，汇聚和传播互联网优质财经新闻内容，打造高质量的内容开放平台。</li>
-<li><strong>正午</strong>：致力于打造原创的非虚构写作平台，用故事凝视时代。</li>
-<li><strong>箭厂</strong>：新锐纪录片短视频品牌，国际水准制作能力，半年斩获3个国际纪录片奖，引发强烈社会反响。</li>
-<li><strong>界面 Vnews</strong>：以新闻视角出发，集各频道资深记者，发布最新“界面现场报道”及策划型短视频报道，创造网络热点话题 。呈现形式丰富多样，包括话题新闻、Vlog、动画、抖音、直播、品牌创意合作等。视角年轻有趣、视觉风格高质精良。</li>
-<li><strong>面谈</strong>：财经人物访谈节目。聚焦创投领域，百余位商界领袖、投资人、创业者在节目中分享商业理念、行业观察及价值观，记录这个时代的商业人物。</li>
-</ol>
-<p>界面新闻集合了 App 客户端、网站、微博及微信公众号等新媒体产品矩阵，除此之外，还可以在今日头条、百度、腾讯、招商银行、小米、新浪、一点资讯、搜狐、凤凰等合作渠道看到其原创优质内容。</p>
-<p>── 出自<a href="https://nicelinks.site/post/60feafc421a633062a515e97" target="_blank" rel="external">倾城之链 - 界面新闻-只服务于独立思考的人群-Jiemian.com</a></p>
-<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p><strong>遭受命运的重重打击，我满头鲜血，却头颅高昂。在愤怒和悲伤的尘世外,耸立的不过是恐怖的影子,面对未来的威胁,我无所畏惧。无论命运之门多么狭窄，无论承受怎样的惩罚，我是我命运的主宰,我是我灵魂的统帅</strong>。   ── 英国 · William Ernest Henley（1849–1903）《不可征服》</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
 <li><a href="https://www.jeffjade.com/2021/07/23/209-nicelinks-weekly-023/">优质网站同好者周刊（第 23 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 22 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 21 期）- 倾城之链</a></li>
