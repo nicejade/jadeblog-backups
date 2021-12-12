@@ -161,7 +161,7 @@
 <p>zsh: no matches found: post[TitleName]</p>
 </blockquote>
 <p>伊始用这个老报错，还不懂<strong>Ruby</strong>语言，去查看了下，用环境变量做参数可以，没报错（ENV[“Title”]来接收消息）。费了些功夫才找到的原因，参见<a href="https://ihower.tw/blog/archives/3546" target="_blank" rel="external">傳參數到 Rake 中</a>。所以这边自己稍微改了下原有的写法，比如新建一篇文章：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"># Add 2016-03－01(rake post title=&quot;xx&quot;)</div><div class="line">desc &quot;Create a post in _posts&quot;</div><div class="line">task :new do</div><div class="line">    puts &quot;Input File Path(book/life/resource/tech/tool,default _posts Root)：&quot;</div><div class="line">    @dir = STDIN.gets.chomp</div><div class="line">    puts &quot;Input File Name(for Url)：&quot;</div><div class="line">true@url = STDIN.gets.chomp</div><div class="line">trueputs &quot;Input Article Title(for Article)：&quot;</div><div class="line">true@name = STDIN.gets.chomp</div><div class="line">trueputs &quot;Input Article Categories(工具｜资源｜生活｜技术｜读书 Separated By Spaces)：&quot;</div><div class="line">true@categories = STDIN.gets.chomp</div><div class="line">    puts &quot;Input Article Tags(Separated By ,)&quot;</div><div class="line">    @tags = STDIN.gets.chomp</div><div class="line">    puts &quot;Input Article Keywords(Separated By ,)&quot;</div><div class="line">    @keywords = STDIN.gets.chomp</div><div class="line">    puts &quot;Input Article Description(Article Desc)：&quot;</div><div class="line">true@description = STDIN.gets.chomp</div><div class="line"></div><div class="line">true@slug = &quot;#&#123;@url&#125;&quot;</div><div class="line">true@slug = @slug.downcase.strip.gsub(&apos; &apos;, &apos;-&apos;)</div><div class="line">true@date = Time.now.strftime(&quot;%F&quot;)</div><div class="line">    @post_url = (@dir==&quot;&quot;) ? &quot;&quot; : (&quot;/&quot; + &quot;#&#123;@dir&#125;&quot;);</div><div class="line">true@post_name = &quot;_posts#&#123;@post_url&#125;/#&#123;@date&#125;-#&#123;@slug&#125;.md&quot;</div><div class="line">trueif File.exist?(@post_name)</div><div class="line">true   abort(&quot;Failed to create the file name already exists !&quot;)</div><div class="line">trueend</div><div class="line">trueFileUtils.touch(@post_name)</div><div class="line">trueopen(@post_name, &apos;a&apos;) do |file|</div><div class="line">true    file.puts &quot;---&quot;</div><div class="line">truetruefile.puts &quot;layout: post&quot;</div><div class="line">truetruefile.puts &quot;title: #&#123;@name&#125;&quot;</div><div class="line">truetruefile.puts &quot;date: #&#123;Time.now&#125;&quot;</div><div class="line">truetruefile.puts &quot;categories: #&#123;@categories&#125;&quot;</div><div class="line">        file.puts &quot;tags: #&#123;@tags&#125;&quot;</div><div class="line">        file.puts &quot;keywords: #&#123;@keywords&#125;&quot;</div><div class="line">        file.puts &quot;description: #&#123;@description&#125;&quot;</div><div class="line">true    file.puts &quot;---&quot;</div><div class="line">trueend</div><div class="line">trueexec &quot;vi #&#123;@post_name&#125;&quot;</div><div class="line">end</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"># Add 2016-03－01(rake post title=&quot;xx&quot;)</div><div class="line">desc &quot;Create a post in _posts&quot;</div><div class="line">task :new do</div><div class="line">    puts &quot;Input File Path(book/life/resource/tech/tool,default _posts Root)：&quot;</div><div class="line">    @dir = STDIN.gets.chomp</div><div class="line">    puts &quot;Input File Name(for Url)：&quot;</div><div class="line">  @url = STDIN.gets.chomp</div><div class="line">  puts &quot;Input Article Title(for Article)：&quot;</div><div class="line">  @name = STDIN.gets.chomp</div><div class="line">  puts &quot;Input Article Categories(工具｜资源｜生活｜技术｜读书 Separated By Spaces)：&quot;</div><div class="line">  @categories = STDIN.gets.chomp</div><div class="line">    puts &quot;Input Article Tags(Separated By ,)&quot;</div><div class="line">    @tags = STDIN.gets.chomp</div><div class="line">    puts &quot;Input Article Keywords(Separated By ,)&quot;</div><div class="line">    @keywords = STDIN.gets.chomp</div><div class="line">    puts &quot;Input Article Description(Article Desc)：&quot;</div><div class="line">  @description = STDIN.gets.chomp</div><div class="line"></div><div class="line">  @slug = &quot;#&#123;@url&#125;&quot;</div><div class="line">  @slug = @slug.downcase.strip.gsub(&apos; &apos;, &apos;-&apos;)</div><div class="line">  @date = Time.now.strftime(&quot;%F&quot;)</div><div class="line">    @post_url = (@dir==&quot;&quot;) ? &quot;&quot; : (&quot;/&quot; + &quot;#&#123;@dir&#125;&quot;);</div><div class="line">  @post_name = &quot;_posts#&#123;@post_url&#125;/#&#123;@date&#125;-#&#123;@slug&#125;.md&quot;</div><div class="line">  if File.exist?(@post_name)</div><div class="line">     abort(&quot;Failed to create the file name already exists !&quot;)</div><div class="line">  end</div><div class="line">  FileUtils.touch(@post_name)</div><div class="line">  open(@post_name, &apos;a&apos;) do |file|</div><div class="line">      file.puts &quot;---&quot;</div><div class="line">    file.puts &quot;layout: post&quot;</div><div class="line">    file.puts &quot;title: #&#123;@name&#125;&quot;</div><div class="line">    file.puts &quot;date: #&#123;Time.now&#125;&quot;</div><div class="line">    file.puts &quot;categories: #&#123;@categories&#125;&quot;</div><div class="line">        file.puts &quot;tags: #&#123;@tags&#125;&quot;</div><div class="line">        file.puts &quot;keywords: #&#123;@keywords&#125;&quot;</div><div class="line">        file.puts &quot;description: #&#123;@description&#125;&quot;</div><div class="line">      file.puts &quot;---&quot;</div><div class="line">  end</div><div class="line">  exec &quot;vi #&#123;@post_name&#125;&quot;</div><div class="line">end</div></pre></td></tr></table></figure>
 <p>运用的话，只需要<code>rake new</code>开启命令，按照其提示的一步步输入：title categories tags keywords description 等</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">➜  nicejade.github.io git:(master) ✗ rake new</div><div class="line">Input File Path(book/life/resource/tech/tool,default _posts Root)：</div><div class="line">life</div><div class="line">Input File Name(<span class="keyword">for</span> Url)：</div><div class="line">the pleasure of thinking</div><div class="line">Input Article Title(<span class="keyword">for</span> Article)：</div><div class="line">思维的的乐趣</div><div class="line">Input Article Categories(工具｜资源｜生活｜技术｜读书 Separated By Spaces)：</div><div class="line">生活</div><div class="line">Input Article Tags(Separated By ,)</div><div class="line">Thinking,Essay</div><div class="line">Input Article Keywords(Separated By ,)</div><div class="line">思维的乐趣</div><div class="line">Input Article Description(Article Desc)：</div><div class="line">王小波散文随笔：思维的录乐趣</div></pre></td></tr></table></figure>
 <p><strong>Rake</strong>即可帮着在 <code>_posts/life</code>目录下创建命名为“2016-03-26-the-pleasure-of-thinking.md”的文件，并根据所输入的生成以下内容：</p>
@@ -509,11 +509,11 @@
 			
 		
 			
-				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
 			
 		
 			
@@ -529,7 +529,7 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -537,7 +537,7 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
 			
 		
 			
@@ -549,6 +549,10 @@
 			
 		
 			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
 			
 		
@@ -557,7 +561,7 @@
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
 			
 		
 			
@@ -565,23 +569,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
 			
 		
 			
@@ -589,15 +577,23 @@
 			
 		
 			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
 			
@@ -605,7 +601,11 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 		</ul>

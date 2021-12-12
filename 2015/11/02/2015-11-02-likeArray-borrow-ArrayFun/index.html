@@ -145,9 +145,9 @@
 <h3 id="法二：函数反柯里化-function-uncurrying"><a href="#法二：函数反柯里化-function-uncurrying" class="headerlink" title="法二：函数反柯里化(function uncurrying)"></a><strong>法二：</strong>函数反柯里化(function uncurrying)</h3><p><code>Array.prototype</code>上的方法原本只能用来操作array对象。但用<code>call</code> <code>apply</code> 可以把任意对象当做this传入某个方法，如此一来，方法中用到的this的地方就不再局限于原来规定的对象，而是加以泛华并且得到更广的适用性。</p>
 <p>但是直接使用这样使用，多少是有些繁琐的。如需使用Array的shift方法，就还得写Like This：<code>Array.prototype.shift.call(arguments);</code>;如能将泛化this的过程提取出来，岂不方便很多？并且代码还能复用。</p>
 <p><strong>uncurrying</strong>的话题来自JavaScript之父Brendan Eich在2011年发表的一篇Twitter。<br>以下代码是uncurrying的实现方式之一<strong>@<a href="#1">注解^</a></strong>：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Function</span>.prototype.uncurrying = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> self = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> obj = <span class="built_in">Array</span>.prototype.shift.call(<span class="built_in">arguments</span>);</div><div class="line">        <span class="keyword">return</span> self.apply(obj, <span class="built_in">arguments</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>其作用如是：在类数组对象借用<code>Array.prototype</code>方法之前，先把Array.prototype.push.call这句代码转换为一个通用的<code>push</code>函数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> push = <span class="built_in">Array</span>.prototype.push.uncurrying();</div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">truepush(<span class="built_in">arguments</span> , <span class="number">4</span>);</div><div class="line">true<span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</div><div class="line">true<span class="comment">//OutPut: [1,2,3,4]  //Chrome Console</span></div><div class="line">    <span class="comment">//OutPut: / &#123; '0': 1, '1': 2, '2': 3, '3': 4 &#125; //SublimeText NodeJs</span></div><div class="line">&#125;)(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div></pre></td></tr></table></figure></p>
+<p>其作用如是：在类数组对象借用<code>Array.prototype</code>方法之前，先把Array.prototype.push.call这句代码转换为一个通用的<code>push</code>函数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> push = <span class="built_in">Array</span>.prototype.push.uncurrying();</div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  push(<span class="built_in">arguments</span> , <span class="number">4</span>);</div><div class="line">  <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</div><div class="line">  <span class="comment">//OutPut: [1,2,3,4]  //Chrome Console</span></div><div class="line">    <span class="comment">//OutPut: / &#123; '0': 1, '1': 2, '2': 3, '3': 4 &#125; //SublimeText NodeJs</span></div><div class="line">&#125;)(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div></pre></td></tr></table></figure></p>
 <p>通过<code>uncurrying</code>方式，使得Array.prototype.push.call变成了一个通用的push函数，且其函数的作用也不再仅仅局限于只能操作array对象。于使用者而言，也显得更加简洁和意图明了。</p>
-<p>幸甚，还可以一次性地将Array.prototype上的方法“复制”到array对象上。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ary = [<span class="string">'push'</span>, <span class="string">'shift'</span>, <span class="string">'forEach'</span>]</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, fn ; fn = ary[i++];) &#123;</div><div class="line">true<span class="built_in">Array</span>[ fn ] = <span class="built_in">Array</span>.prototype[ fn ].uncurrying();</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">true<span class="string">"length"</span>: <span class="number">2</span>,</div><div class="line">true<span class="string">"0"</span>:<span class="number">1</span>,</div><div class="line">true<span class="string">"1"</span>:<span class="number">2</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">Array</span>.push(obj, <span class="number">3</span>); <span class="comment">// 3</span></div><div class="line"><span class="built_in">console</span>.log(obj.length);</div><div class="line"><span class="built_in">console</span>.log(obj); <span class="comment">//Object &#123;0: 1, 1: 2, 2: 3, length: 3&#125;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> first = <span class="built_in">Array</span>.shift(obj);</div><div class="line"><span class="built_in">console</span>.log(first);  <span class="comment">// 1</span></div><div class="line"><span class="built_in">console</span>.log(obj);    <span class="comment">//Object &#123;0: 2, 1: 3, length: 2&#125;</span></div><div class="line"></div><div class="line"><span class="built_in">Array</span>.forEach(obj , <span class="function"><span class="keyword">function</span>(<span class="params">i , n</span>)</span>&#123;</div><div class="line">true<span class="built_in">console</span>.log(i);  <span class="comment">// 分别输出 2 3</span></div><div class="line">true<span class="built_in">console</span>.log(n);  <span class="comment">// 分别输出 0 1</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>幸甚，还可以一次性地将Array.prototype上的方法“复制”到array对象上。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ary = [<span class="string">'push'</span>, <span class="string">'shift'</span>, <span class="string">'forEach'</span>]</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, fn ; fn = ary[i++];) &#123;</div><div class="line">  <span class="built_in">Array</span>[ fn ] = <span class="built_in">Array</span>.prototype[ fn ].uncurrying();</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  <span class="string">"length"</span>: <span class="number">2</span>,</div><div class="line">  <span class="string">"0"</span>:<span class="number">1</span>,</div><div class="line">  <span class="string">"1"</span>:<span class="number">2</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">Array</span>.push(obj, <span class="number">3</span>); <span class="comment">// 3</span></div><div class="line"><span class="built_in">console</span>.log(obj.length);</div><div class="line"><span class="built_in">console</span>.log(obj); <span class="comment">//Object &#123;0: 1, 1: 2, 2: 3, length: 3&#125;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> first = <span class="built_in">Array</span>.shift(obj);</div><div class="line"><span class="built_in">console</span>.log(first);  <span class="comment">// 1</span></div><div class="line"><span class="built_in">console</span>.log(obj);    <span class="comment">//Object &#123;0: 2, 1: 3, length: 2&#125;</span></div><div class="line"></div><div class="line"><span class="built_in">Array</span>.forEach(obj , <span class="function"><span class="keyword">function</span>(<span class="params">i , n</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(i);  <span class="comment">// 分别输出 2 3</span></div><div class="line">  <span class="built_in">console</span>.log(n);  <span class="comment">// 分别输出 0 1</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 <p>当然，<code>function uncurrying</code>还有其他实现方式<strong>@<a href="#2">注解^</a></strong>，比如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Function</span>.prototype.uncurrying = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> self = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// var obj = Array.prototype.shift.call(arguments);</span></div><div class="line">        <span class="comment">// return self.apply(obj, arguments);</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">Function</span>.prototype.call.apply(self, <span class="built_in">arguments</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h4 id="代码稍做分析"><a href="#代码稍做分析" class="headerlink" title="代码稍做分析"></a><strong>代码稍做分析</strong></h4><p>就取Array.prototype.push.uncurrying()这句代码来分析下，<code>uncurrying</code>的时候发生了什么：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Function</span>.prototype.uncurrying = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> self = <span class="keyword">this</span>; <span class="comment">// self此时是Array.prototype.push</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// var obj = Array.prototype.shift.call(arguments);</span></div><div class="line">        <span class="comment">// return self.apply(obj, arguments);</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">Function</span>.prototype.call.apply(self, <span class="built_in">arguments</span>); <span class="comment">//法2</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> push = <span class="built_in">Array</span>.prototype.push.uncurrying();</div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">    <span class="string">"length"</span>:<span class="number">1</span>,</div><div class="line">    <span class="string">"0"</span>:<span class="number">1</span></div><div class="line">&#125;</div><div class="line">push(obj , <span class="number">2</span>); <span class="comment">//uncurrying函数接收到的arguments即'obj ,2'</span></div><div class="line"><span class="built_in">console</span>.log(obj); <span class="comment">//Outpt: &#123;0:1, 1:2,length:2&#125;</span></div></pre></td></tr></table></figure></p>
 <h4 id="1">function uncurrying 法一：</h4>
@@ -175,7 +175,7 @@
 <p>A better way to create fast unbound wrappers is as follows (note that it may not work in some older browsers, but you don’t really need to worry about that now - you may always use a <strong><em>shim</em></strong> for browsers which don’t support <strong>bind</strong>):</p>
 </blockquote>
 <hr>
-<p>@JQuery的v2.1.4版本对makeArray方法实现源码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// results is for internal usage only</span></div><div class="line">truemakeArray: <span class="function"><span class="keyword">function</span>(<span class="params"> arr, results </span>) </span>&#123;</div><div class="line">truetrue<span class="keyword">var</span> ret = results || [];</div><div class="line"></div><div class="line">truetrue<span class="keyword">if</span> ( arr != <span class="literal">null</span> ) &#123;</div><div class="line">truetruetrue<span class="keyword">if</span> ( isArraylike( <span class="built_in">Object</span>(arr) ) ) &#123;</div><div class="line">truetruetruetruejQuery.merge( ret,</div><div class="line">truetruetruetruetrue<span class="keyword">typeof</span> arr === <span class="string">"string"</span> ?</div><div class="line">truetruetruetruetrue[ arr ] : arr</div><div class="line">truetruetruetrue);</div><div class="line">truetruetrue&#125; <span class="keyword">else</span> &#123;</div><div class="line">truetruetruetruepush.call( ret, arr );</div><div class="line">truetruetrue&#125;</div><div class="line">truetrue&#125;</div><div class="line">truetrue<span class="keyword">return</span> ret;</div><div class="line">true&#125;,</div><div class="line"></div><div class="line">true<span class="attr">merge</span>: <span class="function"><span class="keyword">function</span>(<span class="params"> first, second </span>) </span>&#123;</div><div class="line">truetrue<span class="keyword">var</span> len = +second.length,</div><div class="line">truetruetruej = <span class="number">0</span>,</div><div class="line">truetruetruei = first.length;</div><div class="line"></div><div class="line">truetrue<span class="keyword">for</span> ( ; j &lt; len; j++ ) &#123;</div><div class="line">truetruetruefirst[ i++ ] = second[ j ];</div><div class="line">truetrue&#125;</div><div class="line"></div><div class="line">truetruefirst.length = i;</div><div class="line">truetrue<span class="keyword">return</span> first;</div><div class="line">true&#125;</div></pre></td></tr></table></figure></p>
+<p>@JQuery的v2.1.4版本对makeArray方法实现源码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// results is for internal usage only</span></div><div class="line">  makeArray: <span class="function"><span class="keyword">function</span>(<span class="params"> arr, results </span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> ret = results || [];</div><div class="line"></div><div class="line">    <span class="keyword">if</span> ( arr != <span class="literal">null</span> ) &#123;</div><div class="line">      <span class="keyword">if</span> ( isArraylike( <span class="built_in">Object</span>(arr) ) ) &#123;</div><div class="line">        jQuery.merge( ret,</div><div class="line">          <span class="keyword">typeof</span> arr === <span class="string">"string"</span> ?</div><div class="line">          [ arr ] : arr</div><div class="line">        );</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">        push.call( ret, arr );</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ret;</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="attr">merge</span>: <span class="function"><span class="keyword">function</span>(<span class="params"> first, second </span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> len = +second.length,</div><div class="line">      j = <span class="number">0</span>,</div><div class="line">      i = first.length;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> ( ; j &lt; len; j++ ) &#123;</div><div class="line">      first[ i++ ] = second[ j ];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    first.length = i;</div><div class="line">    <span class="keyword">return</span> first;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
 <p>其中<code>isArraylike()</code>代码实现可以参见<a href="https://www.jeffjade.com/2015/09/06/2015-09-06-ios8-safari-jitbug-record/">这里</a>。</p>
 <p><strong>参考出处</strong>：@曾探 所著的《JavaScript设计模式与开发实践》第三章~高阶函数.</p>
 <hr>
@@ -509,11 +509,11 @@
 			
 		
 			
-				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
 			
 		
 			
@@ -529,7 +529,7 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -537,7 +537,7 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
 			
 		
 			
@@ -549,6 +549,10 @@
 			
 		
 			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
 			
 		
@@ -557,7 +561,7 @@
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
 			
 		
 			
@@ -565,23 +569,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
 			
 		
 			
@@ -589,15 +577,23 @@
 			
 		
 			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
 			
@@ -605,7 +601,11 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 		</ul>

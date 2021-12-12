@@ -141,7 +141,7 @@
 <h3 id="判断是否包含类"><a href="#判断是否包含类" class="headerlink" title="判断是否包含类"></a><strong>判断是否包含类</strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$(<span class="string">'.el'</span>).hasClass(<span class="string">'className'</span>);</div><div class="line">$(<span class="string">'.el'</span>).has(<span class="string">'.className'</span>); <span class="comment">//也可以用来 判断是否包含某个元素</span></div><div class="line"></div><div class="line"><span class="comment">//==========================================================//</span></div><div class="line"><span class="comment">// 原生方法(1)</span></div><div class="line">_hasClass(<span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>), className);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">_hasClass</span>(<span class="params"> elements,cName </span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> !!elements.className.match( <span class="keyword">new</span> <span class="built_in">RegExp</span>( <span class="string">"(\\s|^)"</span> + cName + <span class="string">"(\\s|$)"</span>) );</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 原生方法(2)</span></div><div class="line"><span class="keyword">if</span>(el.classList.contains(<span class="string">"someClass"</span>))&#123;&#125;</div></pre></td></tr></table></figure>
 <h3 id="添加事件监听器"><a href="#添加事件监听器" class="headerlink" title="添加事件监听器"></a><strong>添加事件监听器</strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery  </span></div><div class="line">$(<span class="string">'.el'</span>).on(<span class="string">'event'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">&#125;);  </div><div class="line"></div><div class="line"><span class="comment">//==========================================================//  </span></div><div class="line"><span class="comment">// 原生方法  </span></div><div class="line">[].forEach.call(<span class="built_in">document</span>.querySelectorAll(<span class="string">'.el'</span>), <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;  </div><div class="line">  el.addEventListener(<span class="string">'event'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  &#125;, <span class="literal">false</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p><strong>原生－DOM绑定事件－优化1<a href="http://www.cnblogs.com/coffeedeveloper/p/4811850.html" target="_blank" rel="external">参考HERE</a></strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//DOM绑定事件-之自执行</span></div><div class="line"><span class="keyword">var</span> BindEvent = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (<span class="string">'addEventListener'</span> <span class="keyword">in</span> <span class="built_in">document</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">dom, event, handle, ex</span>) </span>&#123;</div><div class="line">      dom.addEventListener(event, handle, ex || <span class="literal">false</span>);</div><div class="line">    &#125;</div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">'attachEvent'</span> <span class="keyword">in</span> <span class="built_in">document</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">dom, event, handle</span>) </span>&#123;</div><div class="line">      dom.attachEvent(<span class="string">'on'</span> + event, handle);</div><div class="line">    &#125;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">dom, event, handle</span>) </span>&#123;</div><div class="line">      dom[<span class="string">'on'</span> + event] = handle;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
-<p><strong>原生－DOM绑定事件－优化2</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//DOM绑定事件-之惰性加载(调用方去触发BindEvent之时才去做初始化)//</span></div><div class="line"><span class="keyword">var</span> BindEvent = <span class="function"><span class="keyword">function</span> (<span class="params">dom, event, handle, ex</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (<span class="string">'addEventListener'</span> <span class="keyword">in</span> <span class="built_in">document</span>) &#123;</div><div class="line">    BindEvent = <span class="function"><span class="keyword">function</span> (<span class="params">dom, event, handle, ex</span>) </span>&#123;</div><div class="line">      dom.addEventListener(event, handle, ex || <span class="literal">false</span>);</div><div class="line">    &#125;</div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">'attachEvent'</span> <span class="keyword">in</span> <span class="built_in">document</span>) &#123;</div><div class="line">trueBindEvent = <span class="function"><span class="keyword">function</span> (<span class="params">dom, event, handle</span>) </span>&#123;</div><div class="line">      dom.attachEvent(<span class="string">'on'</span> + event, handle);</div><div class="line">    &#125;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    BindEvent = <span class="function"><span class="keyword">function</span> (<span class="params">dom, event, handle</span>) </span>&#123;</div><div class="line">      dom[<span class="string">'on'</span> + event] = handle;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  BindEvent(dom, event, handle, ex);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><strong>原生－DOM绑定事件－优化2</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//DOM绑定事件-之惰性加载(调用方去触发BindEvent之时才去做初始化)//</span></div><div class="line"><span class="keyword">var</span> BindEvent = <span class="function"><span class="keyword">function</span> (<span class="params">dom, event, handle, ex</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (<span class="string">'addEventListener'</span> <span class="keyword">in</span> <span class="built_in">document</span>) &#123;</div><div class="line">    BindEvent = <span class="function"><span class="keyword">function</span> (<span class="params">dom, event, handle, ex</span>) </span>&#123;</div><div class="line">      dom.addEventListener(event, handle, ex || <span class="literal">false</span>);</div><div class="line">    &#125;</div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">'attachEvent'</span> <span class="keyword">in</span> <span class="built_in">document</span>) &#123;</div><div class="line">  BindEvent = <span class="function"><span class="keyword">function</span> (<span class="params">dom, event, handle</span>) </span>&#123;</div><div class="line">      dom.attachEvent(<span class="string">'on'</span> + event, handle);</div><div class="line">    &#125;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    BindEvent = <span class="function"><span class="keyword">function</span> (<span class="params">dom, event, handle</span>) </span>&#123;</div><div class="line">      dom[<span class="string">'on'</span> + event] = handle;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  BindEvent(dom, event, handle, ex);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
 <h3 id="设置-获取属性"><a href="#设置-获取属性" class="headerlink" title="设置/获取属性"></a><strong>设置/获取属性</strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery  </span></div><div class="line">$(<span class="string">'.el'</span>).filter(<span class="string">':first'</span>).attr(<span class="string">'key'</span>, <span class="string">'value'</span>);  </div><div class="line">$(<span class="string">'.el'</span>).filter(<span class="string">':first'</span>).attr(<span class="string">'key'</span>);  </div><div class="line"></div><div class="line"><span class="comment">//==========================================================//</span></div><div class="line"><span class="comment">// 原生方法  </span></div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).setAttribute(<span class="string">'key'</span>, <span class="string">'value'</span>);  </div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).getAttribute(<span class="string">'key'</span>);</div></pre></td></tr></table></figure>
 <h3 id="附加内容（Append）"><a href="#附加内容（Append）" class="headerlink" title="附加内容（Append）"></a><strong>附加内容（Append）</strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery  </span></div><div class="line">$(<span class="string">'.el'</span>).append($(<span class="string">'&lt;div/&gt;'</span>));  </div><div class="line"></div><div class="line"><span class="comment">//==========================================================//</span></div><div class="line"><span class="comment">// 原生方法  </span></div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).appendChild(<span class="built_in">document</span>.createElement(<span class="string">'div'</span>));</div></pre></td></tr></table></figure>
 <h3 id="克隆元素"><a href="#克隆元素" class="headerlink" title="克隆元素"></a><strong>克隆元素</strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery  </span></div><div class="line"><span class="keyword">var</span> clonedEl = $(<span class="string">'.el'</span>).clone();  </div><div class="line"></div><div class="line"><span class="comment">//==========================================================//</span></div><div class="line"><span class="comment">// 原生方法  </span></div><div class="line"><span class="keyword">var</span> clonedEl = <span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).cloneNode(<span class="literal">true</span>);</div></pre></td></tr></table></figure>
@@ -231,18 +231,18 @@
 	<nav class="article-nav clearfix">
  
  <div class="prev">
- <a href="/2015/11/25/2015-11-25-toss-gulp/" title="Gulp探究折腾之路(I)">
+ <a href="/2015/12/15/2015-04-17-toss-sublime-text/" title="如何优雅地使用Sublime Text">
   <strong>上一篇：</strong><br>
   <span>
-  Gulp探究折腾之路(I)</span>
+  如何优雅地使用Sublime Text</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/11/14/2015-11-14-css-achieve-horizontal_vertical_center/" title="CSS实现水平|垂直居中漫谈">
+<a href="/2015/11/25/2015-11-25-toss-gulp/" title="Gulp探究折腾之路(I)">
  <strong>下一篇：</strong><br> 
- <span>CSS实现水平|垂直居中漫谈
+ <span>Gulp探究折腾之路(I)
 </span>
 </a>
 </div>
@@ -472,11 +472,11 @@
 			
 		
 			
-				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
 			
 		
 			
@@ -492,7 +492,7 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -500,7 +500,7 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
 			
 		
 			
@@ -512,6 +512,10 @@
 			
 		
 			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
 			
 		
@@ -520,7 +524,7 @@
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
 			
 		
 			
@@ -528,23 +532,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
 			
 		
 			
@@ -552,15 +540,23 @@
 			
 		
 			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
 			
@@ -568,7 +564,11 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 		</ul>

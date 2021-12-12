@@ -631,7 +631,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
+        <loc>https://www.jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/</loc>
         <lastmod>2020-05-05T16:43:09.679Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -639,7 +639,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/</loc>
+        <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
         <lastmod>2020-05-05T16:43:09.679Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -983,6 +983,14 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2015/06/18/2015-06-18-perfect-music/</loc>
+        <lastmod>2019-03-26T14:31:16.735Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2015/06/29/2015-06-29-css-background/</loc>
         <lastmod>2019-03-26T14:31:16.735Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -992,14 +1000,6 @@
 
     <url>
         <loc>https://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/</loc>
-        <lastmod>2019-03-26T14:31:16.735Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2015/06/18/2015-06-18-perfect-music/</loc>
         <lastmod>2019-03-26T14:31:16.735Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1031,7 +1031,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/07/24/2015-07-24-why-programmer-love-mac/</loc>
+        <loc>https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/</loc>
         <lastmod>2019-03-26T14:31:16.724Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1039,7 +1039,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/</loc>
+        <loc>https://www.jeffjade.com/2015/07/24/2015-07-24-why-programmer-love-mac/</loc>
         <lastmod>2019-03-26T14:31:16.724Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1423,7 +1423,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
+        <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1431,7 +1431,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
+        <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1511,14 +1511,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/01/06/2015-01-06-hashmap-work-principle/</loc>
-        <lastmod>2017-03-08T15:10:10.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/2015/01/07/2015-01-07-java-study/</loc>
         <lastmod>2017-03-08T15:10:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1528,6 +1520,14 @@
 
     <url>
         <loc>https://www.jeffjade.com/2015/04/06/2015-04-06-java-thread/</loc>
+        <lastmod>2017-03-08T15:10:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2015/01/06/2015-01-06-hashmap-work-principle/</loc>
         <lastmod>2017-03-08T15:10:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

@@ -278,13 +278,13 @@
 </blockquote>
 <h2 id="组合其法"><a href="#组合其法" class="headerlink" title="组合其法"></a><strong>组合其法</strong></h2><p>细看 JavaScript 提供的String Api，还是有蛮多的，也有些许废弃的，也有将在未来版本会出来的；这其中不乏很多也挺有用的，譬如： <strong>charAt(x)</strong>、<strong>charCodeAt(x)</strong>、<strong>concat(v1, v2,…)</strong>、<strong>fromCharCode(c1, c2,…)</strong> 等等,还有 <code>ES6</code> 对字符串的扩展，比如 <strong>字符串的遍历器接口</strong>，<strong>repeat()</strong> 等等，这可以参见 <a href="http://es6.ruanyifeng.com/#docs/string#" target="_blank" rel="external">ES6-string</a>，这里就不多赘述。</p>
 <p>在实际代码生产中，很多时候需要用这些提供的基本方法，来打出一套组合拳，以解决其需求所需。很显然又可以借助 <code>prototype</code> 属性，将自造的各路拳法，其归置于 String 对象，然后天亮啦。这一步就看个人喜好了，这里抛出一二段，以引大玉。</p>
-<h3 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a><strong>字符串反转</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">String</span>.prototype.reverse = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">true<span class="keyword">return</span> <span class="keyword">this</span>.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="去除空白行"><a href="#去除空白行" class="headerlink" title="去除空白行"></a><strong>去除空白行</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">String</span>.prototype.removeBlankLines = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">true<span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/(\n[\s\t]*\r*\n)/g</span>, <span class="string">'\n'</span>).replace(<span class="regexp">/^[\n\r\n\t]*|[\n\r\n\t]*$/g</span>, <span class="string">''</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a><strong>字符串反转</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">String</span>.prototype.reverse = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="去除空白行"><a href="#去除空白行" class="headerlink" title="去除空白行"></a><strong>去除空白行</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">String</span>.prototype.removeBlankLines = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/(\n[\s\t]*\r*\n)/g</span>, <span class="string">'\n'</span>).replace(<span class="regexp">/^[\n\r\n\t]*|[\n\r\n\t]*$/g</span>, <span class="string">''</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="String转化为数组"><a href="#String转化为数组" class="headerlink" title="String转化为数组"></a><strong>String转化为数组</strong></h3><p><strong>1,</strong> 转化为一维数组</p>
 <p>场景是根据某子字符串转化，直接就用 <code>split</code> 就好；如果转换规则不统一，那么请自求多福吧。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> Str = <span class="string">'陈寅恪,鲁迅,钱钟书,胡适,王国维,梁启超,吴宓,季羡林'</span></div><div class="line"><span class="keyword">let</span> hallAllOfFameArr = Str.split(<span class="string">','</span>)</div><div class="line"><span class="built_in">console</span>.log(hallAllOfFameArr)</div><div class="line"><span class="comment">// ["陈寅恪", "鲁迅", "钱钟书", "胡适", "王国维", "梁启超", "吴宓", "季羡林"]</span></div></pre></td></tr></table></figure>
 <p><strong>2,</strong> 转化为二维数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">String</span>.prototype.removeBlankLines = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/(\n[\s\t]*\r*\n)/g</span>, <span class="string">'\n'</span>).replace(<span class="regexp">/^[\n\r\n\t]*|[\n\r\n\t]*$/g</span>, <span class="string">''</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">String</span>.prototype.strTo2dArr = <span class="function"><span class="keyword">function</span>(<span class="params">firstSplit, secondSplit</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> contentStr = <span class="keyword">this</span>.removeBlankLines(),</div><div class="line">truetruecontentStrArr = contentStr.split(firstSplit),</div><div class="line">truetrueresultArr = contentStrArr.map(<span class="function">(<span class="params">element</span>) =&gt;</span> &#123;</div><div class="line">            <span class="keyword">return</span> element.split(secondSplit)</div><div class="line">        &#125;)</div><div class="line">true<span class="keyword">return</span> resultArr</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> str = <span class="string">`</span></div><div class="line">渺渺钟声出远方,依依林影万鸦藏。</div><div class="line">一生负气成今日,四海无人对夕阳。</div><div class="line">破碎山河迎胜利,残馀岁月送凄凉。</div><div class="line">松门松菊何年梦,且认他乡作故乡。</div><div class="line">`</div><div class="line"><span class="built_in">console</span>.log(str.strTo2dArr(<span class="string">'\n'</span>, <span class="string">','</span>))</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">String</span>.prototype.removeBlankLines = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/(\n[\s\t]*\r*\n)/g</span>, <span class="string">'\n'</span>).replace(<span class="regexp">/^[\n\r\n\t]*|[\n\r\n\t]*$/g</span>, <span class="string">''</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">String</span>.prototype.strTo2dArr = <span class="function"><span class="keyword">function</span>(<span class="params">firstSplit, secondSplit</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> contentStr = <span class="keyword">this</span>.removeBlankLines(),</div><div class="line">    contentStrArr = contentStr.split(firstSplit),</div><div class="line">    resultArr = contentStrArr.map(<span class="function">(<span class="params">element</span>) =&gt;</span> &#123;</div><div class="line">            <span class="keyword">return</span> element.split(secondSplit)</div><div class="line">        &#125;)</div><div class="line">  <span class="keyword">return</span> resultArr</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> str = <span class="string">`</span></div><div class="line">渺渺钟声出远方,依依林影万鸦藏。</div><div class="line">一生负气成今日,四海无人对夕阳。</div><div class="line">破碎山河迎胜利,残馀岁月送凄凉。</div><div class="line">松门松菊何年梦,且认他乡作故乡。</div><div class="line">`</div><div class="line"><span class="built_in">console</span>.log(str.strTo2dArr(<span class="string">'\n'</span>, <span class="string">','</span>))</div></pre></td></tr></table></figure>
 <p>运行之，输出结果如下：</p>
 <blockquote>
 <p>[ [ ‘渺渺钟声出远方’, ‘依依林影万鸦藏。’ ],<br>  [ ‘一生负气成今日’, ‘四海无人对夕阳。’ ],<br>  [ ‘破碎山河迎胜利’, ‘残馀岁月送凄凉。’ ],<br>  [ ‘松门松菊何年梦’, ‘且认他乡作故乡。’ ] ]</p>
@@ -623,11 +623,11 @@
 			
 		
 			
-				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
 			
 		
 			
@@ -643,7 +643,7 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -651,7 +651,7 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
 			
 		
 			
@@ -663,6 +663,10 @@
 			
 		
 			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
 			
 		
@@ -671,7 +675,7 @@
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
 			
 		
 			
@@ -679,23 +683,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
 			
 		
 			
@@ -703,15 +691,23 @@
 			
 		
 			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
 			
@@ -719,7 +715,11 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 		</ul>

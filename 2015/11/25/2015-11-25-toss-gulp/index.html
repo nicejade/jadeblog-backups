@@ -150,7 +150,7 @@
 <p>js/app.js 精确匹配文件<br>js/<em>.js 仅匹配js目录下的所有后缀为.js的文件<br>js/</em>/.js 匹配js目录及其子目录下所有后缀为.js的文件<br>!js/app.js 从匹配结果中排除js/app.js，这种方法在你想要匹配除了特殊文件之外的所有文件时非常管用<br>*.+(js|css) 匹配根目录下所有后缀为.js或者.css的文件<br>此外，Gulp也有很多其他的特征，但并不常用。如果你想了解更多的特征，请查看<a href="https://github.com/isaacs/minimatch" target="_blank" rel="external">Minimatch</a>文档。</p>
 </blockquote>
 <p>js目录下包含了压缩和未压缩的JavaScript文件，现在我们想要创建一个任务来压缩还没有被压缩的文件，我们需要先匹配目录下所有的JavaScript文件，然后<strong>排除后缀为.min.js的文件</strong>:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gulp.src([<span class="string">'js/**/*.js'</span>, <span class="string">'!js/**/*.min.js'</span>])</div></pre></td></tr></table></figure></p>
-<h3 id="使用gulp-jshint"><a href="#使用gulp-jshint" class="headerlink" title="使用gulp-jshint()"></a><strong>使用gulp-jshint()</strong></h3><p>好吧，不同帮派，不同侠士，对于代码的输出是不一致的。而这JS又没像Py那般天生带有美丽的基因。即便出了jshint这样的好利器，然，也得考虑下兼顾团队已有的Style。所以，这里配置得纠结下,<a href="https://www.zybuluo.com/mdeditor#200574" target="_blank" rel="external">微说Gulp之gulp-jshint</a>。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'lint'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">true<span class="keyword">return</span> gulp.src(workSpace)</div><div class="line">truetrue.pipe(jshint())</div><div class="line">truetrue.pipe(jshint.reporter(<span class="string">'YOUR_REPOTER_HERE'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="使用gulp-jshint"><a href="#使用gulp-jshint" class="headerlink" title="使用gulp-jshint()"></a><strong>使用gulp-jshint()</strong></h3><p>好吧，不同帮派，不同侠士，对于代码的输出是不一致的。而这JS又没像Py那般天生带有美丽的基因。即便出了jshint这样的好利器，然，也得考虑下兼顾团队已有的Style。所以，这里配置得纠结下,<a href="https://www.zybuluo.com/mdeditor#200574" target="_blank" rel="external">微说Gulp之gulp-jshint</a>。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'lint'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> gulp.src(workSpace)</div><div class="line">    .pipe(jshint())</div><div class="line">    .pipe(jshint.reporter(<span class="string">'YOUR_REPOTER_HERE'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <p>这reporter使用”default”的话，就会采用默认蛮严格的检查手段。为了能够规范而不失灵活的撸起JS，在使用JShint之时，过滤掉哪些不合时宜的写法(如下写法就可以不留情的规避之)，就得斟酌下咯。列举些常见不推荐的写法，运行时提醒如下：</p>
 <blockquote>
 <p>Missing semicolon. (W033)  //丢失分号<br> [‘lack’] is better written in dot notation  //推荐xx.lack写法，而不是xx[‘lack’]<br> You might be leaking a variable (disX) here. (W120) //不推荐连等写法：比如posX = disX = 0;<br> ‘status’ is defined but never used. (W098) //不推荐：定义之而不用之<br> Use ‘!==’ to compare with ‘’. (W041) //不推荐 “!=”或者”==”做变量是否相等判断。</p>
@@ -300,18 +300,18 @@
 	<nav class="article-nav clearfix">
  
  <div class="prev">
- <a href="/2015/12/15/2015-04-17-toss-sublime-text/" title="如何优雅地使用Sublime Text">
+ <a href="/2015/11/25/2015-11-31-jQuery-vs-javaScript/" title="jQuery VS JavaScript原生API">
   <strong>上一篇：</strong><br>
   <span>
-  如何优雅地使用Sublime Text</span>
+  jQuery VS JavaScript原生API</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/11/25/2015-11-31-jQuery-vs-javaScript/" title="jQuery VS JavaScript原生API">
+<a href="/2015/11/14/2015-11-14-css-achieve-horizontal_vertical_center/" title="CSS实现水平|垂直居中漫谈">
  <strong>下一篇：</strong><br> 
- <span>jQuery VS JavaScript原生API
+ <span>CSS实现水平|垂直居中漫谈
 </span>
 </a>
 </div>
@@ -541,11 +541,11 @@
 			
 		
 			
-				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
 			
 		
 			
@@ -561,7 +561,7 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -569,7 +569,7 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
 			
 		
 			
@@ -581,6 +581,10 @@
 			
 		
 			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
 			
 		
@@ -589,7 +593,7 @@
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
 			
 		
 			
@@ -597,23 +601,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
 			
 		
 			
@@ -621,15 +609,23 @@
 			
 		
 			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
 			
@@ -637,7 +633,11 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 		</ul>

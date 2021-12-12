@@ -132,7 +132,7 @@
 
 		<h3 id="Lua实现闭包"><a href="#Lua实现闭包" class="headerlink" title="Lua实现闭包"></a>Lua实现闭包</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">--[[@Func :实现闭包</span></div><div class="line">    @Desc : 当一个函数内部嵌套另一个函数定义时，内部的函数体可以访问外部的函数的局部变量，这种特征我们称作词法定界]]</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fuck</span><span class="params">()</span></span></div><div class="line">    <span class="keyword">local</span> i = <span class="number">0</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span></span></div><div class="line">        i = i + <span class="number">1</span></div><div class="line">        <span class="keyword">return</span> i</div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line">c1 = fuck()</div><div class="line"><span class="built_in">print</span>(c1())</div><div class="line"><span class="built_in">print</span>(c1())</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="序列化Lua表"><a href="#序列化Lua表" class="headerlink" title="序列化Lua表"></a>序列化Lua表</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">-- Desc : 序列化Lua表(Convert Lua-Table To String)</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">serialize</span><span class="params">(t)</span></span></div><div class="line">true<span class="keyword">local</span> mark=&#123;&#125;</div><div class="line">true<span class="keyword">local</span> assign=&#123;&#125;</div><div class="line"></div><div class="line">true<span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">ser_table</span><span class="params">(tbl,parent)</span></span></div><div class="line">truetruemark[tbl]=parent</div><div class="line">truetrue<span class="keyword">local</span> tmp=&#123;&#125;</div><div class="line">truetrue<span class="keyword">for</span> k,v <span class="keyword">in</span> <span class="built_in">pairs</span>(tbl) <span class="keyword">do</span></div><div class="line">truetruetrue<span class="keyword">local</span> key= <span class="built_in">type</span>(k)==<span class="string">"number"</span> <span class="keyword">and</span> <span class="string">"["</span>..k..<span class="string">"]"</span> <span class="keyword">or</span> k</div><div class="line">truetruetrue<span class="keyword">if</span> <span class="built_in">type</span>(v)==<span class="string">"table"</span> <span class="keyword">then</span></div><div class="line">truetruetruetrue<span class="keyword">local</span> dotkey= parent..(<span class="built_in">type</span>(k)==<span class="string">"number"</span> <span class="keyword">and</span> key <span class="keyword">or</span> <span class="string">"."</span>..key)</div><div class="line">truetruetruetrue<span class="keyword">if</span> mark[v] <span class="keyword">then</span></div><div class="line">truetruetruetruetrue<span class="built_in">table</span>.insert(assign,dotkey..<span class="string">"="</span>..mark[v])</div><div class="line">truetruetruetrue<span class="keyword">else</span></div><div class="line">truetruetruetruetrue<span class="built_in">table</span>.insert(tmp, key..<span class="string">"="</span>..ser_table(v,dotkey))</div><div class="line">truetruetruetrue<span class="keyword">end</span></div><div class="line">truetruetrue<span class="keyword">else</span></div><div class="line">truetruetruetrue<span class="built_in">table</span>.insert(tmp, key..<span class="string">"="</span>..v)</div><div class="line">truetruetrue<span class="keyword">end</span></div><div class="line">truetrue<span class="keyword">end</span></div><div class="line">truetrue<span class="keyword">return</span> <span class="string">"&#123;"</span>..<span class="built_in">table</span>.concat(tmp,<span class="string">","</span>)..<span class="string">"&#125;"</span></div><div class="line">true<span class="keyword">end</span></div><div class="line"></div><div class="line">true<span class="keyword">return</span> <span class="string">"do local ret="</span>..ser_table(t,<span class="string">"ret"</span>)..<span class="built_in">table</span>.concat(assign,<span class="string">" "</span>)..<span class="string">" return ret end"</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<h3 id="序列化Lua表"><a href="#序列化Lua表" class="headerlink" title="序列化Lua表"></a>序列化Lua表</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">-- Desc : 序列化Lua表(Convert Lua-Table To String)</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">serialize</span><span class="params">(t)</span></span></div><div class="line">  <span class="keyword">local</span> mark=&#123;&#125;</div><div class="line">  <span class="keyword">local</span> assign=&#123;&#125;</div><div class="line"></div><div class="line">  <span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">ser_table</span><span class="params">(tbl,parent)</span></span></div><div class="line">    mark[tbl]=parent</div><div class="line">    <span class="keyword">local</span> tmp=&#123;&#125;</div><div class="line">    <span class="keyword">for</span> k,v <span class="keyword">in</span> <span class="built_in">pairs</span>(tbl) <span class="keyword">do</span></div><div class="line">      <span class="keyword">local</span> key= <span class="built_in">type</span>(k)==<span class="string">"number"</span> <span class="keyword">and</span> <span class="string">"["</span>..k..<span class="string">"]"</span> <span class="keyword">or</span> k</div><div class="line">      <span class="keyword">if</span> <span class="built_in">type</span>(v)==<span class="string">"table"</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">local</span> dotkey= parent..(<span class="built_in">type</span>(k)==<span class="string">"number"</span> <span class="keyword">and</span> key <span class="keyword">or</span> <span class="string">"."</span>..key)</div><div class="line">        <span class="keyword">if</span> mark[v] <span class="keyword">then</span></div><div class="line">          <span class="built_in">table</span>.insert(assign,dotkey..<span class="string">"="</span>..mark[v])</div><div class="line">        <span class="keyword">else</span></div><div class="line">          <span class="built_in">table</span>.insert(tmp, key..<span class="string">"="</span>..ser_table(v,dotkey))</div><div class="line">        <span class="keyword">end</span></div><div class="line">      <span class="keyword">else</span></div><div class="line">        <span class="built_in">table</span>.insert(tmp, key..<span class="string">"="</span>..v)</div><div class="line">      <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> <span class="string">"&#123;"</span>..<span class="built_in">table</span>.concat(tmp,<span class="string">","</span>)..<span class="string">"&#125;"</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="string">"do local ret="</span>..ser_table(t,<span class="string">"ret"</span>)..<span class="built_in">table</span>.concat(assign,<span class="string">" "</span>)..<span class="string">" return ret end"</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
 <p><br></p>
 <h3 id="实现Java字符串的Hash算法"><a href="#实现Java字符串的Hash算法" class="headerlink" title="实现Java字符串的Hash算法"></a>实现Java字符串的Hash算法</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">-- 实现Java字符串的Hash算法</span></div><div class="line">hash = <span class="function"><span class="keyword">function</span><span class="params">(input)</span></span></div><div class="line">    input = <span class="built_in">tostring</span>(input);</div><div class="line">    <span class="keyword">local</span> h = <span class="number">0</span></div><div class="line">    <span class="keyword">local</span> len = <span class="built_in">string</span>.len(input)</div><div class="line">    <span class="keyword">local</span> max = <span class="number">2147483647</span></div><div class="line">    <span class="keyword">local</span> min = <span class="number">-2147483648</span></div><div class="line">    <span class="keyword">local</span> cycle = <span class="number">4294967296</span></div><div class="line"></div><div class="line">    <span class="keyword">for</span> i=<span class="number">1</span>, len <span class="keyword">do</span></div><div class="line">        h = <span class="number">31</span> * h + <span class="built_in">string</span>.byte(<span class="built_in">string</span>.sub(input, i, i));</div><div class="line">        <span class="keyword">while</span> h &gt; max <span class="keyword">do</span></div><div class="line">            h = h - cycle</div><div class="line">        <span class="keyword">end</span></div><div class="line">        <span class="keyword">while</span> h &lt; min <span class="keyword">do</span></div><div class="line">            h = h + cycle</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> h</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
 <h3 id="树形打印lua-table表"><a href="#树形打印lua-table表" class="headerlink" title="树形打印lua table表"></a>树形打印lua table表</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">--Desc: 树形打印lua table表</span></div><div class="line"><span class="keyword">local</span> <span class="built_in">print</span> = <span class="built_in">print</span></div><div class="line"><span class="keyword">local</span> tconcat = <span class="built_in">table</span>.concat</div><div class="line"><span class="keyword">local</span> tinsert = <span class="built_in">table</span>.insert</div><div class="line"><span class="keyword">local</span> srep = <span class="built_in">string</span>.rep</div><div class="line"><span class="keyword">local</span> <span class="built_in">type</span> = <span class="built_in">type</span></div><div class="line"><span class="keyword">local</span> <span class="built_in">pairs</span> = <span class="built_in">pairs</span></div><div class="line"><span class="keyword">local</span> <span class="built_in">tostring</span> = <span class="built_in">tostring</span></div><div class="line"><span class="keyword">local</span> <span class="built_in">next</span> = <span class="built_in">next</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">print_lua_table</span> <span class="params">(lua_table, indent)</span></span></div><div class="line"></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> lua_table <span class="keyword">or</span> <span class="built_in">type</span>(lua_table) ~= <span class="string">"table"</span> <span class="keyword">then</span></div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">    indent = indent <span class="keyword">or</span> <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> <span class="built_in">pairs</span>(lua_table) <span class="keyword">do</span></div><div class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(k) == <span class="string">"string"</span> <span class="keyword">then</span></div><div class="line">            k = <span class="built_in">string</span>.format(<span class="string">"%q"</span>, k)</div><div class="line">        <span class="keyword">end</span></div><div class="line">        <span class="keyword">local</span> szSuffix = <span class="string">""</span></div><div class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(v) == <span class="string">"table"</span> <span class="keyword">then</span></div><div class="line">            szSuffix = <span class="string">"&#123;"</span></div><div class="line">        <span class="keyword">end</span></div><div class="line">        <span class="keyword">local</span> szPrefix = <span class="built_in">string</span>.rep(<span class="string">"    "</span>, indent)</div><div class="line">        formatting = szPrefix..<span class="string">"["</span>..k..<span class="string">"]"</span>..<span class="string">" = "</span>..szSuffix</div><div class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(v) == <span class="string">"table"</span> <span class="keyword">then</span></div><div class="line">            <span class="built_in">print</span>(formatting)</div><div class="line">            print_lua_table(v, indent + <span class="number">1</span>)</div><div class="line">            <span class="built_in">print</span>(szPrefix..<span class="string">"&#125;,"</span>)</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="keyword">local</span> szValue = <span class="string">""</span></div><div class="line">            <span class="keyword">if</span> <span class="built_in">type</span>(v) == <span class="string">"string"</span> <span class="keyword">then</span></div><div class="line">                szValue = <span class="built_in">string</span>.format(<span class="string">"%q"</span>, v)</div><div class="line">            <span class="keyword">else</span></div><div class="line">                szValue = <span class="built_in">tostring</span>(v)</div><div class="line">            <span class="keyword">end</span></div><div class="line">            <span class="built_in">print</span>(formatting..szValue..<span class="string">","</span>)</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
@@ -458,11 +458,11 @@
 			
 		
 			
-				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
 			
 		
 			
@@ -478,7 +478,7 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -486,7 +486,7 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
 			
 		
 			
@@ -498,6 +498,10 @@
 			
 		
 			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
 			
 		
@@ -506,7 +510,7 @@
 			
 		
 			
-				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
 			
 		
 			
@@ -514,23 +518,7 @@
 			
 		
 			
-				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
 			
 		
 			
@@ -538,15 +526,23 @@
 			
 		
 			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
 			
 		
 			
@@ -554,7 +550,11 @@
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 		</ul>
