@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2021-12-17T05:31:39.217Z</updated>
+  <updated>2021-12-24T04:42:01.168Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,109 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>优质网站同好者周刊（第 45 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/12/23/234-nicelinks-weekly-045/"/>
+    <id>https://www.jeffjade.com/2021/12/23/234-nicelinks-weekly-045/</id>
+    <published>2021-12-23T13:21:00.000Z</published>
+    <updated>2021-12-24T04:42:01.168Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
+<a id="more"></a>
+<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
+<h2 id="美国宇航局（NASA）图像和视频库"><a href="#美国宇航局（NASA）图像和视频库" class="headerlink" title="美国宇航局（NASA）图像和视频库"></a><a href="https://nicelinks.site/post/61c49b7f70b0de20e2d01b34" target="_blank" rel="external">美国宇航局（NASA）图像和视频库</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/图片" target="_blank" rel="external"><code>图片</code></a> · <a href="https://nicelinks.site/tags/在线" target="_blank" rel="external"><code>在线</code></a></p>
+<p><strong>关键字</strong>：NASA, Image, Video</p>
+<blockquote>
+<p>NASA Image and Video Library.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/images.nasa.gov.png?x-oss-process=style/png2jpg" alt="倾城之链 - 美国宇航局（NASA）图像和视频库"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://images.nasa.gov/" target="_blank" rel="external">NASA 图像和视频库</a>，带你看宇宙太空相关图片、视频、及声音；支持检索。它用于再现 3 维模型的图像、音频、视频和计算机文件，例如任何格式的纹理贴图和多边形数据；您可以将此材料用于教育或信息目的，包括照片集、教科书、公共展览、计算机图形模拟和 Internet 网页。此一般权限扩展到个人网页。NASA 拥有大量 在线图像 和 视频库，包括 历史图像、 当前任务、 天文图片、 地球图像 以及 搜索 NASA 图像的方法。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61c49b7f70b0de20e2d01b34" target="_blank" rel="external">倾城之链 - 美国宇航局（NASA）图像和视频库</a></p>
+<h2 id="Windi-CSS"><a href="#Windi-CSS" class="headerlink" title="Windi CSS"></a><a href="https://nicelinks.site/post/61c46afb70b0de20e2d01b32" target="_blank" rel="external">Windi CSS</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/CSS" target="_blank" rel="external"><code>CSS</code></a> · <a href="https://nicelinks.site/tags/框架" target="_blank" rel="external"><code>框架</code></a> · <a href="https://nicelinks.site/tags/Web开发" target="_blank" rel="external"><code>Web开发</code></a></p>
+<p><strong>关键字</strong>：windi, windicss, tailwind, tailwindcss, vitejs, svelte, vue</p>
+<blockquote>
+<p>Next generation utility-first CSS framework.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/windicss.org.png?x-oss-process=style/png2jpg" alt="倾城之链 - Windi CSS"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://windicss.org/" target="_blank" rel="external">Windi CSS</a> 下一代实用优先的 CSS 框架；如果您已经熟悉 <a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">Tailwind CSS</a>，可以将 Windi CSS 视为 Tailwind 的按需替代品，它提供更快的加载时间，与 Tailwind v2.0 完全兼容，并具有许多额外的酷炫功能。</p>
+<p>“当我的项目变大了，大约有几十个组件时，初始编译时间达到了 3s，热更新用 <a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">Tailwind CSS</a> 花了 1s 多。“，基于这样的痛点，作者创造了 <a href="https://nicelinks.site/redirect?url=https://windicss.org/" target="_blank" rel="external">Windi CSS</a>；通过扫描您的 HTML 和 CSS 并按需生成实用程序，Windi CSS 能够在开发中提供更快的加载时间和快速的 HMR，并且不需要在生产中清除。</p>
+<p><a href="https://nicelinks.site/redirect?url=https://windicss.org/" target="_blank" rel="external">Windi CSS</a> 支持 <a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">Tailwind CSS</a> 的所有 Utilities（实用程序类），无需任何额外配置。您可以像往常一样，在组件和样式表中使用<a href="https://nicelinks.site/redirect?url=https://windicss.org/utilities/" target="_blank" rel="external">实用程序类</a>，只有您使用的 Utilities （实用程序类）才会生成相应的 CSS；这对 Web 前端开发者，非常有用。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61c46afb70b0de20e2d01b32" target="_blank" rel="external">倾城之链 - Windi CSS</a></p>
+<h2 id="可道云-私有云存储-amp-协同办公平台企业网盘企业云盘网盘云盘"><a href="#可道云-私有云存储-amp-协同办公平台企业网盘企业云盘网盘云盘" class="headerlink" title="可道云-私有云存储&amp;协同办公平台企业网盘企业云盘网盘云盘"></a><a href="https://nicelinks.site/post/61c082cf70b0de20e2d01b2d" target="_blank" rel="external">可道云-私有云存储&amp;协同办公平台<em>企业网盘</em>企业云盘<em>网盘</em>云盘</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/网盘" target="_blank" rel="external"><code>网盘</code></a> · <a href="https://nicelinks.site/tags/在线" target="_blank" rel="external"><code>在线</code></a> · <a href="https://nicelinks.site/tags/云盘" target="_blank" rel="external"><code>云盘</code></a></p>
+<p><strong>关键字</strong>：网盘, 云盘, 私有云, 企业网盘, 企业云盘, 企业私有云, 私有云存储, 在线办公, 云网盘, 私有云搭建, 在线 office, 资源管理器, 协同办公, 文档管理</p>
+<blockquote>
+<p>可道云 KodExplorer（原芒果云）提供私有云存储/企业网盘/企业云盘和在线文档管理解决方案，助力企业实现办公协作、Office 在线编辑、安全存储访问和组织权限控制。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/kodcloud.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 可道云-私有云存储&amp;协同办公平台_企业网盘_企业云盘_网盘_云盘"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://kodcloud.com/" target="_blank" rel="external">KodExplorer 可道云</a> ，原名芒果云，是基于 Web 技术的私有云在线文档管理解决方案。Kod，读音通 code，意为“代码，编码”，中文名为“可道”。Kod 取义于著名计算机科学家 Linus Torvalds 的名言：“Talk is cheap. Show me the code.“。<a href="https://nicelinks.site/redirect?url=https://kodcloud.com/" target="_blank" rel="external">KodExplorer 可道云</a>具有以下功能特征：</p>
+<h3 id="轻量易部署"><a href="#轻量易部署" class="headerlink" title="轻量易部署"></a>轻量易部署</h3><p>借助可道云，五分钟即可完成私有云平台的初步搭建和使用；采用 Ajax+Json 进行数据通信,毫秒级的响应速度；全平台兼容，对硬件设施要求低，有助于企业挖掘现有硬件潜力，降低部署成本。</p>
+<h3 id="本地化的用户体验"><a href="#本地化的用户体验" class="headerlink" title="本地化的用户体验"></a>本地化的用户体验</h3><p>沿用了 Windows 操作界面和习惯方式，与本地完全一致的操作体验，用户无须学习即可适应，是私有云里的小米系统，对传统私有云的交互方式构成了革命性的改变。 在线操作，本地体验。支持 100 多种所有格式包括文档、多媒体、工程图件与矢量图件的在线预览和播放，支持文本文档、office 文档的在线编辑，支持在线编程，支持文档分享、离线下载等功能。</p>
+<h3 id="适用性强，应用场景多"><a href="#适用性强，应用场景多" class="headerlink" title="适用性强，应用场景多"></a>适用性强，应用场景多</h3><p>全平台兼容性：Win、Linux、Mac (Apache、Nginx、IIS)。从百元级别的智能路由器和盒子产品，到 NAS 网络存储设备，到服务器面板，服务器，硬件集成，ERP 集成，私有云、公有云、SaaS 服务搭建等各种场景都可自如适用。</p>
+<h3 id="可控性、安全性"><a href="#可控性、安全性" class="headerlink" title="可控性、安全性"></a>可控性、安全性</h3><p>支持私有云的局域网部署，多元化的群组和用户权限设置和管理；采取多种加密、防护和强制提醒手段来增强安全性。</p>
+<h3 id="高度的可定制和可拓展性"><a href="#高度的可定制和可拓展性" class="headerlink" title="高度的可定制和可拓展性"></a>高度的可定制和可拓展性</h3><p>可道云内建插件和应用市场，为私有云提供了强大的可拓展性；同时，可道云提供开放的 API 接口，用户可以根据自己需求方便地与 ERP、OA 等业务系统集成和开发，完善企业业务模块，与现有业务系统完美融合。</p>
+<p><a href="https://nicelinks.site/redirect?url=https://kodcloud.com/" target="_blank" rel="external">KodExplorer</a> 最初由雾渺的个人兴趣开发而来，至今已经五年有余。正如 Linus Torvalds 的名言中所表达的那样，我们认为代码及其衍生的产品是与用户最好的沟通桥梁，能够表达我们的追求、坚持和情感，也是我们作为开发者耕耘的意义所在。<a href="https://nicelinks.site/redirect?url=https://kodcloud.com/" target="_blank" rel="external">KodExplorer</a> 产品发布以来，一直以提供极致的产品体验为己任，持续更新，不断优化，获得了广大用户的肯定和支持。项目当前由杭州可道云网络有限公司开发和运营，亦将秉承 KOD 内在的产品信念，致力于用优秀的产品，为用户提供安全可控、可靠易用、高扩展性的私有云解决方案。</p>
+<p>用户只需通过简单环境搭建，即可使用 <a href="https://nicelinks.site/redirect?url=https://kodcloud.com/" target="_blank" rel="external">KodExplorer</a> 快速完成私有云、私有网盘、在线文档管理系统的部署和搭建。KOD 提供了类 Windows 用户界面，延续了 Windows 平台的操作逻辑和使用习惯，支持 100 余种文件格式的在线预览，使得用户的私有云产品可以拥有本地操作一样方便、快捷、安全的体验；为企业用户提供了了文件在线存储与管理、分享和跨平台访问、群组与权限、生产流转、审批存档等全生命周期的在线文档管理的解决方案。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61c082cf70b0de20e2d01b2d" target="_blank" rel="external">倾城之链 - 可道云-私有云存储&amp;协同办公平台<em>企业网盘</em>企业云盘<em>网盘</em>云盘</a></p>
+<h2 id="Surmon-me-来苏之望"><a href="#Surmon-me-来苏之望" class="headerlink" title="Surmon.me - 来苏之望"></a><a href="https://nicelinks.site/post/61bf25dd70b0de20e2d01b29" target="_blank" rel="external">Surmon.me - 来苏之望</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/博客" target="_blank" rel="external"><code>博客</code></a> · <a href="https://nicelinks.site/tags/Vue" target="_blank" rel="external"><code>Vue</code></a> · <a href="https://nicelinks.site/tags/前端开发" target="_blank" rel="external"><code>前端开发</code></a></p>
+<p><strong>关键字</strong>：Surmon 博客, surmon-china, 苏尔蒙, Vue 博客, 前端技术开发博客, JavaScript 技术</p>
+<blockquote>
+<p>来苏之望。本是浪蝶游蜂，自留半亩石池，但求直抒胸臆，挥墨九云之中。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/surmon.me.png?x-oss-process=style/png2jpg" alt="倾城之链 - Surmon.me - 来苏之望"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://surmon.me/" target="_blank" rel="external">surmon.me</a>，使用 <a href="https://nicelinks.site/post/5b1a221c0526c920d6dfaada" target="_blank" rel="external">Vue（3）</a> 构建的个人博客网站，承载了作者对技术、编码、人生等思考；作者将网站划分为明殿、宁静寺、无色庵、丹青阁、茫涯、狂浪生、伯乐、善巧堂、四方馆等模块，来分别承载技术、Github、Vlog、内推、Freelancer、评论、旅行、主页等内容。站在个人角度看，对于技术、或者生活思考，都蛮有深度，感兴趣同学，不妨关注下。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61bf25dd70b0de20e2d01b29" target="_blank" rel="external">倾城之链 - Surmon.me - 来苏之望</a></p>
+<h2 id="700-CSS-Icons-Customizable-Retina-Ready-amp-API"><a href="#700-CSS-Icons-Customizable-Retina-Ready-amp-API" class="headerlink" title="700+ CSS Icons, Customizable, Retina Ready &amp; API"></a><a href="https://nicelinks.site/post/61bdd22970b0de20e2d01b27" target="_blank" rel="external">700+ CSS Icons, Customizable, Retina Ready &amp; API</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/CSS" target="_blank" rel="external"><code>CSS</code></a> · <a href="https://nicelinks.site/tags/SVG" target="_blank" rel="external"><code>SVG</code></a> · <a href="https://nicelinks.site/tags/图标" target="_blank" rel="external"><code>图标</code></a></p>
+<blockquote>
+<p>Pure CSS icons library, Customizable &amp; Retina-Ready built 100% in pure CSS, SVG, SVG Sprite, styled-components, Figma and Adobe XD. Easy integration: Embed, NPM &amp; API</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/css.gg.png?x-oss-process=style/png2jpg" alt="倾城之链 - 700+ CSS Icons, Customizable, Retina Ready &amp; API"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://css.gg/" target="_blank" rel="external">css.gg</a>，一个非常棒的<code>图标</code>相关资源网站；是拥有 700+ 开源 CSS、SVG 和 Figma UI 的图标库，可用于 SVG Sprite、样式组件、NPM 和 API；这对 Web 开发非常有用；其每个图表，有纯 CSS、SVG、TSX（<a href="https://nicelinks.site/post/5b1294b5e93ed2618cfac134" target="_blank" rel="external">react</a>）等多种实现，另外提供了修改颜色、一键拷贝等功能，不仅拿来就能使用，而且还可以学到相关技巧。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61bdd22970b0de20e2d01b27" target="_blank" rel="external">倾城之链 - 700+ CSS Icons, Customizable, Retina Ready &amp; API</a></p>
+<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
+<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
+
+<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>人们总是用一生来等待开始新的生活，这是很常见的现象。等待是思维的一个状态，意味着你需要未来，而你不要现在。你不要此时此刻，你把希望寄托于未来。丧失对当下时刻的意识，会大大地降低你的生命质量。── 埃克哈特·托利（德国出生的加拿大移民） 《当下的力量》</p>
+<blockquote>
+<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
+</blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://forum.lovejade.cn/d/130-44" target="_blank" rel="external">优质网站同好者周刊（第 44 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/127-43" target="_blank" rel="external">优质网站同好者周刊（第 43 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/125-42" target="_blank" rel="external">优质网站同好者周刊（第 42 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/121-41" target="_blank" rel="external">优质网站同好者周刊（第 41 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/119-40" target="_blank" rel="external">优质网站同好者周刊（第 40 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/118-39" target="_blank" rel="external">优质网站同好者周刊（第 39 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/116-38" target="_blank" rel="external">优质网站同好者周刊（第 38 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/112-37" target="_blank" rel="external">优质网站同好者周刊（第 37 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
+    
+    </summary>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>优质网站同好者周刊（第 44 期）- 倾城之链</title>
@@ -101,110 +204,6 @@
 <li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优质网站同好者周刊（第 42 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/12/03/231-nicelinks-weekly-042/"/>
-    <id>https://www.jeffjade.com/2021/12/03/231-nicelinks-weekly-042/</id>
-    <published>2021-12-03T13:21:00.000Z</published>
-    <updated>2021-12-04T16:49:14.292Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="Wiki-js-A-modern-and-powerful-wiki-app-built-on-Node-js"><a href="#Wiki-js-A-modern-and-powerful-wiki-app-built-on-Node-js" class="headerlink" title="Wiki.js | A modern and powerful wiki app built on Node.js"></a><a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js | A modern and powerful wiki app built on Node.js</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Wiki" target="_blank" rel="external"><code>Wiki</code></a> · <a href="https://nicelinks.site/tags/开源" target="_blank" rel="external"><code>开源</code></a> · <a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external"><code>网站生成器</code></a></p>
-<blockquote>
-<p>The most powerful and extensible open source Wiki software. Make documentation a joy to write using Wiki.js’s beautiful and intuitive interface!</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/js.wiki.png?x-oss-process=style/png2jpg" alt="倾城之链 - Wiki.js | A modern and powerful wiki app built on Node.js"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a>，一个基于  <a href="https://nicelinks.site/post/5f376ebe1751843ef894c899" target="_blank" rel="external">Node.js</a> 的<strong>现代</strong>、<strong>轻量级</strong>和<strong>强大</strong>的 Wiki 应用程序（值得一提的是，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 是一个开源项目）。您可以从以下几个功能特征，来领略下 <a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 的强大：</p>
-<h3 id="随处安装"><a href="#随处安装" class="headerlink" title="随处安装"></a>随处安装</h3><p>几乎可以在任何平台上运行，并且与 PostgreSQL、MySQL、MariaDB、MS SQL Server 或 SQLite 兼容！</p>
-<h3 id="表现"><a href="#表现" class="headerlink" title="表现"></a>表现</h3><p>Wiki.js 在速度极快的 Node.js 引擎上运行，在构建时考虑到了性能。</p>
-<h3 id="受保护"><a href="#受保护" class="headerlink" title="受保护"></a>受保护</h3><p>使您的 wiki 公开、完全私有或两者兼而有之。</p>
-<h3 id="行政"><a href="#行政" class="headerlink" title="行政"></a>行政</h3><p>使用广泛而直观的管理区域管理 wiki 的所有方面。</p>
-<h3 id="可定制"><a href="#可定制" class="headerlink" title="可定制"></a>可定制</h3><p>完全自定义 wiki 的外观，包括明暗模式。</p>
-<h3 id="可扩展"><a href="#可扩展" class="headerlink" title="可扩展"></a>可扩展</h3><p>无论是在微型 Raspberry Pi 上还是在云中的高性能 VM 上，Wiki.js 都可以智能地利用可用资源。</p>
-<p>除此之外，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 捆绑了您需要的一切。诸如验证（本地认证、社会认证、企业认证、2FA）、编辑（支持 Markdown、纯 HTML、API 文档等等）、历史（版本跟踪、比较版本）、本土化、媒体资产、渲染、搜索（有内置的搜索引擎，无需设置；也支持使用 Algolia、Azure 搜索等云搜索服务来增强您的 wiki 搜索功能；也可以使用您现有的 Elasticsearch（弹性搜索） 安装来增强您的 wiki 搜索功能）、储存、用户管理、主题（注入自定义 CSS / JS、黑暗模式、自定义主题等）…… 这并非所有团队都需要相同的功能集。这就是为什么 Wiki.js 提供了大量可以按需打开/关闭的模块。可以毫不夸张的说，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 是所见过<strong>最棒的</strong> Wiki 、Doc 相关的应用程序。</p>
-<p>除了现代轻量、功能强大，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a>  安装也十分简单，您将在几分钟内准备就绪！而且提供适用于所有平台的分步<a href="https://nicelinks.site/redirect?url=https://js.wiki/get-started" target="_blank" rel="external">安装指南</a>。最近有尝试基于 <a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 部署了一个服务：<a href="https://wiki.lovejade.cn/?ref=nicelinks.site" target="_blank" rel="external">清风明月阁</a>（使用 Docker Compose，具体有记载于<a href="https://forum.lovejade.cn/d/122" target="_blank" rel="external">腾讯云服务器使用感受，及折腾笔记</a>），切实感受了下 Wiki.js 的强大功能与便捷使用；在其官方网站提到：“使用 Wiki.js 漂亮而直观的界面，让编写文档成为一种乐趣！“，其<strong>所言不虚</strong>。</p>
-<h2 id="色影无忌-中文影像生活门户"><a href="#色影无忌-中文影像生活门户" class="headerlink" title="色影无忌_中文影像生活门户"></a><a href="https://nicelinks.site/post/61a8d9b6465c2155e2d15894" target="_blank" rel="external">色影无忌_中文影像生活门户</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/摄影" target="_blank" rel="external"><code>摄影</code></a> · <a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a> · <a href="https://nicelinks.site/tags/社区" target="_blank" rel="external"><code>社区</code></a></p>
-<p><strong>关键字</strong>：色影无忌, 摄影, 影像, 图片, 人体艺术摄影, 数码相机, 镜头, 摄影论坛, 摄影网, 无忌影展, 摄影技巧, 摄影师, 器材评测, 摄影作品, 摄影器材, 模特, 影楼, 汽车, 旅游</p>
-<blockquote>
-<p>色影无忌是中文影像生活门户，发布最及时的影像和摄影行业动态新闻和权威的器材评测和产品资讯，提供高质量的摄影作品发布，摄影技巧交流与分享，拥有活跃度极高的摄影论坛，全球最完整的器材库，摄影器材购买和交易平台，以及汽车、旅游、音响等影像生活内容。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/ww.xitek.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 色影无忌_中文影像生活门户"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>，创立于 2000 年 1 月 18 日，旨在为全球华人摄影爱好者提供优质的影像交流平台。早在 2000 年初，<a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>率先提出“没有照相机就没有摄影”的口号，使网站汇聚了大量熟悉摄影器材的顶尖高手；近年来，着力打造优质的影像艺术平台，以在业界具有领导力为目标，同步发展摄影之下的“影像”与“器材”双重概念，现已成为全球广受欢迎的中文影像生活网站。</p>
-<p><a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>网现设有网站、论坛两大板块，网站下辖器材、影像、行色、她影像四大频道。除为摄影爱好者提供专业的影像服务之外，<a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>始终关注影像艺术中的专业和前沿领域，从为年轻摄影师提供支持的新锐摄影奖，到专业、高端的影像艺术家年度特展，色影无忌正在构建从爱好者到优秀艺术家、从网络快速消费到专业影像收藏的全方位影像艺术概念和格局。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61a8d9b6465c2155e2d15894" target="_blank" rel="external">倾城之链 - 色影无忌_中文影像生活门户</a></p>
-<h2 id="物色-科学理性的购物百科"><a href="#物色-科学理性的购物百科" class="headerlink" title="物色 - 科学理性的购物百科"></a><a href="https://nicelinks.site/post/61a8d318465c2155e2d15892" target="_blank" rel="external">物色 - 科学理性的购物百科</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/购物" target="_blank" rel="external"><code>购物</code></a> · <a href="https://nicelinks.site/tags/产品测评" target="_blank" rel="external"><code>产品测评</code></a> · <a href="https://nicelinks.site/tags/产品推荐" target="_blank" rel="external"><code>产品推荐</code></a></p>
-<p><strong>关键字</strong>：产品测评, 产品推荐, 物色, 最好的产品, 最佳的产品, 2020年最好的产品</p>
-<blockquote>
-<p>为你推荐最好的产品</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/wusebest.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 物色 - 科学理性的购物百科"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://wusebest.com/" target="_blank" rel="external">物色</a>，基于 <a href="https://nicelinks.site/post/602e4a576eaf2a7660805af1" target="_blank" rel="external">WordPress</a> 所搭建的在线网站；其口号是“科学理性的购物百科“，旨在为你推荐最好的产品。该网站主要分为四个模块儿，物色精选、手机数码、智能家居、娱乐影音；其内容颇为详细，评价也较全面且中肯，只可惜近一年（2021）未曾继续更新。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61a8d318465c2155e2d15892" target="_blank" rel="external">倾城之链 - 物色 - 科学理性的购物百科</a></p>
-<h2 id="Snapcraft-Snaps-are-universal-Linux-packages"><a href="#Snapcraft-Snaps-are-universal-Linux-packages" class="headerlink" title="Snapcraft - Snaps are universal Linux packages"></a><a href="https://nicelinks.site/post/61a7924a465c2155e2d15890" target="_blank" rel="external">Snapcraft - Snaps are universal Linux packages</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/应用" target="_blank" rel="external"><code>应用</code></a> · <a href="https://nicelinks.site/tags/Linux" target="_blank" rel="external"><code>Linux</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<blockquote>
-<p>Snaps are containerised software packages that are simple to create and install. They auto-update and are safe to run. And because they bundle their dependencies, they work on all major Linux systems without modification.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/snapcraft.io.png?x-oss-process=style/png2jpg" alt="倾城之链 - Snapcraft - Snaps are universal Linux packages"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://snapcraft.io/" target="_blank" rel="external">Snapcraft</a> 是适用于桌面、云和物联网的应用程序包，易于安装、安全、跨平台和无依赖性。可以从 Snap Store 发现和安装 Snap，Snap Store 是一个拥有数百万用户的 Linux 应用程序商店。Snaps 不仅可以在台式机上运行，​​还可以在物联网设备、服务器和云上运行。更值得称赞的是，Snapcraft 支持<strong>免费构建</strong>、<strong>发布</strong>和<strong>托管</strong>，无论您的项目是否托管在 <a href="https://nicelinks.site/post/59ba80d93df6765c75b77911" target="_blank" rel="external">GitHub</a> 上，您都可以利用我们的构建系统构建和发布到边缘通道，确保用户始终保持最新状态。对于软件开发商，软件分发在您手中（使用 Snapcraft，您可以控制发布 Snap 的时间和方式）。</p>
-<p>近期有新购一台云服务器，其中部分软件，就是基于 Snap 来安装，它给人的体验和感觉非常不错，具体操作有记载于文章：<a href="https://www.jeffjade.com/2021/11/27/230-talk-about-tencent-cloud-cvm/#%E5%AE%89%E8%A3%85-Docker">腾讯云服务器使用感受，及折腾笔记</a>。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61a7924a465c2155e2d15890" target="_blank" rel="external">倾城之链 - Snapcraft - Snaps are universal Linux packages</a></p>
-<h2 id="gitmoji-An-emoji-guide-for-your-commit-messages"><a href="#gitmoji-An-emoji-guide-for-your-commit-messages" class="headerlink" title="gitmoji | An emoji guide for your commit messages"></a><a href="https://nicelinks.site/post/61a781e7465c2155e2d1588e" target="_blank" rel="external">gitmoji | An emoji guide for your commit messages</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Git" target="_blank" rel="external"><code>Git</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<blockquote>
-<p>Gitmoji is an emoji guide for your commit messages. Aims to be a standarization cheatshee /t for using emojis on GitHub’s commit messages.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/gitmoji.dev.png?x-oss-process=style/png2jpg" alt="倾城之链 - gitmoji | An emoji guide for your commit messages"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/" target="_blank" rel="external">Gitmoji</a> <strong>是 GitHub 提交消息的表情符号指南</strong>。旨在成为标准化备忘单：在 GitHub 的提交消息上使用<a href="https://nicelinks.site/redirect?url=https://emoji.muan.co/" target="_blank" rel="external">表情符号</a>的指南。在<strong>提交消息</strong> 上<strong>使用表情符号</strong>提供了一种<strong>简单的方法</strong>来<strong>识别提交的目的或意图，</strong>只需查看所使用的表情符号。由于有很多不同的表情符号，该团队敏锐的发现，需要创建一个可以帮助更轻松地使用表情符号的指南。这个项目是开源的，这意味着每个人都可以参与、建议、讨论和添加新的表情符号。查看<a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/about#contributing-gitmoji" target="_blank" rel="external">贡献部分</a>和<a href="https://nicelinks.site/redirect?url=https://github.com/carloscuesta/gitmoji/blob/master/.github/CONTRIBUTING.md" target="_blank" rel="external">贡献指南</a>。</p>
-<p>其使用方式，非常的简单：从命令行使用 <a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/" target="_blank" rel="external">Gitmoji</a> 的一个简单解决方案，是安装 <a href="https://nicelinks.site/redirect?url=https://github.com/carloscuesta/gitmoji-cli" target="_blank" rel="external">gitmoji-cli</a>。这一个 gitmoji 交互式客户端，用于在提交消息上使用表情符号。具体操作方式如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># install </span></div><div class="line">npm i -g gitmoji-cli</div><div class="line"></div><div class="line"><span class="comment"># init gitmoji</span></div><div class="line">gitmoji -i</div><div class="line"></div><div class="line"><span class="comment"># use gitmoji</span></div><div class="line">git commit</div></pre></td></tr></table></figure>
-<p><a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/" target="_blank" rel="external">Gitmoji</a>，对程序员很有用么，尤其是像我这样，喜欢用表情来区分 Git 提交的开发者。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61a781e7465c2155e2d1588e" target="_blank" rel="external">倾城之链 - gitmoji | An emoji guide for your commit messages</a></p>
-<p>── 出自<a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">倾城之链 - Wiki.js | A modern and powerful wiki app built on Node.js</a></p>
-<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>一个人，作为个体的存在，应该像一条河──起初细小狭窄，局限在两岸之间；继而激情澎湃地冲过岩石，飞流直下；渐渐地，河流变宽，两岸远离，河水静静地流淌；最后，看不出有片刻的停歇，河水融入大海，失去了作为个体的存在，没有丝毫的痛楚。──英国  ·   伯特兰·阿瑟·威廉·罗素（1872-1970）</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://forum.lovejade.cn/d/121-41" target="_blank" rel="external">优质网站同好者周刊（第 41 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/119-40" target="_blank" rel="external">优质网站同好者周刊（第 40 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/118-39" target="_blank" rel="external">优质网站同好者周刊（第 39 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/116-38" target="_blank" rel="external">优质网站同好者周刊（第 38 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/112-37" target="_blank" rel="external">优质网站同好者周刊（第 37 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/93-31" target="_blank" rel="external">优质网站同好者周刊（第 31 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
 <li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
 <li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
@@ -359,6 +358,110 @@
 <li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
+    
+    </summary>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优质网站同好者周刊（第 42 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/12/03/231-nicelinks-weekly-042/"/>
+    <id>https://www.jeffjade.com/2021/12/03/231-nicelinks-weekly-042/</id>
+    <published>2021-12-03T13:21:00.000Z</published>
+    <updated>2021-12-04T16:49:14.292Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
+<a id="more"></a>
+<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
+<h2 id="Wiki-js-A-modern-and-powerful-wiki-app-built-on-Node-js"><a href="#Wiki-js-A-modern-and-powerful-wiki-app-built-on-Node-js" class="headerlink" title="Wiki.js | A modern and powerful wiki app built on Node.js"></a><a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js | A modern and powerful wiki app built on Node.js</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Wiki" target="_blank" rel="external"><code>Wiki</code></a> · <a href="https://nicelinks.site/tags/开源" target="_blank" rel="external"><code>开源</code></a> · <a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external"><code>网站生成器</code></a></p>
+<blockquote>
+<p>The most powerful and extensible open source Wiki software. Make documentation a joy to write using Wiki.js’s beautiful and intuitive interface!</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/js.wiki.png?x-oss-process=style/png2jpg" alt="倾城之链 - Wiki.js | A modern and powerful wiki app built on Node.js"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a>，一个基于  <a href="https://nicelinks.site/post/5f376ebe1751843ef894c899" target="_blank" rel="external">Node.js</a> 的<strong>现代</strong>、<strong>轻量级</strong>和<strong>强大</strong>的 Wiki 应用程序（值得一提的是，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 是一个开源项目）。您可以从以下几个功能特征，来领略下 <a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 的强大：</p>
+<h3 id="随处安装"><a href="#随处安装" class="headerlink" title="随处安装"></a>随处安装</h3><p>几乎可以在任何平台上运行，并且与 PostgreSQL、MySQL、MariaDB、MS SQL Server 或 SQLite 兼容！</p>
+<h3 id="表现"><a href="#表现" class="headerlink" title="表现"></a>表现</h3><p>Wiki.js 在速度极快的 Node.js 引擎上运行，在构建时考虑到了性能。</p>
+<h3 id="受保护"><a href="#受保护" class="headerlink" title="受保护"></a>受保护</h3><p>使您的 wiki 公开、完全私有或两者兼而有之。</p>
+<h3 id="行政"><a href="#行政" class="headerlink" title="行政"></a>行政</h3><p>使用广泛而直观的管理区域管理 wiki 的所有方面。</p>
+<h3 id="可定制"><a href="#可定制" class="headerlink" title="可定制"></a>可定制</h3><p>完全自定义 wiki 的外观，包括明暗模式。</p>
+<h3 id="可扩展"><a href="#可扩展" class="headerlink" title="可扩展"></a>可扩展</h3><p>无论是在微型 Raspberry Pi 上还是在云中的高性能 VM 上，Wiki.js 都可以智能地利用可用资源。</p>
+<p>除此之外，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 捆绑了您需要的一切。诸如验证（本地认证、社会认证、企业认证、2FA）、编辑（支持 Markdown、纯 HTML、API 文档等等）、历史（版本跟踪、比较版本）、本土化、媒体资产、渲染、搜索（有内置的搜索引擎，无需设置；也支持使用 Algolia、Azure 搜索等云搜索服务来增强您的 wiki 搜索功能；也可以使用您现有的 Elasticsearch（弹性搜索） 安装来增强您的 wiki 搜索功能）、储存、用户管理、主题（注入自定义 CSS / JS、黑暗模式、自定义主题等）…… 这并非所有团队都需要相同的功能集。这就是为什么 Wiki.js 提供了大量可以按需打开/关闭的模块。可以毫不夸张的说，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 是所见过<strong>最棒的</strong> Wiki 、Doc 相关的应用程序。</p>
+<p>除了现代轻量、功能强大，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a>  安装也十分简单，您将在几分钟内准备就绪！而且提供适用于所有平台的分步<a href="https://nicelinks.site/redirect?url=https://js.wiki/get-started" target="_blank" rel="external">安装指南</a>。最近有尝试基于 <a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 部署了一个服务：<a href="https://wiki.lovejade.cn/?ref=nicelinks.site" target="_blank" rel="external">清风明月阁</a>（使用 Docker Compose，具体有记载于<a href="https://forum.lovejade.cn/d/122" target="_blank" rel="external">腾讯云服务器使用感受，及折腾笔记</a>），切实感受了下 Wiki.js 的强大功能与便捷使用；在其官方网站提到：“使用 Wiki.js 漂亮而直观的界面，让编写文档成为一种乐趣！“，其<strong>所言不虚</strong>。</p>
+<h2 id="色影无忌-中文影像生活门户"><a href="#色影无忌-中文影像生活门户" class="headerlink" title="色影无忌_中文影像生活门户"></a><a href="https://nicelinks.site/post/61a8d9b6465c2155e2d15894" target="_blank" rel="external">色影无忌_中文影像生活门户</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/摄影" target="_blank" rel="external"><code>摄影</code></a> · <a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a> · <a href="https://nicelinks.site/tags/社区" target="_blank" rel="external"><code>社区</code></a></p>
+<p><strong>关键字</strong>：色影无忌, 摄影, 影像, 图片, 人体艺术摄影, 数码相机, 镜头, 摄影论坛, 摄影网, 无忌影展, 摄影技巧, 摄影师, 器材评测, 摄影作品, 摄影器材, 模特, 影楼, 汽车, 旅游</p>
+<blockquote>
+<p>色影无忌是中文影像生活门户，发布最及时的影像和摄影行业动态新闻和权威的器材评测和产品资讯，提供高质量的摄影作品发布，摄影技巧交流与分享，拥有活跃度极高的摄影论坛，全球最完整的器材库，摄影器材购买和交易平台，以及汽车、旅游、音响等影像生活内容。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/ww.xitek.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 色影无忌_中文影像生活门户"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>，创立于 2000 年 1 月 18 日，旨在为全球华人摄影爱好者提供优质的影像交流平台。早在 2000 年初，<a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>率先提出“没有照相机就没有摄影”的口号，使网站汇聚了大量熟悉摄影器材的顶尖高手；近年来，着力打造优质的影像艺术平台，以在业界具有领导力为目标，同步发展摄影之下的“影像”与“器材”双重概念，现已成为全球广受欢迎的中文影像生活网站。</p>
+<p><a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>网现设有网站、论坛两大板块，网站下辖器材、影像、行色、她影像四大频道。除为摄影爱好者提供专业的影像服务之外，<a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>始终关注影像艺术中的专业和前沿领域，从为年轻摄影师提供支持的新锐摄影奖，到专业、高端的影像艺术家年度特展，色影无忌正在构建从爱好者到优秀艺术家、从网络快速消费到专业影像收藏的全方位影像艺术概念和格局。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61a8d9b6465c2155e2d15894" target="_blank" rel="external">倾城之链 - 色影无忌_中文影像生活门户</a></p>
+<h2 id="物色-科学理性的购物百科"><a href="#物色-科学理性的购物百科" class="headerlink" title="物色 - 科学理性的购物百科"></a><a href="https://nicelinks.site/post/61a8d318465c2155e2d15892" target="_blank" rel="external">物色 - 科学理性的购物百科</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/购物" target="_blank" rel="external"><code>购物</code></a> · <a href="https://nicelinks.site/tags/产品测评" target="_blank" rel="external"><code>产品测评</code></a> · <a href="https://nicelinks.site/tags/产品推荐" target="_blank" rel="external"><code>产品推荐</code></a></p>
+<p><strong>关键字</strong>：产品测评, 产品推荐, 物色, 最好的产品, 最佳的产品, 2020年最好的产品</p>
+<blockquote>
+<p>为你推荐最好的产品</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/wusebest.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 物色 - 科学理性的购物百科"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://wusebest.com/" target="_blank" rel="external">物色</a>，基于 <a href="https://nicelinks.site/post/602e4a576eaf2a7660805af1" target="_blank" rel="external">WordPress</a> 所搭建的在线网站；其口号是“科学理性的购物百科“，旨在为你推荐最好的产品。该网站主要分为四个模块儿，物色精选、手机数码、智能家居、娱乐影音；其内容颇为详细，评价也较全面且中肯，只可惜近一年（2021）未曾继续更新。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61a8d318465c2155e2d15892" target="_blank" rel="external">倾城之链 - 物色 - 科学理性的购物百科</a></p>
+<h2 id="Snapcraft-Snaps-are-universal-Linux-packages"><a href="#Snapcraft-Snaps-are-universal-Linux-packages" class="headerlink" title="Snapcraft - Snaps are universal Linux packages"></a><a href="https://nicelinks.site/post/61a7924a465c2155e2d15890" target="_blank" rel="external">Snapcraft - Snaps are universal Linux packages</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/应用" target="_blank" rel="external"><code>应用</code></a> · <a href="https://nicelinks.site/tags/Linux" target="_blank" rel="external"><code>Linux</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
+<blockquote>
+<p>Snaps are containerised software packages that are simple to create and install. They auto-update and are safe to run. And because they bundle their dependencies, they work on all major Linux systems without modification.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/snapcraft.io.png?x-oss-process=style/png2jpg" alt="倾城之链 - Snapcraft - Snaps are universal Linux packages"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://snapcraft.io/" target="_blank" rel="external">Snapcraft</a> 是适用于桌面、云和物联网的应用程序包，易于安装、安全、跨平台和无依赖性。可以从 Snap Store 发现和安装 Snap，Snap Store 是一个拥有数百万用户的 Linux 应用程序商店。Snaps 不仅可以在台式机上运行，​​还可以在物联网设备、服务器和云上运行。更值得称赞的是，Snapcraft 支持<strong>免费构建</strong>、<strong>发布</strong>和<strong>托管</strong>，无论您的项目是否托管在 <a href="https://nicelinks.site/post/59ba80d93df6765c75b77911" target="_blank" rel="external">GitHub</a> 上，您都可以利用我们的构建系统构建和发布到边缘通道，确保用户始终保持最新状态。对于软件开发商，软件分发在您手中（使用 Snapcraft，您可以控制发布 Snap 的时间和方式）。</p>
+<p>近期有新购一台云服务器，其中部分软件，就是基于 Snap 来安装，它给人的体验和感觉非常不错，具体操作有记载于文章：<a href="https://www.jeffjade.com/2021/11/27/230-talk-about-tencent-cloud-cvm/#%E5%AE%89%E8%A3%85-Docker">腾讯云服务器使用感受，及折腾笔记</a>。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61a7924a465c2155e2d15890" target="_blank" rel="external">倾城之链 - Snapcraft - Snaps are universal Linux packages</a></p>
+<h2 id="gitmoji-An-emoji-guide-for-your-commit-messages"><a href="#gitmoji-An-emoji-guide-for-your-commit-messages" class="headerlink" title="gitmoji | An emoji guide for your commit messages"></a><a href="https://nicelinks.site/post/61a781e7465c2155e2d1588e" target="_blank" rel="external">gitmoji | An emoji guide for your commit messages</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Git" target="_blank" rel="external"><code>Git</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
+<blockquote>
+<p>Gitmoji is an emoji guide for your commit messages. Aims to be a standarization cheatshee /t for using emojis on GitHub’s commit messages.</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/gitmoji.dev.png?x-oss-process=style/png2jpg" alt="倾城之链 - gitmoji | An emoji guide for your commit messages"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/" target="_blank" rel="external">Gitmoji</a> <strong>是 GitHub 提交消息的表情符号指南</strong>。旨在成为标准化备忘单：在 GitHub 的提交消息上使用<a href="https://nicelinks.site/redirect?url=https://emoji.muan.co/" target="_blank" rel="external">表情符号</a>的指南。在<strong>提交消息</strong> 上<strong>使用表情符号</strong>提供了一种<strong>简单的方法</strong>来<strong>识别提交的目的或意图，</strong>只需查看所使用的表情符号。由于有很多不同的表情符号，该团队敏锐的发现，需要创建一个可以帮助更轻松地使用表情符号的指南。这个项目是开源的，这意味着每个人都可以参与、建议、讨论和添加新的表情符号。查看<a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/about#contributing-gitmoji" target="_blank" rel="external">贡献部分</a>和<a href="https://nicelinks.site/redirect?url=https://github.com/carloscuesta/gitmoji/blob/master/.github/CONTRIBUTING.md" target="_blank" rel="external">贡献指南</a>。</p>
+<p>其使用方式，非常的简单：从命令行使用 <a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/" target="_blank" rel="external">Gitmoji</a> 的一个简单解决方案，是安装 <a href="https://nicelinks.site/redirect?url=https://github.com/carloscuesta/gitmoji-cli" target="_blank" rel="external">gitmoji-cli</a>。这一个 gitmoji 交互式客户端，用于在提交消息上使用表情符号。具体操作方式如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># install </span></div><div class="line">npm i -g gitmoji-cli</div><div class="line"></div><div class="line"><span class="comment"># init gitmoji</span></div><div class="line">gitmoji -i</div><div class="line"></div><div class="line"><span class="comment"># use gitmoji</span></div><div class="line">git commit</div></pre></td></tr></table></figure>
+<p><a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/" target="_blank" rel="external">Gitmoji</a>，对程序员很有用么，尤其是像我这样，喜欢用表情来区分 Git 提交的开发者。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61a781e7465c2155e2d1588e" target="_blank" rel="external">倾城之链 - gitmoji | An emoji guide for your commit messages</a></p>
+<p>── 出自<a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">倾城之链 - Wiki.js | A modern and powerful wiki app built on Node.js</a></p>
+<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
+<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
+
+<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>一个人，作为个体的存在，应该像一条河──起初细小狭窄，局限在两岸之间；继而激情澎湃地冲过岩石，飞流直下；渐渐地，河流变宽，两岸远离，河水静静地流淌；最后，看不出有片刻的停歇，河水融入大海，失去了作为个体的存在，没有丝毫的痛楚。──英国  ·   伯特兰·阿瑟·威廉·罗素（1872-1970）</p>
+<blockquote>
+<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
+</blockquote>
+<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://forum.lovejade.cn/d/121-41" target="_blank" rel="external">优质网站同好者周刊（第 41 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/119-40" target="_blank" rel="external">优质网站同好者周刊（第 40 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/118-39" target="_blank" rel="external">优质网站同好者周刊（第 39 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/116-38" target="_blank" rel="external">优质网站同好者周刊（第 38 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/112-37" target="_blank" rel="external">优质网站同好者周刊（第 37 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/93-31" target="_blank" rel="external">优质网站同好者周刊（第 31 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
 <li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
 <li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
@@ -2052,102 +2155,6 @@ Jenkins
 <h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>“我今年一百岁，已经走到了人生的边缘，我无法确知自己还能往前走多远，寿命是不由自主的，但我很清楚我快‘回家’了。我得洗净这一百年沾染的污秽回家。我没有‘登泰山而小天下’之感，只在自己的小天地里过平静的生活。细想至此，我心静如水，我该平和地迎接每一天，过好每一天，准备回家。”──《坐在人生的边上——杨绛先生百岁答问》</p>
 <h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
 <li><a href="https://www.jeffjade.com/2021/08/26/214-nicelinks-weekly-028/">优质网站同好者周刊（第 28 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/08/19/213-nicelinks-weekly-027/">优质网站同好者周刊（第 27 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/82-26" target="_blank" rel="external">优质网站同好者周刊（第 26 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/08/05/211-nicelinks-weekly-025/">优质网站同好者周刊（第 25 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/29/210-nicelinks-weekly-024/">优质网站同好者周刊（第 24 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/23/209-nicelinks-weekly-023/">优质网站同好者周刊（第 23 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 22 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 21 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/01/206-nicelinks-weekly-020/">优质网站同好者周刊（第 20 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/06/24/205-nicelinks-weekly-019/">优质网站同好者周刊（第 19 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/06/17/204-nicelinks-weekly-018/">优质网站同好者周刊（第 18 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优质网站同好者周刊（第 28 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/08/26/214-nicelinks-weekly-028/"/>
-    <id>https://www.jeffjade.com/2021/08/26/214-nicelinks-weekly-028/</id>
-    <published>2021-08-26T13:21:00.000Z</published>
-    <updated>2021-08-26T15:54:28.840Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="Animista-CSS-Animations-on-Demand"><a href="#Animista-CSS-Animations-on-Demand" class="headerlink" title="Animista - CSS Animations on Demand"></a><a href="https://nicelinks.site/post/6127953eb05045064259069a" target="_blank" rel="external">Animista - CSS Animations on Demand</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/CSS" target="_blank" rel="external"><code>CSS</code></a> · <a href="https://nicelinks.site/tags/前端开发" target="_blank" rel="external"><code>前端开发</code></a> · <a href="https://nicelinks.site/tags/Web开发" target="_blank" rel="external"><code>Web开发</code></a></p>
-<p><strong>关键字</strong>：CSS, animation, library, web, front-end, frontend, development, design, motion, keyframe</p>
-<blockquote>
-<p>Animista is a CSS animation library and a place where you can play with a collection of ready-made CSS animations and download only those you will use.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/animista.net.png?x-oss-process=style/png2jpg" alt="倾城之链 - Animista - CSS Animations on Demand"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://animista.net/" target="_blank" rel="external">Animista</a> 是一个 CSS 动画库（工具），在这里你可以玩到一系列现成的 CSS 动画，并且只下载那些你会用到的动画。它的使用方式非常简单，您可以根据自己需要，找到喜欢的动画样式，用提供的丰富选项，做下微调，满意之后，即可生成代码，一键拷贝加以使用。值得一提的是，<a href="https://nicelinks.site/redirect?url=https://animista.net/" target="_blank" rel="external">Animista</a> 所涉及的动画类型有：基础、入口、退出、文本、注意力、背景等，而动画方式，更是丰富多彩；这对前端开发工程师，具有非常高使用价值。</p>
-<p>── 出自<a href="https://nicelinks.site/post/6127953eb05045064259069a" target="_blank" rel="external">倾城之链 - Animista - CSS Animations on Demand</a></p>
-<h2 id="Mimo-Learn-how-to-code-on-your-phone"><a href="#Mimo-Learn-how-to-code-on-your-phone" class="headerlink" title="Mimo: Learn how to code on your phone"></a><a href="https://nicelinks.site/post/61278b42b050450642590698" target="_blank" rel="external">Mimo: Learn how to code on your phone</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/编程" target="_blank" rel="external"><code>编程</code></a> · <a href="https://nicelinks.site/tags/代码" target="_blank" rel="external"><code>代码</code></a></p>
-<p><strong>关键字</strong>：Mimo, Micro-Learning, Swift, iPhone, Code, Programming, Learn, Course, Tutorial, Lesson, Web Developer, Online Learning, Kotlin, Android, Javascript</p>
-<blockquote>
-<p>Join more than 4 million learners. Learn to code, build apps, and much more in a fun and interactive way – no matter how much experience and time you have.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/getmimo.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Mimo: Learn how to code on your phone"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://getmimo.com/" target="_blank" rel="external">Mimo</a>，一款可以在手机端学习编码的应用程序；让编码既简单又有趣，且能<strong>随时随地</strong>进行；您可以在 <a href="https://nicelinks.site/redirect?url=https://getmimo.com/" target="_blank" rel="external">Mimo</a> 学习多种不同编码语言，另外，她那简洁而漂亮的界面，会让您的学习过程轻松而愉悦（因为是英文，还能借此机会，增强英语阅读能力）。试用之下，还发现 <a href="https://nicelinks.site/redirect?url=https://getmimo.com/" target="_blank" rel="external">Mimo</a> 还对编码能力不同程度的人，做了定制化课程设计。有媒体评价道：“通过这种方式，只要有几分钟的碎片化时间，您就可以学习将编码融入您的日常生活“。除了以上这些，<a href="https://nicelinks.site/redirect?url=https://getmimo.com/" target="_blank" rel="external">Mimo</a> 还有以下几个特征：</p>
-<ul>
-<li>使用真实代码和即时反馈，完成一个基础语法的练习；</li>
-<li>可在代码游乐场，编写和运行代码，并保存您的项目；</li>
-<li>支持设定每日目标，并保持连续写代码的习惯；</li>
-<li>几天之内，您将能够构建令人兴奋的实际项目并与您的朋友分享；</li>
-</ul>
-<p>对一刀切的方法，和建立技术技能的陡峭学习曲线感到沮丧，因而 <a href="https://nicelinks.site/redirect?url=https://getmimo.com/" target="_blank" rel="external">Mimo</a> 被创造出来。坦白讲，拥有编码技能，有助于您提升工作效率（与计算机相关）；懂得编程思维，则能让您对工作和生活，有更加清晰的规划和应对。倘若您想通过自学来掌握编码相关技能，<a href="https://nicelinks.site/redirect?url=https://getmimo.com/" target="_blank" rel="external">Mimo</a> 是值得信赖的选择。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61278b42b050450642590698" target="_blank" rel="external">倾城之链 - Mimo: Learn how to code on your phone</a></p>
-<h2 id="Informant-for-macOSInformant-for-macOS"><a href="#Informant-for-macOSInformant-for-macOS" class="headerlink" title="Informant for macOSInformant for macOS"></a><a href="https://nicelinks.site/post/61263d91b050450642590696" target="_blank" rel="external">Informant for macOSInformant for macOS</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Mac" target="_blank" rel="external"><code>Mac</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/利器" target="_blank" rel="external"><code>利器</code></a></p>
-<blockquote>
-<p>Inspect files on macOS with a single click.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/informant-app.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Informant for macOSInformant for macOS"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://informant-app.com/" target="_blank" rel="external">Informant</a>，是针对 MacOS 的免费应用程序，只需单击一下即可检查 MacOS 上的文件；如果您需要有关文件的更多详细信息，只需单击菜单栏中的 Informant 即可打开详细信息面板。作者开发 <a href="https://nicelinks.site/redirect?url=https://informant-app.com/" target="_blank" rel="external">Informant</a> 的初衷，是因为厌倦了一直按 <code>⌘ + i</code>；<a href="https://nicelinks.site/redirect?url=https://informant-app.com/" target="_blank" rel="external">Informant</a> 它监视点击次数和箭头键，以跟踪当前选定的文件。您可以在菜单栏或面板检查器中，找到的所有元数据。</p>
-<p>对个人而言，<a href="https://nicelinks.site/redirect?url=https://informant-app.com/" target="_blank" rel="external">Informant</a> 蛮有价值的应用程序，MacOS 上的 Finder（访达），固然已经对文件的元数据，做了清晰的展示；但，所展示内容毕竟有限；另外，它并未对文件夹📁起作用；对于习惯用命令行的用户，可以使用 <code>du</code>、<code>ls</code> 等命令，来获取文件信息，但这在 Finder 上并不方便；这就使得 <a href="https://nicelinks.site/redirect?url=https://informant-app.com/" target="_blank" rel="external">Informant</a> 在某些场景下发挥作用。值得一提的是，您可以自定义菜单栏和面板，以显示对您很重要的信息。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61263d91b050450642590696" target="_blank" rel="external">倾城之链 - Informant for macOSInformant for macOS</a></p>
-<h2 id="Marp-Markdown-Presentation-Ecosystem"><a href="#Marp-Markdown-Presentation-Ecosystem" class="headerlink" title="Marp: Markdown Presentation Ecosystem"></a><a href="https://nicelinks.site/post/61262d33b050450642590694" target="_blank" rel="external">Marp: Markdown Presentation Ecosystem</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/PPT" target="_blank" rel="external"><code>PPT</code></a> · <a href="https://nicelinks.site/tags/Markdown" target="_blank" rel="external"><code>Markdown</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<blockquote>
-<p>Marp (also known as the Markdown Presentation Ecosystem) provides an intuitive experience for creating beautiful slide decks. You only have to focus on writing your story in a Markdown document.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/marp.app.png?x-oss-process=style/png2jpg" alt="倾城之链 - Marp: Markdown Presentation Ecosystem"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://marp.app/" target="_blank" rel="external">Marp</a>，基于 Markdown 构建幻灯片（PPT、演示文稿）的工具（Markdown Presentation Ecosystem 缩写）；您可以基于它，直观而轻松地创建漂亮的幻灯片；您只需专注于内容的创作，而无须操心排版。<a href="https://nicelinks.site/redirect?url=https://marp.app/" target="_blank" rel="external">Marp</a> ，有非常多特色，但以下几点，是推荐它给您使用的主要因素：</p>
-<ul>
-<li>它遵循 Markdown 规范，唯一不同是，<code>---</code> 是拆分页面的标尺，而非分割线；</li>
-<li>支持各种指令和扩展语法（图像语法、数学排版、自动缩放等）来创建漂亮的幻灯片；</li>
-<li>内置多种主题，并且支持您依据自己的喜好，调整 CSS 来创建您自己的 Marp 主题；</li>
-<li>丰富的生态系统，不仅提供了命令行工具，还提供了 VsCode 编辑器扩展；</li>
-<li>Marp 可以直接将 Markdown 转换为可用于演示的 HTML、PDF 和 PowerPoint 文件；</li>
-</ul>
-<p>除此之外，<a href="https://nicelinks.site/redirect?url=https://marp.app/" target="_blank" rel="external">Marp</a> 还有蛮多其他特质，需要进一步探索。倘若说，您已经厌倦基于 Microsoft PowerPoint、Keynote 这些操作性很强的工具，来创建 PPT，那么类似 <a href="https://nicelinks.site/redirect?url=https://marp.app/" target="_blank" rel="external">Marp</a> 这样通过 Markdown  来构建 PPT 工具，值得选择。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61262d33b050450642590694" target="_blank" rel="external">倾城之链 - Marp: Markdown Presentation Ecosystem</a></p>
-<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>生活总是起起伏伏，谁都难免遇到低谷，然而决定一个人能达到什么高度的，恰恰是他身处低谷时的态度。放纵自己简单，跨越低谷很难，想要行至高处时展翅飞翔，必须懂得在低处积蓄力量。星光不问赶路人，时光不负有心人。尽管踏实下来，辛苦的旅程会换来理想的生活。── 佚名</p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
 <li><a href="https://www.jeffjade.com/2021/08/19/213-nicelinks-weekly-027/">优质网站同好者周刊（第 27 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/82-26" target="_blank" rel="external">优质网站同好者周刊（第 26 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/08/05/211-nicelinks-weekly-025/">优质网站同好者周刊（第 25 期）- 倾城之链</a></li>
