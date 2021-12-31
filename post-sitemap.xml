@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2021/12/31/235-nicelinks-weekly-046/</loc>
+        <lastmod>2021-12-31T15:36:28.921Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2021/12/23/234-nicelinks-weekly-045/</loc>
         <lastmod>2021-12-24T04:42:01.168Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -647,7 +655,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/</loc>
+        <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
         <lastmod>2020-05-05T16:43:09.679Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -655,7 +663,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
+        <loc>https://www.jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/</loc>
         <lastmod>2020-05-05T16:43:09.679Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1439,7 +1447,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
+        <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1447,7 +1455,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
+        <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1503,7 +1511,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/04/24/2015-04-24-lua-tablesort/</loc>
+        <loc>https://www.jeffjade.com/2015/04/25/2015-04-25-lua-skill/</loc>
         <lastmod>2017-03-08T15:14:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1511,7 +1519,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/04/25/2015-04-25-lua-skill/</loc>
+        <loc>https://www.jeffjade.com/2015/04/24/2015-04-24-lua-tablesort/</loc>
         <lastmod>2017-03-08T15:14:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
