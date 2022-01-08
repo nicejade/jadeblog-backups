@@ -55,6 +55,7 @@ https://www.jeffjade.com/2021/02/19/182-nicelinks-weekly-001/
 https://www.jeffjade.com/2021/02/09/181-write-on-the-road-of-life/
 https://www.jeffjade.com/2021/02/07/180-magic-tools-series-curl/
 https://www.jeffjade.com/2021/01/31/179-how-to-choose-css-preprocessor/
+https://www.jeffjade.com/2021/01/06/236-nicelinks-weekly-047/
 https://www.jeffjade.com/2021/01/05/178-recommendations-for-quality-online-services-in-2021/
 https://www.jeffjade.com/2020/12/31/177-generating-word-cloud-based-on-python/
 https://www.jeffjade.com/2020/12/06/176-how-to-auto-switch-between-different-input-methods-for-different-app/
@@ -97,4 +98,3 @@ https://www.jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/
 https://www.jeffjade.com/2018/03/31/139-attack-and-defense-between-trade/
 https://www.jeffjade.com/2018/03/05/138-aggregated-info-about-dji-recruitment/
 https://www.jeffjade.com/2018/01/01/137-written-at-the-end-of-2017/
-https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/
