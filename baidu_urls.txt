@@ -1,3 +1,4 @@
+https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/
 https://www.jeffjade.com/2021/12/31/235-nicelinks-weekly-046/
 https://www.jeffjade.com/2021/12/23/234-nicelinks-weekly-045/
 https://www.jeffjade.com/2021/12/16/233-nicelinks-weekly-044/
@@ -55,6 +56,7 @@ https://www.jeffjade.com/2021/02/19/182-nicelinks-weekly-001/
 https://www.jeffjade.com/2021/02/09/181-write-on-the-road-of-life/
 https://www.jeffjade.com/2021/02/07/180-magic-tools-series-curl/
 https://www.jeffjade.com/2021/01/31/179-how-to-choose-css-preprocessor/
+https://www.jeffjade.com/2021/01/20/238-nicelinks-weekly-049/
 https://www.jeffjade.com/2021/01/13/237-nicelinks-weekly-048/
 https://www.jeffjade.com/2021/01/06/236-nicelinks-weekly-047/
 https://www.jeffjade.com/2021/01/05/178-recommendations-for-quality-online-services-in-2021/
@@ -96,5 +98,3 @@ https://www.jeffjade.com/2018/08/31/143-develop-quick-app-experience-notes/
 https://www.jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/
 https://www.jeffjade.com/2018/06/04/141-talk-about-my-blogs/
 https://www.jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/
-https://www.jeffjade.com/2018/03/31/139-attack-and-defense-between-trade/
-https://www.jeffjade.com/2018/03/05/138-aggregated-info-about-dji-recruitment/
