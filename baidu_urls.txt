@@ -1,9 +1,12 @@
 https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/
+https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/
+https://www.jeffjade.com/2022/01/13/237-nicelinks-weekly-048/
+https://www.jeffjade.com/2022/01/06/236-nicelinks-weekly-047/
 https://www.jeffjade.com/2021/12/31/235-nicelinks-weekly-046/
 https://www.jeffjade.com/2021/12/23/234-nicelinks-weekly-045/
 https://www.jeffjade.com/2021/12/16/233-nicelinks-weekly-044/
-https://www.jeffjade.com/2021/12/03/232-nicelinks-weekly-043/
 https://www.jeffjade.com/2021/12/03/231-nicelinks-weekly-042/
+https://www.jeffjade.com/2021/12/03/232-nicelinks-weekly-043/
 https://www.jeffjade.com/2021/11/27/230-talk-about-tencent-cloud-cvm/
 https://www.jeffjade.com/2021/11/26/229-nicelinks-weekly-041/
 https://www.jeffjade.com/2021/11/17/228-nicelinks-weekly-040/
@@ -56,9 +59,6 @@ https://www.jeffjade.com/2021/02/19/182-nicelinks-weekly-001/
 https://www.jeffjade.com/2021/02/09/181-write-on-the-road-of-life/
 https://www.jeffjade.com/2021/02/07/180-magic-tools-series-curl/
 https://www.jeffjade.com/2021/01/31/179-how-to-choose-css-preprocessor/
-https://www.jeffjade.com/2021/01/20/238-nicelinks-weekly-049/
-https://www.jeffjade.com/2021/01/13/237-nicelinks-weekly-048/
-https://www.jeffjade.com/2021/01/06/236-nicelinks-weekly-047/
 https://www.jeffjade.com/2021/01/05/178-recommendations-for-quality-online-services-in-2021/
 https://www.jeffjade.com/2020/12/31/177-generating-word-cloud-based-on-python/
 https://www.jeffjade.com/2020/12/06/176-how-to-auto-switch-between-different-input-methods-for-different-app/
