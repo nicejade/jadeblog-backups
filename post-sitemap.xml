@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2022/01/31/240-nicelinks-weekly-050/</loc>
+        <lastmod>2022-01-31T13:56:48.955Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</loc>
         <lastmod>2022-01-21T04:47:13.266Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -687,7 +695,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/</loc>
+        <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
         <lastmod>2020-05-05T16:43:09.679Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -695,7 +703,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
+        <loc>https://www.jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/</loc>
         <lastmod>2020-05-05T16:43:09.679Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1471,6 +1479,14 @@
     </url>
 
     <url>
+        <loc>https://www.jeffjade.com/2015/06/14/2015-06-14-programer-health/</loc>
+        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1480,14 +1496,6 @@
 
     <url>
         <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
-        <lastmod>2017-09-01T12:58:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/2015/06/14/2015-06-14-programer-health/</loc>
         <lastmod>2017-09-01T12:58:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1567,7 +1575,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/01/07/2015-01-07-java-study/</loc>
+        <loc>https://www.jeffjade.com/2015/01/06/2015-01-06-hashmap-work-principle/</loc>
         <lastmod>2017-03-08T15:10:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1575,7 +1583,7 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2015/01/06/2015-01-06-hashmap-work-principle/</loc>
+        <loc>https://www.jeffjade.com/2015/01/07/2015-01-07-java-study/</loc>
         <lastmod>2017-03-08T15:10:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
