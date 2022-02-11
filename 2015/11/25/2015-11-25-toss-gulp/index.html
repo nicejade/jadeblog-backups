@@ -64,6 +64,7 @@
         enable_page_level_ads: true
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
 </head></html>
   <body>
@@ -221,34 +222,7 @@
 
 <p><a href="http://www.gulpjs.com.cn/docs/api/" target="_blank" rel="external">gulp API 文档</a><br><a href="http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" target="_blank" rel="external">Gulp入门教程</a><br><strong><a href="http://www.w3ctech.com/topic/134" target="_blank" rel="external">Gulp开发教程（翻译）</a></strong><br><strong><a href="http://javascript.ruanyifeng.com/tool/gulp.html" target="_blank" rel="external">Gulp：任务自动管理工具</a></strong><br><a href="http://segmentfault.com/a/1190000000372547" target="_blank" rel="external">前端构建工具gulp入门教程</a><br><a href="http://colobu.com/2014/11/17/gulp-plugins-introduction/" target="_blank" rel="external">gulp plugins 插件介绍</a><br><strong><a href="http://www.ydcss.com/archives/18" target="_blank" rel="external">gulp详细入门教程</a></strong></p>
 	</div>
-		<a href="#reward-modal-container" aria-label="Open Reward" id="open-reward-modal-a">打赏</a>
-<div id="reward-modal-container">
-		<div class="modal-div">
-			<h1 class="reward-title-h1">倾情打赏</h1>
-			<a href="javascript:history.go(-1)" aria-label="Close Modal" class="close-modal-a"></a>
-			<p class="reward-thx-p">感谢您的支持，我将继续努力！</p>
-			<div class="reward-img-div">
-				<img class="reward-qr-img weichat active" src="//image.nicelinks.site/weixin_pay.jpg" alt="微信赞助">
-				<img class="reward-qr-img alipay" src="//image.nicelinks.site/zhifubao_pay.jpg" alt="支付宝赞助">
-			</div>
-
-			<div id="reward-jade-moudle" node-type="platform-choice" class="platform-choice clearfix">
-				<div class="platform-item">
-					<span node-type="check-platform" data-id="weichat" class="platform-radio-box platform-checked"></span>
-					<span class="platform-logo weichat"></span>
-				</div>
-				<div class="platform-item">
-					<span node-type="check-platform" data-id="alipay" class="platform-radio-box"></span>
-					<span class="platform-logo alipay"></span>
-				</div>
-			</div>
-
-			<div class="reward-text-div">扫码打赏，建议金额1-10元</div>
-			<p class="reward-tip-p">
-				提醒：打赏金额将直接进此方账号，无法退款，请您谨慎操作。
-			</p>
-		</div>
-</div>
+		<reward-service></reward-service>
     <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
   <hr>
   <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 2rem">
@@ -300,18 +274,18 @@
 	<nav class="article-nav clearfix">
  
  <div class="prev">
- <a href="/2015/12/15/2015-04-17-toss-sublime-text/" title="如何优雅地使用Sublime Text">
+ <a href="/2015/11/25/2015-11-31-jQuery-vs-javaScript/" title="jQuery VS JavaScript原生API">
   <strong>上一篇：</strong><br>
   <span>
-  如何优雅地使用Sublime Text</span>
+  jQuery VS JavaScript原生API</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/11/25/2015-11-31-jQuery-vs-javaScript/" title="jQuery VS JavaScript原生API">
+<a href="/2015/11/14/2015-11-14-css-achieve-horizontal_vertical_center/" title="CSS实现水平|垂直居中漫谈">
  <strong>下一篇：</strong><br> 
- <span>jQuery VS JavaScript原生API
+ <span>CSS实现水平|垂直居中漫谈
 </span>
 </a>
 </div>
@@ -354,11 +328,11 @@
           </li>
         
           <li>
-            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
+            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
           </li>
         
           <li>
-            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
+            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
           </li>
         
           <li>
@@ -382,11 +356,11 @@
           </li>
         
           <li>
-            <a href="/2021/12/03/231-nicelinks-weekly-042/">优质网站同好者周刊（第 42 期）- 倾城之链</a>
+            <a href="/2021/12/03/232-nicelinks-weekly-043/">优质网站同好者周刊（第 43 期）- 倾城之链</a>
           </li>
         
           <li>
-            <a href="/2021/12/03/232-nicelinks-weekly-043/">优质网站同好者周刊（第 43 期）- 倾城之链</a>
+            <a href="/2021/12/03/231-nicelinks-weekly-042/">优质网站同好者周刊（第 42 期）- 倾城之链</a>
           </li>
         
           <li>
@@ -533,11 +507,11 @@
 			
 		
 			
-				<li><a href="/tags/Vue/" title="Vue">Vue<sup>18</sup></a></li>
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>18</sup></a></li>
 			
 		
 			
@@ -561,7 +535,7 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -569,15 +543,15 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
@@ -625,11 +599,11 @@
 			
 		
 			
-				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
@@ -637,7 +611,7 @@
 			
 		
 			
-				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -992,16 +966,6 @@ $(document).ready(function(){
   if($.fancybox){
     $('.fancybox').fancybox();
   }
-
-  // 处理打赏切换相关逻辑(@17-05-30)
-  $('#reward-jade-moudle .platform-radio-box').on('click', function (event) {
-    var currentChoiceId = event.currentTarget.dataset.id
-    $(".reward-img-div .reward-qr-img").removeClass('active')
-    $(".reward-img-div ." + currentChoiceId).addClass('active')
-
-    $(".platform-radio-box").removeClass('platform-checked')
-    event.currentTarget.className = "platform-radio-box platform-checked"
-  });
 });
 </script>
 

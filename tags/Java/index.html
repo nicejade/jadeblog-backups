@@ -61,6 +61,7 @@
         enable_page_level_ads: true
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
 </head></html>
     <body>
@@ -335,16 +336,6 @@ $(document).ready(function(){
   if($.fancybox){
     $('.fancybox').fancybox();
   }
-
-  // 处理打赏切换相关逻辑(@17-05-30)
-  $('#reward-jade-moudle .platform-radio-box').on('click', function (event) {
-    var currentChoiceId = event.currentTarget.dataset.id
-    $(".reward-img-div .reward-qr-img").removeClass('active')
-    $(".reward-img-div ." + currentChoiceId).addClass('active')
-
-    $(".platform-radio-box").removeClass('platform-checked')
-    event.currentTarget.className = "platform-radio-box platform-checked"
-  });
 });
 </script>
 

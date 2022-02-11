@@ -61,6 +61,7 @@
         enable_page_level_ads: true
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
 </head></html>
   <body>
@@ -910,11 +911,11 @@
           </li>
         
           <li>
-            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
+            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
           </li>
         
           <li>
-            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
+            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
           </li>
         
           <li>
@@ -938,11 +939,11 @@
           </li>
         
           <li>
-            <a href="/2021/12/03/231-nicelinks-weekly-042/">优质网站同好者周刊（第 42 期）- 倾城之链</a>
+            <a href="/2021/12/03/232-nicelinks-weekly-043/">优质网站同好者周刊（第 43 期）- 倾城之链</a>
           </li>
         
           <li>
-            <a href="/2021/12/03/232-nicelinks-weekly-043/">优质网站同好者周刊（第 43 期）- 倾城之链</a>
+            <a href="/2021/12/03/231-nicelinks-weekly-042/">优质网站同好者周刊（第 42 期）- 倾城之链</a>
           </li>
         
           <li>
@@ -1089,11 +1090,11 @@
 			
 		
 			
-				<li><a href="/tags/Vue/" title="Vue">Vue<sup>18</sup></a></li>
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>18</sup></a></li>
 			
 		
 			
@@ -1117,7 +1118,7 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -1125,15 +1126,15 @@
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
@@ -1181,11 +1182,11 @@
 			
 		
 			
-				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
@@ -1193,7 +1194,7 @@
 			
 		
 			
-				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -1486,16 +1487,6 @@ $(document).ready(function(){
   if($.fancybox){
     $('.fancybox').fancybox();
   }
-
-  // 处理打赏切换相关逻辑(@17-05-30)
-  $('#reward-jade-moudle .platform-radio-box').on('click', function (event) {
-    var currentChoiceId = event.currentTarget.dataset.id
-    $(".reward-img-div .reward-qr-img").removeClass('active')
-    $(".reward-img-div ." + currentChoiceId).addClass('active')
-
-    $(".platform-radio-box").removeClass('platform-checked')
-    event.currentTarget.className = "platform-radio-box platform-checked"
-  });
 });
 </script>
 

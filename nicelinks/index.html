@@ -101,6 +101,7 @@ Github：(杨琼璞)
         enable_page_level_ads: true
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
 </head></html>
       <body>
@@ -309,34 +310,7 @@ document.ontouchstart = i
 i()
 </script>
 	</div>
-		<a href="#reward-modal-container" aria-label="Open Reward" id="open-reward-modal-a">打赏</a>
-<div id="reward-modal-container">
-		<div class="modal-div">
-			<h1 class="reward-title-h1">倾情打赏</h1>
-			<a href="javascript:history.go(-1)" aria-label="Close Modal" class="close-modal-a"></a>
-			<p class="reward-thx-p">感谢您的支持，我将继续努力！</p>
-			<div class="reward-img-div">
-				<img class="reward-qr-img weichat active" src="//image.nicelinks.site/weixin_pay.jpg" alt="微信赞助">
-				<img class="reward-qr-img alipay" src="//image.nicelinks.site/zhifubao_pay.jpg" alt="支付宝赞助">
-			</div>
-
-			<div id="reward-jade-moudle" node-type="platform-choice" class="platform-choice clearfix">
-				<div class="platform-item">
-					<span node-type="check-platform" data-id="weichat" class="platform-radio-box platform-checked"></span>
-					<span class="platform-logo weichat"></span>
-				</div>
-				<div class="platform-item">
-					<span node-type="check-platform" data-id="alipay" class="platform-radio-box"></span>
-					<span class="platform-logo alipay"></span>
-				</div>
-			</div>
-
-			<div class="reward-text-div">扫码打赏，建议金额1-10元</div>
-			<p class="reward-tip-p">
-				提醒：打赏金额将直接进此方账号，无法退款，请您谨慎操作。
-			</p>
-		</div>
-</div>
+		<reward-service></reward-service>
     <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
   <hr>
   <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 2rem">
@@ -553,16 +527,6 @@ $(document).ready(function(){
   if($.fancybox){
     $('.fancybox').fancybox();
   }
-
-  // 处理打赏切换相关逻辑(@17-05-30)
-  $('#reward-jade-moudle .platform-radio-box').on('click', function (event) {
-    var currentChoiceId = event.currentTarget.dataset.id
-    $(".reward-img-div .reward-qr-img").removeClass('active')
-    $(".reward-img-div ." + currentChoiceId).addClass('active')
-
-    $(".platform-radio-box").removeClass('platform-checked')
-    event.currentTarget.className = "platform-radio-box platform-checked"
-  });
 });
 </script>
 

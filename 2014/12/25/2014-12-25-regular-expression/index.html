@@ -64,6 +64,7 @@
         enable_page_level_ads: true
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
 </head></html>
   <body>
@@ -395,34 +396,7 @@ aa|ab|ba|bb
 <h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p>正则表达式非常常用而且非常有用。每个人在编辑文本或是编写程序时都必须了解怎样使用正则表达式。</p>
 <h2 id="练习-18"><a href="#练习-18" class="headerlink" title="练习"></a>练习</h2><p>选择正则表达式的某种实现，阅读相关文档。我保证，你会学到更多。<br><a href="http://blog.jobbole.com/63398/" target="_blank" rel="external">原文链接地址</a></p>
 	</div>
-		<a href="#reward-modal-container" aria-label="Open Reward" id="open-reward-modal-a">打赏</a>
-<div id="reward-modal-container">
-		<div class="modal-div">
-			<h1 class="reward-title-h1">倾情打赏</h1>
-			<a href="javascript:history.go(-1)" aria-label="Close Modal" class="close-modal-a"></a>
-			<p class="reward-thx-p">感谢您的支持，我将继续努力！</p>
-			<div class="reward-img-div">
-				<img class="reward-qr-img weichat active" src="//image.nicelinks.site/weixin_pay.jpg" alt="微信赞助">
-				<img class="reward-qr-img alipay" src="//image.nicelinks.site/zhifubao_pay.jpg" alt="支付宝赞助">
-			</div>
-
-			<div id="reward-jade-moudle" node-type="platform-choice" class="platform-choice clearfix">
-				<div class="platform-item">
-					<span node-type="check-platform" data-id="weichat" class="platform-radio-box platform-checked"></span>
-					<span class="platform-logo weichat"></span>
-				</div>
-				<div class="platform-item">
-					<span node-type="check-platform" data-id="alipay" class="platform-radio-box"></span>
-					<span class="platform-logo alipay"></span>
-				</div>
-			</div>
-
-			<div class="reward-text-div">扫码打赏，建议金额1-10元</div>
-			<p class="reward-tip-p">
-				提醒：打赏金额将直接进此方账号，无法退款，请您谨慎操作。
-			</p>
-		</div>
-</div>
+		<reward-service></reward-service>
     <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
   <hr>
   <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 2rem">
@@ -483,9 +457,9 @@ aa|ab|ba|bb
 
 
 <div class="next">
-<a href="/2014/12/22/2014-12-22-lua-weaktable/" title="Lua table之弱引用">
+<a href="/2014/12/22/2014-12-24-lua-codepart/" title="Lua代码片段收集">
  <strong>下一篇：</strong><br> 
- <span>Lua table之弱引用
+ <span>Lua代码片段收集
 </span>
 </a>
 </div>
@@ -528,11 +502,11 @@ aa|ab|ba|bb
           </li>
         
           <li>
-            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
+            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
           </li>
         
           <li>
-            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
+            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
           </li>
         
           <li>
@@ -556,11 +530,11 @@ aa|ab|ba|bb
           </li>
         
           <li>
-            <a href="/2021/12/03/231-nicelinks-weekly-042/">优质网站同好者周刊（第 42 期）- 倾城之链</a>
+            <a href="/2021/12/03/232-nicelinks-weekly-043/">优质网站同好者周刊（第 43 期）- 倾城之链</a>
           </li>
         
           <li>
-            <a href="/2021/12/03/232-nicelinks-weekly-043/">优质网站同好者周刊（第 43 期）- 倾城之链</a>
+            <a href="/2021/12/03/231-nicelinks-weekly-042/">优质网站同好者周刊（第 42 期）- 倾城之链</a>
           </li>
         
           <li>
@@ -707,11 +681,11 @@ aa|ab|ba|bb
 			
 		
 			
-				<li><a href="/tags/Vue/" title="Vue">Vue<sup>18</sup></a></li>
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>18</sup></a></li>
 			
 		
 			
@@ -735,7 +709,7 @@ aa|ab|ba|bb
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
@@ -743,15 +717,15 @@ aa|ab|ba|bb
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
 			
 		
 			
@@ -799,11 +773,11 @@ aa|ab|ba|bb
 			
 		
 			
-				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
 			
 		
 			
@@ -811,7 +785,7 @@ aa|ab|ba|bb
 			
 		
 			
-				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -1166,16 +1140,6 @@ $(document).ready(function(){
   if($.fancybox){
     $('.fancybox').fancybox();
   }
-
-  // 处理打赏切换相关逻辑(@17-05-30)
-  $('#reward-jade-moudle .platform-radio-box').on('click', function (event) {
-    var currentChoiceId = event.currentTarget.dataset.id
-    $(".reward-img-div .reward-qr-img").removeClass('active')
-    $(".reward-img-div ." + currentChoiceId).addClass('active')
-
-    $(".platform-radio-box").removeClass('platform-checked')
-    event.currentTarget.className = "platform-radio-box platform-checked"
-  });
 });
 </script>
 

@@ -61,6 +61,7 @@
         enable_page_level_ads: true
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
 </head></html>
     <body>
@@ -114,19 +115,6 @@
 
   <section class="post" itemscope itemprop="blogPost">
   
-    <a href="/2015/11/25/2015-11-25-toss-gulp/" title="Gulp探究折腾之路(I)" itemprop="url">
-  
-
-    <time datetime="2015-11-24T16:00:00.000Z" itemprop="datePublished">2015-11-25</time>
-
-
-    <h1 itemprop="name">Gulp探究折腾之路(I)</h1>
-
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
     <a href="/2015/11/25/2015-11-31-jQuery-vs-javaScript/" title="jQuery VS JavaScript原生API" itemprop="url">
   
 
@@ -134,6 +122,19 @@
 
 
     <h1 itemprop="name">jQuery VS JavaScript原生API</h1>
+
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2015/11/25/2015-11-25-toss-gulp/" title="Gulp探究折腾之路(I)" itemprop="url">
+  
+
+    <time datetime="2015-11-24T16:00:00.000Z" itemprop="datePublished">2015-11-25</time>
+
+
+    <h1 itemprop="name">Gulp探究折腾之路(I)</h1>
 
   </a>
 </section>
@@ -326,16 +327,6 @@ $(document).ready(function(){
   if($.fancybox){
     $('.fancybox').fancybox();
   }
-
-  // 处理打赏切换相关逻辑(@17-05-30)
-  $('#reward-jade-moudle .platform-radio-box').on('click', function (event) {
-    var currentChoiceId = event.currentTarget.dataset.id
-    $(".reward-img-div .reward-qr-img").removeClass('active')
-    $(".reward-img-div ." + currentChoiceId).addClass('active')
-
-    $(".platform-radio-box").removeClass('platform-checked')
-    event.currentTarget.className = "platform-radio-box platform-checked"
-  });
 });
 </script>
 
