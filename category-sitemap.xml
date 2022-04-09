@@ -42,13 +42,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/categories/Front-End/</loc>
-        <lastmod>2021-03-02T14:26:13.082Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/categories/Movie/</loc>
         <lastmod>2021-03-29T15:22:02.736Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -86,6 +79,13 @@
     <url>
         <loc>https://www.jeffjade.com/categories/Share/</loc>
         <lastmod>2022-03-15T10:53:04.124Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/categories/Front-End/</loc>
+        <lastmod>2022-04-09T14:55:41.828Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

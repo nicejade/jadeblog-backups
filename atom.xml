@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2022-03-15T10:53:04.124Z</updated>
+  <updated>2022-04-09T14:55:41.828Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何打造体验良好的本地全文搜索？</title>
+    <link href="https://www.jeffjade.com/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/"/>
+    <id>https://www.jeffjade.com/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/</id>
+    <published>2022-03-21T08:21:00.000Z</published>
+    <updated>2022-04-09T14:55:41.828Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于博客或者文档，全文搜索是非常重要的功能。现如今，<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站生成器</a>工具，无论是静态的、携带完整后台的、还是基于低代码、无代码的，皆不可胜数，诸如：<a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" rel="external">Hexo</a>、<a href="https://nicelinks.site/post/5b2298f5d1c6ca419a9f7e00" target="_blank" rel="external">Vuepress</a>、<a href="https://nicelinks.site/post/5d4fec8c4c0a2404cc79f97a" target="_blank" rel="external">Docsify</a>、<a href="https://nicelinks.site/post/5c36d7b2589b2a35f579f377" target="_blank" rel="external">Hugo</a>、<a href="https://nicelinks.site/post/5c3f3151a5957e07a40b30ff" target="_blank" rel="external">Ghost</a> 等，但之于「<strong>搜索</strong>」功能，或未提供、或不尽如人意；基于这样的背景，本文旨在探讨<strong>如何打造本地全文搜索</strong>？</p>
+<a id="more"></a>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/lunr-index_GrapQL.png" alt="如何打造体验良好的本地全文搜索？"></p>
+<p>根据先前的些许经验，要使得本地全文检索，拥有良好体验，至少要包含以下几个方面：</p>
+<ul>
+<li>基于全文本内容，建好索引（数据），支持用户输入<code>关键字</code>，能快速、准确检索到结果；</li>
+<li>（实时）展示检索结果列表，高亮<code>检索关键字</code>，最好可以按照匹配程度高低来排序；</li>
+<li>支持点击结果列表项跳转至页面，高亮所有关键字，并将页面滚动至第一个关键字位置；</li>
+<li>更多优化，支持用户<code>分词</code>搜搜，增加 <code>-</code>、<code>\*</code> 等匹配方式（一般来讲，满足以上三条已足够）；</li>
+</ul>
+<p>下面，与大家分享下，如何通过简洁操作，做到以上三条：</p>
+<h2 id="如何检索关键字？"><a href="#如何检索关键字？" class="headerlink" title="如何检索关键字？"></a>如何检索关键字？</h2><h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><p>基于类 <a href="https://www.gitbook.com/?utm_source=nicelinks.site" target="_blank" rel="external">Gitbook</a> 默认方案来创建索引。如<a href="https://doc.quickapp.cn/" target="_blank" rel="external">快应用文档</a>，其数据来源于：<a href="https://doc.quickapp.cn/search_plus_index.json" target="_blank" rel="external">search_plus_index.json</a>；在本地编译 md 文件时，将所有其内容纯文本化，作为数据源，并将其他信息如路径、标题、关键字等，一并存储于该 JSON 文件；发起关键字检索时，只需读取该 json 内容，并逐个遍历；将存有关键字的项 push 至结果数组，从而展示给用户就好。</p>
+<h4 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gitbook build</div></pre></td></tr></table></figure>
+<h4 id="发起搜索"><a href="#发起搜索" class="headerlink" title="发起搜索"></a>发起搜索</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">query</span>(<span class="params">keyword</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (keyword == <span class="literal">null</span> || keyword.trim() === <span class="string">''</span>) <span class="keyword">return</span>;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> results = [],</div><div class="line">        index = <span class="number">-1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> page <span class="keyword">in</span> INDEX_DATA) &#123;</div><div class="line">        <span class="keyword">if</span> ((index = INDEX_DATA[page].body.toLowerCase().indexOf(keyword.toLowerCase())) !== <span class="number">-1</span>) &#123;</div><div class="line">            results.push(&#123;</div><div class="line">                <span class="attr">url</span>: page,</div><div class="line">                <span class="attr">title</span>: INDEX_DATA[page].title,</div><div class="line">                <span class="attr">body</span>: INDEX_DATA[page].body.substr(<span class="built_in">Math</span>.max(<span class="number">0</span>, index - <span class="number">50</span>), MAX_DESCRIPTION_SIZE).replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'('</span> + escapeReg(keyword) + <span class="string">')'</span>, <span class="string">'gi'</span>), <span class="string">'&lt;span class="search-highlight-keyword"&gt;$1&lt;/span&gt;'</span>)</div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    displayResults(&#123;</div><div class="line">        <span class="attr">count</span>: results.length,</div><div class="line">        <span class="attr">query</span>: keyword,</div><div class="line">        <span class="attr">results</span>: results</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h3><p>基于 <a href="https://nicelinks.site/redirect?url=https://lunrjs.com/" target="_blank" rel="external">Lunr.js</a> （A bit like Solr, but much smaller and not as bright.）结合 <a href="https://github.com/yanyiwu/nodejieba" target="_blank" rel="external">nodejieba</a>（”结巴”中文分词的 Node.js 版本），来实现中文全文搜索。</p>
+<blockquote>
+<p>Lunr.js is a small, full-text search library for use in the browser. It indexes JSON documents and provides a simple search interface for retrieving documents that best match text queries.</p>
+</blockquote>
+<p><a href="https://nicelinks.site/redirect?url=https://lunrjs.com/" target="_blank" rel="external">Lunr.js</a> 是一个用于浏览器的小型全文搜索库。它索引 JSON 文档并提供一个简单的搜索界面，用于检索与文本查询最匹配的文档。它具有以下功能特征：</p>
+<ul>
+<li><strong>简单的</strong>：Lunr 设计小巧但功能齐全，让您无需外部服务器端搜索服务即可提供出色的搜索体验。</li>
+<li><strong>可扩展</strong>：添加强大的语言处理器为用户查询提供更准确的结果，或调整内置处理器以更好地适应您的内容</li>
+<li><strong>到处</strong>：Lunr 没有外部依赖项，可以在您的浏览器或带有 node.js 的服务器上工作；</li>
+</ul>
+<p><strong>基本原理</strong>：Lunr 将字符串拆分为<code>单词</code>标记，然后经过一系列处理（<code>score</code> 计算分数、<code>metadata</code> 元数据），最终组装成为结果对象数组；关于这块儿详细信息，可参见 <a href="https://lunrjs.com/guides/core_concepts.html" target="_blank" rel="external">Lunr.js 核心概念</a>；值得一提的是，Lunr 不能很好支持中文，因此对于中文分析，有借助 <code>nodejieba</code> 做了处理。具体创建索引的过程，参见如下代码（基于 <a href="https://nicelinks.site/post/5e0d4f3016bdad16b0f5b20e" target="_blank" rel="external">Gatsbyjs</a> 的实现）：</p>
+<h4 id="创建索引-1"><a href="#创建索引-1" class="headerlink" title="创建索引"></a>创建索引</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> marked = <span class="built_in">require</span>(<span class="string">'marked'</span>)</div><div class="line"><span class="keyword">const</span> striptags = <span class="built_in">require</span>(<span class="string">`striptags`</span>)</div><div class="line"><span class="keyword">const</span> lunr = <span class="built_in">require</span>(<span class="string">'lunr'</span>)</div><div class="line"><span class="built_in">require</span>(<span class="string">'./src/helper/lib/lunr.stemmer.support.js'</span>)(lunr)</div><div class="line"><span class="built_in">require</span>(<span class="string">'./src/helper/lib/lunr.zh.js'</span>)(lunr)</div><div class="line"></div><div class="line"><span class="keyword">const</span> createIndex = <span class="keyword">async</span> (docsNodes, type, cache) =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> cacheKey = <span class="string">`IndexLunr`</span></div><div class="line">  <span class="keyword">const</span> cached = <span class="keyword">await</span> cache.get(cacheKey)</div><div class="line">  <span class="keyword">if</span> (cached) &#123;</div><div class="line">    <span class="keyword">return</span> cached</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">const</span> documents = []</div><div class="line">  <span class="keyword">const</span> store = &#123;&#125;</div><div class="line">  <span class="comment">// iterate over all posts</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> node <span class="keyword">of</span> docsNodes) &#123;</div><div class="line">    <span class="keyword">const</span> &#123; slug &#125; = node.fields</div><div class="line">    <span class="keyword">const</span> title = node.frontmatter.title</div><div class="line">    <span class="keyword">const</span> tag = node.frontmatter.tag</div><div class="line">    <span class="keyword">const</span> content = striptags(marked.parse(node.rawMarkdownBody))</div><div class="line">    documents.push(&#123;</div><div class="line">      slug,</div><div class="line">      title,</div><div class="line">      tag,</div><div class="line">      content,</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    store[slug] = &#123;</div><div class="line">      title,</div><div class="line">      tag,</div><div class="line">      content,</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">const</span> index = lunr(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.use(lunr.zh)</div><div class="line">    <span class="keyword">this</span>.ref(<span class="string">'slug'</span>)</div><div class="line">    <span class="keyword">this</span>.field(<span class="string">'title'</span>)</div><div class="line">    <span class="keyword">this</span>.field(<span class="string">'tag'</span>)</div><div class="line">    <span class="keyword">this</span>.field(<span class="string">'content'</span>)</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> doc <span class="keyword">of</span> documents) &#123;</div><div class="line">      <span class="keyword">this</span>.add(doc)</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="keyword">const</span> json = &#123; <span class="attr">index</span>: index.toJSON(), store &#125;</div><div class="line">  <span class="keyword">await</span> cache.set(cacheKey, json)</div><div class="line">  <span class="keyword">return</span> json</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="发起搜索-1"><a href="#发起搜索-1" class="headerlink" title="发起搜索"></a>发起搜索</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">getQueryResult(query) &#123;</div><div class="line">  <span class="keyword">const</span> lunrData = <span class="keyword">this</span>.props.lunrData</div><div class="line">  <span class="keyword">const</span> &#123; store &#125; = lunrData.LunrIndex</div><div class="line">  <span class="comment">// Lunr in action here</span></div><div class="line">  <span class="keyword">const</span> index = Index.load(lunrData.LunrIndex.index)</div><div class="line">  <span class="keyword">let</span> results = []</div><div class="line">  <span class="keyword">try</span> &#123;</div><div class="line">    <span class="comment">// Search is a lunr method</span></div><div class="line">    results = index.search(query).map(<span class="function">(<span class="params">&#123; ref &#125;</span>) =&gt;</span> &#123;</div><div class="line">      <span class="comment">// Map search results to an array of &#123;slug, title, excerpt&#125; objects</span></div><div class="line">      <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">slug</span>: ref,</div><div class="line">        ...store[ref],</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">    <span class="keyword">return</span> results || []</div><div class="line">  &#125; <span class="keyword">catch</span> (error) &#123;</div><div class="line">    <span class="built_in">console</span>.error(<span class="string">`Something Error: <span class="subst">$&#123;error&#125;</span>`</span>)</div><div class="line">    <span class="keyword">return</span> results</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">handleSearch(keywords) &#123;</div><div class="line">  <span class="keyword">let</span> queryResultArr;</div><div class="line">  <span class="keyword">if</span> (!keywords) &#123;</div><div class="line">    queryResultArr = []</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    queryResultArr = <span class="keyword">this</span>.getQueryResult(keywords)</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">this</span>.keywords = keywords</div><div class="line">  <span class="keyword">this</span>.setState(&#123;</div><div class="line">    <span class="attr">queryResultArr</span>: queryResultArr,</div><div class="line">    <span class="attr">isShowResults</span>: queryResultArr.length &gt; <span class="number">0</span></div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="如何高亮文本？"><a href="#如何高亮文本？" class="headerlink" title="如何高亮文本？"></a>如何高亮文本？</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">highlightKeyword(keyword) &#123;</div><div class="line">    <span class="keyword">const</span> contentDom = <span class="built_in">document</span>.querySelector(<span class="string">`#layout .wrapper .content`</span>)</div><div class="line">    <span class="keyword">const</span> instance = <span class="keyword">new</span> Mark(contentDom);</div><div class="line">    instance.mark(keyword, &#123;</div><div class="line">        <span class="attr">exclude</span>: [<span class="string">"h1"</span>],</div><div class="line">        <span class="attr">className</span>: <span class="string">"mark-highlight"</span></div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="如何定位到具体内容？"><a href="#如何定位到具体内容？" class="headerlink" title="如何定位到具体内容？"></a>如何定位到具体内容？</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> markNode = <span class="built_in">document</span>.querySelector(<span class="string">"#layout .mark-highlight"</span>);</div><div class="line">    markNode &amp;&amp; markNode.scrollIntoView(&#123; <span class="attr">behavior</span>: <span class="string">"smooth"</span>, <span class="attr">block</span>: <span class="string">"start"</span> &#125;);</div><div class="line">&#125;, <span class="number">1000</span>)</div></pre></td></tr></table></figure>
+<p>先前基于 <a href="https://nicelinks.site/post/5e0d4f3016bdad16b0f5b20e" target="_blank" rel="external">Gatsbyjs</a> 搭建一个静态网站，上文中提及的代码，完整版可参见：<a href="https://github.com/nicejade/blog.nicelinks.site/blob/master/src/components/search/index.js" target="_blank" rel="external">blog.nicelinks.site | search</a>。在线示例：<a href="https://blog.nicelinks.site/" target="_blank" rel="external">倾城周刊</a>、<a href="https://quickappmsg.vivo.com.cn/docs/introduction/feature/" target="_blank" rel="external">快应用消息中心</a>。</p>
+<h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h2><ul>
+<li><a href="https://forum.lovejade.cn/d/104-csrf" target="_blank" rel="external">如何防范 CSRF 跨站请求伪造？</a>；</li>
+<li><a href="https://forum.lovejade.cn/d/103-h5" target="_blank" rel="external">H5 拉起微信小程序流程解析</a>；</li>
+<li><a href="https://forum.lovejade.cn/d/128-web-api" target="_blank" rel="external">Web 开发中，较有用的一些 API 分享</a>；</li>
+<li><a href="https://forum.lovejade.cn/d/122" target="_blank" rel="external">腾讯云服务器使用感受，及折腾笔记</a>；</li>
+<li><a href="https://forum.lovejade.cn/d/117-npm" target="_blank" rel="external">如何基于 npm 在安装时为依赖重命名？</a>；</li>
+<li><a href="https://forum.lovejade.cn/d/4-nginx" target="_blank" rel="external">如何为 nginx 配置多个域名服务？</a>；</li>
+<li><a href="https://forum.lovejade.cn/d/2-flarum" target="_blank" rel="external">如何基于 Flarum 搭建一个优雅简洁论坛？</a>；</li>
+<li><a href="https://forum.lovejade.cn/d/54-linux" target="_blank" rel="external">Linux 系统如何设置开机启动脚本？</a>；</li>
+<li><a href="https://forum.lovejade.cn/d/50-flarum" target="_blank" rel="external">如何将 Flarum 论坛内容，主动推送至百度</a>；</li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      对于博客或者文档，全文搜索是非常重要的功能。现如今，网站生成器工具，无论是静态的、携带完整后台的、还是基于低代码、无代码的，皆不可胜数，诸如：Hexo、Vuepress、Docsify、Hugo、Ghost 等，但之于「搜索」功能，或未提供、或不尽如人意；基于这样的背景，本文旨在探讨如何打造本地全文搜索？
+    
+    </summary>
+    
+      <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
+    
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+      <category term="搜索" scheme="https://www.jeffjade.com/tags/%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>如何制作 Google 自适应广告素材？</title>
@@ -221,6 +285,51 @@
   </entry>
   
   <entry>
+    <title>关于“清风明月阁”的由来，以及未来</title>
+    <link href="https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/"/>
+    <id>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</id>
+    <published>2022-01-20T13:21:00.000Z</published>
+    <updated>2022-01-21T04:47:13.266Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>，基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感…..人生漫短，白首时回顾，堪凭这些许文字以自怜。</p>
+<a id="more"></a>
+<p><img src="http://lovejade.oss-cn-shenzhen.aliyuncs.com/小舟从此逝-江海寄余生.jpg" alt="小舟从此逝-江海寄余生"></p>
+<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>早先搭建的十余个网站，有些实属为体验「<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站构建工具</a>」而起；岁月蹉跎中折腾多了，那种兴之所至、行之所往的冲动，早已隐去；而今，却又“重蹈覆辙”，实在是感念 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 之强大，一时为其蕴藏的「哲思」所着迷；一直以来呢，也在探索文档、Wiki 最佳撰写工具；而前段时间，又恰巧购得云服务器一台；这好奇的念头，与适宜的环境，结合的恰到好处，于是，便有了<a href="https://wiki.lovejade.cn" target="_blank" rel="external">“清风明月阁”</a>。</p>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>给网站命名，向来谨慎，却总也是“因循守旧”，大多没有新意；从最早 2014 年的<a href="https://www.jeffjade.com/">晚晴幽草轩</a>，到今年（2021）的<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>，格式上，都是一个调子：截取喜欢的诗词，结合建筑名为后缀。那些年喜欢李商隐那句：“天意怜幽草，人间重晚晴”，便有了最初的两个网站，这在<a href="https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/">晚晴幽草轩，天意人间舫</a>一文中有过记载。</p>
+<p>多年来，深（身）陷代码中，久未涉足文学诗词，按照如上惯例，为此站取名时，为求其名能“达意”且兼具雅致，好一阵搜肠刮肚；<a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a>之中，已用亭、轩、舫、苑，又因此站基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 所建，在当时或者如今回头看，择以「阁」字，这存在必然性。而在诗词的甄选中，之处有意取李太白的“若非群玉山头见，会向瑶池月下逢”中「群玉」、「瑶池」；虽说雅致，但究竟与心境不能完全契合；斟酌时，须臾之间，灵光乍现，脑海浮现苏子瞻《前赤壁赋》中一段经典：</p>
+<blockquote>
+<p>“逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。<strong>惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适</strong>。”</p>
+</blockquote>
+<p>其<strong>雅致</strong>、其<strong>意境</strong>、其<strong>哲思</strong>，莫有与心之所愿更契合者，于是立即便定下了，名曰：<a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>；工作生活中，自觉总也是”一肚子不合时宜“，今为这网站命此名，怕是为数不多的一次“合乎时宜”；感谢苏子赐名！</p>
+<h2 id="其用"><a href="#其用" class="headerlink" title="其用"></a>其用</h2><p>漫画《四月一日灵异事件簿》中，有写道：“思想、语言是会束缚人的东西，不但自己的会束缚自己，别人的也会束缚自己”，对此深表认同：愚顽的脑袋里如再被束缚，接收到任何与之相悖的理念，都是引发愤怒的毒物。这个时代，关乎“求同存异”，于虚拟网络中或可“被存在”；而生活的现实中，却是难以“存活”。这些年，关乎“思想的表达、语言的阐述”，所引发的后果，远胜海啸山洪，且是司空见惯；即便朋友恋人间的好心建议（或提议），轻起口角，重则仇恨；如此往复，伤痕累累，乃至近乎“四海无人对夕阳”的悲苦……于是乎，痛定思痛后，终可懂得<code>海明威</code>为何如此说：</p>
+<blockquote>
+<p>我们花了两年学会说话，却要花上六十年来学会闭嘴。大多数时候，我们说得越多，彼此的距离却越远，矛盾也越多。在沟通中，大多数人总是急于表达自己，一吐为快，却一点也不懂对方。两年学说话，一生学闭嘴。懂与不懂，不多说。心乱心静，慢慢说。若真没话，就别说。── <a href="https://read.lovejade.cn/p/60e1ee1c7f46b90656e77c7d" target="_blank" rel="external">曼妙句子</a>。</p>
+</blockquote>
+<p>耳聪可以闻世声，目明堪能睹世事，这是与生俱来的本领；人间真实，纷呈精彩，阴阳相生，优劣混合；犹为凡夫俗子，免不了阐述下自己看法，一抒心中块垒，也为“两肩抬道义”；倘若付与人当面说，恐引纷争，实非余愿；“夫唯不争，故天下莫能与之争”，于是乎，在自建平台，以文字形式，承载所学、所思、所感、所悟，或是最佳之选。明朝文学家、画家陈继儒，在《小窗幽记》中写道：</p>
+<blockquote>
+<p>带雨有时种竹，关门无事锄花；拈笔闲删旧句，汲泉几试新茶。余尝净一室，置一几，陈几种快意书，放一本旧法帖；古鼎焚香，素麈挥尘，意思小倦，暂休竹榻。饷时而起，则啜苦茗，信手写汉书几行，随意观古画数幅。心目间，觉洒洒灵空，面上俗尘，当亦扑去三寸。但看花开落，不言人是非。</p>
+</blockquote>
+<p>其中所描绘心性境界，实在令人殷羡，而这也正是所追求的完美。至于“汉书几行、平思几许”，置于这人间网络中，赠予有缘人；期之如“江上之清风，山间之明月”，与人无害，偶可参考，吾愿足矣。</p>
+<p>2021 年 12 月末，记之于深圳。</p>]]></content>
+    
+    <summary type="html">
+    
+      清风明月阁，基于 Wiki.js 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感.....人生漫短，白首时回顾，堪凭这些许文字以自怜。
+    
+    </summary>
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/categories/Thought/"/>
+    
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+  </entry>
+  
+  <entry>
     <title>优质网站同好者周刊（第 49 期）- 倾城之链</title>
     <link href="https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/"/>
     <id>https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/</id>
@@ -320,51 +429,6 @@
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于“清风明月阁”的由来，以及未来</title>
-    <link href="https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/"/>
-    <id>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</id>
-    <published>2022-01-20T13:21:00.000Z</published>
-    <updated>2022-01-21T04:47:13.266Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>，基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感…..人生漫短，白首时回顾，堪凭这些许文字以自怜。</p>
-<a id="more"></a>
-<p><img src="http://lovejade.oss-cn-shenzhen.aliyuncs.com/小舟从此逝-江海寄余生.jpg" alt="小舟从此逝-江海寄余生"></p>
-<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>早先搭建的十余个网站，有些实属为体验「<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站构建工具</a>」而起；岁月蹉跎中折腾多了，那种兴之所至、行之所往的冲动，早已隐去；而今，却又“重蹈覆辙”，实在是感念 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 之强大，一时为其蕴藏的「哲思」所着迷；一直以来呢，也在探索文档、Wiki 最佳撰写工具；而前段时间，又恰巧购得云服务器一台；这好奇的念头，与适宜的环境，结合的恰到好处，于是，便有了<a href="https://wiki.lovejade.cn" target="_blank" rel="external">“清风明月阁”</a>。</p>
-<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>给网站命名，向来谨慎，却总也是“因循守旧”，大多没有新意；从最早 2014 年的<a href="https://www.jeffjade.com/">晚晴幽草轩</a>，到今年（2021）的<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>，格式上，都是一个调子：截取喜欢的诗词，结合建筑名为后缀。那些年喜欢李商隐那句：“天意怜幽草，人间重晚晴”，便有了最初的两个网站，这在<a href="https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/">晚晴幽草轩，天意人间舫</a>一文中有过记载。</p>
-<p>多年来，深（身）陷代码中，久未涉足文学诗词，按照如上惯例，为此站取名时，为求其名能“达意”且兼具雅致，好一阵搜肠刮肚；<a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a>之中，已用亭、轩、舫、苑，又因此站基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 所建，在当时或者如今回头看，择以「阁」字，这存在必然性。而在诗词的甄选中，之处有意取李太白的“若非群玉山头见，会向瑶池月下逢”中「群玉」、「瑶池」；虽说雅致，但究竟与心境不能完全契合；斟酌时，须臾之间，灵光乍现，脑海浮现苏子瞻《前赤壁赋》中一段经典：</p>
-<blockquote>
-<p>“逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。<strong>惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适</strong>。”</p>
-</blockquote>
-<p>其<strong>雅致</strong>、其<strong>意境</strong>、其<strong>哲思</strong>，莫有与心之所愿更契合者，于是立即便定下了，名曰：<a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>；工作生活中，自觉总也是”一肚子不合时宜“，今为这网站命此名，怕是为数不多的一次“合乎时宜”；感谢苏子赐名！</p>
-<h2 id="其用"><a href="#其用" class="headerlink" title="其用"></a>其用</h2><p>漫画《四月一日灵异事件簿》中，有写道：“思想、语言是会束缚人的东西，不但自己的会束缚自己，别人的也会束缚自己”，对此深表认同：愚顽的脑袋里如再被束缚，接收到任何与之相悖的理念，都是引发愤怒的毒物。这个时代，关乎“求同存异”，于虚拟网络中或可“被存在”；而生活的现实中，却是难以“存活”。这些年，关乎“思想的表达、语言的阐述”，所引发的后果，远胜海啸山洪，且是司空见惯；即便朋友恋人间的好心建议（或提议），轻起口角，重则仇恨；如此往复，伤痕累累，乃至近乎“四海无人对夕阳”的悲苦……于是乎，痛定思痛后，终可懂得<code>海明威</code>为何如此说：</p>
-<blockquote>
-<p>我们花了两年学会说话，却要花上六十年来学会闭嘴。大多数时候，我们说得越多，彼此的距离却越远，矛盾也越多。在沟通中，大多数人总是急于表达自己，一吐为快，却一点也不懂对方。两年学说话，一生学闭嘴。懂与不懂，不多说。心乱心静，慢慢说。若真没话，就别说。── <a href="https://read.lovejade.cn/p/60e1ee1c7f46b90656e77c7d" target="_blank" rel="external">曼妙句子</a>。</p>
-</blockquote>
-<p>耳聪可以闻世声，目明堪能睹世事，这是与生俱来的本领；人间真实，纷呈精彩，阴阳相生，优劣混合；犹为凡夫俗子，免不了阐述下自己看法，一抒心中块垒，也为“两肩抬道义”；倘若付与人当面说，恐引纷争，实非余愿；“夫唯不争，故天下莫能与之争”，于是乎，在自建平台，以文字形式，承载所学、所思、所感、所悟，或是最佳之选。明朝文学家、画家陈继儒，在《小窗幽记》中写道：</p>
-<blockquote>
-<p>带雨有时种竹，关门无事锄花；拈笔闲删旧句，汲泉几试新茶。余尝净一室，置一几，陈几种快意书，放一本旧法帖；古鼎焚香，素麈挥尘，意思小倦，暂休竹榻。饷时而起，则啜苦茗，信手写汉书几行，随意观古画数幅。心目间，觉洒洒灵空，面上俗尘，当亦扑去三寸。但看花开落，不言人是非。</p>
-</blockquote>
-<p>其中所描绘心性境界，实在令人殷羡，而这也正是所追求的完美。至于“汉书几行、平思几许”，置于这人间网络中，赠予有缘人；期之如“江上之清风，山间之明月”，与人无害，偶可参考，吾愿足矣。</p>
-<p>2021 年 12 月末，记之于深圳。</p>]]></content>
-    
-    <summary type="html">
-    
-      清风明月阁，基于 Wiki.js 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感.....人生漫短，白首时回顾，堪凭这些许文字以自怜。
-    
-    </summary>
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/categories/Thought/"/>
-    
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
@@ -2012,116 +2076,6 @@
 <li><a href="https://www.jeffjade.com/2021/08/19/213-nicelinks-weekly-027/">优质网站同好者周刊（第 27 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/82-26" target="_blank" rel="external">优质网站同好者周刊（第 26 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/08/05/211-nicelinks-weekly-025/">优质网站同好者周刊（第 25 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优质网站同好者周刊（第 35 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/10/14/222-nicelinks-weekly-035/"/>
-    <id>https://www.jeffjade.com/2021/10/14/222-nicelinks-weekly-035/</id>
-    <published>2021-10-14T13:21:00.000Z</published>
-    <updated>2021-10-14T15:40:37.947Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="PDF-Online-Free-PDF-Tools-to-Merge-Convert-amp-Edit-PDFs"><a href="#PDF-Online-Free-PDF-Tools-to-Merge-Convert-amp-Edit-PDFs" class="headerlink" title="PDF Online - Free PDF Tools to Merge, Convert &amp; Edit PDFs"></a><a href="https://nicelinks.site/post/61683936265d8c6be879dd78" target="_blank" rel="external">PDF Online - Free PDF Tools to Merge, Convert &amp; Edit PDFs</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/PDF" target="_blank" rel="external"><code>PDF</code></a> · <a href="https://nicelinks.site/tags/在线" target="_blank" rel="external"><code>在线</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<blockquote>
-<p>PDF Online gives you free, secure &amp; accurate tools to work with PDFs. Drop in your files to merge, convert, edit, compress PDFs &amp; much more - completely free!</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/pdf.online.png?x-oss-process=style/png2jpg" alt="倾城之链 - PDF Online - Free PDF Tools to Merge, Convert &amp; Edit PDFs"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://pdf.online/" target="_blank" rel="external">PDF Online</a>，一款 PDF 在线工具，为您提供完全免费、安全和准确的服务，来处理 <code>PDF</code> 文件。上传您的文件，即快速完成来 PDF 的合并、转换（包含 PDF 转换为 <code>JPG</code>、<code>PNG</code>、<code>Word</code>、<code>HTML</code> 等文件；也支持由  <code>JPG</code>、<code>PNG</code>、<code>Excel</code>、<code>Word</code>、<code>PPT</code>、<code>DICOM</code> 等转换为 <code>PDF</code>）、编辑、压缩、剪裁及更多（如文本提取、删除页面等）。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61683936265d8c6be879dd78" target="_blank" rel="external">倾城之链 - PDF Online - Free PDF Tools to Merge, Convert &amp; Edit PDFs</a></p>
-<h2 id="Linkyy-A-simple-yet-cool-place-for-all-your-links"><a href="#Linkyy-A-simple-yet-cool-place-for-all-your-links" class="headerlink" title="Linkyy. A simple, yet cool place for all your links"></a><a href="https://nicelinks.site/post/61657a9e265d8c6be879dd74" target="_blank" rel="external">Linkyy. A simple, yet cool place for all your links</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/个人主页" target="_blank" rel="external"><code>个人主页</code></a></p>
-<blockquote>
-<p>Linkyy. A simple, yet cool place for all your links.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/linkyy.co.png?x-oss-process=style/png2jpg" alt="倾城之链 - Linkyy. A simple, yet cool place for all your links"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://linkyy.co/" target="_blank" rel="external">Linkyy</a>，是您所有链接（社交媒体、网站、博客等）的地方；基于 <a href="https://nicelinks.site/redirect?url=https://linkyy.co/" target="_blank" rel="external">Linkyy</a> 可以创建您自己的个性化页面，并方便与他人分享；与 <a href="https://nicelinks.site/post/5ae07c3bcbf8b27043e5e9db" target="_blank" rel="external">about.me</a> 的功能极为相似。它的特色是，注册和使用，都极其简单。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61657a9e265d8c6be879dd74" target="_blank" rel="external">倾城之链 - Linkyy. A simple, yet cool place for all your links</a></p>
-<h2 id=""><a href="#" class="headerlink" title="["></a>[</h2><p>Jenkins<br>](<a href="https://nicelinks.site/post/61641ee477a8ce5e114ce55b" target="_blank" rel="external">https://nicelinks.site/post/61641ee477a8ce5e114ce55b</a>)</p>
-<p><strong>标签</strong>：<a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/自动化" target="_blank" rel="external"><code>自动化</code></a> · <a href="https://nicelinks.site/tags/开发者" target="_blank" rel="external"><code>开发者</code></a></p>
-<blockquote>
-<p>Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.jenkins.io.png?x-oss-process=style/png2jpg" alt="倾城之链 - 
-Jenkins
-"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.jenkins.io/" target="_blank" rel="external">Jenkins</a> 一个开源的自动化服务器，一款开源 CI&amp;CD 软件，用于自动化各种任务，使世界各地的开发者能够可靠地构建、测试和部署他们的软件。<a href="https://nicelinks.site/redirect?url=https://www.jenkins.io/" target="_blank" rel="external">Jenkins</a> 支持各种运行方式，可通过系统包、Docker 或者通过一个独立的 Java 程序。</p>
-<h3 id="Jenkins-特性"><a href="#Jenkins-特性" class="headerlink" title="Jenkins 特性"></a>Jenkins 特性</h3><ul>
-<li><strong>简易安装</strong>：<a href="https://nicelinks.site/redirect?url=https://www.jenkins.io/" target="_blank" rel="external">Jenkins</a> 是一个独立的基于 Java 的程序，随时可以运行，包含 Windows，Mac OS X 和其 他类 Unix 操作系统的软件包；</li>
-<li><strong>配置简单</strong>：Jenkins 可以通过其 Web 界面轻松设置和配置，其中包括即时错误检查和内置帮助；</li>
-<li><strong>插件</strong>：Jenkins 在更新中心拥有数百个插件，几乎集成了持续集成和持续交付工具链中的所有 工具。比如有一个机器人，他自身自会 走路，转弯这些基本功能，但是研发这款机器 人的科学家设置了这个机器人可以插很多个芯片，每一种芯片对应的是机器人的一种 功 能。我们把这个机器人带回家后想要它可以给我们做饭，我们就去找到带有做饭功能的芯片，把这个芯片插到机器人的身体，这个机器人就有做饭的功能了。而 jenkins 就 相当于这个机器人，插件就相当于芯片，当 jenkins 安装相应的插件后就有之前不具 备的功能了；</li>
-<li><strong>扩展</strong>：Jenkins 可以通过其插件架构进行扩展，为 Jenkins 提供了几乎无限的可能性；</li>
-<li><strong>分布式</strong>：Jenkins 可以轻松地跨多台计算机分配工作，跨多个平台构建，测试和部署。就是有很多台机器去帮你完成 CI/CD，测试的工作（master-slave 架构）；</li>
-</ul>
-<p><a href="https://nicelinks.site/redirect?url=https://www.jenkins.io/" target="_blank" rel="external">Jenkins</a> 的主要功能是：<strong>将项目中重复执行的工作自动化的执行</strong>。如软件的建造（构建）和在配置文件下设置的 job。这对开发者尤其具有帮助，已是各互联网科技公司必备工具之一。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61641ee477a8ce5e114ce55b" target="_blank" rel="external">倾城之链 -<br>Jenkins
-</a></p>
-<h2 id="GIPHY-Be-Animated"><a href="#GIPHY-Be-Animated" class="headerlink" title="GIPHY - Be Animated"></a><a href="https://nicelinks.site/post/61641bbf77a8ce5e114ce559" target="_blank" rel="external">GIPHY - Be Animated</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/GIF" target="_blank" rel="external"><code>GIF</code></a> · <a href="https://nicelinks.site/tags/在线" target="_blank" rel="external"><code>在线</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<p><strong>关键字</strong>：GIF search engine, GIF search engine, animated GIFs, best GIFs, GIF, GIFs, funny GIFs, movie GIFs, tv GIFs, reaction GIFs, cat GIFs, girl GIFs, happy GIFs, breaking bad GIFs, anime GIFs, sad GIFs, fail GIFs, star wars GIFs, memes, yes GIFs, no GIFs, create GIFs, GIF maker</p>
-<blockquote>
-<p>GIPHY is your top source for the best &amp; newest GIFs &amp; Animated Stickers online. Find everything from funny GIFs, reaction GIFs, unique GIFs and more.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/giphy.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - GIPHY - Be Animated"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://giphy.com/" target="_blank" rel="external">GIPHY.COM</a> 是在 Internet 上搜索、共享、发现和创建 GIF 的最佳方式。GIPHY 网站、应用程序和 API 上的内容都是网络上最好和最受欢迎的 GIF，以及由才华横溢的 GIF 艺术家和世界级品牌创建的内容。他们的目标是帮助更轻松地找到和分享好的 GIF。</p>
-<h3 id="如何找到您想要的内容"><a href="#如何找到您想要的内容" class="headerlink" title="如何找到您想要的内容"></a>如何找到您想要的内容</h3><p>通过在 <a href="https://nicelinks.site/redirect?url=https://giphy.com/" target="_blank" rel="external">GIPHY.COM</a> 顶部的搜索栏中搜索一个或一组术语来查找您要查找的内容。我们会根据您搜索的术语的相关性自动返回结果。如果您没有看到您要查找的内容，请在搜索末尾添加一些更具体的字词。</p>
-<p>值得一提的是，<a href="https://nicelinks.site/redirect?url=https://giphy.com/" target="_blank" rel="external">GIPHY.COM</a> 还 <a href="https://giphy.com/apps/giphycapture" target="_blank" rel="external">GIPHY Capture</a> 创建 GIF 工具。这个免费的应用程序简单、强大，而且对几乎任何人来说都足够简单。只需点击几下即可创建您的 GIF，超级简单的编辑让您快速获得创意，支持快速保存和分享。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61641bbf77a8ce5e114ce559" target="_blank" rel="external">倾城之链 - GIPHY - Be Animated</a></p>
-<h2 id="爱学术导航"><a href="#爱学术导航" class="headerlink" title="爱学术导航"></a><a href="https://nicelinks.site/redirect?url=https://www.ixsdh.com/" target="_blank" rel="external">爱学术导航</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/theme/tools" target="_blank" rel="external"><code>利器</code></a> · <a href="https://nicelinks.site/tags/%E5%8F%91%E7%8E%B0" target="_blank" rel="external"><code>发现</code></a> · <a href="https://nicelinks.site/tags/%E5%AF%BC%E8%88%AA" target="_blank" rel="external"><code>导航</code></a> · <a href="https://nicelinks.site/tags/%E7%BD%91%E7%AB%99" target="_blank" rel="external"><code>网站</code></a></p>
-<p><strong>关键字：</strong> 谷歌学术, sci-hub, 科研导航, 学术导航, 学术搜索, 学术网站大全, 数据库导航, 科研工具, science nature database 学术资源 科研资源 论文 实验室 学术会议, 学术工具, 数据库, 科研基础设施, 科研仪器, 科学院, 中科院, 中国科学院, 社会科学院, 科技部</p>
-<p>爱学术导航是科研学术信噪比最高的导航站，致力于成为国内领先的科研与学术资源导航平台，为科研人员提供科研网站导航，网址库等服务，让科研工作更简单、更有效率。</p>
-<p><img src="https://oss.nicelinks.site/www.ixsdh.com.png?x-oss-process=style/png2jpg" alt="爱学术导航 倾城之链"></p>
-<p><strong>推荐语：</strong><a href="https://nicelinks.site/redirect?url=https://www.ixsdh.com/" target="_blank" rel="external">爱学术导航站</a> 成立于 2021 年 5 月 20 日，志在成为学习和生活信噪比最高的导航网站。值得一提的是，该网站除了收录学术搜索、文献数据、科研数据、学术工具等相关网站外，还提供了些其他内容，如站内搜索、相关资讯、城市天气等内容。── 出自<a href="https://nicelinks.site/post/616056a5835dda0faf03db56" target="_blank" rel="external">倾城之链 | 爱学术导航</a>。</p>
-<h2 id="即刻学术"><a href="#即刻学术" class="headerlink" title="即刻学术"></a><a href="https://nicelinks.site/redirect?url=https://www.ijkxs.com/" target="_blank" rel="external">即刻学术</a></h2><p><strong>标签</strong>： <a href="https://nicelinks.site/theme/community" target="_blank" rel="external"><code>社区</code></a> · <a href="https://nicelinks.site/tags/%E7%A7%91%E6%8A%80" target="_blank" rel="external"><code>科技</code></a> · <a href="https://nicelinks.site/tags/%E8%B5%84%E8%AE%AF" target="_blank" rel="external"><code>资讯</code></a> · <a href="https://nicelinks.site/tags/%E5%B9%B3%E5%8F%B0" target="_blank" rel="external"><code>平台</code></a></p>
-<p><strong>关键字：</strong> 科技资讯, 学术资源, 会议交流, 视频活动, 学术会议, it交流, 站长交流, 论文编译, 论文翻译, 投稿支持, 版权服务</p>
-<p>科技资讯、学术资源、会议交流、视频活动以及兴趣部落社交等信噪比最高的网站</p>
-<p><img src="https://oss.nicelinks.site/www.ijkxs.com.png?x-oss-process=style/png2jpg" alt="即刻学术 倾城之链"></p>
-<p><strong>推荐语：</strong><a href="https://nicelinks.site/redirect?url=https://www.ijkxs.com/" target="_blank" rel="external">即刻学术</a>是集科技资讯、学术资源、会议交流、视频活动以及兴趣部落社交等信噪比较高的网站，致力于打造国内技术爱好者共同的乐园。这里拥有旺盛的人气、良好的交流氛围及广阔的交流空间，已成为聚集众多技术大牛和学术大牛的学术资源、经验交流平台。── 出自<a href="https://nicelinks.site/post/61605687835dda0faf03db54" target="_blank" rel="external">倾城之链 | 即刻学术</a>。</p>
-<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>“我也想挣大钱过好日子，但是如果是为了挣大钱过好日子去当编剧，我既挣不来大钱也写不出好剧本。<strong>如果我的能力只能让我穷困潦倒，那穷困潦倒就是我的价值</strong>。”；“只要不是我觉到、悟到的，你给不了我，给了我也拿不住，叶晓明他们就是例子。<strong>只有我自己觉到、悟到的，我才有可能做到，我能做到的才是我的</strong>。”── 豆豆《遥远的救世主》</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/93-31" target="_blank" rel="external">优质网站同好者周刊（第 31 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/90-30" target="_blank" rel="external">优质网站同好者周刊（第 30 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/88-29" target="_blank" rel="external">优质网站同好者周刊（第 29 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/08/26/214-nicelinks-weekly-028/">优质网站同好者周刊（第 28 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/08/19/213-nicelinks-weekly-027/">优质网站同好者周刊（第 27 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/82-26" target="_blank" rel="external">优质网站同好者周刊（第 26 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/08/05/211-nicelinks-weekly-025/">优质网站同好者周刊（第 25 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/29/210-nicelinks-weekly-024/">优质网站同好者周刊（第 24 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/23/209-nicelinks-weekly-023/">优质网站同好者周刊（第 23 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/">优质网站同好者周刊（第 22 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
 <li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
 <li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
