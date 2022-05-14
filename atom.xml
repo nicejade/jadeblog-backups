@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2022-04-09T14:55:41.828Z</updated>
+  <updated>2022-05-14T16:21:19.497Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,127 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>地表最强 Markdown 文本编辑工具——Obsidian</title>
+    <link href="https://www.jeffjade.com/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/"/>
+    <id>https://www.jeffjade.com/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/</id>
+    <published>2022-05-14T08:21:00.000Z</published>
+    <updated>2022-05-14T16:21:19.497Z</updated>
+    
+    <content type="html"><![CDATA[<p>沈从文先生在给张兆和的情书中，有写道：“<strong>我一辈子走过许多地方的路，行过许多地方的桥，看过许多形状的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人</strong>”。近十年，写文章或文档，用过非常多基于 <a href="https://nicelinks.site/tags/Markdown" target="_blank" rel="external">Markdown</a> 出色的文本编辑工具，诸如 <a href="https://nicelinks.site/post/5af1dffb979f626ea3d37910" target="_blank" rel="external">Sublime Text</a> 、 <a href="https://nicelinks.site/post/5a5114df0b0ec0396863d7c1" target="_blank" rel="external">Cmd Markdown</a> 、 <a href="https://nicelinks.site/post/5b055142e93ed2618cfac124" target="_blank" rel="external">MarkEditor</a> 、 <a href="https://nicelinks.site/post/5cbc58707855f80ea42ea6a7" target="_blank" rel="external">Typora</a> ， <a href="https://markdown.lovejade.cn/" target="_blank" rel="external">Arya 在线</a> 等等，直到遇见 <a href="https://nicelinks.site/post/6266999577f8270876fcb3d6" target="_blank" rel="external">Obsidian</a> ，被强大的功能、完美的设计所震撼、折服，堪称<strong>地表最强文本编辑工具</strong>。</p>
+<a id="more"></a>
+<blockquote>
+<p><a href="https://nicelinks.site/redirect?url=https://obsidian.md/" target="_blank" rel="external">Obsidian</a> 是一个强大的<strong>知识库</strong>、一款好用的<strong>笔记应用</strong>程序，位于纯文本 <code>Markdown</code> 文件的本地文件夹之上。其目标是：永远成为你第二个大脑。人脑是非线性的：人们总是从一个想法跳到另一个想法。你的第二个大脑应该同样工作。在 Obsidian 中，建立和跟随<strong>连接</strong> 是无摩擦的。像园丁一样照顾你的笔记；在一天结束时，坐下来惊叹于您自己的知识图谱。── 出自 <a href="https://nicelinks.site/post/6266999577f8270876fcb3d6" target="_blank" rel="external">倾城之链 | Obsidian</a> 。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/obsidian.md.png?x-oss-process=style/png2jpg" alt="Obsidian 倾城之链"></p>
+<p> <a href="https://nicelinks.site/post/6266999577f8270876fcb3d6" target="_blank" rel="external">Obsidian</a> ，它不仅是极其好用的文本编辑工具，而且还是一款<strong>强大的知识库</strong>；但，在这里就不对<strong>知识库</strong>作探讨，主要就其极致的文本编辑体验，结合自己短暂的实践体验，来跟朋友们分享下 Obsidian 的优势：</p>
+<ul>
+<li>默认<strong>所见即所得</strong>（wysiwyg）的编辑模式；</li>
+<li>支持粘贴 HTML 自动转换为 Markdown；</li>
+<li>所有操作默认有<strong>快捷键</strong>，并且方便自行更改；</li>
+<li>应用打开极快，操作流畅，所占用内存很少；</li>
+<li>100% 免费供个人使用，无需账户或注册；</li>
+<li><strong>支持扩展</strong>，社区已贡献有 <a href="https://obsidian.md/plugins#" target="_blank" rel="external">近 600 个插件</a> ；</li>
+</ul>
+<p>要着重称赞的就是 Obsidian 的插件，这在 Markdown 编辑器工具中是少见的。首先，这种机制本身就很赞，不将所有功能，都集成于应用本身，而按需给予，善莫如是，使其能在<strong>轻量</strong>与<strong>强大</strong>中平衡；其次，有了这种机制，即能允许用户介入，参与贡献，无疑是为产品功能丰富，提供了绝佳的途径。</p>
+<p><strong>备注</strong>：Obsidian 插件，安装与使用，都非常方便；前往 <a href="https://obsidian.md/plugins" target="_blank" rel="external">Obsidian Plugins</a>，检索您想要的插件；如果您已安装并打开 Obsidian，点击 <code>Open in Obsidian</code>，即可快速在 Obsidian 中，打开该插件；点击 <code>install</code> 安装之后，再点击 <code>enable</code> 即可启用该插件（如下截图）。对于有需要按键才能作用的插件，您还可以修改<code>快捷键</code>以及其他设置参数。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Obsidian-Pangu-Plugin.png" alt="Obsidian Pangu Plugin"></p>
+<p>下面，跟大家分享些个人所喜欢的插件：</p>
+<h2 id="ADVANCED-TABLES-：改进的表格导航、格式化和操作"><a href="#ADVANCED-TABLES-：改进的表格导航、格式化和操作" class="headerlink" title="ADVANCED TABLES ：改进的表格导航、格式化和操作"></a><a href="https://obsidian.md/plugins?id=table-editor-obsidian" target="_blank" rel="external">ADVANCED TABLES</a> ：改进的表格导航、格式化和操作</h2><blockquote>
+<p>Add improved navigation, formatting, and manipulation to markdown tables in Obsidian</p>
+</blockquote>
+<p>Markdown 的表格语法比在 Word 中插入表格还要麻烦，一旦想要增改某个内容，更是灾难。该插件则大大简化了表格输入的流程。</p>
+<p>要创建表格，请创建一个 <code>|</code> 字 符，然后键入表格的第一个标题并按 <code>Tab</code>，就会触发插件的自动补全语法。之后通过 <code>Tab</code> / <code>Shift + Tab</code> 来在表格之间移动光标，通过 <code>Enter</code> 完成输入；顷刻之间，就能写完您想要的表格，实在是完美。</p>
+<p><img src="https://raw.githubusercontent.com/tgrosinger/advanced-tables-obsidian/main/resources/screenshots/basic-functionality.gif" alt="# Advanced Tables for Obsidian"></p>
+<p>如果您想了解更多，可参见 Github 源码： <a href="https://github.com/tgrosinger/advanced-tables-obsidian" target="_blank" rel="external">tgrosinger/advanced-tables-obsidian</a> 。</p>
+<h2 id="OBSIDIAN-PANGU-：改进中英文间距"><a href="#OBSIDIAN-PANGU-：改进中英文间距" class="headerlink" title="OBSIDIAN PANGU ：改进中英文间距"></a><a href="https://obsidian.md/plugins?search=PanG#" target="_blank" rel="external">OBSIDIAN PANGU</a> ：改进中英文间距</h2><blockquote>
+<p>为 Obsidian 笔记加上「盘古之白」，排版强迫症者的福音。 | A small plugin aims to add space between Chinese Characters and English Alphabet, and it is a boon for typographically compulsive people.</p>
+</blockquote>
+<p>这个小插件，旨在增加汉字和英文字母之间，添加<strong>空格</strong>，使得整个排版更加专业且美观；这对于排版强迫症的人来说，是一个福音（我个人非常喜欢，先前是借助 <a href="https://nicelinks.site/post/5c16083e819ae45de1453caa" target="_blank" rel="external">Prettier</a> 或其他工具，来实现）。</p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/Natumsol/obsidian-pangu" target="_blank" rel="external">Obsidian Pangu Plugin</a> 。</p>
+<h2 id="Editor-Syntax-Highlight-：代码高亮"><a href="#Editor-Syntax-Highlight-：代码高亮" class="headerlink" title="Editor Syntax Highlight ：代码高亮"></a><a href="https://obsidian.md/plugins?id=cm-editor-syntax-highlight-obsidian" target="_blank" rel="external">Editor Syntax Highlight</a> ：代码高亮</h2><blockquote>
+<p>A plugin for Obsidian which allows syntax highlighting for code blocks in the editor.</p>
+</blockquote>
+<p>这对于程序员（软件开发）来讲，非常有价值；它能让编辑界面的代码，页面的元数据都有高亮效果；而且支持的格式极多，如 <code>xml</code>、<code>json</code>、<code>ts</code>、<code>js</code>、<code>html</code>、<code>css</code>、<code>python</code>、<code>bash</code> 等等。值得一提的是，在代码区域，可以放心使用 <code>Tab</code> 按键，无需担心会清空你选中的代码，其效果跟在代码编辑器中是一致的，体验极佳。</p>
+<p><img src="https://github.com/deathau/cm-editor-syntax-highlight-obsidian/raw/main/screenshot.png" alt="# Editor Syntax Highlight Obsidian Plugin"></p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/deathau/cm-editor-syntax-highlight-obsidian" target="_blank" rel="external">Editor Syntax Highlight Obsidian Plugin</a> 。</p>
+<h2 id="Kanban-：看板模块"><a href="#Kanban-：看板模块" class="headerlink" title="Kanban ：看板模块"></a><a href="https://obsidian.md/plugins?id=obsidian-kanban" target="_blank" rel="external">Kanban</a> ：看板模块</h2><blockquote>
+<p>Create markdown-backed Kanban boards in Obsidian</p>
+</blockquote>
+<p><code>Kanban</code>，这款插件可以为 Obsidian 增加看板模块；让你可以使用看板，来管理<strong>任务或笔记</strong>。它有两种看板创建方式：使用命令添加新的看板，也可以使用右键菜单创建；而且可以在 Markdown 和看板中，随时切换，如果你想要用 Obsidian <strong>管理日常任务</strong>的话，它是非常好的插件。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Obsidian-kanban.png" alt="Obsidian kanban"></p>
+<p>关于如何创建和使用看板，可参见： <a href="https://matthewmeye.rs/obsidian-kanban/How%20do%20I/Create%20a%20Kanban%20board/" target="_blank" rel="external">创建看板</a> ；最简单的方式是：右键单击文件夹，并选择 <code>New Kanban board</code>。值得一提的是，Obsidian 的看板功能，其使用体验，在笔者看来要比 <a href="https://nicelinks.site/post/59ba80d93df6765c75b77911" target="_blank" rel="external">Giuhub</a> 、 <a href="https://nicelinks.site/post/5f86fe3ccda9de27bd93a927" target="_blank" rel="external">Gitlab</a> 、 <a href="https://nicelinks.site/post/5ce69c6746395f0822df9d6b" target="_blank" rel="external">Trello</a> 要用很多，强烈推荐。</p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/tgrosinger/advanced-tables-obsidian" target="_blank" rel="external">Advanced Tables for Obsidian</a> 。</p>
+<h2 id="Outline：文件大纲（官方插件）"><a href="#Outline：文件大纲（官方插件）" class="headerlink" title="Outline：文件大纲（官方插件）"></a>Outline：文件大纲（官方插件）</h2><blockquote>
+<p>Display the outline of current file or linked pane</p>
+</blockquote>
+<p>Outline 是一款大纲插件，可以根据标题自动为 Obsidian 文档生成目录大纲，可以快速预览所有标题，也可以用来快速跳转到指定位置，如果你经常写长文章的话会非常有用，Outline 是官方插件，到核心插件中启用即可自动开启。具体操作为：打开设置（<code>command + ,</code>） =&gt; Core Plugin =&gt; 发起检索 <code>Outline</code> =&gt; 选择开启。</p>
+<h2 id="Mind-Map-：思维导图插件"><a href="#Mind-Map-：思维导图插件" class="headerlink" title="Mind Map ：思维导图插件"></a><a href="https://obsidian.md/plugins?id=obsidian-mind-map" target="_blank" rel="external">Mind Map</a> ：思维导图插件</h2><blockquote>
+<p>This repository contains a plugin for Obsidian for viewing Markdown notes as Mind Maps using Markmap.</p>
+</blockquote>
+<p>Mind Map 是一款 <code>思维导图</code> 插件，它可以为你的 Markdown 文本转换为思维导图，可以更清晰地查看文章的结构和内容，还支持一些简单的操作，比如放大缩小、拖拽、收起展开节点等，你还可以一键复制思维导图图片，分享或保存到其他位置。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/mind-map-demo.png" alt="Obsidian Mind Map"></p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/lynchjames/obsidian-mind-map" target="_blank" rel="external">Obsidian Mind Map</a> 。</p>
+<h2 id="Paste-URL-into-selection-：快速插入链接"><a href="#Paste-URL-into-selection-：快速插入链接" class="headerlink" title="Paste URL into selection ：快速插入链接"></a><a href="https://obsidian.md/plugins?id=url-into-selection" target="_blank" rel="external">Paste URL into selection</a> ：快速插入链接</h2><blockquote>
+<p>Insert links (URLs) into a selected text “notion-style” using regular <code>Ctrl/Cmd + V</code></p>
+</blockquote>
+<p>当想要在鼠标选中的单词上插入 URL 时，基于 Markdown 语法，并不是很方便；此时你可以安装 <code>Paste URL into selection</code> 这款插件；启用该插件后，只需要选中文字再 <code>Cmd + V</code> （or <code>Ctrl V</code> Windows 系统） 键，就可以直接添加链接，比富文本编辑器中操作，还要方便许多。</p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/denolehov/obsidian-url-into-selection" target="_blank" rel="external">Paste URL into selection</a> 。</p>
+<h2 id="Checklist-：待办任务增强"><a href="#Checklist-：待办任务增强" class="headerlink" title="Checklist ：待办任务增强"></a><a href="https://obsidian.md/plugins?id=obsidian-checklist-plugin" target="_blank" rel="external">Checklist</a> ：待办任务增强</h2><blockquote>
+<p>Consolidate checklists across all files into a single view</p>
+</blockquote>
+<p>Checklist 是一款<strong>待办任务增强</strong>插件，它可以为 Obsidian 的侧边栏增加一个任务栏，你可以在该栏目下查看到所有笔记中的待办任务，可以快速跳转到任务的位置，也可以直接在任务栏上勾选完成任务。其用法如下：</p>
+<ul>
+<li>启用此插件后，您将看到清单出现在右侧边栏中；</li>
+<li>您标记的任何清单项目块都 <code>#todo</code> 将显示在此侧边栏中；</li>
+<li>您可以通过在编辑器中勾选它们（例如 <code>- [ ]</code>-&gt; <code>- [x]</code>）或单击侧栏中的清单项目来完成清单项目，这将为您更新 <code>.md</code> 文件；</li>
+</ul>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/screenshot-two-files.png" alt="Obsidian Checklist"></p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/delashum/obsidian-checklist-plugin" target="_blank" rel="external">obsidian-checklist-plugin</a> 。</p>
+<h2 id="Calendar：日历📅"><a href="#Calendar：日历📅" class="headerlink" title="Calendar：日历📅"></a><a href="https://obsidian.md/plugins?search=Calendar#" target="_blank" rel="external">Calendar</a>：日历📅</h2><blockquote>
+<p>This plugin for Obsidian creates a simple Calendar view for visualizing and navigating between your daily notes.</p>
+</blockquote>
+<p>Calendar 是一款为增强 Daily notes 而制作的日历插件，它可以在侧边栏上增加日历模块，你可以用它来快速跳转到特定时间的每日笔记，而且你还可以用它来为没有每日笔记的日期创建笔记，可以为之前的日期创建，也可以创建未来的笔记。其用法如下：</p>
+<p>在设置菜单中启用插件后，您应该会看到日历视图出现在右侧边栏中。该插件会读取您的每日笔记设置，以了解您的日期格式、每日笔记模板的位置以及它创建的新每日笔记的位置。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/screenshot-full.png" alt="Obsidian  Calendar"></p>
+<p>如果你想了解更多，可以参见 Github 源码：<a href="https://github.com/liamcain/obsidian-calendar-plugin" target="_blank" rel="external">obsidian-calendar-plugin</a>。</p>
+<p>如今，<a href="https://nicelinks.site/post/6266999577f8270876fcb3d6" target="_blank" rel="external">Obsidian</a> 插件市场，所蕴含的宝藏已十分丰富，大凡能想到优化点，都已有人贡献出良好的设计方案。如果您有自己独特诉求，完全可以基于Obsidian，定制属于自己的插件，只需阅读相关文档，懂些 JavaScript 编程基础即可。具体可参见文章：<a href="https://david-brown.dev/posts/obsidian-macros-plugin/" target="_blank" rel="external">为 Obsidian.md 创建插件</a> 或 <a href="https://phibr0.medium.com/how-to-create-your-own-obsidian-plugin-53f2d5d44046" target="_blank" rel="external">How to create your own Obsidian Plugin</a>。</p>
+<p>窃以为，好的工具与强大工具，其最大区别在于：前者会让使用者觉得自己跟软件本身都很强；而后者只会让使用者觉得工具很强。<a href="https://nicelinks.site/post/6266999577f8270876fcb3d6" target="_blank" rel="external">Obsidian</a> 就属于前者，它能让用户 0 配置，即能快速上手使用；又能很好支持愿意折腾的朋友，在上面各种折腾，附加额外功能，实在是值得称赞。如今，只使用了没几天，尚有更多玩法儿，等待探索；欢迎各路朋友，分享您宝贵的建议和意见。</p>
+<blockquote>
+<p>原文首发于个人最新博客：<a href="https://forum.lovejade.cn/d/177-markdown-obsidian" target="_blank" rel="external">地表最强 Markdown 文本编辑工具——Obsidian | 悠然宜想亭</a>。</p>
+</blockquote>
+<h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h2><ul>
+<li><a href="https://forum.lovejade.cn/d/129" target="_blank" rel="external">谷歌自适应广告素材，制作心得分享</a></li>
+<li><a href="https://forum.lovejade.cn/d/116-38" target="_blank" rel="external">优质网站同好者周刊（第 38 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/112-37" target="_blank" rel="external">优质网站同好者周刊（第 37 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      沈从文先生在给张兆和的情书中，有写道：“我一辈子走过许多地方的路，行过许多地方的桥，看过许多形状的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人”。近十年，写文章或文档，用过非常多基于 Markdown 出色的文本编辑工具，诸如 Sublime Text 、 Cmd Markdown 、 MarkEditor 、 Typora ， Arya 在线 等等，直到遇见 Obsidian ，被强大的功能、完美的设计所震撼、折服，堪称地表最强文本编辑工具。
+    
+    </summary>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/categories/Toss/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+      <category term="Markdown" scheme="https://www.jeffjade.com/tags/Markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>如何打造体验良好的本地全文搜索？</title>
@@ -285,51 +406,6 @@
   </entry>
   
   <entry>
-    <title>关于“清风明月阁”的由来，以及未来</title>
-    <link href="https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/"/>
-    <id>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</id>
-    <published>2022-01-20T13:21:00.000Z</published>
-    <updated>2022-01-21T04:47:13.266Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>，基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感…..人生漫短，白首时回顾，堪凭这些许文字以自怜。</p>
-<a id="more"></a>
-<p><img src="http://lovejade.oss-cn-shenzhen.aliyuncs.com/小舟从此逝-江海寄余生.jpg" alt="小舟从此逝-江海寄余生"></p>
-<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>早先搭建的十余个网站，有些实属为体验「<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站构建工具</a>」而起；岁月蹉跎中折腾多了，那种兴之所至、行之所往的冲动，早已隐去；而今，却又“重蹈覆辙”，实在是感念 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 之强大，一时为其蕴藏的「哲思」所着迷；一直以来呢，也在探索文档、Wiki 最佳撰写工具；而前段时间，又恰巧购得云服务器一台；这好奇的念头，与适宜的环境，结合的恰到好处，于是，便有了<a href="https://wiki.lovejade.cn" target="_blank" rel="external">“清风明月阁”</a>。</p>
-<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>给网站命名，向来谨慎，却总也是“因循守旧”，大多没有新意；从最早 2014 年的<a href="https://www.jeffjade.com/">晚晴幽草轩</a>，到今年（2021）的<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>，格式上，都是一个调子：截取喜欢的诗词，结合建筑名为后缀。那些年喜欢李商隐那句：“天意怜幽草，人间重晚晴”，便有了最初的两个网站，这在<a href="https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/">晚晴幽草轩，天意人间舫</a>一文中有过记载。</p>
-<p>多年来，深（身）陷代码中，久未涉足文学诗词，按照如上惯例，为此站取名时，为求其名能“达意”且兼具雅致，好一阵搜肠刮肚；<a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a>之中，已用亭、轩、舫、苑，又因此站基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 所建，在当时或者如今回头看，择以「阁」字，这存在必然性。而在诗词的甄选中，之处有意取李太白的“若非群玉山头见，会向瑶池月下逢”中「群玉」、「瑶池」；虽说雅致，但究竟与心境不能完全契合；斟酌时，须臾之间，灵光乍现，脑海浮现苏子瞻《前赤壁赋》中一段经典：</p>
-<blockquote>
-<p>“逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。<strong>惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适</strong>。”</p>
-</blockquote>
-<p>其<strong>雅致</strong>、其<strong>意境</strong>、其<strong>哲思</strong>，莫有与心之所愿更契合者，于是立即便定下了，名曰：<a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>；工作生活中，自觉总也是”一肚子不合时宜“，今为这网站命此名，怕是为数不多的一次“合乎时宜”；感谢苏子赐名！</p>
-<h2 id="其用"><a href="#其用" class="headerlink" title="其用"></a>其用</h2><p>漫画《四月一日灵异事件簿》中，有写道：“思想、语言是会束缚人的东西，不但自己的会束缚自己，别人的也会束缚自己”，对此深表认同：愚顽的脑袋里如再被束缚，接收到任何与之相悖的理念，都是引发愤怒的毒物。这个时代，关乎“求同存异”，于虚拟网络中或可“被存在”；而生活的现实中，却是难以“存活”。这些年，关乎“思想的表达、语言的阐述”，所引发的后果，远胜海啸山洪，且是司空见惯；即便朋友恋人间的好心建议（或提议），轻起口角，重则仇恨；如此往复，伤痕累累，乃至近乎“四海无人对夕阳”的悲苦……于是乎，痛定思痛后，终可懂得<code>海明威</code>为何如此说：</p>
-<blockquote>
-<p>我们花了两年学会说话，却要花上六十年来学会闭嘴。大多数时候，我们说得越多，彼此的距离却越远，矛盾也越多。在沟通中，大多数人总是急于表达自己，一吐为快，却一点也不懂对方。两年学说话，一生学闭嘴。懂与不懂，不多说。心乱心静，慢慢说。若真没话，就别说。── <a href="https://read.lovejade.cn/p/60e1ee1c7f46b90656e77c7d" target="_blank" rel="external">曼妙句子</a>。</p>
-</blockquote>
-<p>耳聪可以闻世声，目明堪能睹世事，这是与生俱来的本领；人间真实，纷呈精彩，阴阳相生，优劣混合；犹为凡夫俗子，免不了阐述下自己看法，一抒心中块垒，也为“两肩抬道义”；倘若付与人当面说，恐引纷争，实非余愿；“夫唯不争，故天下莫能与之争”，于是乎，在自建平台，以文字形式，承载所学、所思、所感、所悟，或是最佳之选。明朝文学家、画家陈继儒，在《小窗幽记》中写道：</p>
-<blockquote>
-<p>带雨有时种竹，关门无事锄花；拈笔闲删旧句，汲泉几试新茶。余尝净一室，置一几，陈几种快意书，放一本旧法帖；古鼎焚香，素麈挥尘，意思小倦，暂休竹榻。饷时而起，则啜苦茗，信手写汉书几行，随意观古画数幅。心目间，觉洒洒灵空，面上俗尘，当亦扑去三寸。但看花开落，不言人是非。</p>
-</blockquote>
-<p>其中所描绘心性境界，实在令人殷羡，而这也正是所追求的完美。至于“汉书几行、平思几许”，置于这人间网络中，赠予有缘人；期之如“江上之清风，山间之明月”，与人无害，偶可参考，吾愿足矣。</p>
-<p>2021 年 12 月末，记之于深圳。</p>]]></content>
-    
-    <summary type="html">
-    
-      清风明月阁，基于 Wiki.js 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感.....人生漫短，白首时回顾，堪凭这些许文字以自怜。
-    
-    </summary>
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/categories/Thought/"/>
-    
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
-  </entry>
-  
-  <entry>
     <title>优质网站同好者周刊（第 49 期）- 倾城之链</title>
     <link href="https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/"/>
     <id>https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/</id>
@@ -429,6 +505,51 @@
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于“清风明月阁”的由来，以及未来</title>
+    <link href="https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/"/>
+    <id>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</id>
+    <published>2022-01-20T13:21:00.000Z</published>
+    <updated>2022-01-21T04:47:13.266Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>，基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感…..人生漫短，白首时回顾，堪凭这些许文字以自怜。</p>
+<a id="more"></a>
+<p><img src="http://lovejade.oss-cn-shenzhen.aliyuncs.com/小舟从此逝-江海寄余生.jpg" alt="小舟从此逝-江海寄余生"></p>
+<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>早先搭建的十余个网站，有些实属为体验「<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站构建工具</a>」而起；岁月蹉跎中折腾多了，那种兴之所至、行之所往的冲动，早已隐去；而今，却又“重蹈覆辙”，实在是感念 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 之强大，一时为其蕴藏的「哲思」所着迷；一直以来呢，也在探索文档、Wiki 最佳撰写工具；而前段时间，又恰巧购得云服务器一台；这好奇的念头，与适宜的环境，结合的恰到好处，于是，便有了<a href="https://wiki.lovejade.cn" target="_blank" rel="external">“清风明月阁”</a>。</p>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>给网站命名，向来谨慎，却总也是“因循守旧”，大多没有新意；从最早 2014 年的<a href="https://www.jeffjade.com/">晚晴幽草轩</a>，到今年（2021）的<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>，格式上，都是一个调子：截取喜欢的诗词，结合建筑名为后缀。那些年喜欢李商隐那句：“天意怜幽草，人间重晚晴”，便有了最初的两个网站，这在<a href="https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/">晚晴幽草轩，天意人间舫</a>一文中有过记载。</p>
+<p>多年来，深（身）陷代码中，久未涉足文学诗词，按照如上惯例，为此站取名时，为求其名能“达意”且兼具雅致，好一阵搜肠刮肚；<a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a>之中，已用亭、轩、舫、苑，又因此站基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 所建，在当时或者如今回头看，择以「阁」字，这存在必然性。而在诗词的甄选中，之处有意取李太白的“若非群玉山头见，会向瑶池月下逢”中「群玉」、「瑶池」；虽说雅致，但究竟与心境不能完全契合；斟酌时，须臾之间，灵光乍现，脑海浮现苏子瞻《前赤壁赋》中一段经典：</p>
+<blockquote>
+<p>“逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。<strong>惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适</strong>。”</p>
+</blockquote>
+<p>其<strong>雅致</strong>、其<strong>意境</strong>、其<strong>哲思</strong>，莫有与心之所愿更契合者，于是立即便定下了，名曰：<a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>；工作生活中，自觉总也是”一肚子不合时宜“，今为这网站命此名，怕是为数不多的一次“合乎时宜”；感谢苏子赐名！</p>
+<h2 id="其用"><a href="#其用" class="headerlink" title="其用"></a>其用</h2><p>漫画《四月一日灵异事件簿》中，有写道：“思想、语言是会束缚人的东西，不但自己的会束缚自己，别人的也会束缚自己”，对此深表认同：愚顽的脑袋里如再被束缚，接收到任何与之相悖的理念，都是引发愤怒的毒物。这个时代，关乎“求同存异”，于虚拟网络中或可“被存在”；而生活的现实中，却是难以“存活”。这些年，关乎“思想的表达、语言的阐述”，所引发的后果，远胜海啸山洪，且是司空见惯；即便朋友恋人间的好心建议（或提议），轻起口角，重则仇恨；如此往复，伤痕累累，乃至近乎“四海无人对夕阳”的悲苦……于是乎，痛定思痛后，终可懂得<code>海明威</code>为何如此说：</p>
+<blockquote>
+<p>我们花了两年学会说话，却要花上六十年来学会闭嘴。大多数时候，我们说得越多，彼此的距离却越远，矛盾也越多。在沟通中，大多数人总是急于表达自己，一吐为快，却一点也不懂对方。两年学说话，一生学闭嘴。懂与不懂，不多说。心乱心静，慢慢说。若真没话，就别说。── <a href="https://read.lovejade.cn/p/60e1ee1c7f46b90656e77c7d" target="_blank" rel="external">曼妙句子</a>。</p>
+</blockquote>
+<p>耳聪可以闻世声，目明堪能睹世事，这是与生俱来的本领；人间真实，纷呈精彩，阴阳相生，优劣混合；犹为凡夫俗子，免不了阐述下自己看法，一抒心中块垒，也为“两肩抬道义”；倘若付与人当面说，恐引纷争，实非余愿；“夫唯不争，故天下莫能与之争”，于是乎，在自建平台，以文字形式，承载所学、所思、所感、所悟，或是最佳之选。明朝文学家、画家陈继儒，在《小窗幽记》中写道：</p>
+<blockquote>
+<p>带雨有时种竹，关门无事锄花；拈笔闲删旧句，汲泉几试新茶。余尝净一室，置一几，陈几种快意书，放一本旧法帖；古鼎焚香，素麈挥尘，意思小倦，暂休竹榻。饷时而起，则啜苦茗，信手写汉书几行，随意观古画数幅。心目间，觉洒洒灵空，面上俗尘，当亦扑去三寸。但看花开落，不言人是非。</p>
+</blockquote>
+<p>其中所描绘心性境界，实在令人殷羡，而这也正是所追求的完美。至于“汉书几行、平思几许”，置于这人间网络中，赠予有缘人；期之如“江上之清风，山间之明月”，与人无害，偶可参考，吾愿足矣。</p>
+<p>2021 年 12 月末，记之于深圳。</p>]]></content>
+    
+    <summary type="html">
+    
+      清风明月阁，基于 Wiki.js 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感.....人生漫短，白首时回顾，堪凭这些许文字以自怜。
+    
+    </summary>
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/categories/Thought/"/>
+    
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
@@ -1956,126 +2077,6 @@
 <li><a href="https://www.jeffjade.com/2021/08/26/214-nicelinks-weekly-028/">优质网站同好者周刊（第 28 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2021/08/19/213-nicelinks-weekly-027/">优质网站同好者周刊（第 27 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/82-26" target="_blank" rel="external">优质网站同好者周刊（第 26 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优质网站同好者周刊（第 36 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/10/22/223-nicelinks-weekly-036/"/>
-    <id>https://www.jeffjade.com/2021/10/22/223-nicelinks-weekly-036/</id>
-    <published>2021-10-22T13:21:00.000Z</published>
-    <updated>2021-10-23T13:37:10.935Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="3D-Emoji-for-design-projects-and-startups"><a href="#3D-Emoji-for-design-projects-and-startups" class="headerlink" title="3D Emoji for design projects and startups"></a><a href="https://nicelinks.site/post/617156d35e35cd063077cf00" target="_blank" rel="external">3D Emoji for design projects and startups</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Emoji" target="_blank" rel="external"><code>Emoji</code></a> · <a href="https://nicelinks.site/tags/有趣" target="_blank" rel="external"><code>有趣</code></a> · <a href="https://nicelinks.site/tags/人文" target="_blank" rel="external"><code>人文</code></a></p>
-<blockquote>
-<p>3D emoji is a new way of expressing emotions and presenting your ideas. Get 137 emoji to satisfy all of your work requests.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/emoji.craftwork.design.png?x-oss-process=style/png2jpg" alt="倾城之链 - 3D Emoji for design projects and startups"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://emoji.craftwork.design/" target="_blank" rel="external">3D Emoji</a>（3D 表情符号）是一种表达情感和呈现想法的新方式。网站上提供了上百个插图，有<strong>可爱的 3D 表情、手势、其它物体</strong>等等。这些富有情感元素的 3D 表情符号，可用在<strong>App、Web 网站、演示文稿等场景中</strong>，它可以使你的产品更加吸引眼球。网站上提供的 3D 表情符号，可以<strong>免费下载低分辨率的 PNG 格式</strong>（高分辨率需要付费下载）。<a href="https://nicelinks.site/redirect?url=https://emoji.craftwork.design/" target="_blank" rel="external">3D Emoji</a>也提供了 4 种不同风格的 3D 手势，手势提供了 4 种颜色，可以在网站上直接修改。</p>
-<p>── 出自<a href="https://nicelinks.site/post/617156d35e35cd063077cf00" target="_blank" rel="external">倾城之链 - 3D Emoji for design projects and startups</a></p>
-<h2 id="Remove-Background-From-Images-For-Free-–-Erase-bg"><a href="#Remove-Background-From-Images-For-Free-–-Erase-bg" class="headerlink" title="Remove Background From Images For Free – Erase.bg"></a><a href="https://nicelinks.site/post/6171529e5e35cd063077cefe" target="_blank" rel="external">Remove Background From Images For Free – Erase.bg</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/图片" target="_blank" rel="external"><code>图片</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/AI" target="_blank" rel="external"><code>AI</code></a></p>
-<p><strong>关键字</strong>：erase bg,remove bg, remove background from image, background eraser, transparent background, white background, delete background, professional background, linkedin profile picture, professional background picture, display picture, cool dp background, profile pic maker, free profile picture, free dp, awesome background profile pics, twitter profile picture, l</p>
-<blockquote>
-<p>Remove background from images of humans, animals or objects and download high-resolution images for free. You can also edit and resize images as you like.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.erase.bg.png?x-oss-process=style/png2jpg" alt="倾城之链 - Remove Background From Images For Free – Erase.bg"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.erase.bg/" target="_blank" rel="external">Erase.bg</a>，是一款 AI 驱动的、高质量图像背景去除工具，100% 免费；这是市场上最准确的人工智能工具之一。只需将您的图像上传到 <a href="https://nicelinks.site/redirect?url=https://www.erase.bg/" target="_blank" rel="external">Erase.bg</a> 并在几秒钟内，立即下载具有透明背景的转换图像！更值得一提的是，可使用 <a href="https://nicelinks.site/redirect?url=https://www.erase.bg/" target="_blank" rel="external">Erase.bg</a> 的智能编辑、调整大小和导出工具删除个人资料图片、社交媒体图形、电子签名、公司徽标、演示文稿等的背景。</p>
-<p>使用 <a href="https://nicelinks.site/redirect?url=https://www.erase.bg/" target="_blank" rel="external">Erase.bg</a>，任何人现在都可以从任何图像中删除背景，无论他们是专业摄影师还是新手。Erase.bg 是当今市场上最快、最直观的基于 AI 的背景删除工具。它可以从图像中删除背景，并且不需要任何技术知识即可使用。</p>
-<p>根据官网介绍，可用 <a href="https://nicelinks.site/redirect?url=https://www.erase.bg/" target="_blank" rel="external">Erase.bg</a> 创建带有渐变和图案的自定义 Whatsapp 显示图片。通过炫耀您的创造力，来增加您对社交媒体的喜爱。还可以获取政府文件和护照的正确图片格式。<a href="https://nicelinks.site/redirect?url=https://www.erase.bg/" target="_blank" rel="external">Erase.bg</a> 所适用的人群非常广泛，无论是个人，专业人士，媒体人，还是电子商务从业人员，都可以通过批量 AI 设计工具，来提高他们的生产力和收入。</p>
-<p>── 出自<a href="https://nicelinks.site/post/6171529e5e35cd063077cefe" target="_blank" rel="external">倾城之链 - Remove Background From Images For Free – Erase.bg</a></p>
-<h2 id="Flowbite-Tailwind-CSS-Components"><a href="#Flowbite-Tailwind-CSS-Components" class="headerlink" title="Flowbite - Tailwind CSS Components"></a><a href="https://nicelinks.site/post/617138035e35cd063077cefc" target="_blank" rel="external">Flowbite - Tailwind CSS Components</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Web开发" target="_blank" rel="external"><code>Web开发</code></a> · <a href="https://nicelinks.site/tags/CSS" target="_blank" rel="external"><code>CSS</code></a> · <a href="https://nicelinks.site/tags/组件库" target="_blank" rel="external"><code>组件库</code></a></p>
-<blockquote>
-<p>Get started with an open source set of web components and interactive elements built on top of the utility classes from Tailwind CSS.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/flowbite.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Flowbite - Tailwind CSS Components"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://flowbite.com/" target="_blank" rel="external">Flowbite</a>，Tailwind CSS 组件的开源库；开始使用一个由 400 多个网络组件，和互动元素组成的开源库进行开发，该库由 Tailwind CSS 的实用类构建。对于 Web 应用开发而言，使用基于 Tailwind CSS 的组件更快地构建网站。<a href="https://nicelinks.site/redirect?url=https://flowbite.com/" target="_blank" rel="external">Flowbite</a> 是一个设计工具包，可供网页设计师和开发人员使用 Figma 和 Tailwind CSS 开发 UI 界面，从而可以节省大量时间。</p>
-<p>您也可以使用 Flowbite Pro，将您的 Tailwind CSS 工具包升级到新的水平。Flowbite 专业版，其中包括使用 Tailwind CSS 构建的页面和组件，包括应用程序 UI、营销 UI 和电子商务布局（当然，Flowbite 专业版收费）。</p>
-<p>── 出自<a href="https://nicelinks.site/post/617138035e35cd063077cefc" target="_blank" rel="external">倾城之链 - Flowbite - Tailwind CSS Components</a></p>
-<h2 id="【熊猫办公】PPT模板，创意设计素材-高效办公在熊猫"><a href="#【熊猫办公】PPT模板，创意设计素材-高效办公在熊猫" class="headerlink" title="【熊猫办公】PPT模板，创意设计素材 高效办公在熊猫"></a><a href="https://nicelinks.site/post/6170494f5e35cd063077cefa" target="_blank" rel="external">【熊猫办公】PPT模板，创意设计素材 高效办公在熊猫</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/PPT" target="_blank" rel="external"><code>PPT</code></a> · <a href="https://nicelinks.site/tags/创意" target="_blank" rel="external"><code>创意</code></a> · <a href="https://nicelinks.site/tags/高效" target="_blank" rel="external"><code>高效</code></a></p>
-<p><strong>关键字</strong>：PPT模板，Word模板，Excel模板，熊猫办公</p>
-<blockquote>
-<p>熊猫办公是一家专注创意设计模板下载的网站，涵盖行业优质精品 PPT 模板、Word 模板、Excel 模板、免抠元素、视频素材、字体和音效及配乐素材等，集办公设计模板于一体的素材网。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.tukuppt.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 【熊猫办公】PPT模板，创意设计素材 高效办公在熊猫"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.tukuppt.com/" target="_blank" rel="external">熊猫办公</a>，成立于 2017 年，隶属于迷南文化传媒（上海）有限公司，是国内办公创意服务平台。据官网描述，<a href="https://nicelinks.site/redirect?url=https://www.tukuppt.com/" target="_blank" rel="external">熊猫办公</a>专注为用户提供优质创意办公服务，让个人及企业用户节省时间和人力成本，提高办公效率。服务内容覆盖了 <code>PPT</code> 模板、Excel 模板、Word 模板、广告模板、背景图片、免抠元素、优质配图、视频模板、音效配乐等办公人群常用服务。此外，<a href="https://nicelinks.site/redirect?url=https://www.tukuppt.com/" target="_blank" rel="external">熊猫办公</a>和众多优秀设计师开展了深度内容合作，在充实自身优质资源储备的同时，更为用户提供了丰富实用的精品办公模板。</p>
-<p>── 出自<a href="https://nicelinks.site/post/6170494f5e35cd063077cefa" target="_blank" rel="external">倾城之链 - 【熊猫办公】PPT模板，创意设计素材 高效办公在熊猫</a></p>
-<h2 id="Universe-—-Website-Builder"><a href="#Universe-—-Website-Builder" class="headerlink" title="Universe — Website Builder"></a><a href="https://nicelinks.site/post/616fbc305e35cd063077cef8" target="_blank" rel="external">Universe — Website Builder</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external"><code>网站生成器</code></a></p>
-<blockquote>
-<p>Universe is the first website builder and commerce platform built for mobile devices. With its magical drag and drop interface, anyone can easily create a website and start selling online in minutes from anywhere.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/onuniverse.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Universe — Website Builder"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://onuniverse.com/" target="_blank" rel="external">Universe</a>，是一款为移动设备建立的网站建设者和商务平台。作为一款令人难以置信的新应用程序，它使任何人都可以轻松地创建一个漂亮的网站，并在几分钟内通过您的 iPhone、iPad 和 Mac 开始在线销售。<a href="https://nicelinks.site/redirect?url=https://onuniverse.com/" target="_blank" rel="external">Universe</a> 使用非常简单，入门需要几秒钟，您不需要代码或技术技能来学习如何使用它。使用 Universe，您可以获得按照自己的方式制作所需的所有控制和灵活性，而无需做出任何妥协。<a href="https://nicelinks.site/redirect?url=https://onuniverse.com/" target="_blank" rel="external">Universe</a> 具有以下功能特征：</p>
-<ul>
-<li>获取自定义域和电子邮件</li>
-<li>立即接受信用卡和 Apple Pay 付款（仅限美国）</li>
-<li>使用集成的库存和订单管理工具轻松销售产品</li>
-<li>使用电子邮件营销工具建立和扩大电子邮件列表</li>
-<li>以最优惠的价格购买和打印运输标签</li>
-<li>通过即插即用集成从 Instagram 和 Youtube 等地方添加您的内容</li>
-<li>连接您的所有在线帐户，支持超过 25 种服务</li>
-<li>通过简单的分析衡量您的网站流量</li>
-</ul>
-<p>虽然 <a href="https://nicelinks.site/redirect?url=https://onuniverse.com/" target="_blank" rel="external">Universe</a> 是完全免费的，每个人都可以免费制作一个漂亮的网站，但他们确实提供高级订阅，为应用程序提供附加功能，以帮助您使用您的网站做更多事情。此订阅是完全可选的，不需要使用该应用程序。</p>
-<p>── 出自<a href="https://nicelinks.site/post/616fbc305e35cd063077cef8" target="_blank" rel="external">倾城之链 - Universe — Website Builder</a></p>
-<h2 id="Creatorbase-Where-creators-discover-the-right-tools-to-create-grow-and-monetize"><a href="#Creatorbase-Where-creators-discover-the-right-tools-to-create-grow-and-monetize" class="headerlink" title="Creatorbase: Where creators discover the right tools to create, grow and monetize"></a><a href="https://nicelinks.site/post/616f8af15e35cd063077cef6" target="_blank" rel="external">Creatorbase: Where creators discover the right tools to create, grow and monetize</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/创作者" target="_blank" rel="external"><code>创作者</code></a> · <a href="https://nicelinks.site/tags/设计" target="_blank" rel="external"><code>设计</code></a></p>
-<blockquote>
-<p>The largest library creator tools and content, curated by creators. Podcasters, youtubers, newsletter writers and all types of creators use Creatorbase to find the right tools they need to create, grow, monetise and so much more</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.creatorbase.xyz.png?x-oss-process=style/png2jpg" alt="倾城之链 - Creatorbase: Where creators discover the right tools to create, grow and monetize"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.creatorbase.xyz/" target="_blank" rel="external">Creatorbase</a>，🔨 找到适合您的创作者工具。访问他们不断增长的 300 多种工具库，以帮助您创建、货币化、发展等。由创作者策划。号称是世界上最大的创作者经济工具精选集🚀，<a href="https://nicelinks.site/redirect?url=https://www.creatorbase.xyz/" target="_blank" rel="external">Creatorbase</a> 有以下功能特色：</p>
-<ul>
-<li>一个包含 400 多个创作者工具的不断增长的数据库；</li>
-<li>按创建者类型或任务过滤；</li>
-<li>精选的最佳创作者经济内容库；</li>
-<li>数据库定期更新；</li>
-</ul>
-<p><a href="https://nicelinks.site/redirect?url=https://www.creatorbase.xyz/" target="_blank" rel="external">Creatorbase</a>，<code>创作者</code>在这里发现正确的工具，以进行创作、成长和盈利。</p>
-<p>── 出自<a href="https://nicelinks.site/post/616f8af15e35cd063077cef6" target="_blank" rel="external">倾城之链 - Creatorbase: Where creators discover the right tools to create, grow and monetize</a></p>
-<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p><strong>这世界上任何事情，最终都还有一条出路，那就是随它去</strong>。事情已经这样了，还能怎么样呢。也就那样，对吗？路要自己一步步走，苦要自己一口口吃，抽筋扒皮才能脱胎换骨，除此之外，没有捷径。<strong>你一定要做到可以取代任何人，然后再考虑做到任何人都不可以取代你</strong>。──《我的前半生》台词</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/93-31" target="_blank" rel="external">优质网站同好者周刊（第 31 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/90-30" target="_blank" rel="external">优质网站同好者周刊（第 30 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/88-29" target="_blank" rel="external">优质网站同好者周刊（第 29 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/08/26/214-nicelinks-weekly-028/">优质网站同好者周刊（第 28 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/08/19/213-nicelinks-weekly-027/">优质网站同好者周刊（第 27 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/82-26" target="_blank" rel="external">优质网站同好者周刊（第 26 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/08/05/211-nicelinks-weekly-025/">优质网站同好者周刊（第 25 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
 <li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
 <li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>

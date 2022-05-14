@@ -1,0 +1,1149 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+
+    <title>地表最强 Markdown 文本编辑工具——Obsidian | 晚晴幽草轩</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="晚晴幽草轩轩主">
+    
+    <meta name="theme-color" content="#fffffb">
+    <meta name="baidu-site-verification" content="PKEtLPjO56">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
+
+    <meta name="keywords" content="Obsidian, 文本编辑, Markdown, 插件, ADVANCED TABLES">
+    <meta name="description" content="沈从文先生在给张兆和的情书中，有写道：“我一辈子走过许多地方的路，行过许多地方的桥，看过许多形状的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人”。近十年，写文章或文档，用过非常多基于 Markdown 出色的文本编辑工具，诸如 Sublime Text 、 Cmd Markdown 、 MarkEditor 、 Typora ， Arya 在线 等等，直到遇见 Obsidian ，被强大的功">
+<meta property="og:type" content="article">
+<meta property="og:title" content="地表最强 Markdown 文本编辑工具——Obsidian">
+<meta property="og:url" content="https://www.jeffjade.com/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/index.html">
+<meta property="og:site_name" content="晚晴幽草轩">
+<meta property="og:description" content="沈从文先生在给张兆和的情书中，有写道：“我一辈子走过许多地方的路，行过许多地方的桥，看过许多形状的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人”。近十年，写文章或文档，用过非常多基于 Markdown 出色的文本编辑工具，诸如 Sublime Text 、 Cmd Markdown 、 MarkEditor 、 Typora ， Arya 在线 等等，直到遇见 Obsidian ，被强大的功">
+<meta property="og:image" content="https://oss.nicelinks.site/obsidian.md.png?x-oss-process=style/png2jpg">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Obsidian-Pangu-Plugin.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tgrosinger/advanced-tables-obsidian/main/resources/screenshots/basic-functionality.gif">
+<meta property="og:image" content="https://github.com/deathau/cm-editor-syntax-highlight-obsidian/raw/main/screenshot.png">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Obsidian-kanban.png">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/mind-map-demo.png">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/screenshot-two-files.png">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/screenshot-full.png">
+<meta property="og:updated_time" content="2022-05-14T16:21:19.497Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="地表最强 Markdown 文本编辑工具——Obsidian">
+<meta name="twitter:description" content="沈从文先生在给张兆和的情书中，有写道：“我一辈子走过许多地方的路，行过许多地方的桥，看过许多形状的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人”。近十年，写文章或文档，用过非常多基于 Markdown 出色的文本编辑工具，诸如 Sublime Text 、 Cmd Markdown 、 MarkEditor 、 Typora ， Arya 在线 等等，直到遇见 Obsidian ，被强大的功">
+<meta name="twitter:image" content="https://oss.nicelinks.site/obsidian.md.png?x-oss-process=style/png2jpg">
+<meta name="twitter:creator" content="@nicejadeyang">
+
+    
+    <link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/favicons/favicon.ico">
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.webfont.youziku.com/webfonts/nomal/106962/46931/5d0fa119f629d800fcbb4e49.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css">
+    <link rel="stylesheet" href="/css/style.css?190623">
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script">
+
+    <link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8586652723015758",
+        enable_page_level_ads: true
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
+</head></html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1>
+				<h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/" class="">Home</a></li>
+					
+						<li><a href="/nicelinks" class="">Links</a></li>
+					
+						<li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li>
+					
+						<li><a href="/archives" class="">Archives</a></li>
+					
+						<li><a href="/about-me" class="">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search">
+						<input type="hidden" name="q" value="site:www.jeffjade.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/" class="title=&quot;地表最强" markdown obsidian itemprop="url">地表最强 Markdown 文本编辑工具——Obsidian</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2022-05-14T08:21:00.000Z" itemprop="datePublished"> 发表于 2022-05-14</time>
+
+  </p>
+</header>
+	<div class="article-content">
+		
+    <div class="bottom-gg-module">
+  <div class="jade-gg-block">
+    <a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank">
+      <img class="width-block-wrap" style="width: 100%;max-height: 200px" src="https://image.nicelinks.site/倾城之链-Banner.png" alt="倾城之链">
+    </a>
+    </div>
+  </div>
+
+		<p>沈从文先生在给张兆和的情书中，有写道：“<strong>我一辈子走过许多地方的路，行过许多地方的桥，看过许多形状的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人</strong>”。近十年，写文章或文档，用过非常多基于 <a href="https://nicelinks.site/tags/Markdown" target="_blank" rel="external">Markdown</a> 出色的文本编辑工具，诸如 <a href="https://nicelinks.site/post/5af1dffb979f626ea3d37910" target="_blank" rel="external">Sublime Text</a> 、 <a href="https://nicelinks.site/post/5a5114df0b0ec0396863d7c1" target="_blank" rel="external">Cmd Markdown</a> 、 <a href="https://nicelinks.site/post/5b055142e93ed2618cfac124" target="_blank" rel="external">MarkEditor</a> 、 <a href="https://nicelinks.site/post/5cbc58707855f80ea42ea6a7" target="_blank" rel="external">Typora</a> ， <a href="https://markdown.lovejade.cn/" target="_blank" rel="external">Arya 在线</a> 等等，直到遇见 <a href="https://nicelinks.site/post/6266999577f8270876fcb3d6" target="_blank" rel="external">Obsidian</a> ，被强大的功能、完美的设计所震撼、折服，堪称<strong>地表最强文本编辑工具</strong>。</p>
+<a id="more"></a>
+<blockquote>
+<p><a href="https://nicelinks.site/redirect?url=https://obsidian.md/" target="_blank" rel="external">Obsidian</a> 是一个强大的<strong>知识库</strong>、一款好用的<strong>笔记应用</strong>程序，位于纯文本 <code>Markdown</code> 文件的本地文件夹之上。其目标是：永远成为你第二个大脑。人脑是非线性的：人们总是从一个想法跳到另一个想法。你的第二个大脑应该同样工作。在 Obsidian 中，建立和跟随<strong>连接</strong> 是无摩擦的。像园丁一样照顾你的笔记；在一天结束时，坐下来惊叹于您自己的知识图谱。── 出自 <a href="https://nicelinks.site/post/6266999577f8270876fcb3d6" target="_blank" rel="external">倾城之链 | Obsidian</a> 。</p>
+</blockquote>
+<p><img src="https://oss.nicelinks.site/obsidian.md.png?x-oss-process=style/png2jpg" alt="Obsidian 倾城之链"></p>
+<p> <a href="https://nicelinks.site/post/6266999577f8270876fcb3d6" target="_blank" rel="external">Obsidian</a> ，它不仅是极其好用的文本编辑工具，而且还是一款<strong>强大的知识库</strong>；但，在这里就不对<strong>知识库</strong>作探讨，主要就其极致的文本编辑体验，结合自己短暂的实践体验，来跟朋友们分享下 Obsidian 的优势：</p>
+<ul>
+<li>默认<strong>所见即所得</strong>（wysiwyg）的编辑模式；</li>
+<li>支持粘贴 HTML 自动转换为 Markdown；</li>
+<li>所有操作默认有<strong>快捷键</strong>，并且方便自行更改；</li>
+<li>应用打开极快，操作流畅，所占用内存很少；</li>
+<li>100% 免费供个人使用，无需账户或注册；</li>
+<li><strong>支持扩展</strong>，社区已贡献有 <a href="https://obsidian.md/plugins#" target="_blank" rel="external">近 600 个插件</a> ；</li>
+</ul>
+<p>要着重称赞的就是 Obsidian 的插件，这在 Markdown 编辑器工具中是少见的。首先，这种机制本身就很赞，不将所有功能，都集成于应用本身，而按需给予，善莫如是，使其能在<strong>轻量</strong>与<strong>强大</strong>中平衡；其次，有了这种机制，即能允许用户介入，参与贡献，无疑是为产品功能丰富，提供了绝佳的途径。</p>
+<p><strong>备注</strong>：Obsidian 插件，安装与使用，都非常方便；前往 <a href="https://obsidian.md/plugins" target="_blank" rel="external">Obsidian Plugins</a>，检索您想要的插件；如果您已安装并打开 Obsidian，点击 <code>Open in Obsidian</code>，即可快速在 Obsidian 中，打开该插件；点击 <code>install</code> 安装之后，再点击 <code>enable</code> 即可启用该插件（如下截图）。对于有需要按键才能作用的插件，您还可以修改<code>快捷键</code>以及其他设置参数。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Obsidian-Pangu-Plugin.png" alt="Obsidian Pangu Plugin"></p>
+<p>下面，跟大家分享些个人所喜欢的插件：</p>
+<h2 id="ADVANCED-TABLES-：改进的表格导航、格式化和操作"><a href="#ADVANCED-TABLES-：改进的表格导航、格式化和操作" class="headerlink" title="ADVANCED TABLES ：改进的表格导航、格式化和操作"></a><a href="https://obsidian.md/plugins?id=table-editor-obsidian" target="_blank" rel="external">ADVANCED TABLES</a> ：改进的表格导航、格式化和操作</h2><blockquote>
+<p>Add improved navigation, formatting, and manipulation to markdown tables in Obsidian</p>
+</blockquote>
+<p>Markdown 的表格语法比在 Word 中插入表格还要麻烦，一旦想要增改某个内容，更是灾难。该插件则大大简化了表格输入的流程。</p>
+<p>要创建表格，请创建一个 <code>|</code> 字 符，然后键入表格的第一个标题并按 <code>Tab</code>，就会触发插件的自动补全语法。之后通过 <code>Tab</code> / <code>Shift + Tab</code> 来在表格之间移动光标，通过 <code>Enter</code> 完成输入；顷刻之间，就能写完您想要的表格，实在是完美。</p>
+<p><img src="https://raw.githubusercontent.com/tgrosinger/advanced-tables-obsidian/main/resources/screenshots/basic-functionality.gif" alt="# Advanced Tables for Obsidian"></p>
+<p>如果您想了解更多，可参见 Github 源码： <a href="https://github.com/tgrosinger/advanced-tables-obsidian" target="_blank" rel="external">tgrosinger/advanced-tables-obsidian</a> 。</p>
+<h2 id="OBSIDIAN-PANGU-：改进中英文间距"><a href="#OBSIDIAN-PANGU-：改进中英文间距" class="headerlink" title="OBSIDIAN PANGU ：改进中英文间距"></a><a href="https://obsidian.md/plugins?search=PanG#" target="_blank" rel="external">OBSIDIAN PANGU</a> ：改进中英文间距</h2><blockquote>
+<p>为 Obsidian 笔记加上「盘古之白」，排版强迫症者的福音。 | A small plugin aims to add space between Chinese Characters and English Alphabet, and it is a boon for typographically compulsive people.</p>
+</blockquote>
+<p>这个小插件，旨在增加汉字和英文字母之间，添加<strong>空格</strong>，使得整个排版更加专业且美观；这对于排版强迫症的人来说，是一个福音（我个人非常喜欢，先前是借助 <a href="https://nicelinks.site/post/5c16083e819ae45de1453caa" target="_blank" rel="external">Prettier</a> 或其他工具，来实现）。</p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/Natumsol/obsidian-pangu" target="_blank" rel="external">Obsidian Pangu Plugin</a> 。</p>
+<h2 id="Editor-Syntax-Highlight-：代码高亮"><a href="#Editor-Syntax-Highlight-：代码高亮" class="headerlink" title="Editor Syntax Highlight ：代码高亮"></a><a href="https://obsidian.md/plugins?id=cm-editor-syntax-highlight-obsidian" target="_blank" rel="external">Editor Syntax Highlight</a> ：代码高亮</h2><blockquote>
+<p>A plugin for Obsidian which allows syntax highlighting for code blocks in the editor.</p>
+</blockquote>
+<p>这对于程序员（软件开发）来讲，非常有价值；它能让编辑界面的代码，页面的元数据都有高亮效果；而且支持的格式极多，如 <code>xml</code>、<code>json</code>、<code>ts</code>、<code>js</code>、<code>html</code>、<code>css</code>、<code>python</code>、<code>bash</code> 等等。值得一提的是，在代码区域，可以放心使用 <code>Tab</code> 按键，无需担心会清空你选中的代码，其效果跟在代码编辑器中是一致的，体验极佳。</p>
+<p><img src="https://github.com/deathau/cm-editor-syntax-highlight-obsidian/raw/main/screenshot.png" alt="# Editor Syntax Highlight Obsidian Plugin"></p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/deathau/cm-editor-syntax-highlight-obsidian" target="_blank" rel="external">Editor Syntax Highlight Obsidian Plugin</a> 。</p>
+<h2 id="Kanban-：看板模块"><a href="#Kanban-：看板模块" class="headerlink" title="Kanban ：看板模块"></a><a href="https://obsidian.md/plugins?id=obsidian-kanban" target="_blank" rel="external">Kanban</a> ：看板模块</h2><blockquote>
+<p>Create markdown-backed Kanban boards in Obsidian</p>
+</blockquote>
+<p><code>Kanban</code>，这款插件可以为 Obsidian 增加看板模块；让你可以使用看板，来管理<strong>任务或笔记</strong>。它有两种看板创建方式：使用命令添加新的看板，也可以使用右键菜单创建；而且可以在 Markdown 和看板中，随时切换，如果你想要用 Obsidian <strong>管理日常任务</strong>的话，它是非常好的插件。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Obsidian-kanban.png" alt="Obsidian kanban"></p>
+<p>关于如何创建和使用看板，可参见： <a href="https://matthewmeye.rs/obsidian-kanban/How%20do%20I/Create%20a%20Kanban%20board/" target="_blank" rel="external">创建看板</a> ；最简单的方式是：右键单击文件夹，并选择 <code>New Kanban board</code>。值得一提的是，Obsidian 的看板功能，其使用体验，在笔者看来要比 <a href="https://nicelinks.site/post/59ba80d93df6765c75b77911" target="_blank" rel="external">Giuhub</a> 、 <a href="https://nicelinks.site/post/5f86fe3ccda9de27bd93a927" target="_blank" rel="external">Gitlab</a> 、 <a href="https://nicelinks.site/post/5ce69c6746395f0822df9d6b" target="_blank" rel="external">Trello</a> 要用很多，强烈推荐。</p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/tgrosinger/advanced-tables-obsidian" target="_blank" rel="external">Advanced Tables for Obsidian</a> 。</p>
+<h2 id="Outline：文件大纲（官方插件）"><a href="#Outline：文件大纲（官方插件）" class="headerlink" title="Outline：文件大纲（官方插件）"></a>Outline：文件大纲（官方插件）</h2><blockquote>
+<p>Display the outline of current file or linked pane</p>
+</blockquote>
+<p>Outline 是一款大纲插件，可以根据标题自动为 Obsidian 文档生成目录大纲，可以快速预览所有标题，也可以用来快速跳转到指定位置，如果你经常写长文章的话会非常有用，Outline 是官方插件，到核心插件中启用即可自动开启。具体操作为：打开设置（<code>command + ,</code>） =&gt; Core Plugin =&gt; 发起检索 <code>Outline</code> =&gt; 选择开启。</p>
+<h2 id="Mind-Map-：思维导图插件"><a href="#Mind-Map-：思维导图插件" class="headerlink" title="Mind Map ：思维导图插件"></a><a href="https://obsidian.md/plugins?id=obsidian-mind-map" target="_blank" rel="external">Mind Map</a> ：思维导图插件</h2><blockquote>
+<p>This repository contains a plugin for Obsidian for viewing Markdown notes as Mind Maps using Markmap.</p>
+</blockquote>
+<p>Mind Map 是一款 <code>思维导图</code> 插件，它可以为你的 Markdown 文本转换为思维导图，可以更清晰地查看文章的结构和内容，还支持一些简单的操作，比如放大缩小、拖拽、收起展开节点等，你还可以一键复制思维导图图片，分享或保存到其他位置。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/mind-map-demo.png" alt="Obsidian Mind Map"></p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/lynchjames/obsidian-mind-map" target="_blank" rel="external">Obsidian Mind Map</a> 。</p>
+<h2 id="Paste-URL-into-selection-：快速插入链接"><a href="#Paste-URL-into-selection-：快速插入链接" class="headerlink" title="Paste URL into selection ：快速插入链接"></a><a href="https://obsidian.md/plugins?id=url-into-selection" target="_blank" rel="external">Paste URL into selection</a> ：快速插入链接</h2><blockquote>
+<p>Insert links (URLs) into a selected text “notion-style” using regular <code>Ctrl/Cmd + V</code></p>
+</blockquote>
+<p>当想要在鼠标选中的单词上插入 URL 时，基于 Markdown 语法，并不是很方便；此时你可以安装 <code>Paste URL into selection</code> 这款插件；启用该插件后，只需要选中文字再 <code>Cmd + V</code> （or <code>Ctrl V</code> Windows 系统） 键，就可以直接添加链接，比富文本编辑器中操作，还要方便许多。</p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/denolehov/obsidian-url-into-selection" target="_blank" rel="external">Paste URL into selection</a> 。</p>
+<h2 id="Checklist-：待办任务增强"><a href="#Checklist-：待办任务增强" class="headerlink" title="Checklist ：待办任务增强"></a><a href="https://obsidian.md/plugins?id=obsidian-checklist-plugin" target="_blank" rel="external">Checklist</a> ：待办任务增强</h2><blockquote>
+<p>Consolidate checklists across all files into a single view</p>
+</blockquote>
+<p>Checklist 是一款<strong>待办任务增强</strong>插件，它可以为 Obsidian 的侧边栏增加一个任务栏，你可以在该栏目下查看到所有笔记中的待办任务，可以快速跳转到任务的位置，也可以直接在任务栏上勾选完成任务。其用法如下：</p>
+<ul>
+<li>启用此插件后，您将看到清单出现在右侧边栏中；</li>
+<li>您标记的任何清单项目块都 <code>#todo</code> 将显示在此侧边栏中；</li>
+<li>您可以通过在编辑器中勾选它们（例如 <code>- [ ]</code>-&gt; <code>- [x]</code>）或单击侧栏中的清单项目来完成清单项目，这将为您更新 <code>.md</code> 文件；</li>
+</ul>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/screenshot-two-files.png" alt="Obsidian Checklist"></p>
+<p>如果你想了解更多，可以参见 Github 源码： <a href="https://github.com/delashum/obsidian-checklist-plugin" target="_blank" rel="external">obsidian-checklist-plugin</a> 。</p>
+<h2 id="Calendar：日历📅"><a href="#Calendar：日历📅" class="headerlink" title="Calendar：日历📅"></a><a href="https://obsidian.md/plugins?search=Calendar#" target="_blank" rel="external">Calendar</a>：日历📅</h2><blockquote>
+<p>This plugin for Obsidian creates a simple Calendar view for visualizing and navigating between your daily notes.</p>
+</blockquote>
+<p>Calendar 是一款为增强 Daily notes 而制作的日历插件，它可以在侧边栏上增加日历模块，你可以用它来快速跳转到特定时间的每日笔记，而且你还可以用它来为没有每日笔记的日期创建笔记，可以为之前的日期创建，也可以创建未来的笔记。其用法如下：</p>
+<p>在设置菜单中启用插件后，您应该会看到日历视图出现在右侧边栏中。该插件会读取您的每日笔记设置，以了解您的日期格式、每日笔记模板的位置以及它创建的新每日笔记的位置。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/screenshot-full.png" alt="Obsidian  Calendar"></p>
+<p>如果你想了解更多，可以参见 Github 源码：<a href="https://github.com/liamcain/obsidian-calendar-plugin" target="_blank" rel="external">obsidian-calendar-plugin</a>。</p>
+<p>如今，<a href="https://nicelinks.site/post/6266999577f8270876fcb3d6" target="_blank" rel="external">Obsidian</a> 插件市场，所蕴含的宝藏已十分丰富，大凡能想到优化点，都已有人贡献出良好的设计方案。如果您有自己独特诉求，完全可以基于Obsidian，定制属于自己的插件，只需阅读相关文档，懂些 JavaScript 编程基础即可。具体可参见文章：<a href="https://david-brown.dev/posts/obsidian-macros-plugin/" target="_blank" rel="external">为 Obsidian.md 创建插件</a> 或 <a href="https://phibr0.medium.com/how-to-create-your-own-obsidian-plugin-53f2d5d44046" target="_blank" rel="external">How to create your own Obsidian Plugin</a>。</p>
+<p>窃以为，好的工具与强大工具，其最大区别在于：前者会让使用者觉得自己跟软件本身都很强；而后者只会让使用者觉得工具很强。<a href="https://nicelinks.site/post/6266999577f8270876fcb3d6" target="_blank" rel="external">Obsidian</a> 就属于前者，它能让用户 0 配置，即能快速上手使用；又能很好支持愿意折腾的朋友，在上面各种折腾，附加额外功能，实在是值得称赞。如今，只使用了没几天，尚有更多玩法儿，等待探索；欢迎各路朋友，分享您宝贵的建议和意见。</p>
+<blockquote>
+<p>原文首发于个人最新博客：<a href="https://forum.lovejade.cn/d/177-markdown-obsidian" target="_blank" rel="external">地表最强 Markdown 文本编辑工具——Obsidian | 悠然宜想亭</a>。</p>
+</blockquote>
+<h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h2><ul>
+<li><a href="https://forum.lovejade.cn/d/129" target="_blank" rel="external">谷歌自适应广告素材，制作心得分享</a></li>
+<li><a href="https://forum.lovejade.cn/d/116-38" target="_blank" rel="external">优质网站同好者周刊（第 38 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/112-37" target="_blank" rel="external">优质网站同好者周刊（第 37 期）- 倾城之链</a></li>
+<li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
+<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
+<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
+<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
+<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
+<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费图标资源大全</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
+<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
+</ul>
+	</div>
+		<reward-service></reward-service>
+    <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
+  <hr>
+  <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 2rem">
+    <img style="width: 256px;min-width: 200px !important" src="https://image.nicelinks.site/qrcode_jqx.jpg" alt="静晴轩 ~ 晚晴幽草轩">
+    <div style="padding: 0  1rem 1.5rem 1rem;text-align: center;line-height: 1.5rem"><strong>个人微信公众号</strong>：<a href="https://www.jeffjade.com/?utm_source=jeffjade.com">晚晴幽草轩</a>；名字取自：“天意怜幽草，人间重晚晴”。<br>专注互联网开发（Web 大前端、快应用、小程序），以及分享优质网站、AI 应用、效率工具、心得感悟等内容。
+    </div>
+  </div>
+<div></div></div>
+    <div id="cc-copyright" class="cc-content">
+    <h3>文档信息</h3>
+    <ul>
+      <li>版权声明：知识共享署名-非商业性使用-禁止演绎<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">（创意共享3.0许可证）</a></li>
+      <li>文章出处：<a href="http://www.jeffjade.com" title="晚晴幽草轩">晚晴幽草轩</a></li>
+      <li>发表日期：<time datetime="2022-05-14T08:21:00.000Z" itemprop="datePublished">2022-05-14</time></li>
+      <li>社交媒体：
+        <a href="http://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+        <a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+        <a href="https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+        <a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+      </li>
+    </ul>
+</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Toss/">Toss</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Share/">Share</a><a href="/tags/Toss/">Toss</a><a href="/tags/Markdown/">Markdown</a>
+  </div>
+
+</div>
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://www.jeffjade.com/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/" data-title="地表最强 Markdown 文本编辑工具——Obsidian | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+	</article>
+	<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/" title="如何打造体验良好的本地全文搜索？">
+ <strong>下一篇：</strong><br> 
+ <span>如何打造体验良好的本地全文搜索？
+</span>
+</a>
+</div>
+
+</nav>
+	<hr>
+<div id="gitalk-container"></div>
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ADVANCED-TABLES-：改进的表格导航、格式化和操作"><span class="toc-number">1.</span> <span class="toc-text">ADVANCED TABLES ：改进的表格导航、格式化和操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OBSIDIAN-PANGU-：改进中英文间距"><span class="toc-number">2.</span> <span class="toc-text">OBSIDIAN PANGU ：改进中英文间距</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Editor-Syntax-Highlight-：代码高亮"><span class="toc-number">3.</span> <span class="toc-text">Editor Syntax Highlight ：代码高亮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kanban-：看板模块"><span class="toc-number">4.</span> <span class="toc-text">Kanban ：看板模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Outline：文件大纲（官方插件）"><span class="toc-number">5.</span> <span class="toc-text">Outline：文件大纲（官方插件）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mind-Map-：思维导图插件"><span class="toc-number">6.</span> <span class="toc-text">Mind Map ：思维导图插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Paste-URL-into-selection-：快速插入链接"><span class="toc-number">7.</span> <span class="toc-text">Paste URL into selection ：快速插入链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Checklist-：待办任务增强"><span class="toc-number">8.</span> <span class="toc-text">Checklist ：待办任务增强</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Calendar：日历📅"><span class="toc-number">9.</span> <span class="toc-text">Calendar：日历📅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#您可能感兴趣的文章"><span class="toc-number">10.</span> <span class="toc-text">您可能感兴趣的文章</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="linkslist">
+	<p class="asidetitle">倾情款赠</p>
+	<div style="width:100%"><img style="width:100%" src="https://image.nicelinks.site/%E8%B5%9E%E8%B5%8F%E7%A0%81.jpeg?imageView2/1/w/800/h/800/interlace/1/ignore-error/1" alt="倾情捐赠"></div>
+</div>
+
+  <div class="wbfollow">
+	<p class="asidetitle">微博互粉</p>
+	<span class="sidebar-top-tip">亦可点击 Enter 键隐藏侧边栏</span>
+	<iframe width="100%" height="119" class="share_self" frameborder="0" scrolling="no" src="//widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3235949794&verifier=5c6bff53&colors=f0f0f0,fff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+</div>
+
+  <div class="widget-wrap linkslist">
+    <h3 class="widget-title asidetitle">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/">地表最强 Markdown 文本编辑工具——Obsidian</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/">如何打造体验良好的本地全文搜索？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/14/241-how-to-make-google-asset-based-ads/">如何制作 Google 自适应广告素材？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/31/240-nicelinks-weekly-050/">优质网站同好者周刊（第 50 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/13/237-nicelinks-weekly-048/">优质网站同好者周刊（第 48 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/06/236-nicelinks-weekly-047/">优质网站同好者周刊（第 47 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/31/235-nicelinks-weekly-046/">优质网站同好者周刊（第 46 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/23/234-nicelinks-weekly-045/">优质网站同好者周刊（第 45 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/16/233-nicelinks-weekly-044/">优质网站同好者周刊（第 44 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/03/231-nicelinks-weekly-042/">优质网站同好者周刊（第 42 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/03/232-nicelinks-weekly-043/">优质网站同好者周刊（第 43 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/27/230-talk-about-tencent-cloud-cvm/">腾讯云服务器使用感受，及折腾笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/26/229-nicelinks-weekly-041/">优质网站同好者周刊（第 41 期）- 倾城之链</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="categorieslist">
+	<p class="asidetitle">云轩分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>57</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Health/" title="Health">Health<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Program/" title="Program">Program<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Read/" title="Read">Read<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Share/" title="Share">Share<sup>28</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Thought/" title="Thought">Thought<sup>25</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Toss/" title="Toss">Toss<sup>28</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>53</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/快应用/" title="快应用">快应用<sup>9</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">广而告之</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="https://nicelinks.site?utm_source=jeffjade.com&pid=sidebar-advertisement" target="_blank" title="倾城之链">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg" alt="倾城之链 | 小程序码">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">最新作品</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="http://nicelinks.site/?utm_source=jeffjade.com&pid=aside" target="_blank" title="倾城之链">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/nicelinks-site.jpg" alt="倾城之链">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">轩站热度</p>
+  <!-- 
+    <font id="run_time_long"></font><br>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span style='color:purple' id="busuanzi_value_site_pv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_site_uv">
+      本站访客人数 <span style='color:purple' id="busuanzi_value_site_uv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量 <span style='color:purple' id="busuanzi_value_page_pv"></span> 次
+    </span>
+   -->
+  <div id="clustrmaps-count"></div>
+  <p style="text-align:center">( Start counting from 07 / 13 / 2017 )</p>
+</div>
+
+  <div class="tagslist">
+	<p class="asidetitle">云轩标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Share/" title="Share">Share<sup>121</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>61</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thought/" title="Thought">Thought<sup>43</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Toss/" title="Toss">Toss<sup>38</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>31</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>30</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">云轩关注</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.williamlong.info/?utm_source=jeffjade.com" target="_blank" title="月光博客">月光博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://read.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="曼妙句子">曼妙句子</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://wiki.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="清风明月阁">清风明月阁</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://nice.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静晴轩别苑">静晴轩别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="幽居空谷轩">幽居空谷轩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="天意人间舫">天意人间舫</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://refined-x.com/?utm_source=jeffjade.com" target="_blank" title="前端路上">前端路上</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://creatorsdaily.com?utm_source=jeffjade.com" target="_blank" title="创造者日报">创造者日报</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://calpa.me/?utm_source=jeffjade.com" target="_blank" title="Calpa&#39;s Blog">Calpa&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jeffjade.com/nicelinks/#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">好书推荐</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="浪潮之巅">浪潮之巅</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="平凡的世界">平凡的世界</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A82" target="_blank" title="代码大全2">代码大全2</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 追求卓越，成功就会在不经意间 追上你！ <br>
+			As you think, so shall you become. </p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="https://nicelinks.site/redirect?url=https://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="mailto:yunjeff@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2022
+		
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+		
+		</p>
+</div></footer>
+    <script src="https://cdn.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js"></script>
+
+<script type="text/javascript">
+echo.init({
+  offset: 200,
+  throttle: 250,
+  unload: false,
+  callback: function (element, op) {}
+});
+
+$(document).ready(function(){
+  console.log('Welcome To %c晚晴幽草轩','font-size:2.113em;color: #2edfa3');
+
+  $("body").append('<quickapp-deeplink brand="vivo|Weixin|Mobile|OPPO|huawei" deeplink="https://hapjs.org/app/com.graceful.sentences/browser/pages/detail"></quickapp-deeplink>');
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  var openAside = function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  }
+  var closeAside = function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  }
+  c.click(openAside);
+  o.click(closeAside);
+
+  document.onkeydown = function(e){
+    // 兼容FF和IE和Opera
+    var theEvent = e || window.event;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    var isInputTextarea = document.activeElement.id === 'search' || document.activeElement.nodeName === "TEXTAREA"
+    if (code === 13 && !isInputTextarea) {
+        if( o.css('display') === 'none'){
+          openAside()
+        }else{
+          closeAside()
+        }
+        return false;
+    }
+    return true;
+  }
+
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          // close auto-close sidebar @17-11-07
+          // c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="//s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"><i class="fa fa-weixin"></i></a>',
+  '<a href="//service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});
+</script>
+
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/fancybox@2.1.6/dist/css/jquery.fancybox.css" rel="stylesheet">
+<script async src="https://cdn.jsdelivr.net/npm/fancybox@2.1.6/dist/js/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      var srcVal = (this.src.indexOf('blank.gif') < 0) ? this.src : $(this).attr('data-echo')
+      $(this).wrap('<a href="' + srcVal + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+<!-- Analytics Begin -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-67901984-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-67901984-1');
+</script>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " https://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd0ed9bb72df3b2b32bdd2274981a7d07' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<!-- <script src="/js/totop.js"></script> -->
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+<!-- MathJax End -->
+
+<!-- Move totop.js From totop.ejs To Here@0309 -->
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+(function($) {
+  if (!Object.assign) {
+    Object.defineProperty(Object, "assign", {
+      enumerable: false,
+      configurable: true,
+      writable: true,
+      value: function(target, firstSource) {
+        "use strict";
+        if (target === undefined || target === null)
+          throw new TypeError("Cannot convert first argument to object");
+        var to = Object(target);
+        for (var i = 1; i < arguments.length; i++) {
+          var nextSource = arguments[i];
+          if (nextSource === undefined || nextSource === null) continue;
+          var keysArray = Object.keys(Object(nextSource));
+          for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+            var nextKey = keysArray[nextIndex];
+            var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+            if (desc !== undefined && desc.enumerable) to[nextKey] = nextSource[nextKey];
+          }
+        }
+        return to;
+      }
+    });
+  }
+
+  if (document.getElementById('gitalk-container')) {
+    var gitalk = new Gitalk({
+      clientID: '4bc2d1424c7939471ad4',
+      clientSecret: 'b3dc888873f473405f79f7d9394888478ba55ca4',
+      repo: 'jadeblog-backups',
+      owner: 'nicejade',
+      admin: ['nicejade'],
+      id: md5(location.pathname),
+      distractionFreeMode: false
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  var clustrmapsCount = document.getElementById('clustrmaps-count')
+  if (clustrmapsCount) {
+    var clustrmapsScript = document.createElement('script')
+    clustrmapsScript.type = 'text/javascript'
+    clustrmapsScript.id = 'clustrmaps'
+    clustrmapsScript.src = '//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a'
+    clustrmapsCount.appendChild(clustrmapsScript)
+  }
+
+  var wbScript = document.createElement('script')
+  wbScript.type = 'text/javascript'
+  wbScript.async = true
+  wbScript.charset = "utf-8"
+  wbScript.src = "//tjs.sjs.sinajs.cn/open/api/js/wb.js"
+  document.body.appendChild(wbScript)
+
+  // 为 Baidu 设置自动推送@2018-08-08
+  
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.async = true;
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.async = true;
+      bp.src = '//push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  
+
+  // When to show the scroll link
+  // higher number = scroll link appears further down the page
+  var upperLimit = 1000;
+
+  // Our scroll link element
+  var scrollElem = $('#totop');
+
+  // Scroll to top speed
+  var scrollSpeed = 500;
+
+  // Show and hide the scroll to top link based on scroll position
+  scrollElem.hide();
+  $(window).scroll(function () {
+      var scrollTop = $(document).scrollTop();
+      if ( scrollTop > upperLimit ) {
+          $(scrollElem).stop().fadeTo(300, 1); // fade back in
+      }else{
+          $(scrollElem).stop().fadeTo(300, 0); // fade out
+      }
+  });
+
+  // Scroll to top animation on click
+  $(scrollElem).click(function(){
+      $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+  });
+})(jQuery);
+</script>
+
+<!-- Inject service-worker@2018-01-09 -->
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js", {scope: '/'})
+    .then(registration => console.log('SW Registration Success！Scope: ', registration.scope))
+    .catch(err => console.log('SW Registration Failed! Error: ', err));
+}
+</script>
+
+<!-- Inject Anchor.js @2018-01-14 -->
+<script type="text/javascript">
+function async(u, c) {
+  var d = document,
+    t = 'script',
+    o = d.createElement(t),
+    s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+
+async("https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js", function(){
+  anchors.options = {
+    visible: 'hover',
+    placement: 'right'
+  }
+  anchors.add('#post h2, #post h3, #post h4');
+  anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+})
+</script>
+  </body>
