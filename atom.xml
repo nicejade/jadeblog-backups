@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2022-05-14T16:21:19.497Z</updated>
+  <updated>2022-06-08T15:25:45.950Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,114 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022，值得学习系列之：函数式编程</title>
+    <link href="https://www.jeffjade.com/2022/06/08/244-2022-worth-learning-series-functional-programming/"/>
+    <id>https://www.jeffjade.com/2022/06/08/244-2022-worth-learning-series-functional-programming/</id>
+    <published>2022-06-08T13:21:00.000Z</published>
+    <updated>2022-06-08T15:25:45.950Z</updated>
+    
+    <content type="html"><![CDATA[<p>在诞生近 70 年之后， 函数式编程（Functional Programming）开始获得越来越多的关注。并且随着时间推移、技术演变，它与前端开发，结合的也越发紧密；前些日子，读了些文章，对函数式编程有了粗浅的了解，并在代码上做了些实践，发现这种思想非常有趣，喜之不已。近日我女神对它突感好奇，于是乎，便结合业界已有之分享，结合自己理解与实践，梳理成文，以便解释。</p>
+<a id="more"></a>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Function.png" alt="函数式编程"></p>
+<p>备注：原文首发于：<a href="https://forum.lovejade.cn/d/182" target="_blank" rel="external">浅谈关于「函数式编程」的理解 ｜ 宜想悠然亭</a>，@2022 年 05 月 30 日。</p>
+<h2 id="与非函数式的区别"><a href="#与非函数式的区别" class="headerlink" title="与非函数式的区别"></a>与非函数式的区别</h2><p>非函数式的示例代码如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> counter = <span class="number">0</span></div><div class="line"><span class="keyword">const</span> increment = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    counter++</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> increment = <span class="function">(<span class="params">counter</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> counter + <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>你可能会觉得这个例子太过普通。但，这就是函数式编程的准则：<strong>不依赖于外部的数据，而且也不改变外部数据的值，而是返回一个新的值给你</strong>。</p>
+<p>再看一段复杂一点，却较为 <a href="https://github.com/nicejade/blog.nicelinks.site/blob/master/src/components/search/index.js" target="_blank" rel="external">实用的代码示例</a> ：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> handleSearch = <span class="function">(<span class="params">_keywords</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> queryResultArr;</div><div class="line">  <span class="keyword">if</span> (!_keywords) &#123;</div><div class="line">    queryResultArr = []</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    queryResultArr = getQueryResult(_keywords)</div><div class="line">  &#125;</div><div class="line">  setQueryResultArr(queryResultArr)</div><div class="line">  setIsShowResults(queryResultArr.length &gt; <span class="number">0</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> throttle = <span class="function">(<span class="params">fn, wait</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> pre = <span class="built_in">Date</span>.now();</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">const</span> context = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">const</span> args = <span class="built_in">arguments</span>;</div><div class="line">    <span class="keyword">const</span> now = <span class="built_in">Date</span>.now();</div><div class="line">    <span class="keyword">if</span> (now - pre &gt;= wait) &#123;</div><div class="line">      fn.apply(context, args)</div><div class="line">      pre = <span class="built_in">Date</span>.now()</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> requestSearchFunc = throttle(handleSearch, <span class="number">200</span>)</div><div class="line"></div><div class="line"><span class="keyword">const</span> handleInputChange = <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">const</span> value = event.target.value;</div><div class="line">  setKeywords(value)</div><div class="line">  requestSearchFunc(value)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以使用 <code>throttle</code> 来<strong>节流函数</strong>，如：requestSearchFunc；这个技术其实就是 Currying 技术（把一个函数的多个参数分解成多个函数， 然后把函数多层封装起来，每层函数都返回一个函数去接收下一个参数这样，可以简化函数的多个参数）。从这个技术上，你可能体会到函数式编程的理念：<strong>把函数当成变量来用，关注于描述问题而不是怎么实现</strong>，这样可以让代码更易读。</p>
+<h2 id="过程式-vs-函数式"><a href="#过程式-vs-函数式" class="headerlink" title="过程式 vs 函数式"></a>过程式 vs 函数式</h2><p>过程式编程，主要要采取过程调用，或函数调用的方式来进行流程控制；它主要关注：一步一步地解决问题。这是完全有效的编码方式，但当您希望应用程序扩展时，它存在许多缺点。而函数式编程（ Functional Programming）关注的是：<strong>描述要做什么，而不是如何做</strong>（describe what to do, rather than how to do it）。</p>
+<p>举例来说，对于一个英文名数组，需要将其中短横线命名，转化为大驼峰格式。基于传统过程式编程，可能你不会想太多，直接将想法用代码来表达出来，临时变量、循环语句，用的飞起：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> nameArr = [<span class="string">'nice-jade'</span>, <span class="string">'rayso-lee'</span>, <span class="string">'jon-snow'</span>, <span class="string">'arya-stark'</span>];</div><div class="line"><span class="keyword">const</span> newArr = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len = nameArr.length; i &lt; len ; i++) &#123;</div><div class="line">  <span class="keyword">let</span> name = nameArr[i];</div><div class="line">  <span class="keyword">let</span> tempNameArr = name.split(<span class="string">'-'</span>);</div><div class="line">  <span class="keyword">let</span> newNameArr = [];</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>, nameLen = tempNameArr.length; j &lt; nameLen; j++) &#123;</div><div class="line">    <span class="keyword">let</span> newFormatName = tempNameArr[j][<span class="number">0</span>].toUpperCase() + tempNameArr[j].slice(<span class="number">1</span>);</div><div class="line">    newNameArr.push(newFormatName);</div><div class="line">  &#125;</div><div class="line">  newArr.push(newNameArr.join(<span class="string">' '</span>));</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(newArr)</div><div class="line"><span class="comment">// [ 'Nice Jade', 'Rayso Lee', 'Jon Snow', 'Arya Stark' ]</span></div></pre></td></tr></table></figure>
+<p>这是可以达成目标的答案，它完全<strong>面向过程</strong>；虽然在编码时候，能够将想法淋漓尽致表现出来。但对于阅读的人，十分不够友好。因为这中间夹杂了复杂的逻辑，充斥了大量临时变量、循环、状态变化等等；通常您需要：<strong>从头读到尾才知道它具体做了什么</strong>，而且一旦出问题，很难定位。当然，你也可以将如上代码，拆分成几个函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> nameArr = [<span class="string">'nice-jade'</span>, <span class="string">'rayso-lee'</span>, <span class="string">'jon-snow'</span>, <span class="string">'arya-stark'</span>]</div><div class="line"><span class="keyword">const</span> capitalize = <span class="function">(<span class="params">str</span>) =&gt;</span> str[<span class="number">0</span>].toUpperCase() + str.slice(<span class="number">1</span>).toLowerCase()</div><div class="line"></div><div class="line"><span class="keyword">const</span> convertName = <span class="function">(<span class="params">name</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> tempNameArr = name.split(<span class="string">'-'</span>)</div><div class="line">  <span class="keyword">let</span> newNameArr = []</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>, nameLen = tempNameArr.length; j &lt; nameLen; j++) &#123;</div><div class="line">    <span class="keyword">let</span> newFormatName = capitalize(tempNameArr[j])</div><div class="line">    newNameArr.push(newFormatName)</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> newNameArr.join(<span class="string">' '</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> getNewArr = <span class="function">(<span class="params">nameArr</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> newArr = []</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len = nameArr.length; i &lt; len; i++) &#123;</div><div class="line">      <span class="keyword">let</span> name = nameArr[i]</div><div class="line">      <span class="keyword">const</span> newName = convertName(name)</div><div class="line">      newArr.push(newName)</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> newArr</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> newNameArr = getNewArr(nameArr)</div><div class="line"><span class="built_in">console</span>.log(newNameArr)</div><div class="line"><span class="comment">// [ 'Nice Jade', 'Rayso Lee', 'Jon Snow', 'Arya Stark' ]</span></div></pre></td></tr></table></figure>
+<p>如此一来，阅读代码时，需要考虑的上下文少了许多，也就更容易。不像第一个示例，如果没有合理的注释说明，你还需要花些时间来理解。<strong>而把代码逻辑封装成了函数后，就相当于：给每个相对独立的程序逻辑取了个名字，于是代码成了自解释的</strong>。幸好，在这份代码中，函数间调用，没有<strong>依赖共享的变量</strong>，否则将会更加复杂。但，仍是充斥了临时变量、循环，增加代码量的同时，也加大了理解之难度。</p>
+<p>如果基于<strong>函数式编程</strong>思想，那会是怎样的代码呢？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> &#123; compose, map, join, split &#125; = <span class="built_in">require</span>(<span class="string">'ramda'</span>)</div><div class="line"></div><div class="line"><span class="keyword">const</span> nameArr = [<span class="string">'nice-jade'</span>, <span class="string">'rayso-lee'</span>, <span class="string">'jon-snow'</span>, <span class="string">'arya-stark'</span>]</div><div class="line"><span class="keyword">const</span> capitalize = <span class="function">(<span class="params">str</span>) =&gt;</span> str[<span class="number">0</span>].toUpperCase() + str.slice(<span class="number">1</span>).toLowerCase()</div><div class="line"><span class="keyword">const</span> convertName = compose(join(<span class="string">' '</span>), map(capitalize), split(<span class="string">'-'</span>))</div><div class="line"><span class="keyword">const</span> newNameArr = nameArr.map(<span class="function">(<span class="params">item</span>) =&gt;</span> convertName(item))</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(newNameArr)</div><div class="line"><span class="comment">// [ 'Nice Jade', 'Rayso Lee', 'Jon Snow', 'Arya Stark' ]</span></div></pre></td></tr></table></figure>
+<p>如上代码（有借助 <a href="https://github.com/ramda/ramda" target="_blank" rel="external">ramda</a> ——「实用的函数式 JavaScript 工具库」来实现），虽依然把程序的逻辑分成了函数，不过这些函数都是 Functional 的。因为它们有三个症状：</p>
+<ol>
+<li>它们之间没有共享的变量。</li>
+<li>函数间通过参数和返回值来传递数据。</li>
+<li>在函数里没有临时变量。</li>
+</ol>
+<p>从这个编程思路，可以清晰看出，<strong>函数式编程</strong>的思维过程是完全不同的，它的着眼点是<strong>函数</strong>，而不是<strong>过程</strong>，它强调的是：通过函数的组合、变换去解决问题，而不是通过写什么样的语句去解决问题；当你的代码越来越多的时候，这种函数的拆分和组合，就会产生出更加强大的力量。</p>
+<h2 id="什么函数式编程？"><a href="#什么函数式编程？" class="headerlink" title="什么函数式编程？"></a>什么函数式编程？</h2><blockquote>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B" target="_blank" rel="external"><strong>函数式编程</strong></a> ，或称函数程序设计、泛函编程（英语：Functional Programming），是一种编程范式，它将电脑运算视为函数运算，并且避免使用程序状态以及易变对象。比起指令式编程，函数式编程更加强调程序执行的结果，而非执行的过程；倡导利用若干简单的执行单元，让计算结果不断渐进，逐层推导复杂的运算，而不是设计一个复杂的执行过程。</p>
+<p>在函数式编程中，函数是头等对象，意思是说一个函数，既可以作为其它函数的输入参数值，也可以从函数中返回值，被修改或者被分配给一个变量。</p>
+<p>不仅最古老的函数式语言 Lisp 重获青春，而且新的函数式语言层出不穷，比如 Erlang、clojure、Scala、F#等等。目前最当红的 Python、Ruby、Javascript，对函数式编程的支持都很强，就连老牌的面向对象的 Java、面向过程的 PHP，都忙不迭地加入对匿名函数的支持。越来越多的迹象表明，函数式编程已经不再是学术界的最爱，开始大踏步地在业界投入实用。</p>
+<p>也许继”面向对象编程”之后，”函数式编程”会成为下一个编程的主流范式（paradigm）。未来的程序员恐怕或多或少都必须懂一点。—— <a href="https://www.ruanyifeng.com/blog/2012/04/functional_programming.html" target="_blank" rel="external">函数式编程初探 @阮一峰</a> （2012 年）</p>
+</blockquote>
+<p>函数，即是一种描述集合和集合之间的<strong>转换关系</strong>，输入通过函数，都会返回<strong>有且只有一个</strong>输出值。<strong>函数</strong>实际上是一个<strong>关系</strong>，或者说成一种映射，而这种映射关系是可 <code>组合</code> 的，当知道一个函数的输出类型，可以匹配另一个函数的输入，那他们就可以进行组合。如上述代码中提及的 <code>convertName</code> 函数。</p>
+<p>在编程世界中，需要处理的逻辑，其实只有“数据”和“关系”，而关系就是 <code>函数</code>。一旦映射关系（函数）找到了，问题即能迎刃而解；剩下的事情，就是让数据通过这种关系，然后转换成另一个数据而已。</p>
+<h2 id="函数式编程的特点"><a href="#函数式编程的特点" class="headerlink" title="函数式编程的特点"></a>函数式编程的特点</h2><h3 id="函数是”第一等公民”"><a href="#函数是”第一等公民”" class="headerlink" title="函数是”第一等公民”"></a><strong>函数是”第一等公民”</strong></h3><p>所谓 <a href="https://en.wikipedia.org/wiki/First-class_function" target="_blank" rel="external">“第一等公民”</a> （First Class），指的是函数与其他数据类型一样，处于平等地位，可以赋值给其他变量，也可以作为参数，传入另一个函数，或者作为别的函数的返回值。如上文中代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> convertName = compose(join(<span class="string">' '</span>), map(capitalize), split(<span class="string">'-'</span>))</div></pre></td></tr></table></figure>
+<h3 id="无状态和数据不可变"><a href="#无状态和数据不可变" class="headerlink" title="无状态和数据不可变"></a>无状态和数据不可变</h3><p>无状态（Statelessness）和数据不可变（Immutable data），这是函数式编程的核心概念：</p>
+<ul>
+<li><strong>数据不可变</strong>：它要求你所有的数据都是不可变的，这意味着如果你想修改一个对象，那你应该创建一个新的对象用来修改，而不是修改已有的对象。</li>
+<li><strong>无状态</strong>：主要是强调对于一个函数，不管你何时运行，它都应该像第一次运行一样，给定相同的输入，给出相同的输出，完全不依赖外部状态的变化。</li>
+</ul>
+<p>为了实现这个目标，函数式编程提出函数应该具备的特性：没有副作用和纯函数。</p>
+<h3 id="没有”副作用”"><a href="#没有”副作用”" class="headerlink" title="没有”副作用”"></a>没有”副作用”</h3><p>所谓”副作用”（side effect），指的是函数内部与外部互动（最典型的情况，就是修改全局变量的值），产生运算以外的其他结果。</p>
+<p>函数式编程强调没有”副作用”，意味着函数要保持独立，所有功能就是返回一个新的值，没有其他行为，尤其是不得修改外部变量的值。</p>
+<h3 id="引用透明"><a href="#引用透明" class="headerlink" title="引用透明"></a><strong>引用透明</strong></h3><p>引用透明（Referential transparency），指的是函数的运行不依赖于外部变量或”状态”，只依赖于输入的参数，任何时候只要参数相同，引用函数所得到的返回值总是相同的。</p>
+<p>有了前面的第三点和第四点，这点是很显然的。其他类型的语言，函数的返回值往往与系统状态有关，不同的状态之下，返回值是不一样的。这就叫”引用不透明”，很不利于观察和理解程序的行为。</p>
+<h3 id="惰性执行"><a href="#惰性执行" class="headerlink" title="惰性执行"></a>惰性执行</h3><p>所谓惰性执行（Lazy Evaluation），指的是函数只在需要的时候执行，即：不产生无意义的中间变量。像上面👆的例子，函数式编程跟命令式编程最大的区别就在于：几乎没有中间变量，它从头到尾都在写函数，只有在最后的时候才通过调用  <code>convertName</code>  产生实际的结果。</p>
+<h3 id="尾递归优化"><a href="#尾递归优化" class="headerlink" title="尾递归优化"></a>尾递归优化</h3><p>迭代在函数式语言中常用<strong>递归</strong>来完成，用递归来实现控制流程的机制，是函数式编程的一个非常重要的特点。我想您当然知道 <code>递归</code> 的害处，那就是如果递归很深的话，stack 受不了，并会导致性能大幅度下降。所以，我们使用尾递归优化技术——每次递归时都会重用 stack，这样一来能够提升性能。尾递归的实现，其实是基于编译器的识别和优化的，编译器发现一个函数是尾递归，就会把它实现为与命令式编程中的迭代差不多的汇编码。</p>
+<h3 id="函数式编程相关技术"><a href="#函数式编程相关技术" class="headerlink" title="函数式编程相关技术"></a>函数式编程相关技术</h3><ul>
+<li><strong>map &amp; reduce</strong> ：这个技术不用多说了，函数式编程最常见的技术，就是对一个集合做 Map 和 Reduce 操作。这比起过程式的语言来说，在代码上要更容易阅读。（传统过程式的语言需要使用 for/while 循环，然后在各种变量中把数据倒过来倒过去的）这个很像 C++中的 STL 中的 foreach，find_if，count_if 之流的函数的玩法。</li>
+<li><strong>pipeline</strong>：这个技术的意思是，把函数实例成一个一个的 action，然后，把一组 action 放到一个数组或是列表中，然后把数据传给这个 action list，数据就像一个 pipeline 一样顺序地被各个函数所操作，最终得到我们想要的结果。</li>
+<li><strong>compose</strong>：它可以接收多个独立的函数作为参数，然后将这些函数进行组合串联，最终返回一个“组合函数”。<code>pipe</code> 与 <code>compose</code> 的共同点是：都返回“组合函数”，区别则是执行的顺序不同，前者是从左向右执行，后者则是从右向左执行。</li>
+<li><strong>recursing 递归</strong> ：递归最大的好处就简化代码，他可以把一个复杂的问题用很简单的代码描述出来。注意：递归的精髓是描述问题，而这正是函数式编程的精髓。</li>
+<li><strong>currying</strong>：把一个函数的多个参数分解成多个函数， 然后把函数多层封装起来，每层函数都返回一个函数去接收下一个参数这样，可以简化函数的多个参数。在 C++中，这个很像 STL 中的 bind_1st 或是 bind2nd。</li>
+<li><strong>higher order function 高阶函数</strong>：所谓高阶函数就是函数当参数，把传入的函数做一个封装，然后返回这个封装函数。现象上就是函数传进传出，就像面向对象对象满天飞一样。</li>
+</ul>
+<h3 id="函数式编程的意义"><a href="#函数式编程的意义" class="headerlink" title="函数式编程的意义"></a>函数式编程的意义</h3><ul>
+<li><strong>代码简洁，开发快速</strong>：大量使用函数，减少了代码的重复，因此程序比较短，开发速度较快；</li>
+<li><strong>接近自然语言，易于理解</strong>：函数式编程的自由度很高，可以写出很接近自然语言的代码；</li>
+<li><strong>更方便的代码管理</strong>：不依赖、也不会改变外界的状态，只要给定输入参数，返回的结果必定相同；</li>
+<li><strong>更少的出错概率</strong>：因为每个函数都很小，而且相同输入，永远可以得到相同的输出，测试也很简单；</li>
+<li><strong>易于”并发编程”</strong>：因为它不修改变量，所以根本不存在”锁”线程的问题；</li>
+<li><strong>代码的热升级</strong>：基于没有副作用特点，只要保证接口不变，内部实现是外部无关的。</li>
+</ul>
+<h2 id="函数式编程，结语"><a href="#函数式编程，结语" class="headerlink" title="函数式编程，结语"></a>函数式编程，结语</h2><p>正如您在函数式编程中看到的，它希望使用小的（理想情况下是<strong>纯函数</strong>）函数来解决问题。这种方法也非常具有可 <code>扩展性</code>，并且函数可以 <code>重用</code>。</p>
+<p>没有更好和更坏的范式。有经验的开发人员，可以看到每种范式的优点，并为给定的问题选择相对更合适的。过程式编程，并不是说你不能使用函数；函数式编程也不会阻止你使用“类”。这些范式，只是以一种随代码增长而有益的方式，来帮助解决问题。</p>
+<h2 id="所参考系列文章"><a href="#所参考系列文章" class="headerlink" title="所参考系列文章"></a>所参考系列文章</h2><ul>
+<li><a href="https://coolshell.cn/articles/10822.html" target="_blank" rel="external">函数式编程 | 酷 壳 – CoolShell</a></li>
+<li><a href="https://www.ruanyifeng.com/blog/2012/04/functional_programming.html" target="_blank" rel="external">函数式编程初探 | 阮一峰的网络日志</a></li>
+<li><a href="https://juejin.cn/post/6844903936378273799" target="_blank" rel="external">简明 JavaScript 函数式编程——入门篇</a></li>
+<li><a href="https://scarletsky.github.io/2017/06/30/functional-programming-i-have-learned/" target="_blank" rel="external">我所了解的函数式编程 ｜ scarletsky</a></li>
+</ul>
+<h2 id="猜您可能感兴趣的文章"><a href="#猜您可能感兴趣的文章" class="headerlink" title="猜您可能感兴趣的文章"></a>猜您可能感兴趣的文章</h2><ul>
+<li><a href="https://forum.lovejade.cn/d/117-npm" target="_blank" rel="external">如何基于 npm 在安装时为依赖重命名？</a></li>
+<li><a href="https://forum.lovejade.cn/d/104-csrf" target="_blank" rel="external">如何防范 CSRF 跨站请求伪造？</a></li>
+<li><a href="https://forum.lovejade.cn/d/103-h5" target="_blank" rel="external">H5 拉起微信小程序流程解析</a></li>
+<li><a href="https://forum.lovejade.cn/d/2-flarum" target="_blank" rel="external">如何基于 Flarum 搭建一个优雅简洁论坛？</a></li>
+<li><a href="https://forum.lovejade.cn/d/28-maclinux-nodejs" target="_blank" rel="external">Mac、Linux 如何快速升级 Node.js 版本？</a></li>
+<li><a href="https://forum.lovejade.cn/d/62-mac-deno-path" target="_blank" rel="external">如何在 Mac 上安装 Deno，并加入至 PATH</a></li>
+<li><a href="https://forum.lovejade.cn/d/3-gmail-smtp" target="_blank" rel="external">如何启用 gmail 邮件的 SMTP 服务？</a></li>
+<li><a href="https://forum.lovejade.cn/d/54-linux" target="_blank" rel="external">Linux 系统如何设置开机启动脚本？</a></li>
+<li><a href="https://forum.lovejade.cn/d/50-flarum" target="_blank" rel="external">如何将 Flarum 论坛内容，主动推送至百度</a></li>
+<li><a href="https://forum.lovejade.cn/d/40-nodejs-mysql-80" target="_blank" rel="external">解决 Node.js 连接 MySQL 8.0 报错</a></li>
+<li><a href="https://forum.lovejade.cn/d/24-ghost-40" target="_blank" rel="external">如何快速升级 Ghost 博客至 4.0 版本？</a></li>
+<li><a href="https://forum.lovejade.cn/d/4-nginx" target="_blank" rel="external">如何为 nginx 配置多个域名服务？</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      在诞生近 70 年之后， 函数式编程（Functional Programming）开始获得越来越多的关注。并且随着时间推移、技术演变，它与前端开发，结合的也越发紧密；前些日子，读了些文章，对函数式编程有了粗浅的了解，并在代码上做了些实践，发现这种思想非常有趣，喜之不已。近日我女神对它突感好奇，于是乎，便结合业界已有之分享，结合自己理解与实践，梳理成文，以便解释。
+    
+    </summary>
+    
+      <category term="Front-End" scheme="https://www.jeffjade.com/categories/Front-End/"/>
+    
+    
+      <category term="JavaScript" scheme="https://www.jeffjade.com/tags/JavaScript/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+  </entry>
   
   <entry>
     <title>地表最强 Markdown 文本编辑工具——Obsidian</title>
@@ -406,6 +514,51 @@
   </entry>
   
   <entry>
+    <title>关于“清风明月阁”的由来，以及未来</title>
+    <link href="https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/"/>
+    <id>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</id>
+    <published>2022-01-20T13:21:00.000Z</published>
+    <updated>2022-01-21T04:47:13.266Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>，基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感…..人生漫短，白首时回顾，堪凭这些许文字以自怜。</p>
+<a id="more"></a>
+<p><img src="http://lovejade.oss-cn-shenzhen.aliyuncs.com/小舟从此逝-江海寄余生.jpg" alt="小舟从此逝-江海寄余生"></p>
+<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>早先搭建的十余个网站，有些实属为体验「<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站构建工具</a>」而起；岁月蹉跎中折腾多了，那种兴之所至、行之所往的冲动，早已隐去；而今，却又“重蹈覆辙”，实在是感念 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 之强大，一时为其蕴藏的「哲思」所着迷；一直以来呢，也在探索文档、Wiki 最佳撰写工具；而前段时间，又恰巧购得云服务器一台；这好奇的念头，与适宜的环境，结合的恰到好处，于是，便有了<a href="https://wiki.lovejade.cn" target="_blank" rel="external">“清风明月阁”</a>。</p>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>给网站命名，向来谨慎，却总也是“因循守旧”，大多没有新意；从最早 2014 年的<a href="https://www.jeffjade.com/">晚晴幽草轩</a>，到今年（2021）的<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>，格式上，都是一个调子：截取喜欢的诗词，结合建筑名为后缀。那些年喜欢李商隐那句：“天意怜幽草，人间重晚晴”，便有了最初的两个网站，这在<a href="https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/">晚晴幽草轩，天意人间舫</a>一文中有过记载。</p>
+<p>多年来，深（身）陷代码中，久未涉足文学诗词，按照如上惯例，为此站取名时，为求其名能“达意”且兼具雅致，好一阵搜肠刮肚；<a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a>之中，已用亭、轩、舫、苑，又因此站基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 所建，在当时或者如今回头看，择以「阁」字，这存在必然性。而在诗词的甄选中，之处有意取李太白的“若非群玉山头见，会向瑶池月下逢”中「群玉」、「瑶池」；虽说雅致，但究竟与心境不能完全契合；斟酌时，须臾之间，灵光乍现，脑海浮现苏子瞻《前赤壁赋》中一段经典：</p>
+<blockquote>
+<p>“逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。<strong>惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适</strong>。”</p>
+</blockquote>
+<p>其<strong>雅致</strong>、其<strong>意境</strong>、其<strong>哲思</strong>，莫有与心之所愿更契合者，于是立即便定下了，名曰：<a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>；工作生活中，自觉总也是”一肚子不合时宜“，今为这网站命此名，怕是为数不多的一次“合乎时宜”；感谢苏子赐名！</p>
+<h2 id="其用"><a href="#其用" class="headerlink" title="其用"></a>其用</h2><p>漫画《四月一日灵异事件簿》中，有写道：“思想、语言是会束缚人的东西，不但自己的会束缚自己，别人的也会束缚自己”，对此深表认同：愚顽的脑袋里如再被束缚，接收到任何与之相悖的理念，都是引发愤怒的毒物。这个时代，关乎“求同存异”，于虚拟网络中或可“被存在”；而生活的现实中，却是难以“存活”。这些年，关乎“思想的表达、语言的阐述”，所引发的后果，远胜海啸山洪，且是司空见惯；即便朋友恋人间的好心建议（或提议），轻起口角，重则仇恨；如此往复，伤痕累累，乃至近乎“四海无人对夕阳”的悲苦……于是乎，痛定思痛后，终可懂得<code>海明威</code>为何如此说：</p>
+<blockquote>
+<p>我们花了两年学会说话，却要花上六十年来学会闭嘴。大多数时候，我们说得越多，彼此的距离却越远，矛盾也越多。在沟通中，大多数人总是急于表达自己，一吐为快，却一点也不懂对方。两年学说话，一生学闭嘴。懂与不懂，不多说。心乱心静，慢慢说。若真没话，就别说。── <a href="https://read.lovejade.cn/p/60e1ee1c7f46b90656e77c7d" target="_blank" rel="external">曼妙句子</a>。</p>
+</blockquote>
+<p>耳聪可以闻世声，目明堪能睹世事，这是与生俱来的本领；人间真实，纷呈精彩，阴阳相生，优劣混合；犹为凡夫俗子，免不了阐述下自己看法，一抒心中块垒，也为“两肩抬道义”；倘若付与人当面说，恐引纷争，实非余愿；“夫唯不争，故天下莫能与之争”，于是乎，在自建平台，以文字形式，承载所学、所思、所感、所悟，或是最佳之选。明朝文学家、画家陈继儒，在《小窗幽记》中写道：</p>
+<blockquote>
+<p>带雨有时种竹，关门无事锄花；拈笔闲删旧句，汲泉几试新茶。余尝净一室，置一几，陈几种快意书，放一本旧法帖；古鼎焚香，素麈挥尘，意思小倦，暂休竹榻。饷时而起，则啜苦茗，信手写汉书几行，随意观古画数幅。心目间，觉洒洒灵空，面上俗尘，当亦扑去三寸。但看花开落，不言人是非。</p>
+</blockquote>
+<p>其中所描绘心性境界，实在令人殷羡，而这也正是所追求的完美。至于“汉书几行、平思几许”，置于这人间网络中，赠予有缘人；期之如“江上之清风，山间之明月”，与人无害，偶可参考，吾愿足矣。</p>
+<p>2021 年 12 月末，记之于深圳。</p>]]></content>
+    
+    <summary type="html">
+    
+      清风明月阁，基于 Wiki.js 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感.....人生漫短，白首时回顾，堪凭这些许文字以自怜。
+    
+    </summary>
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/categories/Thought/"/>
+    
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+  </entry>
+  
+  <entry>
     <title>优质网站同好者周刊（第 49 期）- 倾城之链</title>
     <link href="https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/"/>
     <id>https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/</id>
@@ -505,51 +658,6 @@
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于“清风明月阁”的由来，以及未来</title>
-    <link href="https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/"/>
-    <id>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</id>
-    <published>2022-01-20T13:21:00.000Z</published>
-    <updated>2022-01-21T04:47:13.266Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>，基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感…..人生漫短，白首时回顾，堪凭这些许文字以自怜。</p>
-<a id="more"></a>
-<p><img src="http://lovejade.oss-cn-shenzhen.aliyuncs.com/小舟从此逝-江海寄余生.jpg" alt="小舟从此逝-江海寄余生"></p>
-<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>早先搭建的十余个网站，有些实属为体验「<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站构建工具</a>」而起；岁月蹉跎中折腾多了，那种兴之所至、行之所往的冲动，早已隐去；而今，却又“重蹈覆辙”，实在是感念 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 之强大，一时为其蕴藏的「哲思」所着迷；一直以来呢，也在探索文档、Wiki 最佳撰写工具；而前段时间，又恰巧购得云服务器一台；这好奇的念头，与适宜的环境，结合的恰到好处，于是，便有了<a href="https://wiki.lovejade.cn" target="_blank" rel="external">“清风明月阁”</a>。</p>
-<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>给网站命名，向来谨慎，却总也是“因循守旧”，大多没有新意；从最早 2014 年的<a href="https://www.jeffjade.com/">晚晴幽草轩</a>，到今年（2021）的<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>，格式上，都是一个调子：截取喜欢的诗词，结合建筑名为后缀。那些年喜欢李商隐那句：“天意怜幽草，人间重晚晴”，便有了最初的两个网站，这在<a href="https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/">晚晴幽草轩，天意人间舫</a>一文中有过记载。</p>
-<p>多年来，深（身）陷代码中，久未涉足文学诗词，按照如上惯例，为此站取名时，为求其名能“达意”且兼具雅致，好一阵搜肠刮肚；<a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a>之中，已用亭、轩、舫、苑，又因此站基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 所建，在当时或者如今回头看，择以「阁」字，这存在必然性。而在诗词的甄选中，之处有意取李太白的“若非群玉山头见，会向瑶池月下逢”中「群玉」、「瑶池」；虽说雅致，但究竟与心境不能完全契合；斟酌时，须臾之间，灵光乍现，脑海浮现苏子瞻《前赤壁赋》中一段经典：</p>
-<blockquote>
-<p>“逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。<strong>惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适</strong>。”</p>
-</blockquote>
-<p>其<strong>雅致</strong>、其<strong>意境</strong>、其<strong>哲思</strong>，莫有与心之所愿更契合者，于是立即便定下了，名曰：<a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>；工作生活中，自觉总也是”一肚子不合时宜“，今为这网站命此名，怕是为数不多的一次“合乎时宜”；感谢苏子赐名！</p>
-<h2 id="其用"><a href="#其用" class="headerlink" title="其用"></a>其用</h2><p>漫画《四月一日灵异事件簿》中，有写道：“思想、语言是会束缚人的东西，不但自己的会束缚自己，别人的也会束缚自己”，对此深表认同：愚顽的脑袋里如再被束缚，接收到任何与之相悖的理念，都是引发愤怒的毒物。这个时代，关乎“求同存异”，于虚拟网络中或可“被存在”；而生活的现实中，却是难以“存活”。这些年，关乎“思想的表达、语言的阐述”，所引发的后果，远胜海啸山洪，且是司空见惯；即便朋友恋人间的好心建议（或提议），轻起口角，重则仇恨；如此往复，伤痕累累，乃至近乎“四海无人对夕阳”的悲苦……于是乎，痛定思痛后，终可懂得<code>海明威</code>为何如此说：</p>
-<blockquote>
-<p>我们花了两年学会说话，却要花上六十年来学会闭嘴。大多数时候，我们说得越多，彼此的距离却越远，矛盾也越多。在沟通中，大多数人总是急于表达自己，一吐为快，却一点也不懂对方。两年学说话，一生学闭嘴。懂与不懂，不多说。心乱心静，慢慢说。若真没话，就别说。── <a href="https://read.lovejade.cn/p/60e1ee1c7f46b90656e77c7d" target="_blank" rel="external">曼妙句子</a>。</p>
-</blockquote>
-<p>耳聪可以闻世声，目明堪能睹世事，这是与生俱来的本领；人间真实，纷呈精彩，阴阳相生，优劣混合；犹为凡夫俗子，免不了阐述下自己看法，一抒心中块垒，也为“两肩抬道义”；倘若付与人当面说，恐引纷争，实非余愿；“夫唯不争，故天下莫能与之争”，于是乎，在自建平台，以文字形式，承载所学、所思、所感、所悟，或是最佳之选。明朝文学家、画家陈继儒，在《小窗幽记》中写道：</p>
-<blockquote>
-<p>带雨有时种竹，关门无事锄花；拈笔闲删旧句，汲泉几试新茶。余尝净一室，置一几，陈几种快意书，放一本旧法帖；古鼎焚香，素麈挥尘，意思小倦，暂休竹榻。饷时而起，则啜苦茗，信手写汉书几行，随意观古画数幅。心目间，觉洒洒灵空，面上俗尘，当亦扑去三寸。但看花开落，不言人是非。</p>
-</blockquote>
-<p>其中所描绘心性境界，实在令人殷羡，而这也正是所追求的完美。至于“汉书几行、平思几许”，置于这人间网络中，赠予有缘人；期之如“江上之清风，山间之明月”，与人无害，偶可参考，吾愿足矣。</p>
-<p>2021 年 12 月末，记之于深圳。</p>]]></content>
-    
-    <summary type="html">
-    
-      清风明月阁，基于 Wiki.js 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感.....人生漫短，白首时回顾，堪凭这些许文字以自怜。
-    
-    </summary>
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/categories/Thought/"/>
-    
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
@@ -1995,110 +2103,6 @@
       <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
     
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优质网站同好者周刊（第 37 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/10/28/224-nicelinks-weekly-037/"/>
-    <id>https://www.jeffjade.com/2021/10/28/224-nicelinks-weekly-037/</id>
-    <published>2021-10-28T13:21:00.000Z</published>
-    <updated>2021-11-01T16:07:35.705Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="CreativeMass-创意导航"><a href="#CreativeMass-创意导航" class="headerlink" title="CreativeMass 创意导航"></a><a href="https://nicelinks.site/post/617ac43d42040305e48d444a" target="_blank" rel="external">CreativeMass 创意导航</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/导航" target="_blank" rel="external"><code>导航</code></a> · <a href="https://nicelinks.site/tags/创意" target="_blank" rel="external"><code>创意</code></a> · <a href="https://nicelinks.site/tags/分享" target="_blank" rel="external"><code>分享</code></a></p>
-<blockquote>
-<p>CreativeMass 创意导航，精选了全球 300 个最能带来灵感的网站与你共享。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/creativemass.cn.png?x-oss-process=style/png2jpg" alt="倾城之链 - CreativeMass 创意导航"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://uidea.tools/" target="_blank" rel="external">CreativeMass 创意导航</a>，一个创意导航。精选了全球 300 个最能带来灵感的网站与你共享。这里有营销、艺术、设计领域的最新资讯，也有帮助你实现创意的有趣工具；这里有独特而实用的海量素材，也有带给你意外惊喜和脑洞启发的小众网站。</p>
-<p>这是一个<strong>属于你的灵感仓库</strong>。你可以带着明确的目标，来这里更高效地获取创意素材；你可以随意遨游，邂逅一个惊艳的创意站点；你可以在这里汲取灵感和学习方法，发掘自己的创意潜能。这也是一个<strong>动态收藏夹</strong>。 其官网写道：<a href="https://nicelinks.site/redirect?url=https://uidea.tools/" target="_blank" rel="external">CreativeMass</a> 会不断寻找全球创意灵感，持续丰富和更新，也欢迎你向 <a href="https://nicelinks.site/redirect?url=https://uidea.tools/" target="_blank" rel="external">CreativeMass</a> 推荐自己发现的有趣站点。</p>
-<p>全球有数 10 亿个网站，当你需要灵感的时候，会打开哪一个？很多时候，我们在数以亿计的内容海洋中苦苦寻觅，还有源源不断的自动推荐，依然得不到那个让人眼前一亮的创意。 在信息极度丰盛的时代，我们的灵感来源依然匮乏。而这也是<a href="https://nicelinks.site/redirect?url=https://uidea.tools/" target="_blank" rel="external">CreativeMass 创意导航</a> 得以存在的初衷。</p>
-<p>── 出自<a href="https://nicelinks.site/post/617ac43d42040305e48d444a" target="_blank" rel="external">倾城之链 - CreativeMass 创意导航</a></p>
-<h2 id="优书网"><a href="#优书网" class="headerlink" title="优书网"></a><a href="https://nicelinks.site/post/61794c516ffe1505d9560261" target="_blank" rel="external">优书网</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/搜索" target="_blank" rel="external"><code>搜索</code></a> · <a href="https://nicelinks.site/tags/阅读" target="_blank" rel="external"><code>阅读</code></a> · <a href="https://nicelinks.site/tags/发现" target="_blank" rel="external"><code>发现</code></a></p>
-<blockquote>
-<p>优书网(<a href="http://www.yousuu.com)集小说搜索、追更阅读、读者评分、书单推荐于一体,不但可以追看小说最新更新,还可以解决书荒寻找到更多更好看的小说,在这里你可以阅读。" target="_blank" rel="external">www.yousuu.com)集小说搜索、追更阅读、读者评分、书单推荐于一体,不但可以追看小说最新更新,还可以解决书荒寻找到更多更好看的小说,在这里你可以阅读。</a></p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.yousuu.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 优书网"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.yousuu.com/" target="_blank" rel="external">优书网</a>，集小说搜索、追更阅读、读者评分、书单推荐于一体的在线阅读平台。此外，您可以在这里推荐书籍、创建书单、发表书评等等。大致翻阅了下，这里大多内容是玄幻、奇幻、武侠、仙侠等相关内容，无法给予评说，对这块儿内容感兴趣的朋友，可以关注了解下。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61794c516ffe1505d9560261" target="_blank" rel="external">倾城之链 - 优书网</a></p>
-<h2 id="CSS-Design-Awards-Website-Awards-Best-Web-Design-Inspiration-CSS-Awards"><a href="#CSS-Design-Awards-Website-Awards-Best-Web-Design-Inspiration-CSS-Awards" class="headerlink" title="CSS Design Awards - Website Awards - Best Web Design Inspiration - CSS Awards"></a><a href="https://nicelinks.site/post/617943346ffe1505d956025f" target="_blank" rel="external">CSS Design Awards - Website Awards - Best Web Design Inspiration - CSS Awards</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a> · <a href="https://nicelinks.site/tags/设计" target="_blank" rel="external"><code>设计</code></a> · <a href="https://nicelinks.site/tags/设计师" target="_blank" rel="external"><code>设计师</code></a></p>
-<p><strong>关键字</strong>：best website awards, web design awards, web design inspiration, css awards, css winner, UI design, UX design</p>
-<blockquote>
-<p>CSS Design Awards. Be inspired, Be inspiring. Submit your website to the world’s best CSS awards for a chance to win Site of the Day, UI awards UX awards and more from a panel of 200+ international web designers and developers.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.cssdesignawards.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - CSS Design Awards - Website Awards - Best Web Design Inspiration - CSS Awards"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.cssdesignawards.com/" target="_blank" rel="external">CSS Design Awards</a>，一个网络设计和开发奖励平台，面向数字大众、UI/UX 窥视者和鼓舞人心的网络领导者。<a href="https://nicelinks.site/redirect?url=https://www.cssdesignawards.com/" target="_blank" rel="external">CSS DA</a> 成立于 2009 年并于 2010 年推出，是一个国际网页设计和开发奖项平台，旨在表彰和展示自由设计师、工作室和机构，他们的工作突破了 UI、UX 和创新开发的界限。在国际专家评审团的支持下，获奖者将获得官方证书、享有盛誉的奖杯和行业领导者的认可，目前 <a href="https://nicelinks.site/redirect?url=https://www.cssdesignawards.com/" target="_blank" rel="external">CSS DA</a>  网站每月有数十万访问。</p>
-<p>在 <a href="https://nicelinks.site/redirect?url=https://www.cssdesignawards.com/" target="_blank" rel="external">CSS Design Awards</a>，您可以<strong>受到启发，获得灵感</strong>。将你的网站提交给它，有机会获得由 200 多个国际网页设计师和开发人员组成的小组，颁发的每日网站 UI 奖 UX 奖。</p>
-<p>── 出自<a href="https://nicelinks.site/post/617943346ffe1505d956025f" target="_blank" rel="external">倾城之链 - CSS Design Awards - Website Awards - Best Web Design Inspiration - CSS Awards</a></p>
-<h2 id="24k导航-专注全网优质网址、优质资源分享"><a href="#24k导航-专注全网优质网址、优质资源分享" class="headerlink" title="24k导航 | 专注全网优质网址、优质资源分享"></a><a href="https://nicelinks.site/post/6176a7766ffe1505d956025b" target="_blank" rel="external">24k导航 | 专注全网优质网址、优质资源分享</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/导航" target="_blank" rel="external"><code>导航</code></a> · <a href="https://nicelinks.site/tags/资源" target="_blank" rel="external"><code>资源</code></a> · <a href="https://nicelinks.site/tags/分享" target="_blank" rel="external"><code>分享</code></a></p>
-<p><strong>关键字</strong>：24k导航, 最新网址, 网址大全, 网址导航, 网盘搜索, 免费资源, 简单, 高效</p>
-<blockquote>
-<p>专注全网优质网址、优质资源分享。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.24kdh.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 24k导航 | 专注全网优质网址、优质资源分享"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.24kdh.com/" target="_blank" rel="external">24k 导航</a>，专注全网优质网址、优质资源分享；这是基于 <a href="https://nicelinks.site/post/602e4a576eaf2a7660805af1" target="_blank" rel="external">WordPress</a> 所搭建的网站；该网站除了收录了大量各色网站（有 搜索引擎 、推荐公号 、生活休闲、读物学习、影视资源、搜索查询、模板图库、软件工具、媒体运营、便捷工具、设计常用、金融支付、影视制作、音乐MV、福利网址、导航网址等分类），还提供了<strong>今日热榜</strong>、<strong>职业导航</strong>等。</p>
-<p>── 出自<a href="https://nicelinks.site/post/6176a7766ffe1505d956025b" target="_blank" rel="external">倾城之链 - 24k导航 | 专注全网优质网址、优质资源分享</a></p>
-<h2 id="电鸭社区-远程工作、自由职业、兼职外包，自由从这开始充电站A充电站A"><a href="#电鸭社区-远程工作、自由职业、兼职外包，自由从这开始充电站A充电站A" class="headerlink" title=" 电鸭社区 - 远程工作、自由职业、兼职外包，自由从这开始充电站A充电站A"></a><a href="https://nicelinks.site/post/617676f96ffe1505d9560257" target="_blank" rel="external"> 电鸭社区 - 远程工作、自由职业、兼职外包，自由从这开始充电站A充电站A</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/远程" target="_blank" rel="external"><code>远程</code></a> · <a href="https://nicelinks.site/tags/互联网" target="_blank" rel="external"><code>互联网</code></a> · <a href="https://nicelinks.site/tags/工作" target="_blank" rel="external"><code>工作</code></a></p>
-<p><strong>关键字</strong>：远程工作, 自由职业, 兼职外包, 在家工作, remote working, remotely, freelancer</p>
-<blockquote>
-<p>电鸭社区是国内最早的远程工作社区，也是互联网工作者们的聚集地。在社区，我们进行有价值的话题讨论，也分享远程、外包、零活、兼职、驻场等非主流工作机会。「只工作，不上班」是我们倡导的工作态度。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/eleduck.com.png?x-oss-process=style/png2jpg" alt="倾城之链 -  电鸭社区 - 远程工作、自由职业、兼职外包，自由从这开始充电站A充电站A"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://eleduck.com/" target="_blank" rel="external">电鸭社区</a>是互联网工作者们的聚集地，他们倡导“只工作，不上班”的生活方式。其前身是 2014 年建立的“一早一晚“社区。该社区作者，骑行辗转各地，一路上经历的人和事，最终让他对<code>远程工作</code>有了更深的认识（无论是之于他本人，还是之于其他人）：<strong>远程不是终极奥义，工作与生活，现实与理想的平衡才是。</strong>，具体有涉及以下几点：</p>
-<ul>
-<li>不是所有企业，也并非所有个人都适合<strong>远程工作</strong>任何事物都有两面性，远程自然也不例外。关于远程的优劣，已经有太多人分享，我不在此赘述。</li>
-<li>远程、兼职、外包、临时雇佣、斜杠青年、共享员工等高自由度的工作方式，都是对朝九晚五主流工作方式的一种良性补充，不可能完全替代，也没必要全盘替代。</li>
-<li>自由的本质并非随心所欲，而是可以自我选择。</li>
-<li>「只工作，不上班」并非“不工作，不上班”，别拿清闲当自由。</li>
-<li>为自己内心所要而工作，而不是为应付朝九晚五而上班。</li>
-</ul>
-<p>该社区，经历了繁荣到迷茫，沉寂，目前采取<strong>开放共建</strong>的方式，以期让一些有想法、有行动力的人，都有一块自己想要种花种草的地方，并都能从中获利获益。相比于呼喊口号，<a href="https://nicelinks.site/redirect?url=https://eleduck.com/" target="_blank" rel="external">电鸭社区</a>主张：<strong>少说废话，多干实事</strong>，以影响企业、帮助企业的方式，尝试推动「远程工作」在国内的发展。如果您也对<strong>远程工作</strong>感兴趣，不妨进一步了解下。</p>
-<p>── 出自<a href="https://nicelinks.site/post/617676f96ffe1505d9560257" target="_blank" rel="external">倾城之链 -  电鸭社区 - 远程工作、自由职业、兼职外包，自由从这开始充电站A充电站A</a></p>
-<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>自然界什么东西是随波逐流的？死掉的东西一定是随波逐流；只有活着的东西才会抗争。<strong>心死为忙</strong>。 为什么大家那么忙？因为在忙乱中，我们忘记了我们还活着，在忙乱中我们的心已经死去了，当我们“死去了”我们一定随波逐流。── 当代 ·  罗翔（法学博士）</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/93-31" target="_blank" rel="external">优质网站同好者周刊（第 31 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/90-30" target="_blank" rel="external">优质网站同好者周刊（第 30 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/88-29" target="_blank" rel="external">优质网站同好者周刊（第 29 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/08/26/214-nicelinks-weekly-028/">优质网站同好者周刊（第 28 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2021/08/19/213-nicelinks-weekly-027/">优质网站同好者周刊（第 27 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/82-26" target="_blank" rel="external">优质网站同好者周刊（第 26 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
     
   </entry>
   

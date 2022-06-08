@@ -1,0 +1,1130 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+
+    <title>2022，值得学习系列之：函数式编程 | 晚晴幽草轩</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="晚晴幽草轩轩主">
+    
+    <meta name="theme-color" content="#fffffb">
+    <meta name="baidu-site-verification" content="PKEtLPjO56">
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net/">
+
+    <meta name="keywords" content="函数式编程, 前端开发, 函数式, 编程, 技术, JavaScript">
+    <meta name="description" content="在诞生近 70 年之后， 函数式编程（Functional Programming）开始获得越来越多的关注。并且随着时间推移、技术演变，它与前端开发，结合的也越发紧密；前些日子，读了些文章，对函数式编程有了粗浅的了解，并在代码上做了些实践，发现这种思想非常有趣，喜之不已。近日我女神对它突感好奇，于是乎，便结合业界已有之分享，结合自己理解与实践，梳理成文，以便解释。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2022，值得学习系列之：函数式编程">
+<meta property="og:url" content="https://www.jeffjade.com/2022/06/08/244-2022-worth-learning-series-functional-programming/index.html">
+<meta property="og:site_name" content="晚晴幽草轩">
+<meta property="og:description" content="在诞生近 70 年之后， 函数式编程（Functional Programming）开始获得越来越多的关注。并且随着时间推移、技术演变，它与前端开发，结合的也越发紧密；前些日子，读了些文章，对函数式编程有了粗浅的了解，并在代码上做了些实践，发现这种思想非常有趣，喜之不已。近日我女神对它突感好奇，于是乎，便结合业界已有之分享，结合自己理解与实践，梳理成文，以便解释。">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Function.png">
+<meta property="og:updated_time" content="2022-06-08T15:25:45.950Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2022，值得学习系列之：函数式编程">
+<meta name="twitter:description" content="在诞生近 70 年之后， 函数式编程（Functional Programming）开始获得越来越多的关注。并且随着时间推移、技术演变，它与前端开发，结合的也越发紧密；前些日子，读了些文章，对函数式编程有了粗浅的了解，并在代码上做了些实践，发现这种思想非常有趣，喜之不已。近日我女神对它突感好奇，于是乎，便结合业界已有之分享，结合自己理解与实践，梳理成文，以便解释。">
+<meta name="twitter:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Function.png">
+<meta name="twitter:creator" content="@nicejadeyang">
+
+    
+    <link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/favicons/favicon.ico">
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6">
+
+    <link href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css">
+    <link rel="stylesheet" href="/css/style.css?190623">
+
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script">
+
+    <link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script">
+    <script src="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8586652723015758",
+        enable_page_level_ads: true
+      });
+    </script>
+    <script src="https://fastly.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
+    <script async src="https://fastly.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
+</head></html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1>
+				<h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/" class="">Home</a></li>
+					
+						<li><a href="/nicelinks" class="">Links</a></li>
+					
+						<li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li>
+					
+						<li><a href="/archives" class="">Archives</a></li>
+					
+						<li><a href="/about-me" class="">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search">
+						<input type="hidden" name="q" value="site:www.jeffjade.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2022/06/08/244-2022-worth-learning-series-functional-programming/" class="title=&quot;2022，值得学习系列之：函数式编程&quot;" itemprop="url">2022，值得学习系列之：函数式编程</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2022-06-08T13:21:00.000Z" itemprop="datePublished"> 发表于 2022-06-08</time>
+
+  </p>
+</header>
+	<div class="article-content">
+		
+    <div class="bottom-gg-module">
+  <div class="jade-gg-block">
+    <a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank">
+      <img class="width-block-wrap" style="width: 100%;max-height: 200px" src="https://image.nicelinks.site/倾城之链-Banner.png" alt="倾城之链">
+    </a>
+    </div>
+  </div>
+
+		<p>在诞生近 70 年之后， 函数式编程（Functional Programming）开始获得越来越多的关注。并且随着时间推移、技术演变，它与前端开发，结合的也越发紧密；前些日子，读了些文章，对函数式编程有了粗浅的了解，并在代码上做了些实践，发现这种思想非常有趣，喜之不已。近日我女神对它突感好奇，于是乎，便结合业界已有之分享，结合自己理解与实践，梳理成文，以便解释。</p>
+<a id="more"></a>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Function.png" alt="函数式编程"></p>
+<p>备注：原文首发于：<a href="https://forum.lovejade.cn/d/182" target="_blank" rel="external">浅谈关于「函数式编程」的理解 ｜ 宜想悠然亭</a>，@2022 年 05 月 30 日。</p>
+<h2 id="与非函数式的区别"><a href="#与非函数式的区别" class="headerlink" title="与非函数式的区别"></a>与非函数式的区别</h2><p>非函数式的示例代码如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> counter = <span class="number">0</span></div><div class="line"><span class="keyword">const</span> increment = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    counter++</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> increment = <span class="function">(<span class="params">counter</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> counter + <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>你可能会觉得这个例子太过普通。但，这就是函数式编程的准则：<strong>不依赖于外部的数据，而且也不改变外部数据的值，而是返回一个新的值给你</strong>。</p>
+<p>再看一段复杂一点，却较为 <a href="https://github.com/nicejade/blog.nicelinks.site/blob/master/src/components/search/index.js" target="_blank" rel="external">实用的代码示例</a> ：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> handleSearch = <span class="function">(<span class="params">_keywords</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> queryResultArr;</div><div class="line">  <span class="keyword">if</span> (!_keywords) &#123;</div><div class="line">    queryResultArr = []</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    queryResultArr = getQueryResult(_keywords)</div><div class="line">  &#125;</div><div class="line">  setQueryResultArr(queryResultArr)</div><div class="line">  setIsShowResults(queryResultArr.length &gt; <span class="number">0</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> throttle = <span class="function">(<span class="params">fn, wait</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> pre = <span class="built_in">Date</span>.now();</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">const</span> context = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">const</span> args = <span class="built_in">arguments</span>;</div><div class="line">    <span class="keyword">const</span> now = <span class="built_in">Date</span>.now();</div><div class="line">    <span class="keyword">if</span> (now - pre &gt;= wait) &#123;</div><div class="line">      fn.apply(context, args)</div><div class="line">      pre = <span class="built_in">Date</span>.now()</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> requestSearchFunc = throttle(handleSearch, <span class="number">200</span>)</div><div class="line"></div><div class="line"><span class="keyword">const</span> handleInputChange = <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">const</span> value = event.target.value;</div><div class="line">  setKeywords(value)</div><div class="line">  requestSearchFunc(value)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以使用 <code>throttle</code> 来<strong>节流函数</strong>，如：requestSearchFunc；这个技术其实就是 Currying 技术（把一个函数的多个参数分解成多个函数， 然后把函数多层封装起来，每层函数都返回一个函数去接收下一个参数这样，可以简化函数的多个参数）。从这个技术上，你可能体会到函数式编程的理念：<strong>把函数当成变量来用，关注于描述问题而不是怎么实现</strong>，这样可以让代码更易读。</p>
+<h2 id="过程式-vs-函数式"><a href="#过程式-vs-函数式" class="headerlink" title="过程式 vs 函数式"></a>过程式 vs 函数式</h2><p>过程式编程，主要要采取过程调用，或函数调用的方式来进行流程控制；它主要关注：一步一步地解决问题。这是完全有效的编码方式，但当您希望应用程序扩展时，它存在许多缺点。而函数式编程（ Functional Programming）关注的是：<strong>描述要做什么，而不是如何做</strong>（describe what to do, rather than how to do it）。</p>
+<p>举例来说，对于一个英文名数组，需要将其中短横线命名，转化为大驼峰格式。基于传统过程式编程，可能你不会想太多，直接将想法用代码来表达出来，临时变量、循环语句，用的飞起：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> nameArr = [<span class="string">'nice-jade'</span>, <span class="string">'rayso-lee'</span>, <span class="string">'jon-snow'</span>, <span class="string">'arya-stark'</span>];</div><div class="line"><span class="keyword">const</span> newArr = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len = nameArr.length; i &lt; len ; i++) &#123;</div><div class="line">  <span class="keyword">let</span> name = nameArr[i];</div><div class="line">  <span class="keyword">let</span> tempNameArr = name.split(<span class="string">'-'</span>);</div><div class="line">  <span class="keyword">let</span> newNameArr = [];</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>, nameLen = tempNameArr.length; j &lt; nameLen; j++) &#123;</div><div class="line">    <span class="keyword">let</span> newFormatName = tempNameArr[j][<span class="number">0</span>].toUpperCase() + tempNameArr[j].slice(<span class="number">1</span>);</div><div class="line">    newNameArr.push(newFormatName);</div><div class="line">  &#125;</div><div class="line">  newArr.push(newNameArr.join(<span class="string">' '</span>));</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(newArr)</div><div class="line"><span class="comment">// [ 'Nice Jade', 'Rayso Lee', 'Jon Snow', 'Arya Stark' ]</span></div></pre></td></tr></table></figure>
+<p>这是可以达成目标的答案，它完全<strong>面向过程</strong>；虽然在编码时候，能够将想法淋漓尽致表现出来。但对于阅读的人，十分不够友好。因为这中间夹杂了复杂的逻辑，充斥了大量临时变量、循环、状态变化等等；通常您需要：<strong>从头读到尾才知道它具体做了什么</strong>，而且一旦出问题，很难定位。当然，你也可以将如上代码，拆分成几个函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> nameArr = [<span class="string">'nice-jade'</span>, <span class="string">'rayso-lee'</span>, <span class="string">'jon-snow'</span>, <span class="string">'arya-stark'</span>]</div><div class="line"><span class="keyword">const</span> capitalize = <span class="function">(<span class="params">str</span>) =&gt;</span> str[<span class="number">0</span>].toUpperCase() + str.slice(<span class="number">1</span>).toLowerCase()</div><div class="line"></div><div class="line"><span class="keyword">const</span> convertName = <span class="function">(<span class="params">name</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">let</span> tempNameArr = name.split(<span class="string">'-'</span>)</div><div class="line">  <span class="keyword">let</span> newNameArr = []</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>, nameLen = tempNameArr.length; j &lt; nameLen; j++) &#123;</div><div class="line">    <span class="keyword">let</span> newFormatName = capitalize(tempNameArr[j])</div><div class="line">    newNameArr.push(newFormatName)</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> newNameArr.join(<span class="string">' '</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> getNewArr = <span class="function">(<span class="params">nameArr</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> newArr = []</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len = nameArr.length; i &lt; len; i++) &#123;</div><div class="line">      <span class="keyword">let</span> name = nameArr[i]</div><div class="line">      <span class="keyword">const</span> newName = convertName(name)</div><div class="line">      newArr.push(newName)</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> newArr</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> newNameArr = getNewArr(nameArr)</div><div class="line"><span class="built_in">console</span>.log(newNameArr)</div><div class="line"><span class="comment">// [ 'Nice Jade', 'Rayso Lee', 'Jon Snow', 'Arya Stark' ]</span></div></pre></td></tr></table></figure>
+<p>如此一来，阅读代码时，需要考虑的上下文少了许多，也就更容易。不像第一个示例，如果没有合理的注释说明，你还需要花些时间来理解。<strong>而把代码逻辑封装成了函数后，就相当于：给每个相对独立的程序逻辑取了个名字，于是代码成了自解释的</strong>。幸好，在这份代码中，函数间调用，没有<strong>依赖共享的变量</strong>，否则将会更加复杂。但，仍是充斥了临时变量、循环，增加代码量的同时，也加大了理解之难度。</p>
+<p>如果基于<strong>函数式编程</strong>思想，那会是怎样的代码呢？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> &#123; compose, map, join, split &#125; = <span class="built_in">require</span>(<span class="string">'ramda'</span>)</div><div class="line"></div><div class="line"><span class="keyword">const</span> nameArr = [<span class="string">'nice-jade'</span>, <span class="string">'rayso-lee'</span>, <span class="string">'jon-snow'</span>, <span class="string">'arya-stark'</span>]</div><div class="line"><span class="keyword">const</span> capitalize = <span class="function">(<span class="params">str</span>) =&gt;</span> str[<span class="number">0</span>].toUpperCase() + str.slice(<span class="number">1</span>).toLowerCase()</div><div class="line"><span class="keyword">const</span> convertName = compose(join(<span class="string">' '</span>), map(capitalize), split(<span class="string">'-'</span>))</div><div class="line"><span class="keyword">const</span> newNameArr = nameArr.map(<span class="function">(<span class="params">item</span>) =&gt;</span> convertName(item))</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(newNameArr)</div><div class="line"><span class="comment">// [ 'Nice Jade', 'Rayso Lee', 'Jon Snow', 'Arya Stark' ]</span></div></pre></td></tr></table></figure>
+<p>如上代码（有借助 <a href="https://github.com/ramda/ramda" target="_blank" rel="external">ramda</a> ——「实用的函数式 JavaScript 工具库」来实现），虽依然把程序的逻辑分成了函数，不过这些函数都是 Functional 的。因为它们有三个症状：</p>
+<ol>
+<li>它们之间没有共享的变量。</li>
+<li>函数间通过参数和返回值来传递数据。</li>
+<li>在函数里没有临时变量。</li>
+</ol>
+<p>从这个编程思路，可以清晰看出，<strong>函数式编程</strong>的思维过程是完全不同的，它的着眼点是<strong>函数</strong>，而不是<strong>过程</strong>，它强调的是：通过函数的组合、变换去解决问题，而不是通过写什么样的语句去解决问题；当你的代码越来越多的时候，这种函数的拆分和组合，就会产生出更加强大的力量。</p>
+<h2 id="什么函数式编程？"><a href="#什么函数式编程？" class="headerlink" title="什么函数式编程？"></a>什么函数式编程？</h2><blockquote>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B" target="_blank" rel="external"><strong>函数式编程</strong></a> ，或称函数程序设计、泛函编程（英语：Functional Programming），是一种编程范式，它将电脑运算视为函数运算，并且避免使用程序状态以及易变对象。比起指令式编程，函数式编程更加强调程序执行的结果，而非执行的过程；倡导利用若干简单的执行单元，让计算结果不断渐进，逐层推导复杂的运算，而不是设计一个复杂的执行过程。</p>
+<p>在函数式编程中，函数是头等对象，意思是说一个函数，既可以作为其它函数的输入参数值，也可以从函数中返回值，被修改或者被分配给一个变量。</p>
+<p>不仅最古老的函数式语言 Lisp 重获青春，而且新的函数式语言层出不穷，比如 Erlang、clojure、Scala、F#等等。目前最当红的 Python、Ruby、Javascript，对函数式编程的支持都很强，就连老牌的面向对象的 Java、面向过程的 PHP，都忙不迭地加入对匿名函数的支持。越来越多的迹象表明，函数式编程已经不再是学术界的最爱，开始大踏步地在业界投入实用。</p>
+<p>也许继”面向对象编程”之后，”函数式编程”会成为下一个编程的主流范式（paradigm）。未来的程序员恐怕或多或少都必须懂一点。—— <a href="https://www.ruanyifeng.com/blog/2012/04/functional_programming.html" target="_blank" rel="external">函数式编程初探 @阮一峰</a> （2012 年）</p>
+</blockquote>
+<p>函数，即是一种描述集合和集合之间的<strong>转换关系</strong>，输入通过函数，都会返回<strong>有且只有一个</strong>输出值。<strong>函数</strong>实际上是一个<strong>关系</strong>，或者说成一种映射，而这种映射关系是可 <code>组合</code> 的，当知道一个函数的输出类型，可以匹配另一个函数的输入，那他们就可以进行组合。如上述代码中提及的 <code>convertName</code> 函数。</p>
+<p>在编程世界中，需要处理的逻辑，其实只有“数据”和“关系”，而关系就是 <code>函数</code>。一旦映射关系（函数）找到了，问题即能迎刃而解；剩下的事情，就是让数据通过这种关系，然后转换成另一个数据而已。</p>
+<h2 id="函数式编程的特点"><a href="#函数式编程的特点" class="headerlink" title="函数式编程的特点"></a>函数式编程的特点</h2><h3 id="函数是”第一等公民”"><a href="#函数是”第一等公民”" class="headerlink" title="函数是”第一等公民”"></a><strong>函数是”第一等公民”</strong></h3><p>所谓 <a href="https://en.wikipedia.org/wiki/First-class_function" target="_blank" rel="external">“第一等公民”</a> （First Class），指的是函数与其他数据类型一样，处于平等地位，可以赋值给其他变量，也可以作为参数，传入另一个函数，或者作为别的函数的返回值。如上文中代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> convertName = compose(join(<span class="string">' '</span>), map(capitalize), split(<span class="string">'-'</span>))</div></pre></td></tr></table></figure>
+<h3 id="无状态和数据不可变"><a href="#无状态和数据不可变" class="headerlink" title="无状态和数据不可变"></a>无状态和数据不可变</h3><p>无状态（Statelessness）和数据不可变（Immutable data），这是函数式编程的核心概念：</p>
+<ul>
+<li><strong>数据不可变</strong>：它要求你所有的数据都是不可变的，这意味着如果你想修改一个对象，那你应该创建一个新的对象用来修改，而不是修改已有的对象。</li>
+<li><strong>无状态</strong>：主要是强调对于一个函数，不管你何时运行，它都应该像第一次运行一样，给定相同的输入，给出相同的输出，完全不依赖外部状态的变化。</li>
+</ul>
+<p>为了实现这个目标，函数式编程提出函数应该具备的特性：没有副作用和纯函数。</p>
+<h3 id="没有”副作用”"><a href="#没有”副作用”" class="headerlink" title="没有”副作用”"></a>没有”副作用”</h3><p>所谓”副作用”（side effect），指的是函数内部与外部互动（最典型的情况，就是修改全局变量的值），产生运算以外的其他结果。</p>
+<p>函数式编程强调没有”副作用”，意味着函数要保持独立，所有功能就是返回一个新的值，没有其他行为，尤其是不得修改外部变量的值。</p>
+<h3 id="引用透明"><a href="#引用透明" class="headerlink" title="引用透明"></a><strong>引用透明</strong></h3><p>引用透明（Referential transparency），指的是函数的运行不依赖于外部变量或”状态”，只依赖于输入的参数，任何时候只要参数相同，引用函数所得到的返回值总是相同的。</p>
+<p>有了前面的第三点和第四点，这点是很显然的。其他类型的语言，函数的返回值往往与系统状态有关，不同的状态之下，返回值是不一样的。这就叫”引用不透明”，很不利于观察和理解程序的行为。</p>
+<h3 id="惰性执行"><a href="#惰性执行" class="headerlink" title="惰性执行"></a>惰性执行</h3><p>所谓惰性执行（Lazy Evaluation），指的是函数只在需要的时候执行，即：不产生无意义的中间变量。像上面👆的例子，函数式编程跟命令式编程最大的区别就在于：几乎没有中间变量，它从头到尾都在写函数，只有在最后的时候才通过调用  <code>convertName</code>  产生实际的结果。</p>
+<h3 id="尾递归优化"><a href="#尾递归优化" class="headerlink" title="尾递归优化"></a>尾递归优化</h3><p>迭代在函数式语言中常用<strong>递归</strong>来完成，用递归来实现控制流程的机制，是函数式编程的一个非常重要的特点。我想您当然知道 <code>递归</code> 的害处，那就是如果递归很深的话，stack 受不了，并会导致性能大幅度下降。所以，我们使用尾递归优化技术——每次递归时都会重用 stack，这样一来能够提升性能。尾递归的实现，其实是基于编译器的识别和优化的，编译器发现一个函数是尾递归，就会把它实现为与命令式编程中的迭代差不多的汇编码。</p>
+<h3 id="函数式编程相关技术"><a href="#函数式编程相关技术" class="headerlink" title="函数式编程相关技术"></a>函数式编程相关技术</h3><ul>
+<li><strong>map &amp; reduce</strong> ：这个技术不用多说了，函数式编程最常见的技术，就是对一个集合做 Map 和 Reduce 操作。这比起过程式的语言来说，在代码上要更容易阅读。（传统过程式的语言需要使用 for/while 循环，然后在各种变量中把数据倒过来倒过去的）这个很像 C++中的 STL 中的 foreach，find_if，count_if 之流的函数的玩法。</li>
+<li><strong>pipeline</strong>：这个技术的意思是，把函数实例成一个一个的 action，然后，把一组 action 放到一个数组或是列表中，然后把数据传给这个 action list，数据就像一个 pipeline 一样顺序地被各个函数所操作，最终得到我们想要的结果。</li>
+<li><strong>compose</strong>：它可以接收多个独立的函数作为参数，然后将这些函数进行组合串联，最终返回一个“组合函数”。<code>pipe</code> 与 <code>compose</code> 的共同点是：都返回“组合函数”，区别则是执行的顺序不同，前者是从左向右执行，后者则是从右向左执行。</li>
+<li><strong>recursing 递归</strong> ：递归最大的好处就简化代码，他可以把一个复杂的问题用很简单的代码描述出来。注意：递归的精髓是描述问题，而这正是函数式编程的精髓。</li>
+<li><strong>currying</strong>：把一个函数的多个参数分解成多个函数， 然后把函数多层封装起来，每层函数都返回一个函数去接收下一个参数这样，可以简化函数的多个参数。在 C++中，这个很像 STL 中的 bind_1st 或是 bind2nd。</li>
+<li><strong>higher order function 高阶函数</strong>：所谓高阶函数就是函数当参数，把传入的函数做一个封装，然后返回这个封装函数。现象上就是函数传进传出，就像面向对象对象满天飞一样。</li>
+</ul>
+<h3 id="函数式编程的意义"><a href="#函数式编程的意义" class="headerlink" title="函数式编程的意义"></a>函数式编程的意义</h3><ul>
+<li><strong>代码简洁，开发快速</strong>：大量使用函数，减少了代码的重复，因此程序比较短，开发速度较快；</li>
+<li><strong>接近自然语言，易于理解</strong>：函数式编程的自由度很高，可以写出很接近自然语言的代码；</li>
+<li><strong>更方便的代码管理</strong>：不依赖、也不会改变外界的状态，只要给定输入参数，返回的结果必定相同；</li>
+<li><strong>更少的出错概率</strong>：因为每个函数都很小，而且相同输入，永远可以得到相同的输出，测试也很简单；</li>
+<li><strong>易于”并发编程”</strong>：因为它不修改变量，所以根本不存在”锁”线程的问题；</li>
+<li><strong>代码的热升级</strong>：基于没有副作用特点，只要保证接口不变，内部实现是外部无关的。</li>
+</ul>
+<h2 id="函数式编程，结语"><a href="#函数式编程，结语" class="headerlink" title="函数式编程，结语"></a>函数式编程，结语</h2><p>正如您在函数式编程中看到的，它希望使用小的（理想情况下是<strong>纯函数</strong>）函数来解决问题。这种方法也非常具有可 <code>扩展性</code>，并且函数可以 <code>重用</code>。</p>
+<p>没有更好和更坏的范式。有经验的开发人员，可以看到每种范式的优点，并为给定的问题选择相对更合适的。过程式编程，并不是说你不能使用函数；函数式编程也不会阻止你使用“类”。这些范式，只是以一种随代码增长而有益的方式，来帮助解决问题。</p>
+<h2 id="所参考系列文章"><a href="#所参考系列文章" class="headerlink" title="所参考系列文章"></a>所参考系列文章</h2><ul>
+<li><a href="https://coolshell.cn/articles/10822.html" target="_blank" rel="external">函数式编程 | 酷 壳 – CoolShell</a></li>
+<li><a href="https://www.ruanyifeng.com/blog/2012/04/functional_programming.html" target="_blank" rel="external">函数式编程初探 | 阮一峰的网络日志</a></li>
+<li><a href="https://juejin.cn/post/6844903936378273799" target="_blank" rel="external">简明 JavaScript 函数式编程——入门篇</a></li>
+<li><a href="https://scarletsky.github.io/2017/06/30/functional-programming-i-have-learned/" target="_blank" rel="external">我所了解的函数式编程 ｜ scarletsky</a></li>
+</ul>
+<h2 id="猜您可能感兴趣的文章"><a href="#猜您可能感兴趣的文章" class="headerlink" title="猜您可能感兴趣的文章"></a>猜您可能感兴趣的文章</h2><ul>
+<li><a href="https://forum.lovejade.cn/d/117-npm" target="_blank" rel="external">如何基于 npm 在安装时为依赖重命名？</a></li>
+<li><a href="https://forum.lovejade.cn/d/104-csrf" target="_blank" rel="external">如何防范 CSRF 跨站请求伪造？</a></li>
+<li><a href="https://forum.lovejade.cn/d/103-h5" target="_blank" rel="external">H5 拉起微信小程序流程解析</a></li>
+<li><a href="https://forum.lovejade.cn/d/2-flarum" target="_blank" rel="external">如何基于 Flarum 搭建一个优雅简洁论坛？</a></li>
+<li><a href="https://forum.lovejade.cn/d/28-maclinux-nodejs" target="_blank" rel="external">Mac、Linux 如何快速升级 Node.js 版本？</a></li>
+<li><a href="https://forum.lovejade.cn/d/62-mac-deno-path" target="_blank" rel="external">如何在 Mac 上安装 Deno，并加入至 PATH</a></li>
+<li><a href="https://forum.lovejade.cn/d/3-gmail-smtp" target="_blank" rel="external">如何启用 gmail 邮件的 SMTP 服务？</a></li>
+<li><a href="https://forum.lovejade.cn/d/54-linux" target="_blank" rel="external">Linux 系统如何设置开机启动脚本？</a></li>
+<li><a href="https://forum.lovejade.cn/d/50-flarum" target="_blank" rel="external">如何将 Flarum 论坛内容，主动推送至百度</a></li>
+<li><a href="https://forum.lovejade.cn/d/40-nodejs-mysql-80" target="_blank" rel="external">解决 Node.js 连接 MySQL 8.0 报错</a></li>
+<li><a href="https://forum.lovejade.cn/d/24-ghost-40" target="_blank" rel="external">如何快速升级 Ghost 博客至 4.0 版本？</a></li>
+<li><a href="https://forum.lovejade.cn/d/4-nginx" target="_blank" rel="external">如何为 nginx 配置多个域名服务？</a></li>
+</ul>
+	</div>
+		<reward-service></reward-service>
+    <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
+  <hr>
+  <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 2rem">
+    <img style="width: 256px;min-width: 200px !important" src="https://image.nicelinks.site/qrcode_jqx.jpg" alt="静晴轩 ~ 晚晴幽草轩">
+    <div style="padding: 0  1rem 1.5rem 1rem;text-align: center;line-height: 1.5rem"><strong>个人微信公众号</strong>：<a href="https://www.jeffjade.com/?utm_source=jeffjade.com">晚晴幽草轩</a>；名字取自：“天意怜幽草，人间重晚晴”。<br>专注互联网开发（Web 大前端、快应用、小程序），以及分享优质网站、AI 应用、效率工具、心得感悟等内容。
+    </div>
+  </div>
+<div></div></div>
+    <div id="cc-copyright" class="cc-content">
+    <h3>文档信息</h3>
+    <ul>
+      <li>版权声明：知识共享署名-非商业性使用-禁止演绎<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">（创意共享3.0许可证）</a></li>
+      <li>文章出处：<a href="http://www.jeffjade.com" title="晚晴幽草轩">晚晴幽草轩</a></li>
+      <li>发表日期：<time datetime="2022-06-08T13:21:00.000Z" itemprop="datePublished">2022-06-08</time></li>
+      <li>社交媒体：
+        <a href="http://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+        <a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+        <a href="https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+        <a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+      </li>
+    </ul>
+</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Front-End/">Front-End</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/JavaScript/">JavaScript</a><a href="/tags/Share/">Share</a>
+  </div>
+
+</div>
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://www.jeffjade.com/2022/06/08/244-2022-worth-learning-series-functional-programming/" data-title="2022，值得学习系列之：函数式编程 | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+	</article>
+	<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/" title="地表最强 Markdown 文本编辑工具——Obsidian">
+ <strong>下一篇：</strong><br> 
+ <span>地表最强 Markdown 文本编辑工具——Obsidian
+</span>
+</a>
+</div>
+
+</nav>
+	<hr>
+<div id="gitalk-container"></div>
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#与非函数式的区别"><span class="toc-number">1.</span> <span class="toc-text">与非函数式的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#过程式-vs-函数式"><span class="toc-number">2.</span> <span class="toc-text">过程式 vs 函数式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么函数式编程？"><span class="toc-number">3.</span> <span class="toc-text">什么函数式编程？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数式编程的特点"><span class="toc-number">4.</span> <span class="toc-text">函数式编程的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#函数是”第一等公民”"><span class="toc-number">4.1.</span> <span class="toc-text">函数是”第一等公民”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无状态和数据不可变"><span class="toc-number">4.2.</span> <span class="toc-text">无状态和数据不可变</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#没有”副作用”"><span class="toc-number">4.3.</span> <span class="toc-text">没有”副作用”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用透明"><span class="toc-number">4.4.</span> <span class="toc-text">引用透明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#惰性执行"><span class="toc-number">4.5.</span> <span class="toc-text">惰性执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#尾递归优化"><span class="toc-number">4.6.</span> <span class="toc-text">尾递归优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数式编程相关技术"><span class="toc-number">4.7.</span> <span class="toc-text">函数式编程相关技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数式编程的意义"><span class="toc-number">4.8.</span> <span class="toc-text">函数式编程的意义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数式编程，结语"><span class="toc-number">5.</span> <span class="toc-text">函数式编程，结语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#所参考系列文章"><span class="toc-number">6.</span> <span class="toc-text">所参考系列文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#猜您可能感兴趣的文章"><span class="toc-number">7.</span> <span class="toc-text">猜您可能感兴趣的文章</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="linkslist">
+	<p class="asidetitle">倾情款赠</p>
+	<div style="width:100%"><img style="width:100%" src="https://image.nicelinks.site/%E8%B5%9E%E8%B5%8F%E7%A0%81.jpeg?imageView2/1/w/800/h/800/interlace/1/ignore-error/1" alt="倾情捐赠"></div>
+</div>
+
+  <div class="wbfollow">
+	<p class="asidetitle">微博互粉</p>
+	<span class="sidebar-top-tip">亦可点击 Enter 键隐藏侧边栏</span>
+	<iframe width="100%" height="119" class="share_self" frameborder="0" scrolling="no" src="//widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3235949794&verifier=5c6bff53&colors=f0f0f0,fff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+</div>
+
+  <div class="widget-wrap linkslist">
+    <h3 class="widget-title asidetitle">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/06/08/244-2022-worth-learning-series-functional-programming/">2022，值得学习系列之：函数式编程</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/">地表最强 Markdown 文本编辑工具——Obsidian</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/">如何打造体验良好的本地全文搜索？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/14/241-how-to-make-google-asset-based-ads/">如何制作 Google 自适应广告素材？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/31/240-nicelinks-weekly-050/">优质网站同好者周刊（第 50 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/13/237-nicelinks-weekly-048/">优质网站同好者周刊（第 48 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/06/236-nicelinks-weekly-047/">优质网站同好者周刊（第 47 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/31/235-nicelinks-weekly-046/">优质网站同好者周刊（第 46 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/23/234-nicelinks-weekly-045/">优质网站同好者周刊（第 45 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/16/233-nicelinks-weekly-044/">优质网站同好者周刊（第 44 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/03/231-nicelinks-weekly-042/">优质网站同好者周刊（第 42 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/03/232-nicelinks-weekly-043/">优质网站同好者周刊（第 43 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/27/230-talk-about-tencent-cloud-cvm/">腾讯云服务器使用感受，及折腾笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="categorieslist">
+	<p class="asidetitle">云轩分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>58</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Health/" title="Health">Health<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Program/" title="Program">Program<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Read/" title="Read">Read<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Share/" title="Share">Share<sup>28</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Thought/" title="Thought">Thought<sup>25</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Toss/" title="Toss">Toss<sup>28</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>53</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/快应用/" title="快应用">快应用<sup>9</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">广而告之</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="https://nicelinks.site?utm_source=jeffjade.com&pid=sidebar-advertisement" target="_blank" title="倾城之链">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg" alt="倾城之链 | 小程序码">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">最新作品</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="http://nicelinks.site/?utm_source=jeffjade.com&pid=aside" target="_blank" title="倾城之链">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/nicelinks-site.jpg" alt="倾城之链">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">轩站热度</p>
+  <!-- 
+    <font id="run_time_long"></font><br>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span style='color:purple' id="busuanzi_value_site_pv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_site_uv">
+      本站访客人数 <span style='color:purple' id="busuanzi_value_site_uv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量 <span style='color:purple' id="busuanzi_value_page_pv"></span> 次
+    </span>
+   -->
+  <div id="clustrmaps-count"></div>
+  <p style="text-align:center">( Start counting from 07 / 13 / 2017 )</p>
+</div>
+
+  <div class="tagslist">
+	<p class="asidetitle">云轩标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Share/" title="Share">Share<sup>122</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>61</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thought/" title="Thought">Thought<sup>43</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Toss/" title="Toss">Toss<sup>38</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>32</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>30</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">云轩关注</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.williamlong.info/?utm_source=jeffjade.com" target="_blank" title="月光博客">月光博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://read.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="曼妙句子">曼妙句子</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://wiki.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="清风明月阁">清风明月阁</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://nice.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静晴轩别苑">静晴轩别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="幽居空谷轩">幽居空谷轩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="天意人间舫">天意人间舫</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://refined-x.com/?utm_source=jeffjade.com" target="_blank" title="前端路上">前端路上</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://creatorsdaily.com?utm_source=jeffjade.com" target="_blank" title="创造者日报">创造者日报</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://calpa.me/?utm_source=jeffjade.com" target="_blank" title="Calpa&#39;s Blog">Calpa&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jeffjade.com/nicelinks/#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">好书推荐</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="浪潮之巅">浪潮之巅</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="平凡的世界">平凡的世界</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A82" target="_blank" title="代码大全2">代码大全2</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 追求卓越，成功就会在不经意间 追上你！ <br>
+			As you think, so shall you become. </p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="https://nicelinks.site/redirect?url=https://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="mailto:yunjeff@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2022
+		
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+		
+		</p>
+</div></footer>
+    <script src="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js"></script>
+
+<script type="text/javascript">
+echo.init({
+  offset: 200,
+  throttle: 250,
+  unload: false,
+  callback: function (element, op) {}
+});
+
+$(document).ready(function(){
+  console.log('Welcome To %c晚晴幽草轩','font-size:2.113em;color: #2edfa3');
+
+  $("body").append('<quickapp-deeplink brand="vivo|Weixin|Mobile|OPPO|huawei" deeplink="https://hapjs.org/app/com.graceful.sentences/browser/pages/detail"></quickapp-deeplink>');
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  var openAside = function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  }
+  var closeAside = function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  }
+  c.click(openAside);
+  o.click(closeAside);
+
+  document.onkeydown = function(e){
+    // 兼容FF和IE和Opera
+    var theEvent = e || window.event;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    var isInputTextarea = document.activeElement.id === 'search' || document.activeElement.nodeName === "TEXTAREA"
+    if (code === 13 && !isInputTextarea) {
+        if( o.css('display') === 'none'){
+          openAside()
+        }else{
+          closeAside()
+        }
+        return false;
+    }
+    return true;
+  }
+
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          // close auto-close sidebar @17-11-07
+          // c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="//s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"><i class="fa fa-weixin"></i></a>',
+  '<a href="//service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});
+</script>
+
+
+
+
+
+<link href="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/css/jquery.fancybox.css" rel="stylesheet">
+<script async src="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/js/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      var srcVal = (this.src.indexOf('blank.gif') < 0) ? this.src : $(this).attr('data-echo')
+      $(this).wrap('<a href="' + srcVal + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+<!-- Analytics Begin -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-67901984-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-67901984-1');
+</script>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " https://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd0ed9bb72df3b2b32bdd2274981a7d07' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<!-- <script src="/js/totop.js"></script> -->
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+<!-- MathJax End -->
+
+<!-- Move totop.js From totop.ejs To Here@0309 -->
+<script src="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+(function($) {
+  if (!Object.assign) {
+    Object.defineProperty(Object, "assign", {
+      enumerable: false,
+      configurable: true,
+      writable: true,
+      value: function(target, firstSource) {
+        "use strict";
+        if (target === undefined || target === null)
+          throw new TypeError("Cannot convert first argument to object");
+        var to = Object(target);
+        for (var i = 1; i < arguments.length; i++) {
+          var nextSource = arguments[i];
+          if (nextSource === undefined || nextSource === null) continue;
+          var keysArray = Object.keys(Object(nextSource));
+          for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+            var nextKey = keysArray[nextIndex];
+            var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+            if (desc !== undefined && desc.enumerable) to[nextKey] = nextSource[nextKey];
+          }
+        }
+        return to;
+      }
+    });
+  }
+
+  if (document.getElementById('gitalk-container')) {
+    var gitalk = new Gitalk({
+      clientID: '4bc2d1424c7939471ad4',
+      clientSecret: 'b3dc888873f473405f79f7d9394888478ba55ca4',
+      repo: 'jadeblog-backups',
+      owner: 'nicejade',
+      admin: ['nicejade'],
+      id: md5(location.pathname),
+      distractionFreeMode: false
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  var clustrmapsCount = document.getElementById('clustrmaps-count')
+  if (clustrmapsCount) {
+    var clustrmapsScript = document.createElement('script')
+    clustrmapsScript.type = 'text/javascript'
+    clustrmapsScript.id = 'clustrmaps'
+    clustrmapsScript.src = '//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a'
+    clustrmapsCount.appendChild(clustrmapsScript)
+  }
+
+  var wbScript = document.createElement('script')
+  wbScript.type = 'text/javascript'
+  wbScript.async = true
+  wbScript.charset = "utf-8"
+  wbScript.src = "//tjs.sjs.sinajs.cn/open/api/js/wb.js"
+  document.body.appendChild(wbScript)
+
+  // 为 Baidu 设置自动推送@2018-08-08
+  
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.async = true;
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.async = true;
+      bp.src = '//push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  
+
+  // When to show the scroll link
+  // higher number = scroll link appears further down the page
+  var upperLimit = 1000;
+
+  // Our scroll link element
+  var scrollElem = $('#totop');
+
+  // Scroll to top speed
+  var scrollSpeed = 500;
+
+  // Show and hide the scroll to top link based on scroll position
+  scrollElem.hide();
+  $(window).scroll(function () {
+      var scrollTop = $(document).scrollTop();
+      if ( scrollTop > upperLimit ) {
+          $(scrollElem).stop().fadeTo(300, 1); // fade back in
+      }else{
+          $(scrollElem).stop().fadeTo(300, 0); // fade out
+      }
+  });
+
+  // Scroll to top animation on click
+  $(scrollElem).click(function(){
+      $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+  });
+})(jQuery);
+</script>
+
+<!-- Inject service-worker@2018-01-09 -->
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js", {scope: '/'})
+    .then(registration => console.log('SW Registration Success！Scope: ', registration.scope))
+    .catch(err => console.log('SW Registration Failed! Error: ', err));
+}
+</script>
+
+<!-- Inject Anchor.js @2018-01-14 -->
+<script type="text/javascript">
+function async(u, c) {
+  var d = document,
+    t = 'script',
+    o = d.createElement(t),
+    s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+
+async("https://fastly.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js", function(){
+  anchors.options = {
+    visible: 'hover',
+    placement: 'right'
+  }
+  anchors.add('#post h2, #post h3, #post h4');
+  anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+})
+</script>
+  </body>

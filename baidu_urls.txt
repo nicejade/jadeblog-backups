@@ -1,9 +1,10 @@
+https://www.jeffjade.com/2022/06/08/244-2022-worth-learning-series-functional-programming/
 https://www.jeffjade.com/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/
 https://www.jeffjade.com/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/
 https://www.jeffjade.com/2022/03/14/241-how-to-make-google-asset-based-ads/
 https://www.jeffjade.com/2022/01/31/240-nicelinks-weekly-050/
-https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/
 https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/
+https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/
 https://www.jeffjade.com/2022/01/13/237-nicelinks-weekly-048/
 https://www.jeffjade.com/2022/01/06/236-nicelinks-weekly-047/
 https://www.jeffjade.com/2021/12/31/235-nicelinks-weekly-046/
@@ -197,4 +198,3 @@ https://www.jeffjade.com/2015/04/25/2015-04-25-lua-skill/
 https://www.jeffjade.com/2015/04/24/2015-04-24-lua-tablesort/
 https://www.jeffjade.com/2015/04/22/2015-04-22-Android-error-codes/
 https://www.jeffjade.com/2015/04/19/2015-04-19-toss-bind-domainname/
-https://www.jeffjade.com/2015/04/16/2015-04-16-deal-url-special-char/
