@@ -107,7 +107,6 @@
     <div id="container">
       <div id="main" class="post" itemscope itemprop="blogPost">
   
-  <ad-block-remind></ad-block-remind>
 	<article itemprop="articleBody">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
@@ -792,6 +791,9 @@ echo.init({
   unload: false,
   callback: function (element, op) {}
 });
+
+var AdBlockRemind = document.createElement("ad-block-remind");
+document.body.appendChild(AdBlockRemind);
 
 $(document).ready(function(){
   console.log('Welcome To %c晚晴幽草轩','font-size:2.113em;color: #2edfa3');
