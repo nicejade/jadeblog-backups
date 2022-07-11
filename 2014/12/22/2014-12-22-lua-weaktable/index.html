@@ -63,6 +63,7 @@
     </script>
     <script src="https://fastly.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
     <script async src="https://fastly.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
+    <script src="//image.nicelinks.site/ad-block-remind-min.js?v0710"></script>
 </head></html>
   <body>
     <header>
@@ -154,6 +155,8 @@
 <h2 id="备忘录-memoize-函数："><a href="#备忘录-memoize-函数：" class="headerlink" title="备忘录(memoize)函数："></a>备忘录(memoize)函数：</h2><p>用“空间换时间”是一种通用的程序运行效率优化手段，比如：对于一个普通的Server，它接受到的请求中包含Lua代码，每当其收到请求后都会调用Lua的loadstring函数来动态解析请求中的Lua代码，如果这种操作过于频率，就会导致Server的执行效率下降。要解决该问题，我们可以将每次解析的结果缓存到一个table中，下次如果接收到相同的Lua代码，就不需要调用loadstirng来动态解析了，而是直接从table中获取解析后的函数直接执行即可。这样在有大量重复Lua代码的情况下，可以极大的提高Server的执行效率。反之，如果有相当一部分的Lua代码只是出现一次，那么再使用这种机制，就将会导致大量的内存资源被占用而得不到有效的释放。在这种情况下，如果使用弱引用表，不仅可以在一定程度上提升程序的运行效率，内存资源也会得到有效的释放。见如下代码：</p>
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">local</span> results = &#123;&#125;</div><div class="line"><span class="built_in">setmetatable</span>(results,&#123;__mode = <span class="string">"v"</span>&#125;) <span class="comment">--results表中的key是字符串形式的Lua代码</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">mem_loadstring</span><span class="params">(s)</span></span></div><div class="line">    <span class="keyword">local</span> res = results[s]</div><div class="line">    <span class="keyword">if</span> res == <span class="keyword">nil</span> <span class="keyword">then</span></div><div class="line">        res = <span class="built_in">assert</span>(<span class="built_in">loadstring</span>(s))</div><div class="line">        results[s] = res</div><div class="line">    <span class="keyword">end</span></div><div class="line">    <span class="keyword">return</span> res</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
 	</div>
+	  <reward-service></reward-service>
+	  <ad-block-remind></ad-block-remind>
 		<reward-service></reward-service>
     <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
   <hr>

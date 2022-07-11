@@ -66,6 +66,7 @@
     </script>
     <script src="https://fastly.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
     <script async src="https://fastly.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
+    <script src="//image.nicelinks.site/ad-block-remind-min.js?v0710"></script>
 </head></html>
   <body>
     <header>
@@ -157,6 +158,8 @@
 <p>[代码] 进入设置界面</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 进入无线网络设置界面（其它可以举一反三） </span></div><div class="line">Intent intent = <span class="keyword">new</span> Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS);</div><div class="line">startActivityForResult(intent, <span class="number">0</span>);</div></pre></td></tr></table></figure>
 	</div>
+	  <reward-service></reward-service>
+	  <ad-block-remind></ad-block-remind>
 		<reward-service></reward-service>
     <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
   <hr>

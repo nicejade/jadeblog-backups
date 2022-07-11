@@ -63,6 +63,7 @@
     </script>
     <script src="https://fastly.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
     <script async src="https://fastly.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
+    <script src="//image.nicelinks.site/ad-block-remind-min.js?v0710"></script>
 </head></html>
   <body>
     <header>
@@ -165,6 +166,8 @@
 <p>通过核心工作者数目(corePoolSize) 和 最大工作者数目(maximumPoolSize) 来确定如何处理任务。如果当前工作者线程数目<br>小于核心工作者数目，则创建一个工作者线程执行这个任务。否则，将这个任务放入待处理队列。如果入队失败，再看看当前工作<br>者数目是不是小于最大工作者数目，如果小于，则创建工作者线程执行这个任务。否则，拒绝执行这个任务。</p>
 <p>另外，如果待处理队列中没有任务要处理，并且工作者线程数目超过了核心工作者数目，那么，需要减少工作者线程数目。</p>
 	</div>
+	  <reward-service></reward-service>
+	  <ad-block-remind></ad-block-remind>
 		<reward-service></reward-service>
     <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
   <hr>
