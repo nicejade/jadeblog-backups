@@ -1,3 +1,4 @@
+https://www.jeffjade.com/2022/07/31/245-2022-how-to-learn-front-end-development-elegantly/
 https://www.jeffjade.com/2022/06/08/244-2022-worth-learning-series-functional-programming/
 https://www.jeffjade.com/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/
 https://www.jeffjade.com/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/
@@ -154,8 +155,8 @@ https://www.jeffjade.com/2016/01/10/2016-01-10-javacript-setTimeout/
 https://www.jeffjade.com/2016/01/01/2016-01-01-movie2015/
 https://www.jeffjade.com/2015/12/26/2015-12-26-sum_up-in-the-end-of-year/
 https://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/
-https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/
 https://www.jeffjade.com/2015/11/25/2015-11-31-jQuery-vs-javaScript/
+https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/
 https://www.jeffjade.com/2015/11/14/2015-11-14-css-achieve-horizontal_vertical_center/
 https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/
 https://www.jeffjade.com/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/
@@ -170,8 +171,8 @@ https://www.jeffjade.com/2015/10/04/2015-10-03-use-jquery-better/
 https://www.jeffjade.com/2015/09/25/2015-09-25-js-array/
 https://www.jeffjade.com/2015/09/07/2015-09-07-jadetodos/
 https://www.jeffjade.com/2015/09/06/2015-09-06-ios8-safari-jitbug-record/
-https://www.jeffjade.com/2015/08/28/2015-08-28-Write-Morkdown/
 https://www.jeffjade.com/2015/08/28/2015-09-02-js-string-compare/
+https://www.jeffjade.com/2015/08/28/2015-08-28-Write-Morkdown/
 https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/
 https://www.jeffjade.com/2015/08/03/2015-08-03-javascript-this/
 https://www.jeffjade.com/2015/07/29/2015-07-29-mac-musthave-software/
@@ -197,4 +198,3 @@ https://www.jeffjade.com/2015/04/26/2015-04-26-cherish-wangguozhen/
 https://www.jeffjade.com/2015/04/25/2015-04-25-lua-skill/
 https://www.jeffjade.com/2015/04/24/2015-04-24-lua-tablesort/
 https://www.jeffjade.com/2015/04/22/2015-04-22-Android-error-codes/
-https://www.jeffjade.com/2015/04/19/2015-04-19-toss-bind-domainname/
