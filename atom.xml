@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2022-08-01T05:25:02.826Z</updated>
+  <updated>2022-08-01T05:44:02.409Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,10 +20,12 @@
     <link href="https://www.jeffjade.com/2022/07/31/245-2022-how-to-learn-front-end-development-elegantly/"/>
     <id>https://www.jeffjade.com/2022/07/31/245-2022-how-to-learn-front-end-development-elegantly/</id>
     <published>2022-07-31T13:21:00.000Z</published>
-    <updated>2022-08-01T05:25:02.826Z</updated>
+    <updated>2022-08-01T05:44:02.409Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前端发展史及学习方法论"><a href="#前端发展史及学习方法论" class="headerlink" title="前端发展史及学习方法论"></a>前端发展史及学习方法论</h2><p>豆豆的小说《遥远的救世主》中提到：“<strong>有道无术，术尚可求，有术无道，止于术</strong>”，深以为然。道是方向，术是法则；认清事物的本源、把握事物之规律，有助于后续更好掌握知识、技能，从而解决需求和问题。故而，本篇分享，主要围绕学习方向、如何学习等方面进行。托尔斯泰曾说：“多么伟大的作家，也不过就是在书写他个人的片面而已”，意识流派相关（技术）分享亦是如此，望朋友们带着思考，辩证看待，吸取觉得有用部分即可。</p>
+<a id="more"></a>
 <p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/前端发展史及学习方法论.png" alt="前端发展史及学习方法论"></p>
+<p>备注：本文写于 2022/07/10 ~ 2022/07/21〔深圳福田〕；起源于内部分享，首发于最新基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的网站：<a href="https://wiki.lovejade.cn/zh/front-end-heterospace" target="_blank" rel="external">前端异空间｜ 清风明月阁</a>。</p>
 <h3 id="前端技术可以用来做什么？"><a href="#前端技术可以用来做什么？" class="headerlink" title="前端技术可以用来做什么？"></a>前端技术可以用来做什么？</h3><p>原本并无前端，写的人多了，也便有了这前端；而如今，它或也被唤为：<strong>大前端</strong>。前端起源初衷，原本只是方便科学家看文档、传论文，而诞生的静态网页（1991）。那么，<strong>前端技术现而今可以用来做什么</strong>？时至今日，历经近 30 年巨变，前端技术栈，可以涉及的领域越来愈多：</p>
 <ol>
 <li>移动端兴起，所带来的移动端领域（Web App）；</li>
@@ -204,7 +206,6 @@
 </tr>
 </tbody>
 </table>
-<p>备注：写于 2022/07/10 ~ 2022/07/21，〔深圳福田〕；首发于最新基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的网站：<a href="https://wiki.lovejade.cn/zh/front-end-heterospace" target="_blank" rel="external">前端异空间｜ 清风明月阁</a>。</p>
 <h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h2><ul>
 <li><a href="https://quickapp.lovejade.cn/how-to-build-quality-web-application-amp/" target="_blank" rel="external">微话搭建优质 Web 应用其二：AMP 篇</a></li>
 <li><a href="https://quickapp.lovejade.cn/2022-worth-learning-series-functional-programming/" target="_blank" rel="external">2022，值得学习系列之：函数式编程</a></li>
