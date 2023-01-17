@@ -20,12 +20,10 @@
 <meta property="og:url" content="https://www.jeffjade.com/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/index.html">
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="倾城之链是基于 Vue2 所构建的单页面应用（SPA），这很不利于 SEO，尤其是之于国内搜索引擎。早在项目之初，采取 SSR 方案对代码侵入性高，也不大方便以 SSG 方案处理；于是乎，便在服务端针对搜索引擎爬虫返回预渲染结果，从而做 SEO 优化；本文就此方案做简单分享。">
-<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/google-ads/nicelinks-ads-08.jpg">
-<meta property="og:updated_time" content="2022-11-15T15:19:48.839Z">
+<meta property="og:updated_time" content="2023-01-17T13:45:30.430Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何基于 Prerender 为 SPA 做 SEO 优化">
 <meta name="twitter:description" content="倾城之链是基于 Vue2 所构建的单页面应用（SPA），这很不利于 SEO，尤其是之于国内搜索引擎。早在项目之初，采取 SSR 方案对代码侵入性高，也不大方便以 SSG 方案处理；于是乎，便在服务端针对搜索引擎爬虫返回预渲染结果，从而做 SEO 优化；本文就此方案做简单分享。">
-<meta name="twitter:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/google-ads/nicelinks-ads-08.jpg">
 <meta name="twitter:creator" content="@nicejadeyang">
 
     
@@ -138,9 +136,8 @@
 
 		<p><a href="https://nicelinks.site" target="_blank" rel="external">倾城之链</a> 是基于 Vue2 所构建的单页面应用（SPA），这很不利于 SEO，尤其是之于国内搜索引擎。早在项目之初，采取 SSR 方案对代码侵入性高，也不大方便以 SSG 方案处理；于是乎，便在服务端针对搜索引擎爬虫返回预渲染结果，从而做 SEO 优化；本文就此方案做简单分享。</p>
 <a id="more"></a>
-<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/google-ads/nicelinks-ads-08.jpg" alt="如何基于 Prerender 为 SPA 做 SEO 优化"></p>
 <h2 id="Prerender-预渲染原理"><a href="#Prerender-预渲染原理" class="headerlink" title="Prerender 预渲染原理"></a>Prerender 预渲染原理</h2><p><code>prerender</code> 项目由 <a href="https://nicelinks.site/post/62e60030bd6b821eb12244e2" target="_blank" rel="external">Prerender.io</a> 出品（其内部基于 Headless Chrome，与 <a href="https://nicelinks.site/post/625c3735ac29ce06470af877" target="_blank" rel="external">Google Puppeteer</a> 类似），也可以使用 <a href="https://nicelinks.site/redirect?url=https://prerender.io/" target="_blank" rel="external">Prerender.io</a> 提供的服务；它旨在加快向搜索爬虫提供内容的速度，从而提高您的 SEO 分数。只需注册、登录、按照说明进行 Nginx 配置即可；相比自己部署的 <code>prerender</code> 服务，有更快的速度、更多可选项设置、强大的仪表盘、缓存管理器以及其他缓存相关活动操作。</p>
-<p><a href="https://github.com/prerender/prerender" target="_blank" rel="external">prerender</a> 的原理是，配置 nginx，判断出是爬虫来访时，先将请求页面地址发送给 prerender 服务，由 prerender 服务渲染出页面内容，再将页面内容返回给爬虫。</p>
+<p> <a href="https://github.com/prerender/prerender" target="_blank" rel="external">prerender</a> 的原理是，配置 nginx，判断出是爬虫来访时，先将请求页面地址发送给 prerender 服务，由 prerender 服务渲染出页面内容，再将页面内容返回给爬虫。</p>
 <blockquote>
 <p>Prerender is a node server that uses Headless Chrome to render HTML, screenshots, PDFs, and HAR files out of any web page. The Prerender server listens for an http request, takes the URL and loads it in Headless Chrome, waits for the page to finish loading by waiting for the network to be idle, and then returns your content.</p>
 </blockquote>
@@ -158,10 +155,11 @@
 <p>2022-11-12T05:02:49.270Z Starting Prerender<br>2022-11-12T05:02:49.272Z Starting Chrome<br>2022-11-12T05:02:49.279Z Prerender server accepting requests on port 3000<br>2022-11-12T05:02:49.292Z Chrome connection closed… restarting Chrome<br>2022-11-12T05:02:49.293Z Chrome died immediately after restart… stopping Prerender</p>
 </blockquote>
 <p>需要首先检查 Prerender 配置是否正确，配置示例如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> server = prerender(&#123;</div><div class="line">  <span class="attr">chromeFlags</span>: [</div><div class="line">    <span class="string">'--no-sandbox'</span>,</div><div class="line">    <span class="string">'--headless'</span>,</div><div class="line">    <span class="string">'--disable-gpu'</span>,</div><div class="line">    <span class="string">'--remote-debugging-port=9222'</span>,</div><div class="line">    <span class="string">'--hide-scrollbars'</span>,</div><div class="line">  ],</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> server = prerender(&#123;</div><div class="line">    <span class="attr">chromeFlags</span>: [</div><div class="line">        <span class="string">'--no-sandbox'</span>,</div><div class="line">        <span class="string">'--headless'</span>,</div><div class="line">        <span class="string">'--disable-gpu'</span>,</div><div class="line">        <span class="string">'--remote-debugging-port=9222'</span>,</div><div class="line">        <span class="string">'--hide-scrollbars'</span>,</div><div class="line">    ],</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>假如确定配置的话，尝试使用 <code>sudo</code> 权限再次运行，重新修改 <code>chromeLocation</code> 路径（在腾讯云上遇到过此问题，用此办法得以解决）代码示例如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> server = prerender(&#123;</div><div class="line">        <span class="attr">chromeLocation</span>: <span class="string">'/usr/bin/google-chrome-stable'</span>,</div><div class="line">        <span class="attr">chromeFlags</span>: [</div><div class="line">                <span class="string">'--no-sandbox'</span>,</div><div class="line">                <span class="string">'--headless'</span>,</div><div class="line">                <span class="string">'--disable-gpu'</span>,</div><div class="line">                <span class="string">'--remote-debugging-port=9222'</span>,</div><div class="line">                <span class="string">'--hide-scrollbars'</span>,</div><div class="line">        ],</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>2022 年 11 月 10 日写于〔深圳福田〕</p>
+<p>需要补充说明的是，基于 Prerender 为 SPA 做 SEO 优化，即需要在服务器端 运行 <code>google chrome</code> ，以获得真实渲染呈现的  HTML；如果将这个 Prerender 服务与其他服务混搭与统一服务器，受抓取频率、服务器配置 等影响，或可能引发 CPU 、内存占用过多问题；如有条件，可分开部署。服务一旦搭建，或可能被别有用心之人利用，需要提前防范；在 <a href="https://github.com/nicejade/prerender-spa-server" target="_blank" rel="external">prerender-spa-server</a> 最新代码中，增加了域名白名单限制。 <a href="https://nicelinks.site" target="_blank" rel="external">倾城之链</a> 基于这种方案改善 SEO，通过近一个月观测，效果还可以。以上，大致是全部内容；如果您感兴趣，欢请留言评论。</p>
+<p>2022 年 11 月 10 日写于〔深圳福田〕；2022 年 12 月 08 日更新。</p>
 <h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h2><ul>
 <li><a href="https://forum.lovejade.cn/d/237-deno" target="_blank" rel="external">如何基于 Deno 做持久化定时任务？</a></li>
 <li><a href="https://forum.lovejade.cn/d/226-npm-scope" target="_blank" rel="external">NPM 如何发布和使用带范围（scope）的包？</a></li>
@@ -229,6 +227,14 @@
 	</article>
 	<nav class="article-nav clearfix">
  
+ <div class="prev">
+ <a href="/2022/12/12/249-emerging-technologies-in-the-past-decade/" title="近十年新兴行业技术，及简单介绍">
+  <strong>上一篇：</strong><br>
+  <span>
+  近十年新兴行业技术，及简单介绍</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2022/10/31/246-nicelinks-in-2022/" title="2022，「倾城之链」运营第 6 年感记">
@@ -272,6 +278,14 @@
       <ul>
         
           <li>
+            <a href="/2022/12/30/249-webassembly-for-web/">为什么说 WebAssembly 让 Web 的未来更光明？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/12/249-emerging-technologies-in-the-past-decade/">近十年新兴行业技术，及简单介绍</a>
+          </li>
+        
+          <li>
             <a href="/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/">如何基于 Prerender 为 SPA 做 SEO 优化</a>
           </li>
         
@@ -304,11 +318,11 @@
           </li>
         
           <li>
-            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
+            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
           </li>
         
           <li>
-            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
+            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
           </li>
         
           <li>
@@ -321,14 +335,6 @@
         
           <li>
             <a href="/2021/12/31/235-nicelinks-weekly-046/">优质网站同好者周刊（第 46 期）- 倾城之链</a>
-          </li>
-        
-          <li>
-            <a href="/2021/12/23/234-nicelinks-weekly-045/">优质网站同好者周刊（第 45 期）- 倾城之链</a>
-          </li>
-        
-          <li>
-            <a href="/2021/12/16/233-nicelinks-weekly-044/">优质网站同好者周刊（第 44 期）- 倾城之链</a>
           </li>
         
       </ul>
@@ -344,7 +350,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>59</sup></a></li>
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>60</sup></a></li>
 		  
 		
 		  
@@ -364,7 +370,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>19</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>20</sup></a></li>
 		  
 		
 		  
@@ -431,7 +437,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>125</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>126</sup></a></li>
 			
 		
 			
@@ -479,7 +485,7 @@
 			
 		
 			
-				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>8</sup></a></li>
+				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>9</sup></a></li>
 			
 		
 			
@@ -487,11 +493,11 @@
 			
 		
 			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
 			
 		
 			
@@ -503,10 +509,6 @@
 			
 		
 			
-				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
 			
 		
@@ -515,7 +517,15 @@
 			
 		
 			
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>4</sup></a></li>
 			
 		
 			
@@ -523,11 +533,7 @@
 			
 		
 			
-				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
 			
 		
 			
@@ -539,15 +545,15 @@
 			
 		
 			
-				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Read/" title="Read">Read<sup>3</sup></a></li>
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
 			
 		
 			
@@ -555,11 +561,11 @@
 			
 		
 			
-				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
 			
 		
 		</ul>
@@ -748,7 +754,7 @@
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2022
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2023
 		
 			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
 		

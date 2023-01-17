@@ -7,8 +7,16 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/2022/10/31/246-nicelinks-in-2022/</loc>
-        <lastmod>2022-11-15T15:31:11.694Z</lastmod>
+        <loc>https://www.jeffjade.com/2022/12/30/249-webassembly-for-web/</loc>
+        <lastmod>2023-01-17T13:55:21.141Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2022/12/12/249-emerging-technologies-in-the-past-decade/</loc>
+        <lastmod>2023-01-17T13:51:40.959Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +24,15 @@
 
     <url>
         <loc>https://www.jeffjade.com/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/</loc>
-        <lastmod>2022-11-15T15:19:48.839Z</lastmod>
+        <lastmod>2023-01-17T13:45:30.430Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/2022/10/31/246-nicelinks-in-2022/</loc>
+        <lastmod>2022-11-15T15:31:11.694Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
