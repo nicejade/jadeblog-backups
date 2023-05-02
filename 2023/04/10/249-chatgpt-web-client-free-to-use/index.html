@@ -1,0 +1,1109 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+
+    <title>素问智聊斋，非官方 ChatGPT 在线客户端，免费可用 | 晚晴幽草轩</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="晚晴幽草轩轩主">
+    
+    <meta name="theme-color" content="#fffffb">
+    <meta name="baidu-site-verification" content="PKEtLPjO56">
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net/">
+
+    <meta name="keywords" content="ChatGPT">
+    <meta name="description" content="素问智聊斋，非官方 ChatGPT 在线客户端，旨在提供更便捷的 ChatGPT 访问体验；它基于非官方 ChatGPT API 、 Svelte 、 TailwindCSS 、 Vite 和 NodeJS 所搭建，无需账号，零配置，即可与 ChatGPT 畅聊；支持自定义 OPENAI API KEY。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="素问智聊斋，非官方 ChatGPT 在线客户端，免费可用">
+<meta property="og:url" content="https://www.jeffjade.com/2023/04/10/249-chatgpt-web-client-free-to-use/index.html">
+<meta property="og:site_name" content="晚晴幽草轩">
+<meta property="og:description" content="素问智聊斋，非官方 ChatGPT 在线客户端，旨在提供更便捷的 ChatGPT 访问体验；它基于非官方 ChatGPT API 、 Svelte 、 TailwindCSS 、 Vite 和 NodeJS 所搭建，无需账号，零配置，即可与 ChatGPT 畅聊；支持自定义 OPENAI API KEY。">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/chatgpt-client.png">
+<meta property="og:updated_time" content="2023-05-02T05:46:24.270Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="素问智聊斋，非官方 ChatGPT 在线客户端，免费可用">
+<meta name="twitter:description" content="素问智聊斋，非官方 ChatGPT 在线客户端，旨在提供更便捷的 ChatGPT 访问体验；它基于非官方 ChatGPT API 、 Svelte 、 TailwindCSS 、 Vite 和 NodeJS 所搭建，无需账号，零配置，即可与 ChatGPT 畅聊；支持自定义 OPENAI API KEY。">
+<meta name="twitter:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/chatgpt-client.png">
+<meta name="twitter:creator" content="@nicejadeyang">
+
+    
+    <link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/favicons/favicon.ico">
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6">
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://image.nicelinks.site">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+
+    <link href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css">
+    <link rel="stylesheet" href="/css/style.css?190623">
+
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script">
+
+    <link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script">
+    <script src="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script data-ad-client="ca-pub-8586652723015758" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8586652723015758",
+        enable_page_level_ads: true
+      });
+    </script>
+    <script src="https://fastly.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
+    <script async src="https://fastly.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
+    <script src="//image.nicelinks.site/ad-block-remind-min.js?v0710"></script>
+</head></html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1>
+				<h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/" class="">Home</a></li>
+					
+						<li><a href="/nicelinks" class="">Links</a></li>
+					
+						<li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li>
+					
+						<li><a href="/archives" class="">Archives</a></li>
+					
+						<li><a href="/about-me" class="">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search">
+						<input type="hidden" name="q" value="site:www.jeffjade.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2023/04/10/249-chatgpt-web-client-free-to-use/" class="title=&quot;素问智聊斋，非官方" chatgpt itemprop="url">素问智聊斋，非官方 ChatGPT 在线客户端，免费可用</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2023-04-10T12:20:00.000Z" itemprop="datePublished"> 发表于 2023-04-10</time>
+
+  </p>
+</header>
+	<div class="article-content">
+		
+    <div class="bottom-gg-module">
+  <div class="jade-gg-block">
+    <a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank">
+      <img class="width-block-wrap" style="width: 100%;max-height: 200px" src="https://image.nicelinks.site/倾城之链-Banner.png" alt="倾城之链">
+    </a>
+    </div>
+  </div>
+
+		<p><a href="https://chatgpt.nicelinks.site/" target="_blank" rel="external">素问智聊斋</a>，非官方 ChatGPT 在线客户端，旨在提供更便捷的 <a href="https://nicelinks.site/post/6391e22878b7a1291995ff86" target="_blank" rel="external">ChatGPT</a> 访问体验；它基于非官方 <a href="https://github.com/transitive-bullshit/chatgpt-api" target="_blank" rel="external">ChatGPT API</a> 、 <a href="https://nicelinks.site/post/62a9c2ad90509e23cea772c0" target="_blank" rel="external">Svelte</a> 、 <a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">TailwindCSS</a> 、 <a href="https://nicelinks.site/post/6010e1b10c71de1fb957b64e" target="_blank" rel="external">Vite</a> 和 NodeJS 所搭建，无需账号，零配置，即可与 ChatGPT 畅聊；支持自定义 OPENAI API KEY。</p>
+<a id="more"></a>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/chatgpt-client.png" alt="素问智聊斋，非官方 ChatGPT 在线客户端"></p>
+<h2 id="目标与哲学"><a href="#目标与哲学" class="headerlink" title="目标与哲学"></a>目标与哲学</h2><p> <a href="https://nicelinks.site/post/6391e22878b7a1291995ff86" target="_blank" rel="external">OpenAI</a> 于 2022 年 11 月推出的超级对话模型 <strong>ChatGPT</strong>， 受到来自世界各地的认可和赞誉，令人印象深刻。然而，由于一些原因，如果没有正确搭建相应的环境（🪜），ChatGPT 在部分地区就无法正常使用。鉴于此，搭建了这个服务，以便用户能够方便地使用 ChatGPT。当然，条件允许您可前往 OpenAI 官网上注册、登录、申请专属 <code>API KEY</code>。此外，为了保障用户的数据安全，本服务的操作过程中不会存储任何使用者的数据，因此可以放心使用（备注：这段介绍有使用本服务加以润色）。</p>
+<h2 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h2><ul>
+<li>没有注册 Open AI 账号，导致无法使用  ChatGPT 时；</li>
+<li>因为网络环境限制，无法正常使用 ChatGPT 时；</li>
+<li>具备账号，想让远方亲人、朋友快速体验 ChatGPT；</li>
+</ul>
+<p>补充说明：承诺后台不会保存任何数据；基于 API KEY 发起的对话内容，会同步到对应账号；如果您习惯使用桌面客户端，类似项目有： <a href="https://nicelinks.site/redirect?url=https://github.com/lencx/ChatGPT" target="_blank" rel="external">lencx/ChatGPT</a> 。</p>
+<h2 id="诞生初衷"><a href="#诞生初衷" class="headerlink" title="诞生初衷"></a>诞生初衷</h2><p>最原始的动机，是因为：以上两点适用场景所对应的诉求，我觉得都需要。但，这并不足以缘起这个项目，更详细的阐述如下：</p>
+<p>作为颇爱折腾的技术人员，ChatGPT 自然是要体验；有请时在美国的朋友，帮着注册®️了账号；然而，蛮多时候即便采用科学上网，设备却无法成功登陆 <a href="https://chat.openai.com/chat" target="_blank" rel="external">ChatGPT 官网地址</a> 。恰逢一个契机——帮朋友写几行关于 ChatGPT 的示例；当痛点（Motivation：动机）碰上可执行性（Ability：能力），外加适当的 <strong>触发条件</strong> （Trigger），福格行为模型（BJ Foog’s Behaviour Model）已全部满足，于是乎， <a href="https://chatgpt.nicelinks.site/" target="_blank" rel="external">素问智聊斋</a> 就有了诞生的充足理由。</p>
+<h2 id="命名来源"><a href="#命名来源" class="headerlink" title="命名来源"></a>命名来源</h2><p>早在 <a href="https://forum.lovejade.cn/d/1" target="_blank" rel="external">关于“悠然宜想亭”的由来，以及未来</a> 一文提及，对于网站取名多是五个字；或是兴趣的原因，其后缀带有 <a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a> 其中一个；其中大部分已被使用；因为「Chat」的应为对应的是「对话、聊天」；于是，「斋」字就这么定下；AI 对应智能，所以「智聊」也就应景而生。</p>
+<p>原本命名为「智聊问异斋」，后觉不妥，略阅资料，遂修改为 <code>素问智聊斋</code>；素问：最早或于《黄帝内经》；釋名：“「素者，本也；問者，黃帝問於岐伯也」”。另有解释为：“ <strong>即问本，探索人与自然的根本性问题</strong> ”。当想 ChatGPT 说：“解释下「素问」”，它给出以下解释：</p>
+<blockquote>
+<p>「素问」是一种中国古代哲学思想，它强调对本质的探究。它的核心思想是：任何事物都有其本质，而且这个本质不受时间和空间的束缚，所以要理解它，就必须通过探究本质来探索事物的真相。</p>
+</blockquote>
+<h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p>前端采用了 <a href="https://nicelinks.site/post/62a9c2ad90509e23cea772c0" target="_blank" rel="external">Svelte</a> 、 <a href="https://nicelinks.site/post/6278fdeaac00ce3f9b11a8ef" target="_blank" rel="external">TypeScript</a> 、 <a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">TailwindCSS</a> 、 <a href="https://nicelinks.site/post/617138035e35cd063077cefc" target="_blank" rel="external">Flowbite</a> 、 <a href="https://nicelinks.site/post/642598ca2d6c9c63445c8862" target="_blank" rel="external">MDSvex</a> 、 <a href="https://nicelinks.site/post/6010e1b10c71de1fb957b64e" target="_blank" rel="external">Vite</a> 、 等流行技术栈，而后台则采用 <a href="https://nicelinks.site/post/6400b3eafe46ca437e0ac36e" target="_blank" rel="external">Fastify</a> 框架；在服务器上，则基于 <a href="https://nicelinks.site/post/6339a6aa35a9c117dacf2363" target="_blank" rel="external">Nginx</a> 、 <a href="https://nicelinks.site/post/62bc60e90c61c703d7747590" target="_blank" rel="external">pm2</a> 进行部署；其中 Svelte、TailwindCSS、MDSvex 等工具，极大提升了编写代码的舒适度，令人青睐有加。</p>
+<h2 id="思考感悟"><a href="#思考感悟" class="headerlink" title="思考感悟"></a>思考感悟</h2><p>关于 ChatGPT（或其他 AI 产品），相信接触过它的人们，或多或少都会有自己的感受；目前为止，吾有以下几点看法：</p>
+<ul>
+<li>类似 ChatGPT 这样的 <a href="https://nicelinks.site/tags/AI" target="_blank" rel="external">AI</a> 产品，必将像如今的手机一般，成为绝大部分人类生活必需品，这很难以人类意志为转移；</li>
+<li>毕竟是工具，使用乃至产生依赖，倒无不可；但也不能荒废自身，我辈仍须保持<strong>深度学习</strong>习惯，及提高学习能力；</li>
+<li>AI 会进而加剧人与人之间的差异；因为不喜欢折腾或探究新鲜事物的人，很难尽早去接触它，而是等<strong>时代浪潮</strong>拍打过来。</li>
+</ul>
+<h2 id="未来规划"><a href="#未来规划" class="headerlink" title="未来规划"></a>未来规划</h2><p>新注册 Open AI 账号，为 API Key 调用费用赠送 <code>18$</code>，为期三个月；4 月 1 日过期之后，为使得服务能够正常运行，有继续购买它的服务。ChatGPT 的价格为：<code>0.002</code> 美元 1000 个 tokens（约为 750 个英文单词），GPT4 则更贵一些；当使用费用超过所能承受的能力，外加服务器使用费用，或可能考虑植入定量商业化措施。现如今，如果您认为 <a href="https://chatgpt.nicelinks.site/" target="_blank" rel="external">素问智聊斋</a> 对您有一定价值，可以考虑为发起 <a href="https://chatgpt.nicelinks.site/#/sponsor" target="_blank" rel="external">赞助</a> 。</p>
+<h2 id="其他作品"><a href="#其他作品" class="headerlink" title="其他作品"></a>其他作品</h2><ul>
+<li><a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a></li>
+<li><a href="https://read.lovejade.cn/" target="_blank" rel="external">曼妙句子</a></li>
+<li><a href="https://share.lovejade.cn/" target="_blank" rel="external">玉桃文飨轩</a></li>
+<li><a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a></li>
+<li><a href="https://quickapp.lovejade.cn/" target="_blank" rel="external">静轩之别苑</a></li>
+<li><a href="https://www.jeffjade.com/">晚晴幽草轩</a></li>
+</ul>
+<p>以上介绍内容，部分使用 ChatGPT 加以<strong>润色</strong> 。截止目前，它可以协助人类，已经很多，诸如学术论文、内容创作、翻译、数据分析、研究咨询、简历和求职信、广告文案、编写小说、个人陈述、 <a href="https://nicelinks.site/tags/SEO" target="_blank" rel="external">SEO</a> 优化等等，如果想让它更好帮助到您，可以移步 <a href="https://nicelinks.site/redirect?url=https://github.com/PlexPt/awesome-chatgpt-prompts-zh" target="_blank" rel="external">ChatGPT 中文调教指南</a> ，学习怎么让它在不同场景，更好听理解您的指令。</p>
+<h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a><strong>您可能感兴趣的文章</strong></h2><ul>
+<li><a href="https://forum.lovejade.cn/d/248-webassembly-web" target="_blank" rel="external">为什么说 WebAssembly 让 Web 的未来更光明？</a></li>
+<li><a href="https://forum.lovejade.cn/d/226-npm-scope" target="_blank" rel="external">NPM 如何发布和使用带范围（scope）的包？</a></li>
+<li><a href="https://forum.lovejade.cn/d/225-espanso" target="_blank" rel="external">如何基于 Espanso 提高打字效率，提升幸福感？</a></li>
+<li><a href="https://forum.lovejade.cn/d/158-pc" target="_blank" rel="external">如何更提升各类网站 PC 端访问体验？</a></li>
+<li><a href="https://www.jeffjade.com/2017/01/23/118-chrome_awesome_plug-in/">Awesome Chrome 插件集锦</a></li>
+<li><a href="https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/">Vimium 让您的 Chrome 起飞</a></li>
+<li><a href="https://www.jeffjade.com/2016/03/17/2016-03-17-jade-tools/">那些所倚靠的利器记载</a></li>
+<li><a href="https://www.jeffjade.com/2016/03/11/2016-03-11-autohotkey/#">Win 下最爱效率神器: AutoHotKey</a></li>
+<li><a href="https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/">Win 下必备神器之 Cmder</a></li>
+<li><a href="https://www.jeffjade.com/2016/03/03/2016-03-02-how-to-use-atom/">新编码神器 Atom 使用纪要</a></li>
+<li><a href="http://www.cnblogs.com/jadeboy/p/4165449.html" target="_blank" rel="external">sublime text 下的 Markdown 写作</a></li>
+<li><a href="https://www.jeffjade.com/2015/08/28/2015-08-28-Write-Morkdown/">SublimeText 下写作利器之 MarkdownEditing</a></li>
+<li><a href="https://www.jeffjade.com/2015/07/29/2015-07-29-mac-musthave-software/">Mac 必备软件渐集之 ZSH－终极 Shell</a></li>
+</ul>
+	</div>
+		<reward-service></reward-service>
+    <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
+  <hr>
+  <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 2rem">
+    <img style="width: 256px;min-width: 200px !important" src="https://image.nicelinks.site/qrcode_jqx.jpg" alt="静晴轩 ~ 晚晴幽草轩">
+    <div style="padding: 0  1rem 1.5rem 1rem;text-align: center;line-height: 1.5rem"><strong>个人微信公众号</strong>：<a href="https://www.jeffjade.com/?utm_source=jeffjade.com">晚晴幽草轩</a>；名字取自：“天意怜幽草，人间重晚晴”。<br>专注互联网开发（Web 大前端、快应用、小程序），以及分享优质网站、AI 应用、效率工具、心得感悟等内容。
+    </div>
+  </div>
+<div></div></div>
+    <div id="cc-copyright" class="cc-content">
+    <h3>文档信息</h3>
+    <ul>
+      <li>版权声明：知识共享署名-非商业性使用-禁止演绎<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">（创意共享3.0许可证）</a></li>
+      <li>文章出处：<a href="http://www.jeffjade.com" title="晚晴幽草轩">晚晴幽草轩</a></li>
+      <li>发表日期：<time datetime="2023-04-10T12:20:00.000Z" itemprop="datePublished">2023-04-10</time></li>
+      <li>社交媒体：
+        <a href="http://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+        <a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+        <a href="https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+        <a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+      </li>
+    </ul>
+</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Share/">Share</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Toss/">Toss</a><a href="/tags/Front-End/">Front-End</a><a href="/tags/ChatGPT/">ChatGPT</a>
+  </div>
+
+</div>
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://www.jeffjade.com/2023/04/10/249-chatgpt-web-client-free-to-use/" data-title="素问智聊斋，非官方 ChatGPT 在线客户端，免费可用 | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+	</article>
+	<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2023/05/01/251-blog-slow-update-instructions/" title="关于「晚晴幽草轩」博客缓更说明">
+  <strong>上一篇：</strong><br>
+  <span>
+  关于「晚晴幽草轩」博客缓更说明</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2022/12/30/249-webassembly-for-web/" title="为什么说 WebAssembly 让 Web 的未来更光明？">
+ <strong>下一篇：</strong><br> 
+ <span>为什么说 WebAssembly 让 Web 的未来更光明？
+</span>
+</a>
+</div>
+
+</nav>
+	<hr>
+<div id="gitalk-container"></div>
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目标与哲学"><span class="toc-number">1.</span> <span class="toc-text">目标与哲学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#适用场景"><span class="toc-number">2.</span> <span class="toc-text">适用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#诞生初衷"><span class="toc-number">3.</span> <span class="toc-text">诞生初衷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命名来源"><span class="toc-number">4.</span> <span class="toc-text">命名来源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技术选型"><span class="toc-number">5.</span> <span class="toc-text">技术选型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考感悟"><span class="toc-number">6.</span> <span class="toc-text">思考感悟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#未来规划"><span class="toc-number">7.</span> <span class="toc-text">未来规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他作品"><span class="toc-number">8.</span> <span class="toc-text">其他作品</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#您可能感兴趣的文章"><span class="toc-number">9.</span> <span class="toc-text">您可能感兴趣的文章</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="linkslist">
+	<p class="asidetitle">倾情款赠</p>
+	<div style="width:100%"><img style="width:100%" src="https://image.nicelinks.site/%E8%B5%9E%E8%B5%8F%E7%A0%81.jpeg?imageView2/1/w/800/h/800/interlace/1/ignore-error/1" alt="倾情捐赠"></div>
+</div>
+
+  <div class="wbfollow">
+	<p class="asidetitle">微博互粉</p>
+	<span class="sidebar-top-tip">亦可点击 Enter 键隐藏侧边栏</span>
+	<iframe width="100%" height="119" class="share_self" frameborder="0" scrolling="no" src="//widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3235949794&verifier=5c6bff53&colors=f0f0f0,fff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+</div>
+
+  <div class="widget-wrap linkslist">
+    <h3 class="widget-title asidetitle">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/01/251-blog-slow-update-instructions/">关于「晚晴幽草轩」博客缓更说明</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/10/249-chatgpt-web-client-free-to-use/">素问智聊斋，非官方 ChatGPT 在线客户端，免费可用</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/30/249-webassembly-for-web/">为什么说 WebAssembly 让 Web 的未来更光明？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/12/249-emerging-technologies-in-the-past-decade/">近十年新兴行业技术，及简单介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/">如何基于 Prerender 为 SPA 做 SEO 优化</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/31/246-nicelinks-in-2022/">2022，「倾城之链」运营第 6 年感记</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/31/245-2022-how-to-learn-front-end-development-elegantly/">2022，如何优雅学习前端开发？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/08/244-2022-worth-learning-series-functional-programming/">2022，值得学习系列之：函数式编程</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/">地表最强 Markdown 文本编辑工具——Obsidian</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/">如何打造体验良好的本地全文搜索？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/14/241-how-to-make-google-asset-based-ads/">如何制作 Google 自适应广告素材？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/31/240-nicelinks-weekly-050/">优质网站同好者周刊（第 50 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/13/237-nicelinks-weekly-048/">优质网站同好者周刊（第 48 期）- 倾城之链</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="categorieslist">
+	<p class="asidetitle">云轩分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>60</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Health/" title="Health">Health<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Program/" title="Program">Program<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Read/" title="Read">Read<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Share/" title="Share">Share<sup>22</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Thought/" title="Thought">Thought<sup>25</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Toss/" title="Toss">Toss<sup>28</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>64</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/快应用/" title="快应用">快应用<sup>9</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">广而告之</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="https://nicelinks.site?utm_source=jeffjade.com&pid=sidebar-advertisement" target="_blank" title="倾城之链">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg" alt="倾城之链 | 小程序码">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">最新作品</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="http://nicelinks.site/?utm_source=jeffjade.com&pid=aside" target="_blank" title="倾城之链">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/nicelinks-site.jpg" alt="倾城之链">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">轩站热度</p>
+  <!-- 
+    <font id="run_time_long"></font><br>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span style='color:purple' id="busuanzi_value_site_pv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_site_uv">
+      本站访客人数 <span style='color:purple' id="busuanzi_value_site_uv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量 <span style='color:purple' id="busuanzi_value_page_pv"></span> 次
+    </span>
+   -->
+  <div id="clustrmaps-count"></div>
+  <p style="text-align:center">( Start counting from 07 / 13 / 2017 )</p>
+</div>
+
+  <div class="tagslist">
+	<p class="asidetitle">云轩标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Share/" title="Share">Share<sup>127</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>63</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thought/" title="Thought">Thought<sup>43</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Toss/" title="Toss">Toss<sup>40</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>33</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>30</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>19</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">云轩关注</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.williamlong.info/?utm_source=jeffjade.com" target="_blank" title="月光博客">月光博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://read.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="曼妙句子">曼妙句子</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://wiki.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="清风明月阁">清风明月阁</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://nice.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静晴轩别苑">静晴轩别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="幽居空谷轩">幽居空谷轩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="天意人间舫">天意人间舫</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://refined-x.com/?utm_source=jeffjade.com" target="_blank" title="前端路上">前端路上</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://creatorsdaily.com?utm_source=jeffjade.com" target="_blank" title="创造者日报">创造者日报</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://calpa.me/?utm_source=jeffjade.com" target="_blank" title="Calpa&#39;s Blog">Calpa&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jeffjade.com/nicelinks/#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">好书推荐</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="浪潮之巅">浪潮之巅</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="平凡的世界">平凡的世界</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A82" target="_blank" title="代码大全2">代码大全2</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 追求卓越，成功就会在不经意间 追上你！ <br>
+			As you think, so shall you become. </p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="https://nicelinks.site/redirect?url=https://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="mailto:yunjeff@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2023
+		
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+		
+		</p>
+</div></footer>
+    <script src="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js"></script>
+
+<script type="text/javascript">
+echo.init({
+  offset: 200,
+  throttle: 250,
+  unload: false,
+  callback: function (element, op) {}
+});
+
+var AdBlockRemind = document.createElement("ad-block-remind");
+document.body.appendChild(AdBlockRemind);
+
+$(document).ready(function(){
+  console.log('Welcome To %c晚晴幽草轩','font-size:2.113em;color: #2edfa3');
+
+  $("body").append('<quickapp-deeplink brand="vivo|Weixin|Mobile|OPPO|huawei" deeplink="https://hapjs.org/app/com.graceful.sentences/browser/pages/detail"></quickapp-deeplink>');
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  var openAside = function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  }
+  var closeAside = function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  }
+  c.click(openAside);
+  o.click(closeAside);
+
+  document.onkeydown = function(e){
+    // 兼容FF和IE和Opera
+    var theEvent = e || window.event;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    var isInputTextarea = document.activeElement.id === 'search' || document.activeElement.nodeName === "TEXTAREA"
+    if (code === 13 && !isInputTextarea) {
+        if( o.css('display') === 'none'){
+          openAside()
+        }else{
+          closeAside()
+        }
+        return false;
+    }
+    return true;
+  }
+
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          // close auto-close sidebar @17-11-07
+          // c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="//s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"><i class="fa fa-weixin"></i></a>',
+  '<a href="//service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});
+</script>
+
+
+
+
+
+<link href="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/css/jquery.fancybox.css" rel="stylesheet">
+<script async src="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/js/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      var srcVal = (this.src.indexOf('blank.gif') < 0) ? this.src : $(this).attr('data-echo')
+      $(this).wrap('<a href="' + srcVal + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+<!-- Analytics Begin -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-67901984-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-67901984-1');
+</script>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " https://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd0ed9bb72df3b2b32bdd2274981a7d07' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<!-- <script src="/js/totop.js"></script> -->
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+<!-- MathJax End -->
+
+<!-- Move totop.js From totop.ejs To Here@0309 -->
+<script src="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+(function($) {
+  if (!Object.assign) {
+    Object.defineProperty(Object, "assign", {
+      enumerable: false,
+      configurable: true,
+      writable: true,
+      value: function(target, firstSource) {
+        "use strict";
+        if (target === undefined || target === null)
+          throw new TypeError("Cannot convert first argument to object");
+        var to = Object(target);
+        for (var i = 1; i < arguments.length; i++) {
+          var nextSource = arguments[i];
+          if (nextSource === undefined || nextSource === null) continue;
+          var keysArray = Object.keys(Object(nextSource));
+          for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+            var nextKey = keysArray[nextIndex];
+            var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+            if (desc !== undefined && desc.enumerable) to[nextKey] = nextSource[nextKey];
+          }
+        }
+        return to;
+      }
+    });
+  }
+
+  if (document.getElementById('gitalk-container')) {
+    var gitalk = new Gitalk({
+      clientID: '4bc2d1424c7939471ad4',
+      clientSecret: 'b3dc888873f473405f79f7d9394888478ba55ca4',
+      repo: 'jadeblog-backups',
+      owner: 'nicejade',
+      admin: ['nicejade'],
+      id: md5(location.pathname),
+      distractionFreeMode: false
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  var clustrmapsCount = document.getElementById('clustrmaps-count')
+  if (clustrmapsCount) {
+    var clustrmapsScript = document.createElement('script')
+    clustrmapsScript.type = 'text/javascript'
+    clustrmapsScript.id = 'clustrmaps'
+    clustrmapsScript.src = '//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a'
+    clustrmapsCount.appendChild(clustrmapsScript)
+  }
+
+  var wbScript = document.createElement('script')
+  wbScript.type = 'text/javascript'
+  wbScript.async = true
+  wbScript.charset = "utf-8"
+  wbScript.src = "//tjs.sjs.sinajs.cn/open/api/js/wb.js"
+  document.body.appendChild(wbScript)
+
+  // 为 Baidu 设置自动推送@2018-08-08
+  
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.async = true;
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.async = true;
+      bp.src = '//push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  
+
+  // When to show the scroll link
+  // higher number = scroll link appears further down the page
+  var upperLimit = 1000;
+
+  // Our scroll link element
+  var scrollElem = $('#totop');
+
+  // Scroll to top speed
+  var scrollSpeed = 500;
+
+  // Show and hide the scroll to top link based on scroll position
+  scrollElem.hide();
+  $(window).scroll(function () {
+      var scrollTop = $(document).scrollTop();
+      if ( scrollTop > upperLimit ) {
+          $(scrollElem).stop().fadeTo(300, 1); // fade back in
+      }else{
+          $(scrollElem).stop().fadeTo(300, 0); // fade out
+      }
+  });
+
+  // Scroll to top animation on click
+  $(scrollElem).click(function(){
+      $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+  });
+})(jQuery);
+</script>
+
+<!-- Inject service-worker@2018-01-09 -->
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js", {scope: '/'})
+    .then(registration => console.log('SW Registration Success！Scope: ', registration.scope))
+    .catch(err => console.log('SW Registration Failed! Error: ', err));
+}
+</script>
+
+<!-- Inject Anchor.js @2018-01-14 -->
+<script type="text/javascript">
+function async(u, c) {
+  var d = document,
+    t = 'script',
+    o = d.createElement(t),
+    s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+
+async("https://fastly.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js", function(){
+  anchors.options = {
+    visible: 'hover',
+    placement: 'right'
+  }
+  anchors.add('#post h2, #post h3, #post h4');
+  anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+})
+</script>
+  </body>

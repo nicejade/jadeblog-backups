@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2023-01-17T13:55:21.141Z</updated>
+  <updated>2023-05-02T07:11:33.936Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,112 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于「晚晴幽草轩」博客缓更说明</title>
+    <link href="https://www.jeffjade.com/2023/05/01/251-blog-slow-update-instructions/"/>
+    <id>https://www.jeffjade.com/2023/05/01/251-blog-slow-update-instructions/</id>
+    <published>2023-05-01T12:20:00.000Z</published>
+    <updated>2023-05-02T07:11:33.936Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.jeffjade.com/?ref=jeffjade.com">晚晴幽草轩</a> 于 2014 年，采用 <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116?ref=jeffjade.com" target="_blank" rel="external">Hexo</a> 所搭建；专注互联网开发，以及分享优质网站、AI 应用、效率工具、心得感悟等内容；至今已近 9 年。只不过它是本地 Markdown 静态博客，不能随时在线更新，已然不适如今之快节奏；每有新的见闻、感悟，有在以下几个在线平台进行记载：</p>
+<ul>
+<li><a href="https://nicelinks.site/?ref=jeffjade.com" target="_blank" rel="external">倾城之链</a>：基于 <a href="https://nicelinks.site/post/5b1a221c0526c920d6dfaada" target="_blank" rel="external">Vue2</a>、<a href="https://nicelinks.site/post/5f376ebe1751843ef894c899" target="_blank" rel="external">Node.js</a> 等技术栈，所搭建的在线导航平台，用以记录所遇见的有价值网站，每周定期更新。</li>
+<li><a href="https://quickapp.lovejade.cn/?ref=jeffjade.com" target="_blank" rel="external">静轩之别苑</a>，由 <a href="https://nicelinks.site/post/5c3f3151a5957e07a40b30ff" target="_blank" rel="external">Ghost</a> 所驱动，2019 年 元月基于 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a> 部署于<a href="https://nicelinks.site/post/5b3e412d615bf842b6091041" target="_blank" rel="external">阿里云</a>服务器，用于记录技术相关心得。</li>
+<li><a href="https://forum.lovejade.cn/?ref=jeffjade.com" target="_blank" rel="external">悠然宜想亭</a>， 2021 年 3 月 基于 <a href="https://nicelinks.site/post/604795465f9af714fe21dcbc" target="_blank" rel="external">Flarum</a>（一款优雅简洁论坛软件）所搭建的“社区型个人博客”，至今有记录文章近 300 篇，不定期更新。</li>
+<li><a href="https://memo.lovejade.cn/?ref=jeffjade.com" target="_blank" rel="external">半缘修道观</a> ，2022 年 11 月，基于 <a href="https://nicelinks.site/post/637e1ebc984fb92197ab0f73" target="_blank" rel="external">Memos</a> 、 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker Compose</a> 所搭建的“个人微博/推特/备忘录📕”，用于记录学习、感悟、电影、投资、娱乐、科普、代码、 <a href="https://nicelinks.site/tags/ChatGPT" target="_blank" rel="external">ChatGPT</a> 等相关内容，不到半年已记录近 200 条，是目前更新最为频繁的平台。</li>
+</ul>
+<p>除此之外，闲暇时间，有构建些 Web 应用，诸如：<a href="https://share.lovejade.cn/" target="_blank" rel="external">玉桃文飨轩</a> （Markdown 在线转图片）、<a href="https://chatgpt.nicelinks.site/" target="_blank" rel="external">素问智聊斋</a>（ChatGPT 在线客户端），感兴趣朋友可移步以了解更多。后续如果有写值得分享的长篇，依旧会同步至「晚晴幽草轩」。</p>
+<p>2025 年 5 月 02 日写于〔深圳福田〕</p>]]></content>
+    
+    <summary type="html">
+    
+      晚晴幽草轩 于 2014 年，采用 Hexo 所搭建；专注互联网开发，以及分享优质网站、AI 应用、效率工具、心得感悟等内容；至今已近 9 年。只不过它是本地 Markdown 静态博客，不能随时在线更新，已然不适如今之快节奏；每有新的见闻、感悟，有在以下几个在线平台进行记载。
+    
+    </summary>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>素问智聊斋，非官方 ChatGPT 在线客户端，免费可用</title>
+    <link href="https://www.jeffjade.com/2023/04/10/249-chatgpt-web-client-free-to-use/"/>
+    <id>https://www.jeffjade.com/2023/04/10/249-chatgpt-web-client-free-to-use/</id>
+    <published>2023-04-10T12:20:00.000Z</published>
+    <updated>2023-05-02T05:46:24.270Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://chatgpt.nicelinks.site/" target="_blank" rel="external">素问智聊斋</a>，非官方 ChatGPT 在线客户端，旨在提供更便捷的 <a href="https://nicelinks.site/post/6391e22878b7a1291995ff86" target="_blank" rel="external">ChatGPT</a> 访问体验；它基于非官方 <a href="https://github.com/transitive-bullshit/chatgpt-api" target="_blank" rel="external">ChatGPT API</a> 、 <a href="https://nicelinks.site/post/62a9c2ad90509e23cea772c0" target="_blank" rel="external">Svelte</a> 、 <a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">TailwindCSS</a> 、 <a href="https://nicelinks.site/post/6010e1b10c71de1fb957b64e" target="_blank" rel="external">Vite</a> 和 NodeJS 所搭建，无需账号，零配置，即可与 ChatGPT 畅聊；支持自定义 OPENAI API KEY。</p>
+<a id="more"></a>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/chatgpt-client.png" alt="素问智聊斋，非官方 ChatGPT 在线客户端"></p>
+<h2 id="目标与哲学"><a href="#目标与哲学" class="headerlink" title="目标与哲学"></a>目标与哲学</h2><p> <a href="https://nicelinks.site/post/6391e22878b7a1291995ff86" target="_blank" rel="external">OpenAI</a> 于 2022 年 11 月推出的超级对话模型 <strong>ChatGPT</strong>， 受到来自世界各地的认可和赞誉，令人印象深刻。然而，由于一些原因，如果没有正确搭建相应的环境（🪜），ChatGPT 在部分地区就无法正常使用。鉴于此，搭建了这个服务，以便用户能够方便地使用 ChatGPT。当然，条件允许您可前往 OpenAI 官网上注册、登录、申请专属 <code>API KEY</code>。此外，为了保障用户的数据安全，本服务的操作过程中不会存储任何使用者的数据，因此可以放心使用（备注：这段介绍有使用本服务加以润色）。</p>
+<h2 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h2><ul>
+<li>没有注册 Open AI 账号，导致无法使用  ChatGPT 时；</li>
+<li>因为网络环境限制，无法正常使用 ChatGPT 时；</li>
+<li>具备账号，想让远方亲人、朋友快速体验 ChatGPT；</li>
+</ul>
+<p>补充说明：承诺后台不会保存任何数据；基于 API KEY 发起的对话内容，会同步到对应账号；如果您习惯使用桌面客户端，类似项目有： <a href="https://nicelinks.site/redirect?url=https://github.com/lencx/ChatGPT" target="_blank" rel="external">lencx/ChatGPT</a> 。</p>
+<h2 id="诞生初衷"><a href="#诞生初衷" class="headerlink" title="诞生初衷"></a>诞生初衷</h2><p>最原始的动机，是因为：以上两点适用场景所对应的诉求，我觉得都需要。但，这并不足以缘起这个项目，更详细的阐述如下：</p>
+<p>作为颇爱折腾的技术人员，ChatGPT 自然是要体验；有请时在美国的朋友，帮着注册®️了账号；然而，蛮多时候即便采用科学上网，设备却无法成功登陆 <a href="https://chat.openai.com/chat" target="_blank" rel="external">ChatGPT 官网地址</a> 。恰逢一个契机——帮朋友写几行关于 ChatGPT 的示例；当痛点（Motivation：动机）碰上可执行性（Ability：能力），外加适当的 <strong>触发条件</strong> （Trigger），福格行为模型（BJ Foog’s Behaviour Model）已全部满足，于是乎， <a href="https://chatgpt.nicelinks.site/" target="_blank" rel="external">素问智聊斋</a> 就有了诞生的充足理由。</p>
+<h2 id="命名来源"><a href="#命名来源" class="headerlink" title="命名来源"></a>命名来源</h2><p>早在 <a href="https://forum.lovejade.cn/d/1" target="_blank" rel="external">关于“悠然宜想亭”的由来，以及未来</a> 一文提及，对于网站取名多是五个字；或是兴趣的原因，其后缀带有 <a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a> 其中一个；其中大部分已被使用；因为「Chat」的应为对应的是「对话、聊天」；于是，「斋」字就这么定下；AI 对应智能，所以「智聊」也就应景而生。</p>
+<p>原本命名为「智聊问异斋」，后觉不妥，略阅资料，遂修改为 <code>素问智聊斋</code>；素问：最早或于《黄帝内经》；釋名：“「素者，本也；問者，黃帝問於岐伯也」”。另有解释为：“ <strong>即问本，探索人与自然的根本性问题</strong> ”。当想 ChatGPT 说：“解释下「素问」”，它给出以下解释：</p>
+<blockquote>
+<p>「素问」是一种中国古代哲学思想，它强调对本质的探究。它的核心思想是：任何事物都有其本质，而且这个本质不受时间和空间的束缚，所以要理解它，就必须通过探究本质来探索事物的真相。</p>
+</blockquote>
+<h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p>前端采用了 <a href="https://nicelinks.site/post/62a9c2ad90509e23cea772c0" target="_blank" rel="external">Svelte</a> 、 <a href="https://nicelinks.site/post/6278fdeaac00ce3f9b11a8ef" target="_blank" rel="external">TypeScript</a> 、 <a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">TailwindCSS</a> 、 <a href="https://nicelinks.site/post/617138035e35cd063077cefc" target="_blank" rel="external">Flowbite</a> 、 <a href="https://nicelinks.site/post/642598ca2d6c9c63445c8862" target="_blank" rel="external">MDSvex</a> 、 <a href="https://nicelinks.site/post/6010e1b10c71de1fb957b64e" target="_blank" rel="external">Vite</a> 、 等流行技术栈，而后台则采用 <a href="https://nicelinks.site/post/6400b3eafe46ca437e0ac36e" target="_blank" rel="external">Fastify</a> 框架；在服务器上，则基于 <a href="https://nicelinks.site/post/6339a6aa35a9c117dacf2363" target="_blank" rel="external">Nginx</a> 、 <a href="https://nicelinks.site/post/62bc60e90c61c703d7747590" target="_blank" rel="external">pm2</a> 进行部署；其中 Svelte、TailwindCSS、MDSvex 等工具，极大提升了编写代码的舒适度，令人青睐有加。</p>
+<h2 id="思考感悟"><a href="#思考感悟" class="headerlink" title="思考感悟"></a>思考感悟</h2><p>关于 ChatGPT（或其他 AI 产品），相信接触过它的人们，或多或少都会有自己的感受；目前为止，吾有以下几点看法：</p>
+<ul>
+<li>类似 ChatGPT 这样的 <a href="https://nicelinks.site/tags/AI" target="_blank" rel="external">AI</a> 产品，必将像如今的手机一般，成为绝大部分人类生活必需品，这很难以人类意志为转移；</li>
+<li>毕竟是工具，使用乃至产生依赖，倒无不可；但也不能荒废自身，我辈仍须保持<strong>深度学习</strong>习惯，及提高学习能力；</li>
+<li>AI 会进而加剧人与人之间的差异；因为不喜欢折腾或探究新鲜事物的人，很难尽早去接触它，而是等<strong>时代浪潮</strong>拍打过来。</li>
+</ul>
+<h2 id="未来规划"><a href="#未来规划" class="headerlink" title="未来规划"></a>未来规划</h2><p>新注册 Open AI 账号，为 API Key 调用费用赠送 <code>18$</code>，为期三个月；4 月 1 日过期之后，为使得服务能够正常运行，有继续购买它的服务。ChatGPT 的价格为：<code>0.002</code> 美元 1000 个 tokens（约为 750 个英文单词），GPT4 则更贵一些；当使用费用超过所能承受的能力，外加服务器使用费用，或可能考虑植入定量商业化措施。现如今，如果您认为 <a href="https://chatgpt.nicelinks.site/" target="_blank" rel="external">素问智聊斋</a> 对您有一定价值，可以考虑为发起 <a href="https://chatgpt.nicelinks.site/#/sponsor" target="_blank" rel="external">赞助</a> 。</p>
+<h2 id="其他作品"><a href="#其他作品" class="headerlink" title="其他作品"></a>其他作品</h2><ul>
+<li><a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a></li>
+<li><a href="https://read.lovejade.cn/" target="_blank" rel="external">曼妙句子</a></li>
+<li><a href="https://share.lovejade.cn/" target="_blank" rel="external">玉桃文飨轩</a></li>
+<li><a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a></li>
+<li><a href="https://quickapp.lovejade.cn/" target="_blank" rel="external">静轩之别苑</a></li>
+<li><a href="https://www.jeffjade.com/">晚晴幽草轩</a></li>
+</ul>
+<p>以上介绍内容，部分使用 ChatGPT 加以<strong>润色</strong> 。截止目前，它可以协助人类，已经很多，诸如学术论文、内容创作、翻译、数据分析、研究咨询、简历和求职信、广告文案、编写小说、个人陈述、 <a href="https://nicelinks.site/tags/SEO" target="_blank" rel="external">SEO</a> 优化等等，如果想让它更好帮助到您，可以移步 <a href="https://nicelinks.site/redirect?url=https://github.com/PlexPt/awesome-chatgpt-prompts-zh" target="_blank" rel="external">ChatGPT 中文调教指南</a> ，学习怎么让它在不同场景，更好听理解您的指令。</p>
+<h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a><strong>您可能感兴趣的文章</strong></h2><ul>
+<li><a href="https://forum.lovejade.cn/d/248-webassembly-web" target="_blank" rel="external">为什么说 WebAssembly 让 Web 的未来更光明？</a></li>
+<li><a href="https://forum.lovejade.cn/d/226-npm-scope" target="_blank" rel="external">NPM 如何发布和使用带范围（scope）的包？</a></li>
+<li><a href="https://forum.lovejade.cn/d/225-espanso" target="_blank" rel="external">如何基于 Espanso 提高打字效率，提升幸福感？</a></li>
+<li><a href="https://forum.lovejade.cn/d/158-pc" target="_blank" rel="external">如何更提升各类网站 PC 端访问体验？</a></li>
+<li><a href="https://www.jeffjade.com/2017/01/23/118-chrome_awesome_plug-in/">Awesome Chrome 插件集锦</a></li>
+<li><a href="https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/">Vimium 让您的 Chrome 起飞</a></li>
+<li><a href="https://www.jeffjade.com/2016/03/17/2016-03-17-jade-tools/">那些所倚靠的利器记载</a></li>
+<li><a href="https://www.jeffjade.com/2016/03/11/2016-03-11-autohotkey/#">Win 下最爱效率神器: AutoHotKey</a></li>
+<li><a href="https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/">Win 下必备神器之 Cmder</a></li>
+<li><a href="https://www.jeffjade.com/2016/03/03/2016-03-02-how-to-use-atom/">新编码神器 Atom 使用纪要</a></li>
+<li><a href="http://www.cnblogs.com/jadeboy/p/4165449.html" target="_blank" rel="external">sublime text 下的 Markdown 写作</a></li>
+<li><a href="https://www.jeffjade.com/2015/08/28/2015-08-28-Write-Morkdown/">SublimeText 下写作利器之 MarkdownEditing</a></li>
+<li><a href="https://www.jeffjade.com/2015/07/29/2015-07-29-mac-musthave-software/">Mac 必备软件渐集之 ZSH－终极 Shell</a></li>
+</ul>]]></content>
+    
+    <summary type="html">
+    
+      素问智聊斋，非官方 ChatGPT 在线客户端，旨在提供更便捷的 ChatGPT 访问体验；它基于非官方 ChatGPT API 、 Svelte 、 TailwindCSS 、 Vite 和 NodeJS 所搭建，无需账号，零配置，即可与 ChatGPT 畅聊；支持自定义 OPENAI API KEY。
+    
+    </summary>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
+    
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+      <category term="Front-End" scheme="https://www.jeffjade.com/tags/Front-End/"/>
+    
+      <category term="ChatGPT" scheme="https://www.jeffjade.com/tags/ChatGPT/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么说 WebAssembly 让 Web 的未来更光明？</title>
@@ -1211,51 +1317,6 @@
   </entry>
   
   <entry>
-    <title>关于“清风明月阁”的由来，以及未来</title>
-    <link href="https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/"/>
-    <id>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</id>
-    <published>2022-01-20T13:21:00.000Z</published>
-    <updated>2022-01-21T04:47:13.266Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>，基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感…..人生漫短，白首时回顾，堪凭这些许文字以自怜。</p>
-<a id="more"></a>
-<p><img src="http://lovejade.oss-cn-shenzhen.aliyuncs.com/小舟从此逝-江海寄余生.jpg" alt="小舟从此逝-江海寄余生"></p>
-<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>早先搭建的十余个网站，有些实属为体验「<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站构建工具</a>」而起；岁月蹉跎中折腾多了，那种兴之所至、行之所往的冲动，早已隐去；而今，却又“重蹈覆辙”，实在是感念 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 之强大，一时为其蕴藏的「哲思」所着迷；一直以来呢，也在探索文档、Wiki 最佳撰写工具；而前段时间，又恰巧购得云服务器一台；这好奇的念头，与适宜的环境，结合的恰到好处，于是，便有了<a href="https://wiki.lovejade.cn" target="_blank" rel="external">“清风明月阁”</a>。</p>
-<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>给网站命名，向来谨慎，却总也是“因循守旧”，大多没有新意；从最早 2014 年的<a href="https://www.jeffjade.com/">晚晴幽草轩</a>，到今年（2021）的<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>，格式上，都是一个调子：截取喜欢的诗词，结合建筑名为后缀。那些年喜欢李商隐那句：“天意怜幽草，人间重晚晴”，便有了最初的两个网站，这在<a href="https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/">晚晴幽草轩，天意人间舫</a>一文中有过记载。</p>
-<p>多年来，深（身）陷代码中，久未涉足文学诗词，按照如上惯例，为此站取名时，为求其名能“达意”且兼具雅致，好一阵搜肠刮肚；<a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a>之中，已用亭、轩、舫、苑，又因此站基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 所建，在当时或者如今回头看，择以「阁」字，这存在必然性。而在诗词的甄选中，之处有意取李太白的“若非群玉山头见，会向瑶池月下逢”中「群玉」、「瑶池」；虽说雅致，但究竟与心境不能完全契合；斟酌时，须臾之间，灵光乍现，脑海浮现苏子瞻《前赤壁赋》中一段经典：</p>
-<blockquote>
-<p>“逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。<strong>惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适</strong>。”</p>
-</blockquote>
-<p>其<strong>雅致</strong>、其<strong>意境</strong>、其<strong>哲思</strong>，莫有与心之所愿更契合者，于是立即便定下了，名曰：<a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>；工作生活中，自觉总也是”一肚子不合时宜“，今为这网站命此名，怕是为数不多的一次“合乎时宜”；感谢苏子赐名！</p>
-<h2 id="其用"><a href="#其用" class="headerlink" title="其用"></a>其用</h2><p>漫画《四月一日灵异事件簿》中，有写道：“思想、语言是会束缚人的东西，不但自己的会束缚自己，别人的也会束缚自己”，对此深表认同：愚顽的脑袋里如再被束缚，接收到任何与之相悖的理念，都是引发愤怒的毒物。这个时代，关乎“求同存异”，于虚拟网络中或可“被存在”；而生活的现实中，却是难以“存活”。这些年，关乎“思想的表达、语言的阐述”，所引发的后果，远胜海啸山洪，且是司空见惯；即便朋友恋人间的好心建议（或提议），轻起口角，重则仇恨；如此往复，伤痕累累，乃至近乎“四海无人对夕阳”的悲苦……于是乎，痛定思痛后，终可懂得<code>海明威</code>为何如此说：</p>
-<blockquote>
-<p>我们花了两年学会说话，却要花上六十年来学会闭嘴。大多数时候，我们说得越多，彼此的距离却越远，矛盾也越多。在沟通中，大多数人总是急于表达自己，一吐为快，却一点也不懂对方。两年学说话，一生学闭嘴。懂与不懂，不多说。心乱心静，慢慢说。若真没话，就别说。── <a href="https://read.lovejade.cn/p/60e1ee1c7f46b90656e77c7d" target="_blank" rel="external">曼妙句子</a>。</p>
-</blockquote>
-<p>耳聪可以闻世声，目明堪能睹世事，这是与生俱来的本领；人间真实，纷呈精彩，阴阳相生，优劣混合；犹为凡夫俗子，免不了阐述下自己看法，一抒心中块垒，也为“两肩抬道义”；倘若付与人当面说，恐引纷争，实非余愿；“夫唯不争，故天下莫能与之争”，于是乎，在自建平台，以文字形式，承载所学、所思、所感、所悟，或是最佳之选。明朝文学家、画家陈继儒，在《小窗幽记》中写道：</p>
-<blockquote>
-<p>带雨有时种竹，关门无事锄花；拈笔闲删旧句，汲泉几试新茶。余尝净一室，置一几，陈几种快意书，放一本旧法帖；古鼎焚香，素麈挥尘，意思小倦，暂休竹榻。饷时而起，则啜苦茗，信手写汉书几行，随意观古画数幅。心目间，觉洒洒灵空，面上俗尘，当亦扑去三寸。但看花开落，不言人是非。</p>
-</blockquote>
-<p>其中所描绘心性境界，实在令人殷羡，而这也正是所追求的完美。至于“汉书几行、平思几许”，置于这人间网络中，赠予有缘人；期之如“江上之清风，山间之明月”，与人无害，偶可参考，吾愿足矣。</p>
-<p>2021 年 12 月末，记之于深圳。</p>]]></content>
-    
-    <summary type="html">
-    
-      清风明月阁，基于 Wiki.js 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感.....人生漫短，白首时回顾，堪凭这些许文字以自怜。
-    
-    </summary>
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/categories/Thought/"/>
-    
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
-    
-  </entry>
-  
-  <entry>
     <title>优质网站同好者周刊（第 49 期）- 倾城之链</title>
     <link href="https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/"/>
     <id>https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/</id>
@@ -1355,6 +1416,51 @@
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于“清风明月阁”的由来，以及未来</title>
+    <link href="https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/"/>
+    <id>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</id>
+    <published>2022-01-20T13:21:00.000Z</published>
+    <updated>2022-01-21T04:47:13.266Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>，基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感…..人生漫短，白首时回顾，堪凭这些许文字以自怜。</p>
+<a id="more"></a>
+<p><img src="http://lovejade.oss-cn-shenzhen.aliyuncs.com/小舟从此逝-江海寄余生.jpg" alt="小舟从此逝-江海寄余生"></p>
+<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>早先搭建的十余个网站，有些实属为体验「<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站构建工具</a>」而起；岁月蹉跎中折腾多了，那种兴之所至、行之所往的冲动，早已隐去；而今，却又“重蹈覆辙”，实在是感念 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 之强大，一时为其蕴藏的「哲思」所着迷；一直以来呢，也在探索文档、Wiki 最佳撰写工具；而前段时间，又恰巧购得云服务器一台；这好奇的念头，与适宜的环境，结合的恰到好处，于是，便有了<a href="https://wiki.lovejade.cn" target="_blank" rel="external">“清风明月阁”</a>。</p>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>给网站命名，向来谨慎，却总也是“因循守旧”，大多没有新意；从最早 2014 年的<a href="https://www.jeffjade.com/">晚晴幽草轩</a>，到今年（2021）的<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>，格式上，都是一个调子：截取喜欢的诗词，结合建筑名为后缀。那些年喜欢李商隐那句：“天意怜幽草，人间重晚晴”，便有了最初的两个网站，这在<a href="https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/">晚晴幽草轩，天意人间舫</a>一文中有过记载。</p>
+<p>多年来，深（身）陷代码中，久未涉足文学诗词，按照如上惯例，为此站取名时，为求其名能“达意”且兼具雅致，好一阵搜肠刮肚；<a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a>之中，已用亭、轩、舫、苑，又因此站基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 所建，在当时或者如今回头看，择以「阁」字，这存在必然性。而在诗词的甄选中，之处有意取李太白的“若非群玉山头见，会向瑶池月下逢”中「群玉」、「瑶池」；虽说雅致，但究竟与心境不能完全契合；斟酌时，须臾之间，灵光乍现，脑海浮现苏子瞻《前赤壁赋》中一段经典：</p>
+<blockquote>
+<p>“逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。<strong>惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适</strong>。”</p>
+</blockquote>
+<p>其<strong>雅致</strong>、其<strong>意境</strong>、其<strong>哲思</strong>，莫有与心之所愿更契合者，于是立即便定下了，名曰：<a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>；工作生活中，自觉总也是”一肚子不合时宜“，今为这网站命此名，怕是为数不多的一次“合乎时宜”；感谢苏子赐名！</p>
+<h2 id="其用"><a href="#其用" class="headerlink" title="其用"></a>其用</h2><p>漫画《四月一日灵异事件簿》中，有写道：“思想、语言是会束缚人的东西，不但自己的会束缚自己，别人的也会束缚自己”，对此深表认同：愚顽的脑袋里如再被束缚，接收到任何与之相悖的理念，都是引发愤怒的毒物。这个时代，关乎“求同存异”，于虚拟网络中或可“被存在”；而生活的现实中，却是难以“存活”。这些年，关乎“思想的表达、语言的阐述”，所引发的后果，远胜海啸山洪，且是司空见惯；即便朋友恋人间的好心建议（或提议），轻起口角，重则仇恨；如此往复，伤痕累累，乃至近乎“四海无人对夕阳”的悲苦……于是乎，痛定思痛后，终可懂得<code>海明威</code>为何如此说：</p>
+<blockquote>
+<p>我们花了两年学会说话，却要花上六十年来学会闭嘴。大多数时候，我们说得越多，彼此的距离却越远，矛盾也越多。在沟通中，大多数人总是急于表达自己，一吐为快，却一点也不懂对方。两年学说话，一生学闭嘴。懂与不懂，不多说。心乱心静，慢慢说。若真没话，就别说。── <a href="https://read.lovejade.cn/p/60e1ee1c7f46b90656e77c7d" target="_blank" rel="external">曼妙句子</a>。</p>
+</blockquote>
+<p>耳聪可以闻世声，目明堪能睹世事，这是与生俱来的本领；人间真实，纷呈精彩，阴阳相生，优劣混合；犹为凡夫俗子，免不了阐述下自己看法，一抒心中块垒，也为“两肩抬道义”；倘若付与人当面说，恐引纷争，实非余愿；“夫唯不争，故天下莫能与之争”，于是乎，在自建平台，以文字形式，承载所学、所思、所感、所悟，或是最佳之选。明朝文学家、画家陈继儒，在《小窗幽记》中写道：</p>
+<blockquote>
+<p>带雨有时种竹，关门无事锄花；拈笔闲删旧句，汲泉几试新茶。余尝净一室，置一几，陈几种快意书，放一本旧法帖；古鼎焚香，素麈挥尘，意思小倦，暂休竹榻。饷时而起，则啜苦茗，信手写汉书几行，随意观古画数幅。心目间，觉洒洒灵空，面上俗尘，当亦扑去三寸。但看花开落，不言人是非。</p>
+</blockquote>
+<p>其中所描绘心性境界，实在令人殷羡，而这也正是所追求的完美。至于“汉书几行、平思几许”，置于这人间网络中，赠予有缘人；期之如“江上之清风，山间之明月”，与人无害，偶可参考，吾愿足矣。</p>
+<p>2021 年 12 月末，记之于深圳。</p>]]></content>
+    
+    <summary type="html">
+    
+      清风明月阁，基于 Wiki.js 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感.....人生漫短，白首时回顾，堪凭这些许文字以自怜。
+    
+    </summary>
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/categories/Thought/"/>
+    
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
@@ -1911,160 +2017,6 @@
   </entry>
   
   <entry>
-    <title>优质网站同好者周刊（第 43 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/12/03/232-nicelinks-weekly-043/"/>
-    <id>https://www.jeffjade.com/2021/12/03/232-nicelinks-weekly-043/</id>
-    <published>2021-12-03T13:21:00.000Z</published>
-    <updated>2022-01-08T08:28:28.944Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="Image-Extractor"><a href="#Image-Extractor" class="headerlink" title="Image Extractor"></a><a href="https://nicelinks.site/post/61b2002a48f785032a2400b0" target="_blank" rel="external">Image Extractor</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/图片" target="_blank" rel="external"><code>图片</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/下载" target="_blank" rel="external"><code>下载</code></a></p>
-<p><strong>关键字</strong>：extract images online, image extractor, download images, view images, extract images from website, download images from website, image bulk downloader, find images on website</p>
-<blockquote>
-<p>A free tool to extract, view and download images from any website by using a virtual browser.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/extract.pics.png?x-oss-process=style/png2jpg" alt="倾城之链 - Image Extractor"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://extract.pics/" target="_blank" rel="external">Extract.pics</a> 是一个易于使用的工具，允许您从任何公共网站提取、查看和下载图像。只需将网站的 URL 粘贴到输入字段中，然后单击“提取”即可开始该过程。完全免费使用！</p>
-<p>提取过程将需要几秒钟，以确保它找到尽可能多的图像。完成后，您将在有组织的网格中看到所有图像。您现在可以通过按大小、宽度、高度或找到它们的顺序对找到的图像进行<strong>排序</strong>来探索找到的图像。此外，您可以按名称、大小或类型/文件格式<strong>搜索</strong>图像。这使得准确地找到您需要的图像变得非常容易。</p>
-<p>您现在可以使用<strong>缩放工具在</strong>浅色或深色背景下<strong>检查</strong>图像、<strong>下载</strong>单个图像并<strong>复制</strong>图像<strong>的 URL</strong>。如果您想一次<strong>下载多个</strong>图像，您可以选择所有需要的图像，然后将它们全部下载到<strong>ZIP 存档中</strong>。</p>
-<p>同类型的网站，还有 <a href="https://nicelinks.site/redirect?url=https://imagecyborg.com/" target="_blank" rel="external">Image Cyborg</a><br>、<a href="https://nicelinks.site/redirect?url=https://imgdownloader.com/" target="_blank" rel="external">ImgDownloader - Bulk Download Image from Website and URL</a>，有初步做了比较：</p>
-<ul>
-<li><a href="https://nicelinks.site/redirect?url=https://imagecyborg.com/" target="_blank" rel="external">Image Cyborg</a> 批量下载网页上的所有图像。只需粘贴 URL 或链接即可获取图像。（评价：下载的图片，很全面；但，您需要创建一个免费帐户或登录才能使用此应用程序，这一点不是很方便）；</li>
-<li><a href="https://nicelinks.site/redirect?url=https://imgdownloader.com/" target="_blank" rel="external">ImgDownloader - Bulk Download Image from Website and URL</a> 强大的图像下载工具，可让您<strong>从任何网站下载所有图像，谷歌图像</strong>。<strong>从 Pinterest 和 Instagram 下载所有图片和视频</strong>！只需复制并粘贴 URL，即可立即获取所有图像、图片或视频，mp4。（评价：下载的图片，很全面；而且可以处理来自网站以外的图片）；</li>
-<li><a href="https://nicelinks.site/redirect?url=https://extract.pics/" target="_blank" rel="external">Extract.pics</a> 是一个易于使用的工具，允许您从任何公共网站提取、查看和下载图像。只需将网站的 URL 粘贴到输入字段中，然后单击“提取”即可开始该过程。（评价：下载的图片，似乎不够全面；但提供了更加强大的能力，使得您可以更快找到您需要的图像）；</li>
-</ul>
-<p>如果您从公共网站提取、查看和下载图像的诉求，您可按需使用相关工具；目前而言（2021 年 12 月），更推荐使用 <a href="https://nicelinks.site/redirect?url=https://imgdownloader.com/" target="_blank" rel="external">ImgDownloader</a>。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61b2002a48f785032a2400b0" target="_blank" rel="external">倾城之链 - Image Extractor</a></p>
-<h2 id="The-collaborative-browser-based-IDE"><a href="#The-collaborative-browser-based-IDE" class="headerlink" title="The collaborative browser based IDE"></a><a href="https://nicelinks.site/post/61b1f5ff48f785032a2400ae" target="_blank" rel="external">The collaborative browser based IDE</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/在线" target="_blank" rel="external"><code>在线</code></a> · <a href="https://nicelinks.site/tags/IDE" target="_blank" rel="external"><code>IDE</code></a> · <a href="https://nicelinks.site/tags/编辑器" target="_blank" rel="external"><code>编辑器</code></a></p>
-<blockquote>
-<p>Replit is a simple yet powerful online IDE, Editor, Compiler, Interpreter, and REPL. Code, compile, run, and host in 50+ programming languages.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/replit.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - The collaborative browser based IDE"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://replit.com/" target="_blank" rel="external">Replit</a> 是一个简单而强大的在线 IDE、编辑器、编译器、解释器和 REPL。使用 50 多种编程语言进行编码、编译、运行和托管。它具有以下功能特征：</p>
-<ul>
-<li><strong>浏览器内IDE</strong>：在任何平台、操作系统和设备上使用您喜欢的语言开始编码。</li>
-<li><strong>实时协作</strong>：使用诸如编辑之类的 Google 文档邀请您的朋友、队友和同事直接进入您的代码。</li>
-<li><strong>GitHub 集成</strong>：通过 0 次手动设置导入、运行和协作处理数百万个 GitHub 存储库。-</li>
-<li><strong>50 多种语言</strong>：从 Python 到 C++，再到 HTML 和 CSS，留在一个平台上，用您想要的任何语言学习和编码。</li>
-<li><strong>托管和部署</strong>：当你创建一个新的 repl 时，它会立即生效并与世界共享。</li>
-<li><strong>学习资源</strong>：从超过 300 万热情的程序员、技术专家、创意人员和各种学习者那里学习如何编码。</li>
-<li><strong>团队计划</strong>：通过交互式文档、实时协作和零麻烦的远程面试提高您的团队的工作效率。</li>
-<li><strong>API 和插件</strong>：以编程方式创建应用程序、启动机器人并使用插件自定义 IDE 以满足您的需求。</li>
-</ul>
-<p>因为 <a href="https://nicelinks.site/redirect?url=https://replit.com/" target="_blank" rel="external">Replit</a> 直接在浏览器中编码，且支持多人协作（享受类似于 Google 文档的编辑体验，您可以在其中看到协作者的光标），因为用它来做代码相关交流、学习，看起来挺有价值。在其官方网站写道：“是为了让编程更容易上手。我们为教育者、学习者和开发者构建强大而简单的工具和平台“。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61b1f5ff48f785032a2400ae" target="_blank" rel="external">倾城之链 - The collaborative browser based IDE</a></p>
-<h2 id="腾讯兔小巢-免费便捷的用户意见反馈服务平台"><a href="#腾讯兔小巢-免费便捷的用户意见反馈服务平台" class="headerlink" title="腾讯兔小巢-免费便捷的用户意见反馈服务平台"></a><a href="https://nicelinks.site/post/61ae1bfd9b06756d7dc1a3fb" target="_blank" rel="external">腾讯兔小巢-免费便捷的用户意见反馈服务平台</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a> · <a href="https://nicelinks.site/tags/服务" target="_blank" rel="external"><code>服务</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<blockquote>
-<p>兔小巢是腾讯推出的一款轻量、免费的用户意见反馈服务平台，旨在方便地嵌入APP/微信公众号/QQ公众号，为中小企业或团队快速搭建用户反馈通道，帮助产品提升服务水平和效率</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/txc.qq.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 腾讯兔小巢-免费便捷的用户意见反馈服务平台"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://txc.qq.com/" target="_blank" rel="external">兔小巢</a>是腾讯推出的一款轻量、<code>免费</code>的用户意见反馈服务平台。几行代码 拥有和腾讯网一样的互动社区，让反馈变得便捷，轻巧；对运营人员（不再疲于运营）、程序员（不必自建反馈）、产品经理（微信推送回复）都能产生作用：</p>
-<ul>
-<li>运营人员：无需登录后台即可简单管理，你与客户的沟通平台永远简洁有序；</li>
-<li>程序员：几行代码将兔小巢放入在任何地方，包括公众号、APP、H5、网站等；</li>
-<li>产品经理：用户通过微信收到你的回复，你与用户沟通更加高效；</li>
-</ul>
-<p><a href="https://nicelinks.site/redirect?url=https://txc.qq.com/" target="_blank" rel="external">兔小巢</a>可轻松定制属于自己的反馈平台，一站式满足管理、技术、客服、运营等多角色使用需求，同时享用安全稳定、高性能、高延展的底层设施。看似复杂的系统，从此触手可及。您可以从以下几个功能特征，更加全面了解<a href="https://nicelinks.site/redirect?url=https://txc.qq.com/" target="_blank" rel="external">兔小巢</a>：</p>
-<ul>
-<li><strong>数据一键导出</strong>：方便导出所有数据，方便数据的其他使用；</li>
-<li><strong>不介入数据</strong>：只负责技术支撑，不介入任何产品数据；</li>
-<li><strong>稳定可靠</strong>：腾讯门神等多个安全系统为反馈数据保驾护航；</li>
-</ul>
-<p>其他如<a href="https://nicelinks.site/post/5b40437e615bf842b6091043" target="_blank" rel="external">语雀</a>也具有类似的功能，虽然功能后续更强大，只可惜不是所有用户都具有其账号；先前做的几款 Web（如<a href="https://nicelinks.site/redirect?url=https://support.qq.com/products/368784" target="_blank" rel="external">曼妙句子</a>） 也是采用<a href="https://nicelinks.site/redirect?url=https://txc.qq.com/" target="_blank" rel="external">兔小巢</a>作为反馈平台，省却很多麻烦；与用户沟通，相对要高效很多。对此感兴趣的朋友，可以查看<a href="https://nicelinks.site/redirect?url=https://txc.qq.com/helper/fiveFaq" target="_blank" rel="external">兔小巢接入文档</a>，从而了解更多。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61ae1bfd9b06756d7dc1a3fb" target="_blank" rel="external">倾城之链 - 腾讯兔小巢-免费便捷的用户意见反馈服务平台</a></p>
-<h2 id="Budibase-Create-modern-business-apps-in-minutes"><a href="#Budibase-Create-modern-business-apps-in-minutes" class="headerlink" title="Budibase | Create modern business apps in minutes"></a><a href="https://nicelinks.site/post/61ab30102afff60541cdbaa8" target="_blank" rel="external">Budibase | Create modern business apps in minutes</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external"><code>网站生成器</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/无代码" target="_blank" rel="external"><code>无代码</code></a></p>
-<p><strong>关键字</strong>：Low code platform,Custom software,Web application builder,internal tools,internal tool builder</p>
-<blockquote>
-<p>Budibase is a modern, open source low-code platform for building modern internal applications in minutes.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/budibase.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Budibase | Create modern business apps in minutes"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://budibase.com/" target="_blank" rel="external">Budibase</a>，是一个<strong>开源</strong>的低代码平台，是一种构建业务应用程序的更快方法，可以为团队赋能并提高生产力。<a href="https://nicelinks.site/redirect?url=https://budibase.com/" target="_blank" rel="external">Budibase</a> 汇集了构建业务应用程序所需的一切，并将最佳的开发人员体验与对速度、性能和用户体验的执着关注相结合。您可以从以下几个功能特征，来了解 <a href="https://nicelinks.site/redirect?url=https://budibase.com/" target="_blank" rel="external">Budibase</a> 的强大：</p>
-<ul>
-<li><strong>内部工具</strong>：创建可简化操作并无缝融入您的工作流程的内部工具。</li>
-<li><strong>形式</strong>：使用 Budibase 一流的表单生成器公开、私下或同时收集数据。</li>
-<li><strong>管理面板</strong>：连接到您的数据库并在几分钟内构建一个具有相关权限的管理面板。</li>
-<li><strong>传送门</strong>：为您的客户、合作伙伴、供应商和员工创建安全且引人入胜的门户。</li>
-<li><strong>开源和免费</strong>：Budibase 是开源的，您可以在自己的基础架构上自托管 Budibase 应用程序。</li>
-<li><strong>内部数据库</strong>：Budibase 有一个内部数据库，可让您在几分钟内构建业务应用程序。</li>
-<li><strong>公共和私人应用</strong>：使用 Budibase，您可以轻松快速地构建公共和私有应用程序，或两者兼而有之。</li>
-</ul>
-<p>除上述提及的，<a href="https://nicelinks.site/redirect?url=https://budibase.com/" target="_blank" rel="external">Budibase</a> 在<strong>数据</strong>（连接到外部数据库、从 Rest API 提取数据、导入 CSV 或从头开始使用 Budibase 的内置数据库）、<strong>设计</strong>（设计适用于所有设备的精美商务应用）、<strong>自动化</strong>（只需单击几下即可自动执行手动流程）、部署（借助 Budibase 的开源平台，应用程序数据永远不必离开您的基础架构。通过 Kubernetes、Docker、Digital Ocean 进行部署。或者选择 Budibase Cloud，让 Budibase 为您管理一切。）等方面，也是做了出色的设定。</p>
-<p>在 <a href="https://nicelinks.site/redirect?url=https://budibase.com/" target="_blank" rel="external">Budibase</a> 关于页面写到： Budibase 是一个专为提高速度和生产力而设计的开发平台。使用 Budibase，开发人员不再经历重复、长开发周期和挫折。相反，开发人员的工作效率更高、更快乐，并且可以在几分钟内交付他们引以为豪的应用程序。其使命是：打造全球领先的商业应用生态系统。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61ab30102afff60541cdbaa8" target="_blank" rel="external">倾城之链 - Budibase | Create modern business apps in minutes</a></p>
-<h2 id="Mark-Text"><a href="#Mark-Text" class="headerlink" title="Mark Text"></a><a href="https://nicelinks.site/post/61ab2c6f2afff60541cdbaa6" target="_blank" rel="external">Mark Text</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Markdown" target="_blank" rel="external"><code>Markdown</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/编辑器" target="_blank" rel="external"><code>编辑器</code></a></p>
-<blockquote>
-<p>Simple and Elegant Markdown Editor Focused on speed and usability. Available for macOS, Windows and Linux.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/marktext.app.png?x-oss-process=style/png2jpg" alt="倾城之链 - Mark Text"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://marktext.app/" target="_blank" rel="external">Mark Text</a>，一个简单而优雅的开源 Markdown 编辑器，专注于速度和可用性。适用于 Linux、macOS 和 Windows。Mark Text 是一个 MIT 许可的开源项目，最新版本将始终可以从 GitHub 发布页面免费下载。Mark Text 还在发展中，您可以从以下特征，来了解它的强大：</p>
-<ul>
-<li>实时预览 (WYSIWYG) 和干净简单的界面，以获得无干扰的写作体验。</li>
-<li>支持 CommonMark Spec、GitHub Flavored Markdown Spec 和选择性支持 Pandoc markdown。</li>
-<li>Markdown 扩展，例如数学表达式 (KaTeX)、前端和表情符号。</li>
-<li>支持段落和内联样式快捷方式，以提高您的写作效率。</li>
-<li>输出 <strong>HTML</strong> 和 <strong>PDF</strong> 文件。</li>
-<li>各种主题：<strong>Cadmium Light</strong>、<strong>Material Dark</strong> 等。</li>
-<li>多种编辑模式：<strong>源代码模式</strong>、<strong>打字机模式</strong>、<strong>焦点模式</strong>。</li>
-<li><strong>直接从剪贴板粘贴图像</strong>。</li>
-</ul>
-<p>为什么要写另一个编辑器？作者给出了说明：</p>
-<blockquote>
-<ul>
-<li>我喜欢写作。我用了很多 markdown 编辑器，但仍然没有一个编辑器可以完全满足我的需求。当我写一些难以忍受的错误时，我不喜欢被打扰。Mark Text 使用虚拟 DOM 来呈现页面，这具有高效和开源的额外好处。这样任何喜欢 Markdown 和写作的人都可以使用 Mark Text。</li>
-<li>如上所述，Mark Text 是完全免费和开源的，并将永远开源。我们希望所有 Markdown 爱好者都能贡献自己的代码，帮助将 Mark Text 开发成流行的 Markdown 编辑器。</li>
-<li>有很多 Markdown 编辑器，它们都有自己的优点，有些具有其他人没有的功能。很难满足每个 Markdown 用户的需求，但我们希望 Mark Text 能够尽可能满足每个 markdown 用户。尽管最新的 Mark Text 仍然不完美，但我们会尽力做到最好。</li>
-</ul>
-</blockquote>
-<p>个人也喜欢写作，而且喜欢 <a href="https://nicelinks.site/tags/Markdown" target="_blank" rel="external">Markdown 编辑器</a>来书写✍️；已尝试过很多相关产品，但 <a href="https://nicelinks.site/redirect?url=https://marktext.app/" target="_blank" rel="external">Mark Text</a> 还是给我留下很深的印象，尤其是支持<strong>直接从剪贴板粘贴图像</strong>这一功能；对 Markdown 编辑器感兴趣的朋友，不妨尝试下。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61ab2c6f2afff60541cdbaa6" target="_blank" rel="external">倾城之链 - Mark Text</a></p>
-<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>人的一生要经历太多的生离死别，那些突如其来的离别往往将人伤得措手不及。<strong>人生何处不相逢，但有些转身，真的就是一生，从此后会无期，永不相见</strong>。 用力爱过的人，讲再见那一刻格外艰难。 世界上最遥远的距离不是生离死别，而是对方已经云淡风轻，你却念念不忘。── 白落梅《你若安好便是晴天 - 林徽因传》</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" alt="小程序码 - 倾城之链"></p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://forum.lovejade.cn/d/125-42" target="_blank" rel="external">优质网站同好者周刊（第 42 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/121-41" target="_blank" rel="external">优质网站同好者周刊（第 41 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/119-40" target="_blank" rel="external">优质网站同好者周刊（第 40 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/118-39" target="_blank" rel="external">优质网站同好者周刊（第 39 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/116-38" target="_blank" rel="external">优质网站同好者周刊（第 38 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/112-37" target="_blank" rel="external">优质网站同好者周刊（第 37 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>优质网站同好者周刊（第 42 期）- 倾城之链</title>
     <link href="https://www.jeffjade.com/2021/12/03/231-nicelinks-weekly-042/"/>
     <id>https://www.jeffjade.com/2021/12/03/231-nicelinks-weekly-042/</id>
@@ -2165,89 +2117,6 @@
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>腾讯云服务器使用感受，及折腾笔记</title>
-    <link href="https://www.jeffjade.com/2021/11/27/230-talk-about-tencent-cloud-cvm/"/>
-    <id>https://www.jeffjade.com/2021/11/27/230-talk-about-tencent-cloud-cvm/</id>
-    <published>2021-11-26T17:30:00.000Z</published>
-    <updated>2021-12-01T05:40:03.315Z</updated>
-    
-    <content type="html"><![CDATA[<p>年岁渐长，有那么些时候，总要找个机会或方向，为整日疲于挣钱的自己花点钱。前阵子，有入手 Apple SERIES 7 外，趁着腾讯云搞促销，有购买一台云服务器，以供业余把玩些有趣的项目。先前有使用 DigitalOcean 以及阿里云的云服务器产品，但初入手腾讯云服务器，仍费了些功夫，在此记录一篇文章，以记载个中使用感受，及折腾感记，希望对“后来者”，有所帮助。</p>
-<a id="more"></a>
-<p><img src="https://nicelinks.oss-cn-shenzhen.aliyuncs.com/cloud.tencent.com.png" alt="腾讯云服务器使用感受，及折腾感记"></p>
-<p>有必要分享下所购买的规格及价格，腾讯云因为众所周知的原因，促销是真的便宜，2核 4GB 3Mbps，3 年也才 707 人民币；不过其续费是真的贵，一年就需要 4049 元；这种“杀熟”的玩法，国内的几个厂商，可谓“一丘之貉”；阿里云在这一块儿，有过之而无不及：1 核 1 GB 1Mbps，续费一年就需要 1700 元 ── 这也是想尝试下其他厂商产品的缘由。</p>
-<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ol>
-<li>腾讯或许是不自信？自家产品（无论是公众号、还是云服务器），对扫码登录，有一种无以复加的执著；即便是 QQ 注册账号，登录时也必须再加一道微信扫码。而且，登录有效期极短，这给人体验十分不好。</li>
-<li>比较习惯使用 Ubuntu 系统；首次登录时候，总也登录不上，说是账号密码错误，好一番折腾，各种查找文档才解决 ── 原来腾讯云 Ubuntu 系统账户名默认为 <code>ubuntu</code>；后起之辈，搞得与业界不一致，这样是处于什么考量呢？十分不解。</li>
-<li>基于「账号密码」登录服务器，相对来说很繁琐。原本想换成基于 SSH 登录，各种折腾，竟然不能如愿；后参考文档 ── <a href="https://cloud.tencent.com/document/product/213/35700" target="_blank" rel="external">使用 SSH 登录 Linux 实例</a>，一番操作倒是可以登录，却仍要输入密码，谜之设定，也是不得不服。</li>
-<li>无论是通过网页，还是基于终端操作，其体验尚可，与其他竞品倒是没有明显不足。值得一提的是，其云服务器，因为内置了 <a href="https://nicelinks.site/redirect?url=https://snapcraft.io/" target="_blank" rel="external">snap</a>，因此安装些软件（如 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a>、<a href="https://nicelinks.site/post/5b37d29e187e143b63cf01f0" target="_blank" rel="external">Flutter</a>），倒是非常方便。</li>
-</ol>
-<h2 id="折腾笔记"><a href="#折腾笔记" class="headerlink" title="折腾笔记"></a>折腾笔记</h2><h3 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a></h3><p>安装 <a href="https://nicelinks.site/post/5b7036890f8719053c094d68" target="_blank" rel="external">Docker</a>，可以参考文章：<a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank" rel="external">Install Docker Engine on Ubuntu</a>。但操作起来颇为麻烦；但基于 <a href="https://nicelinks.site/redirect?url=https://snapcraft.io/" target="_blank" rel="external">snap</a>，就非常方便。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo snap install docker</div></pre></td></tr></table></figure>
-<p>颇为值得一提的是，腾讯云服务器的「错误提示」，做得蛮好。就在嫌安装 Docker 比较麻烦时，有尝试运行下 <code>Docker</code> 命令（验证下是不是有内置），收到如下错误及提示（建议），这值得为之一赞。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Command &apos;docker&apos; not found, but can be installed with:</div><div class="line"></div><div class="line">sudo snap install docker</div><div class="line">sudo apt  install docker.io</div><div class="line"></div><div class="line">See &apos;snap info docker&apos; for additional versions.</div></pre></td></tr></table></figure>
-<h3 id="安装-Docker-Compose"><a href="#安装-Docker-Compose" class="headerlink" title="安装 Docker Compose"></a>安装 Docker Compose</h3><p>Docker Compose，用于定义和运行多容器 Docker 应用程序的工具。通过 Compose，您可以使用 YML 文件来配置应用程序需要的所有服务。然后，使用一个命令，就可以从 YML 文件配置中创建并启动所有服务。在 Linux 系统上安装 Compose，可以参见文章：<a href="https://docs.docker.com/compose/install/#install-compose" target="_blank" rel="external">Install Docker Compose</a>；具体操作如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</div></pre></td></tr></table></figure>
-<h4 id="解决-Dcoker-相关报错"><a href="#解决-Dcoker-相关报错" class="headerlink" title="解决 Dcoker 相关报错"></a>解决 Dcoker 相关报错</h4><h5 id="cannot-update-snap-namespace-cannot-create-symlink-in-“-etc-docker”-existing-file-in-the-way"><a href="#cannot-update-snap-namespace-cannot-create-symlink-in-“-etc-docker”-existing-file-in-the-way" class="headerlink" title="cannot update snap namespace: cannot create symlink in “/etc/docker”: existing file in the way"></a>cannot update snap namespace: cannot create symlink in “/etc/docker”: existing file in the way</h5><p>在重启服务器之后，会报如下错误：</p>
-<blockquote>
-<p>cannot update snap namespace: cannot create symlink in “/etc/docker”: existing file in the way</p>
-</blockquote>
-<p>其解决办法参见：<a href="https://stackoverflow.com/questions/69134662/cannot-update-snap-namespace-cannot-create-symlink-in-etc-docker-existing-f" target="_blank" rel="external">Cannot update snap namespace: cannot create symlink in “/etc/docker”: existing file in the way</a>，具体操作如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /etc/docker</div><div class="line">sudo snap refresh</div></pre></td></tr></table></figure>
-<h3 id="部署-Wiki-js-服务"><a href="#部署-Wiki-js-服务" class="headerlink" title="部署 Wiki.js 服务"></a>部署 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 服务</h3><blockquote>
-<p><a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a>，一个基于  <a href="https://nicelinks.site/post/5f376ebe1751843ef894c899" target="_blank" rel="external">Node.js</a> 的<strong>现代</strong>、<strong>轻量级</strong>和<strong>强大</strong>的 Wiki 应用程序（值得一提的是，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 是一个开源项目）。最近有尝试基于 <a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 部署了一个服务：<a href="https://wiki.lovejade.cn/?ref=nicelinks.site" target="_blank" rel="external">清风明月阁</a>，切实感受了下 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 的强大功能与便捷使用；在其官方网站提到：“使用 Wiki.js 漂亮而直观的界面，让编写文档成为一种乐趣！“，其<strong>所言不虚</strong>。</p>
-</blockquote>
-<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wikijs-ui-basics.png" alt="Wiki.js Basics UI"></p>
-<p>部署使用到了 Docker Compose，具体可参见文档：<a href="https://docs.requarks.io/install/docker#using-docker-compose" target="_blank" rel="external">Using Docker Compose Install Wiki.js</a>；下面是 <code>docker-compose.yml</code> 文件的完整演示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">version: &quot;3&quot;</div><div class="line">services:</div><div class="line"></div><div class="line">  db:</div><div class="line">    image: postgres:11-alpine</div><div class="line">    environment:</div><div class="line">      POSTGRES_DB: wiki</div><div class="line">      POSTGRES_PASSWORD: wikijsrocks</div><div class="line">      POSTGRES_USER: wikijs</div><div class="line">    logging:</div><div class="line">      driver: &quot;none&quot;</div><div class="line">    restart: unless-stopped</div><div class="line">    volumes:</div><div class="line">      - db-data:/var/lib/postgresql/data</div><div class="line"></div><div class="line">  wiki:</div><div class="line">    image: requarks/wiki:2</div><div class="line">    depends_on:</div><div class="line">      - db</div><div class="line">    environment:</div><div class="line">      DB_TYPE: postgres</div><div class="line">      DB_HOST: db</div><div class="line">      DB_PORT: 5432</div><div class="line">      DB_USER: wikijs</div><div class="line">      DB_PASS: wikijsrocks</div><div class="line">      DB_NAME: wiki</div><div class="line">    restart: unless-stopped</div><div class="line">    ports:</div><div class="line">      - &quot;80:3000&quot;</div><div class="line"></div><div class="line">volumes:</div><div class="line">  db-data:</div></pre></td></tr></table></figure>
-<p>只需在 <code>docker-compose.yml</code> 所在根目录，运行如下命令即可：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo docker-compose up</div></pre></td></tr></table></figure>
-<p>但在实际操作中，会报出如下令人不解错误（这颇令人令人费解，如果这是常见问题，文档该有所修正才是）：</p>
-<blockquote>
-<p>delete from “locales” where “code” != $1 - update or delete on table “locales” violates foreign key constraint “pagehistory_localecode_foreign” on table “pageHistory”</p>
-</blockquote>
-<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/docker-compose-wikijs-errer.png" alt="Docker Compose Wikijs Error"></p>
-<p>仔细看了下 Docker Compose 配置文件，发现 volumes 的配置，存在些疑问，对其稍作修改，便解决了问题。如此，属于我 Wiki 服务，就这么较为轻松的部署成功了。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#volumes:</span></div><div class="line"><span class="comment">#   - db-data:/var/lib/postgresql/data</span></div><div class="line"><span class="attr">volumes:</span></div><div class="line"><span class="bullet">    -</span> ./db-data:/var/lib/postgresql/data</div></pre></td></tr></table></figure>
-<h3 id="安装-nginx"><a href="#安装-nginx" class="headerlink" title="安装 nginx"></a>安装 nginx</h3><p>除了通过源码包编译安装，还可以通过 <code>apt-get</code>，具体操作如下（snap 不支持安装 Nginx）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nginx</div></pre></td></tr></table></figure>
-<h4 id="解决-nginx-相关报错"><a href="#解决-nginx-相关报错" class="headerlink" title="解决 nginx 相关报错"></a>解决 nginx 相关报错</h4><h5 id="nginx-emerg-“server”-directive-is-not-allowed-here"><a href="#nginx-emerg-“server”-directive-is-not-allowed-here" class="headerlink" title="nginx: [emerg] “server” directive is not allowed here"></a><strong>nginx: [emerg] “server” directive is not allowed here</strong></h5><p>如果所配置的内容，不能如期生效（如 https（443 端口） 配置，连接被拒绝：nginx port 443: Connection refused ）；除了要检查是否将 443 添加「安全组规则」，另外就是要检查 <code>nginx</code> 配置（可通过 <code>nginx -c</code> 命令），具体操作如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">nginx -c /etc/nginx/conf.d/[XYZ].conf</div><div class="line"># Error</div><div class="line"># server directive is not allowed here in /etc/nginx/conf.d/[XYZ].conf</div></pre></td></tr></table></figure>
-<p>加入出现如上报错；根据经验，可从以下几个角度来排查 &amp; 解决：</p>
-<ol>
-<li>server 单词拼写是否有误；</li>
-<li>配置里括号是否对应；</li>
-<li>配置文件顶部是否有不明字符；</li>
-<li>查看配置文件命名是否合规（<code>xx.conf</code>）；</li>
-</ol>
-<h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h2><ul>
-<li><a href="https://quickapp.lovejade.cn/okr-working-method-let-you-more-efficiently/" target="_blank" rel="external">OKR 工作法，带你聚焦目标，高效工作</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/#">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://jeffjade.com/2017/10/09/130-front-end-notes/" target="_blank" rel="external">晚晴幽草说之-前端札记</a></li>
-<li><a href="https://jeffjade.com/2017/02/05/119-wanqingyoucaoshuo-/" target="_blank" rel="external">《晚晴幽草说－序》</a></li>
-<li><a href="https://jeffjade.com/2017/09/29/128-talking-about-movies-or-life/" target="_blank" rel="external">晚晴幽草说之 — 谈用心</a></li>
-<li><a href="https://www.jeffjade.com/2015/04/12/2015-04-12-thought-choose-effort/">努力，思考，选择</a></li>
-<li><a href="https://www.jeffjade.com/2015/02/02/2015-02-02-thoughtof-overtime-work/">关于加班这件事儿的随想</a></li>
-<li><a href="https://www.jeffjade.com/2015/04/02/2015-04-01-thought-do/">做，还是不做？做！</a></li>
-<li><a href="https://www.jeffjade.com/2015/07/05/2015-07-05-thought-of-life/">写在人生边上之守心</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      年岁渐长，有那么些时候，总要找个机会或方向，为整日疲于挣钱的自己花点钱。前阵子，有入手 Apple SERIES 7 外，趁着腾讯云搞促销，有购买一台云服务器，以供业余把玩些有趣的项目。先前有使用 DigitalOcean 以及阿里云的云服务器产品，但初入手腾讯云服务器，仍费了些功夫，在此记录一篇文章，以记载个中使用感受，及折腾感记，希望对“后来者”，有所帮助。
-    
-    </summary>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/categories/Toss/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
