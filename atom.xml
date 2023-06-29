@@ -2017,73 +2017,124 @@
   </entry>
   
   <entry>
-    <title>优质网站同好者周刊（第 42 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/12/03/231-nicelinks-weekly-042/"/>
-    <id>https://www.jeffjade.com/2021/12/03/231-nicelinks-weekly-042/</id>
+    <title>优质网站同好者周刊（第 43 期）- 倾城之链</title>
+    <link href="https://www.jeffjade.com/2021/12/03/232-nicelinks-weekly-043/"/>
+    <id>https://www.jeffjade.com/2021/12/03/232-nicelinks-weekly-043/</id>
     <published>2021-12-03T13:21:00.000Z</published>
-    <updated>2022-01-08T08:28:31.114Z</updated>
+    <updated>2022-01-08T08:28:28.944Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
 <a id="more"></a>
 <p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="Wiki-js-A-modern-and-powerful-wiki-app-built-on-Node-js"><a href="#Wiki-js-A-modern-and-powerful-wiki-app-built-on-Node-js" class="headerlink" title="Wiki.js | A modern and powerful wiki app built on Node.js"></a><a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js | A modern and powerful wiki app built on Node.js</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Wiki" target="_blank" rel="external"><code>Wiki</code></a> · <a href="https://nicelinks.site/tags/开源" target="_blank" rel="external"><code>开源</code></a> · <a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external"><code>网站生成器</code></a></p>
+<h2 id="Image-Extractor"><a href="#Image-Extractor" class="headerlink" title="Image Extractor"></a><a href="https://nicelinks.site/post/61b2002a48f785032a2400b0" target="_blank" rel="external">Image Extractor</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/图片" target="_blank" rel="external"><code>图片</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/下载" target="_blank" rel="external"><code>下载</code></a></p>
+<p><strong>关键字</strong>：extract images online, image extractor, download images, view images, extract images from website, download images from website, image bulk downloader, find images on website</p>
 <blockquote>
-<p>The most powerful and extensible open source Wiki software. Make documentation a joy to write using Wiki.js’s beautiful and intuitive interface!</p>
+<p>A free tool to extract, view and download images from any website by using a virtual browser.</p>
 </blockquote>
-<p><img src="https://oss.nicelinks.site/js.wiki.png?x-oss-process=style/png2jpg" alt="倾城之链 - Wiki.js | A modern and powerful wiki app built on Node.js"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a>，一个基于  <a href="https://nicelinks.site/post/5f376ebe1751843ef894c899" target="_blank" rel="external">Node.js</a> 的<strong>现代</strong>、<strong>轻量级</strong>和<strong>强大</strong>的 Wiki 应用程序（值得一提的是，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 是一个开源项目）。您可以从以下几个功能特征，来领略下 <a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 的强大：</p>
-<h3 id="随处安装"><a href="#随处安装" class="headerlink" title="随处安装"></a>随处安装</h3><p>几乎可以在任何平台上运行，并且与 PostgreSQL、MySQL、MariaDB、MS SQL Server 或 SQLite 兼容！</p>
-<h3 id="表现"><a href="#表现" class="headerlink" title="表现"></a>表现</h3><p>Wiki.js 在速度极快的 Node.js 引擎上运行，在构建时考虑到了性能。</p>
-<h3 id="受保护"><a href="#受保护" class="headerlink" title="受保护"></a>受保护</h3><p>使您的 wiki 公开、完全私有或两者兼而有之。</p>
-<h3 id="行政"><a href="#行政" class="headerlink" title="行政"></a>行政</h3><p>使用广泛而直观的管理区域管理 wiki 的所有方面。</p>
-<h3 id="可定制"><a href="#可定制" class="headerlink" title="可定制"></a>可定制</h3><p>完全自定义 wiki 的外观，包括明暗模式。</p>
-<h3 id="可扩展"><a href="#可扩展" class="headerlink" title="可扩展"></a>可扩展</h3><p>无论是在微型 Raspberry Pi 上还是在云中的高性能 VM 上，Wiki.js 都可以智能地利用可用资源。</p>
-<p>除此之外，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 捆绑了您需要的一切。诸如验证（本地认证、社会认证、企业认证、2FA）、编辑（支持 Markdown、纯 HTML、API 文档等等）、历史（版本跟踪、比较版本）、本土化、媒体资产、渲染、搜索（有内置的搜索引擎，无需设置；也支持使用 Algolia、Azure 搜索等云搜索服务来增强您的 wiki 搜索功能；也可以使用您现有的 Elasticsearch（弹性搜索） 安装来增强您的 wiki 搜索功能）、储存、用户管理、主题（注入自定义 CSS / JS、黑暗模式、自定义主题等）…… 这并非所有团队都需要相同的功能集。这就是为什么 Wiki.js 提供了大量可以按需打开/关闭的模块。可以毫不夸张的说，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 是所见过<strong>最棒的</strong> Wiki 、Doc 相关的应用程序。</p>
-<p>除了现代轻量、功能强大，<a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a>  安装也十分简单，您将在几分钟内准备就绪！而且提供适用于所有平台的分步<a href="https://nicelinks.site/redirect?url=https://js.wiki/get-started" target="_blank" rel="external">安装指南</a>。最近有尝试基于 <a href="https://nicelinks.site/redirect?url=https://js.wiki/" target="_blank" rel="external">Wiki.js</a> 部署了一个服务：<a href="https://wiki.lovejade.cn/?ref=nicelinks.site" target="_blank" rel="external">清风明月阁</a>（使用 Docker Compose，具体有记载于<a href="https://forum.lovejade.cn/d/122" target="_blank" rel="external">腾讯云服务器使用感受，及折腾笔记</a>），切实感受了下 Wiki.js 的强大功能与便捷使用；在其官方网站提到：“使用 Wiki.js 漂亮而直观的界面，让编写文档成为一种乐趣！“，其<strong>所言不虚</strong>。</p>
-<h2 id="色影无忌-中文影像生活门户"><a href="#色影无忌-中文影像生活门户" class="headerlink" title="色影无忌_中文影像生活门户"></a><a href="https://nicelinks.site/post/61a8d9b6465c2155e2d15894" target="_blank" rel="external">色影无忌_中文影像生活门户</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/摄影" target="_blank" rel="external"><code>摄影</code></a> · <a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a> · <a href="https://nicelinks.site/tags/社区" target="_blank" rel="external"><code>社区</code></a></p>
-<p><strong>关键字</strong>：色影无忌, 摄影, 影像, 图片, 人体艺术摄影, 数码相机, 镜头, 摄影论坛, 摄影网, 无忌影展, 摄影技巧, 摄影师, 器材评测, 摄影作品, 摄影器材, 模特, 影楼, 汽车, 旅游</p>
+<p><img src="https://oss.nicelinks.site/extract.pics.png?x-oss-process=style/png2jpg" alt="倾城之链 - Image Extractor"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://extract.pics/" target="_blank" rel="external">Extract.pics</a> 是一个易于使用的工具，允许您从任何公共网站提取、查看和下载图像。只需将网站的 URL 粘贴到输入字段中，然后单击“提取”即可开始该过程。完全免费使用！</p>
+<p>提取过程将需要几秒钟，以确保它找到尽可能多的图像。完成后，您将在有组织的网格中看到所有图像。您现在可以通过按大小、宽度、高度或找到它们的顺序对找到的图像进行<strong>排序</strong>来探索找到的图像。此外，您可以按名称、大小或类型/文件格式<strong>搜索</strong>图像。这使得准确地找到您需要的图像变得非常容易。</p>
+<p>您现在可以使用<strong>缩放工具在</strong>浅色或深色背景下<strong>检查</strong>图像、<strong>下载</strong>单个图像并<strong>复制</strong>图像<strong>的 URL</strong>。如果您想一次<strong>下载多个</strong>图像，您可以选择所有需要的图像，然后将它们全部下载到<strong>ZIP 存档中</strong>。</p>
+<p>同类型的网站，还有 <a href="https://nicelinks.site/redirect?url=https://imagecyborg.com/" target="_blank" rel="external">Image Cyborg</a><br>、<a href="https://nicelinks.site/redirect?url=https://imgdownloader.com/" target="_blank" rel="external">ImgDownloader - Bulk Download Image from Website and URL</a>，有初步做了比较：</p>
+<ul>
+<li><a href="https://nicelinks.site/redirect?url=https://imagecyborg.com/" target="_blank" rel="external">Image Cyborg</a> 批量下载网页上的所有图像。只需粘贴 URL 或链接即可获取图像。（评价：下载的图片，很全面；但，您需要创建一个免费帐户或登录才能使用此应用程序，这一点不是很方便）；</li>
+<li><a href="https://nicelinks.site/redirect?url=https://imgdownloader.com/" target="_blank" rel="external">ImgDownloader - Bulk Download Image from Website and URL</a> 强大的图像下载工具，可让您<strong>从任何网站下载所有图像，谷歌图像</strong>。<strong>从 Pinterest 和 Instagram 下载所有图片和视频</strong>！只需复制并粘贴 URL，即可立即获取所有图像、图片或视频，mp4。（评价：下载的图片，很全面；而且可以处理来自网站以外的图片）；</li>
+<li><a href="https://nicelinks.site/redirect?url=https://extract.pics/" target="_blank" rel="external">Extract.pics</a> 是一个易于使用的工具，允许您从任何公共网站提取、查看和下载图像。只需将网站的 URL 粘贴到输入字段中，然后单击“提取”即可开始该过程。（评价：下载的图片，似乎不够全面；但提供了更加强大的能力，使得您可以更快找到您需要的图像）；</li>
+</ul>
+<p>如果您从公共网站提取、查看和下载图像的诉求，您可按需使用相关工具；目前而言（2021 年 12 月），更推荐使用 <a href="https://nicelinks.site/redirect?url=https://imgdownloader.com/" target="_blank" rel="external">ImgDownloader</a>。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61b2002a48f785032a2400b0" target="_blank" rel="external">倾城之链 - Image Extractor</a></p>
+<h2 id="The-collaborative-browser-based-IDE"><a href="#The-collaborative-browser-based-IDE" class="headerlink" title="The collaborative browser based IDE"></a><a href="https://nicelinks.site/post/61b1f5ff48f785032a2400ae" target="_blank" rel="external">The collaborative browser based IDE</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/在线" target="_blank" rel="external"><code>在线</code></a> · <a href="https://nicelinks.site/tags/IDE" target="_blank" rel="external"><code>IDE</code></a> · <a href="https://nicelinks.site/tags/编辑器" target="_blank" rel="external"><code>编辑器</code></a></p>
 <blockquote>
-<p>色影无忌是中文影像生活门户，发布最及时的影像和摄影行业动态新闻和权威的器材评测和产品资讯，提供高质量的摄影作品发布，摄影技巧交流与分享，拥有活跃度极高的摄影论坛，全球最完整的器材库，摄影器材购买和交易平台，以及汽车、旅游、音响等影像生活内容。</p>
+<p>Replit is a simple yet powerful online IDE, Editor, Compiler, Interpreter, and REPL. Code, compile, run, and host in 50+ programming languages.</p>
 </blockquote>
-<p><img src="https://oss.nicelinks.site/ww.xitek.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 色影无忌_中文影像生活门户"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>，创立于 2000 年 1 月 18 日，旨在为全球华人摄影爱好者提供优质的影像交流平台。早在 2000 年初，<a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>率先提出“没有照相机就没有摄影”的口号，使网站汇聚了大量熟悉摄影器材的顶尖高手；近年来，着力打造优质的影像艺术平台，以在业界具有领导力为目标，同步发展摄影之下的“影像”与“器材”双重概念，现已成为全球广受欢迎的中文影像生活网站。</p>
-<p><a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>网现设有网站、论坛两大板块，网站下辖器材、影像、行色、她影像四大频道。除为摄影爱好者提供专业的影像服务之外，<a href="https://nicelinks.site/redirect?url=https://ww.xitek.com/" target="_blank" rel="external">色影无忌</a>始终关注影像艺术中的专业和前沿领域，从为年轻摄影师提供支持的新锐摄影奖，到专业、高端的影像艺术家年度特展，色影无忌正在构建从爱好者到优秀艺术家、从网络快速消费到专业影像收藏的全方位影像艺术概念和格局。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61a8d9b6465c2155e2d15894" target="_blank" rel="external">倾城之链 - 色影无忌_中文影像生活门户</a></p>
-<h2 id="物色-科学理性的购物百科"><a href="#物色-科学理性的购物百科" class="headerlink" title="物色 - 科学理性的购物百科"></a><a href="https://nicelinks.site/post/61a8d318465c2155e2d15892" target="_blank" rel="external">物色 - 科学理性的购物百科</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/购物" target="_blank" rel="external"><code>购物</code></a> · <a href="https://nicelinks.site/tags/产品测评" target="_blank" rel="external"><code>产品测评</code></a> · <a href="https://nicelinks.site/tags/产品推荐" target="_blank" rel="external"><code>产品推荐</code></a></p>
-<p><strong>关键字</strong>：产品测评, 产品推荐, 物色, 最好的产品, 最佳的产品, 2020年最好的产品</p>
+<p><img src="https://oss.nicelinks.site/replit.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - The collaborative browser based IDE"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://replit.com/" target="_blank" rel="external">Replit</a> 是一个简单而强大的在线 IDE、编辑器、编译器、解释器和 REPL。使用 50 多种编程语言进行编码、编译、运行和托管。它具有以下功能特征：</p>
+<ul>
+<li><strong>浏览器内IDE</strong>：在任何平台、操作系统和设备上使用您喜欢的语言开始编码。</li>
+<li><strong>实时协作</strong>：使用诸如编辑之类的 Google 文档邀请您的朋友、队友和同事直接进入您的代码。</li>
+<li><strong>GitHub 集成</strong>：通过 0 次手动设置导入、运行和协作处理数百万个 GitHub 存储库。-</li>
+<li><strong>50 多种语言</strong>：从 Python 到 C++，再到 HTML 和 CSS，留在一个平台上，用您想要的任何语言学习和编码。</li>
+<li><strong>托管和部署</strong>：当你创建一个新的 repl 时，它会立即生效并与世界共享。</li>
+<li><strong>学习资源</strong>：从超过 300 万热情的程序员、技术专家、创意人员和各种学习者那里学习如何编码。</li>
+<li><strong>团队计划</strong>：通过交互式文档、实时协作和零麻烦的远程面试提高您的团队的工作效率。</li>
+<li><strong>API 和插件</strong>：以编程方式创建应用程序、启动机器人并使用插件自定义 IDE 以满足您的需求。</li>
+</ul>
+<p>因为 <a href="https://nicelinks.site/redirect?url=https://replit.com/" target="_blank" rel="external">Replit</a> 直接在浏览器中编码，且支持多人协作（享受类似于 Google 文档的编辑体验，您可以在其中看到协作者的光标），因为用它来做代码相关交流、学习，看起来挺有价值。在其官方网站写道：“是为了让编程更容易上手。我们为教育者、学习者和开发者构建强大而简单的工具和平台“。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61b1f5ff48f785032a2400ae" target="_blank" rel="external">倾城之链 - The collaborative browser based IDE</a></p>
+<h2 id="腾讯兔小巢-免费便捷的用户意见反馈服务平台"><a href="#腾讯兔小巢-免费便捷的用户意见反馈服务平台" class="headerlink" title="腾讯兔小巢-免费便捷的用户意见反馈服务平台"></a><a href="https://nicelinks.site/post/61ae1bfd9b06756d7dc1a3fb" target="_blank" rel="external">腾讯兔小巢-免费便捷的用户意见反馈服务平台</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a> · <a href="https://nicelinks.site/tags/服务" target="_blank" rel="external"><code>服务</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
 <blockquote>
-<p>为你推荐最好的产品</p>
+<p>兔小巢是腾讯推出的一款轻量、免费的用户意见反馈服务平台，旨在方便地嵌入APP/微信公众号/QQ公众号，为中小企业或团队快速搭建用户反馈通道，帮助产品提升服务水平和效率</p>
 </blockquote>
-<p><img src="https://oss.nicelinks.site/wusebest.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 物色 - 科学理性的购物百科"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://wusebest.com/" target="_blank" rel="external">物色</a>，基于 <a href="https://nicelinks.site/post/602e4a576eaf2a7660805af1" target="_blank" rel="external">WordPress</a> 所搭建的在线网站；其口号是“科学理性的购物百科“，旨在为你推荐最好的产品。该网站主要分为四个模块儿，物色精选、手机数码、智能家居、娱乐影音；其内容颇为详细，评价也较全面且中肯，只可惜近一年（2021）未曾继续更新。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61a8d318465c2155e2d15892" target="_blank" rel="external">倾城之链 - 物色 - 科学理性的购物百科</a></p>
-<h2 id="Snapcraft-Snaps-are-universal-Linux-packages"><a href="#Snapcraft-Snaps-are-universal-Linux-packages" class="headerlink" title="Snapcraft - Snaps are universal Linux packages"></a><a href="https://nicelinks.site/post/61a7924a465c2155e2d15890" target="_blank" rel="external">Snapcraft - Snaps are universal Linux packages</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/应用" target="_blank" rel="external"><code>应用</code></a> · <a href="https://nicelinks.site/tags/Linux" target="_blank" rel="external"><code>Linux</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
+<p><img src="https://oss.nicelinks.site/txc.qq.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 腾讯兔小巢-免费便捷的用户意见反馈服务平台"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://txc.qq.com/" target="_blank" rel="external">兔小巢</a>是腾讯推出的一款轻量、<code>免费</code>的用户意见反馈服务平台。几行代码 拥有和腾讯网一样的互动社区，让反馈变得便捷，轻巧；对运营人员（不再疲于运营）、程序员（不必自建反馈）、产品经理（微信推送回复）都能产生作用：</p>
+<ul>
+<li>运营人员：无需登录后台即可简单管理，你与客户的沟通平台永远简洁有序；</li>
+<li>程序员：几行代码将兔小巢放入在任何地方，包括公众号、APP、H5、网站等；</li>
+<li>产品经理：用户通过微信收到你的回复，你与用户沟通更加高效；</li>
+</ul>
+<p><a href="https://nicelinks.site/redirect?url=https://txc.qq.com/" target="_blank" rel="external">兔小巢</a>可轻松定制属于自己的反馈平台，一站式满足管理、技术、客服、运营等多角色使用需求，同时享用安全稳定、高性能、高延展的底层设施。看似复杂的系统，从此触手可及。您可以从以下几个功能特征，更加全面了解<a href="https://nicelinks.site/redirect?url=https://txc.qq.com/" target="_blank" rel="external">兔小巢</a>：</p>
+<ul>
+<li><strong>数据一键导出</strong>：方便导出所有数据，方便数据的其他使用；</li>
+<li><strong>不介入数据</strong>：只负责技术支撑，不介入任何产品数据；</li>
+<li><strong>稳定可靠</strong>：腾讯门神等多个安全系统为反馈数据保驾护航；</li>
+</ul>
+<p>其他如<a href="https://nicelinks.site/post/5b40437e615bf842b6091043" target="_blank" rel="external">语雀</a>也具有类似的功能，虽然功能后续更强大，只可惜不是所有用户都具有其账号；先前做的几款 Web（如<a href="https://nicelinks.site/redirect?url=https://support.qq.com/products/368784" target="_blank" rel="external">曼妙句子</a>） 也是采用<a href="https://nicelinks.site/redirect?url=https://txc.qq.com/" target="_blank" rel="external">兔小巢</a>作为反馈平台，省却很多麻烦；与用户沟通，相对要高效很多。对此感兴趣的朋友，可以查看<a href="https://nicelinks.site/redirect?url=https://txc.qq.com/helper/fiveFaq" target="_blank" rel="external">兔小巢接入文档</a>，从而了解更多。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61ae1bfd9b06756d7dc1a3fb" target="_blank" rel="external">倾城之链 - 腾讯兔小巢-免费便捷的用户意见反馈服务平台</a></p>
+<h2 id="Budibase-Create-modern-business-apps-in-minutes"><a href="#Budibase-Create-modern-business-apps-in-minutes" class="headerlink" title="Budibase | Create modern business apps in minutes"></a><a href="https://nicelinks.site/post/61ab30102afff60541cdbaa8" target="_blank" rel="external">Budibase | Create modern business apps in minutes</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external"><code>网站生成器</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/无代码" target="_blank" rel="external"><code>无代码</code></a></p>
+<p><strong>关键字</strong>：Low code platform,Custom software,Web application builder,internal tools,internal tool builder</p>
 <blockquote>
-<p>Snaps are containerised software packages that are simple to create and install. They auto-update and are safe to run. And because they bundle their dependencies, they work on all major Linux systems without modification.</p>
+<p>Budibase is a modern, open source low-code platform for building modern internal applications in minutes.</p>
 </blockquote>
-<p><img src="https://oss.nicelinks.site/snapcraft.io.png?x-oss-process=style/png2jpg" alt="倾城之链 - Snapcraft - Snaps are universal Linux packages"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://snapcraft.io/" target="_blank" rel="external">Snapcraft</a> 是适用于桌面、云和物联网的应用程序包，易于安装、安全、跨平台和无依赖性。可以从 Snap Store 发现和安装 Snap，Snap Store 是一个拥有数百万用户的 Linux 应用程序商店。Snaps 不仅可以在台式机上运行，​​还可以在物联网设备、服务器和云上运行。更值得称赞的是，Snapcraft 支持<strong>免费构建</strong>、<strong>发布</strong>和<strong>托管</strong>，无论您的项目是否托管在 <a href="https://nicelinks.site/post/59ba80d93df6765c75b77911" target="_blank" rel="external">GitHub</a> 上，您都可以利用我们的构建系统构建和发布到边缘通道，确保用户始终保持最新状态。对于软件开发商，软件分发在您手中（使用 Snapcraft，您可以控制发布 Snap 的时间和方式）。</p>
-<p>近期有新购一台云服务器，其中部分软件，就是基于 Snap 来安装，它给人的体验和感觉非常不错，具体操作有记载于文章：<a href="https://www.jeffjade.com/2021/11/27/230-talk-about-tencent-cloud-cvm/#%E5%AE%89%E8%A3%85-Docker">腾讯云服务器使用感受，及折腾笔记</a>。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61a7924a465c2155e2d15890" target="_blank" rel="external">倾城之链 - Snapcraft - Snaps are universal Linux packages</a></p>
-<h2 id="gitmoji-An-emoji-guide-for-your-commit-messages"><a href="#gitmoji-An-emoji-guide-for-your-commit-messages" class="headerlink" title="gitmoji | An emoji guide for your commit messages"></a><a href="https://nicelinks.site/post/61a781e7465c2155e2d1588e" target="_blank" rel="external">gitmoji | An emoji guide for your commit messages</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Git" target="_blank" rel="external"><code>Git</code></a> · <a href="https://nicelinks.site/tags/程序员" target="_blank" rel="external"><code>程序员</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
+<p><img src="https://oss.nicelinks.site/budibase.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Budibase | Create modern business apps in minutes"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://budibase.com/" target="_blank" rel="external">Budibase</a>，是一个<strong>开源</strong>的低代码平台，是一种构建业务应用程序的更快方法，可以为团队赋能并提高生产力。<a href="https://nicelinks.site/redirect?url=https://budibase.com/" target="_blank" rel="external">Budibase</a> 汇集了构建业务应用程序所需的一切，并将最佳的开发人员体验与对速度、性能和用户体验的执着关注相结合。您可以从以下几个功能特征，来了解 <a href="https://nicelinks.site/redirect?url=https://budibase.com/" target="_blank" rel="external">Budibase</a> 的强大：</p>
+<ul>
+<li><strong>内部工具</strong>：创建可简化操作并无缝融入您的工作流程的内部工具。</li>
+<li><strong>形式</strong>：使用 Budibase 一流的表单生成器公开、私下或同时收集数据。</li>
+<li><strong>管理面板</strong>：连接到您的数据库并在几分钟内构建一个具有相关权限的管理面板。</li>
+<li><strong>传送门</strong>：为您的客户、合作伙伴、供应商和员工创建安全且引人入胜的门户。</li>
+<li><strong>开源和免费</strong>：Budibase 是开源的，您可以在自己的基础架构上自托管 Budibase 应用程序。</li>
+<li><strong>内部数据库</strong>：Budibase 有一个内部数据库，可让您在几分钟内构建业务应用程序。</li>
+<li><strong>公共和私人应用</strong>：使用 Budibase，您可以轻松快速地构建公共和私有应用程序，或两者兼而有之。</li>
+</ul>
+<p>除上述提及的，<a href="https://nicelinks.site/redirect?url=https://budibase.com/" target="_blank" rel="external">Budibase</a> 在<strong>数据</strong>（连接到外部数据库、从 Rest API 提取数据、导入 CSV 或从头开始使用 Budibase 的内置数据库）、<strong>设计</strong>（设计适用于所有设备的精美商务应用）、<strong>自动化</strong>（只需单击几下即可自动执行手动流程）、部署（借助 Budibase 的开源平台，应用程序数据永远不必离开您的基础架构。通过 Kubernetes、Docker、Digital Ocean 进行部署。或者选择 Budibase Cloud，让 Budibase 为您管理一切。）等方面，也是做了出色的设定。</p>
+<p>在 <a href="https://nicelinks.site/redirect?url=https://budibase.com/" target="_blank" rel="external">Budibase</a> 关于页面写到： Budibase 是一个专为提高速度和生产力而设计的开发平台。使用 Budibase，开发人员不再经历重复、长开发周期和挫折。相反，开发人员的工作效率更高、更快乐，并且可以在几分钟内交付他们引以为豪的应用程序。其使命是：打造全球领先的商业应用生态系统。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61ab30102afff60541cdbaa8" target="_blank" rel="external">倾城之链 - Budibase | Create modern business apps in minutes</a></p>
+<h2 id="Mark-Text"><a href="#Mark-Text" class="headerlink" title="Mark Text"></a><a href="https://nicelinks.site/post/61ab2c6f2afff60541cdbaa6" target="_blank" rel="external">Mark Text</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/Markdown" target="_blank" rel="external"><code>Markdown</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/编辑器" target="_blank" rel="external"><code>编辑器</code></a></p>
 <blockquote>
-<p>Gitmoji is an emoji guide for your commit messages. Aims to be a standarization cheatshee /t for using emojis on GitHub’s commit messages.</p>
+<p>Simple and Elegant Markdown Editor Focused on speed and usability. Available for macOS, Windows and Linux.</p>
 </blockquote>
-<p><img src="https://oss.nicelinks.site/gitmoji.dev.png?x-oss-process=style/png2jpg" alt="倾城之链 - gitmoji | An emoji guide for your commit messages"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/" target="_blank" rel="external">Gitmoji</a> <strong>是 GitHub 提交消息的表情符号指南</strong>。旨在成为标准化备忘单：在 GitHub 的提交消息上使用<a href="https://nicelinks.site/redirect?url=https://emoji.muan.co/" target="_blank" rel="external">表情符号</a>的指南。在<strong>提交消息</strong> 上<strong>使用表情符号</strong>提供了一种<strong>简单的方法</strong>来<strong>识别提交的目的或意图，</strong>只需查看所使用的表情符号。由于有很多不同的表情符号，该团队敏锐的发现，需要创建一个可以帮助更轻松地使用表情符号的指南。这个项目是开源的，这意味着每个人都可以参与、建议、讨论和添加新的表情符号。查看<a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/about#contributing-gitmoji" target="_blank" rel="external">贡献部分</a>和<a href="https://nicelinks.site/redirect?url=https://github.com/carloscuesta/gitmoji/blob/master/.github/CONTRIBUTING.md" target="_blank" rel="external">贡献指南</a>。</p>
-<p>其使用方式，非常的简单：从命令行使用 <a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/" target="_blank" rel="external">Gitmoji</a> 的一个简单解决方案，是安装 <a href="https://nicelinks.site/redirect?url=https://github.com/carloscuesta/gitmoji-cli" target="_blank" rel="external">gitmoji-cli</a>。这一个 gitmoji 交互式客户端，用于在提交消息上使用表情符号。具体操作方式如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># install </span></div><div class="line">npm i -g gitmoji-cli</div><div class="line"></div><div class="line"><span class="comment"># init gitmoji</span></div><div class="line">gitmoji -i</div><div class="line"></div><div class="line"><span class="comment"># use gitmoji</span></div><div class="line">git commit</div></pre></td></tr></table></figure>
-<p><a href="https://nicelinks.site/redirect?url=https://gitmoji.dev/" target="_blank" rel="external">Gitmoji</a>，对程序员很有用么，尤其是像我这样，喜欢用表情来区分 Git 提交的开发者。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61a781e7465c2155e2d1588e" target="_blank" rel="external">倾城之链 - gitmoji | An emoji guide for your commit messages</a></p>
-<p>── 出自<a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">倾城之链 - Wiki.js | A modern and powerful wiki app built on Node.js</a></p>
+<p><img src="https://oss.nicelinks.site/marktext.app.png?x-oss-process=style/png2jpg" alt="倾城之链 - Mark Text"></p>
+<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://marktext.app/" target="_blank" rel="external">Mark Text</a>，一个简单而优雅的开源 Markdown 编辑器，专注于速度和可用性。适用于 Linux、macOS 和 Windows。Mark Text 是一个 MIT 许可的开源项目，最新版本将始终可以从 GitHub 发布页面免费下载。Mark Text 还在发展中，您可以从以下特征，来了解它的强大：</p>
+<ul>
+<li>实时预览 (WYSIWYG) 和干净简单的界面，以获得无干扰的写作体验。</li>
+<li>支持 CommonMark Spec、GitHub Flavored Markdown Spec 和选择性支持 Pandoc markdown。</li>
+<li>Markdown 扩展，例如数学表达式 (KaTeX)、前端和表情符号。</li>
+<li>支持段落和内联样式快捷方式，以提高您的写作效率。</li>
+<li>输出 <strong>HTML</strong> 和 <strong>PDF</strong> 文件。</li>
+<li>各种主题：<strong>Cadmium Light</strong>、<strong>Material Dark</strong> 等。</li>
+<li>多种编辑模式：<strong>源代码模式</strong>、<strong>打字机模式</strong>、<strong>焦点模式</strong>。</li>
+<li><strong>直接从剪贴板粘贴图像</strong>。</li>
+</ul>
+<p>为什么要写另一个编辑器？作者给出了说明：</p>
+<blockquote>
+<ul>
+<li>我喜欢写作。我用了很多 markdown 编辑器，但仍然没有一个编辑器可以完全满足我的需求。当我写一些难以忍受的错误时，我不喜欢被打扰。Mark Text 使用虚拟 DOM 来呈现页面，这具有高效和开源的额外好处。这样任何喜欢 Markdown 和写作的人都可以使用 Mark Text。</li>
+<li>如上所述，Mark Text 是完全免费和开源的，并将永远开源。我们希望所有 Markdown 爱好者都能贡献自己的代码，帮助将 Mark Text 开发成流行的 Markdown 编辑器。</li>
+<li>有很多 Markdown 编辑器，它们都有自己的优点，有些具有其他人没有的功能。很难满足每个 Markdown 用户的需求，但我们希望 Mark Text 能够尽可能满足每个 markdown 用户。尽管最新的 Mark Text 仍然不完美，但我们会尽力做到最好。</li>
+</ul>
+</blockquote>
+<p>个人也喜欢写作，而且喜欢 <a href="https://nicelinks.site/tags/Markdown" target="_blank" rel="external">Markdown 编辑器</a>来书写✍️；已尝试过很多相关产品，但 <a href="https://nicelinks.site/redirect?url=https://marktext.app/" target="_blank" rel="external">Mark Text</a> 还是给我留下很深的印象，尤其是支持<strong>直接从剪贴板粘贴图像</strong>这一功能；对 Markdown 编辑器感兴趣的朋友，不妨尝试下。</p>
+<p>── 出自<a href="https://nicelinks.site/post/61ab2c6f2afff60541cdbaa6" target="_blank" rel="external">倾城之链 - Mark Text</a></p>
 <p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
 <div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
 
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>一个人，作为个体的存在，应该像一条河──起初细小狭窄，局限在两岸之间；继而激情澎湃地冲过岩石，飞流直下；渐渐地，河流变宽，两岸远离，河水静静地流淌；最后，看不出有片刻的停歇，河水融入大海，失去了作为个体的存在，没有丝毫的痛楚。──英国  ·   伯特兰·阿瑟·威廉·罗素（1872-1970）</p>
+<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>人的一生要经历太多的生离死别，那些突如其来的离别往往将人伤得措手不及。<strong>人生何处不相逢，但有些转身，真的就是一生，从此后会无期，永不相见</strong>。 用力爱过的人，讲再见那一刻格外艰难。 世界上最遥远的距离不是生离死别，而是对方已经云淡风轻，你却念念不忘。── 白落梅《你若安好便是晴天 - 林徽因传》</p>
 <blockquote>
 <p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
 </blockquote>
+<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" alt="小程序码 - 倾城之链"></p>
 <h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
+<li><a href="https://forum.lovejade.cn/d/125-42" target="_blank" rel="external">优质网站同好者周刊（第 42 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/121-41" target="_blank" rel="external">优质网站同好者周刊（第 41 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/119-40" target="_blank" rel="external">优质网站同好者周刊（第 40 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/118-39" target="_blank" rel="external">优质网站同好者周刊（第 39 期）- 倾城之链</a></li>
@@ -2094,7 +2145,6 @@
 <li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/96-32" target="_blank" rel="external">优质网站同好者周刊（第 32 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/93-31" target="_blank" rel="external">优质网站同好者周刊（第 31 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
 <li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
 <li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
