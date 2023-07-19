@@ -1,3 +1,4 @@
+https://www.jeffjade.com/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/
 https://www.jeffjade.com/2023/05/01/251-blog-slow-update-instructions/
 https://www.jeffjade.com/2023/04/10/249-chatgpt-web-client-free-to-use/
 https://www.jeffjade.com/2022/12/30/249-webassembly-for-web/
@@ -17,8 +18,8 @@ https://www.jeffjade.com/2022/01/06/236-nicelinks-weekly-047/
 https://www.jeffjade.com/2021/12/31/235-nicelinks-weekly-046/
 https://www.jeffjade.com/2021/12/23/234-nicelinks-weekly-045/
 https://www.jeffjade.com/2021/12/16/233-nicelinks-weekly-044/
-https://www.jeffjade.com/2021/12/03/232-nicelinks-weekly-043/
 https://www.jeffjade.com/2021/12/03/231-nicelinks-weekly-042/
+https://www.jeffjade.com/2021/12/03/232-nicelinks-weekly-043/
 https://www.jeffjade.com/2021/11/27/230-talk-about-tencent-cloud-cvm/
 https://www.jeffjade.com/2021/11/26/229-nicelinks-weekly-041/
 https://www.jeffjade.com/2021/11/17/228-nicelinks-weekly-040/
@@ -169,8 +170,8 @@ https://www.jeffjade.com/2015/11/02/2015-11-02-likeArray-borrow-ArrayFun/
 https://www.jeffjade.com/2015/10/28/2015-10-28-css3-webfont/
 https://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/
 https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/
-https://www.jeffjade.com/2015/10/15/2015-10-16-cleaver-make-ppt/
 https://www.jeffjade.com/2015/10/15/2015-10-15-nice-animation-collection/
+https://www.jeffjade.com/2015/10/15/2015-10-16-cleaver-make-ppt/
 https://www.jeffjade.com/2015/10/08/2015-10-08-js-object-length/
 https://www.jeffjade.com/2015/10/06/2015-10-06-perfect-js-code/
 https://www.jeffjade.com/2015/10/04/2015-10-03-use-jquery-better/
@@ -197,4 +198,3 @@ https://www.jeffjade.com/2015/05/31/2015-05-31-javascript-operational－symbol/
 https://www.jeffjade.com/2015/05/26/2015-05-26-high-efficiency-tools-collecting/
 https://www.jeffjade.com/2015/05/23/2015-05-23-advie-from-oldprogramer/
 https://www.jeffjade.com/2015/05/17/2015-05-17-lua-ldoc/
-https://www.jeffjade.com/2015/05/16/2015-05-16-mac-musthave-software/

@@ -1,0 +1,1144 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+
+    <title>如何将 Tailwind CSS 引入快应用开发提升编码效率？ | 晚晴幽草轩</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="晚晴幽草轩轩主">
+    
+    <meta name="theme-color" content="#fffffb">
+    <meta name="baidu-site-verification" content="PKEtLPjO56">
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net/">
+
+    <meta name="keywords" content="Tailwind CSS, 快应用, 开发效率, 经验分享">
+    <meta name="description" content="Tailwind CSS，在 Web 开发领域，已经成为各种框架、开发人员标配；已经有大量实例证明，基于 Tailwind CSS 来编写样式，可以为开发者节省诸多时间；而且，能够优化减小代码体积、提升运行性能，是非常棒的技术套件。 快应用 开发，同样基于 Web 技术栈，理论上也完全可以使用 Tailwind CSS；在实际开发过程中，该如何使用 Tailwind CSS 呢？本文旨在对此做些许">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何将 Tailwind CSS 引入快应用开发提升编码效率？">
+<meta property="og:url" content="https://www.jeffjade.com/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/index.html">
+<meta property="og:site_name" content="晚晴幽草轩">
+<meta property="og:description" content="Tailwind CSS，在 Web 开发领域，已经成为各种框架、开发人员标配；已经有大量实例证明，基于 Tailwind CSS 来编写样式，可以为开发者节省诸多时间；而且，能够优化减小代码体积、提升运行性能，是非常棒的技术套件。 快应用 开发，同样基于 Web 技术栈，理论上也完全可以使用 Tailwind CSS；在实际开发过程中，该如何使用 Tailwind CSS 呢？本文旨在对此做些许">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/TailwindCSS.gif">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Tailwind-CSS-IntelliSense.png">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/TailwindCSS-Flowbite-Pagination.png">
+<meta property="og:updated_time" content="2023-07-19T16:25:29.327Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何将 Tailwind CSS 引入快应用开发提升编码效率？">
+<meta name="twitter:description" content="Tailwind CSS，在 Web 开发领域，已经成为各种框架、开发人员标配；已经有大量实例证明，基于 Tailwind CSS 来编写样式，可以为开发者节省诸多时间；而且，能够优化减小代码体积、提升运行性能，是非常棒的技术套件。 快应用 开发，同样基于 Web 技术栈，理论上也完全可以使用 Tailwind CSS；在实际开发过程中，该如何使用 Tailwind CSS 呢？本文旨在对此做些许">
+<meta name="twitter:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/TailwindCSS.gif">
+<meta name="twitter:creator" content="@nicejadeyang">
+
+    
+    <link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/favicons/favicon.ico">
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6">
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://image.nicelinks.site">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+
+    <link href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css">
+    <link rel="stylesheet" href="/css/style.css?190623">
+
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script">
+
+    <link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script">
+    <script src="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script data-ad-client="ca-pub-8586652723015758" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8586652723015758",
+        enable_page_level_ads: true
+      });
+    </script>
+    <script async src="https://fundingchoicesmessages.google.com/i/pub-8586652723015758?ers=1" nonce="aGbKV4c6yTWqLTY3cuk_Vg"></script><script nonce="aGbKV4c6yTWqLTY3cuk_Vg">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+    <script src="https://fastly.jsdelivr.net/npm/reward-service@1.1.0/dist/reward-service-min.js"></script>
+    <script async src="https://fastly.jsdelivr.net/npm/quickapp-deeplink@2.3.1/dist/quickapp-deeplink-min.js"></script>
+    <script src="//image.nicelinks.site/ad-block-remind-min.js?v0710"></script>
+</head></html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1>
+				<h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/" class="">Home</a></li>
+					
+						<li><a href="/nicelinks" class="">Links</a></li>
+					
+						<li><a href="https://chatgpt.nicelinks.site/?utm_source=jeffjade.com" class="">ChatGPT</a></li>
+					
+						<li><a href="https://nicelinks.site?utm_source=jeffjade.com" class="special">NiceLinks</a></li>
+					
+						<li><a href="/archives" class="">Archives</a></li>
+					
+						<li><a href="/about-me" class="">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search">
+						<input type="hidden" name="q" value="site:www.jeffjade.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/" class="title=&quot;如何将" tailwind css itemprop="url">如何将 Tailwind CSS 引入快应用开发提升编码效率？</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2023-07-19T12:20:00.000Z" itemprop="datePublished"> 发表于 2023-07-19</time>
+
+  </p>
+</header>
+	<div class="article-content">
+		
+    <div class="bottom-gg-module">
+  <div class="jade-gg-block">
+    <a class="width-block-wrap fancybox" href="https://nicelinks.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank">
+      <img class="width-block-wrap" style="width: 100%;max-height: 200px" src="https://image.nicelinks.site/倾城之链-Banner.png" alt="倾城之链">
+    </a>
+    </div>
+  </div>
+
+		<p>Tailwind CSS，在 Web 开发领域，已经成为各种框架、开发人员标配；已经有大量实例证明，基于 <code>Tailwind CSS</code> 来编写样式，可以为开发者节省诸多时间；而且，能够优化减小代码体积、提升运行性能，是非常棒的技术套件。 <a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a> 开发，同样基于 Web 技术栈，理论上也完全可以使用 <strong>Tailwind CSS</strong>；在实际开发过程中，该如何使用 Tailwind CSS 呢？本文旨在对此做些许分享。</p>
+<hr>
+<p><a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">Tailwind CSS</a> 的工作原理是扫描所有 <a href="https://nicelinks.site/tags/HTML" target="_blank" rel="external">HTML</a> 文件、JavaScript 组件和任何其他模板的类名，生成相应的样式，然后将它们写入静态 <a href="https://nicelinks.site/tags/CSS" target="_blank" rel="external">CSS</a> 文件。它快速、灵活、可靠，且运行时间为零。官方提供 <a href="https://tailwindcss.com/docs/installation" target="_blank" rel="external">Tailwind CLI</a> 、PostCSS、Play CDN 等使用方式；下面主要讲下如何基于 Tailwind CLI 方式，在应用开发中使用 Tailwind CSS：</p>
+<h2 id="Tailwind-CSS-可为快应用开发带来哪些好处？"><a href="#Tailwind-CSS-可为快应用开发带来哪些好处？" class="headerlink" title="Tailwind CSS 可为快应用开发带来哪些好处？"></a>Tailwind CSS 可为快应用开发带来哪些好处？</h2><p><a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">Tailwind CSS</a> 是一种现代的 CSS 框架，它提供了一组预定义的 CSS 类，用于快速开发现代 Web 应用程序。Tailwind 的核心理念是为开发者提供一种灵活的方法来构建自定义的 UI 组件，而不需要编写大量的 CSS 代码。</p>
+<p>Tailwind CSS 的工作原理是扫描所有 HTML 文件、JavaScript 组件和任何其他模板的类名，生成相应的样式，然后将它们写入静态 CSS 文件。它快速、灵活、可靠，且运行时间为零。</p>
+<p>在快应用开发中引入，可以为项目带来四方面的好处：<strong>更快的编写效率</strong>、<strong>更小的代码总体积</strong>、<strong>更高的运行效率</strong>、<strong>更易于项目维护</strong>。更详细说明如下：</p>
+<ul>
+<li>预定义的 CSS 类可以减少样式的冗余，从而减小 CSS 文件的体积。</li>
+<li>大量配套设施，可以提高开发效率，不必手动编写大量的 CSS 代码。</li>
+<li>提供了自动优化工具，可以删除未使用的 CSS 代码。</li>
+<li>代码体积减小，可以减少下载、加载、解析等步骤耗时。</li>
+<li>使 CSS 样式更规范化，避免冗余的样式和复杂的选择器，优化性能。</li>
+<li>拥有活跃的社区和文档，可以帮助开发者快速上手和解决问题。</li>
+</ul>
+<p>Tailwind CSS：当今最流行 CSS 框架；相信借助其巧妙设计、结合强大生态，您也会偏爱用它来塑造 UI；如果必须要手动编码：那无需频繁滚动编辑区，无需于 template 与 style 之间横跳，无需绞尽脑汁为类命名，无需再编写重复的 CSS……是多么美妙。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/TailwindCSS.gif" alt="Tailwind CSS"></p>
+<h2 id="如何在项目中使用-Tailwind-CSS？"><a href="#如何在项目中使用-Tailwind-CSS？" class="headerlink" title="如何在项目中使用 Tailwind CSS？"></a>如何在项目中使用 Tailwind CSS？</h2><h3 id="安装-Tailwind-CSS-依赖"><a href="#安装-Tailwind-CSS-依赖" class="headerlink" title="安装 Tailwind CSS 依赖"></a>安装 Tailwind CSS 依赖</h3><p>通过 <a href="https://nicelinks.site/post/6216392f2d17f22050cf1a2b" target="_blank" rel="external">npm</a> 安装 <code>tailwindcss</code> 并创建 <code>tailwind.config.js</code> 文件，具体命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">pnpm install -D tailwindcss</div><div class="line"><span class="comment"># OR</span></div><div class="line"><span class="comment"># npm install -D tailwindcss</span></div><div class="line">npx tailwindcss init</div></pre></td></tr></table></figure>
+<h3 id="配置您的模板路径"><a href="#配置您的模板路径" class="headerlink" title="配置您的模板路径"></a>配置您的模板路径</h3><p>在文件中添加所有模板文件的路径 <code>tailwind.config.js</code>，参考性配置如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> colors = <span class="built_in">require</span>(<span class="string">'tailwindcss/colors'</span>)</div><div class="line"></div><div class="line"><span class="keyword">const</span> selfCustomColors = &#123;</div><div class="line">  <span class="attr">brand</span>: &#123;</div><div class="line">    <span class="attr">DEFAULT</span>: <span class="string">'#1e293b'</span>,</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">warn</span>: &#123;</div><div class="line">    <span class="attr">DEFAULT</span>: <span class="string">'#f59e0b'</span>,</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">link</span>: &#123;</div><div class="line">    <span class="attr">DEFAULT</span>: <span class="string">'#0ea5e9'</span>,</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">mark</span>: &#123;</div><div class="line">    <span class="attr">DEFAULT</span>: <span class="string">'#ff4582'</span>,</div><div class="line">  &#125;,</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">mode</span>: <span class="string">'jit'</span>,</div><div class="line">  <span class="attr">content</span>: [</div><div class="line">    <span class="string">'./src/**/*.&#123;ux,html,js,svelte,vue,ts&#125;'</span>,</div><div class="line">    <span class="string">'./node_modules/flowbite/**/*.js'</span>,</div><div class="line">  ],</div><div class="line">  <span class="attr">purge</span>: &#123;</div><div class="line">    <span class="attr">enabled</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">content</span>: [</div><div class="line">      <span class="string">'./src/**/*.&#123;ux,html,js,svelte,vue,ts&#125;'</span>,</div><div class="line">      <span class="string">'./node_modules/flowbite/**/*.js'</span>,</div><div class="line">    ],</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// https://tailwindcss.com/docs/configuration#core-plugins</span></div><div class="line">  corePlugins: &#123;</div><div class="line">    <span class="attr">preflight</span>: <span class="literal">false</span>, <span class="comment">// disable base/reset styles</span></div><div class="line">    container: <span class="literal">false</span>, <span class="comment">// disable container component</span></div><div class="line">    content: <span class="literal">false</span>, <span class="comment">// disable `content` utility</span></div><div class="line">    accentColor: <span class="literal">false</span>, <span class="comment">// disable `accent-color` utility</span></div><div class="line">    accessibility: <span class="literal">false</span>, <span class="comment">// disable `appearance` utility</span></div><div class="line">    appearance: <span class="literal">false</span>, <span class="comment">// disable `appearance` utility</span></div><div class="line">    aspectRatio: <span class="literal">false</span>, <span class="comment">// disable `aspect-ratio` utility</span></div><div class="line">    backgroundOpacity: <span class="literal">false</span>, <span class="comment">// disable `background-opacity` utility</span></div><div class="line">    backdropBlur: <span class="literal">false</span>, <span class="comment">// disable `backdrop-blur` utility</span></div><div class="line">    backdropBrightness: <span class="literal">false</span>, <span class="comment">// disable `backdrop-brightness` utility</span></div><div class="line">    backdropContrast: <span class="literal">false</span>, <span class="comment">// disable `backdrop-contrast` utility</span></div><div class="line">    backdropGrayscale: <span class="literal">false</span>, <span class="comment">// disable `backdrop-grayscale` utility</span></div><div class="line">    backdropHueRotate: <span class="literal">false</span>, <span class="comment">// disable `backdrop-hue-rotate` utility</span></div><div class="line">    backdropInvert: <span class="literal">false</span>, <span class="comment">// disable `backdrop-invert` utility</span></div><div class="line">    backdropOpacity: <span class="literal">false</span>, <span class="comment">// disable `backdrop-opacity` utility</span></div><div class="line">    backdropSaturate: <span class="literal">false</span>, <span class="comment">// disable `backdrop-saturate` utility</span></div><div class="line">    backdropSepia: <span class="literal">false</span>, <span class="comment">// disable `backdrop-sepia` utility</span></div><div class="line">    blur: <span class="literal">false</span>, <span class="comment">// disable `blur` utility</span></div><div class="line">    borderCollapse: <span class="literal">false</span>, <span class="comment">// disable `border-collapse` utility</span></div><div class="line">    borderOpacity: <span class="literal">false</span>, <span class="comment">// disable `border-opacity` utility</span></div><div class="line">    borderSpacing: <span class="literal">false</span>, <span class="comment">// disable `border-spacing` utility</span></div><div class="line">    boxShadow: <span class="literal">false</span>, <span class="comment">// disable `box-shadow` utility</span></div><div class="line">    boxShadowColor: <span class="literal">false</span>, <span class="comment">// disable `box-shadow-color` utility</span></div><div class="line">    boxDecorationBreak: <span class="literal">false</span>, <span class="comment">// disable `box-decoration-break` utility</span></div><div class="line">    boxSizing: <span class="literal">false</span>, <span class="comment">// disable `box-sizing` utility</span></div><div class="line">    breakAfter: <span class="literal">false</span>, <span class="comment">// disable `break-after` utility</span></div><div class="line">    breakBefore: <span class="literal">false</span>, <span class="comment">// disable `break-before` utility</span></div><div class="line">    breakInside: <span class="literal">false</span>, <span class="comment">// disable `break-inside` utility</span></div><div class="line">    brightness: <span class="literal">false</span>, <span class="comment">// disable `brightness` utility</span></div><div class="line">    captionSide: <span class="literal">false</span>, <span class="comment">// disable `caption-side` utility</span></div><div class="line">    caretColor: <span class="literal">false</span>, <span class="comment">// disable `caret-color` utility</span></div><div class="line">    clear: <span class="literal">false</span>, <span class="comment">// disable `clear` utility</span></div><div class="line">    contrast: <span class="literal">false</span>, <span class="comment">// disable `contrast` utility</span></div><div class="line">    divideColor: <span class="literal">false</span>, <span class="comment">// disable `divide-color` utility</span></div><div class="line">    divideOpacity: <span class="literal">false</span>, <span class="comment">// disable `divide-opacity` utility</span></div><div class="line">    divideStyle: <span class="literal">false</span>, <span class="comment">// disable `divide-style` utility</span></div><div class="line">    divideWidth: <span class="literal">false</span>, <span class="comment">// disable `divide-width` utility</span></div><div class="line">    float: <span class="literal">false</span>, <span class="comment">// disable `float` utility</span></div><div class="line">    fontVariantNumeric: <span class="literal">false</span>, <span class="comment">// disable `font-variant-numeric` utility</span></div><div class="line">    hyphens: <span class="literal">false</span>, <span class="comment">// disable `hyphens` utility</span></div><div class="line">    isolation: <span class="literal">false</span>, <span class="comment">// disable `isolation` utility</span></div><div class="line">    lineClamp: <span class="literal">false</span>, <span class="comment">// disable `line-clamp` utility</span></div><div class="line">    mixBlendMode: <span class="literal">false</span>, <span class="comment">// diable `mix-blend-mode` utility</span></div><div class="line">    listStyleImage: <span class="literal">false</span>, <span class="comment">// disable `list-style-image` utility</span></div><div class="line">    listStylePosition: <span class="literal">false</span>, <span class="comment">// disable `list-style-position` utility</span></div><div class="line">    listStyleType: <span class="literal">false</span>, <span class="comment">// disable `list-style-type` utility</span></div><div class="line">    objectPosition: <span class="literal">false</span>, <span class="comment">// disable `object-position` utility</span></div><div class="line">    opacity: <span class="literal">false</span>, <span class="comment">// disable `opacity` utility</span></div><div class="line">    outlineColor: <span class="literal">false</span>, <span class="comment">// disable `outline-color` utility</span></div><div class="line">    outlineOffset: <span class="literal">false</span>, <span class="comment">// disable `outline-offset` utility</span></div><div class="line">    outlineStyle: <span class="literal">false</span>, <span class="comment">// disable `outline-style` utility</span></div><div class="line">    outlineWidth: <span class="literal">false</span>, <span class="comment">// disable `outline-width` utility</span></div><div class="line">    overscrollBehavior: <span class="literal">false</span>, <span class="comment">// disable `overscroll-behavior` utility</span></div><div class="line">    placeContent: <span class="literal">false</span>, <span class="comment">// disable `place-content` utility</span></div><div class="line">    placeItems: <span class="literal">false</span>, <span class="comment">// disable `place-items` utility</span></div><div class="line">    placeSelf: <span class="literal">false</span>, <span class="comment">// disable `place-self` utility</span></div><div class="line">    placeholderOpacity: <span class="literal">false</span>, <span class="comment">// disable `placeholder-opacity` utility</span></div><div class="line">    resize: <span class="literal">false</span>, <span class="comment">// disable `resize` utility</span></div><div class="line">    ringColor: <span class="literal">false</span>, <span class="comment">// disable `ring-color` utility</span></div><div class="line">    ringOffsetColor: <span class="literal">false</span>, <span class="comment">// disable `ring-offset-color` utility</span></div><div class="line">    ringOffsetWidth: <span class="literal">false</span>, <span class="comment">// disable `ring-offset-width` utility</span></div><div class="line">    ringOpacity: <span class="literal">false</span>, <span class="comment">// disable `ring-opacity` utility</span></div><div class="line">    space: <span class="literal">false</span>, <span class="comment">// disable `space-between` utility</span></div><div class="line">    textDecorationThickness: <span class="literal">false</span>, <span class="comment">// disable `text-decoration-thickness` utility</span></div><div class="line">    textOpacity: <span class="literal">false</span>, <span class="comment">// disable `text-opacity` utility</span></div><div class="line">    textTransform: <span class="literal">false</span>, <span class="comment">// disable `text-transform` utility</span></div><div class="line">    textUnderlineOffset: <span class="literal">false</span>, <span class="comment">// disable `text-underline-offset` utility</span></div><div class="line">    touchAction: <span class="literal">false</span>, <span class="comment">// disable `touch-action` utility</span></div><div class="line">    userSelect: <span class="literal">false</span>, <span class="comment">// disable `user-select` utility</span></div><div class="line">    verticalAlign: <span class="literal">false</span>, <span class="comment">// disable `vertical-align` utility</span></div><div class="line">    whitespace: <span class="literal">false</span>, <span class="comment">// disable `whitespace` utility</span></div><div class="line">    wordBreak: <span class="literal">false</span>, <span class="comment">// disable `word-break` utility</span></div><div class="line">    willChange: <span class="literal">false</span>, <span class="comment">// disable `will-change` utility</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">darkMode</span>: <span class="literal">false</span>,</div><div class="line">  <span class="attr">theme</span>: &#123;</div><div class="line">    <span class="attr">colors</span>: &#123; ...colors, ...selfCustomColors &#125;,</div><div class="line">    <span class="attr">extend</span>: &#123;</div><div class="line">      <span class="attr">width</span>: <span class="function">(<span class="params">&#123; theme &#125;</span>) =&gt;</span> (&#123;</div><div class="line">        <span class="attr">auto</span>: <span class="string">'auto'</span>,</div><div class="line">        ...theme(<span class="string">'spacing'</span>),</div><div class="line">      &#125;),</div><div class="line">      <span class="attr">height</span>: <span class="function">(<span class="params">&#123; theme &#125;</span>) =&gt;</span> (&#123;</div><div class="line">        <span class="attr">auto</span>: <span class="string">'auto'</span>,</div><div class="line">        ...theme(<span class="string">'spacing'</span>),</div><div class="line">      &#125;),</div><div class="line">      <span class="attr">spacing</span>: &#123;</div><div class="line">        <span class="string">'1/2'</span>: <span class="string">'2px'</span>,</div><div class="line">        <span class="string">'1'</span>: <span class="string">'4px'</span>,</div><div class="line">        <span class="string">'3/2'</span>: <span class="string">'6px'</span>,</div><div class="line">        <span class="string">'2'</span>: <span class="string">'8px'</span>,</div><div class="line">        <span class="string">'5/2'</span>: <span class="string">'10px'</span>,</div><div class="line">        <span class="string">'3'</span>: <span class="string">'12px'</span>,</div><div class="line">        <span class="string">'7/2'</span>: <span class="string">'14px'</span>,</div><div class="line">        <span class="string">'4'</span>: <span class="string">'16px'</span>,</div><div class="line">        <span class="string">'5'</span>: <span class="string">'20px'</span>,</div><div class="line">        <span class="string">'6'</span>: <span class="string">'24px'</span>,</div><div class="line">        <span class="string">'7'</span>: <span class="string">'28px'</span>,</div><div class="line">        <span class="string">'8'</span>: <span class="string">'32px'</span>,</div><div class="line">        <span class="string">'9'</span>: <span class="string">'36px'</span>,</div><div class="line">        <span class="string">'10'</span>: <span class="string">'40px'</span>,</div><div class="line">        <span class="string">'11'</span>: <span class="string">'44px'</span>,</div><div class="line">        <span class="string">'12'</span>: <span class="string">'48px'</span>,</div><div class="line">        <span class="string">'14'</span>: <span class="string">'56px'</span>,</div><div class="line">        <span class="string">'16'</span>: <span class="string">'64px'</span>,</div><div class="line">        <span class="string">'20'</span>: <span class="string">'80px'</span>,</div><div class="line">        <span class="string">'24'</span>: <span class="string">'96px'</span>,</div><div class="line">        <span class="string">'28'</span>: <span class="string">'112px'</span>,</div><div class="line">        <span class="string">'32'</span>: <span class="string">'128px'</span>,</div><div class="line">        <span class="string">'36'</span>: <span class="string">'144px'</span>,</div><div class="line">        <span class="string">'40'</span>: <span class="string">'160px'</span>,</div><div class="line">        <span class="string">'44'</span>: <span class="string">'176px'</span>,</div><div class="line">        <span class="string">'48'</span>: <span class="string">'192px'</span>,</div><div class="line">        <span class="string">'52'</span>: <span class="string">'208px'</span>,</div><div class="line">        <span class="string">'56'</span>: <span class="string">'224px'</span>,</div><div class="line">        <span class="string">'60'</span>: <span class="string">'240px'</span>,</div><div class="line">        <span class="string">'72'</span>: <span class="string">'288px'</span>,</div><div class="line">        <span class="string">'80'</span>: <span class="string">'320px'</span>,</div><div class="line">        <span class="string">'96'</span>: <span class="string">'384px'</span>,</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">borderWidth</span>: &#123;</div><div class="line">        <span class="string">'DEFAULT'</span>: <span class="string">'1px'</span>,</div><div class="line">        <span class="string">'0'</span>: <span class="string">'0px'</span>,</div><div class="line">        <span class="string">'2'</span>: <span class="string">'2px'</span>,</div><div class="line">        <span class="string">'4'</span>: <span class="string">'4px'</span>,</div><div class="line">        <span class="string">'8'</span>: <span class="string">'8px'</span>,</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">borderRadius</span>: &#123;</div><div class="line">        <span class="string">'none'</span>: <span class="string">'0'</span>,</div><div class="line">        <span class="string">''</span>: <span class="string">'1px'</span>,</div><div class="line">        <span class="string">'sm'</span>: <span class="string">'2px'</span>,</div><div class="line">        <span class="string">'DEFAULT'</span>: <span class="string">'4px'</span>,</div><div class="line">        <span class="string">'md'</span>: <span class="string">'6px'</span>,</div><div class="line">        <span class="string">'lg'</span>: <span class="string">'8px'</span>,</div><div class="line">        <span class="string">'xl'</span>: <span class="string">'12px'</span>,</div><div class="line">        <span class="string">'2xl'</span>: <span class="string">'16px'</span>,</div><div class="line">        <span class="string">'3xl'</span>: <span class="string">'24px'</span>,</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">fontSize</span>: &#123;</div><div class="line">        <span class="string">'xm'</span>: [<span class="string">'12px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'16px'</span> &#125;],</div><div class="line">        <span class="string">'sm'</span>: [<span class="string">'14px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'20px'</span> &#125;],</div><div class="line">        <span class="string">'base'</span>: [<span class="string">'16px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'24px'</span> &#125;],</div><div class="line">        <span class="string">'lg'</span>: [<span class="string">'18px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'28px'</span> &#125;],</div><div class="line">        <span class="string">'xl'</span>: [<span class="string">'20px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'28px'</span> &#125;],</div><div class="line">        <span class="string">'2xl'</span>: [<span class="string">'24px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'32px'</span> &#125;],</div><div class="line">        <span class="string">'3xl'</span>: [<span class="string">'30px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'36px'</span> &#125;],</div><div class="line">        <span class="string">'4xl'</span>: [<span class="string">'36px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'40px'</span> &#125;],</div><div class="line">        <span class="string">'5xl'</span>: [<span class="string">'48px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'60px'</span> &#125;],</div><div class="line">        <span class="string">'6xl'</span>: [<span class="string">'60px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'60px'</span> &#125;],</div><div class="line">        <span class="string">'7xl'</span>: [<span class="string">'72px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'60px'</span> &#125;],</div><div class="line">        <span class="string">'8xl'</span>: [<span class="string">'96px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'60px'</span> &#125;],</div><div class="line">        <span class="string">'9xl'</span>: [<span class="string">'128px'</span>, &#123; <span class="attr">lineHeight</span>: <span class="string">'60px'</span> &#125;],</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">variants</span>: &#123;</div><div class="line">    <span class="attr">extend</span>: &#123;&#125;,</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">plugins</span>: [],</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="将-Tailwind-指令添加到您的-CSS-中"><a href="#将-Tailwind-指令添加到您的-CSS-中" class="headerlink" title="将 Tailwind 指令添加到您的 CSS 中"></a>将 Tailwind 指令添加到您的 CSS 中</h3><p><code>@tailwind</code> 将 Tailwind 每个层的指令添加到您的主 CSS 文件中。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* input.css */</span></div><div class="line"></div><div class="line"><span class="comment">/* @tailwind base; */</span></div><div class="line">@<span class="keyword">tailwind</span> components;</div><div class="line">@<span class="keyword">tailwind</span> utilities;</div></pre></td></tr></table></figure>
+<h3 id="启动-Tailwind-CLI-构建过程"><a href="#启动-Tailwind-CLI-构建过程" class="headerlink" title="启动 Tailwind CLI 构建过程"></a>启动 Tailwind CLI 构建过程</h3><p>运行 CLI 工具来扫描模板文件中的类并构建 CSS，参考性命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npx tailwindcss -i ./src/input.css -o ./src/output.css --watch</div></pre></td></tr></table></figure>
+<p>这是看起来路径简短的方式，实际上这个 <code>input.css</code> 和 <code>output.css</code>，无论是名字，或是它存在的路径，皆可以自行指定，您可以按照自己喜欢的方式、或是团队约定俗成的形式；譬如统一存放在：<code>src/assets/styles</code> 目录下。</p>
+<p>需要补充说明的是：在团队开发中，输入上述命令，略显繁琐，可以在 <code>package.json</code> 注入命令（如下示例）；如此以下，您只需在「<strong>终端</strong>」运行 <code>pnpm tailwindcss</code> 或 <code>npm run tailwindcss</code> 命令即可。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">"scripts": &#123;</div><div class="line">  "tailwindcss": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="开始在-UX-中使用-Tailwind-CSS"><a href="#开始在-UX-中使用-Tailwind-CSS" class="headerlink" title="开始在 UX 中使用 Tailwind CSS"></a>开始在 UX 中使用 Tailwind CSS</h3><p>将已编译的 CSS 文件，在 <code>.ux</code> （非 <code>app.ux</code>）文件中，通过 <code>@import</code> 方式引入；</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">  @import './../../output.css';</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<p>现在，即可在 <code>.ux</code>  的 <code>template</code> 中，开始使用 Tailwind 的实用程序类来设置内容的样式，如下面这段代码示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bg-blue-300 w-full flex flex-col justify-center items-center"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"text-red-600"</span>&gt;</span>TailwindCSS Area<span class="tag">&lt;/<span class="name">text</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"text-red-600"</span>&gt;</span>Awesome TailwindCSS<span class="tag">&lt;/<span class="name">text</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>当您写完保存之后，打开 <code>output.css</code> 即可如下的 CSS 代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* @tailwind base; */</span></div><div class="line"></div><div class="line"><span class="selector-class">.flex</span> &#123;</div><div class="line">  <span class="attribute">display</span>: flex</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.w-full</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.flex-col</span> &#123;</div><div class="line">  <span class="attribute">flex-direction</span>: column</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.items-center</span> &#123;</div><div class="line">  <span class="attribute">align-items</span>: center</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.justify-center</span> &#123;</div><div class="line">  <span class="attribute">justify-content</span>: center</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.bg-blue-300</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#93c5fd</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.text-red-600</span> &#123;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#dc2626</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>至此，在 <a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a> 开发中引入 <a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">Tailwind CSS</a> 的准备工作，已经初步完成，您可以与 <code>Tailwind CSS</code> 开启愉快合作之旅，从而促使高效编码、提前完工。假如，您对 <code>Tailwind CSS</code> 尚不熟悉，可通过查阅 <a href="https://tailwindcss.com/docs/flex-basis" target="_blank" rel="external">Tailwind CSS Doc</a> ，亦可在线体验—— <a href="https://play.tailwindcss.com/" target="_blank" rel="external">Tailwind Playground</a> 。</p>
+<p>需要补充说明的是，使用  <code>Tailwind CSS</code> 并不破坏您原来的 CSS 书写✍🏻方式；您完全可以结合喜欢的预处理器（如 Sass、Less、Stylus），来共同工作，而无需做更多设置（如下代码示例）；但我以为当您熟悉 Tailwind CSS 之后，大有可能也会“<strong>移情而别恋</strong>”。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;style lang="scss"&gt;</div><div class="line">  @import './../../assets/styles/style.scss';</div><div class="line">  @import './../../assets/styles/output.css';</div><div class="line"></div><div class="line">  .primary-btn &#123;</div><div class="line">    width: 90 * $size-factor;</div><div class="line">    height: 16 * $size-factor;</div><div class="line">    background-color: $brand;</div><div class="line">    border-radius: 8 * $size-factor;</div><div class="line">    color: $white;</div><div class="line">  &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<h2 id="如何基于-Tailwind-CSS-提升开发效率？"><a href="#如何基于-Tailwind-CSS-提升开发效率？" class="headerlink" title="如何基于 Tailwind CSS 提升开发效率？"></a>如何基于 Tailwind CSS 提升开发效率？</h2><h3 id="安装-Tailwind-CSS-IntelliSense-扩展"><a href="#安装-Tailwind-CSS-IntelliSense-扩展" class="headerlink" title="安装 Tailwind CSS IntelliSense 扩展"></a>安装 Tailwind CSS IntelliSense 扩展</h3><p>您可以在应用开发工具的「扩展市场」，通过关键字 <code>Tailwind</code> 检索”Tailwind CSS IntelliSense“扩展——适用于 Visual Studio Code 的智能 Tailwind CSS 工具，用户提供自动完成、语法突出显示和 linting 等高级功能来增强 Tailwind 开发体验；略作适配即可支持 <code>*.ux</code>；详细设置，可参见： <a href="https://github.com/tailwindlabs/tailwindcss-intellisense" target="_blank" rel="external">Tailwind CSS IntelliSense</a> 。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/Tailwind-CSS-IntelliSense.png" alt="Tailwind CSS IntelliSense 提升 ux 开发效率"></p>
+<p>默认情况下，编辑“字符串”内容时（例如在 JSX 属性值中），开发工具中不会触发完成。更新设置 <code>editor.quickSuggestions</code> 可能会改善您的体验：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">"editor.quickSuggestions": &#123;</div><div class="line">  "strings": "on"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="参考基于-Tailwind-CSS-组件的开源库"><a href="#参考基于-Tailwind-CSS-组件的开源库" class="headerlink" title="参考基于 Tailwind CSS 组件的开源库"></a>参考基于 Tailwind CSS 组件的开源库</h3><p>Tailwind CSS 生态发展繁荣超乎想象，就连其衍生产品也不可胜数；如 <a href="https://flowbite.com/?ref=nicelinks.site" target="_blank" rel="external">Flowbite</a> ——包含 600 多个 UI 组件、部分和页面的开源库进行开发，该库使用 <a href="https://nicelinks.site/post/5fd20cb4c06d6302c1907ec7" target="_blank" rel="external">Tailwind CSS</a> 的实用程序类构建并在 <a href="https://nicelinks.site/post/605f1c61bffb5e532f3be23c" target="_blank" rel="external">Figma</a> 中设计。它不仅能充当 Tailwind CSS 插件使用，也可以拷贝到项目直接使用，还可以在线查阅效果（支持多种屏幕设备类型），挑选匹配实现方案；在仍是基于组件树构建页面的时代，极大提升页面搭建效率。如： <a href="https://flowbite.com/docs/components/pagination/" target="_blank" rel="external">pagination</a> 组件：</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/TailwindCSS-Flowbite-Pagination.png" alt="Tailwind CSS Flowbite Pagination"></p>
+<hr>
+<h2 id="常见问题及说明"><a href="#常见问题及说明" class="headerlink" title="常见问题及说明"></a>常见问题及说明</h2><p>如果您熟悉 Web 开发，针对上述教程，您可能会有诸多疑惑；实际上，笔者在实践之时，也有发现，只不过因为各种机制限制，目前只能如此。下面就与诸君分享，期可解惑：</p>
+<h3 id="不能在-script-标签中，引入输出-CSS-文件么？"><a href="#不能在-script-标签中，引入输出-CSS-文件么？" class="headerlink" title="不能在 script 标签中，引入输出 CSS 文件么？"></a>不能在 <code>script</code> 标签中，引入输出 CSS 文件么？</h3><p>按 Web 开发习惯，在 <code>app.ux</code> 文件中可以直接 <code>import</code> 输出 CSS 文件（如下代码所示），那为何未建议如此呢？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line"><span class="keyword">import</span> <span class="string">'./output.css'</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<p>因为这样做会报如下错误；具体是缺乏与之匹配的 loader；当然，可以使用 <code>css-loader</code> 和 <code>style-loader</code> 来处理 CSS 文件，详见 <a href="https://memo.lovejade.cn/m/271" target="_blank" rel="external">ChatGPT | You may need an appropriate loader….</a> 。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">You may need an appropriate loader to handle this file <span class="built_in">type</span>, currently no loaders are configured to process this file. See https://webpack.js.org/concepts<span class="comment">#loaders</span></div><div class="line"></div><div class="line">| /* @tailwind base; */</div></pre></td></tr></table></figure>
+<p>但在<strong>快应用</strong>开发过程中，却不能生效；因为 <a href="https://github.com/webpack-contrib/style-loader" target="_blank" rel="external">style-loader</a> 的作用是将 CSS 注入 DOM，其中用到了诸多浏览器 API（document），而快应用的开发虽然是基于前端技术栈，但其运行环境止于 <code>v8</code>，实际的渲染是由 Android 底层完成，并未走浏览器这条路，因此无法工作。在构建工具优化、兼容之前，通过 <code>style</code> 标签中引入 CSS，成了主要选择。</p>
+<h3 id="为何在-tailwind-config-js-禁用如此多样式？"><a href="#为何在-tailwind-config-js-禁用如此多样式？" class="headerlink" title="为何在 tailwind.config.js 禁用如此多样式？"></a>为何在 <code>tailwind.config.js</code> 禁用如此多样式？</h3><p>Tailwind <a href="https://tailwindcss.com/docs/configuration#core-plugins" target="_blank" rel="external">corePlugins</a> 部分允许您完全禁用 Tailwind 通常默认生成的类（如果您的项目不需要它们）；这个设计对于快应用实在必要的紧，在上述示例中，对 <code>text-opacity</code> 等样式进行禁用，也是无奈之举。具体原因在于以下两点：</p>
+<p>其一：快应用标准虽然基于 Web 技术栈，但只是 Web 标准子集，如蛮多 CSS 属性并不能很好的支持；其二：默认情况下，TailwindCSS 会将样式属性的值存储为 CSS 变量（例如 <code>--tw-text-opacity</code>），以便进行动态计算和响应式设计。</p>
+<p>如此一来，在 template 中使用类 <code>text-red-300</code>、<code>border-spacing-1</code>，输出的便是如下 CSS；这样的写法，在快应用中并不能得到正确解析，也就无法起到期待效果，于是禁用便成了必须要做之事。当然，这样禁用也好处：利于输出更小提及的 CSS 文件。其他属性亦复如是。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.text-red-300</span> &#123;</div><div class="line">  <span class="attribute">--tw-text-opacity</span>: <span class="number">1</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="built_in">rgb</span>(252 165 165 / var(--tw-text-opacity))</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.border-spacing-1</span> &#123;</div><div class="line">  <span class="attribute">--tw-border-spacing-x</span>: <span class="number">4px</span>;</div><div class="line">  <span class="attribute">--tw-border-spacing-y</span>: <span class="number">4px</span>;</div><div class="line">  <span class="attribute">border-spacing</span>: <span class="built_in">var</span>(--tw-border-spacing-x) <span class="built_in">var</span>(--tw-border-spacing-y)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="为何要在-input-css-中移除-tailwind-base-？"><a href="#为何要在-input-css-中移除-tailwind-base-？" class="headerlink" title="为何要在 input.css 中移除 @tailwind base; ？"></a>为何要在 <code>input.css</code> 中移除 <code>@tailwind base;</code> ？</h3><p>这么做主要未解决问题： <a href="https://github.com/tailwindlabs/tailwindcss/discussions/8500" target="_blank" rel="external">How disable default styles for : before and : after</a> 。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* input.css */</span></div><div class="line"></div><div class="line"><span class="comment">/* @tailwind base; */</span></div><div class="line">@<span class="keyword">tailwind</span> components;</div><div class="line">@<span class="keyword">tailwind</span> utilities;</div></pre></td></tr></table></figure>
+<p>在一般 Web 开发过程中，会将 base、components、utilities 等指令，都添加到 CSS 文件项目中；但，在快应用开发过程中，这无疑是累赘；因为它的存在，会使得 <code>output.css</code> 输出较多对项目没有裨益额外内容（如下代码所示），故而移除；这与通过 corePlugins 禁用基础样式（preflight）、禁用容器组件（container）作用类似。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">*, ::before, ::after &#123;</div><div class="line">  --tw-border-spacing-x: 0;</div><div class="line">  ......</div><div class="line">&#125;</div><div class="line">::backdrop &#123;</div><div class="line">  --tw-border-spacing-x: 0;</div><div class="line">  ......</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="为什么要在配置中通过-theme-自定义长度单位？"><a href="#为什么要在配置中通过-theme-自定义长度单位？" class="headerlink" title="为什么要在配置中通过 theme 自定义长度单位？"></a>为什么要在配置中通过 <code>theme</code> 自定义长度单位？</h3><p>修改长度单位从 <code>rem</code> 到 <code>px</code>，这也是不得已而为之。 <a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a> 标准对 <a href="https://doc.quickapp.cn/tutorial/framework/page-style-and-layout.html?q=#长度单位" target="_blank" rel="external">长度单位</a> 的支持，在 1070 及以下版本仅支持长度单位 <code>px</code> 和 <code>%</code>。从 <code>1080</code> 版本开始，新增了长度单位 <code>dp</code>。它无法支持 <code>rem</code>，就只能自定义设置为 <code>px</code>；在通过 <code>theme</code> 自定义长度单位，是 Tailwind CSS 官方提供的功能，以此能够实现更精细的样式控制；虽然操作不难，但属性较多、约定繁杂。后续时间如果允许，将探索 <code>rem to px</code> 批量转换插件来实现，以达到快速修改。如果您感兴趣，可以查阅 Tailwind CSS 完整版本配置—— <a href="https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/config.full.js" target="_blank" rel="external">config.full.js</a> 。</p>
+<h3 id="其他暂未解决问题"><a href="#其他暂未解决问题" class="headerlink" title="其他暂未解决问题"></a>其他暂未解决问题</h3><ul>
+<li><strong>少部分类名写法，快应用构建不支持</strong></li>
+</ul>
+<p>在 Tailwind CSS 机制中，支持使用类名诸如  <code>h-[100px] w-1/3</code> （对应生成 CSS 如下），然而，在快应用构建工具暂不支持这类名，于是乎这样写便不会生效，当然也不会造成什么问题；后续亟待打包工具优化。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.h-\[100px\] &#123;</div><div class="line">  height: 100px</div><div class="line">&#125;</div><div class="line">.w-1\/3 &#123;</div><div class="line">  width: 33.333333%</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在打包（Toolkit）未解决该问题之前，您可以手动写一个 <code>class</code>，或者使用内联样式（<code>style</code>）来兼容；在这种情况下，更推荐后者；因为引入 Tailwind CSS 的开发模式中，基本不用手写 class，即无需滚动到 <code>style</code> 标签或跳转 less、(s)css、文件，那么直接在 <code>template</code> 中使用内联更为便捷。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"training-list-width"</span> <span class="attr">style</span>=<span class="string">"width: 326px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.training-list-width</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">326px</span>;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><strong>快应用构建，资源存在重复引用问题</strong></li>
+</ul>
+<p>前文中提到，在 <code>script</code> 标签中 <code>import</code> CSS 资源，暂时未得到支持；但，在 <code>style</code> 标签中 <code>@import</code> 的 CSS 文件，被 A、B 两个页面（<code>*.ux</code>）引入，那么对应的 css 内容，就会被打入对应页面（即便有的内容没有被使用），从而导致代码体积略有增加（即便参考 <a href="https://forum.lovejade.cn/d/83-rpk" target="_blank" rel="external">如何优化「快应用」rpk 包体积？</a> 一文中的方法，也不可避免）。这是快应用构建本身存在的问题，使用 Tailwind CSS 也不例外。后续需要打包工具优化。</p>
+<p>以上，就是在 <code>快应用</code> 开发过程中，引入 Tailwind CSS 所需的操作、以及常见问题说明。肯定还有异常更多情况没有考虑到，后续会逐步补充；如果您在实际运用过程中，欢请留言交流、反馈、分享。</p>
+<p>2023 年 07 月 05 日写于〔深圳福田〕</p>
+<h2 id="猜您可能感兴趣的文章"><a href="#猜您可能感兴趣的文章" class="headerlink" title="猜您可能感兴趣的文章"></a>猜您可能感兴趣的文章</h2><ul>
+<li><a href="https://forum.lovejade.cn/d/227-rpk" target="_blank" rel="external">快应用如何基于真机调试正式包（rpk）？</a></li>
+<li><a href="https://forum.lovejade.cn/d/195-rpk" target="_blank" rel="external">快应用如何快速安装并运行 rpk 包？</a></li>
+<li><a href="https://forum.lovejade.cn/d/192-watch-computed" target="_blank" rel="external">快应用如何基于 watch computed 监听多个变量？</a></li>
+<li><a href="https://forum.lovejade.cn/d/142-vuex" target="_blank" rel="external">如何在快应用开发中使用 vuex 做状态管理</a></li>
+<li><a href="https://forum.lovejade.cn/d/97-ide-babelconfigjs" target="_blank" rel="external">快应用 IDE 配置 babel.config.js 的前世今生</a></li>
+<li><a href="https://quickapp.vivo.com.cn/quickapp-ide-getting-started/" target="_blank" rel="external">快应用开发工具入门介绍</a></li>
+<li><a href="https://forum.lovejade.cn/d/75-chrome-url" target="_blank" rel="external">Chrome 为何无法通过 url 拉起快应用？</a></li>
+<li><a href="https://forum.lovejade.cn/d/72" target="_blank" rel="external">团队开发快应用，如何统一代码风格？</a></li>
+<li><a href="https://forum.lovejade.cn/d/71-prettier" target="_blank" rel="external">如何用 Prettier 美化您的快应用代码？</a></li>
+<li><a href="https://quickapp.vivo.com.cn/quickapp-ide-pretest/" target="_blank" rel="external">如何通过 IDE 的预检测功能提高审核通过率</a></li>
+<li><a href="https://quickapp.vivo.com.cn/how-to-configure-code-snippets-gracefully-in-quickapp-development/" target="_blank" rel="external">如何优雅地配置快应用的代码片段</a></li>
+<li><a href="https://quickapp.vivo.com.cn/how-to-develop-quickapp-based-on-typescript/" target="_blank" rel="external">如何基于 Typescript 开发快应用</a></li>
+<li><a href="https://forum.lovejade.cn/d/59" target="_blank" rel="external">快应用开发中，如何区分各种环境？</a></li>
+<li><a href="https://forum.lovejade.cn/d/19-qa-spin" target="_blank" rel="external">快应用官方加载动画库：qa-spin</a></li>
+</ul>
+	</div>
+		<reward-service></reward-service>
+    <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
+  <hr>
+  <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 2rem">
+    <img style="width: 256px;min-width: 200px !important" src="https://image.nicelinks.site/qrcode_jqx.jpg" alt="静晴轩 ~ 晚晴幽草轩">
+    <div style="padding: 0  1rem 1.5rem 1rem;text-align: center;line-height: 1.5rem"><strong>个人微信公众号</strong>：<a href="https://www.jeffjade.com/?utm_source=jeffjade.com">晚晴幽草轩</a>；名字取自：“天意怜幽草，人间重晚晴”。<br>专注互联网开发（Web 大前端、快应用、小程序），以及分享优质网站、AI 应用、效率工具、心得感悟等内容。
+    </div>
+  </div>
+<div></div></div>
+    <div id="cc-copyright" class="cc-content">
+    <h3>文档信息</h3>
+    <ul>
+      <li>版权声明：知识共享署名-非商业性使用-禁止演绎<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">（创意共享3.0许可证）</a></li>
+      <li>文章出处：<a href="http://www.jeffjade.com" title="晚晴幽草轩">晚晴幽草轩</a></li>
+      <li>发表日期：<time datetime="2023-07-19T12:20:00.000Z" itemprop="datePublished">2023-07-19</time></li>
+      <li>社交媒体：
+        <a href="http://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+        <a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+        <a href="https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+        <a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+      </li>
+    </ul>
+</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/快应用/">快应用</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/CSS/">CSS</a><a href="/tags/快应用/">快应用</a>
+  </div>
+
+</div>
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://www.jeffjade.com/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/" data-title="如何将 Tailwind CSS 引入快应用开发提升编码效率？ | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+	</article>
+	<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2023/05/01/251-blog-slow-update-instructions/" title="关于「晚晴幽草轩」博客缓更说明">
+ <strong>下一篇：</strong><br> 
+ <span>关于「晚晴幽草轩」博客缓更说明
+</span>
+</a>
+</div>
+
+</nav>
+	<hr>
+<div id="gitalk-container"></div>
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tailwind-CSS-可为快应用开发带来哪些好处？"><span class="toc-number">1.</span> <span class="toc-text">Tailwind CSS 可为快应用开发带来哪些好处？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何在项目中使用-Tailwind-CSS？"><span class="toc-number">2.</span> <span class="toc-text">如何在项目中使用 Tailwind CSS？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Tailwind-CSS-依赖"><span class="toc-number">2.1.</span> <span class="toc-text">安装 Tailwind CSS 依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置您的模板路径"><span class="toc-number">2.2.</span> <span class="toc-text">配置您的模板路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将-Tailwind-指令添加到您的-CSS-中"><span class="toc-number">2.3.</span> <span class="toc-text">将 Tailwind 指令添加到您的 CSS 中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动-Tailwind-CLI-构建过程"><span class="toc-number">2.4.</span> <span class="toc-text">启动 Tailwind CLI 构建过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开始在-UX-中使用-Tailwind-CSS"><span class="toc-number">2.5.</span> <span class="toc-text">开始在 UX 中使用 Tailwind CSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何基于-Tailwind-CSS-提升开发效率？"><span class="toc-number">3.</span> <span class="toc-text">如何基于 Tailwind CSS 提升开发效率？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Tailwind-CSS-IntelliSense-扩展"><span class="toc-number">3.1.</span> <span class="toc-text">安装 Tailwind CSS IntelliSense 扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考基于-Tailwind-CSS-组件的开源库"><span class="toc-number">3.2.</span> <span class="toc-text">参考基于 Tailwind CSS 组件的开源库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见问题及说明"><span class="toc-number">4.</span> <span class="toc-text">常见问题及说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#不能在-script-标签中，引入输出-CSS-文件么？"><span class="toc-number">4.1.</span> <span class="toc-text">不能在 script 标签中，引入输出 CSS 文件么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为何在-tailwind-config-js-禁用如此多样式？"><span class="toc-number">4.2.</span> <span class="toc-text">为何在 tailwind.config.js 禁用如此多样式？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为何要在-input-css-中移除-tailwind-base-？"><span class="toc-number">4.3.</span> <span class="toc-text">为何要在 input.css 中移除 @tailwind base; ？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要在配置中通过-theme-自定义长度单位？"><span class="toc-number">4.4.</span> <span class="toc-text">为什么要在配置中通过 theme 自定义长度单位？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他暂未解决问题"><span class="toc-number">4.5.</span> <span class="toc-text">其他暂未解决问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#猜您可能感兴趣的文章"><span class="toc-number">5.</span> <span class="toc-text">猜您可能感兴趣的文章</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="linkslist">
+	<p class="asidetitle">倾情款赠</p>
+	<div style="width:100%"><img style="width:100%" src="https://image.nicelinks.site/%E8%B5%9E%E8%B5%8F%E7%A0%81.jpeg?imageView2/1/w/800/h/800/interlace/1/ignore-error/1" alt="倾情捐赠"></div>
+</div>
+
+  <div class="wbfollow">
+	<p class="asidetitle">微博互粉</p>
+	<span class="sidebar-top-tip">亦可点击 Enter 键隐藏侧边栏</span>
+	<iframe width="100%" height="119" class="share_self" frameborder="0" scrolling="no" src="//widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3235949794&verifier=5c6bff53&colors=f0f0f0,fff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+</div>
+
+  <div class="widget-wrap linkslist">
+    <h3 class="widget-title asidetitle">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/">如何将 Tailwind CSS 引入快应用开发提升编码效率？</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/01/251-blog-slow-update-instructions/">关于「晚晴幽草轩」博客缓更说明</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/10/249-chatgpt-web-client-free-to-use/">素问智聊斋，非官方 ChatGPT 在线客户端，免费可用</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/30/249-webassembly-for-web/">为什么说 WebAssembly 让 Web 的未来更光明？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/12/249-emerging-technologies-in-the-past-decade/">近十年新兴行业技术，及简单介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/">如何基于 Prerender 为 SPA 做 SEO 优化</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/31/246-nicelinks-in-2022/">2022，「倾城之链」运营第 6 年感记</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/31/245-2022-how-to-learn-front-end-development-elegantly/">2022，如何优雅学习前端开发？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/08/244-2022-worth-learning-series-functional-programming/">2022，值得学习系列之：函数式编程</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/">地表最强 Markdown 文本编辑工具——Obsidian</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/">如何打造体验良好的本地全文搜索？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/14/241-how-to-make-google-asset-based-ads/">如何制作 Google 自适应广告素材？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/31/240-nicelinks-weekly-050/">优质网站同好者周刊（第 50 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="categorieslist">
+	<p class="asidetitle">云轩分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>60</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Health/" title="Health">Health<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Program/" title="Program">Program<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Read/" title="Read">Read<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Share/" title="Share">Share<sup>22</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Thought/" title="Thought">Thought<sup>25</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Toss/" title="Toss">Toss<sup>28</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>64</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/快应用/" title="快应用">快应用<sup>10</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">广而告之</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="https://nicelinks.site?utm_source=jeffjade.com&pid=sidebar-advertisement" target="_blank" title="倾城之链">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg" alt="倾城之链 | 小程序码">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">最新作品</p>
+  <div class="jade-gg-block width-block-wrap">
+    <a class="width-block-wrap" href="http://nicelinks.site/?utm_source=jeffjade.com&pid=aside" target="_blank" title="倾城之链">
+      <img class="width-block-wrap" src="https://image.nicelinks.site/nicelinks-site.jpg" alt="倾城之链">
+    </a>
+  </div>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">轩站热度</p>
+  <!-- 
+    <font id="run_time_long"></font><br>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span style='color:purple' id="busuanzi_value_site_pv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_site_uv">
+      本站访客人数 <span style='color:purple' id="busuanzi_value_site_uv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量 <span style='color:purple' id="busuanzi_value_page_pv"></span> 次
+    </span>
+   -->
+  <div id="clustrmaps-count"></div>
+  <p style="text-align:center">( Start counting from 07 / 13 / 2017 )</p>
+</div>
+
+  <div class="tagslist">
+	<p class="asidetitle">云轩标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Share/" title="Share">Share<sup>127</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>63</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thought/" title="Thought">Thought<sup>43</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Toss/" title="Toss">Toss<sup>40</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>33</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>30</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>19</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>13</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/小程序/" title="小程序">小程序<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">云轩关注</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.williamlong.info/?utm_source=jeffjade.com" target="_blank" title="月光博客">月光博客</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nicelinks.site/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://read.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="曼妙句子">曼妙句子</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://wiki.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="清风明月阁">清风明月阁</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://nice.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静晴轩别苑">静晴轩别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="幽居空谷轩">幽居空谷轩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="天意人间舫">天意人间舫</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://refined-x.com/?utm_source=jeffjade.com" target="_blank" title="前端路上">前端路上</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://creatorsdaily.com?utm_source=jeffjade.com" target="_blank" title="创造者日报">创造者日报</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://calpa.me/?utm_source=jeffjade.com" target="_blank" title="Calpa&#39;s Blog">Calpa&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jeffjade.com/nicelinks/#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">好书推荐</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="浪潮之巅">浪潮之巅</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="平凡的世界">平凡的世界</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A82" target="_blank" title="代码大全2">代码大全2</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 追求卓越，成功就会在不经意间 追上你！ <br>
+			As you think, so shall you become. </p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="https://nicelinks.site/redirect?url=https://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="mailto:yunjeff@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2023
+		
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+		
+		</p>
+</div></footer>
+    <script src="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js"></script>
+
+<script type="text/javascript">
+echo.init({
+  offset: 200,
+  throttle: 250,
+  unload: false,
+  callback: function (element, op) {}
+});
+
+var AdBlockRemind = document.createElement("ad-block-remind");
+document.body.appendChild(AdBlockRemind);
+
+$(document).ready(function(){
+  console.log('Welcome To %c晚晴幽草轩','font-size:2.113em;color: #2edfa3');
+
+  $("body").append('<quickapp-deeplink brand="vivo|Weixin|Mobile|OPPO|huawei" deeplink="https://hapjs.org/app/com.graceful.sentences/browser/pages/detail"></quickapp-deeplink>');
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  var openAside = function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  }
+  var closeAside = function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  }
+  c.click(openAside);
+  o.click(closeAside);
+
+  document.onkeydown = function(e){
+    // 兼容FF和IE和Opera
+    var theEvent = e || window.event;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    var isInputTextarea = document.activeElement.id === 'search' || document.activeElement.nodeName === "TEXTAREA"
+    if (code === 13 && !isInputTextarea) {
+        if( o.css('display') === 'none'){
+          openAside()
+        }else{
+          closeAside()
+        }
+        return false;
+    }
+    return true;
+  }
+
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          // close auto-close sidebar @17-11-07
+          // c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="//s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"><i class="fa fa-weixin"></i></a>',
+  '<a href="//service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});
+</script>
+
+
+
+
+
+<link href="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/css/jquery.fancybox.css" rel="stylesheet">
+<script async src="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/js/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      var srcVal = (this.src.indexOf('blank.gif') < 0) ? this.src : $(this).attr('data-echo')
+      $(this).wrap('<a href="' + srcVal + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+<!-- Analytics Begin -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-67901984-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-67901984-1');
+</script>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " https://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd0ed9bb72df3b2b32bdd2274981a7d07' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<!-- <script src="/js/totop.js"></script> -->
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+<!-- MathJax End -->
+
+<!-- Move totop.js From totop.ejs To Here@0309 -->
+<script src="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+(function($) {
+  if (!Object.assign) {
+    Object.defineProperty(Object, "assign", {
+      enumerable: false,
+      configurable: true,
+      writable: true,
+      value: function(target, firstSource) {
+        "use strict";
+        if (target === undefined || target === null)
+          throw new TypeError("Cannot convert first argument to object");
+        var to = Object(target);
+        for (var i = 1; i < arguments.length; i++) {
+          var nextSource = arguments[i];
+          if (nextSource === undefined || nextSource === null) continue;
+          var keysArray = Object.keys(Object(nextSource));
+          for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+            var nextKey = keysArray[nextIndex];
+            var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+            if (desc !== undefined && desc.enumerable) to[nextKey] = nextSource[nextKey];
+          }
+        }
+        return to;
+      }
+    });
+  }
+
+  if (document.getElementById('gitalk-container')) {
+    var gitalk = new Gitalk({
+      clientID: '4bc2d1424c7939471ad4',
+      clientSecret: 'b3dc888873f473405f79f7d9394888478ba55ca4',
+      repo: 'jadeblog-backups',
+      owner: 'nicejade',
+      admin: ['nicejade'],
+      id: md5(location.pathname),
+      distractionFreeMode: false
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  var clustrmapsCount = document.getElementById('clustrmaps-count')
+  if (clustrmapsCount) {
+    var clustrmapsScript = document.createElement('script')
+    clustrmapsScript.type = 'text/javascript'
+    clustrmapsScript.id = 'clustrmaps'
+    clustrmapsScript.src = '//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a'
+    clustrmapsCount.appendChild(clustrmapsScript)
+  }
+
+  var wbScript = document.createElement('script')
+  wbScript.type = 'text/javascript'
+  wbScript.async = true
+  wbScript.charset = "utf-8"
+  wbScript.src = "//tjs.sjs.sinajs.cn/open/api/js/wb.js"
+  document.body.appendChild(wbScript)
+
+  // 为 Baidu 设置自动推送@2018-08-08
+  
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.async = true;
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.async = true;
+      bp.src = '//push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  
+
+  // When to show the scroll link
+  // higher number = scroll link appears further down the page
+  var upperLimit = 1000;
+
+  // Our scroll link element
+  var scrollElem = $('#totop');
+
+  // Scroll to top speed
+  var scrollSpeed = 500;
+
+  // Show and hide the scroll to top link based on scroll position
+  scrollElem.hide();
+  $(window).scroll(function () {
+      var scrollTop = $(document).scrollTop();
+      if ( scrollTop > upperLimit ) {
+          $(scrollElem).stop().fadeTo(300, 1); // fade back in
+      }else{
+          $(scrollElem).stop().fadeTo(300, 0); // fade out
+      }
+  });
+
+  // Scroll to top animation on click
+  $(scrollElem).click(function(){
+      $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+  });
+})(jQuery);
+</script>
+
+<!-- Inject service-worker@2018-01-09 -->
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js", {scope: '/'})
+    .then(registration => console.log('SW Registration Success！Scope: ', registration.scope))
+    .catch(err => console.log('SW Registration Failed! Error: ', err));
+}
+</script>
+
+<!-- Inject Anchor.js @2018-01-14 -->
+<script type="text/javascript">
+function async(u, c) {
+  var d = document,
+    t = 'script',
+    o = d.createElement(t),
+    s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+
+async("https://fastly.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js", function(){
+  anchors.options = {
+    visible: 'hover',
+    placement: 'right'
+  }
+  anchors.add('#post h2, #post h3, #post h4');
+  anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+})
+</script>
+  </body>

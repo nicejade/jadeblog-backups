@@ -338,13 +338,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/tags/CSS/</loc>
-        <lastmod>2021-02-18T17:03:13.103Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/tags/Deno/</loc>
         <lastmod>2021-03-02T14:26:13.082Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -382,13 +375,6 @@
     <url>
         <loc>https://www.jeffjade.com/tags/Movie/</loc>
         <lastmod>2021-03-29T15:22:02.736Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/</loc>
-        <lastmod>2021-09-29T13:46:38.997Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -494,6 +480,20 @@
     <url>
         <loc>https://www.jeffjade.com/tags/Toss/</loc>
         <lastmod>2023-05-02T07:11:33.936Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/CSS/</loc>
+        <lastmod>2023-07-19T16:25:29.327Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/</loc>
+        <lastmod>2023-07-19T16:25:29.327Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
