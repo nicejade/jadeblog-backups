@@ -151,9 +151,9 @@
       <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
     
     
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
   </entry>
   
@@ -1041,7 +1041,7 @@
     <link href="https://www.jeffjade.com/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/"/>
     <id>https://www.jeffjade.com/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/</id>
     <published>2022-05-14T08:21:00.000Z</published>
-    <updated>2022-05-14T16:21:19.497Z</updated>
+    <updated>2022-06-08T14:56:46.180Z</updated>
     
     <content type="html"><![CDATA[<p>沈从文先生在给张兆和的情书中，有写道：“<strong>我一辈子走过许多地方的路，行过许多地方的桥，看过许多形状的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人</strong>”。近十年，写文章或文档，用过非常多基于 <a href="https://nicelinks.site/tags/Markdown" target="_blank" rel="external">Markdown</a> 出色的文本编辑工具，诸如 <a href="https://nicelinks.site/post/5af1dffb979f626ea3d37910" target="_blank" rel="external">Sublime Text</a> 、 <a href="https://nicelinks.site/post/5a5114df0b0ec0396863d7c1" target="_blank" rel="external">Cmd Markdown</a> 、 <a href="https://nicelinks.site/post/5b055142e93ed2618cfac124" target="_blank" rel="external">MarkEditor</a> 、 <a href="https://nicelinks.site/post/5cbc58707855f80ea42ea6a7" target="_blank" rel="external">Typora</a> ， <a href="https://markdown.lovejade.cn/" target="_blank" rel="external">Arya 在线</a> 等等，直到遇见 <a href="https://nicelinks.site/post/6266999577f8270876fcb3d6" target="_blank" rel="external">Obsidian</a> ，被强大的功能、完美的设计所震撼、折服，堪称<strong>地表最强文本编辑工具</strong>。</p>
 <a id="more"></a>
@@ -1149,9 +1149,9 @@
       <category term="Toss" scheme="https://www.jeffjade.com/categories/Toss/"/>
     
     
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="Markdown" scheme="https://www.jeffjade.com/tags/Markdown/"/>
     
@@ -1162,7 +1162,7 @@
     <link href="https://www.jeffjade.com/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/"/>
     <id>https://www.jeffjade.com/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/</id>
     <published>2022-03-21T08:21:00.000Z</published>
-    <updated>2022-04-09T14:55:41.828Z</updated>
+    <updated>2022-06-08T14:57:38.151Z</updated>
     
     <content type="html"><![CDATA[<p>对于博客或者文档，全文搜索是非常重要的功能。现如今，<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站生成器</a>工具，无论是静态的、携带完整后台的、还是基于低代码、无代码的，皆不可胜数，诸如：<a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" rel="external">Hexo</a>、<a href="https://nicelinks.site/post/5b2298f5d1c6ca419a9f7e00" target="_blank" rel="external">Vuepress</a>、<a href="https://nicelinks.site/post/5d4fec8c4c0a2404cc79f97a" target="_blank" rel="external">Docsify</a>、<a href="https://nicelinks.site/post/5c36d7b2589b2a35f579f377" target="_blank" rel="external">Hugo</a>、<a href="https://nicelinks.site/post/5c3f3151a5957e07a40b30ff" target="_blank" rel="external">Ghost</a> 等，但之于「<strong>搜索</strong>」功能，或未提供、或不尽如人意；基于这样的背景，本文旨在探讨<strong>如何打造本地全文搜索</strong>？</p>
 <a id="more"></a>
@@ -1322,9 +1322,9 @@
       <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
     
     
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
       <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
     
@@ -1423,6 +1423,51 @@
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于“清风明月阁”的由来，以及未来</title>
+    <link href="https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/"/>
+    <id>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</id>
+    <published>2022-01-20T13:21:00.000Z</published>
+    <updated>2022-01-21T04:47:13.266Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>，基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感…..人生漫短，白首时回顾，堪凭这些许文字以自怜。</p>
+<a id="more"></a>
+<p><img src="http://lovejade.oss-cn-shenzhen.aliyuncs.com/小舟从此逝-江海寄余生.jpg" alt="小舟从此逝-江海寄余生"></p>
+<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>早先搭建的十余个网站，有些实属为体验「<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站构建工具</a>」而起；岁月蹉跎中折腾多了，那种兴之所至、行之所往的冲动，早已隐去；而今，却又“重蹈覆辙”，实在是感念 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 之强大，一时为其蕴藏的「哲思」所着迷；一直以来呢，也在探索文档、Wiki 最佳撰写工具；而前段时间，又恰巧购得云服务器一台；这好奇的念头，与适宜的环境，结合的恰到好处，于是，便有了<a href="https://wiki.lovejade.cn" target="_blank" rel="external">“清风明月阁”</a>。</p>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>给网站命名，向来谨慎，却总也是“因循守旧”，大多没有新意；从最早 2014 年的<a href="https://www.jeffjade.com/">晚晴幽草轩</a>，到今年（2021）的<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>，格式上，都是一个调子：截取喜欢的诗词，结合建筑名为后缀。那些年喜欢李商隐那句：“天意怜幽草，人间重晚晴”，便有了最初的两个网站，这在<a href="https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/">晚晴幽草轩，天意人间舫</a>一文中有过记载。</p>
+<p>多年来，深（身）陷代码中，久未涉足文学诗词，按照如上惯例，为此站取名时，为求其名能“达意”且兼具雅致，好一阵搜肠刮肚；<a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a>之中，已用亭、轩、舫、苑，又因此站基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 所建，在当时或者如今回头看，择以「阁」字，这存在必然性。而在诗词的甄选中，之处有意取李太白的“若非群玉山头见，会向瑶池月下逢”中「群玉」、「瑶池」；虽说雅致，但究竟与心境不能完全契合；斟酌时，须臾之间，灵光乍现，脑海浮现苏子瞻《前赤壁赋》中一段经典：</p>
+<blockquote>
+<p>“逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。<strong>惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适</strong>。”</p>
+</blockquote>
+<p>其<strong>雅致</strong>、其<strong>意境</strong>、其<strong>哲思</strong>，莫有与心之所愿更契合者，于是立即便定下了，名曰：<a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>；工作生活中，自觉总也是”一肚子不合时宜“，今为这网站命此名，怕是为数不多的一次“合乎时宜”；感谢苏子赐名！</p>
+<h2 id="其用"><a href="#其用" class="headerlink" title="其用"></a>其用</h2><p>漫画《四月一日灵异事件簿》中，有写道：“思想、语言是会束缚人的东西，不但自己的会束缚自己，别人的也会束缚自己”，对此深表认同：愚顽的脑袋里如再被束缚，接收到任何与之相悖的理念，都是引发愤怒的毒物。这个时代，关乎“求同存异”，于虚拟网络中或可“被存在”；而生活的现实中，却是难以“存活”。这些年，关乎“思想的表达、语言的阐述”，所引发的后果，远胜海啸山洪，且是司空见惯；即便朋友恋人间的好心建议（或提议），轻起口角，重则仇恨；如此往复，伤痕累累，乃至近乎“四海无人对夕阳”的悲苦……于是乎，痛定思痛后，终可懂得<code>海明威</code>为何如此说：</p>
+<blockquote>
+<p>我们花了两年学会说话，却要花上六十年来学会闭嘴。大多数时候，我们说得越多，彼此的距离却越远，矛盾也越多。在沟通中，大多数人总是急于表达自己，一吐为快，却一点也不懂对方。两年学说话，一生学闭嘴。懂与不懂，不多说。心乱心静，慢慢说。若真没话，就别说。── <a href="https://read.lovejade.cn/p/60e1ee1c7f46b90656e77c7d" target="_blank" rel="external">曼妙句子</a>。</p>
+</blockquote>
+<p>耳聪可以闻世声，目明堪能睹世事，这是与生俱来的本领；人间真实，纷呈精彩，阴阳相生，优劣混合；犹为凡夫俗子，免不了阐述下自己看法，一抒心中块垒，也为“两肩抬道义”；倘若付与人当面说，恐引纷争，实非余愿；“夫唯不争，故天下莫能与之争”，于是乎，在自建平台，以文字形式，承载所学、所思、所感、所悟，或是最佳之选。明朝文学家、画家陈继儒，在《小窗幽记》中写道：</p>
+<blockquote>
+<p>带雨有时种竹，关门无事锄花；拈笔闲删旧句，汲泉几试新茶。余尝净一室，置一几，陈几种快意书，放一本旧法帖；古鼎焚香，素麈挥尘，意思小倦，暂休竹榻。饷时而起，则啜苦茗，信手写汉书几行，随意观古画数幅。心目间，觉洒洒灵空，面上俗尘，当亦扑去三寸。但看花开落，不言人是非。</p>
+</blockquote>
+<p>其中所描绘心性境界，实在令人殷羡，而这也正是所追求的完美。至于“汉书几行、平思几许”，置于这人间网络中，赠予有缘人；期之如“江上之清风，山间之明月”，与人无害，偶可参考，吾愿足矣。</p>
+<p>2021 年 12 月末，记之于深圳。</p>]]></content>
+    
+    <summary type="html">
+    
+      清风明月阁，基于 Wiki.js 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感.....人生漫短，白首时回顾，堪凭这些许文字以自怜。
+    
+    </summary>
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/categories/Thought/"/>
+    
+    
+      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
+    
+      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
   </entry>
   
@@ -1526,51 +1571,6 @@
       <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
     
       <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于“清风明月阁”的由来，以及未来</title>
-    <link href="https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/"/>
-    <id>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</id>
-    <published>2022-01-20T13:21:00.000Z</published>
-    <updated>2022-01-21T04:47:13.266Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>，基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感…..人生漫短，白首时回顾，堪凭这些许文字以自怜。</p>
-<a id="more"></a>
-<p><img src="http://lovejade.oss-cn-shenzhen.aliyuncs.com/小舟从此逝-江海寄余生.jpg" alt="小舟从此逝-江海寄余生"></p>
-<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>早先搭建的十余个网站，有些实属为体验「<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external">网站构建工具</a>」而起；岁月蹉跎中折腾多了，那种兴之所至、行之所往的冲动，早已隐去；而今，却又“重蹈覆辙”，实在是感念 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 之强大，一时为其蕴藏的「哲思」所着迷；一直以来呢，也在探索文档、Wiki 最佳撰写工具；而前段时间，又恰巧购得云服务器一台；这好奇的念头，与适宜的环境，结合的恰到好处，于是，便有了<a href="https://wiki.lovejade.cn" target="_blank" rel="external">“清风明月阁”</a>。</p>
-<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>给网站命名，向来谨慎，却总也是“因循守旧”，大多没有新意；从最早 2014 年的<a href="https://www.jeffjade.com/">晚晴幽草轩</a>，到今年（2021）的<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>，格式上，都是一个调子：截取喜欢的诗词，结合建筑名为后缀。那些年喜欢李商隐那句：“天意怜幽草，人间重晚晴”，便有了最初的两个网站，这在<a href="https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/">晚晴幽草轩，天意人间舫</a>一文中有过记载。</p>
-<p>多年来，深（身）陷代码中，久未涉足文学诗词，按照如上惯例，为此站取名时，为求其名能“达意”且兼具雅致，好一阵搜肠刮肚；<a href="https://forum.lovejade.cn/d/9" target="_blank" rel="external">亭台楼阁、轩榭廊舫，殿庭苑斋</a>之中，已用亭、轩、舫、苑，又因此站基于 <a href="https://nicelinks.site/post/61a334f7465c2155e2d15886" target="_blank" rel="external">Wiki.js</a> 所建，在当时或者如今回头看，择以「阁」字，这存在必然性。而在诗词的甄选中，之处有意取李太白的“若非群玉山头见，会向瑶池月下逢”中「群玉」、「瑶池」；虽说雅致，但究竟与心境不能完全契合；斟酌时，须臾之间，灵光乍现，脑海浮现苏子瞻《前赤壁赋》中一段经典：</p>
-<blockquote>
-<p>“逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。<strong>惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适</strong>。”</p>
-</blockquote>
-<p>其<strong>雅致</strong>、其<strong>意境</strong>、其<strong>哲思</strong>，莫有与心之所愿更契合者，于是立即便定下了，名曰：<a href="https://wiki.lovejade.cn" target="_blank" rel="external">清风明月阁</a>；工作生活中，自觉总也是”一肚子不合时宜“，今为这网站命此名，怕是为数不多的一次“合乎时宜”；感谢苏子赐名！</p>
-<h2 id="其用"><a href="#其用" class="headerlink" title="其用"></a>其用</h2><p>漫画《四月一日灵异事件簿》中，有写道：“思想、语言是会束缚人的东西，不但自己的会束缚自己，别人的也会束缚自己”，对此深表认同：愚顽的脑袋里如再被束缚，接收到任何与之相悖的理念，都是引发愤怒的毒物。这个时代，关乎“求同存异”，于虚拟网络中或可“被存在”；而生活的现实中，却是难以“存活”。这些年，关乎“思想的表达、语言的阐述”，所引发的后果，远胜海啸山洪，且是司空见惯；即便朋友恋人间的好心建议（或提议），轻起口角，重则仇恨；如此往复，伤痕累累，乃至近乎“四海无人对夕阳”的悲苦……于是乎，痛定思痛后，终可懂得<code>海明威</code>为何如此说：</p>
-<blockquote>
-<p>我们花了两年学会说话，却要花上六十年来学会闭嘴。大多数时候，我们说得越多，彼此的距离却越远，矛盾也越多。在沟通中，大多数人总是急于表达自己，一吐为快，却一点也不懂对方。两年学说话，一生学闭嘴。懂与不懂，不多说。心乱心静，慢慢说。若真没话，就别说。── <a href="https://read.lovejade.cn/p/60e1ee1c7f46b90656e77c7d" target="_blank" rel="external">曼妙句子</a>。</p>
-</blockquote>
-<p>耳聪可以闻世声，目明堪能睹世事，这是与生俱来的本领；人间真实，纷呈精彩，阴阳相生，优劣混合；犹为凡夫俗子，免不了阐述下自己看法，一抒心中块垒，也为“两肩抬道义”；倘若付与人当面说，恐引纷争，实非余愿；“夫唯不争，故天下莫能与之争”，于是乎，在自建平台，以文字形式，承载所学、所思、所感、所悟，或是最佳之选。明朝文学家、画家陈继儒，在《小窗幽记》中写道：</p>
-<blockquote>
-<p>带雨有时种竹，关门无事锄花；拈笔闲删旧句，汲泉几试新茶。余尝净一室，置一几，陈几种快意书，放一本旧法帖；古鼎焚香，素麈挥尘，意思小倦，暂休竹榻。饷时而起，则啜苦茗，信手写汉书几行，随意观古画数幅。心目间，觉洒洒灵空，面上俗尘，当亦扑去三寸。但看花开落，不言人是非。</p>
-</blockquote>
-<p>其中所描绘心性境界，实在令人殷羡，而这也正是所追求的完美。至于“汉书几行、平思几许”，置于这人间网络中，赠予有缘人；期之如“江上之清风，山间之明月”，与人无害，偶可参考，吾愿足矣。</p>
-<p>2021 年 12 月末，记之于深圳。</p>]]></content>
-    
-    <summary type="html">
-    
-      清风明月阁，基于 Wiki.js 搭建的 Web 应用，名字取自：“惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色”。年与时驰，意与岁去，念其功能之丰盈，特在此：记余之所造，录吾之所闻，享愚之所学，载我之随感.....人生漫短，白首时回顾，堪凭这些许文字以自怜。
-    
-    </summary>
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/categories/Thought/"/>
-    
-    
-      <category term="Thought" scheme="https://www.jeffjade.com/tags/Thought/"/>
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="Toss" scheme="https://www.jeffjade.com/tags/Toss/"/>
     
   </entry>
   
