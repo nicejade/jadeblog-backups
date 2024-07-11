@@ -125,14 +125,6 @@
 </header>
 	<div class="article-content">
 		
-    <div class="bottom-gg-module">
-  <div class="jade-gg-block">
-    <a class="width-block-wrap fancybox" href="https://niceshare.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank">
-      <img class="width-block-wrap" style="width: 100%;max-height: 200px" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/%E5%A5%91%E8%80%8C%E4%B8%8D%E8%88%8D%E9%87%91%E7%9F%B3%E5%8F%AF%E9%95%82.jpg" alt="倾城之链">
-    </a>
-    </div>
-  </div>
-
 		<p>近期做Android开发需求，涉及到需要将游戏应用的二维码保存到本地相册，以便用户可以查看分享。参考了网上<a href="http://stormzhang.com/android/2014/07/24/android-save-image-to-gallery/" target="_blank" rel="external">stormzhang 的这篇文章</a>，得到如下可以使用的代码：</p>
 <a id="more"></a>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">saveImageToGallery</span><span class="params">(Context context, Bitmap bmp)</span> </span>&#123;</div><div class="line">    <span class="comment">// 首先保存图片</span></div><div class="line">    File appDir = <span class="keyword">new</span> File(Environment.getExternalStorageDirectory(), <span class="string">"Boohee"</span>);</div><div class="line">    <span class="keyword">if</span> (!appDir.exists()) &#123;</div><div class="line">        appDir.mkdir();</div><div class="line">    &#125;</div><div class="line">    String fileName = System.currentTimeMillis() + <span class="string">".jpg"</span>;</div><div class="line">    File file = <span class="keyword">new</span> File(appDir, fileName);</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        FileOutputStream fos = <span class="keyword">new</span> FileOutputStream(file);</div><div class="line">        bmp.compress(CompressFormat.JPEG, <span class="number">100</span>, fos);</div><div class="line">        fos.flush();</div><div class="line">        fos.close();</div><div class="line">    &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">  &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// 其次把文件插入到系统图库</span></div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        MediaStore.Images.Media.insertImage(context.getContentResolver(),</div><div class="line">        file.getAbsolutePath(), fileName, <span class="keyword">null</span>);</div><div class="line">    &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 最后通知图库更新</span></div><div class="line">    context.sendBroadcast(<span class="keyword">new</span> Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse(<span class="string">"file://"</span> + path)));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -232,7 +224,7 @@
 
   <div class="linkslist">
 	<p class="asidetitle">倾情款赠</p>
-	<div style="width:100%"><img style="width:100%" src="https://image.nicelinks.site/nicelinks-site.jpg" alt="倾情捐赠"></div>
+	<div style="width:100%"><img style="width:100%" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/reward-code.jpeg" alt="倾情捐赠"></div>
 </div>
 
   <div class="wbfollow">

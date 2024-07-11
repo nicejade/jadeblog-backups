@@ -125,14 +125,6 @@
 </header>
 	<div class="article-content">
 		
-    <div class="bottom-gg-module">
-  <div class="jade-gg-block">
-    <a class="width-block-wrap fancybox" href="https://niceshare.site/?utm_source=jeffjade.com&pid=topad" title="倾城之链" target="_blank">
-      <img class="width-block-wrap" style="width: 100%;max-height: 200px" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/%E5%A5%91%E8%80%8C%E4%B8%8D%E8%88%8D%E9%87%91%E7%9F%B3%E5%8F%AF%E9%95%82.jpg" alt="倾城之链">
-    </a>
-    </div>
-  </div>
-
 		<p>Lua采用了基于垃圾收集的内存管理机制，因此对于程序员来说，在很多时候内存问题都将不再困扰他们。然而任何垃圾收集器都不是万能的，在有些特殊情况下，垃圾收集器是无法准确的判断是否应该将当前对象清理。这样就极有可能导致很多垃圾对象无法被释放。为了解决这一问题，就需要Lua的开发者予以一定程度上的配合。比如，当某个table对象被存放在容器中，而容器的外部不再有任何变量引用该对象，对于这样的对象，Lua的垃圾收集器是不会清理的，因为容器对象仍然引用着他。如果此时针对该容器的应用仅限于查找，而不是遍历的话，那么该对象将永远不会被用到。事实上，对于这样的对象我们是希望Lua的垃圾收集器可以将其清理掉的。见如下代码:</p>
 <a id="more"></a>
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">a = &#123;&#125;</div><div class="line">key = &#123;&#125;</div><div class="line">a[key] = <span class="number">1</span></div><div class="line">key = &#123;&#125;</div><div class="line">a[key] = <span class="number">2</span></div><div class="line"><span class="built_in">collectgarbage</span>()</div><div class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> <span class="built_in">pairs</span>(a) <span class="keyword">do</span></div><div class="line">    <span class="built_in">print</span>(v)</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
@@ -244,7 +236,7 @@
 
   <div class="linkslist">
 	<p class="asidetitle">倾情款赠</p>
-	<div style="width:100%"><img style="width:100%" src="https://image.nicelinks.site/nicelinks-site.jpg" alt="倾情捐赠"></div>
+	<div style="width:100%"><img style="width:100%" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/reward-code.jpeg" alt="倾情捐赠"></div>
 </div>
 
   <div class="wbfollow">
