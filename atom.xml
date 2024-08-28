@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2023-07-19T16:30:47.643Z</updated>
+  <updated>2024-08-28T13:42:48.449Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -14,6 +14,95 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>生财有迹 | 您专属的资产跟踪与分析工具</title>
+    <link href="https://www.jeffjade.com/2024/08/28/253-wealth-tracker/"/>
+    <id>https://www.jeffjade.com/2024/08/28/253-wealth-tracker/</id>
+    <published>2024-08-28T12:20:00.000Z</published>
+    <updated>2024-08-28T13:42:48.449Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/nicejade/wealth-tracker" target="_blank" rel="external">生财有迹</a>（Wealth Tracker）是一款专注于个人资产分析的应用程序。其核心功能是：全面记录并展示用户的资产状况，帮助用户轻松了解财务现状；运用 AI 能力，结合每种资产的特性和当前环境，提供适宜的财务建议。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wealth-tracker_mockup.png" alt="生财有迹 - 效果预览"></p>
+<h2 id="项目愿景"><a href="#项目愿景" class="headerlink" title="项目愿景"></a>项目愿景</h2><p>在当今多元化的经济环境中，个人资产管理变得日益重要。它往往分散于各类金融账户和服务中，例如银行存款与理财产品、移动支付平台（如微信支付、支付宝）、公积金、医保账户、货币基金（例如余额宝）、债券、各种股票及基金产品、房地产、贵金属、外部借款（尽量不做此配置🤫）以及其他投资等等（对于部分朋友，或许还有贷款、欠款等负债）。这些账户中的数额在不断变动，使得快速准确地了解个人总资产状况成为一项挑战。</p>
+<p>本项目旨在提供一个高效、直观的解决方案，以应对个人资产管理中的分散性和复杂性。<code>生财有迹</code>专注于账户余额及整体数额，避免深陷于单笔收支的琐碎细节。其目标是通过简化操作流程，帮助用户揭示个人资产的整体变化趋势，并通过友好的用户界面，使用户能够轻松记录和洞悉自己的财务信息。如欲了解更多，可移步至博文：<a href="https://fine.niceshare.site/projects/wealth-tracker/" target="_blank" rel="external">生财有迹 | 您专属的资产跟踪与分析工具</a>。</p>
+<h2 id="核心特性"><a href="#核心特性" class="headerlink" title="核心特性"></a>核心特性</h2><ul>
+<li><strong>简洁易用的操作界面</strong>：用户可以通过几个简单的步骤快速上手，无需任何复杂的财务知识。</li>
+<li><strong>丰富的数据可视化</strong>：通过图表和图形，直观展示资产变化，帮助用户轻松掌握财务状况。</li>
+<li><strong>本地部署的灵活性</strong>：部署在哪里由用户决定，确保数据的私密性、安全性，以及可扩展性。</li>
+<li><strong>开源的代码架构</strong>：项目的源代码完全开放，欢迎参与贡献，以不断改进和完善工具的功能。</li>
+</ul>
+<p>通过这些特性，希望建立一个用户友好、透明且可信赖的个人财分析工具，帮助用户更全面地掌握自己的财务状况。</p>
+<h2 id="在线体验"><a href="#在线体验" class="headerlink" title="在线体验"></a>在线体验</h2><p>为了让您更直观地了解 <a href="https://fund.niceshare.site/" target="_blank" rel="external">生财有迹</a> 的功能和特性，已在服务器上使用 <code>pm2</code> 部署了一个演示版本。该演示环境填充了模拟数据，方便您全面体验各项功能。无论您是想评估工具的实用性，还是出于好奇想一探究竟，欢迎访问以下链接进行体验：</p>
+<p><a href="https://fund.niceshare.site/" target="_blank" rel="external">https://fund.niceshare.site/</a></p>
+<p>请注意，这是一个公共演示环境，因此请勿在其中输入任何真实的个人财务信息。建议您在体验后，考虑按照本文档的指导，在自己的环境中部署和使用”生财有迹”，以确保您的财务数据的隐私和安全。</p>
+<p>如果您在使用过程中遇到任何问题或有反馈意见，欢迎通过项目的  <a href="https://github.com/nicejade/wealth-tracker/" target="_blank" rel="external">GitHub 页面</a>与我们联系。您的宝贵意见将帮助我们不断改进这一工具，以更好地满足用户的需求。</p>
+<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><p>说明用户在安装和使用前，需要准备的一些先决条件，譬如：您需要安装或升级 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>（&gt;= <code>16.*</code>），推荐使用 <a href="https://pnpm.io/" target="_blank" rel="external">Pnpm</a> 或 <a href="https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/">Yarn</a> 作为首选包管理工具。</p>
+<h2 id="如何使用？"><a href="#如何使用？" class="headerlink" title="如何使用？"></a>如何使用？</h2><h3 id="使用-Docker"><a href="#使用-Docker" class="headerlink" title="使用 Docker"></a>使用 Docker</h3><p><strong>使用 <a href="https://docs.docker.com/compose/" target="_blank" rel="external">docker compose</a></strong>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="attr">version:</span> <span class="string">'3.8'</span></div><div class="line"></div><div class="line"><span class="attr">services:</span></div><div class="line"><span class="attr">  wealth-tracker:</span></div><div class="line"><span class="attr">    image:</span> nicejade/wealth-tracker</div><div class="line"><span class="attr">    container_name:</span> wealth-tracker</div><div class="line"><span class="attr">    ports:</span></div><div class="line"><span class="bullet">      -</span> <span class="string">'8888:8888'</span></div><div class="line"><span class="attr">    volumes:</span></div><div class="line"><span class="bullet">      -</span> ./data:/app/data</div><div class="line"><span class="attr">    restart:</span> unless-stopped</div><div class="line"></div><div class="line"><span class="attr">volumes:</span></div><div class="line"><span class="attr">  data:</span></div></pre></td></tr></table></figure>
+<p>这将在后台启动服务，并且效果与下面的 <code>docker run</code> 命令相同。使用 Docker Compose 可以更方便地管理多个容器，并且配置更易读和维护。</p>
+<p><strong>或者 docker run</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run <span class="_">-d</span> -p 8888:8888 -v <span class="string">"<span class="variable">$(pwd)</span>/data:/app/data"</span> nicejade/wealth-tracker</div></pre></td></tr></table></figure>
+<p>如果您在本地部署，只需打开网址——<a href="http://localhost:8888/" target="_blank" rel="external">http://localhost:8888</a> 即可访问。如果在服务器运行，可通过 http://[Server-IP]:8888 来访问，您也可以指定其他端口。</p>
+<h3 id="使用-Node-js"><a href="#使用-Node-js" class="headerlink" title="使用 Node.js"></a>使用 Node.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># clone project</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/nicejade/wealth-tracker.git</div><div class="line"></div><div class="line"><span class="comment"># install &amp; run for client</span></div><div class="line"><span class="built_in">cd</span> client &amp;&amp; pnpm i &amp;&amp; pnpm start</div><div class="line"></div><div class="line"><span class="comment"># install &amp; run for srever</span></div><div class="line"><span class="built_in">cd</span> server &amp;&amp; pnpm i &amp;&amp; pnpm start</div></pre></td></tr></table></figure>
+<p>本项目客户端采用 <a href="https://svelte.dev/" target="_blank" rel="external">Svelte</a> 框架，基于 <a href="https://vitejs.dev/" target="_blank" rel="external">Vite</a> 所构建，默认 <code>5173</code> 端口，只需打开网址—— <a href="http://localhost:5173" target="_blank" rel="external">http://localhost:5173</a> 即可访问。</p>
+<h2 id="命名由来"><a href="#命名由来" class="headerlink" title="命名由来"></a>命名由来</h2><p>在项目开发初期，有为应用取中文名为：”财富追踪器”（英文名：<code>Wealth Tracker</code>）。这个名称初看简洁明了，似乎完美契合产品理念。然而，随着开发深入，逐渐显现出其局限性：</p>
+<ul>
+<li><strong>概念范畴过广</strong>：”财富”一词涵盖范围极广，不仅包括金钱资产，还可能指代时间、知识、经历，甚至是绝美容颜等无形价值。</li>
+<li><strong>功能定位不够精准</strong>：该应用实际上专注于能被精确计算和记录、且已经形成的有形资产，而非泛泛追踪所有形式的”财富”。</li>
+</ul>
+<p>这种认知更新促使重新思考产品定位和命名。偶然想到了两个颇具启发性的成语：”生财有道”和”生财有术”；而应用的核心功能恰恰是记录资产增长的轨迹。基于这一灵感，最终确定将应用命名为”<strong>生财有迹</strong>“。这个名字巧妙地结合了几个要素：</p>
+<ol>
+<li>“迹”与”记”同音，暗示了记录的功能。</li>
+<li>“生”与”升”同音，象征着资产的增长。</li>
+<li>整体保留了”生财”的概念，与原有的资产主题保持一致。</li>
+</ol>
+<p>“生财有迹”这个新名称不仅准确反映出产品功能定位，传达了产品理念，还蕴含了对用户资产增长的美好祝愿，希望您也会喜欢。</p>
+<h2 id="给予支持"><a href="#给予支持" class="headerlink" title="给予支持"></a>给予支持</h2><p><a href="https://github.com/nicejade/wealth-tracker" target="_blank" rel="external">生财有迹</a>项目开源且免费，然而设计与编码需耗费时间和精力。如若您对其使用感到满意，请考虑通过以下方式进行小额捐赠：</p>
+<div align="center"><br>  <img style="margin: 0;border-radius: 6px;width: 200px" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/reward-code.jpeg" alt="生财有迹 - 微信赞赏码"><br>  <p style="font-size:0.6em">微信扫码赞助</p><br><br>  <a href="https://www.buymeacoffee.com/nicejade?ref=github.com" target="_blank"><br>    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important"><br>  </a><br></div>
+
+<h2 id="路线图"><a href="#路线图" class="headerlink" title="路线图"></a>路线图</h2><p>“生财有迹”项目正处于积极的设计和研发阶段，致力于在功能丰富与易用性之间寻求平衡，以满足用户日益增长的个人财务管理需求。未来开发重点包括增强数据可视化能力、加强数据安全性、以及提升 AI 辅助分析功能等。</p>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked="checked"> 更新资产数据记录；</li>
+<li style="list-style: none"><input type="checkbox" checked="checked"> 资产数据可视化；</li>
+<li style="list-style: none"><input type="checkbox" checked="checked"> 查阅数据记录详情；</li>
+<li style="list-style: none"><input type="checkbox"> 设置阶段性目标；</li>
+<li style="list-style: none"><input type="checkbox"> 资产数据安全性；</li>
+<li style="list-style: none"><input type="checkbox"> 借助 AI 辅助分析；</li>
+</ul>
+<h2 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢"></a>特别鸣谢</h2><p>本项目的开发过程中，依赖并受益于以下优秀的开源技术和工具（未包含全部）。它们不仅提供了强大的功能，还促进了项目的高效开发和稳定运行。</p>
+<ul>
+<li><a href="https://svelte.dev/" target="_blank" rel="external">Svelte</a>: 作为一种新兴的前端框架，Svelte 通过其创新的编译时技术，让我们的 Web 应用更加轻量和高效。它减少了我们需要编写的样板代码，同时提高了运行时的性能。</li>
+<li><a href="https://tailwindcss.com/" target="_blank" rel="external">TailwindCSS</a>: 通过提供实用主义的 CSS 类，TailwindCSS 极大地简化了样式设计的过程。它使得我们能够快速构建美观且响应式的用户界面，同时保持代码的清晰和维护性。</li>
+<li><a href="https://vitejs.dev/" target="_blank" rel="external">Vite</a>: 作为一个现代化的前端构建工具，Vite 通过其快速的冷启动和即时的模块热更新，极大地提高了我们的开发效率。它利用了原生 ES 模块特性，使得项目构建更加高效。</li>
+<li><a href="https://flowbite.com/" target="_blank" rel="external">Flowbite</a>: 提供了一系列预构建的组件和模板，Flowbite 极大地加快了我们的开发流程。它帮助我们快速实现了复杂的用户界面元素，同时保持了代码的可定制性和可维护性。</li>
+<li><a href="https://axios-http.com/" target="_blank" rel="external">Axios</a>: 作为一个基于 Promise 的 HTTP 客户端，Axios 简化了我们的 Web 应用中与 API 的交互。它的易用性和广泛的功能集使得我们能够轻松处理 HTTP 请求和响应。</li>
+<li><a href="https://day.js.org/" target="_blank" rel="external">Day.js</a>: 作为一个轻量级的 JavaScript 日期库，Day.js 提供了直观的 API 来处理日期和时间。它使得我们在应用中处理复杂的日期计算变得简单且可靠。</li>
+<li><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>: 作为一个高效的 JavaScript 运行环境，Node.js 使得服务器端开发变得前所未有的简单和快速。它的事件驱动和非阻塞 I/O 模型极大地提高了我们的应用性能和响应速度。</li>
+<li><a href="https://www.fastify.io/" target="_blank" rel="external">Fastify</a>: 这个高性能的 Node.js Web 框架为我们提供了一个简单且强大的接口来构建 RESTful API。它的低开销和高度可扩展性使得我们的后端服务既快速又稳定。</li>
+<li><a href="https://www.sqlite.org/index.html" target="_blank" rel="external">SQLite3</a>: 作为一个轻量级的数据库引擎，SQLite3 为我们提供了一个无需配置的本地存储解决方案。它的简单性和高效性使得开发者在本地部署应用时能够轻松管理数据。</li>
+<li><a href="https://sequelize.org/" target="_blank" rel="external">Sequelize</a>: 作为一个强大的 ORM 框架，Sequelize 为我们提供了一种简单且直观的方式来管理数据库关系。它的灵活性和功能丰富性使得我们能够轻松实现复杂的数据操作和查询。</li>
+</ul>
+<p>在此，对上述技术和工具的开发者和社区，致以崇高的敬意和衷心的感谢❤️。正是得益于他们的卓越贡献，<code>生财有迹</code>才能得以成功构建并持续优化。同时，也要感谢如 <a href="https://chatgpt.com/?ref=niceshare.site" target="_blank" rel="external">ChatGPT</a>、Github Copilot、<a href="https://poe.com/" target="_blank" rel="external">Poe</a>、<a href="https://kimi.moonshot.cn/" target="_blank" rel="external">Kimi</a> 等 AI 工具在开发过程中提供的宝贵支持，它们显著提高了工作效率和体验。</p>]]></content>
+    
+    <summary type="html">
+    
+      生财有迹（Wealth Tracker）是一款专注于个人资产分析的应用程序。其核心功能是：全面记录并展示用户的资产状况，帮助用户轻松了解财务现状；运用 AI 能力，结合每种资产的特性和当前环境，提供适宜的财务建议。
+    
+    </summary>
+    
+      <category term="Share" scheme="https://www.jeffjade.com/categories/Share/"/>
+    
+    
+      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
+    
+      <category term="CSS" scheme="https://www.jeffjade.com/tags/CSS/"/>
+    
+      <category term="快应用" scheme="https://www.jeffjade.com/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
+    
+      <category term="工具" scheme="https://www.jeffjade.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>如何将 Tailwind CSS 引入快应用开发提升编码效率？</title>
@@ -1990,117 +2079,6 @@
 <li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
 <li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
-<li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
-<li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
-<li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>
-<li><a href="https://www.jeffjade.com/2019/02/17/151-aweome-beautiful-picture-website-list/" title="欲问美图何处寻？倾城之链有定音">欲问美图何处寻？倾城之链有定音</a></li>
-<li><a href="https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/">超实用图片工具网站，值得典藏</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/">高质量免费 🆓 图标资源大全</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/">十佳 AI 产品工具，为生活添彩</a></li>
-<li><a href="https://www.jeffjade.com/2020/09/01/168-list-of-websites-i-most-want-to-share-with-my-friends/">最想与朋友分享的网站列表</a></li>
-</ul>]]></content>
-    
-    <summary type="html">
-    
-      倾城之链作为一个开放平台，旨在云集全球优秀网站，探索互联网中更广阔的世界。此周刊，将汇聚过去一周倾城所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见关于倾城。
-    
-    </summary>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-    
-      <category term="Share" scheme="https://www.jeffjade.com/tags/Share/"/>
-    
-      <category term="倾城之链" scheme="https://www.jeffjade.com/tags/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优质网站同好者周刊（第 44 期）- 倾城之链</title>
-    <link href="https://www.jeffjade.com/2021/12/16/233-nicelinks-weekly-044/"/>
-    <id>https://www.jeffjade.com/2021/12/16/233-nicelinks-weekly-044/</id>
-    <published>2021-12-16T13:21:00.000Z</published>
-    <updated>2021-12-17T05:31:39.217Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly" target="_blank" rel="external">关于倾城</a>。</p>
-<a id="more"></a>
-<p><strong>备注</strong>：本周刊<strong>每周五</strong>生成，首发于个人微信公众号<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI5MDIwMzM2Mg==&amp;action=getalbum&amp;album_id=1530765143352082433&amp;scene=173&amp;from_msgid=2650641087&amp;from_itemidx=1&amp;count=3#wechat_redirect" target="_blank" rel="external">晚晴幽草轩</a>、博客<a href="https://www.jeffjade.com">晚晴幽草轩</a>，以及<a href="https://forum.lovejade.cn/" target="_blank" rel="external">悠然宜想亭</a>社区；此一键生成脚本基于 <a href="https://nicelinks.site/post/602d30aad099ff5688618591" target="_blank" rel="external">Deno</a> 编写，并在 Github 开源：<a href="https://github.com/nicejade/nicelinks-weekly" target="_blank" rel="external">nicejade/nicelinks-weekly</a>。</p>
-<h2 id="Fresh-Background-Gradients-WebGradients-com-💎"><a href="#Fresh-Background-Gradients-WebGradients-com-💎" class="headerlink" title="Fresh Background Gradients | WebGradients.com 💎"></a><a href="https://nicelinks.site/post/61b9f1c848f785032a2400bb" target="_blank" rel="external">Fresh Background Gradients | WebGradients.com 💎</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/设计" target="_blank" rel="external"><code>设计</code></a> · <a href="https://nicelinks.site/tags/配色" target="_blank" rel="external"><code>配色</code></a> · <a href="https://nicelinks.site/tags/CSS" target="_blank" rel="external"><code>CSS</code></a></p>
-<p><strong>关键字</strong>：webdesign, ui, ux, ui kit, gradients, backdrop, sketch, photoshop, freebie, free, web, webdev, css3, css, colors, animation, psd, palette, colour, background</p>
-<blockquote>
-<p>Come to WebGradients.com for 180 beautiful linear gradients in CSS3, Photoshop and Sketch. This collection is curated by top designers and totally free.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/webgradients.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Fresh Background Gradients | WebGradients.com 💎"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://webgradients.com/" target="_blank" rel="external">WebGradients.com 💎</a> 是 180 个线性渐变的免费集合（同类网站还有 <a href="https://nicelinks.site/redirect?url=https://uigradients.com/" target="_blank" rel="external">uiGradients</a> ），您可以将其用作网站任何部分的<strong>内容背景</strong>。轻松复制 CSS3 跨浏览器代码并立即使用！他们还准备了每个渐变的 <code>.PNG</code> 版本。作为奖励，还有<a href="https://nicelinks.site/post/5a954cd40b0590113aa144cd" target="_blank" rel="external">Sketch</a> 和  <code>Photoshop</code> 包 。值得一提的是，该系列由顶级设计师策划，完全免费。发现这网站后，有在<a href="https://nicelinks.site/post/6143390948b293062990b351" target="_blank" rel="external">曼妙句子</a>中运用，产生非常出色的效果。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61b9f1c848f785032a2400bb" target="_blank" rel="external">倾城之链 - Fresh Background Gradients | WebGradients.com 💎</a></p>
-<h2 id="来画-一站式数字创作创意平台"><a href="#来画-一站式数字创作创意平台" class="headerlink" title="来画-一站式数字创作创意平台"></a><a href="https://nicelinks.site/post/61b9ed1d48f785032a2400b9" target="_blank" rel="external">来画-一站式数字创作创意平台</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/短视频" target="_blank" rel="external"><code>短视频</code></a> · <a href="https://nicelinks.site/tags/AI" target="_blank" rel="external"><code>AI</code></a> · <a href="https://nicelinks.site/tags/平台" target="_blank" rel="external"><code>平台</code></a></p>
-<blockquote>
-<p>来画是有创意的 AI 动画短视频制作平台，仅需几张图片，几段文字和声音简单组合，即可在短时间内生成一个有趣的动画短视频。丰富视频模板素材免费用！对于企业用户，还有动画高端定制服务。</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.laihua.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - 来画-一站式数字创作创意平台"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.laihua.com/" target="_blank" rel="external">来画</a>，一站式数字创作创意平台（隶属深圳市前海手绘科技文化有限公司（简称“来画”），于 2015 年 7 月 30 号在深圳前海注册），累计了数千万用户，产生了上千万部作品，目前是国家文化和旅游部、新华社、人民日报的合作伙伴。</p>
-<p>秉持“科技创新，让创作更简单，让创意更美好”的使命，来画着力打造了<strong>来画动画</strong>（动画短视频云端创作平台）、<strong>来画演示</strong>（创意演示工具）、<strong>来画视频</strong>（AR视频演示工具）、<strong>来画设计</strong>（新一代设计软件）、<strong>来画白板</strong>（实时协作的在线白板软件）等 5 大系列工具产品，并搭建了创意服务供给平台来画梦工厂，以及数字创意职业教育培训平台<strong>来画学园</strong>，为企业和个人真正提供高效、卓越的数字创意服务。</p>
-<h3 id="来画动画"><a href="#来画动画" class="headerlink" title="来画动画"></a><strong>来画动画</strong></h3><p><strong>来画动画，动画视频云端智能创作平台</strong>。拥有 Web 端、APP 端两大视频创作工具，平台上配置了海量的视频模版和素材，以动画风格为主，实拍类素材为辅。用户只通过简单的模块化操作、拖拽与编辑，就能轻松将图片、文字、音乐、人物角色、道具、图表等素材完美结合，真正实现“像做PPT一样做动画”。</p>
-<h3 id="来画视频"><a href="#来画视频" class="headerlink" title="来画视频"></a>来画视频</h3><p>2021 年，来画推出了一个<strong>真人与内容实时互动</strong>的 AR 视频演示工具，也是首个将视频制作、视频录制、视频会议结合在一起的视频演示产品，让演示内容和真人完美融合，让会议、汇报、演讲、课件等变得生动有趣。</p>
-<h3 id="来画演示"><a href="#来画演示" class="headerlink" title="来画演示"></a>来画演示</h3><p>2021年7月，来画演示（来画Perfoo）重磅登场，这是一款<strong>拥有上帝视角</strong>的创意演示工具，让创意冲破空间的束缚，开启前所未有的酷炫演示体验。它颠覆了 PPT 的线性叙事结构，采用从整体到局部的全新演示方式，让用户清晰、准确地表述自己的逻辑想法，打造出立体思维导图式的演示内容，随时随地掌控全局。同时也能帮助观众更快速地理解内容，跟随演示者的思维去发现、去思考。</p>
-<p>无边界画布功能，打破传统演示内容编辑的界限，将用户置身上帝视角，可以在画布上随意放置各种想要展示的内容，加上镜头缩放、旋转、平移等多种转场特效，整个演示过程就像 3D 动画电影一样，极具视觉冲击力和电影故事感。</p>
-<h3 id="来画设计"><a href="#来画设计" class="headerlink" title="来画设计"></a><strong>来画设计</strong></h3><p><strong>来画设计，简单、智能的新一代设计软件</strong>，解决专业图表设计难题和日常设计需求。平台上拥有海量的<strong>数据可视化模板</strong>，只需简单拖放，即可轻松做出专业的数据图表、商业报告、思维导图、宣传海报等，让你的内容展示更具吸引力、说服力，适用于商务汇报、项目总结、政府报告、教育培训等众多场景。</p>
-<p>同时，平台上线了精美的<strong>平面设计模板</strong>，包括新媒体配图、电商海报、来画动画配图、信息图表等类型，即使不懂设计，不会PS，直接换字换图，也能快速搞定。轻松解决金融宣传、微课教育、知识科普等各种设计难题。</p>
-<h3 id="来画白板"><a href="#来画白板" class="headerlink" title="来画白板"></a>来画白板</h3><p>来画白板，一款<strong>实时协作</strong>的在线白板软件。可以随时随地将团队聚集在一起，开启在线讨论和创意分享。</p>
-<p>在平台上，创作者可自由邀请其他成员加入白板，进行会议讨论和头脑风暴。使用画笔、便签、形状条等功能，可以表达更多的想法和建议；添加箭头、符号、图标等元素，能更好地梳理想法，展示其中的逻辑与关系；你还可以使用表情进行评论、点赞，让整个讨论过程更加有趣，更有吸引力。</p>
-<h3 id="画梦工厂"><a href="#画梦工厂" class="headerlink" title="画梦工厂"></a>画梦工厂</h3><p>来画梦工厂是来画精心打造的创意服务供给平台，提供动画定制、创意定制、短视频大赛、创作者联盟、手绘城市墙、视频营销等多项创意服务，依靠个性化表达、高质量内容，致力于解决数字化经济中全行业品牌升级和发展难题。</p>
-<h3 id="来画学园"><a href="#来画学园" class="headerlink" title="来画学园"></a>来画学园</h3><p>来画学园是顺应 5G 时代下数字经济和文化科技的发展浪潮，以“授人以鱼不如授人以渔”为办学理念，着力打造的数字创意职业教育培训平台。它分为线上线下两大板块，线上搭建用户社区：来画数创公社；线下打造培训基地：来画数创职业教育基地和来画数创成长教育基地，实现全方位、多渠道的高效数字创意教育培训，为短视频业态注入新活力。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61b9ed1d48f785032a2400b9" target="_blank" rel="external">倾城之链 - 来画-一站式数字创作创意平台</a></p>
-<h2 id="thirdweb"><a href="#thirdweb" class="headerlink" title="thirdweb"></a><a href="https://nicelinks.site/post/61b9e73048f785032a2400b7" target="_blank" rel="external">thirdweb</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/网站生成器" target="_blank" rel="external"><code>网站生成器</code></a> · <a href="https://nicelinks.site/tags/应用" target="_blank" rel="external"><code>应用</code></a> · <a href="https://nicelinks.site/tags/开发者" target="_blank" rel="external"><code>开发者</code></a></p>
-<blockquote>
-<p>Build Web3 projects in minutes with smart contracts you control, tools that accelerate your workflow and intuitive SDKs and widgets for developers.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/thirdweb.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - thirdweb"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://thirdweb.com/" target="_blank" rel="external">thirdweb</a>，轻松构建 web3 应用程序和游戏；您控制的智能合约，加速您的工作流程的工具。面向开发人员的直观 SDK 和小部件。</p>
-<ul>
-<li>⛏️ 生成等功能NFT的，商场，令牌和更多的点击几下；</li>
-<li>🧰 工具 SDK 的，窗口小部件和接口集成 WEB3 功能为您的应用程序；</li>
-<li>🕹️ 的权力游戏 blockchain，DAO 的、NFT 卡平台、生成艺术掉落等等；</li>
-</ul>
-<p>背景故事：Furqan（一名连续创业者）与一群试图启动 NFT 和 web3 项目的团队合作。在那段时间里，他们了解到，开发这些体验的最大障碍是学习新的编程语言和<strong>区块链</strong>。这就是为什么我们推出了 <a href="https://nicelinks.site/redirect?url=https://thirdweb.com/" target="_blank" rel="external">thirdweb</a>：一个让构建 web3 应用程序和游戏变得难以置信的简单的平台。通过将他们的智能合约与你的钱包（你拥有的）进行部署，来解决区块链的复杂性，并提供SDK、小工具和接口，将 web3 功能整合到任何应用程序、游戏或 DAO 中。</p>
-<p>通过 <a href="https://nicelinks.site/redirect?url=https://thirdweb.com/" target="_blank" rel="external">thirdweb</a>，你可以推出 NFT，创建市场，引入新的社会代币，创建 NFT 的包等等。你可以通过团队权限、自定义版税分割，和你熟悉的语言的 SDK 来完成这些工作。Javascript, Typescript, Python, Golang, Unity 等等。目前，<a href="https://nicelinks.site/redirect?url=https://thirdweb.com/" target="_blank" rel="external">thirdweb</a> 已经在为超过 1000 名开发者、区块链游戏、市场、DAO、NFT 投放和正在建立 web3 生态系统的创作者提供加速。</p>
-<p>在 <a href="https://nicelinks.site/redirect?url=https://www.producthunt.com/posts/thirdweb" target="_blank" rel="external">ProductHunt</a> 有网友评价道：作为一个长期接触 web3 的开发者，我很高兴发现了 <a href="https://nicelinks.site/redirect?url=https://thirdweb.com/" target="_blank" rel="external">thirdweb</a>：一个直观、简单的平台，让你只需点击几下，就可以轻松地使用分散的所有权创建应用程序、游戏、体验和项目。thirdweb 消除了学习新的编码语言的头痛问题，并为你提供所需的工具，使你的业务更上一层楼！为创作者、开发游戏工作室、消费者品牌和许多许多人提供了一个完美的解决方案。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61b9e73048f785032a2400b7" target="_blank" rel="external">倾城之链 - thirdweb</a></p>
-<h2 id="Analyze-Websites-With-Free-SEO-Audit-amp-Reporting-Tool-SEOptimer"><a href="#Analyze-Websites-With-Free-SEO-Audit-amp-Reporting-Tool-SEOptimer" class="headerlink" title="Analyze Websites With Free SEO Audit &amp; Reporting Tool - SEOptimer"></a><a href="https://nicelinks.site/post/61b978d648f785032a2400b5" target="_blank" rel="external">Analyze Websites With Free SEO Audit &amp; Reporting Tool - SEOptimer</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/SEO" target="_blank" rel="external"><code>SEO</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a></p>
-<blockquote>
-<p>Looking for the best SEO Audit Tool to analyze and grade your website? SEOptimer is the web’s best SEO Checker. Improve your website, rank better in Search Engines and win more customers with beautiful SEO Reports. Audit your SEO today!</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.seoptimer.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Analyze Websites With Free SEO Audit &amp; Reporting Tool - SEOptimer"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.seoptimer.com/" target="_blank" rel="external">SEOptimer</a>，免费的 SEO 审计和报告工具分析网站，可以改善您的网站，在搜索引擎中获得更好的排名，并通过漂亮的 SEO 报告赢得更多客户。<a href="https://nicelinks.site/redirect?url=https://www.seoptimer.com/" target="_blank" rel="external">SEOptimer</a> 非常适合数字机构和 SEO 自由职业者。</p>
-<p><a href="https://nicelinks.site/redirect?url=https://www.seoptimer.com/" target="_blank" rel="external">SEOptimer</a> 有以下三个目标：用漂亮的白标 SEO 审计报告，给他们的客户和潜在客户留下深刻印象；通过提供定制的可嵌入审计表格，在他们的代理网站上产生新的业务线索 ；为代理提供全套 SEO 工具，而成本相对较低；该团队将根据客户反馈不断构建功能并进行产品更新；欲了解更多，你可以参考其公开路线图：<a href="https://nicelinks.site/redirect?url=https://seoptimer.upvoty.com/b/feature-requests/" target="_blank" rel="external">SEOptimer</a> 。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61b978d648f785032a2400b5" target="_blank" rel="external">倾城之链 - Analyze Websites With Free SEO Audit &amp; Reporting Tool - SEOptimer</a></p>
-<h2 id="Create-LaTeX-tables-online-–-TablesGenerator-com"><a href="#Create-LaTeX-tables-online-–-TablesGenerator-com" class="headerlink" title="Create LaTeX tables online – TablesGenerator.com"></a><a href="https://nicelinks.site/post/61b624a648f785032a2400b3" target="_blank" rel="external">Create LaTeX tables online – TablesGenerator.com</a></h2><p><strong>标签</strong>：<a href="https://nicelinks.site/tags/在线" target="_blank" rel="external"><code>在线</code></a> · <a href="https://nicelinks.site/tags/工具" target="_blank" rel="external"><code>工具</code></a> · <a href="https://nicelinks.site/tags/表格" target="_blank" rel="external"><code>表格</code></a></p>
-<blockquote>
-<p>Easily create even complex LaTeX tables with our online generator – you can paste data from a spreadsheet, merge cells, edit borders and more.</p>
-</blockquote>
-<p><img src="https://oss.nicelinks.site/www.tablesgenerator.com.png?x-oss-process=style/png2jpg" alt="倾城之链 - Create LaTeX tables online – TablesGenerator.com"></p>
-<p><strong>推荐语</strong>：<a href="https://nicelinks.site/redirect?url=https://www.tablesgenerator.com/" target="_blank" rel="external">TablesGenerator.com</a> 是一个在线表格转换工具；支持 LaTeX、Html、Text、Markdown、MediaWiki 等多种格式互相转换。Markdown 等语言越来越流行，但用 Markdown、Html 来书写表格数据，颇为不便，基于 <a href="https://nicelinks.site/redirect?url=https://www.tablesgenerator.com/" target="_blank" rel="external">TablesGenerator.com</a> 则可以解决这困难。另外值得一提的是，其体验很好，可以轻松编辑内容，支持在线预览、一键拷贝、导入、导出。</p>
-<p>── 出自<a href="https://nicelinks.site/post/61b624a648f785032a2400b3" target="_blank" rel="external">倾城之链 - Create LaTeX tables online – TablesGenerator.com</a></p>
-<p>对倾城之链感兴趣的朋友，可通过 Web，小程序，快应用等渠道进行访问(后续将支持更多，如 VsCode 插件，Chrome 扩展等)。您有任何问题，欢迎随时向我们反馈（您可以通过官网反馈渠道，或添加如下客服微信），🤲 。</p>
-<div align="center"><img src="https://image.nicelinks.site/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE-%E5%BE%AE%E4%BF%A1-mini.jpeg" style="width: 200px;min-width: 200px" alt="倾城之链 - 客服微信"></div>
-
-<h2 id="本期文末寄语"><a href="#本期文末寄语" class="headerlink" title="本期文末寄语"></a>本期文末寄语</h2><p>我认为，至深的平和，一定经过命运浮沉的洗礼，一定经过生离死别的考验，一定经过爱与恨的煎熬。一切都经过了，一切都走过了，一切都熬过了，生命的底色里，增了韧，添了柔。这时候平和下来的生命，已经沉静到扰不乱，已经稳健到动不摇，已经淡定到风打不动。── 当代作家 · 马德</p>
-<blockquote>
-<p><a href="https://nicelinks.site/?utm_source=weekly" target="_blank" rel="external">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界；在这里，你可以轻松发现、学习、分享更多有用或有趣的事物。</p>
-</blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="width: 200px;min-width: 200px" alt="小程序码 - 倾城之链"></p>
-<h3 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h3><ul>
-<li><a href="https://forum.lovejade.cn/d/127-43" target="_blank" rel="external">优质网站同好者周刊（第 43 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/125-42" target="_blank" rel="external">优质网站同好者周刊（第 42 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/121-41" target="_blank" rel="external">优质网站同好者周刊（第 41 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/119-40" target="_blank" rel="external">优质网站同好者周刊（第 40 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/118-39" target="_blank" rel="external">优质网站同好者周刊（第 39 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/116-38" target="_blank" rel="external">优质网站同好者周刊（第 38 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/112-37" target="_blank" rel="external">优质网站同好者周刊（第 37 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/109-36" target="_blank" rel="external">优质网站同好者周刊（第 36 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/106-35" target="_blank" rel="external">优质网站同好者周刊（第 35 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/101-34" target="_blank" rel="external">优质网站同好者周刊（第 34 期）- 倾城之链</a></li>
-<li><a href="https://forum.lovejade.cn/d/100-33" target="_blank" rel="external">优质网站同好者周刊（第 33 期）- 倾城之链</a></li>
 <li><a href="https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/">开启技术变现之路，探索第三收入来源</a></li>
 <li><a href="https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/">云集优站，尽在「倾城之链」</a></li>
 <li><a href="https://www.jeffjade.com/2018/12/23/146-talk-about-nice-links/">云集优站，尽在「倾城之链」其二</a></li>

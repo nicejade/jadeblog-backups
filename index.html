@@ -110,6 +110,116 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2024/08/28/253-wealth-tracker/" class="title=&quot;生财有迹" itemprop="url">生财有迹 | 您专属的资产跟踪与分析工具</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2024-08-28T12:20:00.000Z" itemprop="datePublished"> 发表于 2024-08-28</time>
+
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p><a href="https://github.com/nicejade/wealth-tracker" target="_blank" rel="external">生财有迹</a>（Wealth Tracker）是一款专注于个人资产分析的应用程序。其核心功能是：全面记录并展示用户的资产状况，帮助用户轻松了解财务现状；运用 AI 能力，结合每种资产的特性和当前环境，提供适宜的财务建议。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wealth-tracker_mockup.png" alt="生财有迹 - 效果预览"></p>
+<h2 id="项目愿景"><a href="#项目愿景" class="headerlink" title="项目愿景"></a>项目愿景</h2><p>在当今多元化的经济环境中，个人资产管理变得日益重要。它往往分散于各类金融账户和服务中，例如银行存款与理财产品、移动支付平台（如微信支付、支付宝）、公积金、医保账户、货币基金（例如余额宝）、债券、各种股票及基金产品、房地产、贵金属、外部借款（尽量不做此配置🤫）以及其他投资等等（对于部分朋友，或许还有贷款、欠款等负债）。这些账户中的数额在不断变动，使得快速准确地了解个人总资产状况成为一项挑战。</p>
+<p>本项目旨在提供一个高效、直观的解决方案，以应对个人资产管理中的分散性和复杂性。<code>生财有迹</code>专注于账户余额及整体数额，避免深陷于单笔收支的琐碎细节。其目标是通过简化操作流程，帮助用户揭示个人资产的整体变化趋势，并通过友好的用户界面，使用户能够轻松记录和洞悉自己的财务信息。如欲了解更多，可移步至博文：<a href="https://fine.niceshare.site/projects/wealth-tracker/" target="_blank" rel="external">生财有迹 | 您专属的资产跟踪与分析工具</a>。</p>
+<h2 id="核心特性"><a href="#核心特性" class="headerlink" title="核心特性"></a>核心特性</h2><ul>
+<li><strong>简洁易用的操作界面</strong>：用户可以通过几个简单的步骤快速上手，无需任何复杂的财务知识。</li>
+<li><strong>丰富的数据可视化</strong>：通过图表和图形，直观展示资产变化，帮助用户轻松掌握财务状况。</li>
+<li><strong>本地部署的灵活性</strong>：部署在哪里由用户决定，确保数据的私密性、安全性，以及可扩展性。</li>
+<li><strong>开源的代码架构</strong>：项目的源代码完全开放，欢迎参与贡献，以不断改进和完善工具的功能。</li>
+</ul>
+<p>通过这些特性，希望建立一个用户友好、透明且可信赖的个人财分析工具，帮助用户更全面地掌握自己的财务状况。</p>
+<h2 id="在线体验"><a href="#在线体验" class="headerlink" title="在线体验"></a>在线体验</h2><p>为了让您更直观地了解 <a href="https://fund.niceshare.site/" target="_blank" rel="external">生财有迹</a> 的功能和特性，已在服务器上使用 <code>pm2</code> 部署了一个演示版本。该演示环境填充了模拟数据，方便您全面体验各项功能。无论您是想评估工具的实用性，还是出于好奇想一探究竟，欢迎访问以下链接进行体验：</p>
+<p><a href="https://fund.niceshare.site/" target="_blank" rel="external">https://fund.niceshare.site/</a></p>
+<p>请注意，这是一个公共演示环境，因此请勿在其中输入任何真实的个人财务信息。建议您在体验后，考虑按照本文档的指导，在自己的环境中部署和使用”生财有迹”，以确保您的财务数据的隐私和安全。</p>
+<p>如果您在使用过程中遇到任何问题或有反馈意见，欢迎通过项目的  <a href="https://github.com/nicejade/wealth-tracker/" target="_blank" rel="external">GitHub 页面</a>与我们联系。您的宝贵意见将帮助我们不断改进这一工具，以更好地满足用户的需求。</p>
+<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><p>说明用户在安装和使用前，需要准备的一些先决条件，譬如：您需要安装或升级 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>（&gt;= <code>16.*</code>），推荐使用 <a href="https://pnpm.io/" target="_blank" rel="external">Pnpm</a> 或 <a href="https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/">Yarn</a> 作为首选包管理工具。</p>
+<h2 id="如何使用？"><a href="#如何使用？" class="headerlink" title="如何使用？"></a>如何使用？</h2><h3 id="使用-Docker"><a href="#使用-Docker" class="headerlink" title="使用 Docker"></a>使用 Docker</h3><p><strong>使用 <a href="https://docs.docker.com/compose/" target="_blank" rel="external">docker compose</a></strong>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="attr">version:</span> <span class="string">'3.8'</span></div><div class="line"></div><div class="line"><span class="attr">services:</span></div><div class="line"><span class="attr">  wealth-tracker:</span></div><div class="line"><span class="attr">    image:</span> nicejade/wealth-tracker</div><div class="line"><span class="attr">    container_name:</span> wealth-tracker</div><div class="line"><span class="attr">    ports:</span></div><div class="line"><span class="bullet">      -</span> <span class="string">'8888:8888'</span></div><div class="line"><span class="attr">    volumes:</span></div><div class="line"><span class="bullet">      -</span> ./data:/app/data</div><div class="line"><span class="attr">    restart:</span> unless-stopped</div><div class="line"></div><div class="line"><span class="attr">volumes:</span></div><div class="line"><span class="attr">  data:</span></div></pre></td></tr></table></figure>
+<p>这将在后台启动服务，并且效果与下面的 <code>docker run</code> 命令相同。使用 Docker Compose 可以更方便地管理多个容器，并且配置更易读和维护。</p>
+<p><strong>或者 docker run</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run <span class="_">-d</span> -p 8888:8888 -v <span class="string">"<span class="variable">$(pwd)</span>/data:/app/data"</span> nicejade/wealth-tracker</div></pre></td></tr></table></figure>
+<p>如果您在本地部署，只需打开网址——<a href="http://localhost:8888/" target="_blank" rel="external">http://localhost:8888</a> 即可访问。如果在服务器运行，可通过 http://[Server-IP]:8888 来访问，您也可以指定其他端口。</p>
+<h3 id="使用-Node-js"><a href="#使用-Node-js" class="headerlink" title="使用 Node.js"></a>使用 Node.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># clone project</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/nicejade/wealth-tracker.git</div><div class="line"></div><div class="line"><span class="comment"># install &amp; run for client</span></div><div class="line"><span class="built_in">cd</span> client &amp;&amp; pnpm i &amp;&amp; pnpm start</div><div class="line"></div><div class="line"><span class="comment"># install &amp; run for srever</span></div><div class="line"><span class="built_in">cd</span> server &amp;&amp; pnpm i &amp;&amp; pnpm start</div></pre></td></tr></table></figure>
+<p>本项目客户端采用 <a href="https://svelte.dev/" target="_blank" rel="external">Svelte</a> 框架，基于 <a href="https://vitejs.dev/" target="_blank" rel="external">Vite</a> 所构建，默认 <code>5173</code> 端口，只需打开网址—— <a href="http://localhost:5173" target="_blank" rel="external">http://localhost:5173</a> 即可访问。</p>
+<h2 id="命名由来"><a href="#命名由来" class="headerlink" title="命名由来"></a>命名由来</h2><p>在项目开发初期，有为应用取中文名为：”财富追踪器”（英文名：<code>Wealth Tracker</code>）。这个名称初看简洁明了，似乎完美契合产品理念。然而，随着开发深入，逐渐显现出其局限性：</p>
+<ul>
+<li><strong>概念范畴过广</strong>：”财富”一词涵盖范围极广，不仅包括金钱资产，还可能指代时间、知识、经历，甚至是绝美容颜等无形价值。</li>
+<li><strong>功能定位不够精准</strong>：该应用实际上专注于能被精确计算和记录、且已经形成的有形资产，而非泛泛追踪所有形式的”财富”。</li>
+</ul>
+<p>这种认知更新促使重新思考产品定位和命名。偶然想到了两个颇具启发性的成语：”生财有道”和”生财有术”；而应用的核心功能恰恰是记录资产增长的轨迹。基于这一灵感，最终确定将应用命名为”<strong>生财有迹</strong>“。这个名字巧妙地结合了几个要素：</p>
+<ol>
+<li>“迹”与”记”同音，暗示了记录的功能。</li>
+<li>“生”与”升”同音，象征着资产的增长。</li>
+<li>整体保留了”生财”的概念，与原有的资产主题保持一致。</li>
+</ol>
+<p>“生财有迹”这个新名称不仅准确反映出产品功能定位，传达了产品理念，还蕴含了对用户资产增长的美好祝愿，希望您也会喜欢。</p>
+<h2 id="给予支持"><a href="#给予支持" class="headerlink" title="给予支持"></a>给予支持</h2><p><a href="https://github.com/nicejade/wealth-tracker" target="_blank" rel="external">生财有迹</a>项目开源且免费，然而设计与编码需耗费时间和精力。如若您对其使用感到满意，请考虑通过以下方式进行小额捐赠：</p>
+<div align="center"><br>  <img style="margin: 0;border-radius: 6px;width: 200px" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/reward-code.jpeg" alt="生财有迹 - 微信赞赏码"><br>  <p style="font-size:0.6em">微信扫码赞助</p><br><br>  <a href="https://www.buymeacoffee.com/nicejade?ref=github.com" target="_blank"><br>    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important"><br>  </a><br></div>
+
+<h2 id="路线图"><a href="#路线图" class="headerlink" title="路线图"></a>路线图</h2><p>“生财有迹”项目正处于积极的设计和研发阶段，致力于在功能丰富与易用性之间寻求平衡，以满足用户日益增长的个人财务管理需求。未来开发重点包括增强数据可视化能力、加强数据安全性、以及提升 AI 辅助分析功能等。</p>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked="checked"> 更新资产数据记录；</li>
+<li style="list-style: none"><input type="checkbox" checked="checked"> 资产数据可视化；</li>
+<li style="list-style: none"><input type="checkbox" checked="checked"> 查阅数据记录详情；</li>
+<li style="list-style: none"><input type="checkbox"> 设置阶段性目标；</li>
+<li style="list-style: none"><input type="checkbox"> 资产数据安全性；</li>
+<li style="list-style: none"><input type="checkbox"> 借助 AI 辅助分析；</li>
+</ul>
+<h2 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢"></a>特别鸣谢</h2><p>本项目的开发过程中，依赖并受益于以下优秀的开源技术和工具（未包含全部）。它们不仅提供了强大的功能，还促进了项目的高效开发和稳定运行。</p>
+<ul>
+<li><a href="https://svelte.dev/" target="_blank" rel="external">Svelte</a>: 作为一种新兴的前端框架，Svelte 通过其创新的编译时技术，让我们的 Web 应用更加轻量和高效。它减少了我们需要编写的样板代码，同时提高了运行时的性能。</li>
+<li><a href="https://tailwindcss.com/" target="_blank" rel="external">TailwindCSS</a>: 通过提供实用主义的 CSS 类，TailwindCSS 极大地简化了样式设计的过程。它使得我们能够快速构建美观且响应式的用户界面，同时保持代码的清晰和维护性。</li>
+<li><a href="https://vitejs.dev/" target="_blank" rel="external">Vite</a>: 作为一个现代化的前端构建工具，Vite 通过其快速的冷启动和即时的模块热更新，极大地提高了我们的开发效率。它利用了原生 ES 模块特性，使得项目构建更加高效。</li>
+<li><a href="https://flowbite.com/" target="_blank" rel="external">Flowbite</a>: 提供了一系列预构建的组件和模板，Flowbite 极大地加快了我们的开发流程。它帮助我们快速实现了复杂的用户界面元素，同时保持了代码的可定制性和可维护性。</li>
+<li><a href="https://axios-http.com/" target="_blank" rel="external">Axios</a>: 作为一个基于 Promise 的 HTTP 客户端，Axios 简化了我们的 Web 应用中与 API 的交互。它的易用性和广泛的功能集使得我们能够轻松处理 HTTP 请求和响应。</li>
+<li><a href="https://day.js.org/" target="_blank" rel="external">Day.js</a>: 作为一个轻量级的 JavaScript 日期库，Day.js 提供了直观的 API 来处理日期和时间。它使得我们在应用中处理复杂的日期计算变得简单且可靠。</li>
+<li><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>: 作为一个高效的 JavaScript 运行环境，Node.js 使得服务器端开发变得前所未有的简单和快速。它的事件驱动和非阻塞 I/O 模型极大地提高了我们的应用性能和响应速度。</li>
+<li><a href="https://www.fastify.io/" target="_blank" rel="external">Fastify</a>: 这个高性能的 Node.js Web 框架为我们提供了一个简单且强大的接口来构建 RESTful API。它的低开销和高度可扩展性使得我们的后端服务既快速又稳定。</li>
+<li><a href="https://www.sqlite.org/index.html" target="_blank" rel="external">SQLite3</a>: 作为一个轻量级的数据库引擎，SQLite3 为我们提供了一个无需配置的本地存储解决方案。它的简单性和高效性使得开发者在本地部署应用时能够轻松管理数据。</li>
+<li><a href="https://sequelize.org/" target="_blank" rel="external">Sequelize</a>: 作为一个强大的 ORM 框架，Sequelize 为我们提供了一种简单且直观的方式来管理数据库关系。它的灵活性和功能丰富性使得我们能够轻松实现复杂的数据操作和查询。</li>
+</ul>
+<p>在此，对上述技术和工具的开发者和社区，致以崇高的敬意和衷心的感谢❤️。正是得益于他们的卓越贡献，<code>生财有迹</code>才能得以成功构建并持续优化。同时，也要感谢如 <a href="https://chatgpt.com/?ref=niceshare.site" target="_blank" rel="external">ChatGPT</a>、Github Copilot、<a href="https://poe.com/" target="_blank" rel="external">Poe</a>、<a href="https://kimi.moonshot.cn/" target="_blank" rel="external">Kimi</a> 等 AI 工具在开发过程中提供的宝贵支持，它们显著提高了工作效率和体验。</p>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Share/">Share</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Share/">Share</a><a href="/tags/CSS/">CSS</a><a href="/tags/快应用/">快应用</a><a href="/tags/工具/">工具</a>
+  </div>
+
+</div>
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+    </article>
+
+  <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/" class="title=&quot;如何将" tailwind css itemprop="url">如何将 Tailwind CSS 引入快应用开发提升编码效率？</a>
     
   </h1>
@@ -826,57 +936,6 @@
 </footer>
     </article>
 
-  <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2022/01/20/238-nicelinks-weekly-049/" class="title=&quot;优质网站同好者周刊（第" 49 - itemprop="url">优质网站同好者周刊（第 49 期）- 倾城之链</a>
-    
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
-		
-  </p><p class="article-time">
-    <time datetime="2022-01-20T13:21:00.000Z" itemprop="datePublished"> 发表于 2022-01-20</time>
-
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><a href="https://nicelinks.site/?utm_source=weekly">倾城之链</a>作为一个开放平台，旨在云集全球<strong>优秀网站</strong>，探索互联网中更广阔的世界。此周刊，将汇聚过去一周<a href="https://nicelinks.site/?utm_source=weekly">倾城</a>所收录的内容，以飨同好；欢迎推荐或自荐（仅限有独立域名的网站，可以是二级域名）。您如果要了解收录要求，请参见<a href="https://nicelinks.site/about?utm_source=weekly">关于倾城</a>。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2022/01/20/238-nicelinks-weekly-049/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/倾城之链/">倾城之链</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Share/">Share</a><a href="/tags/倾城之链/">倾城之链</a>
-  </div>
-
-</div>
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-    </article>
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -904,6 +963,10 @@
     <h3 class="widget-title asidetitle">近期文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/08/28/253-wealth-tracker/">生财有迹 | 您专属的资产跟踪与分析工具</a>
+          </li>
         
           <li>
             <a href="/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/">如何将 Tailwind CSS 引入快应用开发提升编码效率？</a>
@@ -961,10 +1024,6 @@
             <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
           </li>
         
-          <li>
-            <a href="/2022/01/20/238-nicelinks-weekly-049/">优质网站同好者周刊（第 49 期）- 倾城之链</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -998,7 +1057,7 @@
 		  
 		
 		  
-			<li><a href="/categories/Share/" title="Share">Share<sup>22</sup></a></li>
+			<li><a href="/categories/Share/" title="Share">Share<sup>23</sup></a></li>
 		  
 		
 		  
@@ -1047,7 +1106,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Share/" title="Share">Share<sup>127</sup></a></li>
+				<li><a href="/tags/Share/" title="Share">Share<sup>128</sup></a></li>
 			
 		
 			
@@ -1079,11 +1138,11 @@
 			
 		
 			
-				<li><a href="/tags/快应用/" title="快应用">快应用<sup>13</sup></a></li>
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>14</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/工具/" title="工具">工具<sup>12</sup></a></li>
+				<li><a href="/tags/工具/" title="工具">工具<sup>13</sup></a></li>
 			
 		
 			
@@ -1095,15 +1154,15 @@
 			
 		
 			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>9</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>8</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/CSS/" title="CSS">CSS<sup>8</sup></a></li>
 			
 		
 			

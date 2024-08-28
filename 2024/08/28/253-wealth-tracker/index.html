@@ -1,0 +1,1060 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+
+    <title>生财有迹 | 您专属的资产跟踪与分析工具 | 晚晴幽草轩</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="晚晴幽草轩轩主">
+    
+    <meta name="theme-color" content="#fffffb">
+    <meta name="baidu-site-verification" content="PKEtLPjO56">
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net/">
+
+    <meta name="keywords" content="生财有迹, Wealth Tracker, 资产分析, 应用程序, Svelte, Tailwind CSS, AI, Node.js">
+    <meta name="description" content="生财有迹（Wealth Tracker）是一款专注于个人资产分析的应用程序。其核心功能是：全面记录并展示用户的资产状况，帮助用户轻松了解财务现状；运用 AI 能力，结合每种资产的特性和当前环境，提供适宜的财务建议。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="生财有迹 | 您专属的资产跟踪与分析工具">
+<meta property="og:url" content="https://www.jeffjade.com/2024/08/28/253-wealth-tracker/index.html">
+<meta property="og:site_name" content="晚晴幽草轩">
+<meta property="og:description" content="生财有迹（Wealth Tracker）是一款专注于个人资产分析的应用程序。其核心功能是：全面记录并展示用户的资产状况，帮助用户轻松了解财务现状；运用 AI 能力，结合每种资产的特性和当前环境，提供适宜的财务建议。">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wealth-tracker_mockup.png">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/reward-code.jpeg">
+<meta property="og:image" content="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png">
+<meta property="og:updated_time" content="2024-08-28T13:42:48.449Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="生财有迹 | 您专属的资产跟踪与分析工具">
+<meta name="twitter:description" content="生财有迹（Wealth Tracker）是一款专注于个人资产分析的应用程序。其核心功能是：全面记录并展示用户的资产状况，帮助用户轻松了解财务现状；运用 AI 能力，结合每种资产的特性和当前环境，提供适宜的财务建议。">
+<meta name="twitter:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wealth-tracker_mockup.png">
+<meta name="twitter:creator" content="@nicejadeyang">
+
+    
+    <link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/favicons/favicon.ico">
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6">
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://image.nicelinks.site">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+
+    <link href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css">
+    <link rel="stylesheet" href="/css/style.css?0711">
+
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script">
+
+    <link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script">
+    <script src="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script data-ad-client="ca-pub-8586652723015758" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8586652723015758",
+        enable_page_level_ads: true
+      });
+    </script>
+    <script async src="https://fundingchoicesmessages.google.com/i/pub-8586652723015758?ers=1" nonce="aGbKV4c6yTWqLTY3cuk_Vg"></script><script nonce="aGbKV4c6yTWqLTY3cuk_Vg">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+    <script src="https://fastly.jsdelivr.net/npm/reward-service@1.1.1/dist/reward-service-min.js"></script>
+</head></html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1>
+				<h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/" class="">Home</a></li>
+					
+						<li><a href="/nicelinks" class="">Links</a></li>
+					
+						<li><a href="https://niceshare.site/?utm_source=jeffjade.com" class="">Homepage</a></li>
+					
+						<li><a href="/archives" class="">Archives</a></li>
+					
+						<li><a href="/about-me" class="">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search">
+						<input type="hidden" name="q" value="site:www.jeffjade.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2024/08/28/253-wealth-tracker/" class="title=&quot;生财有迹" itemprop="url">生财有迹 | 您专属的资产跟踪与分析工具</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2024-08-28T12:20:00.000Z" itemprop="datePublished"> 发表于 2024-08-28</time>
+
+  </p>
+</header>
+	<div class="article-content">
+		
+		<p><a href="https://github.com/nicejade/wealth-tracker" target="_blank" rel="external">生财有迹</a>（Wealth Tracker）是一款专注于个人资产分析的应用程序。其核心功能是：全面记录并展示用户的资产状况，帮助用户轻松了解财务现状；运用 AI 能力，结合每种资产的特性和当前环境，提供适宜的财务建议。</p>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wealth-tracker_mockup.png" alt="生财有迹 - 效果预览"></p>
+<h2 id="项目愿景"><a href="#项目愿景" class="headerlink" title="项目愿景"></a>项目愿景</h2><p>在当今多元化的经济环境中，个人资产管理变得日益重要。它往往分散于各类金融账户和服务中，例如银行存款与理财产品、移动支付平台（如微信支付、支付宝）、公积金、医保账户、货币基金（例如余额宝）、债券、各种股票及基金产品、房地产、贵金属、外部借款（尽量不做此配置🤫）以及其他投资等等（对于部分朋友，或许还有贷款、欠款等负债）。这些账户中的数额在不断变动，使得快速准确地了解个人总资产状况成为一项挑战。</p>
+<p>本项目旨在提供一个高效、直观的解决方案，以应对个人资产管理中的分散性和复杂性。<code>生财有迹</code>专注于账户余额及整体数额，避免深陷于单笔收支的琐碎细节。其目标是通过简化操作流程，帮助用户揭示个人资产的整体变化趋势，并通过友好的用户界面，使用户能够轻松记录和洞悉自己的财务信息。如欲了解更多，可移步至博文：<a href="https://fine.niceshare.site/projects/wealth-tracker/" target="_blank" rel="external">生财有迹 | 您专属的资产跟踪与分析工具</a>。</p>
+<h2 id="核心特性"><a href="#核心特性" class="headerlink" title="核心特性"></a>核心特性</h2><ul>
+<li><strong>简洁易用的操作界面</strong>：用户可以通过几个简单的步骤快速上手，无需任何复杂的财务知识。</li>
+<li><strong>丰富的数据可视化</strong>：通过图表和图形，直观展示资产变化，帮助用户轻松掌握财务状况。</li>
+<li><strong>本地部署的灵活性</strong>：部署在哪里由用户决定，确保数据的私密性、安全性，以及可扩展性。</li>
+<li><strong>开源的代码架构</strong>：项目的源代码完全开放，欢迎参与贡献，以不断改进和完善工具的功能。</li>
+</ul>
+<p>通过这些特性，希望建立一个用户友好、透明且可信赖的个人财分析工具，帮助用户更全面地掌握自己的财务状况。</p>
+<h2 id="在线体验"><a href="#在线体验" class="headerlink" title="在线体验"></a>在线体验</h2><p>为了让您更直观地了解 <a href="https://fund.niceshare.site/" target="_blank" rel="external">生财有迹</a> 的功能和特性，已在服务器上使用 <code>pm2</code> 部署了一个演示版本。该演示环境填充了模拟数据，方便您全面体验各项功能。无论您是想评估工具的实用性，还是出于好奇想一探究竟，欢迎访问以下链接进行体验：</p>
+<p><a href="https://fund.niceshare.site/" target="_blank" rel="external">https://fund.niceshare.site/</a></p>
+<p>请注意，这是一个公共演示环境，因此请勿在其中输入任何真实的个人财务信息。建议您在体验后，考虑按照本文档的指导，在自己的环境中部署和使用”生财有迹”，以确保您的财务数据的隐私和安全。</p>
+<p>如果您在使用过程中遇到任何问题或有反馈意见，欢迎通过项目的  <a href="https://github.com/nicejade/wealth-tracker/" target="_blank" rel="external">GitHub 页面</a>与我们联系。您的宝贵意见将帮助我们不断改进这一工具，以更好地满足用户的需求。</p>
+<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><p>说明用户在安装和使用前，需要准备的一些先决条件，譬如：您需要安装或升级 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>（&gt;= <code>16.*</code>），推荐使用 <a href="https://pnpm.io/" target="_blank" rel="external">Pnpm</a> 或 <a href="https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/">Yarn</a> 作为首选包管理工具。</p>
+<h2 id="如何使用？"><a href="#如何使用？" class="headerlink" title="如何使用？"></a>如何使用？</h2><h3 id="使用-Docker"><a href="#使用-Docker" class="headerlink" title="使用 Docker"></a>使用 Docker</h3><p><strong>使用 <a href="https://docs.docker.com/compose/" target="_blank" rel="external">docker compose</a></strong>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="attr">version:</span> <span class="string">'3.8'</span></div><div class="line"></div><div class="line"><span class="attr">services:</span></div><div class="line"><span class="attr">  wealth-tracker:</span></div><div class="line"><span class="attr">    image:</span> nicejade/wealth-tracker</div><div class="line"><span class="attr">    container_name:</span> wealth-tracker</div><div class="line"><span class="attr">    ports:</span></div><div class="line"><span class="bullet">      -</span> <span class="string">'8888:8888'</span></div><div class="line"><span class="attr">    volumes:</span></div><div class="line"><span class="bullet">      -</span> ./data:/app/data</div><div class="line"><span class="attr">    restart:</span> unless-stopped</div><div class="line"></div><div class="line"><span class="attr">volumes:</span></div><div class="line"><span class="attr">  data:</span></div></pre></td></tr></table></figure>
+<p>这将在后台启动服务，并且效果与下面的 <code>docker run</code> 命令相同。使用 Docker Compose 可以更方便地管理多个容器，并且配置更易读和维护。</p>
+<p><strong>或者 docker run</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run <span class="_">-d</span> -p 8888:8888 -v <span class="string">"<span class="variable">$(pwd)</span>/data:/app/data"</span> nicejade/wealth-tracker</div></pre></td></tr></table></figure>
+<p>如果您在本地部署，只需打开网址——<a href="http://localhost:8888/" target="_blank" rel="external">http://localhost:8888</a> 即可访问。如果在服务器运行，可通过 http://[Server-IP]:8888 来访问，您也可以指定其他端口。</p>
+<h3 id="使用-Node-js"><a href="#使用-Node-js" class="headerlink" title="使用 Node.js"></a>使用 Node.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># clone project</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/nicejade/wealth-tracker.git</div><div class="line"></div><div class="line"><span class="comment"># install &amp; run for client</span></div><div class="line"><span class="built_in">cd</span> client &amp;&amp; pnpm i &amp;&amp; pnpm start</div><div class="line"></div><div class="line"><span class="comment"># install &amp; run for srever</span></div><div class="line"><span class="built_in">cd</span> server &amp;&amp; pnpm i &amp;&amp; pnpm start</div></pre></td></tr></table></figure>
+<p>本项目客户端采用 <a href="https://svelte.dev/" target="_blank" rel="external">Svelte</a> 框架，基于 <a href="https://vitejs.dev/" target="_blank" rel="external">Vite</a> 所构建，默认 <code>5173</code> 端口，只需打开网址—— <a href="http://localhost:5173" target="_blank" rel="external">http://localhost:5173</a> 即可访问。</p>
+<h2 id="命名由来"><a href="#命名由来" class="headerlink" title="命名由来"></a>命名由来</h2><p>在项目开发初期，有为应用取中文名为：”财富追踪器”（英文名：<code>Wealth Tracker</code>）。这个名称初看简洁明了，似乎完美契合产品理念。然而，随着开发深入，逐渐显现出其局限性：</p>
+<ul>
+<li><strong>概念范畴过广</strong>：”财富”一词涵盖范围极广，不仅包括金钱资产，还可能指代时间、知识、经历，甚至是绝美容颜等无形价值。</li>
+<li><strong>功能定位不够精准</strong>：该应用实际上专注于能被精确计算和记录、且已经形成的有形资产，而非泛泛追踪所有形式的”财富”。</li>
+</ul>
+<p>这种认知更新促使重新思考产品定位和命名。偶然想到了两个颇具启发性的成语：”生财有道”和”生财有术”；而应用的核心功能恰恰是记录资产增长的轨迹。基于这一灵感，最终确定将应用命名为”<strong>生财有迹</strong>“。这个名字巧妙地结合了几个要素：</p>
+<ol>
+<li>“迹”与”记”同音，暗示了记录的功能。</li>
+<li>“生”与”升”同音，象征着资产的增长。</li>
+<li>整体保留了”生财”的概念，与原有的资产主题保持一致。</li>
+</ol>
+<p>“生财有迹”这个新名称不仅准确反映出产品功能定位，传达了产品理念，还蕴含了对用户资产增长的美好祝愿，希望您也会喜欢。</p>
+<h2 id="给予支持"><a href="#给予支持" class="headerlink" title="给予支持"></a>给予支持</h2><p><a href="https://github.com/nicejade/wealth-tracker" target="_blank" rel="external">生财有迹</a>项目开源且免费，然而设计与编码需耗费时间和精力。如若您对其使用感到满意，请考虑通过以下方式进行小额捐赠：</p>
+<div align="center"><br>  <img style="margin: 0;border-radius: 6px;width: 200px" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/reward-code.jpeg" alt="生财有迹 - 微信赞赏码"><br>  <p style="font-size:0.6em">微信扫码赞助</p><br><br>  <a href="https://www.buymeacoffee.com/nicejade?ref=github.com" target="_blank"><br>    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important"><br>  </a><br></div>
+
+<h2 id="路线图"><a href="#路线图" class="headerlink" title="路线图"></a>路线图</h2><p>“生财有迹”项目正处于积极的设计和研发阶段，致力于在功能丰富与易用性之间寻求平衡，以满足用户日益增长的个人财务管理需求。未来开发重点包括增强数据可视化能力、加强数据安全性、以及提升 AI 辅助分析功能等。</p>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked="checked"> 更新资产数据记录；</li>
+<li style="list-style: none"><input type="checkbox" checked="checked"> 资产数据可视化；</li>
+<li style="list-style: none"><input type="checkbox" checked="checked"> 查阅数据记录详情；</li>
+<li style="list-style: none"><input type="checkbox"> 设置阶段性目标；</li>
+<li style="list-style: none"><input type="checkbox"> 资产数据安全性；</li>
+<li style="list-style: none"><input type="checkbox"> 借助 AI 辅助分析；</li>
+</ul>
+<h2 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢"></a>特别鸣谢</h2><p>本项目的开发过程中，依赖并受益于以下优秀的开源技术和工具（未包含全部）。它们不仅提供了强大的功能，还促进了项目的高效开发和稳定运行。</p>
+<ul>
+<li><a href="https://svelte.dev/" target="_blank" rel="external">Svelte</a>: 作为一种新兴的前端框架，Svelte 通过其创新的编译时技术，让我们的 Web 应用更加轻量和高效。它减少了我们需要编写的样板代码，同时提高了运行时的性能。</li>
+<li><a href="https://tailwindcss.com/" target="_blank" rel="external">TailwindCSS</a>: 通过提供实用主义的 CSS 类，TailwindCSS 极大地简化了样式设计的过程。它使得我们能够快速构建美观且响应式的用户界面，同时保持代码的清晰和维护性。</li>
+<li><a href="https://vitejs.dev/" target="_blank" rel="external">Vite</a>: 作为一个现代化的前端构建工具，Vite 通过其快速的冷启动和即时的模块热更新，极大地提高了我们的开发效率。它利用了原生 ES 模块特性，使得项目构建更加高效。</li>
+<li><a href="https://flowbite.com/" target="_blank" rel="external">Flowbite</a>: 提供了一系列预构建的组件和模板，Flowbite 极大地加快了我们的开发流程。它帮助我们快速实现了复杂的用户界面元素，同时保持了代码的可定制性和可维护性。</li>
+<li><a href="https://axios-http.com/" target="_blank" rel="external">Axios</a>: 作为一个基于 Promise 的 HTTP 客户端，Axios 简化了我们的 Web 应用中与 API 的交互。它的易用性和广泛的功能集使得我们能够轻松处理 HTTP 请求和响应。</li>
+<li><a href="https://day.js.org/" target="_blank" rel="external">Day.js</a>: 作为一个轻量级的 JavaScript 日期库，Day.js 提供了直观的 API 来处理日期和时间。它使得我们在应用中处理复杂的日期计算变得简单且可靠。</li>
+<li><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>: 作为一个高效的 JavaScript 运行环境，Node.js 使得服务器端开发变得前所未有的简单和快速。它的事件驱动和非阻塞 I/O 模型极大地提高了我们的应用性能和响应速度。</li>
+<li><a href="https://www.fastify.io/" target="_blank" rel="external">Fastify</a>: 这个高性能的 Node.js Web 框架为我们提供了一个简单且强大的接口来构建 RESTful API。它的低开销和高度可扩展性使得我们的后端服务既快速又稳定。</li>
+<li><a href="https://www.sqlite.org/index.html" target="_blank" rel="external">SQLite3</a>: 作为一个轻量级的数据库引擎，SQLite3 为我们提供了一个无需配置的本地存储解决方案。它的简单性和高效性使得开发者在本地部署应用时能够轻松管理数据。</li>
+<li><a href="https://sequelize.org/" target="_blank" rel="external">Sequelize</a>: 作为一个强大的 ORM 框架，Sequelize 为我们提供了一种简单且直观的方式来管理数据库关系。它的灵活性和功能丰富性使得我们能够轻松实现复杂的数据操作和查询。</li>
+</ul>
+<p>在此，对上述技术和工具的开发者和社区，致以崇高的敬意和衷心的感谢❤️。正是得益于他们的卓越贡献，<code>生财有迹</code>才能得以成功构建并持续优化。同时，也要感谢如 <a href="https://chatgpt.com/?ref=niceshare.site" target="_blank" rel="external">ChatGPT</a>、Github Copilot、<a href="https://poe.com/" target="_blank" rel="external">Poe</a>、<a href="https://kimi.moonshot.cn/" target="_blank" rel="external">Kimi</a> 等 AI 工具在开发过程中提供的宝贵支持，它们显著提高了工作效率和体验。</p>
+	</div>
+		<reward-service></reward-service>
+    <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
+  <hr>
+  <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 2rem">
+    <img style="width: 256px;min-width: 200px !important" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wechat-article-qrcode.jpg" alt="静晴轩 ~ 晚晴幽草轩">
+    <div style="padding: 0  1rem 1.5rem 1rem;text-align: center;line-height: 1.5rem"><strong>个人微信公众号</strong>：<a href="https://www.jeffjade.com/?utm_source=jeffjade.com">晚晴幽草轩</a>；名字取自：“天意怜幽草，人间重晚晴”。<br>专注互联网开发（Web 大前端、快应用、小程序），以及分享优质网站、AI 应用、效率工具、心得感悟等内容。
+    </div>
+  </div>
+<div></div></div>
+    <div id="cc-copyright" class="cc-content">
+    <h3>文档信息</h3>
+    <ul>
+      <li>版权声明：知识共享署名-非商业性使用-禁止演绎<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">（创意共享3.0许可证）</a></li>
+      <li>文章出处：<a href="http://www.jeffjade.com" title="晚晴幽草轩">晚晴幽草轩</a></li>
+      <li>发表日期：<time datetime="2024-08-28T12:20:00.000Z" itemprop="datePublished">2024-08-28</time></li>
+      <li>社交媒体：
+        <a href="http://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+        <a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+        <a href="https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+        <a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+      </li>
+    </ul>
+</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Share/">Share</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Share/">Share</a><a href="/tags/CSS/">CSS</a><a href="/tags/快应用/">快应用</a><a href="/tags/工具/">工具</a>
+  </div>
+
+</div>
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://www.jeffjade.com/2024/08/28/253-wealth-tracker/" data-title="生财有迹 | 您专属的资产跟踪与分析工具 | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+	</article>
+	<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/" title="如何将 Tailwind CSS 引入快应用开发提升编码效率？">
+ <strong>下一篇：</strong><br> 
+ <span>如何将 Tailwind CSS 引入快应用开发提升编码效率？
+</span>
+</a>
+</div>
+
+</nav>
+	<hr>
+<div id="gitalk-container"></div>
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#项目愿景"><span class="toc-number">1.</span> <span class="toc-text">项目愿景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#核心特性"><span class="toc-number">2.</span> <span class="toc-text">核心特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在线体验"><span class="toc-number">3.</span> <span class="toc-text">在线体验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#先决条件"><span class="toc-number">4.</span> <span class="toc-text">先决条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用？"><span class="toc-number">5.</span> <span class="toc-text">如何使用？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-Docker"><span class="toc-number">5.1.</span> <span class="toc-text">使用 Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-Node-js"><span class="toc-number">5.2.</span> <span class="toc-text">使用 Node.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命名由来"><span class="toc-number">6.</span> <span class="toc-text">命名由来</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#给予支持"><span class="toc-number">7.</span> <span class="toc-text">给予支持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路线图"><span class="toc-number">8.</span> <span class="toc-text">路线图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特别鸣谢"><span class="toc-number">9.</span> <span class="toc-text">特别鸣谢</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="linkslist">
+	<p class="asidetitle">倾情款赠</p>
+	<div style="width:100%"><img style="width:100%" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/reward-code.jpeg" alt="倾情捐赠"></div>
+</div>
+
+  <div class="wbfollow">
+	<p class="asidetitle">微博互粉</p>
+	<span class="sidebar-top-tip">亦可点击 Enter 键隐藏侧边栏</span>
+	<iframe width="100%" height="119" class="share_self" frameborder="0" scrolling="no" src="//widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3235949794&verifier=5c6bff53&colors=f0f0f0,fff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+</div>
+
+  <div class="widget-wrap linkslist">
+    <h3 class="widget-title asidetitle">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/08/28/253-wealth-tracker/">生财有迹 | 您专属的资产跟踪与分析工具</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/">如何将 Tailwind CSS 引入快应用开发提升编码效率？</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/01/251-blog-slow-update-instructions/">关于「晚晴幽草轩」博客缓更说明</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/10/249-chatgpt-web-client-free-to-use/">素问智聊斋，非官方 ChatGPT 在线客户端，免费可用</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/30/249-webassembly-for-web/">为什么说 WebAssembly 让 Web 的未来更光明？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/12/249-emerging-technologies-in-the-past-decade/">近十年新兴行业技术，及简单介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/">如何基于 Prerender 为 SPA 做 SEO 优化</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/31/246-nicelinks-in-2022/">2022，「倾城之链」运营第 6 年感记</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/31/245-2022-how-to-learn-front-end-development-elegantly/">2022，如何优雅学习前端开发？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/08/244-2022-worth-learning-series-functional-programming/">2022，值得学习系列之：函数式编程</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/14/243-obsidian-the-most-powerful-markdown-text-editing-tool-on-the-plane/">地表最强 Markdown 文本编辑工具——Obsidian</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/21/241-how-to-create-a-great-experience-with-local-full-text-search/">如何打造体验良好的本地全文搜索？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/14/241-how-to-make-google-asset-based-ads/">如何制作 Google 自适应广告素材？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/31/240-nicelinks-weekly-050/">优质网站同好者周刊（第 50 期）- 倾城之链</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/20/239-talk-about-wiki-lovejade/">关于“清风明月阁”的由来，以及未来</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="categorieslist">
+	<p class="asidetitle">云轩分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>60</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Health/" title="Health">Health<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Program/" title="Program">Program<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Read/" title="Read">Read<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Share/" title="Share">Share<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Thought/" title="Thought">Thought<sup>25</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Toss/" title="Toss">Toss<sup>28</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>64</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/快应用/" title="快应用">快应用<sup>10</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">轩站热度</p>
+  <!-- 
+    <font id="run_time_long"></font><br>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span style='color:purple' id="busuanzi_value_site_pv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_site_uv">
+      本站访客人数 <span style='color:purple' id="busuanzi_value_site_uv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量 <span style='color:purple' id="busuanzi_value_page_pv"></span> 次
+    </span>
+   -->
+  <div id="clustrmaps-count"></div>
+  <p style="text-align:center">( Start counting from 07 / 13 / 2017 )</p>
+</div>
+
+  <div class="tagslist">
+	<p class="asidetitle">云轩标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Share/" title="Share">Share<sup>128</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>63</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thought/" title="Thought">Thought<sup>43</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Toss/" title="Toss">Toss<sup>40</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>33</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>30</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>19</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>14</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>13</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Arya/" title="Arya">Arya<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Puppeteer/" title="Puppeteer">Puppeteer<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Health/" title="Health">Health<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">云轩关注</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://nice.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="静晴轩别苑">静晴轩别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="幽居空谷轩">幽居空谷轩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="天意人间舫">天意人间舫</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://refined-x.com/?utm_source=jeffjade.com" target="_blank" title="前端路上">前端路上</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://creatorsdaily.com?utm_source=jeffjade.com" target="_blank" title="创造者日报">创造者日报</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://calpa.me/?utm_source=jeffjade.com" target="_blank" title="Calpa&#39;s Blog">Calpa&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jeffjade.com/nicelinks/#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">好书推荐</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="浪潮之巅">浪潮之巅</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="平凡的世界">平凡的世界</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A82" target="_blank" title="代码大全2">代码大全2</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 追求卓越，成功就会在不经意间 追上你！ <br>
+			As you think, so shall you become. </p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="https://nicelinks.site/redirect?url=https://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://twitter.com/nicejadeyang" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://nicelinks.site/redirect?url=https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="mailto:yunjeff@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="https://nicelinks.site/post/5c4c56d5a5957e07a40b3116" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://nicelinks.site/redirect?url=https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2024
+		
+			<a href="https://nicelinks.site/member/admin?utm_source=jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+		
+		</p>
+</div></footer>
+    <script src="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js"></script>
+
+<script type="text/javascript">
+echo.init({
+  offset: 200,
+  throttle: 250,
+  unload: false,
+  callback: function (element, op) {}
+});
+
+var AdBlockRemind = document.createElement("ad-block-remind");
+document.body.appendChild(AdBlockRemind);
+
+$(document).ready(function(){
+  console.log('Welcome To %c晚晴幽草轩','font-size:2.113em;color: #2edfa3');
+
+  $("body").append('<quickapp-deeplink brand="vivo|Weixin|Mobile|OPPO|huawei" deeplink="https://hapjs.org/app/com.graceful.sentences/browser/pages/detail"></quickapp-deeplink>');
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  var openAside = function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  }
+  var closeAside = function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  }
+  c.click(openAside);
+  o.click(closeAside);
+
+  document.onkeydown = function(e){
+    // 兼容FF和IE和Opera
+    var theEvent = e || window.event;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    var isInputTextarea = document.activeElement.id === 'search' || document.activeElement.nodeName === "TEXTAREA"
+    if (code === 13 && !isInputTextarea) {
+        if( o.css('display') === 'none'){
+          openAside()
+        }else{
+          closeAside()
+        }
+        return false;
+    }
+    return true;
+  }
+
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          // close auto-close sidebar @17-11-07
+          // c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="//s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"><i class="fa fa-weixin"></i></a>',
+  '<a href="//service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});
+</script>
+
+
+
+
+
+<link href="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/css/jquery.fancybox.css" rel="stylesheet">
+<script async src="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/js/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      var srcVal = (this.src.indexOf('blank.gif') < 0) ? this.src : $(this).attr('data-echo')
+      $(this).wrap('<a href="' + srcVal + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+<!-- Analytics Begin -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1W3X5M7863"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-1W3X5M7863');
+</script>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " https://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd0ed9bb72df3b2b32bdd2274981a7d07' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<!-- <script src="/js/totop.js"></script> -->
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+<!-- MathJax End -->
+
+<!-- Move totop.js From totop.ejs To Here@0309 -->
+<script src="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+(function($) {
+  if (!Object.assign) {
+    Object.defineProperty(Object, "assign", {
+      enumerable: false,
+      configurable: true,
+      writable: true,
+      value: function(target, firstSource) {
+        "use strict";
+        if (target === undefined || target === null)
+          throw new TypeError("Cannot convert first argument to object");
+        var to = Object(target);
+        for (var i = 1; i < arguments.length; i++) {
+          var nextSource = arguments[i];
+          if (nextSource === undefined || nextSource === null) continue;
+          var keysArray = Object.keys(Object(nextSource));
+          for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+            var nextKey = keysArray[nextIndex];
+            var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+            if (desc !== undefined && desc.enumerable) to[nextKey] = nextSource[nextKey];
+          }
+        }
+        return to;
+      }
+    });
+  }
+
+  if (document.getElementById('gitalk-container')) {
+    var gitalk = new Gitalk({
+      clientID: '4bc2d1424c7939471ad4',
+      clientSecret: 'b3dc888873f473405f79f7d9394888478ba55ca4',
+      repo: 'jadeblog-backups',
+      owner: 'nicejade',
+      admin: ['nicejade'],
+      id: md5(location.pathname),
+      distractionFreeMode: false
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  var clustrmapsCount = document.getElementById('clustrmaps-count')
+  if (clustrmapsCount) {
+    var clustrmapsScript = document.createElement('script')
+    clustrmapsScript.type = 'text/javascript'
+    clustrmapsScript.id = 'clustrmaps'
+    clustrmapsScript.src = '//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a'
+    clustrmapsCount.appendChild(clustrmapsScript)
+  }
+
+  var wbScript = document.createElement('script')
+  wbScript.type = 'text/javascript'
+  wbScript.async = true
+  wbScript.charset = "utf-8"
+  wbScript.src = "//tjs.sjs.sinajs.cn/open/api/js/wb.js"
+  document.body.appendChild(wbScript)
+
+  // 为 Baidu 设置自动推送@2018-08-08
+  
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.async = true;
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.async = true;
+      bp.src = '//push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  
+
+  // When to show the scroll link
+  // higher number = scroll link appears further down the page
+  var upperLimit = 1000;
+
+  // Our scroll link element
+  var scrollElem = $('#totop');
+
+  // Scroll to top speed
+  var scrollSpeed = 500;
+
+  // Show and hide the scroll to top link based on scroll position
+  scrollElem.hide();
+  $(window).scroll(function () {
+      var scrollTop = $(document).scrollTop();
+      if ( scrollTop > upperLimit ) {
+          $(scrollElem).stop().fadeTo(300, 1); // fade back in
+      }else{
+          $(scrollElem).stop().fadeTo(300, 0); // fade out
+      }
+  });
+
+  // Scroll to top animation on click
+  $(scrollElem).click(function(){
+      $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+  });
+})(jQuery);
+</script>
+
+<!-- Inject service-worker@2018-01-09 -->
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js", {scope: '/'})
+    .then(registration => console.log('SW Registration Success！Scope: ', registration.scope))
+    .catch(err => console.log('SW Registration Failed! Error: ', err));
+}
+</script>
+
+<!-- Inject Anchor.js @2018-01-14 -->
+<script type="text/javascript">
+function async(u, c) {
+  var d = document,
+    t = 'script',
+    o = d.createElement(t),
+    s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+
+async("https://fastly.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js", function(){
+  anchors.options = {
+    visible: 'hover',
+    placement: 'right'
+  }
+  anchors.add('#post h2, #post h3, #post h4');
+  anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+})
+</script>
+  </body>
