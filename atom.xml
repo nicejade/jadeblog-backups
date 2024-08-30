@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jeffjade.com/"/>
-  <updated>2024-08-28T14:15:56.145Z</updated>
+  <updated>2024-08-30T15:14:57.981Z</updated>
   <id>https://www.jeffjade.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.jeffjade.com/2024/08/28/253-wealth-tracker/"/>
     <id>https://www.jeffjade.com/2024/08/28/253-wealth-tracker/</id>
     <published>2024-08-28T12:20:00.000Z</published>
-    <updated>2024-08-28T14:15:56.145Z</updated>
+    <updated>2024-08-30T15:14:57.981Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://github.com/nicejade/wealth-tracker" target="_blank" rel="external">生财有迹</a>（Wealth Tracker）是一款专注于个人资产分析的应用程序。其核心功能是：全面记录并展示用户的资产状况，帮助用户轻松了解财务现状；运用 AI 能力，结合每种资产的特性和当前环境，提供适宜的财务建议。</p>
 <a id="more"></a>
@@ -60,7 +60,7 @@
 </ol>
 <p>“生财有迹”这个新名称不仅准确反映出产品功能定位，传达了产品理念，还蕴含了对用户资产增长的美好祝愿，希望您也会喜欢。</p>
 <h2 id="给予支持"><a href="#给予支持" class="headerlink" title="给予支持"></a>给予支持</h2><p><a href="https://github.com/nicejade/wealth-tracker" target="_blank" rel="external">生财有迹</a>项目开源且免费，然而设计与编码需耗费时间和精力。如若您对其使用感到满意，请考虑通过以下方式进行小额捐赠：</p>
-<div align="center"><br>  <img style="margin: 0;border-radius: 6px;width: 200px;min-width: 200px" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/reward-code.jpeg" alt="生财有迹 - 微信赞赏码"><br>  <p style="font-size:0.6em">微信扫码赞助</p><br><br>  <a href="https://www.buymeacoffee.com/nicejade?ref=github.com" target="_blank"><br>    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;min-width: 200px"><br>  </a><br></div>
+<div align="center"><br>  <img style="margin: 0;border-radius: 6px;width: 200px;min-width: 200px" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/reward-code.jpeg" alt="生财有迹 - 微信赞赏码"><br>  <p style="font-size:0.6em">微信扫码赞助</p><br><br>  <a href="https://www.buymeacoffee.com/nicejade?ref=github.com" target="_blank"><br>    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important"><br>  </a><br></div>
 
 <h2 id="路线图"><a href="#路线图" class="headerlink" title="路线图"></a>路线图</h2><p>“生财有迹”项目正处于积极的设计和研发阶段，致力于在功能丰富与易用性之间寻求平衡，以满足用户日益增长的个人财务管理需求。未来开发重点包括增强数据可视化能力、加强数据安全性、以及提升 AI 辅助分析功能等。</p>
 <ul>
