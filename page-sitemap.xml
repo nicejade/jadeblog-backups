@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>https://www.jeffjade.com/404.html</loc>
+        <lastmod>2024-11-19T16:30:43.713Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://www.jeffjade.com/nicelinks/</loc>
         <lastmod>2024-10-26T13:44:05.340Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -30,13 +37,6 @@
     <url>
         <loc>https://www.jeffjade.com/special/jade-introduction.html</loc>
         <lastmod>2022-03-25T08:53:41.213Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.jeffjade.com/404.html</loc>
-        <lastmod>2019-05-31T05:10:22.974Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

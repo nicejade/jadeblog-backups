@@ -20,14 +20,14 @@
 <meta property="og:url" content="https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/index.html">
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="Webpack 打包优化，运用科学方法，不断探索、改进、更新，尽可能减小打包体积，提升产品质量。">
-<meta property="og:image" content="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://www.jeffjade.com//image.nicelinks.site/webpack.png">
+<meta property="og:image" content="https://image.lovejade.cn/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://www.jeffjade.com//image.lovejade.cn/webpack.png">
 <meta property="og:image" content="https://cloud.githubusercontent.com/assets/302213/20628702/93f72404-b338-11e6-92d4-9a365550a701.gif">
-<meta property="og:updated_time" content="2020-05-05T16:43:09.679Z">
+<meta property="og:updated_time" content="2024-11-19T16:30:26.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Webpack 打包优化之体积篇">
 <meta name="twitter:description" content="Webpack 打包优化，运用科学方法，不断探索、改进、更新，尽可能减小打包体积，提升产品质量。">
-<meta name="twitter:image" content="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1">
+<meta name="twitter:image" content="https://image.lovejade.cn/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1">
 <meta name="twitter:creator" content="@MarshalXuan">
 
     
@@ -133,8 +133,8 @@
 <blockquote>
 <p><strong><span style="color: #d71345">『有则推荐』</span></strong>: 自 2017 年初，就有开始利用闲余时光，打磨个人最新作品——<a href="https://nicelinks.site/?from=jeffjade.com" target="_blank" rel="external"><strong>「倾城之链」</strong></a> ，有意将其打造成优良开放型平台，旨在云集全球优秀网站，让您更为便捷地探索互联网中那更广阔的世界；在这里，您可以轻松<strong>发现</strong>、<strong>学习</strong>、<strong>分享</strong>更多<code>有用</code>或<code>有趣</code>的事物。目前仍在不断迭代、优化中，如果您对此感兴趣，不妨先尝试一下： <a href="https://nicelinks.site/?from=jeffjade.com" target="_blank" rel="external">「倾城之链」</a>；亦十分欢迎提出您宝贵意见或建议（亦可通过微信扫，描如下小程序码进行体验）。 (Upade@2020-05-01 于深圳.南山)。</p>
 </blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="min-width: 300px" alt="小程序码 - 倾城之链"></p>
-<p><img src="//image.nicelinks.site/webpack.png" alt="Webpack Package optimization"></p>
+<p><img src="https://image.lovejade.cn/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="min-width: 300px" alt="小程序码 - 倾城之链"></p>
+<p><img src="//image.lovejade.cn/webpack.png" alt="Webpack Package optimization"></p>
 <p><code>Webpack</code>，当前各大主流框架默认配备的打包方案，对其如何使用，已有较完备中英文文档；并且，各主流框架也有对应 <code>CLI</code> 予以基础配置，故不作为探讨范畴。从产品层来讲，如何使得构建的包体积小、运行快，这有必要不断摸索实践，提炼升级，使之臻于最佳。本文将从以下些许方面，对 <code>Webpack</code> 打包体积方面，做下优化探讨(<strong>备注</strong>： <code>Webpack</code>实践版本： <code>3.3.0</code>)：</p>
 <hr>
 <p>随着时间的推移，<code>Webpack</code> 也在不断的优化迭代；截至目前，已经更新至 <code>v4.8.*</code>；在 <code>Webpack4</code> 这个版本，她在原有基础上，做了很多优化，也引入了颇多的新特性。在新的版本中，将获得更多模块类型及 对 <code>.mjs</code> 的支持，<strong>更好的默认值</strong>、更为简洁的<strong>模式设置</strong>、更加<strong>智能</strong>的来分割 <code>Chunk</code>，还新增的 <code>splitChunks</code> 来自定义分割代码块，诸此等等。在升级至新版 <code>Webpack</code> 的项目中，在包的<code>构建速度</code>、<code>代码块体积 &amp; 数量</code>、以及<code>运行效率</code>，都会有一个质的飞跃；关于对 <code>Webpack</code> 最新咨询与教程资源，推荐关注 <a href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/webpack-tutorial.md" target="_blank" rel="external">Webpack Tutorial</a>。经过诸多次尝试和探究后，已将其各种配置、优化经验，融入 <a href="https://github.com/nicejade/vue-boilerplate-template/blob/master/build/webpack.prod.conf.js" target="_blank" rel="external">Vue Boilerplate Template

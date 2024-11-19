@@ -20,12 +20,12 @@
 <meta property="og:url" content="https://www.jeffjade.com/2016/01/10/2016-01-10-javaScript-setInterval/index.html">
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="setInterval详解">
-<meta property="og:image" content="https://www.jeffjade.com//image.nicelinks.site/jiangXin.jpg">
-<meta property="og:updated_time" content="2019-06-04T13:47:13.503Z">
+<meta property="og:image" content="https://www.jeffjade.com//image.lovejade.cn/jiangXin.jpg">
+<meta property="og:updated_time" content="2024-11-19T16:33:21.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你所不知道的setInterval">
 <meta name="twitter:description" content="setInterval详解">
-<meta name="twitter:image" content="https://www.jeffjade.com//image.nicelinks.site/jiangXin.jpg">
+<meta name="twitter:image" content="https://www.jeffjade.com//image.lovejade.cn/jiangXin.jpg">
 <meta name="twitter:creator" content="@MarshalXuan">
 
     
@@ -128,7 +128,7 @@
 		
 		<p>在<a href="https://www.jeffjade.com/2016/01/10/2016-01-10-javacript-setTimeout/">你所不知道的setTimeout</a>记载了下<strong>setTimeout</strong>相关,此篇则整理了下<strong>setInterval</strong>；作为拥有广泛应用场景(定时器，轮播图，动画效果，自动滚动等等)，而又充满各种不确定性的这setInterval，自当先洞悉它，才能很好的驾驭它。</p>
 <a id="more"></a>
-<p><img src="//image.nicelinks.site/jiangXin.jpg" alt="你所不知道的setInterval"></p>
+<p><img src="//image.lovejade.cn/jiangXin.jpg" alt="你所不知道的setInterval"></p>
 <h2 id="1-setInterval-基础"><a href="#1-setInterval-基础" class="headerlink" title="1. setInterval()基础"></a><strong>1. setInterval()基础</strong></h2><p>setInterval函数的用法与setTimeout完全一致，区别仅仅在于setInterval指定某个任务每隔一段时间就执行一次，也就是无限次的定时执行。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"button"</span> onclick=<span class="string">"clearInterval(timer)"</span> value=<span class="string">"stop"</span>&gt;</div><div class="line"></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></div><div class="line">  <span class="keyword">var</span> i = <span class="number">1</span></div><div class="line">  <span class="keyword">var</span> timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>);</div><div class="line">  &#125;, <span class="number">1000</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>上面代码表示每隔1000毫秒就输出一个2，直到用户点击了停止按钮。</p>

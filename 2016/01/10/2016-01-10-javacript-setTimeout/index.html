@@ -20,12 +20,12 @@
 <meta property="og:url" content="https://www.jeffjade.com/2016/01/10/2016-01-10-javacript-setTimeout/index.html">
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="setTimeout详解">
-<meta property="og:image" content="https://www.jeffjade.com//image.nicelinks.site/jiangXin1.jpg">
-<meta property="og:updated_time" content="2019-03-26T14:31:16.762Z">
+<meta property="og:image" content="https://www.jeffjade.com//image.lovejade.cn/jiangXin1.jpg">
+<meta property="og:updated_time" content="2024-11-19T16:33:22.439Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你所不知道的setTimeout">
 <meta name="twitter:description" content="setTimeout详解">
-<meta name="twitter:image" content="https://www.jeffjade.com//image.nicelinks.site/jiangXin1.jpg">
+<meta name="twitter:image" content="https://www.jeffjade.com//image.lovejade.cn/jiangXin1.jpg">
 <meta name="twitter:creator" content="@MarshalXuan">
 
     
@@ -128,7 +128,7 @@
 		
 		<p>JavaScript提供定时执行代码的功能，叫做定时器（timer），主要由setTimeout()和setInterval()这两个函数来完成。它们向任务队列添加定时任务。初始接触它的人都觉得好简单，实时上真的如此么？这里记载下，一路对其使用姿势变迁的历程。</p>
 <a id="more"></a>
-<p><img src="//image.nicelinks.site/jiangXin1.jpg" alt="你所不知道的setTimeout"></p>
+<p><img src="//image.lovejade.cn/jiangXin1.jpg" alt="你所不知道的setTimeout"></p>
 <h2 id="1-setTimeout-基础"><a href="#1-setTimeout-基础" class="headerlink" title="1, setTimeout()基础"></a><strong>1, setTimeout()基础</strong></h2><p>setTimeout函数用来指定某个函数或某段代码，在多少毫秒之后执行。它返回一个整数，表示定时器的编号，以后可以用来取消这个定时器。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> timerId = setTimeout(func|code, delay)</div></pre></td></tr></table></figure></p>
 <p>上面代码中，setTimeout函数接受两个参数，第一个参数func|code是将要推迟执行的函数名或者一段代码，第二个参数delay是推迟执行的毫秒数。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">1</span>);</div><div class="line">setTimeout(<span class="string">'console.log(2)'</span>,<span class="number">1000</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="number">3</span>);</div></pre></td></tr></table></figure></p>
 <p>上面代码的输出结果就是1，3，2，因为setTimeout指定第二行语句推迟1000毫秒再执行(如果这在Sublime下运用插件以nodejs环境来执行，许解释器不同，会报错)。</p>

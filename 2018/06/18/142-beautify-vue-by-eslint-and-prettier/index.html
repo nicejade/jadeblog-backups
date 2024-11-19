@@ -20,13 +20,13 @@
 <meta property="og:url" content="https://www.jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/index.html">
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="Prettier 是一个有见识的代码格式化工具。它通过解析代码并使用自己的规则重新打印它，并考虑最大行长来强制执行一致的样式，并在必要时包装代码。如今，它已成为解决所有代码格式问题的优选方案；您可以结合 ESLint 和 Prettier，检测代码中潜在问题的同时，还能统一团队代码风格，从而促使写出高质量代码，来提升工作效率。">
-<meta property="og:image" content="https://image.nicelinks.site/prettier-girl.jpg">
-<meta property="og:image" content="https://image.nicelinks.site/vue-eslint-prettier.png">
-<meta property="og:updated_time" content="2018-06-18T16:17:43.000Z">
+<meta property="og:image" content="https://image.lovejade.cn/prettier-girl.jpg">
+<meta property="og:image" content="https://image.lovejade.cn/vue-eslint-prettier.png">
+<meta property="og:updated_time" content="2024-11-19T16:31:18.940Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用ESLint ＆ Prettier美化Vue代码">
 <meta name="twitter:description" content="Prettier 是一个有见识的代码格式化工具。它通过解析代码并使用自己的规则重新打印它，并考虑最大行长来强制执行一致的样式，并在必要时包装代码。如今，它已成为解决所有代码格式问题的优选方案；您可以结合 ESLint 和 Prettier，检测代码中潜在问题的同时，还能统一团队代码风格，从而促使写出高质量代码，来提升工作效率。">
-<meta name="twitter:image" content="https://image.nicelinks.site/prettier-girl.jpg">
+<meta name="twitter:image" content="https://image.lovejade.cn/prettier-girl.jpg">
 <meta name="twitter:creator" content="@MarshalXuan">
 
     
@@ -129,7 +129,7 @@
 		
 		<p><a href="https://github.com/prettier/prettier" target="_blank" rel="external">Prettier</a> 是一个有见识的代码格式化工具。它通过解析代码并使用自己的规则重新打印它，并考虑最大行长来强制执行一致的样式，并在必要时包装代码。如今，它已成为解决所有代码格式问题的优选方案；支持 <code>JavaScript</code>、 <code>Flow</code>、 <code>TypeScript</code>、 <code>CSS</code>、 <code>SCSS</code>、 <code>Less</code>、 <code>JSX</code>、 <code>Vue</code>、 <code>GraphQL</code>、 <code>JSON</code>、 <code>Markdown</code> 等语言，您可以结合 ESLint 和 Prettier，检测代码中潜在问题的同时，还能统一团队代码风格，从而促使写出高质量代码，来提升工作效率。</p>
 <a id="more"></a>
-<p><img src="https://image.nicelinks.site/prettier-girl.jpg" alt="beautify-vue-by-eslint-and-prettier"></p>
+<p><img src="https://image.lovejade.cn/prettier-girl.jpg" alt="beautify-vue-by-eslint-and-prettier"></p>
 <blockquote>
 <p><strong>备注</strong>，此文首发于使用 <code>Vuepress</code> 搭建的新 Web 应用：<a href="https://nice.lovejade.cn/" target="_blank" rel="external">静晴轩别苑</a>；如果您对此感兴趣，可以移步查看：<a href="https://nice.lovejade.cn/zh/article/beautify-vue-by-eslint-and-prettier.html" target="_blank" rel="external">使用ESLint ＆ Prettier美化Vue代码</a>。</p>
 </blockquote>
@@ -142,7 +142,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn add --dev eslint-plugin-prettier eslint-config-prettier prettier-eslint-cli</div></pre></td></tr></table></figure>
 <p>这里需要补充说明下的是 <code>eslint-plugin-prettier</code> 得工作原理，它会对比格式化前和用 Prettier 格式化后的代码，有不一致的地方就会报错提示；我们可以借助一些工具来修复，比如： <code>eslint --fix</code>，<a href="https://github.com/prettier/prettier-eslint-cli" target="_blank" rel="external">prettier-eslint-cli</a>；可将其配置在 package scripts 中，以方便使用：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"eslint-fix"</span>: <span class="string">"eslint src/**/**/*.vue --fix"</span>,</div><div class="line">    <span class="attr">"format-code"</span>: <span class="string">"prettier-eslint --write \"src/**/*.js\" \"src/**/*.vue\""</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="https://image.nicelinks.site/vue-eslint-prettier.png" alt="beautify-vue-by-eslint-and-prettier"></p>
+<p><img src="https://image.lovejade.cn/vue-eslint-prettier.png" alt="beautify-vue-by-eslint-and-prettier"></p>
 <h2 id="修改规则配置"><a href="#修改规则配置" class="headerlink" title="修改规则配置"></a>修改规则配置</h2><p>您需要知道的是，两者混合使用时候，需要修改规则，以防止重复或冲突；<code>eslint-config-prettier</code> 即为解决此问题的存在，可以使用它关闭所有可能引起冲突的规则。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">"rules": &#123;</div><div class="line">  "prettier/prettier": "error"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>事实上，当在项目中如此配置，可能会出现些“诡异”的报错，即便采用如上修复，也无法解决；而且这也不是您预期的提示；</p>

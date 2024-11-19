@@ -20,14 +20,14 @@
 <meta property="og:url" content="https://www.jeffjade.com/2016/07/06/110-vue-webpack-component-develop/index.html">
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="分享 Vue Webpack 组件化开发实践">
-<meta property="og:image" content="https://www.jeffjade.com//image.nicelinks.site/vue-common-components.jpg">
-<meta property="og:image" content="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1">
-<meta property="og:image" content="https://www.jeffjade.com//image.nicelinks.site/vue-common-components-demo.jpg">
-<meta property="og:updated_time" content="2020-05-11T15:35:02.911Z">
+<meta property="og:image" content="https://www.jeffjade.com//image.lovejade.cn/vue-common-components.jpg">
+<meta property="og:image" content="https://image.lovejade.cn/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1">
+<meta property="og:image" content="https://www.jeffjade.com//image.lovejade.cn/vue-common-components-demo.jpg">
+<meta property="og:updated_time" content="2024-11-19T16:30:37.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue Webpack 组件化开发实践">
 <meta name="twitter:description" content="分享 Vue Webpack 组件化开发实践">
-<meta name="twitter:image" content="https://www.jeffjade.com//image.nicelinks.site/vue-common-components.jpg">
+<meta name="twitter:image" content="https://www.jeffjade.com//image.lovejade.cn/vue-common-components.jpg">
 <meta name="twitter:creator" content="@MarshalXuan">
 
     
@@ -130,15 +130,15 @@
 		
 		<p>两千年余前，子贡问为仁，子曰：“<strong>工欲善其事，必先利其器</strong>。居是邦也。事其大夫之贤者，友其士之仁者”——语出《论语·卫灵公》。时隔这许久，欲问从业者，何以堪高效之为事，有时以把妹（/泡哥）？也无非这十字而已，倘若体会得真切，U Get It。人们总是低估工具对自己心智模式的影响，请记住，<strong>好工具是好思想的容器；好工具也会蕴含好知识</strong>；对于从业纷繁杂乱前端的我等而言，这一点尤显重要；而 <strong>Vue</strong>、<strong>Webpack</strong> 在如今这时节，它所能带给你的，超乎你的想象。</p>
 <a id="more"></a>
-<p><img src="//image.nicelinks.site/vue-common-components.jpg" alt="vue-common-components"></p>
+<p><img src="//image.lovejade.cn/vue-common-components.jpg" alt="vue-common-components"></p>
 <blockquote>
 <p><strong><span style="color: #d71345">『有则推荐』</span></strong>: 自 2017 年初，就有开始利用闲余时光，打磨个人最新作品——<a href="https://nicelinks.site/?from=jeffjade.com" target="_blank" rel="external"><strong>「倾城之链」</strong></a> ，有意将其打造成优良开放型平台，旨在云集全球优秀网站，让您更为便捷地探索互联网中那更广阔的世界；在这里，您可以轻松<strong>发现</strong>、<strong>学习</strong>、<strong>分享</strong>更多<code>有用</code>或<code>有趣</code>的事物。目前仍在不断迭代、优化中，如果您对此感兴趣，不妨先尝试一下： <a href="https://nicelinks.site/?from=jeffjade.com" target="_blank" rel="external">「倾城之链」</a>；亦十分欢迎提出您宝贵意见或建议（亦可通过微信扫，描如下小程序码进行体验）。 (Upade@2020-05-01 于深圳.南山)。</p>
 </blockquote>
-<p><img src="https://image.nicelinks.site/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="min-width: 300px" alt="小程序码 - 倾城之链"></p>
+<p><img src="https://image.lovejade.cn/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="min-width: 300px" alt="小程序码 - 倾城之链"></p>
 <p>聊及这 vue, gulp, webpack，网络上已是充盈着对她们的溢美之词；笔者很是钟爱这<code>vue</code>，除过她简单易学，文档完善，对<code>Angular</code> <code>React</code>取长去短等等之外；更在于她双向数据绑定，数据驱动视图，如此沉重<code>jQuery</code>在不那么复杂的 SPA 中完全可以予以摒除；最兴奋的是户界面完全可以用嵌套的组件树来描述，再也不用写重复代码or拷贝(如果撸好组件封装)，生活原来可以如此美好，这是我不得不欢喜非常。而且，她渲染极快；实现了<span style="color:purple">scoped</span>，防止组件样式污染；error/warn信息完善，易于调试；轮子丰富（vue-router、vue-loader…）功能强悍，基于依赖收集的观测机制，高效精准…… 在不就之后就要发布的 <strong><a href="https://github.com/vuejs/vue/wiki/2.0-features" target="_blank" rel="external">vue2.0</a></strong>，将更轻，更快! Virtual-DOM？Templates, JSX, or Hyperscript? 组件缓存？…..擦，好多东西需要学习！哇，好多好东西可以运用！痛并幸福着，生活就是这样。</p>
 <p>先前在 <a href="https://www.jeffjade.com/2016/05/08/106-vue-es6-jade-scss-webpack-gulp/#">Vue ES6 Jade Scss Webpack Gulp</a> 和 <a href="https://www.jeffjade.com/2016/05/14/106-front-end-learning-record/">所历前端“姿势”更替记(其一)</a> 两篇杂言中，分别叙述了如今撸起 SPA 的姿势即：<strong>Vue</strong>、<strong>ES6</strong> 、<strong>Jade</strong> 、<strong>Scss</strong>、<strong>Webpack</strong>等一套组合，以及所经历的姿势变换历程；这 <strong>Vue</strong> 的使用确立了前端之路新的里程碑；而 <code>Gulp</code>，<code>Webpack</code> 的学习更使得对<strong>工具</strong>有了新的认识——只有你想不到，没有做不到。此一篇絮叨，是对过去 <strong>Vue</strong> + <strong>Webpack</strong> 组件化开发实践的一些总结和分享。</p>
 <p>谈及分享这个，倒是很倾向信奉<code>Linus Torvalds</code>那句名言：<strong>Talk is cheap show me the code</strong>；所以有将所写的常用组件，有忝享于 Github，地址如是： <a href="https://github.com/nicejade/vue-common-components" target="_blank" rel="external">https://github.com/nicejade/vue-common-components</a>。伊始有用 <code>gitbook</code> 对如何使用这组件以作说明；后来鉴于仅仅说明不够明晰周到，干脆用 Vue 来实现一 SPA 专门承载组件 demo 以及 description，这能直观的了解组件用途以及表现，所以就有了 <a href="http://nicejade.github.io/jade/vue-jade-components-demo.html#/" target="_blank" rel="external">Vue Component Desc And Demo</a>，其模样大致如下图：</p>
-<p><img src="//image.nicelinks.site/vue-common-components-demo.jpg" alt="vue-common-components-demo"></p>
+<p><img src="//image.lovejade.cn/vue-common-components-demo.jpg" alt="vue-common-components-demo"></p>
 <p>对于组件的封装，因项目需求的差异，而各不相同；因此，这份尚在路上的组件库，并不是界定在工作生产环境予以作用，这也非分享的初衷（当然，如果需要这其中部分组件，直接拿来用未尝不可）。首先，可以用它作为 <code>vue</code> <code>webpack</code> <code>es6</code> <code>sass</code> <code>jade</code>等入坑参考，借机体验这些联合来塑造出的<code>组件化</code>开发，或多或少会有所获。其次，也可以基于此对 <code>vue</code> 开发前端项目，做更为深入细节探讨；譬如组件设计，热加载，路由以及 vue2.0 那别致的 Virtual-DOM 等等。其更重要的在于，分享一种思维，为前端者，应该更多(*N)去学习去折腾，打造一套适宜的完善机制，优化开发工作流，提升开发速度；要知道只有在完成需求的基础前提下，才有时间去优化体验and学习更多；<strong>天下武功，唯快不破</strong>，这话不假！</p>
 <p>上述言论，还有些补充；对于 <code>vue</code> 入门，这是一件非常容易的事儿；但到现实协作中开发，诸多东西都是挺需要探讨一番的；譬如使用 <code>vue-resource</code> 来替代 <code>JQuery-Ajax</code>；再比如 <code>vue</code> 虽然为组件style实现了<span style="color:purple">scoped</span>，但这也存在局限(Eg: 如果 A 组件包含了 B 组件，A 的 scoped css 就不应该试图定义 B 组件内部的元素样式，这不能很好的工作)；如此，解决 css 命名污染，<code>CSS Modules</code>(可参见<a href="http://www.ruanyifeng.com/blog/2016/06/css_modules.html" target="_blank" rel="external">CSS Modules 用法教程</a>） 看起来是一个挺不错的解决办法，这就使得可以继续实践探讨的方向和必要。其次要谈及的是对工作流的设计，懒为要决，善用具器；这在<a href="https://github.com/nicejade/vue-common-components" target="_blank" rel="external">vue-common-components</a>，有些许推荐，也在持续探讨学习之中。</p>
 <p>学习“知识”与“工具”，都理应重视，可须有重前忽后的道理？话说，计算机(抑或说知识)本身，即为工具。而这计算机所能认知的也就0和1(谁让流行起来的是双级管嘞)，其上所衍生出的打孔，汇编，C，Java，Javascript 也都是计算机语言(不也是工具？)；而前端所当需的JavaScript, Html5, Css 也好，流行的框架 <code>React</code> <code>Vue</code> 也罢，还是协助高效工作的工具诸如 <code>Gulp</code> <code>Webpack</code> <code>Sublime Text</code> <code>Atom</code>，理当学习，用之以精；争得时间，方有更多实践；何谓<strong>技术</strong>？不就是驾驭各种工具来解决实际问题的能力么？</p>

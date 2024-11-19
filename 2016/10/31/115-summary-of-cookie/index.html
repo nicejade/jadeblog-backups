@@ -20,12 +20,12 @@
 <meta property="og:url" content="https://www.jeffjade.com/2016/10/31/115-summary-of-cookie/index.html">
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="详细解说Cookie，Session；以及其区别。">
-<meta property="og:image" content="https://www.jeffjade.com//image.nicelinks.site/jade_scenery-1.jpg">
-<meta property="og:updated_time" content="2017-09-01T12:58:14.000Z">
+<meta property="og:image" content="https://www.jeffjade.com//image.lovejade.cn/jade_scenery-1.jpg">
+<meta property="og:updated_time" content="2024-11-19T16:30:32.976Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="详解 Cookie 纪要">
 <meta name="twitter:description" content="详细解说Cookie，Session；以及其区别。">
-<meta name="twitter:image" content="https://www.jeffjade.com//image.nicelinks.site/jade_scenery-1.jpg">
+<meta name="twitter:image" content="https://www.jeffjade.com//image.lovejade.cn/jade_scenery-1.jpg">
 <meta name="twitter:creator" content="@MarshalXuan">
 
     
@@ -128,7 +128,7 @@
 		
 		<p>从事 Web 开发已有近17个月；在学以致用的工作学习里，对于不怎么使用的部分，多少有些雾里探花的窘迫感～差不多是了解一二，然而又非真切的明晰；这就使得再用的时候，总要去再搜索一番；如此颇为难受，倒不如总结纪录下来，一方面加深认知，也易便于查阅；对于某相关技术，不断学习、运用、总结、更新，积淀过后也能对别人给予帮助。写博，真是一件值得去做的事。</p>
 <a id="more"></a>
-<p><img src="//image.nicelinks.site/jade_scenery-1.jpg" alt="晚晴幽草轩"></p>
+<p><img src="//image.lovejade.cn/jade_scenery-1.jpg" alt="晚晴幽草轩"></p>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a><strong>背景</strong></h2><p>　　在HTTP协议的定义中，采用了一种机制来<strong>记录客户端和服务器端交互</strong>的信息，这种机制被称为cookie，cookie规范定义了服务器和客户端交互信息的格式、生存期、使用范围、安全性。<br>　　在JavaScript中可以通过 document.cookie 来读取或设置这些信息。由于 cookie 多用在客户端和服务端之间进行通信，所以除了JavaScript以外，服务端的语言（如PHP）也可以存取 cookie。</p>
 <h2 id="Cookie详解"><a href="#Cookie详解" class="headerlink" title="Cookie详解"></a><strong>Cookie详解</strong></h2><p>　　<strong>Cookie在远程浏览器端存储数据并以此跟踪和识别用户的机制</strong>。从实现上说，Cookie是存储在客户端上的一小段数据，浏览器（即客户端）通过HTTP协议和服务器端进行Cookie交互。</p>
 <p>　　Cooke独立于语言存在，严格地说，Cookie并不是由PHP、Java等语言实现的，而是由这些语言对Cookie进行间接操作，即发送HTTP指令，浏览器收到指令便操作Cookie并返回给服务器。因此，<strong>Cookie是由浏览器实现和管理的</strong>。举例说，PHP并没有真正设置过Cookie，只是发出指令让浏览器来做这件事。PHP中可以使用setcookie() 或 setrawcookie() 函数设置Cookie。setcookie()最后一个参数HttpOnly设置了后，JavaScript就无法读取到这个Cookie。</p>

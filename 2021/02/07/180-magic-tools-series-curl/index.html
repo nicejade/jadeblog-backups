@@ -20,12 +20,12 @@
 <meta property="og:url" content="https://www.jeffjade.com/2021/02/07/180-magic-tools-series-curl/index.html">
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="curl 非常有用的命令行工具库，用于通过 URL 传输数据。它的名字就是客户端（client）的 URL 工具的意思（command line tool and library for transferring data with URLs）。它的功能非常强大，命令行参数多达几十种。如能熟练使用，可以在很多应用场景下，发挥巨大的价值。本篇文章，就跟大家一起探讨下 curl 以及关于它的那些妙用。">
-<meta property="og:image" content="https://image.nicelinks.site/curl-wttr-in.png">
-<meta property="og:updated_time" content="2021-02-06T16:46:27.889Z">
+<meta property="og:image" content="https://image.lovejade.cn/curl-wttr-in.png">
+<meta property="og:updated_time" content="2024-11-19T16:33:51.985Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="堪称神器的命令行工具系列之 curl">
 <meta name="twitter:description" content="curl 非常有用的命令行工具库，用于通过 URL 传输数据。它的名字就是客户端（client）的 URL 工具的意思（command line tool and library for transferring data with URLs）。它的功能非常强大，命令行参数多达几十种。如能熟练使用，可以在很多应用场景下，发挥巨大的价值。本篇文章，就跟大家一起探讨下 curl 以及关于它的那些妙用。">
-<meta name="twitter:image" content="https://image.nicelinks.site/curl-wttr-in.png">
+<meta name="twitter:image" content="https://image.lovejade.cn/curl-wttr-in.png">
 <meta name="twitter:creator" content="@MarshalXuan">
 
     
@@ -175,7 +175,7 @@
 </blockquote>
 <h4 id="获取天气预报"><a href="#获取天气预报" class="headerlink" title="获取天气预报"></a>获取天气预报</h4><p>网站 <a href="http://wttr.in/" target="_blank" rel="external">wttr.in</a> 支持<code>命令行</code>请求天气预报，具体使用示例如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl wttr.in</div></pre></td></tr></table></figure>
-<p><img src="https://image.nicelinks.site/curl-wttr-in.png" alt="通过 curl 获取天气预报"></p>
+<p><img src="https://image.lovejade.cn/curl-wttr-in.png" alt="通过 curl 获取天气预报"></p>
 <h3 id="下载文件并显示下载进度"><a href="#下载文件并显示下载进度" class="headerlink" title="下载文件并显示下载进度"></a><strong>下载文件并显示下载进度</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -<span class="comment"># -o pretty-gril.jpg https://w.wallhaven.cc/full/9m/wallhaven-9mxjp8.jpg</span></div></pre></td></tr></table></figure>
 <p>谈到下载这块儿，利用正则循环下载（文件名一样，部分尾号不同）、下载后重命名、分块儿下载、通过 ftp 下载等等，在此就不一一展开说明了。</p>
 <p>当然，如果您从事编程开发，可以用到 curl 更多功能，比如，基于 curl 命令从文件中读取 cookie 信息、构造一个请求头、模拟 User Agent 字段、伪造 referer 等等，鉴于篇幅，就不在此展示说明；如果您有兴趣了解更多，可以参见 <a href="https://curl.se/docs/httpscripting.html" target="_blank" rel="external">The Art Of Scripting HTTP Requests Using Curl</a>；如果您有 curl 更多妙用方法，欢迎留言分享。</p>
