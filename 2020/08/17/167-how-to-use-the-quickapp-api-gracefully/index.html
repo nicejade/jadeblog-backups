@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://www.jeffjade.com/2020/08/17/167-how-to-use-the-quickapp-api-gracefully/index.html">
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="查阅快应用开发文档，可以知道官方提供了诸多接口；对于如何使用，文档中也给出了简单的说明和代码示例；但照着示例写法，在实际项目中，不够优雅且更不高效；所以，在开发中需要加以变通去写，使得大幅提升开发效率，同时也令整个代码优雅，以便于维护。所以在此篇文章的存在，旨在于讨论：如何优雅使用「快应用」API。">
-<meta property="og:updated_time" content="2020-08-18T05:40:34.335Z">
+<meta property="og:updated_time" content="2024-11-19T16:41:53.826Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何优雅使用「快应用」API">
 <meta name="twitter:description" content="查阅快应用开发文档，可以知道官方提供了诸多接口；对于如何使用，文档中也给出了简单的说明和代码示例；但照着示例写法，在实际项目中，不够优雅且更不高效；所以，在开发中需要加以变通去写，使得大幅提升开发效率，同时也令整个代码优雅，以便于维护。所以在此篇文章的存在，旨在于讨论：如何优雅使用「快应用」API。">
@@ -124,9 +124,9 @@
 </header>
 	<div class="article-content">
 		
-		<p>查阅<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发文档，可以知道官方提供了诸多<a href="https://doc.quickapp.cn/features/" target="_blank" rel="external">接口</a>；对于如何使用，文档中也给出了简单的说明和代码示例；但照着示例写法，在实际项目中，不够优雅且更不高效；所以，在开发中需要加以变通去写，使得大幅提升开发效率，同时也令整个代码优雅，以便于维护。所以在此篇文章的存在，旨在于讨论：如何优雅使用「快应用」API。</p>
+		<p>查阅<a href="https://site.lovejade.cn/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发文档，可以知道官方提供了诸多<a href="https://doc.quickapp.cn/features/" target="_blank" rel="external">接口</a>；对于如何使用，文档中也给出了简单的说明和代码示例；但照着示例写法，在实际项目中，不够优雅且更不高效；所以，在开发中需要加以变通去写，使得大幅提升开发效率，同时也令整个代码优雅，以便于维护。所以在此篇文章的存在，旨在于讨论：如何优雅使用「快应用」API。</p>
 <a id="more"></a>
-<p>熟悉<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发的朋友，应该知道，使用其接口，需要三个步骤：接口声明（大部分），导入模块，接口调用。坦白讲，对于使用前端技术栈的开发者朋友，这是不够友好的设定；无由来给开发者带来了额外的工作量，却没有换来任何实质性价值。下面就从优化这三个步骤，来完成本文的分享主旨：优雅使用「快应用」API。</p>
+<p>熟悉<a href="https://site.lovejade.cn/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发的朋友，应该知道，使用其接口，需要三个步骤：接口声明（大部分），导入模块，接口调用。坦白讲，对于使用前端技术栈的开发者朋友，这是不够友好的设定；无由来给开发者带来了额外的工作量，却没有换来任何实质性价值。下面就从优化这三个步骤，来完成本文的分享主旨：优雅使用「快应用」API。</p>
 <p><strong>备注</strong>：本文首发于 <a href="https://quickapp.vivo.com.cn/how-to-use-the-quickapp-api-gracefully/" target="_blank" rel="external">如何优雅使用「快应用」API - vivo 快应用官方博客</a>。</p>
 <h2 id="接口声明"><a href="#接口声明" class="headerlink" title="接口声明"></a>接口声明</h2><p>在<a href="https://doc.quickapp.cn/features/system/share.html" target="_blank" rel="external">快应用开发文档，如分享接口</a>中，在阐述如何使用该接口时，仍旧提及需要在 <code>manifest.json</code> 文件中做接口声明，如下示例：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"features"</span>: [</div><div class="line">        &#123;</div><div class="line">          <span class="attr">"name"</span>: <span class="string">"system.share"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">          <span class="attr">"name"</span>: <span class="string">"system.shortcut"</span></div><div class="line">        &#125;</div><div class="line">      ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p><strong>事实上</strong>：作为开发者的您，已经无须如此；因为，快应用打包工具，在打包之时，已经帮着做了优化，帮着注入了<strong>接口声明</strong>；知晓这一点后，您大可以将 <code>manifest.json</code>  文件中的 features 字段给删除掉。</p>
@@ -558,6 +558,12 @@
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
     <ul>
+        
+          <li>
+            
+            	<a href="https://site.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
         
           <li>
             

@@ -22,7 +22,7 @@
 <meta property="og:description" content="WebAssembly 堪称一个革命性的技术，它给 Web 带来了更多的可能性，对于 CPU 密集型的应用，比如图片、音频、视频、直播、机器学习、AR、VR、游戏、在线会议、在线文档、在线 IDE、在线游戏等等，WebAssembly 既可以帮助 Web 突破性能瓶颈，也可以让 Web 得以利用其他语言的代码库。随着越来越多业务跟服务转战云端，基于 Web 本身优势，外有 WebAssembly">
 <meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/%E7%BC%96%E8%AF%91%E5%99%A8-vs-%E8%A7%A3%E9%87%8A%E5%99%A8.png">
 <meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/WebAssembly-VS-JS-runtime.jpg">
-<meta property="og:updated_time" content="2023-01-17T13:55:21.141Z">
+<meta property="og:updated_time" content="2024-11-19T16:48:03.761Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为什么说 WebAssembly 让 Web 的未来更光明？">
 <meta name="twitter:description" content="WebAssembly 堪称一个革命性的技术，它给 Web 带来了更多的可能性，对于 CPU 密集型的应用，比如图片、音频、视频、直播、机器学习、AR、VR、游戏、在线会议、在线文档、在线 IDE、在线游戏等等，WebAssembly 既可以帮助 Web 突破性能瓶颈，也可以让 Web 得以利用其他语言的代码库。随着越来越多业务跟服务转战云端，基于 Web 本身优势，外有 WebAssembly">
@@ -145,9 +145,9 @@
 <li>2021 年 1 月 6 日，<a href="https://github.com/wasmerio/wasmer" target="_blank" rel="external">Wasmer</a>（🚀支持 WASI 和 Emscripten 的领先 WebAssembly 运行时） 1.0.0 版本发布。</li>
 <li>2022 年 09 月 20，<a href="https://github.com/bytecodealliance/wasmtime" target="_blank" rel="external">Wasmtime</a>（WebAssembly 的快速安全运行时） 的官方 1.0 版本发布。</li>
 </ul>
-<h2 id="全面认识-WebAssembly"><a href="#全面认识-WebAssembly" class="headerlink" title="全面认识 WebAssembly"></a>全面认识 WebAssembly</h2><h3 id="WebAssembly-诞生背景"><a href="#WebAssembly-诞生背景" class="headerlink" title="WebAssembly 诞生背景"></a>WebAssembly 诞生背景</h3><p>Web 平台的成熟催生了复杂而苛刻的网络应用，如交互式三维可视化，音频和视频软件，以及游戏。随着伴随着这一点，Web 上代码的效率和安全性变得比以往更加重要。然而，作为唯一的网络内置语言——JavaScript 并没有很好地满足这些要求，特别是作为编译目标。来自四个主要浏览器供应商的工程师们迎接挑战，合作设计了一个可移植的低级字节码，称为 <a href="https://nicelinks.site/tags/WebAssembly" target="_blank" rel="external">WebAssembly</a> 。它提供了紧凑的表示、高效的验证和编译，以及安全的低至无开销的执行。WebAssembly 不是致力于一个特定的编程模型，而是 WebAssembly 是对现代硬件的抽象，使其与语言、硬件和平台无关，其使用范围不只是 Web 浏览器；就目前而言，Node.js、Deno、 <a href="https://wasmtime.dev/" target="_blank" rel="external">WebAssembly 运行时</a> 等环境都可使用。</p>
-<h3 id="WebAssembly-是什么？"><a href="#WebAssembly-是什么？" class="headerlink" title="WebAssembly 是什么？"></a>WebAssembly 是什么？</h3><p> <a href="https://nicelinks.site/redirect?url=https://webassembly.org/" target="_blank" rel="external">WebAssembly</a> 是一种新的编码方式，可以在现代的网络浏览器中运行 － 它是一种低级的类汇编语言，具有紧凑的二进制格式，可以接近原生的性能运行，并为诸如 C / C ++ 等语言提供一个编译目标，以便它们可以在 Web 上运行。它也被设计为可以与 JavaScript 共存，允许两者一起工作。WebAssembly 是<strong>可移植</strong>、<strong>体积小</strong>、<strong>加载快</strong>并且兼容 Web 浏览器的全新类汇编语言格式，其具有<strong>高效</strong>、<strong>安全</strong>、<strong>开放</strong>、<strong>标准</strong>等特性。</p>
-<p> <a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">WebAssembly</a> （缩写为Wasm）是基于<strong>堆栈的虚拟机</strong>的二进制指令格式。其设计目的不是为手写代码，而是为诸如 C、C++、Rust 等低级语言提供一个高效的、可移植的编译目标，支持在 Web 上部署客户端和服务器应用程序。</p>
+<h2 id="全面认识-WebAssembly"><a href="#全面认识-WebAssembly" class="headerlink" title="全面认识 WebAssembly"></a>全面认识 WebAssembly</h2><h3 id="WebAssembly-诞生背景"><a href="#WebAssembly-诞生背景" class="headerlink" title="WebAssembly 诞生背景"></a>WebAssembly 诞生背景</h3><p>Web 平台的成熟催生了复杂而苛刻的网络应用，如交互式三维可视化，音频和视频软件，以及游戏。随着伴随着这一点，Web 上代码的效率和安全性变得比以往更加重要。然而，作为唯一的网络内置语言——JavaScript 并没有很好地满足这些要求，特别是作为编译目标。来自四个主要浏览器供应商的工程师们迎接挑战，合作设计了一个可移植的低级字节码，称为 <a href="https://site.lovejade.cn//tags/WebAssembly" target="_blank" rel="external">WebAssembly</a> 。它提供了紧凑的表示、高效的验证和编译，以及安全的低至无开销的执行。WebAssembly 不是致力于一个特定的编程模型，而是 WebAssembly 是对现代硬件的抽象，使其与语言、硬件和平台无关，其使用范围不只是 Web 浏览器；就目前而言，Node.js、Deno、 <a href="https://wasmtime.dev/" target="_blank" rel="external">WebAssembly 运行时</a> 等环境都可使用。</p>
+<h3 id="WebAssembly-是什么？"><a href="#WebAssembly-是什么？" class="headerlink" title="WebAssembly 是什么？"></a>WebAssembly 是什么？</h3><p> <a href="https://site.lovejade.cn//redirect?url=https://webassembly.org/" target="_blank" rel="external">WebAssembly</a> 是一种新的编码方式，可以在现代的网络浏览器中运行 － 它是一种低级的类汇编语言，具有紧凑的二进制格式，可以接近原生的性能运行，并为诸如 C / C ++ 等语言提供一个编译目标，以便它们可以在 Web 上运行。它也被设计为可以与 JavaScript 共存，允许两者一起工作。WebAssembly 是<strong>可移植</strong>、<strong>体积小</strong>、<strong>加载快</strong>并且兼容 Web 浏览器的全新类汇编语言格式，其具有<strong>高效</strong>、<strong>安全</strong>、<strong>开放</strong>、<strong>标准</strong>等特性。</p>
+<p> <a href="https://site.lovejade.cn//post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">WebAssembly</a> （缩写为Wasm）是基于<strong>堆栈的虚拟机</strong>的二进制指令格式。其设计目的不是为手写代码，而是为诸如 C、C++、Rust 等低级语言提供一个高效的、可移植的编译目标，支持在 Web 上部署客户端和服务器应用程序。</p>
 <h3 id="WebAssembly-试图取代-JavaScript-吗？"><a href="#WebAssembly-试图取代-JavaScript-吗？" class="headerlink" title="WebAssembly 试图取代 JavaScript 吗？"></a>WebAssembly 试图取代 JavaScript 吗？</h3><p>不会。在 <a href="https://webassembly.org/docs/faq/" target="_blank" rel="external">WebAssembly 常见问题</a> 中，作者给出了明确说明：“WebAssembly 旨在补充而非替代 JavaScript。随着时间的推移，WebAssembly 将允许许多语言被编译到 Web，而 JavaScript 具有令人难以置信的势头，并将继续保持 Web 的单一、特权（ <a href="https://webassembly.org/docs/faq/#is-webassembly-only-for-cc-programmers" target="_blank" rel="external">如上所述</a> ）动态语言。此外，预计 JavaScript 和 WebAssembly 将在许多配置中一起使用”。</p>
 <h4 id="理解-WebAssembly-文件格式"><a href="#理解-WebAssembly-文件格式" class="headerlink" title="理解 WebAssembly 文件格式"></a>理解 WebAssembly 文件格式</h4><p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/%E7%BC%96%E8%AF%91%E5%99%A8-vs-%E8%A7%A3%E9%87%8A%E5%99%A8.png" alt="编译器 VS 解释器"></p>
 <ul>
@@ -215,15 +215,15 @@
 <li>平台仿真：AutoCAD、Google Earth；</li>
 <li>加密解密：JSVMP（编译及二进制特性）；</li>
 <li>开发工具：vim web、SQLlite web；</li>
-<li>图像识别及处理： <a href="https://nicelinks.site/post/5c47f68fa5957e07a40b3110" target="_blank" rel="external">Squoosh.app</a> ，多线程客户端图像压缩；</li>
+<li>图像识别及处理： <a href="https://site.lovejade.cn//post/5c47f68fa5957e07a40b3110" target="_blank" rel="external">Squoosh.app</a> ，多线程客户端图像压缩；</li>
 <li>开发人员工具：（编辑器、编译器、调试器……）；</li>
 <li>代替 JavaScript 框架：Yew、Blazor、Tokamak、Prism；</li>
 <li>…….</li>
 </ul>
 <p>更多使用场景可参见： <a href="https://webassembly.org/docs/use-cases/" target="_blank" rel="external">WebAssembly Use Cases</a> ；任何需要大量编码和大量性能调整的事物，都是 WASM 的完美用例。如需使用 WASM 的开源项目列表，您可以访问 <a href="https://madewithwebassembly.com/" target="_blank" rel="external">Made with WebAssembly</a> 这个社区。下面是些声名远扬的项目：</p>
 <ul>
-<li><a href="https://nicelinks.site/post/60631f14bffb5e532f3be248" target="_blank" rel="external">Tensorflow</a> ：是将 AI 和 ML 带给 JS 开发人员的主要库之一；在它 <a href="https://yashints.dev/blog/2019/12/17/tfjs-wasm" target="_blank" rel="external">添加了 wasm 后端支持后</a> ，与普通 JS 版本相比，模型的性能平均提高了 10 倍。</li>
-<li><a href="https://nicelinks.site/post/60f8020181b2dc066ea4bd73" target="_blank" rel="external">Unity</a> ：作为主要的游戏开发引擎之一，它能够将您的项目导出为与 Web 兼容。从 2018 年开始，这个过程是通过 <a href="https://blogs.unity3d.com/2018/08/15/webassembly-is-here/" target="_blank" rel="external">编译成 WebAssembly</a> 来完成的。这是正确使用 WASM 的强大功能的完美示例。</li>
+<li><a href="https://site.lovejade.cn//post/60631f14bffb5e532f3be248" target="_blank" rel="external">Tensorflow</a> ：是将 AI 和 ML 带给 JS 开发人员的主要库之一；在它 <a href="https://yashints.dev/blog/2019/12/17/tfjs-wasm" target="_blank" rel="external">添加了 wasm 后端支持后</a> ，与普通 JS 版本相比，模型的性能平均提高了 10 倍。</li>
+<li><a href="https://site.lovejade.cn//post/60f8020181b2dc066ea4bd73" target="_blank" rel="external">Unity</a> ：作为主要的游戏开发引擎之一，它能够将您的项目导出为与 Web 兼容。从 2018 年开始，这个过程是通过 <a href="https://blogs.unity3d.com/2018/08/15/webassembly-is-here/" target="_blank" rel="external">编译成 WebAssembly</a> 来完成的。这是正确使用 WASM 的强大功能的完美示例。</li>
 <li><a href="https://earth.google.com/" target="_blank" rel="external">Google Earth</a> ：该产品已经存在超过 15 年，曾经是一个桌面应用程序。 现在感谢 WASM，他们通过将旧代码编译为 WASM 将其 移植到网络中（就像 Autodesk 为其 CAD 应用程序所做的一样）。</li>
 <li><a href="https://github.com/yewstack/yew" target="_blank" rel="external">Yew</a> ：有没有想过将 Rust 用于您的网络应用程序？现在你可以了，感谢 Yew 和 Web Assembly 给我们带来的力量。你不仅可以将 Rust 用于你的 UI，而且这个框架还提供了一个多线程环境来工作。Github 拥有 26kb Star（备注：目前还不是 1.0。准备好因破坏 API 更改而进行重大重构）。</li>
 <li><a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" target="_blank" rel="external">Blazor</a> ：构建美观的 Web 应用，使用 .NET 和 C# 的强大功能构建全栈 Web 应用程序，而无需编写一行 JavaScript。生态可参见 <a href="https://github.com/AdrienTorris/awesome-blazor" target="_blank" rel="external">awesome-blazor</a> 。</li>
@@ -246,11 +246,11 @@
 <li>编写 Rust 应用，然后将 WebAssembly 作为它的输出；</li>
 <li>使用 <a href="https://www.assemblyscript.org/" target="_blank" rel="external">AssemblyScript</a> ，它是一门类似 TypeScript 的语言，能够编译成 WebAssembly 二进制；</li>
 </ul>
-<p>对于 Web 开发者来说，可是使用类 <a href="https://nicelinks.site/post/6278fdeaac00ce3f9b11a8ef" target="_blank" rel="external">TypeScript</a> 的形式来尝试 WebAssembly 的编写，而不需要学习 C 或 <a href="https://nicelinks.site/post/5c16083e819ae45de1453caa" target="_blank" rel="external">Rust</a> 的细节，那么 AssemblyScript 或将会是最好的选择。AssemblyScript 将 TypeScript 的变体编译为 WebAssembly，使得 Web 开发者可以使用 TypeScript 兼容的工具链，例如 <a href="https://nicelinks.site/post/5c16083e819ae45de1453caa" target="_blank" rel="external">Prettier</a> 、VSCode Intellisense，你可以查看 <a href="https://www.assemblyscript.org/" target="_blank" rel="external">AssemblyScript 文档</a> 来了解如何使用。</p>
-<p>补充说明，如今已有大量的工具库被编译为 WebAssembly，并做了封装；譬如 <a href="https://www.npmjs.com/package/@silvia-odwyer/photon" target="_blank" rel="external">Photon</a> （一个高性能的 Rust 图像处理库，它编译为 WebAssembly，允许在本地和 Web 上进行安全、快速的图像处理），其使用方式与其他 npm 包没有区别；在基于 <a href="https://nicelinks.site/post/5b1a221c0526c920d6dfaada" target="_blank" rel="external">Vue3</a> 开发的作品： <a href="https://share.lovejade.cn/" target="_blank" rel="external">玉桃文飨轩</a> 中就有使用，如您感兴趣，可移步源码实现： <a href="https://github.com/nicejade/markdown2png/blob/master/src/components/PreviewDialog.vue#L118" target="_blank" rel="external">markdown2png</a> 。</p>
+<p>对于 Web 开发者来说，可是使用类 <a href="https://site.lovejade.cn//post/6278fdeaac00ce3f9b11a8ef" target="_blank" rel="external">TypeScript</a> 的形式来尝试 WebAssembly 的编写，而不需要学习 C 或 <a href="https://site.lovejade.cn//post/5c16083e819ae45de1453caa" target="_blank" rel="external">Rust</a> 的细节，那么 AssemblyScript 或将会是最好的选择。AssemblyScript 将 TypeScript 的变体编译为 WebAssembly，使得 Web 开发者可以使用 TypeScript 兼容的工具链，例如 <a href="https://site.lovejade.cn//post/5c16083e819ae45de1453caa" target="_blank" rel="external">Prettier</a> 、VSCode Intellisense，你可以查看 <a href="https://www.assemblyscript.org/" target="_blank" rel="external">AssemblyScript 文档</a> 来了解如何使用。</p>
+<p>补充说明，如今已有大量的工具库被编译为 WebAssembly，并做了封装；譬如 <a href="https://www.npmjs.com/package/@silvia-odwyer/photon" target="_blank" rel="external">Photon</a> （一个高性能的 Rust 图像处理库，它编译为 WebAssembly，允许在本地和 Web 上进行安全、快速的图像处理），其使用方式与其他 npm 包没有区别；在基于 <a href="https://site.lovejade.cn//post/5b1a221c0526c920d6dfaada" target="_blank" rel="external">Vue3</a> 开发的作品： <a href="https://share.lovejade.cn/" target="_blank" rel="external">玉桃文飨轩</a> 中就有使用，如您感兴趣，可移步源码实现： <a href="https://github.com/nicejade/markdown2png/blob/master/src/components/PreviewDialog.vue#L118" target="_blank" rel="external">markdown2png</a> 。</p>
 <h2 id="参考资料及资源网站"><a href="#参考资料及资源网站" class="headerlink" title="参考资料及资源网站"></a>参考资料及资源网站</h2><h3 id="资源网站"><a href="#资源网站" class="headerlink" title="资源网站"></a>资源网站</h3><ul>
 <li><a href="https://webassembly.org/" target="_blank" rel="external">WebAssembly 官网网站</a> ；</li>
-<li><a href="https://wapm.io/" target="_blank" rel="external">WebAssembly Package Manager</a> ：WebAssembly 包管理器。类似于 <a href="https://nicelinks.site/post/6216392f2d17f22050cf1a2b" target="_blank" rel="external">npm</a> 之于 Node.js。</li>
+<li><a href="https://wapm.io/" target="_blank" rel="external">WebAssembly Package Manager</a> ：WebAssembly 包管理器。类似于 <a href="https://site.lovejade.cn//post/6216392f2d17f22050cf1a2b" target="_blank" rel="external">npm</a> 之于 Node.js。</li>
 <li><a href="https://github.com/bytecodealliance/wasmtime" target="_blank" rel="external">bytecodealliance/wasmtime</a> ：A fast and secure runtime for WebAssembly；</li>
 <li><a href="https://github.com/emscripten-core/emsdk" target="_blank" rel="external">emscripten-core/emsdk</a> ：Emscripten 工具链作为独立的 Emscripten SDK 分发。</li>
 <li><a href="https://github.com/WebAssembly" target="_blank" rel="external">WebAssembly Org - GitHub</a> ：Development of WebAssembly and associated infrastructure；</li>
@@ -683,6 +683,12 @@
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
     <ul>
+        
+          <li>
+            
+            	<a href="https://site.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
         
           <li>
             

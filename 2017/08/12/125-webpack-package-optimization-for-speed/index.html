@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://image.lovejade.cn/webpack.png">
 <meta property="og:image" content="https://image.lovejade.cn/happypack-principle.png">
 <meta property="og:image" content="https://image.lovejade.cn/webpack-happypack.png">
-<meta property="og:updated_time" content="2024-11-19T16:30:25.258Z">
+<meta property="og:updated_time" content="2024-11-19T16:40:08.646Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Webpack 打包优化之速度篇">
 <meta name="twitter:description" content="Webpack 打包优化，运用科学方法，不断探索、改进、更新，尽可能改善打包性能，加快打包速度，优化开发体验，减少构建实践，提升产品质量。">
@@ -132,7 +132,7 @@
 		<p>在前文 <a href="https://jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/" target="_blank" rel="external">Webpack 打包优化之体积篇</a>中，对如何减小 <code>Webpack</code> 打包体积，做了些探讨；当然，那些法子对于打包速度的提升，也是大有裨益。然而，打包速度之于<strong>开发体验</strong>和<strong>及时构建</strong>，相当重要；所以有必要对其做更为深入的研究，以便完善工作流，这就是本文存在的缘由。</p>
 <a id="more"></a>
 <blockquote>
-<p><strong><span style="color: #d71345">『有则推荐』</span></strong>: 自 2017 年初，就有开始利用闲余时光，打磨个人最新作品——<a href="https://nicelinks.site/?from=jeffjade.com" target="_blank" rel="external"><strong>「倾城之链」</strong></a> ，有意将其打造成优良开放型平台，旨在云集全球优秀网站，让您更为便捷地探索互联网中那更广阔的世界；在这里，您可以轻松<strong>发现</strong>、<strong>学习</strong>、<strong>分享</strong>更多<code>有用</code>或<code>有趣</code>的事物。目前仍在不断迭代、优化中，如果您对此感兴趣，不妨先尝试一下： <a href="https://nicelinks.site/?from=jeffjade.com" target="_blank" rel="external">「倾城之链」</a>；亦十分欢迎提出您宝贵意见或建议（亦可通过微信扫，描如下小程序码进行体验）。 (Upade@2020-05-01 于深圳.南山)。</p>
+<p><strong><span style="color: #d71345">『有则推荐』</span></strong>: 自 2017 年初，就有开始利用闲余时光，打磨个人最新作品——<a href="https://site.lovejade.cn/?from=jeffjade.com" target="_blank" rel="external"><strong>「倾城之链」</strong></a> ，有意将其打造成优良开放型平台，旨在云集全球优秀网站，让您更为便捷地探索互联网中那更广阔的世界；在这里，您可以轻松<strong>发现</strong>、<strong>学习</strong>、<strong>分享</strong>更多<code>有用</code>或<code>有趣</code>的事物。目前仍在不断迭代、优化中，如果您对此感兴趣，不妨先尝试一下： <a href="https://site.lovejade.cn/?from=jeffjade.com" target="_blank" rel="external">「倾城之链」</a>；亦十分欢迎提出您宝贵意见或建议（亦可通过微信扫，描如下小程序码进行体验）。 (Upade@2020-05-01 于深圳.南山)。</p>
 </blockquote>
 <p><img src="https://image.lovejade.cn/nicelinks-miniprogram-code.jpeg?imageView2/1/w/300/h/300/interlace/1/ignore-error/1" style="min-width: 300px" alt="小程序码 - 倾城之链"></p>
 <p><img src="https://image.lovejade.cn/webpack.png" alt="Webpack Package optimization"></p>
@@ -575,6 +575,12 @@
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
     <ul>
+        
+          <li>
+            
+            	<a href="https://site.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
         
           <li>
             

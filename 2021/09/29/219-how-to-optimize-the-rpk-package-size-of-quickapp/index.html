@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://statres.quickapp.cn/quickapp/show/img/210914/v5.0_1.png">
 <meta property="og:image" content="https://statres.quickapp.cn/quickapp/show/img/210914/v5.0_2.png">
 <meta property="og:image" content="https://statres.quickapp.cn/quickapp/show/img/210914/v5.0_3.png">
-<meta property="og:updated_time" content="2021-09-29T13:46:38.997Z">
+<meta property="og:updated_time" content="2024-11-19T16:48:03.760Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何优化「快应用」rpk 包体积？">
 <meta name="twitter:description" content="快应用，相当于是手机厂商联合出品的小程序。如果您看过快应用系列文章，想必对如何高效开发快应用、如何利用快应用赚取税后收入等，有了大致了解。因为快应用也是即点即用（大致经历：下载 rpk，解压、校验签名、启动等步骤），更小提及的 rpk 包，有助于快应用秒开率的提升，对于所获取的体验和利润，也有更好的转化。故而，今在此与朋友们，就「如何优化「快应用」rpk 包体积」，做下探讨。">
@@ -129,12 +129,12 @@
 </header>
 	<div class="article-content">
 		
-		<p><a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>，相当于是手机厂商联合出品的<strong>小程序</strong>。如果您看过<a href="https://forum.lovejade.cn/t/quickapp" target="_blank" rel="external">快应用系列文章</a>，想必对如何高效开发快应用、如何利用快应用赚取税后收入等，有了大致了解。因为<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>也是<strong>即点即用</strong>（大致经历：下载 <code>rpk</code>，解压、校验签名、启动等步骤），更小提及的 <code>rpk</code> 包，有助于<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>秒开率的提升，对于所获取的体验和利润，也有更好的转化。故而，今在此与朋友们，就「<strong>如何优化「快应用」rpk 包体积</strong>」，做下探讨。</p>
+		<p><a href="https://site.lovejade.cn//post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>，相当于是手机厂商联合出品的<strong>小程序</strong>。如果您看过<a href="https://forum.lovejade.cn/t/quickapp" target="_blank" rel="external">快应用系列文章</a>，想必对如何高效开发快应用、如何利用快应用赚取税后收入等，有了大致了解。因为<a href="https://site.lovejade.cn//post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>也是<strong>即点即用</strong>（大致经历：下载 <code>rpk</code>，解压、校验签名、启动等步骤），更小提及的 <code>rpk</code> 包，有助于<a href="https://site.lovejade.cn//post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>秒开率的提升，对于所获取的体验和利润，也有更好的转化。故而，今在此与朋友们，就「<strong>如何优化「快应用」rpk 包体积</strong>」，做下探讨。</p>
 <a id="more"></a>
 <p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/quickapp-hero.jpeg" alt="如何优化「快应用」rpk 包体积？"></p>
 <h2 id="减小-rpk-体积的价值"><a href="#减小-rpk-体积的价值" class="headerlink" title="减小 rpk 体积的价值"></a>减小 rpk 体积的价值</h2><p>快应用引擎，早在 2019 年 2 月 <a href="https://doc.quickapp.cn/changelog/1040.html" target="_blank" rel="external">1040</a> 版本，就新增了「支持 RPK 分包加载」的功能；在那之前，还上线了一个功能 ── 支持 rpk 流式下载，即无须等 rpk 文件完全下载完成，在 app.js 下载成功后，就能开始执行（rpk 下载耗时埋点也就此终止）。这就是说，rpk 整体增加或减小 100KB，对 rpk 的下载，没有绝对相关性；但对后续执行速度，却是有一定影响。从大盘数据看（2021 年 8 月），创建应用时间（执行 app.js ），平均在 166ms，而 app.js 尺寸小于 100kb 的应用，其执行耗时远小于平均值；但 rpk 尺寸大于 200kb 的应用，其执行耗时则高于平均值（200ms+）。由此，也能得出一个结论：<strong>优化 rpk 体积（尤其是 <code>app.js</code> 及各页面所构建的 js 资源），有助于提升快应用执行速度</strong>。</p>
 <h2 id="RPK-体积优化建议"><a href="#RPK-体积优化建议" class="headerlink" title="RPK 体积优化建议"></a>RPK 体积优化建议</h2><h3 id="资源-CDN-化"><a href="#资源-CDN-化" class="headerlink" title="资源 CDN 化"></a>资源 CDN 化</h3><p>您知道，无论是开发 Web 应用、小程序还是原生应用，用到图片、图标、字体，甚至是视频等资源，是必不可少的。但这些资源，除了 Logo 图标外，其他的资源，最好可以放在云端，通过 CDN 加速，在应用上，既可以快速得到加载和适用、也能方便随时修改，还能极大促进 <code>rpk</code> 体积得到优化。</p>
-<h3 id="JavaScript-独立打包"><a href="#JavaScript-独立打包" class="headerlink" title="JavaScript 独立打包"></a>JavaScript 独立打包</h3><p>在<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>中，当不同页面同时引入同一 JavaScript 资源时，默认情况下编译工具会将该 JS 资源代码打包至该页面文件中。由于打包后相关页面文件都包含了重复的 JS 代码，会造成最终打包生成的 rpk 包体积较大。</p>
+<h3 id="JavaScript-独立打包"><a href="#JavaScript-独立打包" class="headerlink" title="JavaScript 独立打包"></a>JavaScript 独立打包</h3><p>在<a href="https://site.lovejade.cn//post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>中，当不同页面同时引入同一 JavaScript 资源时，默认情况下编译工具会将该 JS 资源代码打包至该页面文件中。由于打包后相关页面文件都包含了重复的 JS 代码，会造成最终打包生成的 rpk 包体积较大。</p>
 <p>快应用平台自 <code>1080</code> 版本起支持将 JS 资源独立打包。当 app.ux 或页面文件两次或以上引用到同一 JS 资源时，会将该 JavaScript 资源抽取到独立的文件中，使得相关文件共用同一份 JS 代码，可有效减少整个 rpk 包体积。</p>
 <h4 id="抽取对象"><a href="#抽取对象" class="headerlink" title="抽取对象"></a>抽取对象</h4><p>所有被引用两次或以上的 JS 资源均会被抽取至独立文件中，包括：</p>
 <ul>
@@ -146,7 +146,7 @@
 <h4 id="IDE-配置"><a href="#IDE-配置" class="headerlink" title="IDE 配置"></a>IDE 配置</h4><p>在项目根目录新建配置文件<code>quickapp.config.js</code>，并配置 <code>cli</code> 属性，如下示例：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// quickapp.config.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">cli</span>: &#123;</div><div class="line">    <span class="comment">// 请注意，这里的 SMART，须要是大写；</span></div><div class="line">    splitChunksMode: <span class="string">'SMART'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如果您习惯基于<strong>命令行</strong>构建，只需在 <code>hap build</code> 命令后，接入 <code>--split-chunks-mode=smart</code> 参数即可。</p>
-<h3 id="常用方法抽离"><a href="#常用方法抽离" class="headerlink" title="常用方法抽离"></a>常用方法抽离</h3><p>先前，在<a href="https://quickapp.lovejade.cn/how-to-elegantly-handle-quickapp-request/" target="_blank" rel="external">如何优雅处理「快应用」数据请求</a>及<a href="https://quickapp.lovejade.cn/how-to-use-the-quickapp-api-gracefully/" target="_blank" rel="external">如何优雅使用「快应用」API</a>等文章中，就有提及，无论是编写 Web 应用、小程序、快应用，都可以尝试将常用的方法抽离（<code>help/utils.js</code>），在入口（快应用中是 <code>app.ux</code>）统一挂载到全局，从而方便在各页面、组件中使用，无需额外 <code>import</code> 操作，提升编码效率。在<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发中，IDE 默认并未采取独立打包模式，因此基于这种方式，则可以避免这类封装的方法，在各面被重复构建（只会被构建于 <code>app.js</code> 文件中）。</p>
+<h3 id="常用方法抽离"><a href="#常用方法抽离" class="headerlink" title="常用方法抽离"></a>常用方法抽离</h3><p>先前，在<a href="https://quickapp.lovejade.cn/how-to-elegantly-handle-quickapp-request/" target="_blank" rel="external">如何优雅处理「快应用」数据请求</a>及<a href="https://quickapp.lovejade.cn/how-to-use-the-quickapp-api-gracefully/" target="_blank" rel="external">如何优雅使用「快应用」API</a>等文章中，就有提及，无论是编写 Web 应用、小程序、快应用，都可以尝试将常用的方法抽离（<code>help/utils.js</code>），在入口（快应用中是 <code>app.ux</code>）统一挂载到全局，从而方便在各页面、组件中使用，无需额外 <code>import</code> 操作，提升编码效率。在<a href="https://site.lovejade.cn//post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>开发中，IDE 默认并未采取独立打包模式，因此基于这种方式，则可以避免这类封装的方法，在各面被重复构建（只会被构建于 <code>app.js</code> 文件中）。</p>
 <p>当然，如果您抽离了大量公共方法，统一在 <code>app.ux</code>，或可能造成 <code>app.js</code> 体积增大，导致影响应用首屏执行时机和速度。除了开启 <strong>JavaScript 独立打包</strong>外， 另一种可取方案，是将这个方案，与 <code>1080</code> 提出的<strong>动态导入</strong>相结合。</p>
 <h3 id="动态导入-1080"><a href="#动态导入-1080" class="headerlink" title="动态导入 1080+"></a>动态导入 <code>1080+</code></h3><p>基于 JS 独立打包，开发者可使用 <code>import()</code> <strong>动态导入</strong>的能力，详见<a href="https://doc.quickapp.cn/" target="_blank" rel="external">快应用文档</a><strong>动态导入</strong>部分。</p>
 <h4 id="抽取对象-1"><a href="#抽取对象-1" class="headerlink" title="抽取对象"></a>抽取对象</h4><p>所有被动态导入的 JS 资源，均会被抽取至独立文件中。</p>
@@ -159,7 +159,7 @@
 <h4 id="IDE-配置-1"><a href="#IDE-配置-1" class="headerlink" title="IDE 配置"></a>IDE 配置</h4><p>在项目根目录新建配置文件<code>quickapp.config.js</code>，并配置 <code>cli</code> 属性，如下示例：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// quickapp.config.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">cli</span>: &#123;</div><div class="line">    <span class="comment">// 请注意，这里的 SMART，须要是大写；</span></div><div class="line">    splitChunksMode: <span class="string">'SMART'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如果您习惯基于<strong>命令行</strong>构建，只需在 <code>hap build</code> 命令后，接入 <code>--split-chunks-mode=smart</code> 参数即可。</p>
-<h3 id="基于分包加载"><a href="#基于分包加载" class="headerlink" title="基于分包加载"></a>基于分包加载</h3><p>当快应用体积较大时，可以使用<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>的分包加载功能。简单来说，就是<strong>将项目中的所有页面及资源，通过配置规则划分到多个单独的分包文件中，运行时单独下载，加快页面渲染</strong>。</p>
+<h3 id="基于分包加载"><a href="#基于分包加载" class="headerlink" title="基于分包加载"></a>基于分包加载</h3><p>当快应用体积较大时，可以使用<a href="https://site.lovejade.cn//post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>的分包加载功能。简单来说，就是<strong>将项目中的所有页面及资源，通过配置规则划分到多个单独的分包文件中，运行时单独下载，加快页面渲染</strong>。</p>
 <p>分包加载的能力，首先依赖于编译时工具，根据开发者在 manifest.json 中配置的 <code>subpackages</code> 规则，将项目打包成多个分包。</p>
 <p>这些分包包含一个基础包和若干个分包，基础包内容包含一些公共的资源、页面等内容，而分包内容则是根据开发者的配置资源目录进行划分。其次运行时，快应用将优先加载基础包和页面所在分包，其余分包会自动在后台进行预加载。</p>
 <p>目前快应用分包大小有以下限制：</p>
@@ -169,7 +169,7 @@
 </ul>
 <p>分包加载，虽然不能减小 rpk 整体体积，但可以减小 rpk 首次下载时的体积，从而加快下载，促进页面渲染。是轻应用界常见的优化方案（小程序、快应用，都支持这种方案）。<a href="https://doc.quickapp.cn/framework/subpackage.html" target="_blank" rel="external">分包加载文档</a>已经写的比较详细，在此就不做过多赘述。</p>
 <hr>
-<p>除此上述提到的方法，还有蛮多其他技巧。您知道，快应用构建工具，其核心也是基于 Webpack（<code>5.24.0</code>），因而适用 Webpack  的优化方法，其中大部分，对于<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>同样起作用，如以下这些建议：</p>
+<p>除此上述提到的方法，还有蛮多其他技巧。您知道，快应用构建工具，其核心也是基于 Webpack（<code>5.24.0</code>），因而适用 Webpack  的优化方法，其中大部分，对于<a href="https://site.lovejade.cn//post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>同样起作用，如以下这些建议：</p>
 <ul>
 <li>确定引入第三方库的必要性，如十分必要，采取<strong>模块化引入</strong>（按需）方式；</li>
 <li><strong>尽可能引入更合适的包</strong>，如需要一个格式化时间工具，<a href="https://github.com/xx45/dayjs" target="_blank" rel="external">DAY.JS</a> 要比 <a href="https://github.com/moment/moment" target="_blank" rel="external">momentjs</a> 更划算；</li>
@@ -177,7 +177,7 @@
 <li>通过 <a href="https://github.com/FullHuman/purgecss/tree/main/packages/purgecss-webpack-plugin" target="_blank" rel="external">purgecss-webpack-plugin</a>  插件，移除没有使用到的 CSS；</li>
 <li>…..</li>
 </ul>
-<h2 id="快应用包依赖分析工具"><a href="#快应用包依赖分析工具" class="headerlink" title="快应用包依赖分析工具"></a>快应用包依赖分析工具</h2><p>欲要优化构建后包体积，需对构建后的产物进行分析，定位出造成体积大的原因，才能彻底解决诉求。在快应用中，也可以运用 <a href="https://www.npmjs.com/package/webpack-bundle-analyzer" target="_blank" rel="external">webpack-bundle-analyzer</a> 插件（支持将内容束展示为方便交互的直观树状图，让开发者了解所构建包中真正引入的内容；从而发现它大体有哪些模块组成，找到不合时宜的存在，然后优化它）。<a href="https://www.npmjs.com/package/webpack-bundle-analyzer" target="_blank" rel="external">webpack-bundle-analyzer</a> 虽然内容丰富，展示也很直观，但针对<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a> rpk 包的分析，也存在很大局限性；因此快应用 IDE 研发团队，有推出「<code>代码静态依赖分析</code>插件（<code>hap-bundle-analyzer</code>）」，旨在方便开发者查看代码文件构成和依赖关系，以优化代码包大小和内容（优化资源尺寸、剔除重复构建等。</p>
+<h2 id="快应用包依赖分析工具"><a href="#快应用包依赖分析工具" class="headerlink" title="快应用包依赖分析工具"></a>快应用包依赖分析工具</h2><p>欲要优化构建后包体积，需对构建后的产物进行分析，定位出造成体积大的原因，才能彻底解决诉求。在快应用中，也可以运用 <a href="https://www.npmjs.com/package/webpack-bundle-analyzer" target="_blank" rel="external">webpack-bundle-analyzer</a> 插件（支持将内容束展示为方便交互的直观树状图，让开发者了解所构建包中真正引入的内容；从而发现它大体有哪些模块组成，找到不合时宜的存在，然后优化它）。<a href="https://www.npmjs.com/package/webpack-bundle-analyzer" target="_blank" rel="external">webpack-bundle-analyzer</a> 虽然内容丰富，展示也很直观，但针对<a href="https://site.lovejade.cn//post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a> rpk 包的分析，也存在很大局限性；因此快应用 IDE 研发团队，有推出「<code>代码静态依赖分析</code>插件（<code>hap-bundle-analyzer</code>）」，旨在方便开发者查看代码文件构成和依赖关系，以优化代码包大小和内容（优化资源尺寸、剔除重复构建等。</p>
 <p>快应用 IDE 提供<strong>代码静态依赖分析插件</strong>，旨在方便开发者查看代码文件构成和依赖关系，以优化代码包大小和内容（优化资源尺寸、剔除重复构建等，具体操作可参见文章 ── <a href="https://forum.lovejade.cn/d/83-rpk" target="_blank" rel="external">如何优化「快应用」rpk 包体积？</a>），从而促进应用程序运行更迅速。</p>
 <p><strong>注意：</strong> 需要先安装插件 <code>hap-bundle-analyzer</code>，请在插件市场安装。</p>
 <p>安装完成之后，可通过侧边栏「<strong>快捷入口</strong>」「<strong>依赖分析</strong>」或者 <code>ctrl + shift + p</code> 输入 <code>quickapp analyzer</code> 使用该功能。</p>
@@ -604,6 +604,12 @@
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
     <ul>
+        
+          <li>
+            
+            	<a href="https://site.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
         
           <li>
             

@@ -28,27 +28,6 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/categories/Movie/</loc>
-        <lastmod>2024-11-19T16:30:41.880Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/</loc>
-        <lastmod>2024-11-19T16:31:50.266Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/categories/Share/</loc>
-        <lastmod>2024-11-19T16:33:24.501Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.jeffjade.com/categories/Health/</loc>
         <lastmod>2024-11-19T16:33:28.587Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -56,36 +35,57 @@
     </url>
 
     <url>
-        <loc>https://www.jeffjade.com/categories/Toss/</loc>
-        <lastmod>2024-11-19T16:33:30.660Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/categories/Front-End/</loc>
-        <lastmod>2024-11-19T16:33:45.391Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jeffjade.com/categories/Thought/</loc>
-        <lastmod>2024-11-19T16:33:51.001Z</lastmod>
+        <loc>https://www.jeffjade.com/categories/Share/</loc>
+        <lastmod>2024-11-19T16:48:03.944Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.jeffjade.com/categories/Program/</loc>
-        <lastmod>2024-11-19T16:33:51.985Z</lastmod>
+        <lastmod>2024-11-19T16:48:03.944Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/categories/%E5%BF%AB%E5%BA%94%E7%94%A8/</loc>
+        <lastmod>2024-11-19T16:48:04.210Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/categories/Toss/</loc>
+        <lastmod>2024-11-19T16:53:01.579Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/categories/Front-End/</loc>
+        <lastmod>2024-11-19T16:53:01.580Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/categories/Movie/</loc>
+        <lastmod>2024-11-19T16:53:01.581Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.jeffjade.com/categories/Thought/</loc>
+        <lastmod>2024-11-19T16:53:01.582Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.jeffjade.com/categories/%E5%80%BE%E5%9F%8E%E4%B9%8B%E9%93%BE/</loc>
-        <lastmod>2024-11-19T16:33:53.273Z</lastmod>
+        <lastmod>2024-11-19T16:53:01.837Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="快应用是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的快应用联盟联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。快应用具备传统 APP 完整的应用体验，无需安装、即点即用；覆盖 10 亿设备，与操作系统深度集成，探索新型应用场景。">
 <meta property="og:image" content="https://image.lovejade.cn/quickapp.png">
-<meta property="og:updated_time" content="2024-11-19T16:31:20.397Z">
+<meta property="og:updated_time" content="2024-11-19T16:40:26.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快应用之开发体验纪要">
 <meta name="twitter:description" content="快应用是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的快应用联盟联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。快应用具备传统 APP 完整的应用体验，无需安装、即点即用；覆盖 10 亿设备，与操作系统深度集成，探索新型应用场景。">
@@ -126,7 +126,7 @@
 </header>
 	<div class="article-content">
 		
-		<p>何谓<a href="https://www.quickapp.cn/" target="_blank" rel="external">「快应用」</a>呢？它是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的<code>快应用联盟</code>联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。<a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>具备传统 APP 完整的应用体验，<strong>无需安装、即点即用</strong>； <strong>覆盖 10 亿设备</strong>，<strong>与操作系统深度集成，探索新型应用场景</strong>。快应用 ──<code>复杂生活的简单答案，让生活更顺畅</code> ── 来自 <a href="https://nicelinks.site/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用官方网站 | 倾城之链</a>。</p>
+		<p>何谓<a href="https://www.quickapp.cn/" target="_blank" rel="external">「快应用」</a>呢？它是基于手机硬件平台的新型应用形态，标准是由主流手机厂商组成的<code>快应用联盟</code>联合制定。其标准的诞生将在研发接口、能力接入、开发者服务等层面建设标准平台，以平台化的生态模式对个人开发者和企业开发者全品类开放。<a href="https://site.lovejade.cn/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用</a>具备传统 APP 完整的应用体验，<strong>无需安装、即点即用</strong>； <strong>覆盖 10 亿设备</strong>，<strong>与操作系统深度集成，探索新型应用场景</strong>。快应用 ──<code>复杂生活的简单答案，让生活更顺畅</code> ── 来自 <a href="https://site.lovejade.cn/post/5b5fb5bc615bf842b609105f" target="_blank" rel="external">快应用官方网站 | 倾城之链</a>。</p>
 <a id="more"></a>
 <p><img src="https://image.lovejade.cn/quickapp.png" alt="快应用开发体验纪要"></p>
 <blockquote>
@@ -209,7 +209,7 @@
 <li>✔️ <strong>简化开始开发流程</strong>； 注入 <a href="https://github.com/kimmobrunfeldt/concurrently" target="_blank" rel="external">Concurrently</a> 插件，使可以运行 <code>yarn start</code> 即可开始开发，而无需更多命令，从而简洁开发流程；</li>
 <li>✔️ <strong>优化本地开发端口设定</strong>；「快应用」默认端口为 <code>12306</code>，虽说可自定义端口，但使用体验却不够友好；此处参考 <code>creat-react-app</code> 设定，对本地开发地址端口使用进行优化：如果 🈯️ 定端口(默认: <code>8080</code>)被占用，则向上递增寻找新的可用端口(如：8081 / 8082 / … )；</li>
 <li>✔️ <strong>浏览器打开调试主页二维码</strong>；运行 <code>yarn start</code>，会启动 HTTP 调试服务器，并将该地址在<strong>命令行终端</strong>显示，手机端用快应用调试器扫码，即可下载并运行 rpk 包；当终端积累的信息流多了，就造成扫码不便；故增设在浏览器打开调试主页二维码；如想不使用此功能，在 <em>command/server.js</em> 文件中，将 <strong>autoOpenBrowser</strong> 设置为 <code>false</code> 即可；</li>
-<li>✔️ <strong>集成轻粒子统计分析</strong>； <a href="https://nicelinks.site/post/5bdfa8ba9fa22b1b40974f63" target="_blank" rel="external">轻粒子</a>作为官方推荐统计方案，此脚手架已做接入；使用时只需修改 <a href="https://github.com/nicejade/quickapp-boilerplate-template/blob/master/src/assets/js/statistics.config.js" target="_blank" rel="external">statistics.config.js</a> 中的 <code>app_key</code>，为在<a href="http://www.qinglizi.cn/" target="_blank" rel="external">轻粒子</a>所申请的快应用 KEY 即可；</li>
+<li>✔️ <strong>集成轻粒子统计分析</strong>； <a href="https://site.lovejade.cn/post/5bdfa8ba9fa22b1b40974f63" target="_blank" rel="external">轻粒子</a>作为官方推荐统计方案，此脚手架已做接入；使用时只需修改 <a href="https://github.com/nicejade/quickapp-boilerplate-template/blob/master/src/assets/js/statistics.config.js" target="_blank" rel="external">statistics.config.js</a> 中的 <code>app_key</code>，为在<a href="http://www.qinglizi.cn/" target="_blank" rel="external">轻粒子</a>所申请的快应用 KEY 即可；</li>
 <li>✔️ <strong>新增快捷命令脚本</strong>；使得可以一键生成新页面，只需运行：<code>yarn gen YourPageName</code> （命名推荐统一为大驼峰，将会在 <code>pages</code> 路径下新建该页面文件夹）命令即可，当然，也可以根据需要，自行定定制模板：<em>/command/gen/template.ux</em>；</li>
 <li>✔️ <strong>集成 <a href="https://prettier.io/" target="_blank" rel="external">Prettier</a> &amp; <a href="https://eslint.org/" target="_blank" rel="external">Eslint</a></strong>；在检测代码中潜在问题的同时，统一团队代码规范、风格（<code>js</code>，<code>less</code>，<code>scss</code>等），从而促使写出高质量代码，以提升工作效率(尤其针对团队开发)。</li>
 <li>✔️ <strong>编写 <a href="https://github.com/nicejade/prettier-plugin-quickapp" target="_blank" rel="external">prettier-plugin-quickapp</a> 插件</strong>；为快应用编写 <code>prettier</code> 插件，使其可以针对 <code>.ux</code>/<code>.mix</code> 文件也能很好地工作，从而进一步完善代码风格及规范。</li>
@@ -649,6 +649,12 @@
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
     <ul>
+        
+          <li>
+            
+            	<a href="https://site.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
         
           <li>
             

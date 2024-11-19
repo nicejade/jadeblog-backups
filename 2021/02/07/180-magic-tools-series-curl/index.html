@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="晚晴幽草轩">
 <meta property="og:description" content="curl 非常有用的命令行工具库，用于通过 URL 传输数据。它的名字就是客户端（client）的 URL 工具的意思（command line tool and library for transferring data with URLs）。它的功能非常强大，命令行参数多达几十种。如能熟练使用，可以在很多应用场景下，发挥巨大的价值。本篇文章，就跟大家一起探讨下 curl 以及关于它的那些妙用。">
 <meta property="og:image" content="https://image.lovejade.cn/curl-wttr-in.png">
-<meta property="og:updated_time" content="2024-11-19T16:33:51.985Z">
+<meta property="og:updated_time" content="2024-11-19T16:42:18.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="堪称神器的命令行工具系列之 curl">
 <meta name="twitter:description" content="curl 非常有用的命令行工具库，用于通过 URL 传输数据。它的名字就是客户端（client）的 URL 工具的意思（command line tool and library for transferring data with URLs）。它的功能非常强大，命令行参数多达几十种。如能熟练使用，可以在很多应用场景下，发挥巨大的价值。本篇文章，就跟大家一起探讨下 curl 以及关于它的那些妙用。">
@@ -129,13 +129,13 @@
 		<p><a href="https://curl.se/" target="_blank" rel="external">curl</a> 非常有用的命令行工具库，用于通过 URL 传输数据。它的名字就是客户端（client）的 URL 工具的意思（<strong>command line tool and library</strong> for transferring data with URLs）。它的功能非常强大，命令行参数多达几十种。如能熟练使用，可以在很多应用场景下，发挥巨大的价值。本篇文章，就跟大家一起探讨下 curl 以及关于它的那些妙用。</p>
 <a id="more"></a>
 <h2 id="关于-curl"><a href="#关于-curl" class="headerlink" title="关于 curl"></a>关于 curl</h2><p>curl 是免费的开源软件，截止 2021 年 2 月，最近稳定版本是  <strong>7.75.0</strong>；它支持包括 FTP、HTTP、HTTPS、FTP、SCP，SFTP 数十种协议；curl 在命令行或脚本中用于传输数据。另外，它还用于汽车，电视机，路由器，打印机，音频设备，移动电话，平板电脑，机顶盒，媒体播放器中，并且是数千种每天影响<em>数十亿人口的</em>软件应用程序的互联网传输基础。如果您想了解更多关于 curl，可参见 <a href="https://curl.se/" target="_blank" rel="external">curl.se</a> 或 <a href="https://github.com/curl/curl" target="_blank" rel="external">github.com/curl/curl</a>。</p>
-<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://nicelinks.site/</div></pre></td></tr></table></figure>
-<p>如上命令，不带有任何参数时，curl 就是发出 GET 请求（向 <a href="https://nicelinks.site/" target="_blank" rel="external">nicelinks.site</a>，服务器返回的内容会在命令行输出。当然，你还可以为其添加各种<strong>参数</strong>（如 <code>-A</code>、<code>-b</code>、<code>-c</code>、<code>-d</code>、<code>-e</code>、<code>-F</code>、<code>-H</code>等等），使得可以完成更多复杂任务；</p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://site.lovejade.cn/</div></pre></td></tr></table></figure>
+<p>如上命令，不带有任何参数时，curl 就是发出 GET 请求（向 <a href="https://site.lovejade.cn/" target="_blank" rel="external">nicelinks.site</a>，服务器返回的内容会在命令行输出。当然，你还可以为其添加各种<strong>参数</strong>（如 <code>-A</code>、<code>-b</code>、<code>-c</code>、<code>-d</code>、<code>-e</code>、<code>-F</code>、<code>-H</code>等等），使得可以完成更多复杂任务；</p>
 <h3 id="e"><a href="#e" class="headerlink" title="-e"></a><strong>-e</strong></h3><p><code>-e</code>参数用来设置 HTTP 的标头<code>Referer</code>，表示请求的来源。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl <span class="_">-e</span> <span class="string">'https://nicelinks.site?q=quickapp'</span> https://quickapp.lovejade.cn/</div></pre></td></tr></table></figure>
-<p>上面命令将<code>Referer</code>标头设为<code>https://nicelinks.site?q=quickapp</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl <span class="_">-e</span> <span class="string">'https://site.lovejade.cn?q=quickapp'</span> https://quickapp.lovejade.cn/</div></pre></td></tr></table></figure>
+<p>上面命令将<code>Referer</code>标头设为<code>https://site.lovejade.cn?q=quickapp</code>。</p>
 <h3 id="–limit-rate"><a href="#–limit-rate" class="headerlink" title="–limit-rate"></a><strong>–limit-rate</strong></h3><p><code>--limit-rate</code>用来限制 HTTP 请求和回应的带宽，模拟慢网速的环境。下面命令将带宽限制在每秒 200K 字节。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl --limit-rate 200k https://nicelinks.site</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl --limit-rate 200k https://site.lovejade.cn</div></pre></td></tr></table></figure>
 <h3 id="F"><a href="#F" class="headerlink" title="-F"></a><strong>-F</strong></h3><p><code>-F</code> 参数用来向服务器上传二进制文件。如下命令会给 HTTP 请求加上标头<code>Content-Type: multipart/form-data</code>，然后将文件<code>example.png</code>作为<code>file</code>字段上传。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -F <span class="string">'file=@example.png'</span> https://example.com/files</div></pre></td></tr></table></figure>
 <p><code>-F</code>参数可以指定 MIME 类型。如下命令指定 MIME 类型为<code>image/png</code>，否则 curl 会把 MIME 类型设为<code>application/octet-stream</code>。</p>
@@ -143,14 +143,14 @@
 <p><code>-F</code> 参数也可以指定文件名。在下面的命令中，原始文件名为 <code>example.png</code>，但是服务器接收到的文件名为<code>profile.png</code>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -F <span class="string">'file=@example.png;filename=me.png'</span> https://example.com/files</div></pre></td></tr></table></figure>
 <p>上面，简单列举了些参数，以及具体作用；如果您想了解更多，可以参见：<a href="https://catonmat.net/cookbooks/curl" target="_blank" rel="external">《cookbooks/curl》</a> 或其中文翻译版文章 <a href="https://www.ruanyifeng.com/blog/2019/09/curl-reference.html" target="_blank" rel="external">curl 的用法指南</a>；对于 curl 参数及功能说明，可参见 <a href="https://curl.se/docs/manpage.html" target="_blank" rel="external">curl - How To Use</a>。</p>
-<h2 id="curl-妙用"><a href="#curl-妙用" class="headerlink" title="curl 妙用"></a>curl 妙用</h2><h3 id="查看网页源码"><a href="#查看网页源码" class="headerlink" title="查看网页源码"></a><strong>查看网页源码</strong></h3><p>直接在 curl 命令后加上网址，就可以看到网页源码。以及个人所维护的<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>来举例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://nicelinks.site/</div></pre></td></tr></table></figure>
-<p>这里需要说明下的是，<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>前端基于 Vue 框架所构建的单页应用（SPA）；且未采取 <code>SSR</code> 方式来解决 SEO 及首页渲染；因此您使用如上命令来请求，无论是针对哪些页面，得到的都是一段项目首页 html。为优化在非谷歌引擎 SEO 问题，基于 <a href="https://github.com/prerender/prerender" target="_blank" rel="external">prerender</a>，根据请求 url 是否携带<code>_escaped_fragment_</code> 参数，走预渲染路线服务；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://nicelinks.site/\?_escaped_fragment_</div></pre></td></tr></table></figure>
+<h2 id="curl-妙用"><a href="#curl-妙用" class="headerlink" title="curl 妙用"></a>curl 妙用</h2><h3 id="查看网页源码"><a href="#查看网页源码" class="headerlink" title="查看网页源码"></a><strong>查看网页源码</strong></h3><p>直接在 curl 命令后加上网址，就可以看到网页源码。以及个人所维护的<a href="https://site.lovejade.cn/" target="_blank" rel="external">倾城之链</a>来举例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://site.lovejade.cn/</div></pre></td></tr></table></figure>
+<p>这里需要说明下的是，<a href="https://site.lovejade.cn/" target="_blank" rel="external">倾城之链</a>前端基于 Vue 框架所构建的单页应用（SPA）；且未采取 <code>SSR</code> 方式来解决 SEO 及首页渲染；因此您使用如上命令来请求，无论是针对哪些页面，得到的都是一段项目首页 html。为优化在非谷歌引擎 SEO 问题，基于 <a href="https://github.com/prerender/prerender" target="_blank" rel="external">prerender</a>，根据请求 url 是否携带<code>_escaped_fragment_</code> 参数，走预渲染路线服务；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://site.lovejade.cn/\?_escaped_fragment_</div></pre></td></tr></table></figure>
 <p>基于如上命令，所获得的内容，才是真正渲染后的网页源代码；关于在 Nginx 的配置，清参见如下代码（3000 端口，为 prerender 服务）；</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">if ($http_user_agent ~* "baiduspider|twitterbot|facebookexternalhit|rogerbot|embedly|quora link preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator") &#123;</div><div class="line">    set $prerender 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">if ($args ~ "_escaped_fragment_") &#123;</div><div class="line">    set $prerender 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">if ($prerender = 1) &#123;</div><div class="line">    set $prerender "127.0.0.1:3000";</div><div class="line"></div><div class="line">    rewrite .* /$scheme://$host$request_uri? break;</div><div class="line">    proxy_pass http://$prerender;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如果您想保存文件到本地，只需添加 <code>-o</code> 参数即可，如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -o your-file-name.html https://nicelinks.site/\?_escaped_fragment_</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -o your-file-name.html https://site.lovejade.cn/\?_escaped_fragment_</div></pre></td></tr></table></figure>
 <h3 id="自动跳转"><a href="#自动跳转" class="headerlink" title="自动跳转"></a><strong>自动跳转</strong></h3><p>很多网址是自动跳转（或重定向）。使用<code>-L</code>参数，curl 就会跳转到新的网址。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -L https://hacpai.com/</div></pre></td></tr></table></figure>
 <p>如上命令，就会跳转到 <a href="https://ld246.com" target="_blank" rel="external">ld246.com</a> 新地址。需要补充说明的是，如果页面在前端，通过修改 <code>location.href</code> 来跳转，<code>curl -L</code> 这种方式，是无法“跟着“自动跳转的。</p>
@@ -166,9 +166,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -X POST --data <span class="string">"file=xyz"</span>  example.com/api/v1/upload</div></pre></td></tr></table></figure>
 <p>如果你的数据没有经过表单编码，还可以让 curl 为你编码，参数是<code>--data-urlencode</code>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -X POST--data-urlencode <span class="string">"date=April 2"</span> example.com/api/v1/timedate</div></pre></td></tr></table></figure>
-<h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a><strong>文件上传</strong></h3><p>在<a href="https://nicelinks.site/" target="_blank" rel="external">倾城之链</a>，先前收录了一个短链接文 + 件托管服务：<a href="https://nicelinks.site/redirect?url=https://0x0.st/" target="_blank" rel="external">THE NULL POINTER</a>，其使用示例如下（当然，上传文件，在某些场景下，也可以 <code>--form</code> 来完成）：</p>
+<h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a><strong>文件上传</strong></h3><p>在<a href="https://site.lovejade.cn/" target="_blank" rel="external">倾城之链</a>，先前收录了一个短链接文 + 件托管服务：<a href="https://site.lovejade.cn/redirect?url=https://0x0.st/" target="_blank" rel="external">THE NULL POINTER</a>，其使用示例如下（当然，上传文件，在某些场景下，也可以 <code>--form</code> 来完成）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 托管本地文件</span></div><div class="line">curl -F<span class="string">'file=@yourfile.png'</span> https://0x0.st</div><div class="line"></div><div class="line"><span class="comment"># 托管线上文件</span></div><div class="line">curl -F<span class="string">'url=http://example.cn/img.jpg'</span> https://0x0.st</div></pre></td></tr></table></figure>
-<h3 id="调用服务"><a href="#调用服务" class="headerlink" title="调用服务"></a><strong>调用服务</strong></h3><h4 id="缩短您指定的-url"><a href="#缩短您指定的-url" class="headerlink" title="缩短您指定的 url"></a>缩短您指定的 url</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -F<span class="string">'shorten=https://nicelinks.site'</span> https://0x0.st</div></pre></td></tr></table></figure>
+<h3 id="调用服务"><a href="#调用服务" class="headerlink" title="调用服务"></a><strong>调用服务</strong></h3><h4 id="缩短您指定的-url"><a href="#缩短您指定的-url" class="headerlink" title="缩短您指定的 url"></a>缩短您指定的 url</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -F<span class="string">'shorten=https://site.lovejade.cn'</span> https://0x0.st</div></pre></td></tr></table></figure>
 <h4 id="获取所在地-ip"><a href="#获取所在地-ip" class="headerlink" title="获取所在地 ip"></a>获取所在地 ip</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">curl -L tool.lu/ip</div><div class="line"><span class="comment"># or</span></div><div class="line">curl -L ip.tool.lu</div></pre></td></tr></table></figure>
 <blockquote>
 <p>当前IP: 119.120.121.122<br>归属地: 中国 xx省 oo市</p>
@@ -595,6 +595,12 @@
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
     <ul>
+        
+          <li>
+            
+            	<a href="https://site.lovejade.cn/?utm_source=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
         
           <li>
             
