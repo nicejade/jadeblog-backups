@@ -1,0 +1,1 @@
+var app=app||{};!function(){"use strict";var t=Backbone.Router.extend({routes:{"*filter":"setFilter"},setFilter:function(t){app.TodoFilter=t||"",app.Todos.trigger("filter")}});app.TodoRouter=new t,Backbone.history.start()}();

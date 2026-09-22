@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="author" content="jeffjade">
+<meta name="description" content="Personal introduction">
+<title>琼璞过往</title>
+
+<style>
+body{margin:0;padding:0;background:#111111;font-size:12px;overflow:auto;}
+#main-div{width:100%;height:100%;text-align: center;}
+#content{display: inline-block;text-align: left;min-width: 50%;max-width: 90%;width: 500px;margin: 20px 0;line-height: 1.5;height: 100%;}
+#code{height:100%;color:#fff;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:16px;display:none;overflow-y: auto;}
+#code .string{color:#2a36ff;}
+#code .keyword{color:#ce4902;font-weight:bold;}
+#code .placeholder{margin-left:15px}#code .space{margin-left:7px;}
+#code .comments{color:#1bd4d0;}
+.link{color:#fff;}
+</style>
+
+<script>window.jQuery || document.write('<script src="https://cdn.jsdelivr.net/npm/jquery@2.2.2/dist/jquery.min.js"><\/script>')
+</script>
+
+</head><body>
+<div id="main-div">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br>
+			<span class="space"><span class="comments">*Desc: Personal introduction</span><br>
+			<span class="space"><span class="comments">*Create: 2016—07-09,</span><br>
+			<span class="space"><span class="comments">*Modify: 2016-07-10.</span><br>
+			<span class="space"><span class="comments">**/</span><br><br>
+			<span class="comments">// Personal Information: </span><br>
+			姓<span class="keyword"> 杨 </span>字：琼璞，号：晚晴幽草轩轩主<br>
+			生于<span class="keyword"> 1991-02-12 </span>(嗯，这是公历，阴历:1990-12-28)<br>
+			籍贯<span class="keyword"> 商洛.商南 </span>(据记载祖籍乃：山西.洪桐县)<br>
+			毕业于<span class="keyword"> 延安大学 </span>(专业：计算机科学与技术)<br>
+			现居<span class="keyword"> 深圳.南山 </span>(想必这也是以后些许年内之所在)<br><br>
+			<span class="comments">// Personal Interests:</span><br>
+			<span class="keyword"> 影视: </span>武侠 科幻 悬疑 烧脑 历史 娱乐 ......<br>
+			<span class="keyword"> 读书: </span>喜欢有意思有价值的，其实没读几本,😳<br>
+			<span class="keyword"> 旅行: </span>心驰名山.大川.草原，也向往古镇.水乡.田园<br>
+			<span class="keyword"> 编程: </span>Coding Changes the World，Just Do It.<br>
+			<span class="keyword"> ***: </span>是不是总有些爱好，不方便说呢？譬如：武术？<br>
+			<br><br>
+			<span class="comments">欢迎来访</span><span class="keyword">晚晴幽草轩：</span>
+			<a class="link" href="https://www.jeffjade.com">www.jeffjade.com</a>
+		</span></span></span></span></div>
+	</div>
+</div>
+
+<script>
+(function($) {
+	$.fn.typewriter = function() {
+		this.each(function() {
+			var $ele = $(this), str = $ele.html(), progress = 0;
+			$ele.html('');
+			var timer = setInterval(function() {
+				var current = str.substr(progress, 1);
+				if (current == '<') {
+					progress = str.indexOf('>', progress) + 1;
+				} else {
+					progress++;
+				}
+				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
+				if (progress >= str.length) {
+					clearInterval(timer);
+					clearInterval(timerScrollId);
+				}
+			}, 75);
+
+			var timerScrollId = setInterval(function(){
+				var screenHeight = window.screen.height;
+				if($ele.height() - screenHeight > 0){
+					$("body").animate({"scrollTop":$ele.height()}, 50);
+				}
+			}, 600);
+		});
+		return this;
+	};
+})(jQuery);
+</script>
+
+<script type="text/javascript">
+	$("#code").css({"display":"block"}).typewriter();
+</script>
+</body>

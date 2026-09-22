@@ -1,0 +1,1088 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+
+    <title>如何基于 Prerender 为 SPA 做 SEO 优化 | 晚晴幽草轩</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="晚晴幽草轩轩主">
+    
+    <meta name="theme-color" content="#fffffb">
+    <meta name="baidu-site-verification" content="PKEtLPjO56">
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net/">
+
+    <meta name="keywords" content="倾城之链, 运营, 似水流年, 前端开发">
+    <meta name="description" content="倾城之链是基于 Vue2 所构建的单页面应用（SPA），这很不利于 SEO，尤其是之于国内搜索引擎。早在项目之初，采取 SSR 方案对代码侵入性高，也不大方便以 SSG 方案处理；于是乎，便在服务端针对搜索引擎爬虫返回预渲染结果，从而做 SEO 优化；本文就此方案做简单分享。">
+<meta name="keywords" content="倾城之链, 运营, 似水流年, 前端开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何基于 Prerender 为 SPA 做 SEO 优化">
+<meta property="og:url" content="https://www.jeffjade.com/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/index.html">
+<meta property="og:site_name" content="晚晴幽草轩">
+<meta property="og:description" content="倾城之链是基于 Vue2 所构建的单页面应用（SPA），这很不利于 SEO，尤其是之于国内搜索引擎。早在项目之初，采取 SSR 方案对代码侵入性高，也不大方便以 SSG 方案处理；于是乎，便在服务端针对搜索引擎爬虫返回预渲染结果，从而做 SEO 优化；本文就此方案做简单分享。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2026-09-22T14:07:03.587Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何基于 Prerender 为 SPA 做 SEO 优化">
+<meta name="twitter:description" content="倾城之链是基于 Vue2 所构建的单页面应用（SPA），这很不利于 SEO，尤其是之于国内搜索引擎。早在项目之初，采取 SSR 方案对代码侵入性高，也不大方便以 SSG 方案处理；于是乎，便在服务端针对搜索引擎爬虫返回预渲染结果，从而做 SEO 优化；本文就此方案做简单分享。">
+<meta name="twitter:creator" content="@MarshalXuan">
+
+    
+    <link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/favicons/favicon.ico">
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6">
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+
+    <link href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css">
+    <link rel="stylesheet" href="/css/style.css?0831">
+
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script">
+
+    <link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script">
+    <script src="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "publisher": {
+              "@type": "Organization",
+              "name": "晚晴幽草轩",
+              "url": "https://www.jeffjade.com/",
+              "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.jeffjade.com/favicon.png"
+              }
+          },
+          "url": "https://www.jeffjade.com/",
+          "image": {
+              "@type": "ImageObject",
+              "url": "https://www.thebettersites.com/images/HorizontalScroll/jeffjade.png",
+              "width": 1664,
+              "height": 936
+          },
+          "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.jeffjade.com/"
+          },
+          "description": "晚晴幽草轩；名字取自：“天意怜幽草，人间重晚晴”。专注互联网开发（Web 大前端、快应用、小程序），以及分享优质网站、AI 应用、效率工具、心得感悟等内容。"
+      }
+    </script>
+    <script data-ad-client="ca-pub-8586652723015758" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8586652723015758",
+        enable_page_level_ads: true
+      });
+    </script>
+    <script async src="https://fundingchoicesmessages.google.com/i/pub-8586652723015758?ers=1" nonce="aGbKV4c6yTWqLTY3cuk_Vg"></script><script nonce="aGbKV4c6yTWqLTY3cuk_Vg">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+    <script src="https://fastly.jsdelivr.net/npm/reward-service@1.1.1/dist/reward-service-min.js"></script>
+</head></html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1>
+				<h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/" class="">Home</a></li>
+					
+						<li><a href="/nicelinks" class="">Links</a></li>
+					
+						<li><a href="https://niceshare.site/?ref=jeffjade.com" class="">Homepage</a></li>
+					
+						<li><a href="/archives" class="">Archives</a></li>
+					
+						<li><a href="/about-me" class="">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search">
+						<input type="hidden" name="q" value="site:www.jeffjade.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/" class="title=&quot;如何基于" prerender spa seo itemprop="url">如何基于 Prerender 为 SPA 做 SEO 优化</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2022-11-15T13:21:00.000Z" itemprop="datePublished"> 发表于 2022-11-15</time>
+
+  </p>
+</header>
+	<div class="article-content">
+		
+		<p><a href="https://site.lovejade.cn/" target="_blank" rel="noopener">倾城之链</a> 是基于 Vue2 所构建的单页面应用（SPA），这很不利于 SEO，尤其是之于国内搜索引擎。早在项目之初，采取 SSR 方案对代码侵入性高，也不大方便以 SSG 方案处理；于是乎，便在服务端针对搜索引擎爬虫返回预渲染结果，从而做 SEO 优化；本文就此方案做简单分享。</p>
+<a id="more"></a>
+<h2 id="Prerender-预渲染原理"><a href="#Prerender-预渲染原理" class="headerlink" title="Prerender 预渲染原理"></a>Prerender 预渲染原理</h2><p><code>prerender</code> 项目由 <a href="https://site.lovejade.cn//post/62e60030bd6b821eb12244e2" target="_blank" rel="noopener">Prerender.io</a> 出品（其内部基于 Headless Chrome，与 <a href="https://site.lovejade.cn//post/625c3735ac29ce06470af877" target="_blank" rel="noopener">Google Puppeteer</a> 类似），也可以使用 <a href="https://site.lovejade.cn//redirect?url=https://prerender.io/" target="_blank" rel="noopener">Prerender.io</a> 提供的服务；它旨在加快向搜索爬虫提供内容的速度，从而提高您的 SEO 分数。只需注册、登录、按照说明进行 Nginx 配置即可；相比自己部署的 <code>prerender</code> 服务，有更快的速度、更多可选项设置、强大的仪表盘、缓存管理器以及其他缓存相关活动操作。</p>
+<p> <a href="https://github.com/prerender/prerender" target="_blank" rel="noopener">prerender</a> 的原理是，配置 nginx，判断出是爬虫来访时，先将请求页面地址发送给 prerender 服务，由 prerender 服务渲染出页面内容，再将页面内容返回给爬虫。</p>
+<blockquote>
+<p>Prerender is a node server that uses Headless Chrome to render HTML, screenshots, PDFs, and HAR files out of any web page. The Prerender server listens for an http request, takes the URL and loads it in Headless Chrome, waits for the page to finish loading by waiting for the network to be idle, and then returns your content.</p>
+</blockquote>
+<h2 id="架设自己的-prerender-服务"><a href="#架设自己的-prerender-服务" class="headerlink" title="架设自己的 prerender 服务"></a>架设自己的 prerender 服务</h2><p>虽然说 <a href="https://site.lovejade.cn//post/62e60030bd6b821eb12244e2" target="_blank" rel="noopener">Prerender.io</a> 提供了抓取及缓存服务，但当内容超过 1000 条就要收费，对于中小项目，或许得不偿失；当然，完全可以架设自己的 prerender 服务，只要拥有可控制的服务器即可「操作非常简单」。Github <a href="https://github.com/prerender/prerender" target="_blank" rel="noopener">prerender</a> 项目中对于如何使用，已经做了详细说明。为使得内容可以快速给到搜索爬虫，最好可以对内容做缓存（基于 <a href="https://site.lovejade.cn//post/603e39560c8e4b046a182003" target="_blank" rel="noopener">Redis</a> 或 memory-cache 都可以）。有在 Github 开源项目： <a href="https://github.com/nicejade/prerender-spa-server" target="_blank" rel="noopener">prerender-spa-server</a> ，如果您有类似需求，克隆之，基于 <a href="https://site.lovejade.cn//post/62bc60e90c61c703d7747590" target="_blank" rel="noopener">pm2</a> 做下持久化部署即可。</p>
+<p>Prerender 是使用 Headless Chrome 来呈现 HTML 的节点服务器，即在你的服务器，要安装 <code>google chrome</code>，否则该服务无法正常工作。</p>
+<h2 id="修改-nginx-配置文件"><a href="#修改-nginx-配置文件" class="headerlink" title="修改 nginx 配置文件"></a>修改 nginx 配置文件</h2><p>搭建 prerender 服务之外，还是要针对项目搜索爬虫，做下额外处理，使之取到<strong>预渲染</strong>结果。如今，多半 Web 应用都采用 nginx 来配置； <a href="https://site.lovejade.cn/" target="_blank" rel="noopener">倾城之链</a> 亦是如此；只需在原有配置文件加些判断即可，示例代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    set $prerender 0;</span><br><span class="line">    if ($http_user_agent ~* &quot;Googlebot|googlebot|bingbot|baiduspider|twitterbot|facebookexternalhit|rogerbot|embedly|quora link preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator&quot;) &#123;</span><br><span class="line">        set $prerender 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if ($args ~ &quot;_escaped_fragment_&quot;) &#123;</span><br><span class="line">        set $prerender 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if ($prerender = 1) &#123;</span><br><span class="line">        set $prerender &quot;127.0.0.1:3000&quot;;</span><br><span class="line">        proxy_pass http://$prerender;</span><br><span class="line">        rewrite .* /$scheme://$host$request_uri? break;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    proxy_set_header    Host             $host;</span><br><span class="line">    proxy_set_header    X-Real-IP        $remote_addr;</span><br><span class="line">    proxy_set_header    X-Forwarded-For  $proxy_add_x_forwarded_for;</span><br><span class="line">    proxy_set_header    X-Client-Verify  SUCCESS;</span><br><span class="line">    proxy_set_header    X-Client-DN      $ssl_client_s_dn;</span><br><span class="line">    proxy_set_header    X-SSL-Subject    $ssl_client_s_dn;</span><br><span class="line">    proxy_set_header    X-SSL-Issuer     $ssl_client_i_dn;</span><br><span class="line">    proxy_read_timeout 1800;</span><br><span class="line">    proxy_connect_timeout 1800;</span><br><span class="line">    if ($prerender = 0) &#123;</span><br><span class="line">        proxy_pass          http://localhost:8668;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改完配置文件后，记得要使用命令 <code>nginx -s reload</code> 重新加载。一切配置妥当，即可发起测试，以验证结果是否符合预期；在终端使用 <a href="https://site.lovejade.cn//post/62556c92f3a35106466b76fe" target="_blank" rel="noopener">curl</a> 工具，对目标网址发起访问即可；需要说明的是，网址后面需要添加 <code>?_escaped_fragment_</code> 标记，主动触发 prerender 渲染服务，以模拟搜索爬虫来源。示例如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://your-website-url/?_escaped_fragment_</span><br></pre></td></tr></table></figure>
+<h2 id="可能存在的问题"><a href="#可能存在的问题" class="headerlink" title="可能存在的问题"></a>可能存在的问题</h2><h3 id="Google-Chrome-版本过低"><a href="#Google-Chrome-版本过低" class="headerlink" title="Google Chrome 版本过低"></a>Google Chrome 版本过低</h3><p>前文提及需要安装 <code>google chrome</code>，对于它的版本，截止 2022 年 11 月，已经升级至 <code>107.*</code>；您的项目中，对于它的版本，应该尽可能的高些（如果在 70 以下，很有可能出现问题，渲染出的 html 跟实际不相符，莫问吾如何知道💧）。关于在 linux 环境，如何安装新版本的 <code>google chrome</code>，可参见文章： <a href="https://www.wikihow.com/Install-Google-Chrome-Using-Terminal-on-Linux" target="_blank" rel="noopener">How to Install Google Chrome Using Terminal on Linux</a> 。主要步骤如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Update the package index</span></span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># Use wget to download the Chrome package</span></span><br><span class="line">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install the downloaded Chrome package.</span></span><br><span class="line">sudo dpkg -i google-chrome-stable_current_amd64.deb</span><br></pre></td></tr></table></figure>
+<p>以上，即是「如何 Prerender 为 SPA 做 SEO 优化」的主要内容；这种方案，对于主代码侵入性小，效果跟 SSR 方案也别无二致。虽然说 Google 能够对 SPA 页面通过 JavaScript 抓取，各种因素，效果肯定不如渲染后 HTML；感兴趣的朋友可以尝试；如有疑问，欢请留言评论。</p>
+<h3 id="其他报错问题"><a href="#其他报错问题" class="headerlink" title="其他报错问题"></a>其他报错问题</h3><p>比如可能在腾讯云服务器报如下错误：</p>
+<blockquote>
+<p>2022-11-12T05:02:49.270Z Starting Prerender<br>2022-11-12T05:02:49.272Z Starting Chrome<br>2022-11-12T05:02:49.279Z Prerender server accepting requests on port 3000<br>2022-11-12T05:02:49.292Z Chrome connection closed… restarting Chrome<br>2022-11-12T05:02:49.293Z Chrome died immediately after restart… stopping Prerender</p>
+</blockquote>
+<p>需要首先检查 Prerender 配置是否正确，配置示例如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> server = prerender(&#123;</span><br><span class="line">    chromeFlags: [</span><br><span class="line">        <span class="string">'--no-sandbox'</span>,</span><br><span class="line">        <span class="string">'--headless'</span>,</span><br><span class="line">        <span class="string">'--disable-gpu'</span>,</span><br><span class="line">        <span class="string">'--remote-debugging-port=9222'</span>,</span><br><span class="line">        <span class="string">'--hide-scrollbars'</span>,</span><br><span class="line">    ],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>假如确定配置的话，尝试使用 <code>sudo</code> 权限再次运行，重新修改 <code>chromeLocation</code> 路径（在腾讯云上遇到过此问题，用此办法得以解决）代码示例如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> server = prerender(&#123;</span><br><span class="line">        chromeLocation: <span class="string">'/usr/bin/google-chrome-stable'</span>,</span><br><span class="line">        chromeFlags: [</span><br><span class="line">                <span class="string">'--no-sandbox'</span>,</span><br><span class="line">                <span class="string">'--headless'</span>,</span><br><span class="line">                <span class="string">'--disable-gpu'</span>,</span><br><span class="line">                <span class="string">'--remote-debugging-port=9222'</span>,</span><br><span class="line">                <span class="string">'--hide-scrollbars'</span>,</span><br><span class="line">        ],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>需要补充说明的是，基于 Prerender 为 SPA 做 SEO 优化，即需要在服务器端 运行 <code>google chrome</code> ，以获得真实渲染呈现的  HTML；如果将这个 Prerender 服务与其他服务混搭与统一服务器，受抓取频率、服务器配置 等影响，或可能引发 CPU 、内存占用过多问题；如有条件，可分开部署。服务一旦搭建，或可能被别有用心之人利用，需要提前防范；在 <a href="https://github.com/nicejade/prerender-spa-server" target="_blank" rel="noopener">prerender-spa-server</a> 最新代码中，增加了域名白名单限制。 <a href="https://site.lovejade.cn/" target="_blank" rel="noopener">倾城之链</a> 基于这种方案改善 SEO，通过近一个月观测，效果还可以。以上，大致是全部内容；如果您感兴趣，欢请留言评论。</p>
+<p>2022 年 11 月 10 日写于〔深圳福田〕；2022 年 12 月 08 日更新。</p>
+<h2 id="您可能感兴趣的文章"><a href="#您可能感兴趣的文章" class="headerlink" title="您可能感兴趣的文章"></a>您可能感兴趣的文章</h2><ul>
+<li><a href="https://forum.lovejade.cn/d/237-deno" target="_blank" rel="noopener">如何基于 Deno 做持久化定时任务？</a></li>
+<li><a href="https://forum.lovejade.cn/d/226-npm-scope" target="_blank" rel="noopener">NPM 如何发布和使用带范围（scope）的包？</a></li>
+<li><a href="https://forum.lovejade.cn/d/225-espanso" target="_blank" rel="noopener">如何基于 Espanso 提高打字效率，提升幸福感？</a></li>
+<li><a href="https://forum.lovejade.cn/d/158-pc" target="_blank" rel="noopener">如何更提升各类网站 PC 端访问体验？</a></li>
+<li><a href="https://www.jeffjade.com/2017/01/23/118-chrome_awesome_plug-in/">Awesome Chrome 插件集锦</a></li>
+<li><a href="https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/">Vimium 让您的 Chrome 起飞</a></li>
+<li><a href="https://www.jeffjade.com/2016/03/17/2016-03-17-jade-tools/">那些所倚靠的利器记载</a></li>
+<li><a href="https://www.jeffjade.com/2016/03/11/2016-03-11-autohotkey/#">Win 下最爱效率神器: AutoHotKey</a></li>
+<li><a href="https://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/">Win 下必备神器之 Cmder</a></li>
+<li><a href="https://www.jeffjade.com/2016/03/03/2016-03-02-how-to-use-atom/">新编码神器 Atom 使用纪要</a></li>
+<li><a href="http://www.cnblogs.com/jadeboy/p/4165449.html" target="_blank" rel="noopener">sublime text 下的 Markdown 写作</a></li>
+<li><a href="https://www.jeffjade.com/2015/08/28/2015-08-28-Write-Morkdown/">SublimeText 下写作利器之 MarkdownEditing</a></li>
+<li><a href="https://www.jeffjade.com/2015/07/29/2015-07-29-mac-musthave-software/">Mac 必备软件渐集之 ZSH－终极 Shell</a></li>
+</ul>
+	</div>
+		<reward-service></reward-service>
+    <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
+  <hr>
+  <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 2rem">
+    <img style="width: 256px;min-width: 200px !important" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wechat-article-qrcode.jpg" alt="静晴轩 ~ 晚晴幽草轩">
+    <div style="padding: 0  1rem 1.5rem 1rem;text-align: center;line-height: 1.5rem"><strong>个人微信公众号</strong>：<a href="https://www.jeffjade.com/?utm_source=jeffjade.com">晚晴幽草轩</a>；名字取自：“天意怜幽草，人间重晚晴”。<br>专注互联网开发（Web 大前端、快应用、小程序），以及分享优质网站、AI 应用、效率工具、心得感悟等内容。
+    </div>
+  </div>
+<div></div></div>
+    <div id="cc-copyright" class="cc-content">
+    <h3>文档信息</h3>
+    <ul>
+      <li>版权声明：知识共享署名-非商业性使用-禁止演绎<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">（创意共享3.0许可证）</a></li>
+      <li>文章出处：<a href="http://www.jeffjade.com" title="晚晴幽草轩">晚晴幽草轩</a></li>
+      <li>发表日期：<time datetime="2022-11-15T13:21:00.000Z" itemprop="datePublished">2022-11-15</time></li>
+      <li>社交媒体：
+        <a href="http://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+        <a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+        <a href="https://twitter.com/MarshalXuan" target="_blank" class="icon-twitter" title="twitter"></a>
+        <a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+      </li>
+    </ul>
+</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/倾城之链/">倾城之链</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Vue/">Vue</a><a href="/tags/Share/">Share</a><a href="/tags/倾城之链/">倾城之链</a><a href="/tags/Front-End/">Front-End</a>
+  </div>
+
+</div>
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://www.jeffjade.com/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/" data-title="如何基于 Prerender 为 SPA 做 SEO 优化 | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+	</article>
+	<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2022/12/12/249-emerging-technologies-in-the-past-decade/" title="近十年新兴行业技术，及简单介绍">
+  <strong>上一篇：</strong><br>
+  <span>
+  近十年新兴行业技术，及简单介绍</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2022/10/31/246-nicelinks-in-2022/" title="2022，「倾城之链」运营第 6 年感记">
+ <strong>下一篇：</strong><br> 
+ <span>2022，「倾城之链」运营第 6 年感记
+</span>
+</a>
+</div>
+
+</nav>
+	<hr>
+<div id="gitalk-container"></div>
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerender-预渲染原理"><span class="toc-number">1.</span> <span class="toc-text">Prerender 预渲染原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#架设自己的-prerender-服务"><span class="toc-number">2.</span> <span class="toc-text">架设自己的 prerender 服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改-nginx-配置文件"><span class="toc-number">3.</span> <span class="toc-text">修改 nginx 配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可能存在的问题"><span class="toc-number">4.</span> <span class="toc-text">可能存在的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-Chrome-版本过低"><span class="toc-number">4.1.</span> <span class="toc-text">Google Chrome 版本过低</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他报错问题"><span class="toc-number">4.2.</span> <span class="toc-text">其他报错问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#您可能感兴趣的文章"><span class="toc-number">5.</span> <span class="toc-text">您可能感兴趣的文章</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="linkslist">
+	<p class="asidetitle">倾情款赠</p>
+	<div style="width:100%"><img style="width:100%" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/reward-code.jpeg" alt="倾情捐赠"></div>
+</div>
+
+  <div class="wbfollow">
+	<p class="asidetitle">微博互粉</p>
+	<span class="sidebar-top-tip">亦可点击 Enter 键隐藏侧边栏</span>
+	<iframe width="100%" height="119" class="share_self" frameborder="0" scrolling="no" src="//widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3235949794&verifier=5c6bff53&colors=f0f0f0,fff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+</div>
+
+  <div class="widget-wrap linkslist">
+    <h3 class="widget-title asidetitle">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/09/22/2015-04-03-thought-poor-son-rich-gril-education/">穷养儿富养女真正的内涵(转)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-04-06-java-thread/">多线程基础之Runnable/Thread与Callable</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-04-08-thought-basying-and-living/">Get Busy Living, Or Get Busy Dying</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-04-01-thought-do/">做，还是不做？做！</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-03-28-thought-weishang/">微商已死(转载)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-03-27-http-https/">Http和Https的区别</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-03-19-android-save-image/">Android保存图片到系统图库</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-03-21-android-adb/">MAC使用adb工具</a>
+          </li>
+        
+          <li>
+            <a href="/2024/08/28/253-wealth-tracker/">生财有迹 | 您专属的资产跟踪与分析工具</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/">如何将 Tailwind CSS 引入快应用开发提升编码效率？</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/01/251-blog-slow-update-instructions/">关于「晚晴幽草轩」博客缓更说明</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/10/249-chatgpt-web-client-free-to-use/">素问智聊斋，非官方 ChatGPT 在线客户端，免费可用</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/30/249-webassembly-for-web/">为什么说 WebAssembly 让 Web 的未来更光明？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/12/249-emerging-technologies-in-the-past-decade/">近十年新兴行业技术，及简单介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/">如何基于 Prerender 为 SPA 做 SEO 优化</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="categorieslist">
+	<p class="asidetitle">云轩分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>60</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Health/" title="Health">Health<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Program/" title="Program">Program<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Read/" title="Read">Read<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Share/" title="Share">Share<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Thought/" title="Thought">Thought<sup>25</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Toss/" title="Toss">Toss<sup>28</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>64</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/快应用/" title="快应用">快应用<sup>10</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">轩站热度</p>
+  <!-- 
+    <font id="run_time_long"></font><br>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span style='color:purple' id="busuanzi_value_site_pv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_site_uv">
+      本站访客人数 <span style='color:purple' id="busuanzi_value_site_uv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量 <span style='color:purple' id="busuanzi_value_page_pv"></span> 次
+    </span>
+   -->
+  <div id="clustrmaps-count"></div>
+  <p style="text-align:center">( Start counting from 07 / 13 / 2017 )</p>
+</div>
+
+  <div class="tagslist">
+	<p class="asidetitle">云轩标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Share/" title="Share">Share<sup>128</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>63</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thought/" title="Thought">Thought<sup>43</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Toss/" title="Toss">Toss<sup>40</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>33</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>30</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>19</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>14</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>13</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Regex/" title="Regex">Regex<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">云轩关注</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://fund.lovejade.cn/?ref=jeffjade.com" target="_blank" title="生财有迹">生财有迹</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://site.lovejade.cn/?ref=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.thebettersites.com/?ref=jeffjade.com" target="_blank" title="清风明月轩">清风明月轩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://share.lovejade.cn/?ref=www.jeffjade.com" target="_blank" title="玉桃文飨轩">玉桃文飨轩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://fine.niceshare.site/?ref=www.jeffjade.com" target="_blank" title="缘知随心庭">缘知随心庭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?ref=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?ref=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://wechat.jeffjade.com/?ref=jeffjade.com" target="_blank" title="公众号 Markdown 排版">公众号 Markdown 排版</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://markdown.lovejade.cn/?ref=jeffjade.com" target="_blank" title="在线 Markdown 编辑器">在线 Markdown 编辑器</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nice.lovejade.cn/?ref=jeffjade.com" target="_blank" title="静晴轩别苑">静晴轩别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.lovejade.cn/?ref=jeffjade.com" target="_blank" title="幽居空谷轩">幽居空谷轩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.lovejade.cn/?ref=jeffjade.com" target="_blank" title="天意人间舫">天意人间舫</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://creatorsdaily.com?ref=jeffjade.com" target="_blank" title="创造者日报">创造者日报</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jeffjade.com/nicelinks/#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">好书推荐</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="浪潮之巅">浪潮之巅</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="平凡的世界">平凡的世界</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A82" target="_blank" title="代码大全2">代码大全2</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 追求卓越，成功就会在不经意间 追上你！ <br>
+			As you think, so shall you become. </p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="https://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://twitter.com/MarshalXuan" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="mailto:yunjeff@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="https://hexo.io/?ref=www.jeffjade.com" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2026
+		
+			<a href="https://www.niceshare.site/?ref=www.jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+		
+		</p>
+</div></footer>
+    <script src="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js"></script>
+
+<script type="text/javascript">
+echo.init({
+  offset: 200,
+  throttle: 250,
+  unload: false,
+  callback: function (element, op) {}
+});
+
+var AdBlockRemind = document.createElement("ad-block-remind");
+document.body.appendChild(AdBlockRemind);
+
+$(document).ready(function(){
+  console.log('Welcome To %c晚晴幽草轩','font-size:2.113em;color: #2edfa3');
+
+  $("body").append('<quickapp-deeplink brand="vivo|Weixin|Mobile|OPPO|huawei" deeplink="https://hapjs.org/app/com.graceful.sentences/browser/pages/detail"></quickapp-deeplink>');
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  var openAside = function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  }
+  var closeAside = function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  }
+  c.click(openAside);
+  o.click(closeAside);
+
+  document.onkeydown = function(e){
+    // 兼容FF和IE和Opera
+    var theEvent = e || window.event;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    var isInputTextarea = document.activeElement.id === 'search' || document.activeElement.nodeName === "TEXTAREA"
+    if (code === 13 && !isInputTextarea) {
+        if( o.css('display') === 'none'){
+          openAside()
+        }else{
+          closeAside()
+        }
+        return false;
+    }
+    return true;
+  }
+
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          // close auto-close sidebar @17-11-07
+          // c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="//s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"><i class="fa fa-weixin"></i></a>',
+  '<a href="//service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});
+</script>
+
+
+
+
+
+<link href="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/css/jquery.fancybox.css" rel="stylesheet">
+<script async src="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/js/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      var srcVal = (this.src.indexOf('blank.gif') < 0) ? this.src : $(this).attr('data-echo')
+      $(this).wrap('<a href="' + srcVal + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+<!-- Analytics Begin -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1W3X5M7863"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-1W3X5M7863');
+</script>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " https://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd0ed9bb72df3b2b32bdd2274981a7d07' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<!-- <script src="/js/totop.js"></script> -->
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+<!-- MathJax End -->
+
+<!-- Move totop.js From totop.ejs To Here@0309 -->
+<script src="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+(function($) {
+  if (!Object.assign) {
+    Object.defineProperty(Object, "assign", {
+      enumerable: false,
+      configurable: true,
+      writable: true,
+      value: function(target, firstSource) {
+        "use strict";
+        if (target === undefined || target === null)
+          throw new TypeError("Cannot convert first argument to object");
+        var to = Object(target);
+        for (var i = 1; i < arguments.length; i++) {
+          var nextSource = arguments[i];
+          if (nextSource === undefined || nextSource === null) continue;
+          var keysArray = Object.keys(Object(nextSource));
+          for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+            var nextKey = keysArray[nextIndex];
+            var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+            if (desc !== undefined && desc.enumerable) to[nextKey] = nextSource[nextKey];
+          }
+        }
+        return to;
+      }
+    });
+  }
+
+  if (document.getElementById('gitalk-container')) {
+    var gitalk = new Gitalk({
+      clientID: '4bc2d1424c7939471ad4',
+      clientSecret: 'b3dc888873f473405f79f7d9394888478ba55ca4',
+      repo: 'jadeblog-backups',
+      owner: 'nicejade',
+      admin: ['nicejade'],
+      id: md5(location.pathname),
+      distractionFreeMode: false
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  var clustrmapsCount = document.getElementById('clustrmaps-count')
+  if (clustrmapsCount) {
+    var clustrmapsScript = document.createElement('script')
+    clustrmapsScript.type = 'text/javascript'
+    clustrmapsScript.id = 'clustrmaps'
+    clustrmapsScript.src = '//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a'
+    clustrmapsCount.appendChild(clustrmapsScript)
+  }
+
+  var wbScript = document.createElement('script')
+  wbScript.type = 'text/javascript'
+  wbScript.async = true
+  wbScript.charset = "utf-8"
+  wbScript.src = "//tjs.sjs.sinajs.cn/open/api/js/wb.js"
+  document.body.appendChild(wbScript)
+
+  // 为 Baidu 设置自动推送@2018-08-08
+  
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.async = true;
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.async = true;
+      bp.src = '//push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  
+
+  // When to show the scroll link
+  // higher number = scroll link appears further down the page
+  var upperLimit = 1000;
+
+  // Our scroll link element
+  var scrollElem = $('#totop');
+
+  // Scroll to top speed
+  var scrollSpeed = 500;
+
+  // Show and hide the scroll to top link based on scroll position
+  scrollElem.hide();
+  $(window).scroll(function () {
+      var scrollTop = $(document).scrollTop();
+      if ( scrollTop > upperLimit ) {
+          $(scrollElem).stop().fadeTo(300, 1); // fade back in
+      }else{
+          $(scrollElem).stop().fadeTo(300, 0); // fade out
+      }
+  });
+
+  // Scroll to top animation on click
+  $(scrollElem).click(function(){
+      $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+  });
+})(jQuery);
+</script>
+
+<!-- Inject service-worker@2018-01-09 -->
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js", {scope: '/'})
+    .then(registration => console.log('SW Registration Success！Scope: ', registration.scope))
+    .catch(err => console.log('SW Registration Failed! Error: ', err));
+}
+</script>
+
+<!-- Inject Anchor.js @2018-01-14 -->
+<script type="text/javascript">
+function async(u, c) {
+  var d = document,
+    t = 'script',
+    o = d.createElement(t),
+    s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+
+async("https://fastly.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js", function(){
+  anchors.options = {
+    visible: 'hover',
+    placement: 'right'
+  }
+  anchors.add('#post h2, #post h3, #post h4');
+  anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+})
+</script>
+  </body>
