@@ -1,0 +1,1118 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+
+    <title>幸存者偏差：为什么你看到的成功，可能只是幸存者？ | 晚晴幽草轩</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="晚晴幽草轩轩主">
+    
+    <meta name="theme-color" content="#fffffb">
+    <meta name="baidu-site-verification" content="PKEtLPjO56">
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net/">
+
+    <meta name="keywords" content="幸存者偏差, 效应">
+    <meta name="description" content="幸存者偏差（Survivorship Bias）是一种认知偏见，人们在关注成功案例的同时忽视了那些不再可见的大量失败案例。统计学家 Abraham Wald 在二战期间首次系统研究这一效应。这种偏见通过只检查一个过程的“幸存者”而忽略那些没有幸存的对象，导致错误的结论。理解幸存者偏差有助于避免从不完整的数据中得出虚假结论，并让你质疑你“没有看到”什么。">
+<meta name="keywords" content="幸存者偏差, 效应">
+<meta property="og:type" content="article">
+<meta property="og:title" content="幸存者偏差：为什么你看到的成功，可能只是幸存者？">
+<meta property="og:url" content="https://www.jeffjade.com/2026/11/09/255-survivorship-bias/index.html">
+<meta property="og:site_name" content="晚晴幽草轩">
+<meta property="og:description" content="幸存者偏差（Survivorship Bias）是一种认知偏见，人们在关注成功案例的同时忽视了那些不再可见的大量失败案例。统计学家 Abraham Wald 在二战期间首次系统研究这一效应。这种偏见通过只检查一个过程的“幸存者”而忽略那些没有幸存的对象，导致错误的结论。理解幸存者偏差有助于避免从不完整的数据中得出虚假结论，并让你质疑你“没有看到”什么。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/幸存者偏差.png">
+<meta property="og:updated_time" content="2026-11-09T07:45:54.556Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="幸存者偏差：为什么你看到的成功，可能只是幸存者？">
+<meta name="twitter:description" content="幸存者偏差（Survivorship Bias）是一种认知偏见，人们在关注成功案例的同时忽视了那些不再可见的大量失败案例。统计学家 Abraham Wald 在二战期间首次系统研究这一效应。这种偏见通过只检查一个过程的“幸存者”而忽略那些没有幸存的对象，导致错误的结论。理解幸存者偏差有助于避免从不完整的数据中得出虚假结论，并让你质疑你“没有看到”什么。">
+<meta name="twitter:image" content="https://lovejade.oss-cn-shenzhen.aliyuncs.com/幸存者偏差.png">
+<meta name="twitter:creator" content="@MarshalXuan">
+
+    
+    <link rel="alternative" href="/atom.xml" title="晚晴幽草轩" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/favicons/favicon.ico">
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#009ad6">
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+
+    <link href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css">
+    <link rel="stylesheet" href="/css/style.css?0831">
+
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" as="script">
+    <link rel="preload" href="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js" as="script">
+
+    <link rel="prefetch" href="//tjs.sjs.sinajs.cn/open/api/js/wb.js" as="script">
+    <script src="https://fastly.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "publisher": {
+              "@type": "Organization",
+              "name": "晚晴幽草轩",
+              "url": "https://www.jeffjade.com/",
+              "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.jeffjade.com/favicon.png"
+              }
+          },
+          "url": "https://www.jeffjade.com/",
+          "image": {
+              "@type": "ImageObject",
+              "url": "https://www.thebettersites.com/images/HorizontalScroll/jeffjade.png",
+              "width": 1664,
+              "height": 936
+          },
+          "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.jeffjade.com/"
+          },
+          "description": "晚晴幽草轩；名字取自：“天意怜幽草，人间重晚晴”。专注互联网开发（Web 大前端、快应用、小程序），以及分享优质网站、AI 应用、效率工具、心得感悟等内容。"
+      }
+    </script>
+    <script data-ad-client="ca-pub-8586652723015758" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8586652723015758",
+        enable_page_level_ads: true
+      });
+    </script>
+    <script async src="https://fundingchoicesmessages.google.com/i/pub-8586652723015758?ers=1" nonce="aGbKV4c6yTWqLTY3cuk_Vg"></script><script nonce="aGbKV4c6yTWqLTY3cuk_Vg">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+    <script src="https://fastly.jsdelivr.net/npm/reward-service@1.1.1/dist/reward-service-min.js"></script>
+</head></html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="晚晴幽草轩"></a></h1>
+				<h2 class="blog-motto">It&#39;s only too late if you decide it is. Get busy living. or get busy dying!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="云轩菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/" class="">Home</a></li>
+					
+						<li><a href="/nicelinks" class="">Links</a></li>
+					
+						<li><a href="https://niceshare.site/?ref=jeffjade.com" class="">Homepage</a></li>
+					
+						<li><a href="/archives" class="">Archives</a></li>
+					
+						<li><a href="/about-me" class="">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search">
+						<input type="hidden" name="q" value="site:www.jeffjade.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2026/11/09/255-survivorship-bias/" class="title=&quot;幸存者偏差：为什么你看到的成功，可能只是幸存者？&quot;" itemprop="url">幸存者偏差：为什么你看到的成功，可能只是幸存者？</a>
+    
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://www.jeffjade.com/about-me" title="晚晴幽草轩轩主" target="_blank" itemprop="author">晚晴幽草轩轩主</a>
+		
+  </p><p class="article-time">
+    <time datetime="2026-11-09T12:20:00.000Z" itemprop="datePublished"> 发表于 2026-11-09</time>
+
+  </p>
+</header>
+	<div class="article-content">
+		
+		<p>幸存者偏差（Survivorship Bias）是一种认知偏见，人们在关注成功案例的同时忽视了那些不再可见的大量失败案例。统计学家 Abraham Wald 在二战期间首次系统研究这一效应。这种偏见通过只检查一个过程的“幸存者”而忽略那些没有幸存的对象，导致错误的结论。理解幸存者偏差有助于避免从不完整的数据中得出虚假结论，并让你质疑你“没有看到”什么。</p>
+<a id="more"></a>
+<p><img src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/幸存者偏差.png" alt="幸存者偏差：为什么你看到的成功，可能只是幸存者？"></p>
+<blockquote>
+<p><strong>类别</strong>：效应<br><strong>类型</strong>：认知偏见<br><strong>来源</strong>：统计学与军事研究，二战时期，Abraham Wald<br><strong>别名</strong>：生存偏差</p>
+</blockquote>
+<blockquote>
+<p><strong>快速回答</strong><br><strong>幸存者偏差</strong>（Survivorship Bias）是一种认知偏见，人们在关注成功案例的同时忽视了那些不再可见的大量失败案例。统计学家 Abraham Wald 在二战期间首次系统研究这一效应。这种偏见通过只检查一个过程的“幸存者”而忽略那些没有幸存的对象，导致错误的结论。理解幸存者偏差有助于避免从不完整的数据中得出虚假结论，并让你质疑你“没有看到”什么。</p>
+</blockquote>
+<h2 id="什么是幸存者偏差？"><a href="#什么是幸存者偏差？" class="headerlink" title="什么是幸存者偏差？"></a>什么是幸存者偏差？</h2><p>幸存者偏差是一种强大的认知偏见，它扭曲了人们如何从案例和数据中学习。当评估一组成功者时，人们自然关注可见的成功，而看不见的失败——占绝大多数的未成功者——未被检查。这导致了关于什么导致成功的系统性扭曲结论。</p>
+<p>关键在于，成功留下了可见的痕迹，但失败往往完全不留下任何痕迹。当只研究成功的企业时，失败的企业是不可见的。当只研究成功的企业家时，失败的企业家已经消失了。当只研究成功的投资时，亏到零的失败投资已经消失。这在我们相信自己能从观察成功中学到什么方面造成了深刻的扭曲。</p>
+<blockquote>
+<p>我们把可见性误认为代表性——假设我们能看到代表所有可能性，而实际上我们只看到了成功的那些。</p>
+</blockquote>
+<p>这种偏见通过几种机制运作。首先，失败的案例实际上更难找到——它们可能已经破产、关闭或以其他方式变得不可见。其次，人们自然被成功故事吸引，使他们更有可能研究和分享成功的例子。第三，即使失败的案例可用，它们获得的关注和分析也比成功的例子少。</p>
+<h3 id="幸存者偏差的三层理解"><a href="#幸存者偏差的三层理解" class="headerlink" title="幸存者偏差的三层理解"></a>幸存者偏差的三层理解</h3><ul>
+<li><strong>入门</strong>：注意商业杂志如何报道成功公司，却很少分析以同样方式失败的数以千计的公司。当你听到某人的成功时，问自己：有多少人尝试了同样的事情却失败了？</li>
+<li><strong>实践</strong>：在分析成功因素时，始终将失败的案例纳入你的分析。积极寻找“失败的实验”和停产的产品，以了解全貌。</li>
+<li><strong>进阶</strong>：应用“逆向思维”——不问是什么让幸存者成功，而是问是什么让未幸存者失败。这揭示了只研究成功时看不到的信息。</li>
+</ul>
+<h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><p><strong>幸存者偏差</strong>最早在<strong>二战期间</strong>由统计学家 <strong>Abraham Wald</strong> 和他的统计研究小组系统地确定。军方带着飞机损伤数据找到 Wald——他们想要加固弹孔最多的部位。Wald 革命性的洞察是建议加固没有弹孔的部位。</p>
+<p>Wald 理解，从任务中返回的飞机在弹孔部位幸存了下来——它们没有受到的击中是致命的，使飞机坠毁。返回的飞机是幸存者；没有返回的飞机被击中现在看起来“没有损伤”的部位而死亡。这一洞察挽救了无数生命，并确立了研究不存在事物的原则。</p>
+<p>这个术语现已扩展到描述商业、投资、医学、历史和许多其他领域的类似现象，在这些领域中，只检查可见的成功会导致系统性错误的结论。</p>
+<h2 id="核心要点"><a href="#核心要点" class="headerlink" title="核心要点"></a>核心要点</h2><ol>
+<li><p><strong>看不见的失败扭曲结论</strong><br>失败的案例实际上往往看不见——它们可能已经停业、被删除或以其他方式变得无法观察。只研究可见的成功会给出系统性扭曲的画面。</p>
+</li>
+<li><p><strong>成功故事更可见和吸引人</strong><br>人类注意力自然倾向于成功故事。媒体、案例研究和商业书籍不成比例地报道成功，使它们在我们所学到的东西中被过度代表。</p>
+</li>
+<li><p><strong>选择偏差放大扭曲</strong><br>某事物成功的事实往往使其更可见和可供研究。这创造了一个反馈循环，我们研究的是成功使其可见的，而不是有助于理解成功的。</p>
+</li>
+<li><p><strong>从成功中得出错误的教训</strong><br>当我们只研究成功的案例时，我们经常得出结论，认为它们的共同特征导致了成功——实际上，这些相同特征可能存在于更多失败的案例中。</p>
+</li>
+</ol>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><h3 id="商业与创业"><a href="#商业与创业" class="headerlink" title="商业与创业"></a>商业与创业</h3><p>商业书籍报道成功公司，但忽略使用类似策略失败的数以千计的公司。只研究赢家会对什么真正导致成功产生虚假的信心。</p>
+<h3 id="投资与金融"><a href="#投资与金融" class="headerlink" title="投资与金融"></a>投资与金融</h3><p>投资者经常研究成功的投资者或公司，而忽视数量更多的失败者。这导致不切实际的期望和糟糕的风险评估。</p>
+<h3 id="职业与成功建议"><a href="#职业与成功建议" class="headerlink" title="职业与成功建议"></a>职业与成功建议</h3><p>著名的成功故事是可见的，但对于每一个成功，都有无数从未被听到的失败。追随来自可见成功的建议而不了解失败率会导致糟糕的决策。</p>
+<h3 id="历史与历史分析"><a href="#历史与历史分析" class="headerlink" title="历史与历史分析"></a>历史与历史分析</h3><p>历史是由幸存者书写的——来自失败文明、公司或运动的文献和记录不太可能被保存，扭曲了我们对过去的理解。</p>
+<h2 id="经典案例"><a href="#经典案例" class="headerlink" title="经典案例"></a>经典案例</h2><h3 id="共同基金行业"><a href="#共同基金行业" class="headerlink" title="共同基金行业"></a>共同基金行业</h3><p>共同基金行业提供了金融领域幸存者偏差的有力例子。公布的业绩统计数据通常只包括目前存在的基金——“幸存者”。当基金合并、关闭或被吸收时，其历史业绩数据经常从公布的排名和平均值中消失。</p>
+<p>这创造了一个戏剧性扭曲的画面。学术研究发现，幸存者偏差使公布的平均回报率每年增加 0.5% 到 1.5%——随着时间的推移，这是一个巨大的数额。更重要的是，“成功”基金的特征因排除使用类似策略的失败基金而有偏差。</p>
+<p>基于公布的业绩数据做出决定的投资者在不知不觉中使用扭曲的信息。连续 10 年“跑赢市场”然后关闭的基金可能永远不会出现在长期业绩研究中，而以平庸业绩存活的基金却被包括在内。</p>
+<h2 id="边界与失效场景"><a href="#边界与失效场景" class="headerlink" title="边界与失效场景"></a>边界与失效场景</h2><p>幸存者偏差很强大，但有重要的边界条件：</p>
+<ul>
+<li><strong>有时幸存者确实不同</strong>：在某些情况下，生存确实表明真正的选择优势。关键不是自动假设这一点——它需要检查失败的案例是否具有相同的机会和特征。</li>
+<li><strong>失败数据的质量各不相同</strong>：在某些领域，失败的案例相对有据可查（例如破产），而在其他领域它们几乎看不见（例如从未公开讨论的失败创业想法）。</li>
+<li><strong>时间范围很重要</strong>：看起来像生存的可能只是延迟的失败。长期研究显示许多“幸存者”最终失败，改变明显的成功率。</li>
+<li><strong>基础率至关重要</strong>：了解一个领域的整体成功率有助于纠正幸存者偏差——但这些基础率往往正因为幸存者偏差本身而未知。</li>
+</ul>
+<h2 id="常见误区"><a href="#常见误区" class="headerlink" title="常见误区"></a>常见误区</h2><p><strong>误区一：成功故事包含成功的秘诀</strong></p>
+<p>事实上，只研究成功经常导致错误的结论。许多成功公司与失败公司拥有相同特征——差异可能是两个群体中都看不到的因素。</p>
+<p><strong>误区二：你也可以研究失败的案例</strong></p>
+<p>在实践中，失败的案例往往更难找到和分析。它们可能没有网站、没有新闻报道，也没有愿意讨论出了什么问题的参与者。</p>
+<p><strong>误区三：幸存者偏差只对商业重要</strong></p>
+<p>这种偏见在每一个存在一些案例成功和一些案例失败的领域运作——包括医学（只研究康复的患者）、历史（只阅读存活的文献）和关系（只询问在一起的情侣）。</p>
+<h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><p>幸存者偏差与其他认知偏见和统计概念密切相关：</p>
+<ul>
+<li><strong>选择偏差</strong>：当数据以非随机方式选择时发生的更广泛的偏见类别。幸存者偏差是选择偏差的一种特定形式。</li>
+<li><strong>确认偏误</strong>：寻求证实现有信念的信息。两种偏见都导致片面分析——在一种情况下选择成功，在另一种情况下选择证实证据。</li>
+<li><strong>可得性启发</strong>：根据回忆的容易程度判断概率。成功的案例更“可得”——更容易回忆和想象——造成扭曲的概率估计。</li>
+<li><strong>发表偏差</strong>：阳性结果比阴性结果更容易发表的倾向。这本质上是学术研究中的幸存者偏差。</li>
+<li><strong>基础率忽视</strong>：在评估概率时忽视基础率信息。未能考虑通常有多少尝试失败导致高估成功概率。</li>
+<li><strong>后见之明偏见</strong>：认为过去的事件比实际更容易预测。两种偏见都涉及对过去结果的扭曲看法——一个是关于什么有效，一个是关于什么是可预测的。</li>
+</ul>
+<h2 id="一句话总结"><a href="#一句话总结" class="headerlink" title="一句话总结"></a>一句话总结</h2><blockquote>
+<p>每当你研究成功时，积极问自己：“我遗漏了什么？” 寻找失败和消失的例子来平衡可见的成功故事——否则你会系统性地高估成功需要什么。</p>
+</blockquote>
+	</div>
+		<reward-service></reward-service>
+    <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center">
+  <hr>
+  <div id="wechat-public-number" style="width: 100%;display: flex;justify-content: center;flex-direction: column;align-items: center;margin-bottom: 2rem">
+    <img style="width: 256px;min-width: 200px !important" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/wechat-article-qrcode.jpg" alt="静晴轩 ~ 晚晴幽草轩">
+    <div style="padding: 0  1rem 1.5rem 1rem;text-align: center;line-height: 1.5rem"><strong>个人微信公众号</strong>：<a href="https://www.jeffjade.com/?utm_source=jeffjade.com">晚晴幽草轩</a>；名字取自：“天意怜幽草，人间重晚晴”。<br>专注互联网开发（Web 大前端、快应用、小程序），以及分享优质网站、AI 应用、效率工具、心得感悟等内容。
+    </div>
+  </div>
+<div></div></div>
+    <div id="cc-copyright" class="cc-content">
+    <h3>文档信息</h3>
+    <ul>
+      <li>版权声明：知识共享署名-非商业性使用-禁止演绎<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">（创意共享3.0许可证）</a></li>
+      <li>文章出处：<a href="http://www.jeffjade.com" title="晚晴幽草轩">晚晴幽草轩</a></li>
+      <li>发表日期：<time datetime="2026-11-09T12:20:00.000Z" itemprop="datePublished">2026-11-09</time></li>
+      <li>社交媒体：
+        <a href="http://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+        <a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+        <a href="https://twitter.com/MarshalXuan" target="_blank" class="icon-twitter" title="twitter"></a>
+        <a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+      </li>
+    </ul>
+</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Effects/">Effects</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Thought/">Thought</a><a href="/tags/Share/">Share</a><a href="/tags/Effects/">Effects</a>
+  </div>
+
+</div>
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://www.jeffjade.com/2026/11/09/255-survivorship-bias/" data-title="幸存者偏差：为什么你看到的成功，可能只是幸存者？ | 晚晴幽草轩" data-tsina="jeffjade" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+	</article>
+	<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2026/11/09/257-anchoring-effect/" title="锚定效应：你看到的第一个数字，正在悄悄影响你的判断">
+  <strong>上一篇：</strong><br>
+  <span>
+  锚定效应：你看到的第一个数字，正在悄悄影响你的判断</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2026/11/08/254-boiling-frog-effect/" title="煮青蛙效应：为什么缓慢的恶化，总被当成新的正常？">
+ <strong>下一篇：</strong><br> 
+ <span>煮青蛙效应：为什么缓慢的恶化，总被当成新的正常？
+</span>
+</a>
+</div>
+
+</nav>
+	<hr>
+<div id="gitalk-container"></div>
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是幸存者偏差？"><span class="toc-number">1.</span> <span class="toc-text">什么是幸存者偏差？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#幸存者偏差的三层理解"><span class="toc-number">1.1.</span> <span class="toc-text">幸存者偏差的三层理解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#起源"><span class="toc-number">2.</span> <span class="toc-text">起源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#核心要点"><span class="toc-number">3.</span> <span class="toc-text">核心要点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用场景"><span class="toc-number">4.</span> <span class="toc-text">应用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#商业与创业"><span class="toc-number">4.1.</span> <span class="toc-text">商业与创业</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#投资与金融"><span class="toc-number">4.2.</span> <span class="toc-text">投资与金融</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#职业与成功建议"><span class="toc-number">4.3.</span> <span class="toc-text">职业与成功建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#历史与历史分析"><span class="toc-number">4.4.</span> <span class="toc-text">历史与历史分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#经典案例"><span class="toc-number">5.</span> <span class="toc-text">经典案例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#共同基金行业"><span class="toc-number">5.1.</span> <span class="toc-text">共同基金行业</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#边界与失效场景"><span class="toc-number">6.</span> <span class="toc-text">边界与失效场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见误区"><span class="toc-number">7.</span> <span class="toc-text">常见误区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关概念"><span class="toc-number">8.</span> <span class="toc-text">相关概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一句话总结"><span class="toc-number">9.</span> <span class="toc-text">一句话总结</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  <div class="linkslist">
+	<p class="asidetitle">倾情款赠</p>
+	<div style="width:100%"><img style="width:100%" src="https://lovejade.oss-cn-shenzhen.aliyuncs.com/reward-code.jpeg" alt="倾情捐赠"></div>
+</div>
+
+  <div class="wbfollow">
+	<p class="asidetitle">微博互粉</p>
+	<span class="sidebar-top-tip">亦可点击 Enter 键隐藏侧边栏</span>
+	<iframe width="100%" height="119" class="share_self" frameborder="0" scrolling="no" src="//widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3235949794&verifier=5c6bff53&colors=f0f0f0,fff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+</div>
+
+  <div class="widget-wrap linkslist">
+    <h3 class="widget-title asidetitle">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/11/09/257-anchoring-effect/">锚定效应：你看到的第一个数字，正在悄悄影响你的判断</a>
+          </li>
+        
+          <li>
+            <a href="/2026/11/09/255-survivorship-bias/">幸存者偏差：为什么你看到的成功，可能只是幸存者？</a>
+          </li>
+        
+          <li>
+            <a href="/2026/11/08/254-boiling-frog-effect/">煮青蛙效应：为什么缓慢的恶化，总被当成新的正常？</a>
+          </li>
+        
+          <li>
+            <a href="/2026/11/06/256-56-abilities-system/">56 项底层能力：道为心、法为脑、术为手、器为身</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-04-03-thought-poor-son-rich-gril-education/">穷养儿富养女真正的内涵(转)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-04-06-java-thread/">多线程基础之Runnable/Thread与Callable</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-04-08-thought-basying-and-living/">Get Busy Living, Or Get Busy Dying</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-04-01-thought-do/">做，还是不做？做！</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-03-28-thought-weishang/">微商已死(转载)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-03-27-http-https/">Http和Https的区别</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-03-21-android-adb/">MAC使用adb工具</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/22/2015-03-19-android-save-image/">Android保存图片到系统图库</a>
+          </li>
+        
+          <li>
+            <a href="/2024/08/28/253-wealth-tracker/">生财有迹 | 您专属的资产跟踪与分析工具</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/">如何将 Tailwind CSS 引入快应用开发提升编码效率？</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/01/251-blog-slow-update-instructions/">关于「晚晴幽草轩」博客缓更说明</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="categorieslist">
+	<p class="asidetitle">云轩分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Effects/" title="Effects">Effects<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Front-End/" title="Front-End">Front-End<sup>60</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Health/" title="Health">Health<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Movie/" title="Movie">Movie<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Program/" title="Program">Program<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Read/" title="Read">Read<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Share/" title="Share">Share<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Thought/" title="Thought">Thought<sup>26</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Toss/" title="Toss">Toss<sup>28</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/倾城之链/" title="倾城之链">倾城之链<sup>64</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/快应用/" title="快应用">快应用<sup>10</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">轩站热度</p>
+  <!-- 
+    <font id="run_time_long"></font><br>
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span style='color:purple' id="busuanzi_value_site_pv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_site_uv">
+      本站访客人数 <span style='color:purple' id="busuanzi_value_site_uv"></span> 次
+    </span><br>
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量 <span style='color:purple' id="busuanzi_value_page_pv"></span> 次
+    </span>
+   -->
+  <div id="clustrmaps-count"></div>
+  <p style="text-align:center">( Start counting from 07 / 13 / 2017 )</p>
+</div>
+
+  <div class="tagslist">
+	<p class="asidetitle">云轩标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Share/" title="Share">Share<sup>132</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/倾城之链/" title="倾城之链">倾城之链<sup>63</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thought/" title="Thought">Thought<sup>47</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Toss/" title="Toss">Toss<sup>40</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>33</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>30</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vue/" title="Vue">Vue<sup>19</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Efficiency/" title="Efficiency">Efficiency<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/快应用/" title="快应用">快应用<sup>14</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>13</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Front-End/" title="Front-End">Front-End<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/CSS/" title="CSS">CSS<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Webpack/" title="Webpack">Webpack<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NodeJs/" title="NodeJs">NodeJs<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lua/" title="Lua">Lua<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Chrome/" title="Chrome">Chrome<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Movie/" title="Movie">Movie<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SublimeText/" title="SublimeText">SublimeText<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Read/" title="Read">Read<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Effects/" title="Effects">Effects<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Nice/" title="Nice">Nice<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/jQuery/" title="jQuery">jQuery<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Prettier/" title="Prettier">Prettier<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Travel/" title="Travel">Travel<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/React/" title="React">React<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Music/" title="Music">Music<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Git/" title="Git">Git<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">云轩关注</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://fund.lovejade.cn/?ref=jeffjade.com" target="_blank" title="生财有迹">生财有迹</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://site.lovejade.cn/?ref=jeffjade.com" target="_blank" title="倾城之链">倾城之链</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.thebettersites.com/?ref=jeffjade.com" target="_blank" title="清风明月轩">清风明月轩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://share.lovejade.cn/?ref=www.jeffjade.com" target="_blank" title="玉桃文飨轩">玉桃文飨轩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://fine.niceshare.site/?ref=www.jeffjade.com" target="_blank" title="缘知随心庭">缘知随心庭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://forum.lovejade.cn/?ref=jeffjade.com" target="_blank" title="悠然宜想亭">悠然宜想亭</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/?ref=jeffjade.com" target="_blank" title="静轩之别苑">静轩之别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://wechat.jeffjade.com/?ref=jeffjade.com" target="_blank" title="公众号 Markdown 排版">公众号 Markdown 排版</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://markdown.lovejade.cn/?ref=jeffjade.com" target="_blank" title="在线 Markdown 编辑器">在线 Markdown 编辑器</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://nice.lovejade.cn/?ref=jeffjade.com" target="_blank" title="静晴轩别苑">静晴轩别苑</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.lovejade.cn/?ref=jeffjade.com" target="_blank" title="幽居空谷轩">幽居空谷轩</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.lovejade.cn/?ref=jeffjade.com" target="_blank" title="天意人间舫">天意人间舫</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://creatorsdaily.com?ref=jeffjade.com" target="_blank" title="创造者日报">创造者日报</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.jeffjade.com/nicelinks/#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="linkslist">
+  <p class="asidetitle">好书推荐</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="浪潮之巅">浪潮之巅</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C" target="_blank" title="平凡的世界">平凡的世界</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/#%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A82" target="_blank" title="代码大全2">代码大全2</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://quickapp.lovejade.cn/good-book-recommendation-list/" target="_blank" title="查看更多 &gt;&gt;">查看更多 &gt;&gt;</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 追求卓越，成功就会在不经意间 追上你！ <br>
+			As you think, so shall you become. </p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="https://weibo.com/jeffjade" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/nicejade" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://twitter.com/MarshalXuan" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://www.facebook.com/nice.jade.yang" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="mailto:yunjeff@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="https://hexo.io/?ref=www.jeffjade.com" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2026
+		
+			<a href="https://www.niceshare.site/?ref=www.jeffjade.com" target="_blank" title="晚晴幽草轩轩主">晚晴幽草轩轩主</a>
+		
+		</p>
+</div></footer>
+    <script src="https://fastly.jsdelivr.net/gh/bootcdn/BootCDN/ajax/libs/echo.js/1.7.3/echo.min.js"></script>
+
+<script type="text/javascript">
+echo.init({
+  offset: 200,
+  throttle: 250,
+  unload: false,
+  callback: function (element, op) {}
+});
+
+var AdBlockRemind = document.createElement("ad-block-remind");
+document.body.appendChild(AdBlockRemind);
+
+$(document).ready(function(){
+  console.log('Welcome To %c晚晴幽草轩','font-size:2.113em;color: #2edfa3');
+
+  $("body").append('<quickapp-deeplink brand="vivo|Weixin|Mobile|OPPO|huawei" deeplink="https://hapjs.org/app/com.graceful.sentences/browser/pages/detail"></quickapp-deeplink>');
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  var openAside = function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  }
+  var closeAside = function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  }
+  c.click(openAside);
+  o.click(closeAside);
+
+  document.onkeydown = function(e){
+    // 兼容FF和IE和Opera
+    var theEvent = e || window.event;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    var isInputTextarea = document.activeElement.id === 'search' || document.activeElement.nodeName === "TEXTAREA"
+    if (code === 13 && !isInputTextarea) {
+        if( o.css('display') === 'none'){
+          openAside()
+        }else{
+          closeAside()
+        }
+        return false;
+    }
+    return true;
+  }
+
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          // close auto-close sidebar @17-11-07
+          // c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="//s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"><i class="fa fa-weixin"></i></a>',
+  '<a href="//service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});
+</script>
+
+
+
+
+
+<link href="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/css/jquery.fancybox.css" rel="stylesheet">
+<script async src="https://fastly.jsdelivr.net/npm/fancybox@2.1.6/dist/js/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      var srcVal = (this.src.indexOf('blank.gif') < 0) ? this.src : $(this).attr('data-echo')
+      $(this).wrap('<a href="' + srcVal + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+<!-- Analytics Begin -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1W3X5M7863"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-1W3X5M7863');
+</script>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " https://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd0ed9bb72df3b2b32bdd2274981a7d07' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<!-- <script src="/js/totop.js"></script> -->
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+<!-- MathJax End -->
+
+<!-- Move totop.js From totop.ejs To Here@0309 -->
+<script src="https://fastly.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+(function($) {
+  if (!Object.assign) {
+    Object.defineProperty(Object, "assign", {
+      enumerable: false,
+      configurable: true,
+      writable: true,
+      value: function(target, firstSource) {
+        "use strict";
+        if (target === undefined || target === null)
+          throw new TypeError("Cannot convert first argument to object");
+        var to = Object(target);
+        for (var i = 1; i < arguments.length; i++) {
+          var nextSource = arguments[i];
+          if (nextSource === undefined || nextSource === null) continue;
+          var keysArray = Object.keys(Object(nextSource));
+          for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+            var nextKey = keysArray[nextIndex];
+            var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+            if (desc !== undefined && desc.enumerable) to[nextKey] = nextSource[nextKey];
+          }
+        }
+        return to;
+      }
+    });
+  }
+
+  if (document.getElementById('gitalk-container')) {
+    var gitalk = new Gitalk({
+      clientID: '4bc2d1424c7939471ad4',
+      clientSecret: 'b3dc888873f473405f79f7d9394888478ba55ca4',
+      repo: 'jadeblog-backups',
+      owner: 'nicejade',
+      admin: ['nicejade'],
+      id: md5(location.pathname),
+      distractionFreeMode: false
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  var clustrmapsCount = document.getElementById('clustrmaps-count')
+  if (clustrmapsCount) {
+    var clustrmapsScript = document.createElement('script')
+    clustrmapsScript.type = 'text/javascript'
+    clustrmapsScript.id = 'clustrmaps'
+    clustrmapsScript.src = '//cdn.clustrmaps.com/map_v2.js?d=ce61c9PuAmgrudP1i8MVo2i67jS4nphALli0NtL8D_c&cl=ffffff&w=a'
+    clustrmapsCount.appendChild(clustrmapsScript)
+  }
+
+  var wbScript = document.createElement('script')
+  wbScript.type = 'text/javascript'
+  wbScript.async = true
+  wbScript.charset = "utf-8"
+  wbScript.src = "//tjs.sjs.sinajs.cn/open/api/js/wb.js"
+  document.body.appendChild(wbScript)
+
+  // 为 Baidu 设置自动推送@2018-08-08
+  
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.async = true;
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.async = true;
+      bp.src = '//push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  
+
+  // When to show the scroll link
+  // higher number = scroll link appears further down the page
+  var upperLimit = 1000;
+
+  // Our scroll link element
+  var scrollElem = $('#totop');
+
+  // Scroll to top speed
+  var scrollSpeed = 500;
+
+  // Show and hide the scroll to top link based on scroll position
+  scrollElem.hide();
+  $(window).scroll(function () {
+      var scrollTop = $(document).scrollTop();
+      if ( scrollTop > upperLimit ) {
+          $(scrollElem).stop().fadeTo(300, 1); // fade back in
+      }else{
+          $(scrollElem).stop().fadeTo(300, 0); // fade out
+      }
+  });
+
+  // Scroll to top animation on click
+  $(scrollElem).click(function(){
+      $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+  });
+})(jQuery);
+</script>
+
+<!-- Inject service-worker@2018-01-09 -->
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js", {scope: '/'})
+    .then(registration => console.log('SW Registration Success！Scope: ', registration.scope))
+    .catch(err => console.log('SW Registration Failed! Error: ', err));
+}
+</script>
+
+<!-- Inject Anchor.js @2018-01-14 -->
+<script type="text/javascript">
+function async(u, c) {
+  var d = document,
+    t = 'script',
+    o = d.createElement(t),
+    s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+
+async("https://fastly.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js", function(){
+  anchors.options = {
+    visible: 'hover',
+    placement: 'right'
+  }
+  anchors.add('#post h2, #post h3, #post h4');
+  anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+})
+</script>
+  </body>
