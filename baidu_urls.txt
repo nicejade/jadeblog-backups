@@ -1,13 +1,14 @@
-https://www.jeffjade.com/2026/11/09/257-anchoring-effect/
 https://www.jeffjade.com/2026/11/09/255-survivorship-bias/
+https://www.jeffjade.com/2026/11/09/260-sunk-cost-fallacy/
+https://www.jeffjade.com/2026/11/09/259-anchoring-effect/
 https://www.jeffjade.com/2026/11/08/254-boiling-frog-effect/
 https://www.jeffjade.com/2026/11/06/256-56-abilities-system/
-https://www.jeffjade.com/2026/09/22/2015-04-03-thought-poor-son-rich-gril-education/
+https://www.jeffjade.com/2026/09/22/2015-03-27-http-https/
 https://www.jeffjade.com/2026/09/22/2015-04-06-java-thread/
 https://www.jeffjade.com/2026/09/22/2015-04-08-thought-basying-and-living/
 https://www.jeffjade.com/2026/09/22/2015-04-01-thought-do/
 https://www.jeffjade.com/2026/09/22/2015-03-28-thought-weishang/
-https://www.jeffjade.com/2026/09/22/2015-03-27-http-https/
+https://www.jeffjade.com/2026/09/22/2015-04-03-thought-poor-son-rich-gril-education/
 https://www.jeffjade.com/2026/09/22/2015-03-21-android-adb/
 https://www.jeffjade.com/2026/09/22/2015-03-19-android-save-image/
 https://www.jeffjade.com/2024/08/28/253-wealth-tracker/
@@ -197,4 +198,3 @@ https://www.jeffjade.com/2015/08/15/2015-08-15-html-a-href/
 https://www.jeffjade.com/2015/08/03/2015-08-03-javascript-this/
 https://www.jeffjade.com/2015/07/29/2015-07-29-mac-musthave-software/
 https://www.jeffjade.com/2015/07/24/2015-07-24-why-programmer-love-mac/
-https://www.jeffjade.com/2015/07/21/2015-07-21-muisc-of-wukong/
