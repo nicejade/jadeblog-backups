@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.jeffjade.com/2026/11/15/261-ikea-effect/</loc>
+    
+    <lastmod>2026-11-15T15:48:36.956Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jeffjade.com/2026/11/09/260-sunk-cost-fallacy/</loc>
     
     <lastmod>2026-11-09T08:31:31.223Z</lastmod>
@@ -65,14 +72,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/special/jeffjade.html</loc>
-    
-    <lastmod>2026-09-22T14:07:03.592Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/special/horizontal_center-methods.html</loc>
+    <loc>https://www.jeffjade.com/special/md2pptViaCleaver.html</loc>
     
     <lastmod>2026-09-22T14:07:03.592Z</lastmod>
     
@@ -86,7 +86,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/special/md2pptViaCleaver.html</loc>
+    <loc>https://www.jeffjade.com/special/jeffjade.html</loc>
+    
+    <lastmod>2026-09-22T14:07:03.592Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/special/horizontal_center-methods.html</loc>
     
     <lastmod>2026-09-22T14:07:03.592Z</lastmod>
     
@@ -114,28 +121,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.587Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/about-me/index.html</loc>
-    
-    <lastmod>2026-09-22T14:07:03.587Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2023/05/01/251-blog-slow-update-instructions/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.587Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/</loc>
     
     <lastmod>2026-09-22T14:07:03.587Z</lastmod>
     
@@ -156,21 +142,28 @@
   </url>
   
   <url>
+    <loc>https://www.jeffjade.com/2022/11/15/249-how-to-optimize-seo-for-spa-based-on-prerender/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.587Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2023/07/19/251-how-to-use-tailwind-css-in-quickapp-development/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.587Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/about-me/index.html</loc>
+    
+    <lastmod>2026-09-22T14:07:03.587Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jeffjade.com/2023/04/10/249-chatgpt-web-client-free-to-use/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.586Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2022/10/31/246-nicelinks-in-2022/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.586Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2022/07/31/245-2022-how-to-learn-front-end-development-elegantly/</loc>
     
     <lastmod>2026-09-22T14:07:03.586Z</lastmod>
     
@@ -205,6 +198,20 @@
   </url>
   
   <url>
+    <loc>https://www.jeffjade.com/2022/10/31/246-nicelinks-in-2022/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.586Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2022/07/31/245-2022-how-to-learn-front-end-development-elegantly/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.586Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jeffjade.com/2022/01/31/240-nicelinks-weekly-050/</loc>
     
     <lastmod>2026-09-22T14:07:03.585Z</lastmod>
@@ -219,6 +226,13 @@
   </url>
   
   <url>
+    <loc>https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.585Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jeffjade.com/2022/01/06/236-nicelinks-weekly-047/</loc>
     
     <lastmod>2026-09-22T14:07:03.585Z</lastmod>
@@ -227,13 +241,6 @@
   
   <url>
     <loc>https://www.jeffjade.com/2022/01/20/239-talk-about-wiki-lovejade/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.585Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2022/01/20/238-nicelinks-weekly-049/</loc>
     
     <lastmod>2026-09-22T14:07:03.585Z</lastmod>
     
@@ -268,14 +275,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/11/27/230-talk-about-tencent-cloud-cvm/</loc>
+    <loc>https://www.jeffjade.com/2021/12/16/233-nicelinks-weekly-044/</loc>
     
     <lastmod>2026-09-22T14:07:03.584Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/12/16/233-nicelinks-weekly-044/</loc>
+    <loc>https://www.jeffjade.com/2021/11/27/230-talk-about-tencent-cloud-cvm/</loc>
     
     <lastmod>2026-09-22T14:07:03.584Z</lastmod>
     
@@ -296,7 +303,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/11/11/227-nicelinks-weekly-039/</loc>
+    <loc>https://www.jeffjade.com/2021/11/01/225-how-to-use-kf-thinking-techniques-to-help-you-make-the-right-decisions/</loc>
     
     <lastmod>2026-09-22T14:07:03.583Z</lastmod>
     
@@ -317,7 +324,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/11/01/225-how-to-use-kf-thinking-techniques-to-help-you-make-the-right-decisions/</loc>
+    <loc>https://www.jeffjade.com/2021/11/11/227-nicelinks-weekly-039/</loc>
     
     <lastmod>2026-09-22T14:07:03.583Z</lastmod>
     
@@ -380,7 +387,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/08/05/211-nicelinks-weekly-025/</loc>
+    <loc>https://www.jeffjade.com/2021/08/12/212-nicelinks-weekly-026/</loc>
     
     <lastmod>2026-09-22T14:07:03.581Z</lastmod>
     
@@ -394,14 +401,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/08/12/212-nicelinks-weekly-026/</loc>
+    <loc>https://www.jeffjade.com/2021/09/03/215-nicelinks-weekly-029/</loc>
     
     <lastmod>2026-09-22T14:07:03.581Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/09/03/215-nicelinks-weekly-029/</loc>
+    <loc>https://www.jeffjade.com/2021/08/05/211-nicelinks-weekly-025/</loc>
     
     <lastmod>2026-09-22T14:07:03.581Z</lastmod>
     
@@ -429,6 +436,13 @@
   </url>
   
   <url>
+    <loc>https://www.jeffjade.com/2021/07/29/210-nicelinks-weekly-024/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.580Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jeffjade.com/2021/07/08/207-nicelinks-weekly-021/</loc>
     
     <lastmod>2026-09-22T14:07:03.580Z</lastmod>
@@ -443,13 +457,6 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/07/29/210-nicelinks-weekly-024/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.580Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2021/07/01/206-nicelinks-weekly-020/</loc>
     
     <lastmod>2026-09-22T14:07:03.580Z</lastmod>
@@ -457,21 +464,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/03/23/2016-03-23-toss-wechat-public_no/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.579Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2021/06/10/203-nicelinks-weekly-017/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.579Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2021/06/03/202-nicelinks-weekly-016/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.579Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2016/03/23/2016-03-23-toss-wechat-public_no/</loc>
     
     <lastmod>2026-09-22T14:07:03.579Z</lastmod>
     
@@ -485,13 +485,6 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/03/17/2016-03-17-jade-tools/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.579Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2016/03/26/2016-03-26-rakefile-for-jekyll/</loc>
     
     <lastmod>2026-09-22T14:07:03.579Z</lastmod>
@@ -499,7 +492,21 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/01/19/2016-01-19-toss-gulp/</loc>
+    <loc>https://www.jeffjade.com/2016/03/17/2016-03-17-jade-tools/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.579Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2021/06/10/203-nicelinks-weekly-017/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.579Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2016/02/29/2016-02-25-where-do-you-writing/</loc>
     
     <lastmod>2026-09-22T14:07:03.578Z</lastmod>
     
@@ -520,13 +527,6 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.578Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2016/02/22/2016-02-22-beautiful-of-toss/</loc>
     
     <lastmod>2026-09-22T14:07:03.578Z</lastmod>
@@ -534,9 +534,23 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/02/29/2016-02-25-where-do-you-writing/</loc>
+    <loc>https://www.jeffjade.com/2016/01/19/2016-01-19-toss-gulp/</loc>
     
     <lastmod>2026-09-22T14:07:03.578Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2016/01/22/2016-01-22-jeffjade-and-nicejade/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.578Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2016/01/10/2016-01-10-javacript-setTimeout/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.577Z</lastmod>
     
   </url>
   
@@ -569,20 +583,6 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2016/01/10/2016-01-10-javacript-setTimeout/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.577Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/10/28/2015-10-28-css3-webfont/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.576Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2015/11/25/2015-11-25-toss-gulp/</loc>
     
     <lastmod>2026-09-22T14:07:03.576Z</lastmod>
@@ -590,7 +590,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
+    <loc>https://www.jeffjade.com/2015/11/14/2015-11-14-css-achieve-horizontal_vertical_center/</loc>
     
     <lastmod>2026-09-22T14:07:03.576Z</lastmod>
     
@@ -611,6 +611,20 @@
   </url>
   
   <url>
+    <loc>https://www.jeffjade.com/2015/10/28/2015-10-28-css3-webfont/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.576Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/11/07/2015-11-07-share-kungfu-star/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.576Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jeffjade.com/2015/10/19/2015-10-18-chrome-vimium/</loc>
     
     <lastmod>2026-09-22T14:07:03.576Z</lastmod>
@@ -618,21 +632,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/11/14/2015-11-14-css-achieve-horizontal_vertical_center/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.576Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/10/15/2015-10-16-cleaver-make-ppt/</loc>
+    <loc>https://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/</loc>
     
     <lastmod>2026-09-22T14:07:03.575Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/10/19/2015-10-18-Efficacious-win-software/</loc>
+    <loc>https://www.jeffjade.com/2015/10/15/2015-10-15-nice-animation-collection/</loc>
     
     <lastmod>2026-09-22T14:07:03.575Z</lastmod>
     
@@ -646,7 +653,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/10/15/2015-10-15-nice-animation-collection/</loc>
+    <loc>https://www.jeffjade.com/2015/10/15/2015-10-16-cleaver-make-ppt/</loc>
     
     <lastmod>2026-09-22T14:07:03.575Z</lastmod>
     
@@ -723,14 +730,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/07/19/2015-07-19-movie-about-MonkeyKing-HeroisBack/</loc>
+    <loc>https://www.jeffjade.com/2015/07/21/2015-07-21-muisc-of-wukong/</loc>
     
     <lastmod>2026-09-22T14:07:03.573Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/07/21/2015-07-21-muisc-of-wukong/</loc>
+    <loc>https://www.jeffjade.com/2015/07/29/2015-07-29-mac-musthave-software/</loc>
     
     <lastmod>2026-09-22T14:07:03.573Z</lastmod>
     
@@ -744,7 +751,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/07/29/2015-07-29-mac-musthave-software/</loc>
+    <loc>https://www.jeffjade.com/2015/07/19/2015-07-19-movie-about-MonkeyKing-HeroisBack/</loc>
     
     <lastmod>2026-09-22T14:07:03.573Z</lastmod>
     
@@ -759,6 +766,13 @@
   
   <url>
     <loc>https://www.jeffjade.com/2015/06/26/2015-06-26-ssh-setting/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.572Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/06/05/2015-06-05-Share-Filco/</loc>
     
     <lastmod>2026-09-22T14:07:03.572Z</lastmod>
     
@@ -793,20 +807,6 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/06/05/2015-06-05-Share-Filco/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.572Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/05/16/2015-05-16-mac-musthave-software/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.571Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2015/05/26/2015-05-26-high-efficiency-tools-collecting/</loc>
     
     <lastmod>2026-09-22T14:07:03.571Z</lastmod>
@@ -835,6 +835,13 @@
   </url>
   
   <url>
+    <loc>https://www.jeffjade.com/2015/05/16/2015-05-16-mac-musthave-software/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.571Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jeffjade.com/2015/05/11/2015-05-11-java-extends-implement/</loc>
     
     <lastmod>2026-09-22T14:07:03.571Z</lastmod>
@@ -843,6 +850,13 @@
   
   <url>
     <loc>https://www.jeffjade.com/2015/04/26/2015-04-26-cherish-wangguozhen/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.570Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/05/03/2015-05-03-tour-chenzhou/</loc>
     
     <lastmod>2026-09-22T14:07:03.570Z</lastmod>
     
@@ -863,14 +877,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/05/03/2015-05-03-tour-chenzhou/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.570Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/</loc>
+    <loc>https://www.jeffjade.com/2015/04/11/2015-04-11-android-studio-shortcut/</loc>
     
     <lastmod>2026-09-22T14:07:03.569Z</lastmod>
     
@@ -884,21 +891,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/04/22/2015-04-22-Android-error-codes/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.569Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/04/19/2015-04-19-toss-bind-domainname/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.569Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/04/12/2015-04-12-thought-choose-effort/</loc>
+    <loc>https://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/</loc>
     
     <lastmod>2026-09-22T14:07:03.569Z</lastmod>
     
@@ -912,7 +905,21 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/04/11/2015-04-11-android-studio-shortcut/</loc>
+    <loc>https://www.jeffjade.com/2015/04/12/2015-04-12-thought-choose-effort/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.569Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/04/19/2015-04-19-toss-bind-domainname/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.569Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/04/22/2015-04-22-Android-error-codes/</loc>
     
     <lastmod>2026-09-22T14:07:03.569Z</lastmod>
     
@@ -926,14 +933,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/03/22/2015-03-22-tour-songshanhu-ride/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.568Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2026/09/22/2015-03-27-http-https/</loc>
+    <loc>https://www.jeffjade.com/2026/09/22/2015-04-01-thought-do/</loc>
     
     <lastmod>2026-09-22T14:07:03.568Z</lastmod>
     
@@ -954,16 +954,16 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2026/09/22/2015-04-01-thought-do/</loc>
+    <loc>https://www.jeffjade.com/2015/03/22/2015-03-22-tour-songshanhu-ride/</loc>
     
     <lastmod>2026-09-22T14:07:03.568Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2026/09/22/2015-03-21-android-adb/</loc>
+    <loc>https://www.jeffjade.com/2026/09/22/2015-03-27-http-https/</loc>
     
-    <lastmod>2026-09-22T14:07:03.567Z</lastmod>
+    <lastmod>2026-09-22T14:07:03.568Z</lastmod>
     
   </url>
   
@@ -975,14 +975,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/03/14/2015-03-14-hexo-blog/</loc>
+    <loc>https://www.jeffjade.com/2015/03/19/2015-03-19-android-webview/</loc>
     
     <lastmod>2026-09-22T14:07:03.567Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2026/09/22/2015-03-19-android-save-image/</loc>
+    <loc>https://www.jeffjade.com/2026/09/22/2015-03-21-android-adb/</loc>
     
     <lastmod>2026-09-22T14:07:03.567Z</lastmod>
     
@@ -996,9 +996,30 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/03/19/2015-03-19-android-webview/</loc>
+    <loc>https://www.jeffjade.com/2026/09/22/2015-03-19-android-save-image/</loc>
     
     <lastmod>2026-09-22T14:07:03.567Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/03/14/2015-03-14-hexo-blog/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.567Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/02/02/2015-02-02-health-mustread/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.566Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/02/06/2015-02-06-adb-cmd/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.566Z</lastmod>
     
   </url>
   
@@ -1017,20 +1038,6 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/02/09/2015-02-09-android-intent/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.566Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/02/06/2015-02-06-adb-cmd/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.566Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2015/02/02/2015-02-02-thoughtof-overtime-work/</loc>
     
     <lastmod>2026-09-22T14:07:03.566Z</lastmod>
@@ -1038,7 +1045,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/02/02/2015-02-02-health-mustread/</loc>
+    <loc>https://www.jeffjade.com/2015/02/09/2015-02-09-android-intent/</loc>
     
     <lastmod>2026-09-22T14:07:03.566Z</lastmod>
     
@@ -1059,6 +1066,20 @@
   </url>
   
   <url>
+    <loc>https://www.jeffjade.com/2015/01/30/2015-01-30-leijun-lecture2beida/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.565Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/01/22/2015-01-22-book-share/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.565Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jeffjade.com/2015/01/16/2015-01-16-handler-deal-ui/</loc>
     
     <lastmod>2026-09-22T14:07:03.565Z</lastmod>
@@ -1073,21 +1094,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/01/22/2015-01-22-book-share/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.565Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/01/30/2015-01-30-leijun-lecture2beida/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.565Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/01/08/2015-01-08-lua-standard-libraries/</loc>
+    <loc>https://www.jeffjade.com/2015/01/08/2015-01-09-android-sdcard/</loc>
     
     <lastmod>2026-09-22T14:07:03.564Z</lastmod>
     
@@ -1101,21 +1108,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2015/01/07/2015-01-07-java-study/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.564Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2015/01/08/2015-01-09-android-sdcard/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.564Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2015/01/10/2015-01-10-why-indulge/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.564Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2015/01/07/2015-01-07-java-study/</loc>
     
     <lastmod>2026-09-22T14:07:03.564Z</lastmod>
     
@@ -1129,14 +1129,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2014/12/25/2014-12-25-regular-expression/</loc>
+    <loc>https://www.jeffjade.com/2015/01/08/2015-01-08-lua-standard-libraries/</loc>
     
-    <lastmod>2026-09-22T14:07:03.563Z</lastmod>
+    <lastmod>2026-09-22T14:07:03.564Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2014/12/22/2014-12-24-lua-codepart/</loc>
+    <loc>https://www.jeffjade.com/2014/12/25/2014-12-25-regular-expression/</loc>
     
     <lastmod>2026-09-22T14:07:03.563Z</lastmod>
     
@@ -1171,9 +1171,9 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/05/27/201-nicelinks-weekly-015/</loc>
+    <loc>https://www.jeffjade.com/2014/12/22/2014-12-24-lua-codepart/</loc>
     
-    <lastmod>2026-09-22T14:07:03.562Z</lastmod>
+    <lastmod>2026-09-22T14:07:03.563Z</lastmod>
     
   </url>
   
@@ -1220,7 +1220,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/04/29/197-nicelinks-weekly-011/</loc>
+    <loc>https://www.jeffjade.com/2021/05/27/201-nicelinks-weekly-015/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.562Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2021/04/22/196-nicelinks-weekly-010/</loc>
     
     <lastmod>2026-09-22T14:07:03.561Z</lastmod>
     
@@ -1248,14 +1255,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/04/08/193-nicelinks-weekly-008/</loc>
+    <loc>https://www.jeffjade.com/2021/04/29/197-nicelinks-weekly-011/</loc>
     
     <lastmod>2026-09-22T14:07:03.561Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/04/22/196-nicelinks-weekly-010/</loc>
+    <loc>https://www.jeffjade.com/2021/04/08/193-nicelinks-weekly-008/</loc>
     
     <lastmod>2026-09-22T14:07:03.561Z</lastmod>
     
@@ -1269,7 +1276,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/03/22/189-how-to-install-flarum-based-on-docker/</loc>
+    <loc>https://www.jeffjade.com/2021/03/25/190-nicelinks-weekly-006/</loc>
     
     <lastmod>2026-09-22T14:07:03.560Z</lastmod>
     
@@ -1283,7 +1290,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/03/25/190-nicelinks-weekly-006/</loc>
+    <loc>https://www.jeffjade.com/2021/03/22/189-how-to-install-flarum-based-on-docker/</loc>
     
     <lastmod>2026-09-22T14:07:03.560Z</lastmod>
     
@@ -1318,13 +1325,6 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2021/02/09/181-write-on-the-road-of-life/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.559Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2021/03/04/186-nicelinks-weekly-003/</loc>
     
     <lastmod>2026-09-22T14:07:03.559Z</lastmod>
@@ -1353,16 +1353,9 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2020/12/31/177-generating-word-cloud-based-on-python/</loc>
+    <loc>https://www.jeffjade.com/2021/02/09/181-write-on-the-road-of-life/</loc>
     
-    <lastmod>2026-09-22T14:07:03.558Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2021/01/05/178-recommendations-for-quality-online-services-in-2021/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.558Z</lastmod>
+    <lastmod>2026-09-22T14:07:03.559Z</lastmod>
     
   </url>
   
@@ -1381,6 +1374,13 @@
   </url>
   
   <url>
+    <loc>https://www.jeffjade.com/2021/01/05/178-recommendations-for-quality-online-services-in-2021/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.558Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jeffjade.com/2020/11/17/173-talk-about-nice-links/</loc>
     
     <lastmod>2026-09-22T14:07:03.558Z</lastmod>
@@ -1388,7 +1388,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/</loc>
+    <loc>https://www.jeffjade.com/2020/12/31/177-generating-word-cloud-based-on-python/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.558Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/</loc>
     
     <lastmod>2026-09-22T14:07:03.557Z</lastmod>
     
@@ -1423,9 +1430,16 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2020/09/11/169-high-quality-free-icon-resource-collection/</loc>
+    <loc>https://www.jeffjade.com/2020/09/23/170-list-of-top-20-ai-product-tools/</loc>
     
     <lastmod>2026-09-22T14:07:03.557Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.556Z</lastmod>
     
   </url>
   
@@ -1472,14 +1486,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2020/07/27/165-aweome-picture-tool-website-list/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.556Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/</loc>
+    <loc>https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/</loc>
     
     <lastmod>2026-09-22T14:07:03.555Z</lastmod>
     
@@ -1493,7 +1500,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2019/12/11/160-how-to-use-npm-npx-tutorial/</loc>
+    <loc>https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/</loc>
     
     <lastmod>2026-09-22T14:07:03.555Z</lastmod>
     
@@ -1612,20 +1619,6 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2018/03/05/138-aggregated-info-about-dji-recruitment/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.552Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.552Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2018/06/04/141-talk-about-my-blogs/</loc>
     
     <lastmod>2026-09-22T14:07:03.552Z</lastmod>
@@ -1634,6 +1627,13 @@
   
   <url>
     <loc>https://www.jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.552Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2018/03/05/138-aggregated-info-about-dji-recruitment/</loc>
     
     <lastmod>2026-09-22T14:07:03.552Z</lastmod>
     
@@ -1654,14 +1654,21 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2017/10/09/130-front-end-notes/</loc>
+    <loc>https://www.jeffjade.com/2017/12/31/136-talk-about-nicelinks-site/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.552Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/</loc>
     
     <lastmod>2026-09-22T14:07:03.551Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/</loc>
+    <loc>https://www.jeffjade.com/2017/11/29/133-high-quality-front-end-channel/</loc>
     
     <lastmod>2026-09-22T14:07:03.551Z</lastmod>
     
@@ -1689,7 +1696,7 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2017/11/29/133-high-quality-front-end-channel/</loc>
+    <loc>https://www.jeffjade.com/2017/10/09/130-front-end-notes/</loc>
     
     <lastmod>2026-09-22T14:07:03.551Z</lastmod>
     
@@ -1703,7 +1710,21 @@
   </url>
   
   <url>
+    <loc>https://www.jeffjade.com/2017/09/29/128-talking-about-movies-or-life/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.550Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/</loc>
+    
+    <lastmod>2026-09-22T14:07:03.550Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jeffjade.com/2017/08/26/126-start-from-the-heart/</loc>
     
     <lastmod>2026-09-22T14:07:03.550Z</lastmod>
     
@@ -1724,20 +1745,6 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2017/08/26/126-start-from-the-heart/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.550Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jeffjade.com/2017/09/29/128-talking-about-movies-or-life/</loc>
-    
-    <lastmod>2026-09-22T14:07:03.550Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jeffjade.com/2017/05/01/122-how-to-better-use-google_chrome/</loc>
     
     <lastmod>2026-09-22T14:07:03.549Z</lastmod>
@@ -1745,14 +1752,14 @@
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2017/03/11/120-how-to-write-vue-better/</loc>
+    <loc>https://www.jeffjade.com/2017/04/30/121-sigh-life/</loc>
     
     <lastmod>2026-09-22T14:07:03.549Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jeffjade.com/2017/04/30/121-sigh-life/</loc>
+    <loc>https://www.jeffjade.com/2017/03/11/120-how-to-write-vue-better/</loc>
     
     <lastmod>2026-09-22T14:07:03.549Z</lastmod>
     
